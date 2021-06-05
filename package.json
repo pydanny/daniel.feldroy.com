@@ -17,5 +17,10 @@
     "remark": "^13.0.0",
     "remark-html": "^13.0.1",
     "swr": "^0.5.6"
+  },
+  "browser": {
+    "fs": false,
+    "path": false,
+    "os": false
   }
 }

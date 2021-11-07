@@ -14,12 +14,13 @@
     "date-fns": "^2.21.3",
     "feed": "^4.2.2",
     "gray-matter": "^4.0.3",
-    "next": "11.1.0",
-    "react": "17.0.1",
-    "react-dom": "17.0.1",
+    "next": "^12.0.3",
+    "react": "^18.0.0-alpha-ee069065d-20211105",
+    "react-dom": "^18.0.0-alpha-ee069065d-20211105",
     "remark": "^13.0.0",
     "remark-highlight.js": "^6.0.0",
     "remark-html": "^13.0.1",
+    "sharp": "^0.29.2",
     "swr": "^0.5.6"
   }
 }

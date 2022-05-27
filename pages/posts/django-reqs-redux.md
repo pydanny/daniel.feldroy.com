@@ -135,6 +135,7 @@ right way: **use proper Python dependency management**.
 Create a `requirements.txt` file and install them as proper
 dependencies. The file should contain the following text:
 
+```
     Django==1.4.1
     South==0.7.5   
     django-braces==0.1.3    
@@ -150,10 +151,13 @@ dependencies. The file should contain the following text:
     django-secure==0.1.2
     gunicorn==0.14.2
     psycopg2==2.4.5
+```
 
 Once you have that, you install them thus in your
 [virtualenv](https://pypi.python.org/pypi/virtualenv):
 
+```
     pip install -r requirements.txt
+```
 
 Now that I have all this, it's time to code!

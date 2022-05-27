@@ -94,6 +94,7 @@ Do it the right way: do proper Python dependency management.
 Create a `requirements.txt` file and install them as proper
 dependencies. The file should contain the following text:
 
+```
     Django==1.4
     South==0.7.5
     django-crispy-forms==1.1.3
@@ -105,11 +106,14 @@ dependencies. The file should contain the following text:
     django-registration==0.8.0
     gunicorn==0.14.2
     psycopg2==2.4.5
+```
 
 Once you have that, you install them thus in your
 [virtualenv](https://pypi.python.org/pypi/virtualenv):
 
+```
     pip install -r requirements.txt
+```
 
 Now that I have all this, it's time to code!
 

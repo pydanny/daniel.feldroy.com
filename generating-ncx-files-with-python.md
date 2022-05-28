@@ -1,14 +1,14 @@
 ---
-blogbook: 'True'
+blogbook: "True"
 date: 2013-4-15
 published: true
 slug: generating-ncx-files-with-python
 tags:
-- python
-- twoscoops
-- book
-- django
-- howto
+  - python
+  - twoscoops
+  - book
+  - django
+  - howto
 time_to_read: 2
 title: Generating NCX files with Python
 ---
@@ -33,16 +33,17 @@ readers use to generate the sidebar/dropdown table of contents.
 
 Our requirements:
 
-    Jinja2
-    Django
-    BeautifulSoup4
+```
+Jinja2
+Django
+BeautifulSoup4
+```
 
 And now the code:
 
-``` python
+```
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
-
 
 from bs4 import BeautifulSoup
 from django.utils.text import slugify
@@ -66,7 +67,7 @@ TEMPLATE = Template("""<?xml version="1.0" encoding="UTF-8"?>
 <docAuthor><text>Roy, Audrey</text></docAuthor>
 <navMap>
 </navPoint>
-{% for chapter in chapters %}
+\{\% for chapter in chapters \%\}
 <navPoint id="{{ chapter.slug }}" playOrder="{{ loop.index }}">
 <navLabel><text>{{ chapter.string.strip() }}</text></navLabel>
 <content src="{{ chapter.href }}" />
@@ -89,7 +90,7 @@ def main(filename):
     # grab the nav element
     nav = soup.find("nav")
 
-    # loop through the TOC for chapters. 
+    # loop through the TOC for chapters.
     # Sections/Subsections can't be displayed, so don't worry about them
     # li.chapter is how we constructed our TOC. Your mileage may vary.
     chapters = []

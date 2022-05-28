@@ -1,12 +1,12 @@
 ---
-date: '2015-02-22'
+date: "2015-02-22"
 published: true
 slug: setting-up-latex-on-mac-os-x
 tags:
-- book
-- LaTeX
-- howto
-- python
+  - book
+  - LaTeX
+  - howto
+  - python
 time_to_read: 1
 title: Setting up LaTeX on Mac OS X
 ---
@@ -22,33 +22,39 @@ parts 3 and 4 below.
 2.  Click mactex-basic.pkg to install LaTeX.
 3.  Update `tlmgr`:
 
-        sudo tlmgr update --self
+```
+sudo tlmgr update --self
+```
 
 4.  Install the following tools via `tlmgr`:
 
-        sudo tlmgr install titlesec
-        sudo tlmgr install framed
-        sudo tlmgr install threeparttable
-        sudo tlmgr install wrapfig
-        sudo tlmgr install multirow
-        sudo tlmgr install enumitem
-        sudo tlmgr install bbding
-        sudo tlmgr install titling
-        sudo tlmgr install tabu
-        sudo tlmgr install mdframed
-        sudo tlmgr install tcolorbox
-        sudo tlmgr install textpos
-        sudo tlmgr install import
-        sudo tlmgr install varwidth
-        sudo tlmgr install needspace
-        sudo tlmgr install tocloft
-        sudo tlmgr install ntheorem
-        sudo tlmgr install environ
-        sudo tlmgr install trimspaces
+```
+sudo tlmgr install titlesec
+sudo tlmgr install framed
+sudo tlmgr install threeparttable
+sudo tlmgr install wrapfig
+sudo tlmgr install multirow
+sudo tlmgr install enumitem
+sudo tlmgr install bbding
+sudo tlmgr install titling
+sudo tlmgr install tabu
+sudo tlmgr install mdframed
+sudo tlmgr install tcolorbox
+sudo tlmgr install textpos
+sudo tlmgr install import
+sudo tlmgr install varwidth
+sudo tlmgr install needspace
+sudo tlmgr install tocloft
+sudo tlmgr install ntheorem
+sudo tlmgr install environ
+sudo tlmgr install trimspaces
+```
 
 5.  Install fonts via `tlmgr`:
 
-        sudo tlmgr install collection-fontsrecommended
+```
+sudo tlmgr install collection-fontsrecommended
+```
 
 **note:** Yes, I know I can install the basic LaTeX package using
 [Homebrew](https://brew.sh/), but sometimes I like doing things manually.

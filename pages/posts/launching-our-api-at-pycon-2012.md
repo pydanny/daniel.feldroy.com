@@ -103,9 +103,9 @@ developers.
 
 Details:
 
-    When: Saturday, 8pm - 10pm
-    What to bring: Camera!
-    What to bring if you are participating: Workout clothes, water bottle
+> When: Saturday, 8pm - 10pm
+> What to bring: Camera!
+> What to bring if you are participating: Workout clothes, water bottle
 
 [![image](/images/6821195620_2b7870a39c_m.jpg)](https://www.flickr.com/photos/pydanny/6821195620/sizes/s/in/photostream/)
 

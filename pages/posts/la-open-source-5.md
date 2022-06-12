@@ -45,14 +45,14 @@ And now to open the floor to questions...
 
 Where:
 
-    Cross Campus (crosscamp.us)
-    820 Broadway
-    Santa Monica, CA
+> Cross Campus (crosscamp.us)
+> 820 Broadway
+> Santa Monica, CA
 
 When:
 
-    November 4th, 2012
-    10 AM to 9 PM
+> November 4th, 2012
+> 10 AM to 9 PM
 
 ## Is this like a Hackathon?
 

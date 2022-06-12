@@ -36,14 +36,14 @@ And now to open the floor to questions...
 
 Where:
 
-    Spire.io
-    7257 Beverly Blvd #210
-    Los Angeles, CA 90036
+> Spire.io
+> 7257 Beverly Blvd #210
+> Los Angeles, CA 90036
 
 When:
 
-    May 12, 2012
-    10 AM to 10 PM
+> May 12, 2012
+> 10 AM to 10 PM
 
 # Is this like a Hackathon?
 

@@ -1,18 +1,17 @@
 ---
-date: '2017-05-15'
+date: "2017-05-15"
 published: true
 slug: using-python-and-google-docs-to-build-books
 tags:
-- python
-- django
-- python
-- python3
-- cookiecutter
+  - python
+  - django
+  - python
+  - python3
+  - cookiecutter
 time_to_read: 7
 title: Using Python and Google Docs to Build Books
 description: Using Python to combine multiple Google docs into one cohesive whole that can be published as a book.
 ---
-
 
 [![Python tips and tricks](/images/python-tip-from-pydanny.png)](/using-google-docs-and-python-to-assemble-fiction-books.html)
 
@@ -22,11 +21,13 @@ wrote out the chapters as individual files. I did it in a text editor
 (Sublime) and saved the files to a git repo. The names of the files
 determined their order, chapters being named in this pattern:
 
-    the-darkest-autumn $ tree
-    .
-    ├── 01_Beginnings.md
-    ├── 02_Town_of_Ravenna.md
-    ├── 03_Walls_of_Ravenna.md
+```
+the-darkest-autumn $ tree
+.
+├── 01_Beginnings.md
+├── 02_Town_of_Ravenna.md
+├── 03_Walls_of_Ravenna.md
+```
 
 As the book developed I thought about moving it to
 [Scrivener](https://www.literatureandlatte.com/scrivener.php). If you
@@ -72,18 +73,20 @@ drive-download-20170505T230011Z-001.zip. I use `unzip to open it`:
 Inside the new the-darkest-autumn folder are a bunch of MS
 Word-formatted files named identically to what's stored on Google Docs:
 
-    $ tree the-darkest-autumn/
-    the-darkest-autumn
-    ├── 01. Beginnings.docx
-    ├── 02. Town of Ravenna.docx
-    ├── 03. Walls of Ravenna.docx
-    ├── 04. Gatehouse of Ravenna.docx
-    ├── 05. Courage.docx
-    ├── 06. To the Upper Valley.docx
-    ├── _afterward.docx
-    ├── _copyright.docx
-    ├── _dedication.docx
-    └── _title.docx
+```bash
+$ tree the-darkest-autumn/
+the-darkest-autumn
+├── 01. Beginnings.docx
+├── 02. Town of Ravenna.docx
+├── 03. Walls of Ravenna.docx
+├── 04. Gatehouse of Ravenna.docx
+├── 05. Courage.docx
+├── 06. To the Upper Valley.docx
+├── _afterward.docx
+├── _copyright.docx
+├── _dedication.docx
+└── _title.docx
+```
 
 Now it's time to bring in the code. By leveraging the
 [python-docx](https://python-docx.readthedocs.io/en/latest/index.html) library,
@@ -244,22 +247,24 @@ if __name__ == '__main__':
 
 This is what it looks like when I run the code:
 
-    $ python bookify.py the-darkest-autumn/
-    Adding Title Page
-    Adding Copyright Page
-    Adding Dedication
-    Adding 1. Beginnings
-    Adding 2. Town of Ravenna
-    Adding 3. Walls of Ravenna
-    Adding 4. Gatehouse of Ravenna
-    Adding 5. Courage
-    Adding 6. To the Upper Valley
-    skipping the-darkest-autumn/_afterward.docx
-    skipping the-darkest-autumn/_copyright.docx
-    skipping the-darkest-autumn/_dedication.docx
-    skipping the-darkest-autumn/_title.docx
-    Adding Afterward
-    DONE!!!
+```bash
+$ python bookify.py the-darkest-autumn/
+Adding Title Page
+Adding Copyright Page
+Adding Dedication
+Adding 1. Beginnings
+Adding 2. Town of Ravenna
+Adding 3. Walls of Ravenna
+Adding 4. Gatehouse of Ravenna
+Adding 5. Courage
+Adding 6. To the Upper Valley
+skipping the-darkest-autumn/_afterward.docx
+skipping the-darkest-autumn/_copyright.docx
+skipping the-darkest-autumn/_dedication.docx
+skipping the-darkest-autumn/_title.docx
+Adding Afterward
+DONE!!!
+```
 
 And now I've got a Word document in the same directory called
 the-darkest-autumn.docx.
@@ -269,16 +274,20 @@ the-darkest-autumn.docx.
 While Kindle Direct Publishing (KDP) will accept .docx files, I like to
 convert it to .epub using [Calibre](https://calibre-ebook.com/):
 
-    $ ebook-convert the-darkest-autumn.docx the-darkest-autumn.epub \
-    --authors "Daniel Roy Greenfeld" \
-    --publisher "Two Scoops Press" \
-    --series Ambria \
-    --series-index 1 \
-    --output-profile kindle
+```bash
+$ ebook-convert the-darkest-autumn.docx the-darkest-autumn.epub \
+--authors "Daniel Roy Greenfeld" \
+--publisher "Two Scoops Press" \
+--series Ambria \
+--series-index 1 \
+--output-profile kindle
+```
 
 And now I can check out my results by using Calibre's book viewer:
 
-    $ ebook-viewer the-darkest-autumn.epub
+```bash
+$ ebook-viewer the-darkest-autumn.epub
+```
 
 # Add the Links!
 
@@ -336,4 +345,3 @@ I've also decided not to package this up on Github/PyPI. While
 for me to do this kind of thing, I'm not interested in maintaining yet
 another open source project. However, if someone does package it up and
 credits me for my work, I'm happy to link to it from this blog post.
-

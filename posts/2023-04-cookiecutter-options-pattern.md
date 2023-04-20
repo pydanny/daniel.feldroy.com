@@ -29,6 +29,7 @@ Take a look at the arguments code:
 And the template code (line breaks added so it fits on computer/tablet/mobile screens):
 
 ```django
+# thing/config.py
 # Volume: {% if cookiecutter.volume == "low" %}low
   {% elif cookiecutter.volume == "medium" %}medium
   {% elif cookiecutter.volume == "high" %}high{% endif %}
@@ -61,6 +62,7 @@ By prefixing the `__volume_options` with double underscores, the field is now a 
 Having `__volume_options` built around these two features allows us to simplify the template to the point where we don't need to add linebreaks to make it legible:
 
 ```django
+# thing/config.py
 # Volume: {{ cookiecutter.volume }}
 VOLUME_SETTING = {{ cookiecutter.__volume_options[cookiecutter.volume] }}  
 ```
@@ -81,6 +83,7 @@ VOLUME_SETTING = {{ cookiecutter.__volume_options[cookiecutter.volume] }}
 ```
 
 ```django
+# thing/config.py
 # Volume: {{ cookiecutter.volume }}
 VOLUME_SETTING = {{ cookiecutter.__volume_options[cookiecutter.volume] }}  
 ```

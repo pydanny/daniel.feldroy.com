@@ -74,9 +74,18 @@ Predictability I was hungry all the time, making it hard to sleep or focus. Irri
 
 Suggested by one of my BJJ coaches, I added an enormous amount of leefy green vegetables to my diet. That's how I would ingest carbohydrates to provide the energy
 
-I got used to eating bowls of baby kale, baby spinach, brocolli, and other things for breakfast. Every meal I ate green veggies as a side. Cooked or raw. If I got really hungry at night I could snack on more leafy greens.
+I got used to eating bowls of baby kale, baby spinach, brocolli, and other things for breakfast. Every meal I ate green veggies as a side. Cooked or raw. If I got really hungry at night I could snack on more leafy greens. My energy levels shot up and the constant hunger faded. 
 
-My energy levels shot up and the constant hunger faded. 
+My current diet is:
+
+- No more soda
+- No snacks between meals
+- No desserts
+- Eat proteins
+- Don't worry about fats
+- Eat tons of leafy greens
+- Cheat now and then for a bite or two with a dessert or starchy side 
+
 
 # Progress
 

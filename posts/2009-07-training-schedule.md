@@ -7,6 +7,7 @@ tags:
 - martial arts
 - gym
 - cycling
+- fitness
 - legacy-dannygreenfeld
 time_to_read: 5
 title: Training Schedule

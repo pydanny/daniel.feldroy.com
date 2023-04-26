@@ -11,6 +11,7 @@ tags:
 - health
 - kid
 - legacy-dannygreenfeld
+- fitness
 time_to_read: 5
 title: Fitness update
 ---

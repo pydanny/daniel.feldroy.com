@@ -77,7 +77,7 @@ My current diet is:
 
 I've lost about 25 pounds or 11.3 kilograms while putting on muscle mass. The result is I can wear stuff in my wardrobe I haven't been able to wear in years. My shoulder and knees are improving, the harsh pain replaced by dull aches that is slowly improving.
 
-I can do cartwheels again, but am sticking to gentler Capoeira movements like, `Rolê`, `Aú Fechado`, and `Aú Aberto`.  
+I can do cartwheels again, but am sticking to gentler [Capoeira movements](https://en.wikipedia.org/wiki/List_of_capoeira_techniques) like `Rolê`, `Aú Fechado`, and `Aú Aberto`.  
 
 # What's next?
 

@@ -1,3 +1,17 @@
+---
+date: "2023-04-26T10:00:00.00Z"
+published: true
+slug: my-2023-fitness-journey
+tags:
+  - fitness
+  - bjj
+  - martial arts
+time_to_read: 1
+title: My 2023 Fitness Journey
+description: At the start of the year I had started to get back into shape. This article documents what I'm doing and how well it has gone.
+type: post
+---
+
 # Losing my fitness
 
 As the pandemic went on I struggled with fitness and weight gain issues. I had injured both knees right before we went into quarantine. I'm also much more consistent working out in groups or with a partner than by myself. So I lost muscle mass as I gained weight.

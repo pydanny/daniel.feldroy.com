@@ -54,4 +54,4 @@ To put it as simply as possible, Octopus Energy has turned me into a superhero. 
 
 To learn more about what Octopus is doing to save the world, [check out Octopus Energy Group](https://octopusenergy.group/).
 
-Want to join me at Octopus and use your skills and talents to help save the world? Then please visit our [US](https://octopusenergy.com/careers), [UK](https://octopus.energy/careers/), [Germany](https://www.octopusenergy.de/karriere), [Italy](https://jobs.lever.co/octoenergy?department=Octopus%20Energy%20Italia%20%F0%9F%87%AE%F0%9F%87%B9), and [Spain](https://jobs.lever.co/octoenergy?department=Octopus%20Energy%20Spain%20%F0%9F%87%AA%F0%9F%87%B8) careers pages.
+Want to join me at Octopus and use your skills and talents to help save the world? Then please visit our [careers list](https://octopus.energy/careers/join-us/#/).

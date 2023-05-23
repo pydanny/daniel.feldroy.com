@@ -1,0 +1,10 @@
+status,city,state,country,event,link
+current,Florence,Tuscany,IT,PyCon IT,https://pycon.it
+current,London,Greater London,UK,Residence,
+future,Prague,,CR,EuroPython,
+past,Los Angeles,CA,US,,
+past,Las Vegas,NV,US,,
+past,Columbia,MD,US,,
+past,Tijuana,Baja California,MX,,
+past,Houston,TX,US,Octopus Energy USA,https://octopusenergy.com
+past,Warsaw,,PL,,

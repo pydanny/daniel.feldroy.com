@@ -1,7 +1,5 @@
 import csv
 
-from rich import print
-
 content = """---
 title: Travels of Daniel Roy Greenfeld"
 description: "My location in the present, future, and past"

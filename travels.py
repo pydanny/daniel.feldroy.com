@@ -27,9 +27,9 @@ with open('travels.csv') as f:
 
     past = sorted(past, key=lambda x: x["city"].lower())
 
-    print("current", current)
-    print("future", future)
-    print("past", past)
+    # print("current", current)
+    # print("future", future)
+    # print("past", past)
 
 
 def write_status(status, travels):

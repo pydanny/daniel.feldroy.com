@@ -5,6 +5,7 @@ slug: 2023-06-converting-from-bleach-to-nh3
 tags:
   - howto
   - python
+  - rust-lang
 time_to_read: 1
 title: Converting from bleach to nh3
 description: Bleach is deprecated, here's how to come close to replicating bleach.clean() with no arguments with nh3.

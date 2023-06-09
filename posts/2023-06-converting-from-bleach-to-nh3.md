@@ -17,7 +17,7 @@ type: post
 ```python
 import nh3
 
-def clean_string(string):
+def clean_string(string: str) -> str:
     # The arguments below being passed to `nh3.clean()` are
     # the default values of the `bleach.clean()` function. 
     return nh3.clean(

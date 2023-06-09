@@ -67,9 +67,9 @@ I\'m not trying to XSS you <a href="https://example.com">Link</a>
 '<b>\n\nI\'m not trying to XSS you <a href="https://example.com">Link</a>\n</b>'
 ```
 
-I think the advantages of switching to nh3 approach:
+Advantages of switching to nh3 are:
 
 1. nh3 is actively maintained, bleach is officially deprecated. 
-2. The nh3 technique of stripping tags rather than allowing safing is more secure. The idea of safing is great, but I've always wondered if a creative attacker could find a way to exploit it. I think it is better to remove the offending tags altogether.
+2. I believe the nh3 technique of stripping tags rather than allowing safing is more secure. The idea of safing is great, but I've always wondered if a creative attacker could find a way to exploit it. So I think it is better to remove the offending tags altogether.
 3. The preservation of whitespace is really useful for preserving content submitted in a textarea. This is especially true for Markdown content.
 4. nh3 is a binding to the [rust-ammonia project](https://github.com/rust-ammonia/ammonia). They claim a 15x speed increase over bleach's binding to the html5lib project. Even if that is a 3x exaggeration, that's still a 5x speed increase.

@@ -5,7 +5,6 @@ published: true
 slug: 2008-06-must-use-ubigraph
 tags:
   - python
-  - xml rpc
   - graphviz
   - legacy-blogger
 time_to_read: 5

@@ -11,7 +11,6 @@ tags:
   - plone
   - python
   - graphviz
-  - umlizer
   - zope
   - legacy-blogger
 time_to_read: 5

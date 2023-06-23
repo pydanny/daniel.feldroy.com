@@ -26,4 +26,4 @@ I started Brazilian Jiu-Jitsu in early November 2022. Against most other white b
 - Wash your gi and rashgaurds at the end of your training day
 - Choose an accessory fitness method and do it regularly. I do weight lifting and a tiny bit of climbing, lots of others train in yoga. Not just because it might improve your BJJ, but it can help prevent injury and postural issues
 
-Thanks to my coaches at [Academy of Brazilian Jiu-Jitsu](https://academyofbrazilianjiujitsu.com/) and [Grand Union BJJ](https://grandunionbjj.com/) for supplying these tips.
+Most of these tips I got from my coaches Todd, Ben, and Ellen at [Academy of Brazilian Jiu-Jitsu](https://academyofbrazilianjiujitsu.com/) in Los Angeles, but I also got good advice at [Grand Union BJJ](https://grandunionbjj.com/) in London.

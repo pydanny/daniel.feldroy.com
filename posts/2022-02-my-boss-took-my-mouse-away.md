@@ -4,6 +4,7 @@ published: true
 tags:
   - productivity
   - advice
+  - VS Code
 time_to_read: 2
 title: My Boss Took My Mouse Away
 description: A useful lesson taught to me at the outset of my career in an unnecessarily abusive way
@@ -41,7 +42,7 @@ So rather than take away mice, I encourage people to learn keyboard shortcuts. W
 - **cmd+space**: Search files on a Mac, including applications
 - **tab**: jump from link to link or button to button in browsers
 - **enter**: click selected link or button in browsers
-- [VSCode hotkey reference](https://code.visualstudio.com/docs/getstarted/keybindings#_keyboard-shortcuts-reference)
+- [VS Code hotkey reference](https://code.visualstudio.com/docs/getstarted/keybindings#_keyboard-shortcuts-reference)
 - [PyCharm hotkey reference](https://www.jetbrains.com/help/pycharm/mastering-keyboard-shortcuts.html)
 
 ![](/images/mybosstookmykeyboardaway.png)

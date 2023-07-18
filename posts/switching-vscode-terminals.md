@@ -7,7 +7,7 @@ tags:
   - vscode
   - howto
 time_to_read: 1
-title: Switching between VSCode terminals using hotkeys
+title: Switching between VS Code terminals using hotkeys
 type: post
 ---
 

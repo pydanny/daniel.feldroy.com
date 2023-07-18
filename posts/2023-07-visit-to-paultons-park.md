@@ -9,7 +9,7 @@ tags:
   - review
 time_to_read: 3
 title: Review of Paultons Park
-description: A quick review of Paultons Park Amusement Park near Southhamption from the vantage point of a parent of a four year old child.
+description: A quick review of Paultons Park Amusement World near Southhamption from the vantage point of a parent of a four year old child.
 type: post
 image: /images/uma-waterpark-summer-2023-40.jpg
 ---

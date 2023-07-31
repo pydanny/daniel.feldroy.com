@@ -17,8 +17,7 @@ title: New Year's Resolutions for 2013
 I'm one of those people who not only likes to make New Year's
 Resolutions, I like to blog about them.
 
-Resolutions
-===========
+# Resolutions
 
 -   Go to at least one technical conference in South America, Asia,
     Africa, and Australia.
@@ -43,8 +42,7 @@ Resolutions
 -   See my old DC area friends such as Eric, Chris, Steve, Beth, Sarah,
     Daye, Renee, Kenneth, Leslie, Whitney, Dave, and many others.
 
-Accomplished
-============
+# Accomplished
 
 -   Teach some Python or Django.
 -   Go back to at least one of the nations I've visited before.

@@ -25,8 +25,7 @@ of attending one of the best technical conferences on the planet. I'm
 going to share how to get through the whole event in good shape and
 cover some incredible beginner friendly events.
 
-The Basics
-==========
+# The Basics
 
 First off, [register](https://us.pycon.org/2013/registration/register/)
 already! PyCon US sold out last year around this time. Don't be left
@@ -53,15 +52,13 @@ enforced.
 
 Alright, enough basics, let's get onto tutorials!
 
-Tutorials
-=========
+# Tutorials
 
 Tutorials take place on March 13th and 14th. They each cost $150 but
 are well worth the price. The following are the talks I believe are best
 suited for beginners.
 
-Wednesday Morning
------------------
+## Wednesday Morning
 
 1.  For novice programmers start with Jessica McKellar's [A hands-on
     introduction to Python for beginning
@@ -77,8 +74,7 @@ Wednesday Morning
     [Pyramid for
     Humans](https://us.pycon.org/2013/schedule/presentation/12/) class.
 
-Wednesday Afternoon
--------------------
+## Wednesday Afternoon
 
 1.  You simply can't go wrong with David Beazley's [Learn Python
     Through Public Data
@@ -92,8 +88,7 @@ Wednesday Afternoon
     assure you that he knows his Django material and is going to deliver
     a great experience.
 
-Thursday Morning
-----------------
+## Thursday Morning
 
 1.  If you're new to Python, you need to learn the Python environment.
     This means version control, PyPI, test automation, and more. Matt
@@ -110,8 +105,7 @@ Thursday Morning
     a great way to learn how Python is used in many creative and
     unexpected ways.
 
-Thursday Afternoon
-------------------
+## Thursday Afternoon
 
 1.  Jessica McKellar returns to instruct on how to give back to the
     community with [Contribute with me! Getting started with open source
@@ -127,13 +121,11 @@ Thursday Afternoon
     Up Django
     Packages](https://us.pycon.org/2013/schedule/presentation/11/).
 
-Evening Activities
-==================
+# Evening Activities
 
 -   [Opening Reception](https://us.pycon.org/2013/events/reception/)
 
-Part II
-=======
+# Part II
 
 Check out [Beginner's Guide to PyCon 2013 Part
 II](/beginners-guide-pycon-2013-part-2.html) where I

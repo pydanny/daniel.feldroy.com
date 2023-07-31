@@ -9,7 +9,7 @@ tags:
 - class-based-views
 time_to_read: 2
 title: Django GetOrCreateView
-description: Probably the first article outside the official docs on how to use the Django CBV form_valid method. Still accurate in 2023!
+description: Probably the first article outside the official docs on how to use the Django CBV form_valid method. Written in 2012 and still accurate in 2023!
 ---
 
 Today I decided to use the Django class based view (CBV) CreateView, but
@@ -135,4 +135,4 @@ a fraction of the effort I spent.
 
 **Note from August 2023**: At the time I wrote this in 2012 figuring this out took a lot of work. Django CBVs were very new and the docs were in a raw state. What's shocking to me is how well this has aged. I just re-read this and it's still accurate (although lacking in good use of Django defaults). 
 
-Speaking of Django defaults, within a month of writing this article I would [advocate using Django CBV defaults](/posts/stay-with-cbv-defaults) because that means more consistent code that takes less efforts.
+Speaking of Django defaults, within a month of writing this article I would [advocate using Django CBV defaults](/posts/stay-with-cbv-defaults) for consistent code written with less effort.

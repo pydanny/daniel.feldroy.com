@@ -17,8 +17,7 @@ page of a site. The reason was I needed a simple newsletter signup form.
 This is what I cooked up and should work for Django 1.3, 1.4, and the
 forthcoming 1.5 release. Here is what I did:
 
-1. Installed dependencies
-=========================
+# 1. Installed dependencies
 
 This version requires the following package to be pip installed into
 your virtualenv.
@@ -34,8 +33,7 @@ INSTALLED_APPS += (
 )
 ```
 
-2. Defined the model
-====================
+# 2. Defined the model
 
 The model is really simple, and inherits from TimeStampedModel so we
 know when people signed up:
@@ -45,6 +43,7 @@ from django.db import models
 
 from django_extensions.db.models import TimeStampedModel
 
+
 class NewsLetterSignup(TimeStampedModel):
 
     email = models.EmailField("Email")
@@ -53,8 +52,7 @@ class NewsLetterSignup(TimeStampedModel):
         return self.email
 ```
 
-3. Wrote the view
-=================
+# 3. Wrote the view
 
 Here's the somewhat challenging part that forced me to dive into
 Django's source code. Even with the documentation work we've done over
@@ -69,6 +67,7 @@ from django.http import HttpResponseRedirect
 from django.views.generic import CreateView
 
 from .models import NewsLetterSignup
+
 
 class NewsLetterSignupView(CreateView):
     """ Signs up users to a newsletter """
@@ -97,8 +96,7 @@ class NewsLetterSignupView(CreateView):
         return HttpResponseRedirect(self.success_url)  
 ```
 
-4. Wired it together
-====================
+# 4. Wired it together
 
 In urls.py:
 
@@ -122,8 +120,7 @@ urlpatterns = patterns('',
 )
 ```
 
-Closing thoughts
-================
+# Closing thoughts
 
 First off, you'll notice I didn't include the
 `pages/newsletter_signed_up.html` because for this case it's too
@@ -135,8 +132,6 @@ this as a class based view. The line count would have been about the
 same, but the mental bandwidth involved in figuring this would have been
 a fraction of the effort I spent.
 
-Third, this is probably better served with an implementation of
-`django.views.generic.FormView`. Oh well...
+**Note from August 2023**: At the time I wrote this in 2012 figuring this out took a lot of work. Django CBVs were very new and the docs were in a raw state. What's shocking to me is how well this has aged. I just re-read this and it's still accurate (although lacking in good use of Django defaults). 
 
-Fourth, I want to see a configurable version of this in the next release
-of [django-braces](https://github.com/brack3t/django-braces/). ;-)
+Speaking of Django defaults, within a month of writing this article I would [advocate using Django CBV defaults](/posts/stay-with-cbv-defaults) because that means more consistent code that takes less efforts.

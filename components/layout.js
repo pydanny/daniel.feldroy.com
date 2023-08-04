@@ -123,6 +123,8 @@ export default function Layout({ children, home, meta = {} }) {
       )}
       <footer className={styles.footer}>
         <p>
+          <a href="https://fosstodon.org/@danielfeldroy">Mastodon</a> |{" "}
+          <a href="https://www.linkedin.com/in/danielfeldroy/">LinkedIn</a> |{" "}
           <a href="https://twitter.com/pydanny">Twitter</a> |{" "}
           <a href="/feeds/atom.xml">Atom Feed</a>
         </p>

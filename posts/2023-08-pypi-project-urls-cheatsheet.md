@@ -9,11 +9,16 @@ tags:
   - packaging
 time_to_read: 2
 title: PyPI Project URLs Cheatsheet
-description: The PyPI project URLs spec is defined only in code. Hre's my cheatsheet explaining how to configure them. I'll update this as I learn more (suggestions welcome!). Examples in several formats.
+description: The PyPI project URLs spec is defined only in code. Here's my cheatsheet explaining how to configure them. I'll update this as I learn more (suggestions welcome!). Examples in several formats.
 type: post
+image: /images/pypi-links-sidenav.png
 ---
 
-The PyPI project URLs spec is [defined only in code](https://github.com/pypi/warehouse/blob/70eac9796fa1eae24741525688a112586eab9010/warehouse/templates/packaging/detail.html#L20-L62). Here's my cheatsheet explaining how to configure them. I'll update this as I learn more (often by people giving me pointers). Examples in several formats.
+See these links in the image below? I want every PyPI project to have them in the left column.
+
+![PyPI project URLs](/images/pypi-links-sidenav.png)
+
+The challenge is the PyPI project URLs spec is [defined only in code](https://github.com/pypi/warehouse/blob/70eac9796fa1eae24741525688a112586eab9010/warehouse/templates/packaging/detail.html#L20-L62). Here's my cheatsheet explaining how to configure them. I'll update this as I learn more (suggestions welcome!). Examples in several formats.
 
 # Example for pyproject.toml
 

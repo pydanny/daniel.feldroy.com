@@ -3,7 +3,7 @@ import utilStyles from "../styles/utils.module.css";
 import MyDate from "../components/date";
 
 import { getSortedPostsData } from "../lib/posts";
-import generateRssFeed from "../lib/rss";
+// import generateRssFeed from "../lib/rss";
 
 export async function getStaticProps() {
   const allPostsData = getSortedPostsData();
@@ -20,9 +20,9 @@ export async function getStaticProps() {
   );
 
   // render blog posts
-  await generateRssFeed("django");
-  await generateRssFeed("python");
-  await generateRssFeed("");
+  // await generateRssFeed("django");
+  // await generateRssFeed("python");
+  // await generateRssFeed("");
   return {
     props: {
       mostRecentPosts,

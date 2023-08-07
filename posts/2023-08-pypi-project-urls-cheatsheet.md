@@ -1,5 +1,5 @@
 ---
-date: "2023-08-4T15:45:00.00Z"
+date: "2023-08-04T15:45:00.00Z"
 published: true
 slug: 2023-08-pypi-project-urls-cheatsheet
 tags:
@@ -87,3 +87,9 @@ setup(
     },
 )
 ```
+
+# See also
+
+As other resources from other people turn up, I'll add them here.
+
+- [Patrick Arminio's PyPI project URLs demo](https://github.com/patrick91/links-demo) - Added August 7, 2023

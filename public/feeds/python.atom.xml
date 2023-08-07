@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://daniel.feldroy.com/</id>
     <title>Daniel Roy Greenfeld</title>
-    <updated>2022-11-13T19:11:07.040Z</updated>
+    <updated>2023-08-07T11:45:35.172Z</updated>
     <generator>Next.js using Feed for Node.js</generator>
     <author>
         <name>Daniel Roy Greenfeld</name>
@@ -13,5 +13,94 @@
     <subtitle>Inside the head of Daniel Roy Greenfeld</subtitle>
     <logo>https://daniel.feldroy.com/images/pydanny-cartwheel.png</logo>
     <icon>https://daniel.feldroy.com/favicon.ico</icon>
-    <rights>All rights reserved 2022, Daniel Roy Greenfeld</rights>
+    <rights>All rights reserved 2023, Daniel Roy Greenfeld</rights>
+    <entry>
+        <title type="html"><![CDATA[PyPI Project URLs Cheatsheet]]></title>
+        <id>https://daniel.feldroy.com/posts/2023-08-pypi-project-urls-cheatsheet</id>
+        <link href="https://daniel.feldroy.com/posts/2023-08-pypi-project-urls-cheatsheet"/>
+        <updated>2023-08-04T15:45:00.000Z</updated>
+        <summary type="html"><![CDATA[The PyPI project URLs spec is defined only in code. Here's my cheatsheet explaining how to configure them. I'll update this as I learn more (suggestions welcome!). Examples in several formats.]]></summary>
+        <content type="html"><![CDATA[<p>See these links in the image below? I want every PyPI project to have them in the left column.</p>
+<p><img src="/images/pypi-links-sidenav.png" alt="PyPI project URLs"></p>
+<p>The challenge is the PyPI project URLs spec is <a href="https://github.com/pypi/warehouse/blob/70eac9796fa1eae24741525688a112586eab9010/warehouse/templates/packaging/detail.html#L20-L62">defined only in code</a>. Here's my cheatsheet explaining how to configure them. I'll update this as I learn more (suggestions welcome!). Examples in several formats.</p>
+<h1>Example for pyproject.toml</h1>
+<p>The <code>[project.urls]</code> table shown below only works if there is a <code>[project]</code> table.</p>
+<pre><code class="language-toml">[project.urls]
+
+# Project homepage, often a link to GitHub or GitLab
+# Often specified in the [project] table
+homepage = "https://example.com"
+
+# The source code repository, don't use this if your homepage
+# is the repo
+repository = "https://github.com/me/spam.git"
+
+# The changelog, really useful for ongoing users of your project
+changelog = "https://github.com/me/spam/blob/master/CHANGELOG.md"
+
+# Any long form docs
+docs = "https://readthedocs.org"
+documentation = "https://readthedocs.org"
+
+# Bugs/issues/feature requests
+bugs = "https://change/requests"
+issues = "https://change/requests"
+tracker = "https://change/requests"
+
+# Really only useful if you have a binary download
+download = "https://pypi.org/project/spam/#files"
+
+# Funding requests, which hopefully you will get more than pizza money
+sponsor = "https://please/give/me/money"
+funding = "https://please/give/me/money"
+donate = "https://please/give/me/money"
+
+# Discussion areas
+mastodon = "https://mastodon/server/@me"
+twitter = "https://twitter/or/x"
+slack = "https://server/on/slack"
+reddit = "https://reddit/r/area"
+discord = "https://discord/area"
+gitter = "https://gitter/area"
+</code></pre>
+<h1>Example for setup.py</h1>
+<p>For legacy reasons, here's the same thing in <code>setup.py</code> format.</p>
+<pre><code class="language-python"># setup.py
+from setuptools import setup
+
+VERSION = "4.0.0"
+
+setup(
+    name="xocto",
+    version=VERSION,
+    url="https://github.com/octoenergy/xocto"
+    # ...
+    project_urls={
+        "Documentation": "https://xocto.readthedocs.io",
+        "Changelog": "https://github.com/octoenergy/xocto/blob/main/CHANGELOG.md",
+        "Issues": "https://github.com/octoenergy/xocto/issues",
+    },
+)
+</code></pre>
+<h1>See also</h1>
+<p>As other resources from other people turn up, I'll add them here.</p>
+<ul>
+<li><a href="https://github.com/patrick91/links-demo">Patrick Arminio's PyPI project URLs demo</a> - Added August 7, 2023</li>
+</ul>
+]]></content>
+        <author>
+            <name>Daniel Roy Greenfeld</name>
+            <email>daniel@feldroy.com</email>
+            <uri>https://daniel.feldroy.com</uri>
+        </author>
+        <category term="howto"/>
+        <category term="python"/>
+        <category term="cheatsheet"/>
+        <category term="packaging"/>
+        <contributor>
+            <name>Daniel Roy Greenfeld</name>
+            <email>daniel@feldroy.com</email>
+            <uri>https://daniel.feldroy.com</uri>
+        </contributor>
+    </entry>
 </feed>

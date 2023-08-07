@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://daniel.feldroy.com/</id>
     <title>Daniel Roy Greenfeld</title>
-    <updated>2022-11-13T19:11:07.416Z</updated>
+    <updated>2023-08-07T11:45:35.511Z</updated>
     <generator>Next.js using Feed for Node.js</generator>
     <author>
         <name>Daniel Roy Greenfeld</name>
@@ -13,66 +13,79 @@
     <subtitle>Inside the head of Daniel Roy Greenfeld</subtitle>
     <logo>https://daniel.feldroy.com/images/pydanny-cartwheel.png</logo>
     <icon>https://daniel.feldroy.com/favicon.ico</icon>
-    <rights>All rights reserved 2022, Daniel Roy Greenfeld</rights>
+    <rights>All rights reserved 2023, Daniel Roy Greenfeld</rights>
     <entry>
-        <title type="html"><![CDATA[Getting s3 pre-signed URLS using the Node.js AWS SDK v3]]></title>
-        <id>https://daniel.feldroy.com/posts/2022-06-18-s3-getsigned-url-nodejs-aws-sdk-3</id>
-        <link href="https://daniel.feldroy.com/posts/2022-06-18-s3-getsigned-url-nodejs-aws-sdk-3"/>
-        <updated>2022-06-18T22:20:50.520Z</updated>
-        <summary type="html"><![CDATA[An easy-to-find copy/pastable reference for creating pre-signed URLs for getting of files using the Node.js AWS SDK v3.]]></summary>
-        <content type="html"><![CDATA[<p>An easy-to-find copy/pastable reference for creating pre-signed URLs for getting of files using the Node.js AWS SDK v3.</p>
-<h1>Background</h1>
-<p>Maybe there's a reference in the docs that provides an easy-to-use documentation of the AWS SDK v3 method for creating pre-signed URLs using Node (or TypeScript). Alas, after 45 minutes of googling, stack overflowing, and other searching I couldn't find it. Yes, <a href="https://aws.amazon.com/blogs/developer/generate-presigned-url-modular-aws-sdk-javascript">the docs had examples</a>, but they weren't copy/pastable for lazy/productive coders like myself. Perhaps I need to improve my search skills? I managed to solve it, but that took more effort than I expected.</p>
-<p>For what it is worth, I hope the maintainers of the Node.js AWS SDK v3 add a copy/pastable version somewhere more obvious. The official docs will show up in searches before this article.</p>
-<p>In any case, I finally dug in and figured it out. So I can find it again in the future, I'm posting it here.</p>
-<h1>Install Dependencies</h1>
-<pre><code class="language-bash">yarn add @aws-sdk/s3-request-presigner
-yarn add @aws-sdk/client-s3
+        <title type="html"><![CDATA[PyPI Project URLs Cheatsheet]]></title>
+        <id>https://daniel.feldroy.com/posts/2023-08-pypi-project-urls-cheatsheet</id>
+        <link href="https://daniel.feldroy.com/posts/2023-08-pypi-project-urls-cheatsheet"/>
+        <updated>2023-08-04T15:45:00.000Z</updated>
+        <summary type="html"><![CDATA[The PyPI project URLs spec is defined only in code. Here's my cheatsheet explaining how to configure them. I'll update this as I learn more (suggestions welcome!). Examples in several formats.]]></summary>
+        <content type="html"><![CDATA[<p>See these links in the image below? I want every PyPI project to have them in the left column.</p>
+<p><img src="/images/pypi-links-sidenav.png" alt="PyPI project URLs"></p>
+<p>The challenge is the PyPI project URLs spec is <a href="https://github.com/pypi/warehouse/blob/70eac9796fa1eae24741525688a112586eab9010/warehouse/templates/packaging/detail.html#L20-L62">defined only in code</a>. Here's my cheatsheet explaining how to configure them. I'll update this as I learn more (suggestions welcome!). Examples in several formats.</p>
+<h1>Example for pyproject.toml</h1>
+<p>The <code>[project.urls]</code> table shown below only works if there is a <code>[project]</code> table.</p>
+<pre><code class="language-toml">[project.urls]
+
+# Project homepage, often a link to GitHub or GitLab
+# Often specified in the [project] table
+homepage = "https://example.com"
+
+# The source code repository, don't use this if your homepage
+# is the repo
+repository = "https://github.com/me/spam.git"
+
+# The changelog, really useful for ongoing users of your project
+changelog = "https://github.com/me/spam/blob/master/CHANGELOG.md"
+
+# Any long form docs
+docs = "https://readthedocs.org"
+documentation = "https://readthedocs.org"
+
+# Bugs/issues/feature requests
+bugs = "https://change/requests"
+issues = "https://change/requests"
+tracker = "https://change/requests"
+
+# Really only useful if you have a binary download
+download = "https://pypi.org/project/spam/#files"
+
+# Funding requests, which hopefully you will get more than pizza money
+sponsor = "https://please/give/me/money"
+funding = "https://please/give/me/money"
+donate = "https://please/give/me/money"
+
+# Discussion areas
+mastodon = "https://mastodon/server/@me"
+twitter = "https://twitter/or/x"
+slack = "https://server/on/slack"
+reddit = "https://reddit/r/area"
+discord = "https://discord/area"
+gitter = "https://gitter/area"
 </code></pre>
-<h1>Create Utility Function</h1>
-<p>I encapsulated my solution in a function in <code>s3FileFetch.js</code> so I could use it accros a project:</p>
-<pre><code class="language-javascript">import { getSignedUrl } from "@aws-sdk/s3-request-presigner";
-import { S3Client, GetObjectCommand } from "@aws-sdk/client-s3";
+<h1>Example for setup.py</h1>
+<p>For legacy reasons, here's the same thing in <code>setup.py</code> format.</p>
+<pre><code class="language-python"># setup.py
+from setuptools import setup
 
-// Create the config obj with credentials
-// Always use environment variables or config files
-// Don't hardcode your keys into code
-const config = {
-  credentials: {
-    accessKeyId: process.env.AWS_ACCESS_KEY_ID,
-    secretAccessKey: process.env.AWS_SECRET_ACCESS_KEY,
-  },
-  region: "us-west-2",
-};
-// Instantiate a new s3 client
-const client = new S3Client(config);
+VERSION = "4.0.0"
 
-async function getSignedFileUrl(fileName, bucket, expiresIn) {
-  // Instantiate the GetObject command,
-  // a.k.a. specific the bucket and key
-  const command = new GetObjectCommand({
-    Bucket: bucket,
-    Key: fileName,
-  });
-
-  // await the signed URL and return it
-  return await getSignedUrl(client, command, { expiresIn });
-}
-
-export default getSignedFileUrl;
+setup(
+    name="xocto",
+    version=VERSION,
+    url="https://github.com/octoenergy/xocto"
+    # ...
+    project_urls={
+        "Documentation": "https://xocto.readthedocs.io",
+        "Changelog": "https://github.com/octoenergy/xocto/blob/main/CHANGELOG.md",
+        "Issues": "https://github.com/octoenergy/xocto/issues",
+    },
+)
 </code></pre>
-<h1>Usage</h1>
-<pre><code class="language-javascript">import getFileUrl from "/lib/s3FileFetch";
-
-async function returnThumbnail(thumbnail_key) {
-  return await getFileUrl(thumbnail_key, "my_bucket", 3600);
-}
-</code></pre>
-<h1>Any Suggestions?</h1>
-<p>This works but I'm certain it can be improved. If you have any suggestions on how to do this action better, let me know in social media or email!</p>
-<h1>Updates</h1>
+<h1>See also</h1>
+<p>As other resources from other people turn up, I'll add them here.</p>
 <ul>
-<li>2022-06-19: Moved configuration and instantiation of <code>s3</code> object out of the function thanks to a suggestion by <a href="https://github.com/defy93">Jake Patrick</a>.</li>
+<li><a href="https://github.com/patrick91/links-demo">Patrick Arminio's PyPI project URLs demo</a> - Added August 7, 2023</li>
 </ul>
 ]]></content>
         <author>
@@ -80,6 +93,10 @@ async function returnThumbnail(thumbnail_key) {
             <email>daniel@feldroy.com</email>
             <uri>https://daniel.feldroy.com</uri>
         </author>
+        <category term="howto"/>
+        <category term="python"/>
+        <category term="cheatsheet"/>
+        <category term="packaging"/>
         <contributor>
             <name>Daniel Roy Greenfeld</name>
             <email>daniel@feldroy.com</email>
@@ -87,61 +104,86 @@ async function returnThumbnail(thumbnail_key) {
         </contributor>
     </entry>
     <entry>
-        <title type="html"><![CDATA[Farewell to Aaron & Company]]></title>
-        <id>https://daniel.feldroy.com/posts/2022-05-07-farewell-aaron-and-company</id>
-        <link href="https://daniel.feldroy.com/posts/2022-05-07-farewell-aaron-and-company"/>
-        <updated>2022-05-07T22:20:50.520Z</updated>
-        <summary type="html"><![CDATA[Aaron & Company was a plumbing supplies firm started by my great-grandfather over 100 years ago and incorporated in 1932. And now it is being sold.]]></summary>
-        <content type="html"><![CDATA[<p>Aaron &#x26; Company was a plumbing supplies firm started by my great-grandfather about 100 years ago and incorporated in 1932. And now it is being sold. Unlike the rest of my family I have almost no memories of the business, but being able to talk about it was always a point of pride. Today, with it existing for just a few days more, I wish I had spent more time there as a teenager and adult.</p>
-<p>The firm was more than just a business. My great-grandfather started the company, but his son progressively took care of their workers. For decades they all got good pay, full benefits, and everyone's opinion was respected. These are good values many companies refuse to even consider, or if they want to match them, struggle to do so. Yet Aaron and Company has done it for decades.</p>
-<p>They also were selling solar equipment in the late 1970s, if not sooner. Considering my <a href="/posts/whats-the-best-thing-about-working-for-octopus-energy-part-1">career mission of addressing climate change</a>, I find that really awesome.</p>
-<p>Note: As more stories and photos emerge I'll be expanding this article.</p>
-<h1>The Notification</h1>
-<p>From an uncle who was the last Aaron family partner in the firm:</p>
-<blockquote>
-<p>Effective May 23, 2022, Aaron &#x26; Company will cease to exist as Aaron &#x26; Company after roughly 100 years, a few weeks shy of twenty years since my retirement.</p>
-</blockquote>
-<blockquote>
-<p>It will be sold to Ferguson Supply.</p>
-</blockquote>
-<h1>History of Aaron and Company</h1>
-<p>This was the official history of the company:</p>
-<blockquote>
-<p>Now one of the region's largest plumbing-heating-cooling wholesalers, Aaron &#x26; Company began nearly a century ago in New Brunswick, NJ. Founded by immigrant plumber Isadore Aaron in the early 1900's, and incorporated in 1932, the business began serving local plumbers out of Aaron's basement.</p>
-</blockquote>
-<blockquote>
-<p>Isadore's son, Maurice, took over the supply house, then located at a New Brunswick storefront, and moved it to a larger downtown location in 1950. Maurice Aaron began to expand the company westward, opening branches in Flemington (1961) and Somerville (1970). Headquarters moved to New Brunswick's industrial zone in 1979, where new partners Frank Laudino, Jeffrey Aaron and Gerald Portnoy opened the first Aaron Bath Centers showroom. A second showroom was added later to the Flemington facility.</p>
-</blockquote>
-<blockquote>
-<p>Under the next generation leadership of Barry Portnoy, Jeffrey Aaron, Frank Laudino Jr., and Richard Laudino, Aaron &#x26; Company added a branch in Trenton (1994) and a full showroom branch in Freehold (1996). We opened a new 120,000+ square-foot computerized central distribution center in Piscataway in 1998, where our corporate headquarters is now located. Four years later, Jeffrey Aaron retired. In 2006 we renovated our New Brunswick facility and created a brand new facet to our business, Kitchens. We now offer design services, and an outstanding selection of kitchen cabinetry and accessories. In addition, the plumbing showroom in New Brunswick was renovated and all of the showrooms have been renamed to become: The "Aaron Kitchen and Bath Design Gallery".</p>
-</blockquote>
-<blockquote>
-<p>In 2010 Aaron &#x26; Company acquired S.Franklin and Son in Fairfield, NJ; the 11 Gloria Lane location is Aaron &#x26; Company’s most northern location to date. With the S. Franklin acquisition Aaron &#x26; Company becomes a commercial HVAC supplier with Sheet metal, Greenheck fans and Reznor.</p>
-</blockquote>
-<blockquote>
-<p>In 2013, shortly after Hurricane Sandy, Aaron &#x26; Company acquires Dickson Plumbing Supply in Brielle, New Jersey. After almost a year of working in a temporary “pop-up” branch due to the extensive damage done to the building due to Hurricane Sandy, Aaron &#x26; Company officially opens 1 Union Ave, Brielle NJ in May of 2014.</p>
-</blockquote>
-<blockquote>
-<p>Today, Aaron and Company employs over 150 people at it's eight locations including the four that house the Aaron Kitchen and Bath Design Gallery showrooms. We are now considered one of the largest independent wholesale distributors of plumbing, heating, and cooling products in New Jersey.</p>
-</blockquote>
-<h1>Photos</h1>
-<p><em>If anyone has photos or other media related to Aaron &#x26; Company, share and I'll add them below.</em></p>
-<p><img src="/aaronco/logo.png" alt=""></p>
-<p><em>The logo was designed by my grandmother. It was the official company logo. It was on all signs and trucks at all the locations. It was a source of pride for my mother and I that her effort was used for decades.</em></p>
-<p><img src="/aaronco/History1.png" alt=""></p>
-<p><em>This photo of the company catalog taken in autumn of 1958 features either my great-grandfather or grandfather. Waiting for an answer on who it actually might be.</em></p>
-<p><img src="/aaronco/History2.jpg" alt=""></p>
-<p><em>This photo was probably taken in 1979, during the move from downtown New Bruinswick to Piscataway. The sign mentions "solar", meaning my family has been into renewable energy for decades.</em></p>
-<p><img src="/aaronco/aeriel-new-bruinswick-with-arrow.png" alt=""></p>
-<p><em>The HQ marked by the arrow opened in 1950 and closed when Johnson &#x26; Johnson bought the site for its headquarters in the late 1970s. I have faint memories of visiting there as a child.</em></p>
-<p><img src="/aaronco/aeriel-new-bruinswick-no-arrow.png" alt=""></p>
-<p><em>Another aeriel shot, but no arrow. What's striking is the massive town gas container in the upper left of the neighborhood, something that was common in the older era for cities all over the world.</em></p>
+        <title type="html"><![CDATA[Review of Paultons Park]]></title>
+        <id>https://daniel.feldroy.com/posts/2023-07-visit-to-paultons-park</id>
+        <link href="https://daniel.feldroy.com/posts/2023-07-visit-to-paultons-park"/>
+        <updated>2023-07-11T23:45:00.000Z</updated>
+        <summary type="html"><![CDATA[A quick review of Paultons Park Amusement World near Southhamption from the vantage point of a parent of a four year old child.]]></summary>
+        <content type="html"><![CDATA[<p>This weekend we took 4.5-year-old Uma to <a href="https://paultonspark.co.uk/">Paultons Park amusement park</a> near Southhamption, UK. It was her first real amusement park experience, and she had a grand time.</p>
+<h2>The many positives:</h2>
+<ul>
+<li><strong>The park is really well maintained</strong>. Everything felt clean and proper, at the Disneyland level - if not better</li>
+<li><strong>The rides for kids were fun and creative</strong>, with supportive and friendly staff</li>
+<li><strong>The restrooms were clean.</strong></li>
+<li><strong>Peppa Pig World was really fun for our 4.5 year old</strong>. She also enjoyed the Dinosaur area called "Lost Kingdom"</li>
+<li><strong>The animal enclosures were nice</strong>. Uma really liked the pink flamingo enclosure</li>
+<li><strong>The water park was a good break from the rides</strong>, fenced in so we knew Uma couldn't run off</li>
+<li><strong>The playgrounds were fun and accurately marked for different age groups</strong></li>
+<li><strong>This park is for kids, not teens</strong>. There are a few roller coasters, but really this is for 12 years or under</li>
+<li><strong>The mobile app is well executed</strong>, we loved the estimated queue times and the map</li>
+<li><strong>The food options were decent</strong>, expensive but on the reasonable side for an amusement park. We brought our own food but splurged on ice cream and coffee</li>
+<li><strong>Getting there by public transit from London was straight-forward</strong>. We took the tube to the Waterloo Station, then a South West train to South Hamption Central. From there we jumped on the X7 bus right to the park entrance</li>
+</ul>
+<h2>The single negative item:</h2>
+<p><strong>Leaving was unnecessarily unpleasant</strong></p>
+<ul>
+<li>The last bus from the park entrance to the train station left an hour before the park closed. To be fair, this is a public bus, not part of the park</li>
+<li>There was another public bus stop a mile away from the park whose last bus left right at park closing</li>
+<li>Discovering these details was really hard, the timetable was hidden inside the covered bus stop listed in a hard-to-follow format</li>
+</ul>
+<h2>Summary:</h2>
+<ul>
+<li>Excellent park, would visit again. Next time we'll take into account that the last available bus leaves an hour before the park closes</li>
+<li>The venue should  provide a shuttle to-and-from the train station for people coming from London without cars</li>
+</ul>
+<p><img src="/images/uma-waterpark-summer-2023-40.jpg" alt="Uma enjoying the splash area"></p>
 ]]></content>
         <author>
             <name>Daniel Roy Greenfeld</name>
             <email>daniel@feldroy.com</email>
             <uri>https://daniel.feldroy.com</uri>
         </author>
+        <category term="uma"/>
+        <category term="england"/>
+        <category term="family"/>
+        <category term="review"/>
+        <contributor>
+            <name>Daniel Roy Greenfeld</name>
+            <email>daniel@feldroy.com</email>
+            <uri>https://daniel.feldroy.com</uri>
+        </contributor>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[BJJ Training Tips]]></title>
+        <id>https://daniel.feldroy.com/posts/2023-06-bjj-training-tips</id>
+        <link href="https://daniel.feldroy.com/posts/2023-06-bjj-training-tips"/>
+        <updated>2023-06-16T10:00:00.000Z</updated>
+        <summary type="html"><![CDATA[I started Brazilian Jiu-Jitsu in early November 2022. Against most other white belts I usually can't be submitted and have landed a few submissions of my own. I'm not big or strong so I use these rules given by my coaches and fellow players of the art.]]></summary>
+        <content type="html"><![CDATA[<p>I started Brazilian Jiu-Jitsu in early November 2022. Against most other white belts I usually can't be submitted and have landed a few submissions of my own. I'm not big or strong so I use these rules given by my coaches and fellow players of the art.</p>
+<ul>
+<li>Tap early and tap often. Better to train tomorrow then get hurt and be out for a month</li>
+<li>Before you spar with someone, tell your opponent about any injuries</li>
+<li>Go for position and transition instead of submission</li>
+<li>If you lose: smile, and show respect</li>
+<li>If someone smothers you with pressure and you can't get out, don't let it get to your head. Tap and move on with a smile. Part of the BJJ journey is learning how to deal with discomfort</li>
+<li>If you win: show respect and humility</li>
+<li>Ask questions</li>
+<li>No matter how tired you get, if it's sparring time go as much as you can. The best way to build grappling endurance is get used to it</li>
+<li>If someone's a jerk on the mat, unless they apologize don't train with them again</li>
+<li>Don't be a jerk on the mat, look out for your opponent's welfare</li>
+<li>Don't keep track of wins and losses</li>
+<li>Wash your gi and rashgaurds at the end of your training day</li>
+<li>Choose an accessory fitness method and do it regularly. I do weight lifting and a tiny bit of climbing, lots of others train in yoga. Not just because it might improve your BJJ, but it can help prevent injury and postural issues</li>
+</ul>
+<p>Most of these tips I got from my coaches Todd, Ben, and Ellen at <a href="https://academyofbrazilianjiujitsu.com/">Academy of Brazilian Jiu-Jitsu</a> in Los Angeles, but I also got good advice at <a href="https://grandunionbjj.com/">Grand Union BJJ</a> in London.</p>
+]]></content>
+        <author>
+            <name>Daniel Roy Greenfeld</name>
+            <email>daniel@feldroy.com</email>
+            <uri>https://daniel.feldroy.com</uri>
+        </author>
+        <category term="bjj"/>
+        <category term="martial arts"/>
         <contributor>
             <name>Daniel Roy Greenfeld</name>
             <email>daniel@feldroy.com</email>

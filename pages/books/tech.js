@@ -28,7 +28,7 @@ export default function TechBooks() {
       <ul className={utilStyles.list}>
         <li className={utilStyles.listItem}>
           <Image
-            src="/images/Two-Scoops-of-Django-3-Alpha-Cover_1080x.jpg"
+            src="/images/book-TSD3-800.jpg"
             height="514"
             width="360"
           ></Image>

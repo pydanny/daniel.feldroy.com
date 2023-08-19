@@ -30,7 +30,7 @@ yarn add @aws-sdk/client-s3
 
 # Create Utility Function
 
-I encapsulated my solution in a function in `s3FileFetch.js` so I could use it accros a project:
+I encapsulated my solution in a function in `s3FileFetch.js` so I could use it across a project:
 
 ```javascript
 import { getSignedUrl } from "@aws-sdk/s3-request-presigner";

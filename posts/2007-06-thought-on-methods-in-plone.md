@@ -46,5 +46,6 @@ So it hit me, why not just return the darn catalog brain? Sure, `reference_catal
 And if we hit another snag where we need to also return field x, y, and z, we have them do this:
 
 ```html
-<div define="item python:itemBrain.getObject()" content="item/funnyQuote"></div>
+<div define="item python:itemBrain.getObject()"
+      content="item/funnyQuote"></div>
 ```

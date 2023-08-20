@@ -42,7 +42,7 @@ Be it here in Southern California, another state, or even another country, I wan
 
 ## Learn new things
 
-I'm of the opinion that if you're not learning, you're career is ending. I want to continue to learn new things. In 2023 I plan to learn more aboutPython, Rust, and JavaScript. While I'm at it, I want to deepen my BJJ knowledge.
+I'm of the opinion that if you're not learning, you're career is ending. I want to continue to learn new things. In 2023 I plan to learn more about Python, Rust, and JavaScript. While I'm at it, I want to deepen my BJJ knowledge.
 
 ## Be a good parent
 

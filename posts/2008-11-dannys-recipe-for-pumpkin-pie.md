@@ -7,13 +7,15 @@ tags:
 - holidays
 - food
 - legacy-dannygreenfeld
+- recipe
+- pumpkin
 time_to_read: 5
 title: Danny's recipe for pumpkin pie
 ---
 
 *This was originally posted on blogger [here](https://dannygreenfeld.blogspot.com/2008/11/dannys-recipe-for-pumpkin-pie.html)*.
 
-<span style="font-style: italic;">Inspired by Dave Barry</span>
+_Inspired by Dave Barry_
 
 
 1. Go to a farmer's market and buy the most awesome pumpkin you can find.  That means no blemishes, and perfectly round.  It also needs to be big enough that you need two people to lift it up to put in your trunk.  A good handle thingee on the top is also critically important.

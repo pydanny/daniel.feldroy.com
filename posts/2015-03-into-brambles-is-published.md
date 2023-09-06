@@ -6,7 +6,6 @@ slug: 2015-03-into-brambles-is-published
 tags:
   - The Brambles
   - writings
-  - Wife
   - legacy-danielroygreenfeld
 time_to_read: 5
 title: Into the Brambles is Published!

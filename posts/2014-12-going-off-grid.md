@@ -5,7 +5,6 @@ published: true
 slug: 2014-12-going-off-grid
 tags:
   - vacation
-  - Wife
   - Philippines
   - legacy-danielroygreenfeld
 time_to_read: 5

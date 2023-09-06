@@ -6,7 +6,7 @@ tags:
   - python
   - howto
   - aws
-  - til
+  - TIL
 time_to_read: 1
 title: AWS Requests Auth
 description: AWS signature version 4 signing process for the python requests module.

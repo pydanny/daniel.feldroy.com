@@ -6,6 +6,7 @@ tags:
   - javascript
   - reference
   - howto
+  - TIL
 time_to_read: 10
 title: Getting s3 pre-signed URLS using the Node.js AWS SDK v3
 description: An easy-to-find copy/pastable reference for creating pre-signed URLs for getting of files using the Node.js AWS SDK v3.

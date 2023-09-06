@@ -5,11 +5,10 @@ slug: til-2023-09-pytest-with-breakpoints
 tags:
   - python
   - testing
-  - til
+  - TIL
 time_to_read: 5
-title: pytest with breakpoints
-description: Adding breakpoints to pytest
-type: post
+title: "TIL: pytest with breakpoints"
+description: Injecting breakpoints into a failing pytest run
 ---
 
 To inject a breakpoint into a failing pytest run, add `--pdb` to your `pytest` command:

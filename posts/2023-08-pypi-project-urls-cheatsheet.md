@@ -7,6 +7,7 @@ tags:
   - python
   - cheatsheet  
   - packaging
+  - TIL
 time_to_read: 2
 title: PyPI Project URLs Cheatsheet
 description: The PyPI project URLs spec is defined only in code. Here's my cheatsheet explaining how to configure them. I'll update this as I learn more (suggestions welcome!). Examples in several formats.

@@ -5,7 +5,7 @@ tags:
   - nextjs
   - react
   - vercel
-  - til
+  - TIL
 published: true
 title: Blog Revamp 2021
 ---

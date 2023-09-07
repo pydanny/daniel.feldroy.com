@@ -18,7 +18,7 @@ Poetry has its own location for `urls` in the [tool.poetry.urls] table. Per the 
 ```toml
 [tool.poetry.urls]
 
-changelog = "https://github.com/lidatong/dataclasses-json/releases"
-documentation = "https://lidatong.github.io/dataclasses-json/"
-issues = "https://github.com/lidatong/dataclasses-json/issues"
+changelog = "https://github.com/myghname/projectname/releases"
+documentation = "https://myghname.github.io/dataclasses-json/"
+issues = "https://github.com/myghname/projectname/issues"
 ````

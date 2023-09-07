@@ -66,6 +66,20 @@ discord = "https://discord/area"
 gitter = "https://gitter/area"
 ```
 
+# Example for poetry project
+
+Poetry has its own location for `urls` in the [tool.poetry.urls] table. Per the [Poetry documentation on urls](https://python-poetry.org/docs/pyproject/#urls):
+
+> "In addition to the basic urls (homepage, repository and documentation), you can specify any custom url in the urls section."
+
+```toml
+[tool.poetry.urls]
+
+changelog = "https://github.com/lidatong/dataclasses-json/releases"
+documentation = "https://lidatong.github.io/dataclasses-json/"
+issues = "https://github.com/lidatong/dataclasses-json/issues"
+````
+
 # Example for setup.py
 
 For legacy reasons, here's the same thing in `setup.py` format.

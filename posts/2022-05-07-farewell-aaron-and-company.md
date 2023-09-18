@@ -41,7 +41,7 @@ This was the official history of the company:
 
 > In 2013, shortly after Hurricane Sandy, Aaron & Company acquires Dickson Plumbing Supply in Brielle, New Jersey. After almost a year of working in a temporary “pop-up” branch due to the extensive damage done to the building due to Hurricane Sandy, Aaron & Company officially opens 1 Union Ave, Brielle NJ in May of 2014.
 
-> Today, Aaron and Company employs over 150 people at it's eight locations including the four that house the Aaron Kitchen and Bath Design Gallery showrooms. We are now considered one of the largest independent wholesale distributors of plumbing, heating, and cooling products in New Jersey.
+> Today, Aaron and Company employs over 150 people at eight locations including the four that house the Aaron Kitchen and Bath Design Gallery showrooms. We are now considered one of the largest independent wholesale distributors of plumbing, heating, and cooling products in New Jersey.
 
 # Photos
 
@@ -53,7 +53,7 @@ _The logo was designed by my grandmother. It was the official company logo. It w
 
 ![](/aaronco/History1.png)
 
-_This photo of the company catalog taken in autumn of 1958 features either my great-grandfather or grandfather. Waiting for an answer on who it actually might be._
+_This photo of the company catalog taken in autumn of 1958 features my grandfather._
 
 ![](/aaronco/History2.jpg)
 

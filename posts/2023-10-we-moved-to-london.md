@@ -43,7 +43,7 @@ Sure! Some options:
 
 I work at [Kraken Tech](https://kraken.tech/) building software for decarbonization- and electrification-focused retail energy companies like [Octopus Energy](https://octopus.energy). They are sister companies intent on improving the world.
 
-You can read in detail why I work for them [here](http://127.0.0.1:3000/posts/whats-the-best-thing-about-working-for-octopus-energy-part-1). Just replace everything saying "Octopus Energy" with "Kraken Tech" - the division in the USA was not there yet when I wrote it. 
+You can read in detail why I work for them [here](/posts/whats-the-best-thing-about-working-for-octopus-energy-part-1). Just replace everything saying "Octopus Energy" with "Kraken Tech" - the division in the USA was not there yet when I wrote it. 
 
 # Do you have one of those Octopus Energy referral codes? 
 

@@ -15,7 +15,7 @@ type: post
 image: /images/TODO.jpg
 ---
 
-We're going to be here in the United Kingdon, London to be precise. 
+We're going to be here for a while in the United Kingdon, London to be precise. 
 
 # Where are you living?
 

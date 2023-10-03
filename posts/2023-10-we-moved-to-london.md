@@ -9,13 +9,13 @@ tags:
   - octopus
   - kraken
 time_to_read: 5
-title: We moved to London!
-description: We're going to be in London for a while, here's some of the details.
+title: We moved to London, UK!
+description: We're going to be in London, UK for a while, here's some of the details.
 type: post
 image: /images/TODO.jpg
 ---
 
-We're going to be here for a while, so I thought I'd let everyone know.
+We're going to be here in the United Kingdon, London to be precise. 
 
 # Where are you living?
 

@@ -6,7 +6,7 @@ tags:
   - python
   - packaging
   - TIL
-time_to_read: 5
+time_to_read: 1
 title: "TIL: Poetry PyPI Project URLS"
 description: Adding sidebar links to PyPI projects powered by Poetry
 ---

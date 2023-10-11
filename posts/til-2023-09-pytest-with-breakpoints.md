@@ -6,7 +6,7 @@ tags:
   - python
   - testing
   - TIL
-time_to_read: 5
+time_to_read: 1
 title: "TIL: pytest with breakpoints"
 description: Injecting breakpoints into a failing pytest run
 ---

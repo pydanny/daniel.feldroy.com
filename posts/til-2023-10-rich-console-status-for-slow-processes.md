@@ -5,7 +5,7 @@ slug: til-2023-10-rich-console-status-for-slow-processes
 tags:
   - python
   - TIL
-time_to_read: 5
+time_to_read: 1
 title: "TIL: Rich.console.status for slow processes"
 description: From the command-line a trick to inform users know the system hasn't died and they should wait until it is done.
 ---

@@ -12,7 +12,9 @@ image: /logos/til-1.png
 twitter_image: /logos/til-1.png
 ---
 
-For saving WIP commits to a remote repo. Just add `--no-verify` to whatever you are doing:
+For saving WIP commits to a remote repo. You really don't want to know what I was doing before.
+
+Just add `--no-verify` to whatever you are doing:
 
 ```bash
 git commit -am "Fun code noodling" --no-verify

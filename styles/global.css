@@ -35,3 +35,15 @@ p.dodImage {
   max-width: 50%;
   max-height: 50%;
 }
+
+.column {
+  float: left;
+}
+
+.left-25 {
+  width: 25%;
+}
+
+.right-75 {
+  width: 75%;
+}

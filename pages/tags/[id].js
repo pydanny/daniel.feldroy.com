@@ -1,5 +1,5 @@
 import Link from "next/link";
-import Layout from "../../components/layout";
+import Image from "next/image";
 import utilStyles from "../../styles/utils.module.css";
 import MyDate from "../../components/date";
 import Metatags from "../../components/metatags";
@@ -36,9 +36,23 @@ export default function Home({ allTagsData, tag }) {
   return <>
     <Metatags meta={meta} />
     <section className={`${utilStyles.headingMd} ${utilStyles.padding1px}`}>
-      <h2 className={utilStyles.headingLg}>
-        {prettyTag} Articles ({allTagsData.length})
-      </h2>
+      {tag == "TIL" ? (
+        <div class="row">
+          <div class="column left-25">
+            <Image src="/logos/til-1.png" width={128} height={128} alt="TIL" />
+          </div>
+          <div class="column right-75">
+            <h2 className={utilStyles.headingLg}>
+              Articles ({allTagsData.length})
+            </h2>
+          </div>
+        </div>
+        
+      ) : (
+        <h2 className={utilStyles.headingLg}>
+          {prettyTag} Articles ({allTagsData.length})
+        </h2>
+      )}
       <ul className={utilStyles.list}>
         {allTagsData.map(({ id, date, title, description }) => (
           <li className={utilStyles.listItem} key={id}>

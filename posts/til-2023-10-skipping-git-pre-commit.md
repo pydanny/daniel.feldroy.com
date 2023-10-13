@@ -18,5 +18,12 @@ Just add `--no-verify` to whatever you are doing:
 
 ```bash
 git commit -am "Fun code noodling" --no-verify
-git commit --amend
+git commit --amend  --no-verify
+```
+
+Thanks to [Fabio da Luz](https://github.com/luzfcb), I found you can also shorten that to just `-n`.
+
+```bash
+git commit -am "Fun code noodling" -n
+git commit --amend  -n
 ```

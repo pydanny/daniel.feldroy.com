@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import Metatags from "../../components/metatags";
 
@@ -40,6 +41,16 @@ export default function Post({ postData }) {
         <MyDate dateString={postData.date} />
       </div>
       <div dangerouslySetInnerHTML={{ __html: postData.contentHtml }} />
+      {postData.tags.filter((tag) => tag !== "TIL").length > 0 && (
+        <>
+        <hr />
+          <section className={utilStyles.center}>
+            <Link href="/tags/TIL">
+              <Image src="/logos/til-1.png" name="TIL Logo" width="288" height="288" />
+            </Link>
+          </section>
+        </>
+      )}
       <section>
         <hr />
         Tags:

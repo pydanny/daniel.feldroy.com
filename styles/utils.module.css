@@ -50,3 +50,8 @@
 .lightText {
   color: #666;
 }
+
+.center {
+  display: flex;
+  justify-content: center;  
+}

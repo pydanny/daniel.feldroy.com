@@ -41,7 +41,7 @@ export default function Post({ postData }) {
         <MyDate dateString={postData.date} />
       </div>
       <div dangerouslySetInnerHTML={{ __html: postData.contentHtml }} />
-      {postData.tags.filter((tag) => tag !== "TIL").length > 0 && (
+      {postData.tags.filter((tag) => tag === "TIL").length > 0 && (
         <>
         <hr />
           <section className={utilStyles.center}>

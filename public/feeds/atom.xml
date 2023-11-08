@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://daniel.feldroy.com/</id>
     <title>Daniel Roy Greenfeld</title>
-    <updated>2023-08-07T11:45:35.511Z</updated>
+    <updated>2023-11-08T14:16:39.066Z</updated>
     <generator>Next.js using Feed for Node.js</generator>
     <author>
         <name>Daniel Roy Greenfeld</name>
@@ -15,88 +15,27 @@
     <icon>https://daniel.feldroy.com/favicon.ico</icon>
     <rights>All rights reserved 2023, Daniel Roy Greenfeld</rights>
     <entry>
-        <title type="html"><![CDATA[PyPI Project URLs Cheatsheet]]></title>
-        <id>https://daniel.feldroy.com/posts/2023-08-pypi-project-urls-cheatsheet</id>
-        <link href="https://daniel.feldroy.com/posts/2023-08-pypi-project-urls-cheatsheet"/>
-        <updated>2023-08-04T15:45:00.000Z</updated>
-        <summary type="html"><![CDATA[The PyPI project URLs spec is defined only in code. Here's my cheatsheet explaining how to configure them. I'll update this as I learn more (suggestions welcome!). Examples in several formats.]]></summary>
-        <content type="html"><![CDATA[<p>See these links in the image below? I want every PyPI project to have them in the left column.</p>
-<p><img src="/images/pypi-links-sidenav.png" alt="PyPI project URLs"></p>
-<p>The challenge is the PyPI project URLs spec is <a href="https://github.com/pypi/warehouse/blob/70eac9796fa1eae24741525688a112586eab9010/warehouse/templates/packaging/detail.html#L20-L62">defined only in code</a>. Here's my cheatsheet explaining how to configure them. I'll update this as I learn more (suggestions welcome!). Examples in several formats.</p>
-<h1>Example for pyproject.toml</h1>
-<p>The <code>[project.urls]</code> table shown below only works if there is a <code>[project]</code> table.</p>
-<pre><code class="language-toml">[project.urls]
-
-# Project homepage, often a link to GitHub or GitLab
-# Often specified in the [project] table
-homepage = "https://example.com"
-
-# The source code repository, don't use this if your homepage
-# is the repo
-repository = "https://github.com/me/spam.git"
-
-# The changelog, really useful for ongoing users of your project
-changelog = "https://github.com/me/spam/blob/master/CHANGELOG.md"
-
-# Any long form docs
-docs = "https://readthedocs.org"
-documentation = "https://readthedocs.org"
-
-# Bugs/issues/feature requests
-bugs = "https://change/requests"
-issues = "https://change/requests"
-tracker = "https://change/requests"
-
-# Really only useful if you have a binary download
-download = "https://pypi.org/project/spam/#files"
-
-# Funding requests, which hopefully you will get more than pizza money
-sponsor = "https://please/give/me/money"
-funding = "https://please/give/me/money"
-donate = "https://please/give/me/money"
-
-# Discussion areas
-mastodon = "https://mastodon/server/@me"
-twitter = "https://twitter/or/x"
-slack = "https://server/on/slack"
-reddit = "https://reddit/r/area"
-discord = "https://discord/area"
-gitter = "https://gitter/area"
+        <title type="html"><![CDATA[TIL: Fixing YAML]]></title>
+        <id>https://daniel.feldroy.com/posts/til-2023-11-fixing-yaml</id>
+        <link href="https://daniel.feldroy.com/posts/til-2023-11-fixing-yaml"/>
+        <updated>2023-11-08T14:30:00.000Z</updated>
+        <summary type="html"><![CDATA[Tired of ugly YAML? Here's how to prettify it fast.]]></summary>
+        <content type="html"><![CDATA[<p>I got tired of manually correcting YAML only to run into periodic instances where my cleanup broke stuff. Alas, `yamllint`` only tells you what's wrong, but I'm too lazy to do it. Instead, I want an easy-to-use CLI that does all the work for me.</p>
+<p>Thanks to David Winterbottom for the suggestion.</p>
+<p>Step 1: Install <code>yamlfix</code></p>
+<pre><code class="language-bash">pip install yamlfix
 </code></pre>
-<h1>Example for setup.py</h1>
-<p>For legacy reasons, here's the same thing in <code>setup.py</code> format.</p>
-<pre><code class="language-python"># setup.py
-from setuptools import setup
-
-VERSION = "4.0.0"
-
-setup(
-    name="xocto",
-    version=VERSION,
-    url="https://github.com/octoenergy/xocto"
-    # ...
-    project_urls={
-        "Documentation": "https://xocto.readthedocs.io",
-        "Changelog": "https://github.com/octoenergy/xocto/blob/main/CHANGELOG.md",
-        "Issues": "https://github.com/octoenergy/xocto/issues",
-    },
-)
+<p>Step 2: Recursively clean up all the YAML</p>
+<pre><code class="language-bash">yamlfix .
 </code></pre>
-<h1>See also</h1>
-<p>As other resources from other people turn up, I'll add them here.</p>
-<ul>
-<li><a href="https://github.com/patrick91/links-demo">Patrick Arminio's PyPI project URLs demo</a> - Added August 7, 2023</li>
-</ul>
 ]]></content>
         <author>
             <name>Daniel Roy Greenfeld</name>
             <email>daniel@feldroy.com</email>
             <uri>https://daniel.feldroy.com</uri>
         </author>
-        <category term="howto"/>
         <category term="python"/>
-        <category term="cheatsheet"/>
-        <category term="packaging"/>
+        <category term="TIL"/>
         <contributor>
             <name>Daniel Roy Greenfeld</name>
             <email>daniel@feldroy.com</email>
@@ -104,49 +43,28 @@ setup(
         </contributor>
     </entry>
     <entry>
-        <title type="html"><![CDATA[Review of Paultons Park]]></title>
-        <id>https://daniel.feldroy.com/posts/2023-07-visit-to-paultons-park</id>
-        <link href="https://daniel.feldroy.com/posts/2023-07-visit-to-paultons-park"/>
-        <updated>2023-07-11T23:45:00.000Z</updated>
-        <summary type="html"><![CDATA[A quick review of Paultons Park Amusement World near Southhamption from the vantage point of a parent of a four year old child.]]></summary>
-        <content type="html"><![CDATA[<p>This weekend we took 4.5-year-old Uma to <a href="https://paultonspark.co.uk/">Paultons Park amusement park</a> near Southhamption, UK. It was her first real amusement park experience, and she had a grand time.</p>
-<h2>The many positives:</h2>
-<ul>
-<li><strong>The park is really well maintained</strong>. Everything felt clean and proper, at the Disneyland level - if not better</li>
-<li><strong>The rides for kids were fun and creative</strong>, with supportive and friendly staff</li>
-<li><strong>The restrooms were clean.</strong></li>
-<li><strong>Peppa Pig World was really fun for our 4.5 year old</strong>. She also enjoyed the Dinosaur area called "Lost Kingdom"</li>
-<li><strong>The animal enclosures were nice</strong>. Uma really liked the pink flamingo enclosure</li>
-<li><strong>The water park was a good break from the rides</strong>, fenced in so we knew Uma couldn't run off</li>
-<li><strong>The playgrounds were fun and accurately marked for different age groups</strong></li>
-<li><strong>This park is for kids, not teens</strong>. There are a few roller coasters, but really this is for 12 years or under</li>
-<li><strong>The mobile app is well executed</strong>, we loved the estimated queue times and the map</li>
-<li><strong>The food options were decent</strong>, expensive but on the reasonable side for an amusement park. We brought our own food but splurged on ice cream and coffee</li>
-<li><strong>Getting there by public transit from London was straight-forward</strong>. We took the tube to the Waterloo Station, then a South West train to South Hamption Central. From there we jumped on the X7 bus right to the park entrance</li>
-</ul>
-<h2>The single negative item:</h2>
-<p><strong>Leaving was unnecessarily unpleasant</strong></p>
-<ul>
-<li>The last bus from the park entrance to the train station left an hour before the park closed. To be fair, this is a public bus, not part of the park</li>
-<li>There was another public bus stop a mile away from the park whose last bus left right at park closing</li>
-<li>Discovering these details was really hard, the timetable was hidden inside the covered bus stop listed in a hard-to-follow format</li>
-</ul>
-<h2>Summary:</h2>
-<ul>
-<li>Excellent park, would visit again. Next time we'll take into account that the last available bus leaves an hour before the park closes</li>
-<li>The venue should  provide a shuttle to-and-from the train station for people coming from London without cars</li>
-</ul>
-<p><img src="/images/uma-waterpark-summer-2023-40.jpg" alt="Uma enjoying the splash area"></p>
+        <title type="html"><![CDATA[TIL: Skipping git pre-commit]]></title>
+        <id>https://daniel.feldroy.com/posts/til-2023-10-skipping-git-pre-commit</id>
+        <link href="https://daniel.feldroy.com/posts/til-2023-10-skipping-git-pre-commit"/>
+        <updated>2023-10-13T15:45:00.000Z</updated>
+        <summary type="html"><![CDATA[For saving WIP commits to a remote repo. You really don't want to know what I was doing before.]]></summary>
+        <content type="html"><![CDATA[<p>For saving WIP commits to a remote repo. You really don't want to know what I was doing before.</p>
+<p>Just add <code>--no-verify</code> to whatever you are doing:</p>
+<pre><code class="language-bash">git commit -am "Fun code noodling" --no-verify
+git commit --amend  --no-verify
+</code></pre>
+<p>Thanks to <a href="https://github.com/luzfcb">Fabio da Luz</a>, I found you can also shorten that to just <code>-n</code>.</p>
+<pre><code class="language-bash">git commit -am "Fun code noodling" -n
+git commit --amend  -n
+</code></pre>
 ]]></content>
         <author>
             <name>Daniel Roy Greenfeld</name>
             <email>daniel@feldroy.com</email>
             <uri>https://daniel.feldroy.com</uri>
         </author>
-        <category term="uma"/>
-        <category term="england"/>
-        <category term="family"/>
-        <category term="review"/>
+        <category term="git"/>
+        <category term="TIL"/>
         <contributor>
             <name>Daniel Roy Greenfeld</name>
             <email>daniel@feldroy.com</email>
@@ -154,36 +72,36 @@ setup(
         </contributor>
     </entry>
     <entry>
-        <title type="html"><![CDATA[BJJ Training Tips]]></title>
-        <id>https://daniel.feldroy.com/posts/2023-06-bjj-training-tips</id>
-        <link href="https://daniel.feldroy.com/posts/2023-06-bjj-training-tips"/>
-        <updated>2023-06-16T10:00:00.000Z</updated>
-        <summary type="html"><![CDATA[I started Brazilian Jiu-Jitsu in early November 2022. Against most other white belts I usually can't be submitted and have landed a few submissions of my own. I'm not big or strong so I use these rules given by my coaches and fellow players of the art.]]></summary>
-        <content type="html"><![CDATA[<p>I started Brazilian Jiu-Jitsu in early November 2022. Against most other white belts I usually can't be submitted and have landed a few submissions of my own. I'm not big or strong so I use these rules given by my coaches and fellow players of the art.</p>
-<ul>
-<li>Tap early and tap often. Better to train tomorrow then get hurt and be out for a month</li>
-<li>Before you spar with someone, tell your opponent about any injuries</li>
-<li>Go for position and transition instead of submission</li>
-<li>If you lose: smile, and show respect</li>
-<li>If someone smothers you with pressure and you can't get out, don't let it get to your head. Tap and move on with a smile. Part of the BJJ journey is learning how to deal with discomfort</li>
-<li>If you win: show respect and humility</li>
-<li>Ask questions</li>
-<li>No matter how tired you get, if it's sparring time go as much as you can. The best way to build grappling endurance is get used to it</li>
-<li>If someone's a jerk on the mat, unless they apologize don't train with them again</li>
-<li>Don't be a jerk on the mat, look out for your opponent's welfare</li>
-<li>Don't keep track of wins and losses</li>
-<li>Wash your gi and rashgaurds at the end of your training day</li>
-<li>Choose an accessory fitness method and do it regularly. I do weight lifting and a tiny bit of climbing, lots of others train in yoga. Not just because it might improve your BJJ, but it can help prevent injury and postural issues</li>
-</ul>
-<p>Most of these tips I got from my coaches Todd, Ben, and Ellen at <a href="https://academyofbrazilianjiujitsu.com/">Academy of Brazilian Jiu-Jitsu</a> in Los Angeles, but I also got good advice at <a href="https://grandunionbjj.com/">Grand Union BJJ</a> in London.</p>
+        <title type="html"><![CDATA[TIL: Capture stdout & stderr with pytest]]></title>
+        <id>https://daniel.feldroy.com/posts/til-2023-10-capture-stdout-stderr-with-pytest</id>
+        <link href="https://daniel.feldroy.com/posts/til-2023-10-capture-stdout-stderr-with-pytest"/>
+        <updated>2023-10-11T15:45:00.000Z</updated>
+        <summary type="html"><![CDATA[How to capture printed text using pytest, something I wish I knew sooner.]]></summary>
+        <content type="html"><![CDATA[<p>I wish I knew this earlier, but I know it now thanks to <a href="https://www.codyantunez.com/">Cody Antunez</a>. Here it is:</p>
+<pre><code class="language-python">import sys
+
+def test_myoutput(capsys):  # or use "capfd" for fd-level
+
+    # Write some text
+    print("hello")
+    sys.stderr.write("world\n")
+
+    # Capture the text
+    captured = capsys.readouterr()
+
+    # Test the captured output, both std and err
+    assert captured.out == "hello\n"
+    assert captured.err == "world\n"
+</code></pre>
+<p>In the <a href="https://docs.pytest.org/en/latest/how-to/capture-stdout-stderr.html#accessing-captured-output-from-a-test-function">pytest docs</a> it describes the fixtures to capture binary and more.</p>
 ]]></content>
         <author>
             <name>Daniel Roy Greenfeld</name>
             <email>daniel@feldroy.com</email>
             <uri>https://daniel.feldroy.com</uri>
         </author>
-        <category term="bjj"/>
-        <category term="martial arts"/>
+        <category term="python"/>
+        <category term="TIL"/>
         <contributor>
             <name>Daniel Roy Greenfeld</name>
             <email>daniel@feldroy.com</email>

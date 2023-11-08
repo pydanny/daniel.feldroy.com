@@ -22,6 +22,7 @@ export async function getStaticProps() {
   // render blog posts
   await generateRssFeed("django");
   await generateRssFeed("python");
+  await generateRssFeed("TIL");
   await generateRssFeed("");
   return {
     props: {

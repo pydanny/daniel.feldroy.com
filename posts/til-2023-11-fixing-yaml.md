@@ -7,7 +7,7 @@ tags:
   - TIL
 time_to_read: 1
 title: "TIL: Fixing YAML"
-description: Here's how to prettify it fast across your project.
+description: Here's how to prettify YAML across your projects.
 image: /logos/til-1.png
 twitter_image: /logos/til-1.png
 ---

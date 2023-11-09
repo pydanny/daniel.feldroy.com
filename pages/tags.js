@@ -1,5 +1,5 @@
 import Link from "next/link";
-import utilStyles from "../styles/utils.module.css";
+import utilStyles from "../festyles/utils.module.css";
 
 import { getAllTags } from "../lib/tags";
 

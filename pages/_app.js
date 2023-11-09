@@ -1,5 +1,5 @@
 import Layout, { siteTitle } from "../components/layout";
-import "../styles/global.css";
+import "../festyles/global.css";
 
 export default function App({ Component, pageProps }) {
   return (

@@ -1,5 +1,5 @@
 import Link from "next/link";
-import utilStyles from "../../styles/utils.module.css";
+import utilStyles from "../../festyles/utils.module.css";
 import MyDate from "../../components/date";
 import { useRouter } from "next/router";
 import MiniSearch from "minisearch";

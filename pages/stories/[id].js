@@ -4,7 +4,7 @@ import Link from "next/link";
 import Layout from "../../components/layout";
 import { getAllPostIds, getPostData } from "../../lib/stories";
 import MyDate from "../../components/date";
-import utilStyles from "../../styles/utils.module.css";
+import utilStyles from "../../festyles/utils.module.css";
 import "highlight.js/styles/gml.css";
 
 export async function getStaticPaths() {

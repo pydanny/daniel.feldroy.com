@@ -1,6 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
-import utilStyles from "../../styles/utils.module.css";
+import utilStyles from "../../festyles/utils.module.css";
 import MyDate from "../../components/date";
 import Metatags from "../../components/metatags";
 

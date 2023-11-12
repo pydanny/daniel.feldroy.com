@@ -6,7 +6,7 @@ tags:
   - python
   - TIL
 time_to_read: 1
-title: "Autoloading on Filechange using Watchdog"
+title: "TIL: Autoloading on Filechange using Watchdog"
 description: Using Watchdog to monitor changes to a directory so we can alter what we serve out as HTTP.
 image: /logos/til-1.png
 twitter_image: /logos/til-1.png

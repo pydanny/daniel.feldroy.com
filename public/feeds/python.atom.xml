@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://daniel.feldroy.com/</id>
     <title>Daniel Roy Greenfeld</title>
-    <updated>2023-11-09T21:53:16.361Z</updated>
+    <updated>2023-11-12T08:46:13.674Z</updated>
     <generator>Next.js using Feed for Node.js</generator>
     <author>
         <name>Daniel Roy Greenfeld</name>
@@ -15,18 +15,76 @@
     <icon>https://daniel.feldroy.com/favicon.ico</icon>
     <rights>All rights reserved 2023, Daniel Roy Greenfeld</rights>
     <entry>
-        <title type="html"><![CDATA[TIL: Fixing YAML]]></title>
-        <id>https://daniel.feldroy.com/posts/til-2023-11-fixing-yaml</id>
-        <link href="https://daniel.feldroy.com/posts/til-2023-11-fixing-yaml"/>
-        <updated>2023-11-08T14:30:00.000Z</updated>
-        <summary type="html"><![CDATA[Here's how to prettify YAML across your projects.]]></summary>
-        <content type="html"><![CDATA[<p>I got tired of manually correcting and prettifying YAML only to run into periodic instances where my cleanup broke configurations. Alas, <code>yamllint</code> only tells you what's wrong. I would rather have an easy-to-use CLI tool that does all the work for me.</p>
-<p>Thanks to David Winterbottom for the suggestion.</p>
-<p>Step 1: Install <code>yamlfix</code></p>
-<pre><code class="language-bash">pip install yamlfix
+        <title type="html"><![CDATA[Autoloading on Filechange using Watchdog]]></title>
+        <id>https://daniel.feldroy.com/posts/til-2023-11-autoloading-on-filechange-using-watchdog</id>
+        <link href="https://daniel.feldroy.com/posts/til-2023-11-autoloading-on-filechange-using-watchdog"/>
+        <updated>2023-11-12T10:30:00.000Z</updated>
+        <summary type="html"><![CDATA[Serving HTTP with Python using all kinds of interesting ways]]></summary>
+        <content type="html"><![CDATA[<h2>Serving HTTP from a directory</h2>
+<p>I've done this for ages:</p>
+<pre><code class="language-sh">python -m http.server 8000 -d /path/to/files
 </code></pre>
-<p>Step 2: Recursively clean up all the YAML</p>
-<pre><code class="language-bash">yamlfix .
+<h2>Using <code>http.server</code> in a function</h2>
+<p>The Python docs aren't very clear on this, and rather than think hard about it I did this fun hack:</p>
+<pre><code class="language-python">from pathlib import Path
+from subprocess import check_call
+
+def server(site: Path) -> None:
+    check_call(['python', '-m', 'http.server', '8000', '-d', site])
+</code></pre>
+<h2>Autoreloading on filechanges</h2>
+<p>A bit more involved, and can certainly be improved. Here goes:</p>
+<pre><code class="language-python"># server.py
+import functools
+import http.server
+import os
+import socketserver
+from pathlib import Path
+
+from watchdog.events import FileSystemEventHandler
+from watchdog.observers import Observer
+
+
+def build_handler(directory: Path):
+    """Specify the directory of SimpleHTTPRequestHandler"""
+    return functools.partial(http.server.SimpleHTTPRequestHandler, directory=directory)
+
+
+class EventHandler(FileSystemEventHandler):
+    def on_any_event(self, event):
+        if event.is_directory:
+            return
+        elif event.event_type in ["created", "modified"]:
+            print(f"Reloading server due to file change: {event.src_path}")
+            os._exit(0)
+
+
+def run_server(directory: Path, port: int = 8000):
+    with socketserver.TCPServer(("", port), build_handler(directory)) as httpd:
+        print(f"Serving on port {port}")
+        httpd.serve_forever()
+
+
+def server(directory: Path, port: int = 8000):
+    """Serve files in the watched directory"""
+    # Watch the directory
+    event_handler = EventHandler()
+    observer = Observer()
+    observer.schedule(event_handler, site, recursive=True)
+    observer.start()
+
+    try:
+        # Run the HTTP server
+        run_server(directory=directory, port=port)
+    except KeyboardInterrupt:
+        observer.stop()
+
+    observer.join()
+</code></pre>
+<p>Usage:</p>
+<pre><code class="language-python">
+def server(site: Path, port: int = 8000):
+    server(site="/path/to/server", port=7500)
 </code></pre>
 ]]></content>
         <author>
@@ -43,28 +101,19 @@
         </contributor>
     </entry>
     <entry>
-        <title type="html"><![CDATA[TIL: Capture stdout & stderr with pytest]]></title>
-        <id>https://daniel.feldroy.com/posts/til-2023-10-capture-stdout-stderr-with-pytest</id>
-        <link href="https://daniel.feldroy.com/posts/til-2023-10-capture-stdout-stderr-with-pytest"/>
-        <updated>2023-10-11T15:45:00.000Z</updated>
-        <summary type="html"><![CDATA[How to capture printed text using pytest, something I wish I knew sooner.]]></summary>
-        <content type="html"><![CDATA[<p>I wish I knew this earlier, but I know it now thanks to <a href="https://www.codyantunez.com/">Cody Antunez</a>. Here it is:</p>
-<pre><code class="language-python">import sys
-
-def test_myoutput(capsys):  # or use "capfd" for fd-level
-
-    # Write some text
-    print("hello")
-    sys.stderr.write("world\n")
-
-    # Capture the text
-    captured = capsys.readouterr()
-
-    # Test the captured output, both std and err
-    assert captured.out == "hello\n"
-    assert captured.err == "world\n"
+        <title type="html"><![CDATA[TIL: Fixing YAML]]></title>
+        <id>https://daniel.feldroy.com/posts/til-2023-11-fixing-yaml</id>
+        <link href="https://daniel.feldroy.com/posts/til-2023-11-fixing-yaml"/>
+        <updated>2023-11-08T14:30:00.000Z</updated>
+        <summary type="html"><![CDATA[Here's how to prettify YAML across your projects.]]></summary>
+        <content type="html"><![CDATA[<p>I got tired of manually correcting and prettifying YAML only to run into periodic instances where my cleanup broke configurations. Alas, <code>yamllint</code> tells you what's wrong but doesn't fix problems. I would rather have an easy-to-use CLI tool that does all the work for me.</p>
+<p>Thanks to David Winterbottom for the suggestion.</p>
+<p>Step 1: Install <code>yamlfix</code></p>
+<pre><code class="language-bash">pip install yamlfix
 </code></pre>
-<p>In the <a href="https://docs.pytest.org/en/latest/how-to/capture-stdout-stderr.html#accessing-captured-output-from-a-test-function">pytest docs</a> it describes the fixtures to capture binary and more.</p>
+<p>Step 2: Recursively clean up all the YAML</p>
+<pre><code class="language-bash">yamlfix .
+</code></pre>
 ]]></content>
         <author>
             <name>Daniel Roy Greenfeld</name>

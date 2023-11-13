@@ -11,7 +11,7 @@ description: How to split a git commit into multiple commits.
 type: post
 ---
 
-Something I periodically do and need to document here where I can find it fast.
+Something I periodically do and need to document here where I can find it fast. I didn't come up with this technique, sources can be found [here](https://stackoverflow.com/questions/6217156/break-a-previous-commit-into-multiple-commits), [here](https://www.internalpointers.com/post/split-commit-into-smaller-ones-git), and [here](https://dev.to/timmouskhelichvili/how-to-split-a-git-commit-into-multiple-ones-3g6f). All credit goes to those sources.
 
 To reset the most recent commit:
 
@@ -19,12 +19,12 @@ To reset the most recent commit:
 git reset HEAD~
 ```
 
-This reverts the commit. Then you can commit individual or groups of files in multiple commits
+This reverts the commit. Commit individual or groups of files in multiple commits.
 
 
 ## What if your commit isn't the most recent one?
 
-Use an interactive rebase to commit things further back. Follow these steps
+Use an interactive rebase to commit things further back. Follow these steps:
 
 1. Find the commit hash with either `git log` or `git reflog`
 

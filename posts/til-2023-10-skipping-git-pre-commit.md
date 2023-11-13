@@ -3,6 +3,7 @@ date: "2023-10-13T15:45:00.00Z"
 published: true
 slug: til-2023-10-skipping-git-pre-commit
 tags:
+  - howto
   - git
   - TIL
 time_to_read: 1

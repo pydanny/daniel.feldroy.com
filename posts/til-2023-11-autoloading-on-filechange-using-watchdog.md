@@ -3,6 +3,7 @@ date: "2023-11-12T10:30:00.00Z"
 published: true
 slug: til-2023-11-autoloading-on-filechange-using-watchdog
 tags:
+  - howto
   - python
   - TIL
 time_to_read: 1

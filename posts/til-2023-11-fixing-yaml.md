@@ -3,6 +3,7 @@ date: "2023-11-08T14:30:00.00Z"
 published: true
 slug: til-2023-11-fixing-yaml
 tags:
+  - howto
   - python
   - TIL
 time_to_read: 1

@@ -11,7 +11,7 @@ description: How to split a git commit into multiple commits.
 type: post
 ---
 
-Something I periodically do is split up a commit into multiple commita. I am documenting it here where I can find it fast. 
+Something I periodically do is split up a commit into multiple commits. I am documenting it here where I can find it fast. 
 
 I didn't come up with this technique, sources can be found [here](https://stackoverflow.com/questions/6217156/break-a-previous-commit-into-multiple-commits), [here](https://www.internalpointers.com/post/split-commit-into-smaller-ones-git), and [here](https://dev.to/timmouskhelichvili/how-to-split-a-git-commit-into-multiple-ones-3g6f). All credit goes to those sources.
 

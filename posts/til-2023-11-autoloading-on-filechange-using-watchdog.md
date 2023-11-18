@@ -93,6 +93,8 @@ Usage:
 
 ```python
 # cli.py
-def server(site: Path, port: int = 8000):
+from .server import server
+
+def serve(site: Path, port: int = 8000):
     server(site="/path/to/directory/of/html", port=7500)
 ```

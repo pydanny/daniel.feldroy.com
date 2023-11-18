@@ -79,7 +79,7 @@ And that's another reason I'm at Octopus Energy. We're pragmatic and positive, a
 
 # Come and help me save the planet
 
-I invite anyone who is reading this to join me on my mission of saving the planet. The careers page is [here](https://octopusenergy.com/careers).
+I invite anyone who is reading this to join me on my mission of saving the planet. The careers page is [here](https://octopus.energy/careers).
 
 Please understand that we usually can only hire in countries in which we have a legal entity. So if a role isn't listed for the country in which you reside, we probably can't hire you.
 

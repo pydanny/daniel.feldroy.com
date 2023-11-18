@@ -34,8 +34,9 @@ export default function Metatags({ meta = {} }) {
         key="og:url"
         content={meta.og_url ? meta.og_url : "https://daniel.feldroy.com"}
       />
-      <meta name="twitter:site" key="twitter:site" content="@pydanny" />
+      {/* <meta name="twitter:site" key="twitter:site" content="@pydanny" /> */}
       <meta name="twitter:creator" key="twitter:creator" content="@pydanny" />
+      <meta name="twitter:card" content="summary" />
       <meta
         name="twitter:title"
         key="twitter:title"

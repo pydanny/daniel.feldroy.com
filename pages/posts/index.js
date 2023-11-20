@@ -35,7 +35,7 @@ export default function Home({ allPostsData, yearsBlogging }) {
     postsData = miniSearch.search(q);
   }
   return <>
-    <section className={`${utilStyles.headingMd} ${utilStyles.padding1px}`}>
+    <section>
       {q === "" && (
         <>
           <h1>All Articles ({allPostsData.length})</h1>
@@ -54,26 +54,22 @@ export default function Home({ allPostsData, yearsBlogging }) {
         </>
       )}
 
-      <ul className={utilStyles.list}>
-        {postsData.map(({ id, date, title, description }) => (
-          <li className={utilStyles.listItem} key={id}>
-            {/* <h2 className={utilStyles.headingLg}>2022</h2> */}
+      {postsData.map(({ id, date, title, description }) => (
+       <span key={id}>
+          <h2>
             <Link href={`/posts/${id}`}>
               {title}
-            </Link>
-            <br />
-            {description && (
-              <>
-                <small className={utilStyles.lightText}>{description}</small>
-                <br />
-              </>
-            )}
-            <small className={utilStyles.lightText}>
+            </Link>            
+          </h2>
+          <p>{description}
+          <br />
+            <small>
               <MyDate dateString={date} />
             </small>
-          </li>
-        ))}
-      </ul>
+          </p>
+        </span>
+      ))}
+
     </section>
   </>;
 }

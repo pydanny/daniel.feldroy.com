@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://daniel.feldroy.com/</id>
     <title>Daniel Roy Greenfeld</title>
-    <updated>2023-11-12T08:46:13.732Z</updated>
+    <updated>2023-11-20T17:43:23.252Z</updated>
     <generator>Next.js using Feed for Node.js</generator>
     <author>
         <name>Daniel Roy Greenfeld</name>
@@ -15,18 +15,117 @@
     <icon>https://daniel.feldroy.com/favicon.ico</icon>
     <rights>All rights reserved 2023, Daniel Roy Greenfeld</rights>
     <entry>
-        <title type="html"><![CDATA[Autoloading on Filechange using Watchdog]]></title>
+        <title type="html"><![CDATA[Minimal CSS libraries]]></title>
+        <id>https://daniel.feldroy.com/posts/2023-11-minimal-css-libraries</id>
+        <link href="https://daniel.feldroy.com/posts/2023-11-minimal-css-libraries"/>
+        <updated>2023-11-20T17:30:00.000Z</updated>
+        <summary type="html"><![CDATA[Minimal CSS frameworks do not use classes, rather modifying the look and feel of HTML components.]]></summary>
+        <content type="html"><![CDATA[<p>Minimal CSS frameworks do not use classes, rather modifying the look and feel of HTML components. That means that any CSS classes you do add pop out and are easy to discover and read.</p>
+<p>I'm someone who struggles with CSS and the custom CSS of this site combined with complex non-obvious HTML (example being <code>&#x3C;ul></code> and <code>&#x3C;li></code> for content sections) partially obscured by React components has been hard on me. I've wanted to make changes but kept running into walls when I wanted to do things like add dark mode. I tried bringing in heavy CSS frameworks, but having to fix/change hundreds of tags was not someting I wanted to do.</p>
+<p>Enter the minimal approach. With minimal CSS the updates are easy, as is migrating to new tools as current ones go out of style. I took out the worst offenders (<code>&#x3C;ul></code> and <code>&#x3C;li></code> for content) and replaced them more appropriate <code>&#x3C;h2></code> and <code>&#x3C;p></code> tags.</p>
+<p>The result is closer to the HTML specification and hence easier to read. Definately fits in with the concepts of <a href="https://html-first.com/">HTML First</a>.</p>
+<p>One feature I can't wait to implement is a dark mode controlled by media query (or a toggle). Before it meant tracking down all the CSS components, now it's just pointing at different Sakura themes.</p>
+<p>As for how it looks, check out the before and after images below:</p>
+<p><strong>Old 100% handcrafted CSS</strong></p>
+<p>I was never happy with the spacing between elements, and struggled with all the CSS bits to make it work.</p>
+<p><img src="/images/css-before.png" alt="Old custom CSS"></p>
+<p><strong>Minimal CSS library + a few custom classes</strong></p>
+<p>In the new version the default spacing is really nice, and my only challenge was getting my avatar image to come down <code>2.5 rem</code>.</p>
+<p><img src="/images/css-after.png" alt="New CSS"></p>
+<h2>Resources:</h2>
+<ul>
+<li><a href="https://github.com/oxalorg/sakura">Sakura</a> - CSS framework now powering this blog</li>
+<li><a href="https://dohliam.github.io/dropin-minimal-css/?sakura">Drop-in Minimal CSS comparison framework site</a></li>
+</ul>
+]]></content>
+        <author>
+            <name>Daniel Roy Greenfeld</name>
+            <email>daniel@feldroy.com</email>
+            <uri>https://daniel.feldroy.com</uri>
+        </author>
+        <category term="blog"/>
+        <contributor>
+            <name>Daniel Roy Greenfeld</name>
+            <email>daniel@feldroy.com</email>
+            <uri>https://daniel.feldroy.com</uri>
+        </contributor>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Splitting Git Commits]]></title>
+        <id>https://daniel.feldroy.com/posts/2023-11-splitting-git-commit</id>
+        <link href="https://daniel.feldroy.com/posts/2023-11-splitting-git-commit"/>
+        <updated>2023-11-13T14:00:00.000Z</updated>
+        <summary type="html"><![CDATA[How to split a git commit into multiple commits.]]></summary>
+        <content type="html"><![CDATA[<p>Something I periodically do is split up a commit into multiple commits. I am documenting it here where I can find it fast.</p>
+<p>I didn't come up with this technique, sources can be found <a href="https://stackoverflow.com/questions/6217156/break-a-previous-commit-into-multiple-commits">here</a>, <a href="https://www.internalpointers.com/post/split-commit-into-smaller-ones-git">here</a>, and <a href="https://dev.to/timmouskhelichvili/how-to-split-a-git-commit-into-multiple-ones-3g6f">here</a>. All credit goes to those sources.</p>
+<h2>Break up most recent commit</h2>
+<p>To reset the most recent commit:</p>
+<pre><code class="language-sh">git reset HEAD~
+</code></pre>
+<p>This reverts the commit. Commit individual or groups of files in multiple commits.</p>
+<h2>What if your commit isn't the most recent one?</h2>
+<p>Use an interactive rebase to commit things further back. Follow these steps:</p>
+<ol>
+<li>
+<p>Find the commit hash with either <code>git log</code> or <code>git reflog</code></p>
+</li>
+<li>
+<p>Start a rebase with the commit hash replacing <code>HASH</code> below</p>
+</li>
+</ol>
+<pre><code class="language-sh">git rebase -i HASH
+</code></pre>
+<ol start="3">
+<li>
+<p>In the rebase edit screen that comes up, find the line with the commit you want to split. Replace <code>pick</code> with <code>edit</code></p>
+</li>
+<li>
+<p>Save and close the rebase edit screen</p>
+</li>
+<li>
+<p>Reset to the previous commit with <code>git rebase HEAD~</code></p>
+</li>
+<li>
+<p>Create new commits using the files and writing the messages that go along with them</p>
+</li>
+</ol>
+<pre><code class="language-sh">git add file/to/be/committed.xyz
+git commit -m "Enhance the algorithm to support Mars rovers"
+</code></pre>
+<ol start="7">
+<li>Finish the rebase:</li>
+</ol>
+<pre><code class="language-sh">git rebase --continue
+</code></pre>
+]]></content>
+        <author>
+            <name>Daniel Roy Greenfeld</name>
+            <email>daniel@feldroy.com</email>
+            <uri>https://daniel.feldroy.com</uri>
+        </author>
+        <category term="git"/>
+        <category term="howto"/>
+        <contributor>
+            <name>Daniel Roy Greenfeld</name>
+            <email>daniel@feldroy.com</email>
+            <uri>https://daniel.feldroy.com</uri>
+        </contributor>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[TIL: Autoloading on Filechange using Watchdog]]></title>
         <id>https://daniel.feldroy.com/posts/til-2023-11-autoloading-on-filechange-using-watchdog</id>
         <link href="https://daniel.feldroy.com/posts/til-2023-11-autoloading-on-filechange-using-watchdog"/>
         <updated>2023-11-12T10:30:00.000Z</updated>
-        <summary type="html"><![CDATA[Serving HTTP with Python using all kinds of interesting ways]]></summary>
-        <content type="html"><![CDATA[<h2>Serving HTTP from a directory</h2>
+        <summary type="html"><![CDATA[Using Watchdog to monitor changes to a directory so we can alter what we serve out as HTTP.]]></summary>
+        <content type="html"><![CDATA[<p>Using Watchdog to monitor changes to a directory so we can alter what we serve out as HTTP. Each segment is the evolution towards getting it to work.</p>
+<h2>Serving HTTP from a directory</h2>
 <p>I've done this for ages:</p>
 <pre><code class="language-sh">python -m http.server 8000 -d /path/to/files
 </code></pre>
 <h2>Using <code>http.server</code> in a function</h2>
 <p>The Python docs aren't very clear on this, and rather than think hard about it I did this fun hack:</p>
-<pre><code class="language-python">from pathlib import Path
+<pre><code class="language-python"># cli.py
+from pathlib import Path
 from subprocess import check_call
 
 def server(site: Path) -> None:
@@ -82,9 +181,11 @@ def server(directory: Path, port: int = 8000):
     observer.join()
 </code></pre>
 <p>Usage:</p>
-<pre><code class="language-python">
-def server(site: Path, port: int = 8000):
-    server(site="/path/to/server", port=7500)
+<pre><code class="language-python"># cli.py
+from .server import server
+
+def serve(site: Path, port: int = 8000):
+    server(site="/path/to/directory/of/html", port=7500)
 </code></pre>
 ]]></content>
         <author>
@@ -92,64 +193,8 @@ def server(site: Path, port: int = 8000):
             <email>daniel@feldroy.com</email>
             <uri>https://daniel.feldroy.com</uri>
         </author>
+        <category term="howto"/>
         <category term="python"/>
-        <category term="TIL"/>
-        <contributor>
-            <name>Daniel Roy Greenfeld</name>
-            <email>daniel@feldroy.com</email>
-            <uri>https://daniel.feldroy.com</uri>
-        </contributor>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[TIL: Fixing YAML]]></title>
-        <id>https://daniel.feldroy.com/posts/til-2023-11-fixing-yaml</id>
-        <link href="https://daniel.feldroy.com/posts/til-2023-11-fixing-yaml"/>
-        <updated>2023-11-08T14:30:00.000Z</updated>
-        <summary type="html"><![CDATA[Here's how to prettify YAML across your projects.]]></summary>
-        <content type="html"><![CDATA[<p>I got tired of manually correcting and prettifying YAML only to run into periodic instances where my cleanup broke configurations. Alas, <code>yamllint</code> tells you what's wrong but doesn't fix problems. I would rather have an easy-to-use CLI tool that does all the work for me.</p>
-<p>Thanks to David Winterbottom for the suggestion.</p>
-<p>Step 1: Install <code>yamlfix</code></p>
-<pre><code class="language-bash">pip install yamlfix
-</code></pre>
-<p>Step 2: Recursively clean up all the YAML</p>
-<pre><code class="language-bash">yamlfix .
-</code></pre>
-]]></content>
-        <author>
-            <name>Daniel Roy Greenfeld</name>
-            <email>daniel@feldroy.com</email>
-            <uri>https://daniel.feldroy.com</uri>
-        </author>
-        <category term="python"/>
-        <category term="TIL"/>
-        <contributor>
-            <name>Daniel Roy Greenfeld</name>
-            <email>daniel@feldroy.com</email>
-            <uri>https://daniel.feldroy.com</uri>
-        </contributor>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[TIL: Skipping git pre-commit]]></title>
-        <id>https://daniel.feldroy.com/posts/til-2023-10-skipping-git-pre-commit</id>
-        <link href="https://daniel.feldroy.com/posts/til-2023-10-skipping-git-pre-commit"/>
-        <updated>2023-10-13T15:45:00.000Z</updated>
-        <summary type="html"><![CDATA[For saving WIP commits to a remote repo. You really don't want to know what I was doing before.]]></summary>
-        <content type="html"><![CDATA[<p>For saving WIP commits to a remote repo. You really don't want to know what I was doing before.</p>
-<p>Just add <code>--no-verify</code> to whatever you are doing:</p>
-<pre><code class="language-bash">git commit -am "Fun code noodling" --no-verify
-git commit --amend  --no-verify
-</code></pre>
-<p>Thanks to <a href="https://github.com/luzfcb">Fabio da Luz</a>, I found you can also shorten that to just <code>-n</code>.</p>
-<pre><code class="language-bash">git commit -am "Fun code noodling" -n
-git commit --amend  -n
-</code></pre>
-]]></content>
-        <author>
-            <name>Daniel Roy Greenfeld</name>
-            <email>daniel@feldroy.com</email>
-            <uri>https://daniel.feldroy.com</uri>
-        </author>
-        <category term="git"/>
         <category term="TIL"/>
         <contributor>
             <name>Daniel Roy Greenfeld</name>

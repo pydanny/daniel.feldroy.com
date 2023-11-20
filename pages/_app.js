@@ -1,4 +1,6 @@
-import Layout, { siteTitle } from "../components/layout";
+import Layout from "../components/layout";
+import "normalize.css";
+import "sakura.css";
 import "../festyles/global.css";
 
 export default function App({ Component, pageProps }) {

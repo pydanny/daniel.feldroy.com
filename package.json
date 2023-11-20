@@ -20,11 +20,13 @@
     "mermaid": "^9.1.6",
     "minisearch": "^6.0.0",
     "next": "13.1.6",
+    "normalize.css": "^8.0.1",
     "react": "18.2.0",
     "react-dom": "^18.2.0",
     "remark": "^13.0.0",
     "remark-emoji": "^4.0.0",
     "remark-highlight.js": "^6.0.0",
-    "remark-html": "^13.0.1"
+    "remark-html": "^13.0.1",
+    "sakura.css": "^1.5.0"
   }
 }

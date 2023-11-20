@@ -1,6 +1,5 @@
 import Head from "next/head";
 import Image from "next/image";
-import styles from "./layout.module.css";
 import utilStyles from "../festyles/utils.module.css";
 import Link from "next/link";
 import Metatags from "./metatags";
@@ -42,7 +41,7 @@ export default function Layout({ children, home, meta = {} }) {
   const date = new Date();
   const copyright = `All rights reserved ${date.getFullYear()}, Daniel Roy Greenfeld`;
   return (
-    <div className={styles.container}>
+    <>
       <Head>
         <link
           href="/favicon/apple-touch-icon.png"
@@ -69,7 +68,7 @@ export default function Layout({ children, home, meta = {} }) {
         />
       </Head>
       <Metatags meta={meta} />
-      <header className={styles.header}>
+      <header>
         {home ? (
           <>
             <Image
@@ -80,7 +79,7 @@ export default function Layout({ children, home, meta = {} }) {
               width={144}
               alt={name}
             />
-            <h1 className={utilStyles.heading2Xl}>{name}</h1>
+            <h1>{name}</h1>
             <p>Inside the head of Daniel Roy Greenfeld</p>
             <TopLinks />
           </>
@@ -102,10 +101,8 @@ export default function Layout({ children, home, meta = {} }) {
                   />
 
                 </Link>
-                <h2 className={utilStyles.headingLg}>
-                  <Link href="/">
+                <h2>
                     {name}
-                  </Link>
                 </h2>
                 <TopLinks />
               </>
@@ -115,13 +112,13 @@ export default function Layout({ children, home, meta = {} }) {
       </header>
       <main>{children}</main>
       {!home && (
-        <div className={styles.backToHome}>
+        <div>
           <Link href="/">
             ← Back to home
           </Link>
         </div>
       )}
-      <footer className={styles.footer}>
+      <footer>
         <p>
           <a href="https://fosstodon.org/@danielfeldroy">Mastodon</a> |{" "}
           <a href="https://www.linkedin.com/in/danielfeldroy/">LinkedIn</a> |{" "}
@@ -130,6 +127,6 @@ export default function Layout({ children, home, meta = {} }) {
         </p>
         <p>{copyright}</p>
       </footer>
-    </div>
+    </>
   );
 }

@@ -117,3 +117,5 @@ dist
 
 default.profraw
 .DS_Store
+__pycache__/*
+.hypothesis/*

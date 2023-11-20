@@ -34,55 +34,53 @@ export async function getStaticProps() {
 
 export default function Home({ mostRecentPosts, topPosts }) {
   return <>
-    <section className={`${utilStyles.headingMd} ${utilStyles.padding1px}`}>
-      <h2 className={utilStyles.headingLg}>Recent Writings</h2>
-      <ul className={utilStyles.list}>
-        {mostRecentPosts.map(({ id, date, title, description }) => (
-          <li className={utilStyles.listItem} key={id}>
-            <Link href={`/posts/${id}`}>
-              {title}
-            </Link>
-            <br />
-            {description && (
-              <>
-                <small className={utilStyles.lightText}>{description}</small>
-                <br />
-              </>
-            )}
-            <small className={utilStyles.lightText}>
-              <MyDate dateString={date} />
-            </small>
-          </li>
-        ))}
-      </ul>
-    </section>
+    <section>
+      <h1>Recent Writings</h1>
 
-    <section className={`${utilStyles.headingMd} ${utilStyles.padding1px}`}>
-      <h2 className={utilStyles.headingLg}>Popular Articles</h2>
-      <ul className={utilStyles.list}>
-        {topPosts.map(({ id, date, title, description }) => (
-          <li className={utilStyles.listItem} key={id}>
+      {mostRecentPosts.map(({ id, date, title, description }) => (
+        <span key={id}>
+          <h2>
             <Link href={`/posts/${id}`}>
               {title}
-            </Link>
-            <br />
-            {description && (
-              <>
-                <small className={utilStyles.lightText}>{description}</small>
-                <br />
-              </>
-            )}
-            <small className={utilStyles.lightText}>
+            </Link>            
+          </h2>
+          <p>{description}
+          <br />
+            <small>
               <MyDate dateString={date} />
             </small>
-          </li>
-        ))}
-      </ul>
+          </p>
+        </span>
+      ))}
+
     </section>
-    <h2 className={utilStyles.headingLg}>
-      <Link href="/posts">
-        Full Archive →
-      </Link>
-    </h2>
+    <hr />
+    <section>
+      <h1>Popular Articles</h1>
+
+      {topPosts.map(({ id, date, title, description }) => (
+        <span key={id}>
+          <h2>
+            <Link href={`/posts/${id}`}>
+              {title}
+            </Link>            
+          </h2>
+          <p>{description}
+          <br />
+            <small>
+              <MyDate dateString={date} />
+            </small>
+          </p>
+        </span>
+      ))}
+    </section>
+    <hr />
+    <section>
+      <h2>
+        <Link href="/posts">
+          Full Archive →
+        </Link>
+      </h2>
+    </section>
   </>;
 }

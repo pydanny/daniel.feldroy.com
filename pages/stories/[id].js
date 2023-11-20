@@ -86,7 +86,7 @@ export default function Story({ postData }) {
           </Link>
         </div>
 
-        <h1 className={utilStyles.headingXl}>{postData.title}</h1>
+        <h1>{postData.title}</h1>
         <div>{postData.author}</div>
         <div className={utilStyles.lightText}>
           <MyDate dateString={postData.date} />

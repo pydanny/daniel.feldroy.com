@@ -36,6 +36,6 @@ In the new version the default spacing is really nice, and my only challenge was
 
 ## Resources:
 
-- [Sakura](https://github.com/oxalorg/sakura) - CSS framework now powering this blog
+- [Sakura](https://github.com/oxalorg/sakura) - CSS framework now helping to style this site
 - [Drop-in Minimal CSS comparison framework site](https://dohliam.github.io/dropin-minimal-css/?sakura)
 

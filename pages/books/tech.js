@@ -23,7 +23,7 @@ export default function TechBooks() {
           ← Back to books
         </Link>
       </div>
-      <h1 className={utilStyles.headingXl}>Tech Books I Have Co-Authored</h1>
+      <h1>Tech Books I Have Co-Authored</h1>
       <p>With Audrey, I co-write dairy-themed technical books.</p>
       <ul className={utilStyles.list}>
         <li className={utilStyles.listItem}>

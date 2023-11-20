@@ -6,11 +6,11 @@ tags:
   - blog
 time_to_read: 1
 title: "Minimal CSS libraries"
-description: Minimal CSS frameworks do not use classes, rather modifying the look and feel of HTML components. That means that any CSS classes you do add pop out and are easy to discover and read.
+description: Minimal CSS frameworks do not use classes, rather modifying the look of HTML components. That means that any CSS classes added are easier to discover and read.
 
 ---
 
-Minimal CSS frameworks do not use classes, rather modifying the look and feel of HTML components. That means that any CSS classes you do add pop out and are easy to discover and read.
+Minimal CSS frameworks do not use classes, rather modifying the look of HTML components. That means that any CSS classes added are easier to discover and read.
 
 I'm someone who struggles with CSS and the custom CSS of this site combined with complex non-obvious HTML (example being `<ul>` and `<li>` for content sections) partially obscured by React components has been hard on me. I've wanted to make changes but kept running into walls when I wanted to do things like add dark mode. I tried bringing in heavy CSS frameworks, but having to fix/change hundreds of tags was not someting I wanted to do.
 

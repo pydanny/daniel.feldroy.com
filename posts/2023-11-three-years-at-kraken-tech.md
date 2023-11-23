@@ -76,7 +76,7 @@ So if you are in tech in any capacity (coding, management, etc), consider using 
 
 # Come and help me save the planet
 
-I'll be upfront that if you want to make the biggest bucks possible in tech, travel a lot, and fly in first place seats, go work for a [Big Tech Company](https://en.wikipedia.org/wiki/Big_Tech) or a fintech. On the other hand, you risk more frequent layoffs. Also, we're making the planet better for our descendants. That to me is much more important than helping a billionaire score another billion.
+I'll be upfront that if you want to make the biggest bucks possible in tech, travel a lot, and fly in first place seats, go work for a [Big Tech Company](https://en.wikipedia.org/wiki/Big_Tech) or a fintech. Personally, I would rather work toward making the planet better for our descendants. That to me is much more important than helping a billionaire score another billion.
 
 I invite anyone who is reading this to join me on my mission of saving the planet. Our careers page is [here](https://octopus.energy/careers).
 

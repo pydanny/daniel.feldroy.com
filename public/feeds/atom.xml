@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://daniel.feldroy.com/</id>
     <title>Daniel Roy Greenfeld</title>
-    <updated>2023-11-20T17:43:23.252Z</updated>
+    <updated>2023-11-23T18:37:18.969Z</updated>
     <generator>Next.js using Feed for Node.js</generator>
     <author>
         <name>Daniel Roy Greenfeld</name>
@@ -15,12 +15,79 @@
     <icon>https://daniel.feldroy.com/favicon.ico</icon>
     <rights>All rights reserved 2023, Daniel Roy Greenfeld</rights>
     <entry>
+        <title type="html"><![CDATA[Three Years at Kraken Tech]]></title>
+        <id>https://daniel.feldroy.com/posts/2023-11-three-years-at-kraken-tech</id>
+        <link href="https://daniel.feldroy.com/posts/2023-11-three-years-at-kraken-tech"/>
+        <updated>2023-11-23T22:20:50.520Z</updated>
+        <summary type="html"><![CDATA[Various things I've been thinking about as I finish my third year working for Kraken Tech, an Octopus Energy Group subsidiary.]]></summary>
+        <content type="html"><![CDATA[<p><em>Note: As I write this I'm recovering from a sprained shoulder I received in a bicycle accident. I'm mostly typing one-handed and using voice-to-text, so the text might not be in my normal "writing voice".</em></p>
+<p>A summary of the past year as I finish my third year working for <a href="https://kraken.tech/">Kraken Tech</a>, an <a href="https://octopusenergy.group/">Octopus Energy Group</a> subsidiary.</p>
+<h1>I changed roles</h1>
+<p>I went sideways. I transitioned from leading the tech team for Kraken Tech USA to being an individual contributor for the global team. I do this periodically, cycling between writing code to leading teams.</p>
+<p>I admit it was hard to let go. The US tech team is a group of talented, diverse, and passionate people. I'm so honored I had the chance to work with them. I'm constantly amazed by what they have accomplished and what they continue to do.</p>
+<p>In my new role I'm on the "Developer Foundations" team, exploring ways to improve the coding experience at the company. I've enjoyed writing code full-time again, there's a clarity of purpose that's been fun to embrace.</p>
+<p>One more thing: For the moment I still have the old management-sounding title, but expect to get something more accurate in the next few months.</p>
+<h1>I blogged more</h1>
+<p>In large part due to the fact that I'm coding full-time again, I more than doubled the number of posts I wrote in 2022.</p>
+<h1>I worked in the London, UK Office</h1>
+<p>Audrey and Uma joined me on a move to London, which I documented <a href="https://daniel.feldroy.com/posts/2023-10-we-moved-to-london">here</a>.</p>
+<p>It has been a delight being able to work in-person with my peers. I'm usually in the office about three out of every five days. I would make it five-out-of-five but find I think better outside of the commotion in the office.</p>
+<p>Another positive about being on this side of the Atlantic is I'm close to the timezone of all my non-UK European colleagues.</p>
+<h1>I attended in-person tech events</h1>
+<p>Until this year the last event I had attended was a PyCon New Zealand 2019. This year I've managed to attend the following in chronological order, with transit mode specified:</p>
+<ul>
+<li>Django London (walk/train)</li>
+<li>PyCon Italy (airplain)</li>
+<li>PyCon UK (train)</li>
+<li>Django Paris (train)</li>
+</ul>
+<p>I very much enjoyed meeting old friends and making new ones. Also, exploring the cities of London, Cardiff, and Paris were adventures of their own.</p>
+<h1>Helped scale up Kraken Tech to address climate change</h1>
+<p>As an individual concerned about global climate change I do my part:</p>
+<ul>
+<li>I compost about 80% of my family's food waste</li>
+<li>Do our best to recyle all the family's cardboard and paper products</li>
+<li>We live in a tiny flat with an electric stove</li>
+<li>Am experimenting with using a portable electric heater instead of the methane gas boiler</li>
+<li>Have reduced unnecessary air travel as much as possible (which is hard - I love airplanes and airports)</li>
+</ul>
+<p>That's great, but I have managed to scale that up tens of thousands of times over by working for Kraken Tech.</p>
+<p>As one employee of nine hundred and thirty seven (937) at Kraken Tech, I take payment from a collective of companies whose products are all designed with the purpose of saving the planet. Kraken Tech in particular is responsible for about 55 million people getting onto renewable energy or using non-renewable resources more efficiently.</p>
+<p>Let's math that out, using conservative numbers:</p>
+<pre><code>58,697.97 = 55,000,000 / 937
+</code></pre>
+<p><strong>Summary: Each employee of Kraken Tech is roughly responsible for 58,698 (rounding up) people contributing significantly less to global climate change.</strong></p>
+<p>So if you are in tech in any capacity (coding, management, etc), consider using your skills to help us in our mission of making a healthier planet.</p>
+<h1>Come and help me save the planet</h1>
+<p>I'll be upfront that if you want to make the biggest bucks possible in tech, travel a lot, and fly in first place class, go work for a <a href="https://en.wikipedia.org/wiki/Big_Tech">Big Tech Company</a> or a fintech. On the other hand, you risk more frequent layoffs. Also, we're making the planet better for our descendants. That to me is much more important than helping a billionaire score another billion.</p>
+<p>I invite anyone who is reading this to join me on my mission of saving the planet. Our careers page is <a href="https://octopus.energy/careers">here</a>.</p>
+<p><em>Please understand that Kraken Tech usually only hires in countries in which we have a legal entity. So if a role isn't listed for the country in which you can legally work, we probably can't hire you.</em></p>
+<p>If for whatever reason you can't get a job working with me, <a href="https://climatebase.org/">apply to work at somewhere else into decarbonization</a>. Let me know where you go and I'll celebrate your joining our shared mission.</p>
+<p><a href="https://kraken.tech"><img src="/logos/kraken-logo-dark.png" alt="Kraken Tech Logo"></a></p>
+]]></content>
+        <author>
+            <name>Daniel Roy Greenfeld</name>
+            <email>daniel@feldroy.com</email>
+            <uri>https://daniel.feldroy.com</uri>
+        </author>
+        <category term="octopus"/>
+        <category term="kraken"/>
+        <category term="climate-change"/>
+        <category term="rant"/>
+        <category term="python"/>
+        <contributor>
+            <name>Daniel Roy Greenfeld</name>
+            <email>daniel@feldroy.com</email>
+            <uri>https://daniel.feldroy.com</uri>
+        </contributor>
+    </entry>
+    <entry>
         <title type="html"><![CDATA[Minimal CSS libraries]]></title>
         <id>https://daniel.feldroy.com/posts/2023-11-minimal-css-libraries</id>
         <link href="https://daniel.feldroy.com/posts/2023-11-minimal-css-libraries"/>
         <updated>2023-11-20T17:30:00.000Z</updated>
-        <summary type="html"><![CDATA[Minimal CSS frameworks do not use classes, rather modifying the look and feel of HTML components.]]></summary>
-        <content type="html"><![CDATA[<p>Minimal CSS frameworks do not use classes, rather modifying the look and feel of HTML components. That means that any CSS classes you do add pop out and are easy to discover and read.</p>
+        <summary type="html"><![CDATA[Minimal CSS frameworks do not use classes, rather modifying the look of HTML components. That means that any CSS classes added are easier to discover and read.]]></summary>
+        <content type="html"><![CDATA[<p>Minimal CSS frameworks do not use classes, rather modifying the look of HTML components. That means that any CSS classes added are easier to discover and read.</p>
 <p>I'm someone who struggles with CSS and the custom CSS of this site combined with complex non-obvious HTML (example being <code>&#x3C;ul></code> and <code>&#x3C;li></code> for content sections) partially obscured by React components has been hard on me. I've wanted to make changes but kept running into walls when I wanted to do things like add dark mode. I tried bringing in heavy CSS frameworks, but having to fix/change hundreds of tags was not someting I wanted to do.</p>
 <p>Enter the minimal approach. With minimal CSS the updates are easy, as is migrating to new tools as current ones go out of style. I took out the worst offenders (<code>&#x3C;ul></code> and <code>&#x3C;li></code> for content) and replaced them more appropriate <code>&#x3C;h2></code> and <code>&#x3C;p></code> tags.</p>
 <p>The result is closer to the HTML specification and hence easier to read. Definately fits in with the concepts of <a href="https://html-first.com/">HTML First</a>.</p>
@@ -34,7 +101,7 @@
 <p><img src="/images/css-after.png" alt="New CSS"></p>
 <h2>Resources:</h2>
 <ul>
-<li><a href="https://github.com/oxalorg/sakura">Sakura</a> - CSS framework now powering this blog</li>
+<li><a href="https://github.com/oxalorg/sakura">Sakura</a> - CSS framework now helping to style this site</li>
 <li><a href="https://dohliam.github.io/dropin-minimal-css/?sakura">Drop-in Minimal CSS comparison framework site</a></li>
 </ul>
 ]]></content>
@@ -105,97 +172,6 @@ git commit -m "Enhance the algorithm to support Mars rovers"
         </author>
         <category term="git"/>
         <category term="howto"/>
-        <contributor>
-            <name>Daniel Roy Greenfeld</name>
-            <email>daniel@feldroy.com</email>
-            <uri>https://daniel.feldroy.com</uri>
-        </contributor>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[TIL: Autoloading on Filechange using Watchdog]]></title>
-        <id>https://daniel.feldroy.com/posts/til-2023-11-autoloading-on-filechange-using-watchdog</id>
-        <link href="https://daniel.feldroy.com/posts/til-2023-11-autoloading-on-filechange-using-watchdog"/>
-        <updated>2023-11-12T10:30:00.000Z</updated>
-        <summary type="html"><![CDATA[Using Watchdog to monitor changes to a directory so we can alter what we serve out as HTTP.]]></summary>
-        <content type="html"><![CDATA[<p>Using Watchdog to monitor changes to a directory so we can alter what we serve out as HTTP. Each segment is the evolution towards getting it to work.</p>
-<h2>Serving HTTP from a directory</h2>
-<p>I've done this for ages:</p>
-<pre><code class="language-sh">python -m http.server 8000 -d /path/to/files
-</code></pre>
-<h2>Using <code>http.server</code> in a function</h2>
-<p>The Python docs aren't very clear on this, and rather than think hard about it I did this fun hack:</p>
-<pre><code class="language-python"># cli.py
-from pathlib import Path
-from subprocess import check_call
-
-def server(site: Path) -> None:
-    check_call(['python', '-m', 'http.server', '8000', '-d', site])
-</code></pre>
-<h2>Autoreloading on filechanges</h2>
-<p>A bit more involved, and can certainly be improved. Here goes:</p>
-<pre><code class="language-python"># server.py
-import functools
-import http.server
-import os
-import socketserver
-from pathlib import Path
-
-from watchdog.events import FileSystemEventHandler
-from watchdog.observers import Observer
-
-
-def build_handler(directory: Path):
-    """Specify the directory of SimpleHTTPRequestHandler"""
-    return functools.partial(http.server.SimpleHTTPRequestHandler, directory=directory)
-
-
-class EventHandler(FileSystemEventHandler):
-    def on_any_event(self, event):
-        if event.is_directory:
-            return
-        elif event.event_type in ["created", "modified"]:
-            print(f"Reloading server due to file change: {event.src_path}")
-            os._exit(0)
-
-
-def run_server(directory: Path, port: int = 8000):
-    with socketserver.TCPServer(("", port), build_handler(directory)) as httpd:
-        print(f"Serving on port {port}")
-        httpd.serve_forever()
-
-
-def server(directory: Path, port: int = 8000):
-    """Serve files in the watched directory"""
-    # Watch the directory
-    event_handler = EventHandler()
-    observer = Observer()
-    observer.schedule(event_handler, site, recursive=True)
-    observer.start()
-
-    try:
-        # Run the HTTP server
-        run_server(directory=directory, port=port)
-    except KeyboardInterrupt:
-        observer.stop()
-
-    observer.join()
-</code></pre>
-<p>Usage:</p>
-<pre><code class="language-python"># cli.py
-from .server import server
-
-def serve(site: Path, port: int = 8000):
-    server(site="/path/to/directory/of/html", port=7500)
-</code></pre>
-]]></content>
-        <author>
-            <name>Daniel Roy Greenfeld</name>
-            <email>daniel@feldroy.com</email>
-            <uri>https://daniel.feldroy.com</uri>
-        </author>
-        <category term="howto"/>
-        <category term="python"/>
-        <category term="TIL"/>
         <contributor>
             <name>Daniel Roy Greenfeld</name>
             <email>daniel@feldroy.com</email>

@@ -5,6 +5,7 @@ tags:
   - octopus
   - climate-change
   - rant
+  - kraken
 time_to_read: 10
 title: Two Years at Octopus Energy Group
 description: Various thoughts about working for a for-profit business with a mission of saving the planet.

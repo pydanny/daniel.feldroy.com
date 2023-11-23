@@ -8,6 +8,7 @@ tags:
   - audrey
   - resolutions
   - octopus
+  - kraken
   - climate-change
 time_to_read: 5
 title: Resolutions for 2023

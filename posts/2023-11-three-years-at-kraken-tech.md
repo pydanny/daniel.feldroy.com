@@ -23,7 +23,7 @@ _Note: As I write this I'm recovering from a sprained shoulder I received in a b
 
 I transitioned from leading the tech team for Kraken Tech USA to being an individual contributor for the global team. I do this periodically, cycling between writing code to leading teams, and  back again. 
 
-It is never easy to transition between roles but this time in particular it was particularly hard. The US Kraken Tech team is a group of talented, diverse, and passionate people. I'm so honored I had the chance to work with them. I'm constantly amazed by what they have accomplished and what they continue to do. 
+It is never easy to transition between roles but this time was particularly hard. The US Kraken Tech team is a group of talented, diverse, and passionate people. I'm so honored I had the chance to work with them. I'm constantly amazed by what they have accomplished and what they continue to do. 
 
 In my new role I'm on the "Developer Foundations" team, exploring ways to improve the coding experience at the company. I've enjoyed writing code full-time again, there's a clarity of purpose that's been fun to embrace. Mostly that's been working in Python with a bit of Django, with short detours into Rust and Golang.
 

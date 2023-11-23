@@ -25,13 +25,13 @@ I transitioned from leading the tech team for Kraken Tech USA to being an indivi
 
 It is never easy to transition between roles but this time was particularly hard. The US Kraken Tech team is a group of talented, diverse, and passionate people. I'm so honored I had the chance to work with them. I'm constantly amazed by what they have accomplished and what they continue to do. 
 
-In my new role I'm on the "Developer Foundations" team, exploring ways to improve the coding experience at the company. I've enjoyed writing code full-time again, there's a clarity of purpose that's been fun to embrace. Mostly that's been working in Python with a bit of Django, with short detours into Rust and Golang.
+In my new role I'm on the "Developer Foundations" team, exploring ways to improve the coding experience at the company. I've enjoyed writing code full-time again, there's a clarity of purpose that's been fun to embrace. Mostly I'm coding in Python with a bit of Django, with short detours into HCL, Rust, and Golang.
 
 One more thing: For the moment I still have the old management-sounding title, but expect to get something more accurate in the next few months.
 
 # I blogged more
 
-Due to that I'm coding full-time again, I more than doubled the number of posts I wrote in 2022.
+As I'm coding full-time again, in 2023 I wrote more than double the number of posts I wrote in 2022.
 
 # I worked in the London, UK Office
 
@@ -70,13 +70,13 @@ Let's math that out, using conservative numbers:
 58,697.97 = 55,000,000 / 937
 ```
 
-**Summary: Each employee of Kraken Tech is roughly responsible for 58,698 (rounding up) people contributing significantly less to global climate change.**
+**Summary: Each employee of Kraken Tech is responsible for 58,698 people contributing significantly less to global climate change.**
 
 So if you are in tech in any capacity (coding, management, etc), consider using your skills to help us in our mission of making a healthier planet.
 
 # Come and help me save the planet
 
-I'll be upfront that if you want to make the biggest bucks possible in tech, travel a lot, and fly in first place seats, go work for a [Big Tech Company](https://en.wikipedia.org/wiki/Big_Tech) or a fintech. Personally, I would rather work toward making the planet better for our descendants. That to me is much more important than helping a billionaire score another billion.
+I'll be upfront that if you want to make the biggest salary possible in tech, travel a lot, and fly in first place seats, go seek employment with a [Big Tech Company](https://en.wikipedia.org/wiki/Big_Tech) or a fintech. Personally, I would rather work toward making the planet better for our descendants. That to me is much more important than helping a billionaire score another billion.
 
 I invite anyone who is reading this to join me on my mission of saving the planet. Our careers page is [here](https://octopus.energy/careers).
 

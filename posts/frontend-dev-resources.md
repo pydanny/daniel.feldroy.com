@@ -16,7 +16,7 @@ This will grow over time as I get more recommendations from trusted sources.
 
 # Next
 
-- (Nextjs)[https://nextjs.org/]
+- [Nextjs](https://nextjs.org/)
 
 # Responsive Web Design
 

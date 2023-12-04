@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://daniel.feldroy.com/</id>
     <title>Daniel Roy Greenfeld</title>
-    <updated>2023-11-28T12:19:58.540Z</updated>
+    <updated>2023-12-04T15:27:53.006Z</updated>
     <generator>Next.js using Feed for Node.js</generator>
     <author>
         <name>Daniel Roy Greenfeld</name>
@@ -14,4 +14,31 @@
     <logo>https://daniel.feldroy.com/images/pydanny-cartwheel.png</logo>
     <icon>https://daniel.feldroy.com/favicon.ico</icon>
     <rights>All rights reserved 2023, Daniel Roy Greenfeld</rights>
+    <entry>
+        <title type="html"><![CDATA[TIL: Forcing pip to use virtualenv]]></title>
+        <id>https://daniel.feldroy.com/posts/til-2023-12-forcing-pip-to-use-virtualenv</id>
+        <link href="https://daniel.feldroy.com/posts/til-2023-12-forcing-pip-to-use-virtualenv"/>
+        <updated>2023-12-04T15:30:00.000Z</updated>
+        <summary type="html"><![CDATA[Necessary because installing things into your base python causes false positives, true negatives, and other head bangers.]]></summary>
+        <content type="html"><![CDATA[<p>Necessary because installing things into your base python causes false positives, true negatives, and other head bangers.</p>
+<p>Set this environment variable, preferably in your rc file:</p>
+<pre><code class="language-bash"># ~/.zshrc 
+export PIP_REQUIRE_VIRTUALENV=true
+</code></pre>
+<p>This one is thanks to David Winterbottom.</p>
+]]></content>
+        <author>
+            <name>Daniel Roy Greenfeld</name>
+            <email>daniel@feldroy.com</email>
+            <uri>https://daniel.feldroy.com</uri>
+        </author>
+        <category term="howto"/>
+        <category term="python"/>
+        <category term="TIL"/>
+        <contributor>
+            <name>Daniel Roy Greenfeld</name>
+            <email>daniel@feldroy.com</email>
+            <uri>https://daniel.feldroy.com</uri>
+        </contributor>
+    </entry>
 </feed>

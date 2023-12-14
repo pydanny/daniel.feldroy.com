@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://daniel.feldroy.com/</id>
     <title>Daniel Roy Greenfeld</title>
-    <updated>2023-12-04T15:27:53.029Z</updated>
+    <updated>2023-12-14T16:16:49.364Z</updated>
     <generator>Next.js using Feed for Node.js</generator>
     <author>
         <name>Daniel Roy Greenfeld</name>
@@ -15,6 +15,37 @@
     <icon>https://daniel.feldroy.com/favicon.ico</icon>
     <rights>All rights reserved 2023, Daniel Roy Greenfeld</rights>
     <entry>
+        <title type="html"><![CDATA[Injured in the UK]]></title>
+        <id>https://daniel.feldroy.com/posts/2023-12-08-injured-in-the-uk</id>
+        <link href="https://daniel.feldroy.com/posts/2023-12-08-injured-in-the-uk"/>
+        <updated>2023-12-08T22:20:50.520Z</updated>
+        <summary type="html"><![CDATA[What happened and my recovery.]]></summary>
+        <content type="html"><![CDATA[<h1>What Happened</h1>
+<p>On November 22nd, 2023 I had a bicycle accident in London. I was going south into the depression on Grays Inn Road at speed when another cyclist with headphones on blindly came into the bike lane. I should have breaked, but instead swerved. My front tire hit one of the plastic posts seperating the bike lane from the car and I went over the handlebars.</p>
+<p>I managed to tuck my head and rolled over my right shoulder and ended on my back. The impact onto hard pavement washard. My helmet was untouched so I had the sensibility to get myself and my bike out of the street and onto the pedestrian sidewalk. Then I lay down in case I was seriously injured and in danger of shock. While the cyclist rode off without stopping, pedestrians came over to help me.</p>
+<h1>The Injury</h1>
+<p>The next few days my arms and legs were covered with colorful bruises and my left hand swelled up a bit. What was alarming though was my ability to raise my right arm diminished and vanished. Also, my right hand started to have pins and needles.</p>
+<p>I went to the local A&#x26;E (emergency room) in case. I had held off going because in the USA I learned to be wary of such places. Even with insurance simply registering yourself in one often results in extremely high costs ranging in the thousands of dollars, even if all they do is send you home with aspirin.</p>
+<p>In any case, the diagnosis (via x-ray and physical manipulation) there was I had sprained my shoulder or had a torn rotator cuff. Immediate physio (physical therapy) was recommended, both to check for a tear and to begin recovery. Apparently this kind of stuff doesn't tend to heal on its own.</p>
+<p>At the physio I learned I had badly bruised some of the muscles in my shoulder, that without treatment it wouldn't be possible.</p>
+<h1>Recovery</h1>
+]]></content>
+        <author>
+            <name>Daniel Roy Greenfeld</name>
+            <email>daniel@feldroy.com</email>
+            <uri>https://daniel.feldroy.com</uri>
+        </author>
+        <category term="kraken"/>
+        <category term="health"/>
+        <category term="family"/>
+        <category term="london"/>
+        <contributor>
+            <name>Daniel Roy Greenfeld</name>
+            <email>daniel@feldroy.com</email>
+            <uri>https://daniel.feldroy.com</uri>
+        </contributor>
+    </entry>
+    <entry>
         <title type="html"><![CDATA[TIL: Forcing pip to use virtualenv]]></title>
         <id>https://daniel.feldroy.com/posts/til-2023-12-forcing-pip-to-use-virtualenv</id>
         <link href="https://daniel.feldroy.com/posts/til-2023-12-forcing-pip-to-use-virtualenv"/>
@@ -25,7 +56,12 @@
 <pre><code class="language-bash"># ~/.zshrc 
 export PIP_REQUIRE_VIRTUALENV=true
 </code></pre>
-<p>This one is thanks to David Winterbottom.</p>
+<p>Now if I try to use pip outside a virtualenv:</p>
+<pre><code class="language-bash">dj-notebook on  main [$] is 📦 v0.6.1 via 🐍 v3.10.6 
+❯ pip install ruff 
+ERROR: Could not find an activated virtualenv (required).
+</code></pre>
+<p>This TIL is thanks to David Winterbottom.</p>
 ]]></content>
         <author>
             <name>Daniel Roy Greenfeld</name>
@@ -101,42 +137,6 @@ export PIP_REQUIRE_VIRTUALENV=true
         <category term="climate-change"/>
         <category term="python"/>
         <category term="django"/>
-        <contributor>
-            <name>Daniel Roy Greenfeld</name>
-            <email>daniel@feldroy.com</email>
-            <uri>https://daniel.feldroy.com</uri>
-        </contributor>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Minimal CSS libraries]]></title>
-        <id>https://daniel.feldroy.com/posts/2023-11-minimal-css-libraries</id>
-        <link href="https://daniel.feldroy.com/posts/2023-11-minimal-css-libraries"/>
-        <updated>2023-11-20T17:30:00.000Z</updated>
-        <summary type="html"><![CDATA[Minimal CSS frameworks do not use classes, rather modifying the look of HTML components. That means that any CSS classes added are easier to discover and read.]]></summary>
-        <content type="html"><![CDATA[<p>Minimal CSS frameworks do not use classes, rather modifying the look of HTML components. That means that any CSS classes added are easier to discover and read.</p>
-<p>I'm someone who struggles with CSS and the custom CSS of this site combined with complex non-obvious HTML (example being <code>&#x3C;ul></code> and <code>&#x3C;li></code> for content sections) partially obscured by React components has been hard on me. I've wanted to make changes but kept running into walls when I wanted to do things like add dark mode. I tried bringing in heavy CSS frameworks, but having to fix/change hundreds of tags was not someting I wanted to do.</p>
-<p>Enter the minimal approach. With minimal CSS the updates are easy, as is migrating to new tools as current ones go out of style. I took out the worst offenders (<code>&#x3C;ul></code> and <code>&#x3C;li></code> for content) and replaced them more appropriate <code>&#x3C;h2></code> and <code>&#x3C;p></code> tags.</p>
-<p>The result is closer to the HTML specification and hence easier to read. Definately fits in with the concepts of <a href="https://html-first.com/">HTML First</a>.</p>
-<p>One feature I can't wait to implement is a dark mode controlled by media query (or a toggle). Before it meant tracking down all the CSS components, now it's just pointing at different Sakura themes.</p>
-<p>As for how it looks, check out the before and after images below:</p>
-<p><strong>Old 100% handcrafted CSS</strong></p>
-<p>I was never happy with the spacing between elements, and struggled with all the CSS bits to make it work.</p>
-<p><img src="/images/css-before.png" alt="Old custom CSS"></p>
-<p><strong>Minimal CSS library + a few custom classes</strong></p>
-<p>In the new version the default spacing is really nice, and my only challenge was getting my avatar image to come down <code>2.5 rem</code>.</p>
-<p><img src="/images/css-after.png" alt="New CSS"></p>
-<h2>Resources:</h2>
-<ul>
-<li><a href="https://github.com/oxalorg/sakura">Sakura</a> - CSS framework now helping to style this site</li>
-<li><a href="https://dohliam.github.io/dropin-minimal-css/?sakura">Drop-in Minimal CSS comparison framework site</a></li>
-</ul>
-]]></content>
-        <author>
-            <name>Daniel Roy Greenfeld</name>
-            <email>daniel@feldroy.com</email>
-            <uri>https://daniel.feldroy.com</uri>
-        </author>
-        <category term="blog"/>
         <contributor>
             <name>Daniel Roy Greenfeld</name>
             <email>daniel@feldroy.com</email>

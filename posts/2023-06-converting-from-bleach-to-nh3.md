@@ -67,9 +67,17 @@ I\'m not trying to XSS you <a href="https://example.com">Link</a>
 '<b>\n\nI\'m not trying to XSS you <a href="https://example.com">Link</a>\n</b>'
 ```
 
-Advantages of switching to nh3 are:
+# Advantages of switching to nh3 are:
 
 1. nh3 is actively maintained, bleach is officially deprecated. 
 2. I believe the nh3 technique of stripping tags rather than allowing safing is more secure. The idea of safing is great, but I've always wondered if a creative attacker could find a way to exploit it. So I think it is better to remove the offending tags altogether.
 3. The preservation of whitespace is really useful for preserving content submitted in a textarea. This is especially true for Markdown content.
 4. nh3 is a binding to the [rust-ammonia project](https://github.com/rust-ammonia/ammonia). They claim a 15x speed increase over bleach's binding to the html5lib project. Even if that is a 3x exaggeration, that's still a 5x speed increase.
+
+# nh3 + Django
+
+If you're coding in Django, you owe it to yourself and all your users to read Adam Johnson's [fantastic article on using nh3 with Django](https://adamj.eu/tech/2023/12/13/django-sanitize-incoming-html-nh3/). 
+
+# Update
+
+- 2023/12/14 - Added mention of Adam Johnson's article on nh3 + Django

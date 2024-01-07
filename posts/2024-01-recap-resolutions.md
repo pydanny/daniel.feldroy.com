@@ -25,7 +25,7 @@ Another year in orbit around a star.
 - Embraced the delights being the father to [Uma Roy Greenfeld](/tags/uma) in her fourth year in the universe 
 - I got back into [Brazilian Jiu-Jitsu (BJJ)](/tags/bjj)
 - I tried [HEMA](https://en.wikipedia.org/wiki/Historical_European_martial_arts) and Japanese Jiu-Jitsu
-- [I lost 8kg/20 lbs and got into much better shape](/posts/2023-04-my-fitness-journey)
+- [I lost 9kg/20 lbs and got into much better shape](/posts/2023-04-my-fitness-journey)
 - I got injured, hurt my shoulder in a bicycle accident
 - I went to Paris for the first time! To speak at [Django event](https://www.meetup.com/django-paris/events/296277353/) and take in the sights. Really enjoyed the [Eurostar train that took us from London to Paris](https://en.wikipedia.org/wiki/Eurostar) - easier than a plane!
 - Started up a [Today I Learned (TIL) segment](/tags/TIL) on this blog

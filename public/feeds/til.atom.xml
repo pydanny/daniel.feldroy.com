@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://daniel.feldroy.com/</id>
     <title>Daniel Roy Greenfeld</title>
-    <updated>2023-12-18T14:06:31.369Z</updated>
+    <updated>2024-01-07T08:32:03.784Z</updated>
     <generator>Next.js using Feed for Node.js</generator>
     <author>
         <name>Daniel Roy Greenfeld</name>
@@ -13,7 +13,7 @@
     <subtitle>Inside the head of Daniel Roy Greenfeld</subtitle>
     <logo>https://daniel.feldroy.com/images/pydanny-cartwheel.png</logo>
     <icon>https://daniel.feldroy.com/favicon.ico</icon>
-    <rights>All rights reserved 2023, Daniel Roy Greenfeld</rights>
+    <rights>All rights reserved 2024, Daniel Roy Greenfeld</rights>
     <entry>
         <title type="html"><![CDATA[TIL: Change older git commit]]></title>
         <id>https://daniel.feldroy.com/posts/til-2023-12-change-older-git-commit</id>
@@ -29,19 +29,18 @@
 <p>That will bring up a screen that looks like this in your text editor:</p>
 <pre><code class="language-bash">pick ec0fb5e0333c Configure omnitron galactic retroverter
 pick 6e7f323681f1 Activate the anvil generator
-pick 0001757cea8f Wind up the clockwork battery
+pick 0001757cea8f Wind up clockwork battery
 pick 849f7c453458 Solidify the electricity
 
-# Rebase dd3411dc1572..64c2e9cbbd76 onto dd3411dc1572 (4 commands)
-000
+# Rebase dd341c1572..64c2cbbd76 onto dd34dc1572 (4 commands)
 </code></pre>
 <p>On the third line, change the word, <code>pick</code> to <code>edit</code>. It should now look like this:</p>
 <pre><code class="language-bash">pick ec0fb5e0333c Configure omnitron galactic retroverter
 pick 6e7f323681f1 Activate the anvil generator
-edit 0001757cea8f Wind up the clockwork battery &#x3C;-- changed line
+edit 0001757cea8f Wind up clockwork battery # &#x3C;-- changed line
 pick 849f7c453458 Solidify the electricity
 
-# Rebase dd3411dc1572..64c2e9cbbd76 onto dd3411dc1572 (4 commands)
+# Rebase dd341c1572..64c2cbbd76 onto dd34dc1572 (4 commands)
 </code></pre>
 <p>Save and close the file.</p>
 <h1>Make changes</h1>
@@ -51,12 +50,12 @@ pick 849f7c453458 Solidify the electricity
 <pre><code class="language-bash">git commit --all --amend --no-edit
 git rebase --continue
 </code></pre>
-<p>You will need to run <code>git push --force</code> if you have a remote repo.</p>
+<p>If you have a remote repo (aka github or gitlab) you will need to run <code>git push --force</code> .</p>
 <h1>About the warning</h1>
-<p>Before you do this understands this rewrites the SHA-1s from the point of change forward. Any old SHA-1 representatives of those commits are gone. Hence this should happen on a branch away from master, preferably in a pull request.</p>
+<p>Before you do this understand this rewrites the SHA-1s from the point of change forward. Any old SHA-1 representatives of those commits are gone. Hence this should happen on a branch away from master, preferably in a pull request.</p>
 <h1>References</h1>
 <ul>
-<li>https://stackoverflow.com/a/1186549 - If for nothing else the instructions on how the tilde (~) works is really nice to know.</li>
+<li><a href="https://stackoverflow.com/a/1186549">stackoverflow.com/a/1186549</a> - If for nothing else the instructions on how the tilde (~) works is really nice to know.</li>
 </ul>
 ]]></content>
         <author>

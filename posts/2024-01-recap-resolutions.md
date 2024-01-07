@@ -22,7 +22,7 @@ Another year in orbit around a star.
 
 - [We moved to London](/posts/2023-10-we-moved-to-london)
 - Truly enjoyed being the husband of [Audrey Roy Greenfeld](https://audrey.feldroy.com/)
-- Embraced the delights and challenges of being a father to [Uma Roy Greenfeld](/tags/uma) in her fourth year in the universe 
+- Embraced the delights being the father to [Uma Roy Greenfeld](/tags/uma) in her fourth year in the universe 
 - I got back into [Brazilian Jiu-Jitsu (BJJ)](/tags/bjj)
 - I tried [HEMA](https://en.wikipedia.org/wiki/Historical_European_martial_arts) and Japanese Jiu-Jitsu
 - [I lost 8kg/20 lbs and got into much better shape](/posts/2023-04-my-fitness-journey)

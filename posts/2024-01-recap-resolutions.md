@@ -35,7 +35,7 @@ Another year in orbit around a star.
 - For the first time since 2009, attended a pycon ([PyCon UK](https://2023.pyconuk.org/)) not just as a speaker, but just to learn and socialize
 - Relearned to take holidays/vacation time, "working smarter less not harder more" is the way to go. I clearly get more stuff done and am so much more creative if I don't overwork
 - Spent more time with friends
-- Gave away most of my stuff, keeping only true family relics
+- Gave away most of my stuff in Los Angeles, keeping only true family relics
 - Launched a fun, new, useful open-source package, my first in years. It is called **dj-notebook**, here is the [repo](https://github.com/pydanny/dj-notebook) and here is the [docs](https://dj-notebook.readthedocs.io/)
 - Finished [my third year at Kraken Tech](/posts/2023-11-three-years-at-kraken-tech) of Octopus Energy Group
 

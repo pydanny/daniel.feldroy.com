@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://daniel.feldroy.com/</id>
     <title>Daniel Roy Greenfeld</title>
-    <updated>2024-01-07T08:32:03.810Z</updated>
+    <updated>2024-01-09T11:22:12.524Z</updated>
     <generator>Next.js using Feed for Node.js</generator>
     <author>
         <name>Daniel Roy Greenfeld</name>
@@ -18,36 +18,70 @@
         <title type="html"><![CDATA[Recap of 2023 and Resolutions for 2024]]></title>
         <id>https://daniel.feldroy.com/posts/2024-01-recap-resolutions</id>
         <link href="https://daniel.feldroy.com/posts/2024-01-recap-resolutions"/>
-        <updated>2024-01-07T23:45:00.000Z</updated>
-        <content type="html"><![CDATA[<h1>Recap for 2023</h1>
-<p>What  I did in 2023</p>
+        <updated>2024-01-07T09:00:00.000Z</updated>
+        <summary type="html"><![CDATA[Another year in orbit around a star.]]></summary>
+        <content type="html"><![CDATA[<p>Another year in orbit around a star.</p>
+<h1>Recap for 2023</h1>
 <ul>
 <li><a href="/posts/2023-10-we-moved-to-london">We moved to London</a></li>
-<li>Truly enjoyed being the husband of <a href="https://audrey.feldroy.com/">Audrey</a></li>
-<li>Embraced the delights and challenges of being a father to <a href="/tags/uma">Uma</a> in her fourth year in the universe</li>
-<li>I got back into <a href="/tags/bjj">Brazilian Jiu-Jitsu (BJJ)</a></li>
+<li>Truly enjoyed being the husband of <a href="https://audrey.feldroy.com/">Audrey Roy Greenfeld</a></li>
+<li>Embraced the delights being the father to <a href="/tags/uma">Uma Roy Greenfeld</a> in her fourth year in the universe</li>
+<li>I trained more in <a href="/tags/bjj">Brazilian Jiu-Jitsu (BJJ)</a></li>
 <li>I tried <a href="https://en.wikipedia.org/wiki/Historical_European_martial_arts">HEMA</a> and Japanese Jiu-Jitsu</li>
-<li><a href="/posts/2023-04-my-fitness-journey">I lost 8kg/20 lbs and got into much better shape</a></li>
+<li><a href="/posts/2023-04-my-fitness-journey">I lost 9kg/20 lbs and got into much better shape</a></li>
 <li>I got injured, hurt my shoulder in a bicycle accident</li>
 <li>I went to Paris for the first time! To speak at <a href="https://www.meetup.com/django-paris/events/296277353/">Django event</a> and take in the sights. Really enjoyed the <a href="https://en.wikipedia.org/wiki/Eurostar">Eurostar train that took us from London to Paris</a> - easier than a plane!</li>
-<li>Started up a <a href="/tags/TIL">TIL segment</a> on this blog</li>
+<li>Visited family in my home state of New Jersey. Also went to New York</li>
+<li>Started up a <a href="/tags/TIL">Today I Learned (TIL) segment</a> on this blog</li>
 <li>Focused on code instead of leadership. I switch between code and leadership every few years, so it is exciting to be in a new cycle</li>
-<li>Spoke at <a href="https://2024.pycon.it">Pycon Italy</a>, returning to Italy for the first time in 10 yearx</li>
+<li>Spoke at <a href="https://2024.pycon.it">Pycon Italy</a>, returning to Italy for the first time in 10 years</li>
 <li>For the first time since 2009, attended a pycon (<a href="https://2023.pyconuk.org/">PyCon UK</a>) not just as a speaker, but just to learn and socialize</li>
-<li>Relearned to take holidays/vacation time, "working smarter less not harder more" is the way to go</li>
-<li>Launched a fun, new, useful open source package, my first in years. It is called dj-notebook, here is the <a href="https://github.com/pydanny/dj-notebook">repo</a> and here is the <a href="https://dj-notebook.readthedocs.io/">docs</a></li>
+<li>Relearned to take holidays/vacation time, "working smarter less not harder more" is the way to go. I clearly get more stuff done and am so much more creative if I don't overwork</li>
+<li>Spent more time with friends</li>
+<li>Gave away most of my stuff in Los Angeles, keeping only true family relics</li>
+<li>Launched a fun, new, useful open-source package, my first in years. It is called <strong>dj-notebook</strong>, here is the <a href="https://github.com/pydanny/dj-notebook">repo</a> and here is the <a href="https://dj-notebook.readthedocs.io/">docs</a></li>
 <li>Finished <a href="/posts/2023-11-three-years-at-kraken-tech">my third year at Kraken Tech</a> of Octopus Energy Group</li>
+</ul>
+<h2>2023 Recap vs 2023 Resolutions</h2>
+<p>How well did I match <a href="/posts/2023-01-resolutions">my resolutions for 2023</a>?</p>
+<ul>
+<li>✔️ Continue to work on saving the planet</li>
+<li>✔️ Continue my fitness journey
+<ul>
+<li>BJJ</li>
+<li>Weights</li>
+<li>Cycling and walking in London</li>
+</ul>
+</li>
+<li>✔️ Go to new places
+<ul>
+<li>Paris, France</li>
+<li>Cardiff, Wales, UK</li>
+<li>London as a resident</li>
+</ul>
+</li>
+<li>✔️ Learn new things
+<ul>
+<li>Some <a href="https://www.rust-lang.org/">Rust</a>, not as much as I wanted</li>
+<li>Dabbled in <a href="https://www.phoenixframework.org/">Phoenix</a> and Elixir, fun stuff</li>
+<li><a href="/tags/TIL">TIL</a> contains some of other things I learned</li>
+</ul>
+</li>
+<li>✔️ Be a good parent (I like to think I was at least decent)</li>
+<li>✖️ Publish at least one book</li>
+<li>✖️ Compete in a hackathon</li>
 </ul>
 <h1>Resolutions for 2024</h1>
 <p>What I plan to do in the coming year</p>
 <ul>
-<li>Adore my soul mate, <a href="https://audrey.feldroy.com/">Audrey</a></li>
-<li>Be there for my daughter <a href="/tags/uma">Uma</a> in her 5th year on Planet Earth</li>
+<li>Adore my soul mate, <a href="https://audrey.feldroy.com/">Audrey Roy Greenfeld</a></li>
+<li>Be there for my daughter <a href="/tags/uma">Uma Roy Greenfeld</a> in her 5th year on Planet Earth</li>
 <li>Blog more reliably, writing a script to create skeleton blog posts</li>
-<li>Continue with BJJ</li>
+<li>Continue my fitness journey with <a href="/tags/bjj">BJJ</a>, weights, cycling, walking, and other healthy activities</li>
 <li>Write fiction, maybe publish it</li>
-<li>Get better taking time off to recharge. I pledge to embrace "working smarter less not harder more"</li>
-<li>Travel to new places, preferably by train or other carbon efficient methods</li>
+<li>Embrace taking time off to recharge aka "working smarter less not harder more"</li>
+<li>Travel to new places, preferably by train or other carbon-efficient methods</li>
+<li>Be a speaker in at least one conference. Fortunately, I'm scheduled to give a talk at <a href="https://pycon.lt/2024">PyCon Lithuania 2024</a></li>
 <li>Finish my fourth year at Kraken Tech, advancing the cause of renewable energy with the mission of addressing global climate change</li>
 </ul>
 ]]></content>

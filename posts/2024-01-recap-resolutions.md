@@ -27,12 +27,12 @@ Another year in orbit around a star.
 - I tried [HEMA](https://en.wikipedia.org/wiki/Historical_European_martial_arts) and Japanese Jiu-Jitsu
 - [I lost 9kg/20 lbs and got into much better shape](/posts/2023-04-my-fitness-journey)
 - I got injured, hurt my shoulder in a bicycle accident
-- I went to Paris for the first time! To speak at [Django event](https://www.meetup.com/django-paris/events/296277353/) and take in the sights. Really enjoyed the [Eurostar train that took us from London to Paris](https://en.wikipedia.org/wiki/Eurostar) - easier than a plane!
+- I went to Paris for the first time! To speak at a [Django event](https://www.meetup.com/django-paris/events/296277353/) and take in the sights. Really enjoyed the [Eurostar train that took us from London to Paris](https://en.wikipedia.org/wiki/Eurostar) - easier than a plane!
 - Visited family in my home state of New Jersey. Also went to New York
 - Started up a [Today I Learned (TIL) segment](/tags/TIL) on this blog
 - Focused on code instead of leadership. I switch between code and leadership every few years, so it is exciting to be in a new cycle
 - Spoke at [Pycon Italy](https://2024.pycon.it), returning to Italy for the first time in 10 years
-- For the first time since 2009, attended a pycon ([PyCon UK](https://2023.pyconuk.org/)) not just as a speaker, but just to learn and socialize
+- For the first time since 2009, attended a pycon ([PyCon UK](https://2023.pyconuk.org/)) not as a speaker, but just to learn and socialize
 - Relearned to take holidays/vacation time, "working smarter less not harder more" is the way to go. I clearly get more stuff done and am so much more creative if I don't overwork
 - Spent more time with friends
 - Gave away most of my stuff in Los Angeles, keeping only true family relics

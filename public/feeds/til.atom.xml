@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://daniel.feldroy.com/</id>
     <title>Daniel Roy Greenfeld</title>
-    <updated>2024-01-09T11:22:12.499Z</updated>
+    <updated>2024-01-19T11:43:30.041Z</updated>
     <generator>Next.js using Feed for Node.js</generator>
     <author>
         <name>Daniel Roy Greenfeld</name>
@@ -14,6 +14,53 @@
     <logo>https://daniel.feldroy.com/images/pydanny-cartwheel.png</logo>
     <icon>https://daniel.feldroy.com/favicon.ico</icon>
     <rights>All rights reserved 2024, Daniel Roy Greenfeld</rights>
+    <entry>
+        <title type="html"><![CDATA[TIL: Writing decorators for classes]]></title>
+        <id>https://daniel.feldroy.com/posts/til-2024-01-writing-decorators-for-classes</id>
+        <link href="https://daniel.feldroy.com/posts/til-2024-01-writing-decorators-for-classes"/>
+        <updated>2024-01-18T09:18:51.294Z</updated>
+        <summary type="html"><![CDATA[To my surprise writing decorators for classes is easier than for functions.]]></summary>
+        <content type="html"><![CDATA[<p>To my surprise writing decorators for classes is easier than for functions. Here's how to do it with an arguably wholly unnecessary decorator.</p>
+<pre><code class="language-python">def tools(cls):
+    def simplistic_attribute_count(self):
+        """Returns the number of attributes."""
+        return len(self.__dict__)
+
+    def docs(self: object):
+        """Returns the docstring for the class."""
+        return self.__doc__
+
+    cls.simplistic_attribute_count = simplistic_attribute_count
+    cls.docs = docs
+    return cls
+</code></pre>
+<p>Let's test it out:</p>
+<pre><code class="language-python">@tools
+class A:
+    """A simple class for testing the tools decorator"""
+
+
+a = A()
+a.one = 1
+
+assert a.simplistic_attribute_count() == 1
+assert a.docs() == 'A simple class for testing the tools decorator'
+</code></pre>
+]]></content>
+        <author>
+            <name>Daniel Roy Greenfeld</name>
+            <email>daniel@feldroy.com</email>
+            <uri>https://daniel.feldroy.com</uri>
+        </author>
+        <category term="TIL"/>
+        <category term="python"/>
+        <category term="pydantic"/>
+        <contributor>
+            <name>Daniel Roy Greenfeld</name>
+            <email>daniel@feldroy.com</email>
+            <uri>https://daniel.feldroy.com</uri>
+        </contributor>
+    </entry>
     <entry>
         <title type="html"><![CDATA[TIL: Change older git commit]]></title>
         <id>https://daniel.feldroy.com/posts/til-2023-12-change-older-git-commit</id>
@@ -65,38 +112,6 @@ git rebase --continue
         </author>
         <category term="howto"/>
         <category term="git"/>
-        <category term="TIL"/>
-        <contributor>
-            <name>Daniel Roy Greenfeld</name>
-            <email>daniel@feldroy.com</email>
-            <uri>https://daniel.feldroy.com</uri>
-        </contributor>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[TIL: Forcing pip to use virtualenv]]></title>
-        <id>https://daniel.feldroy.com/posts/til-2023-12-forcing-pip-to-use-virtualenv</id>
-        <link href="https://daniel.feldroy.com/posts/til-2023-12-forcing-pip-to-use-virtualenv"/>
-        <updated>2023-12-04T15:30:00.000Z</updated>
-        <summary type="html"><![CDATA[Necessary because installing things into your base python causes false positives, true negatives, and other head bangers.]]></summary>
-        <content type="html"><![CDATA[<p>Necessary because installing things into your base python causes false positives, true negatives, and other head bangers.</p>
-<p>Set this environment variable, preferably in your rc file:</p>
-<pre><code class="language-bash"># ~/.zshrc 
-export PIP_REQUIRE_VIRTUALENV=true
-</code></pre>
-<p>Now if I try to use pip outside a virtualenv:</p>
-<pre><code class="language-bash">dj-notebook on  main [$] is 📦 v0.6.1 via 🐍 v3.10.6 
-❯ pip install ruff 
-ERROR: Could not find an activated virtualenv (required).
-</code></pre>
-<p>This TIL is thanks to David Winterbottom.</p>
-]]></content>
-        <author>
-            <name>Daniel Roy Greenfeld</name>
-            <email>daniel@feldroy.com</email>
-            <uri>https://daniel.feldroy.com</uri>
-        </author>
-        <category term="howto"/>
-        <category term="python"/>
         <category term="TIL"/>
         <contributor>
             <name>Daniel Roy Greenfeld</name>

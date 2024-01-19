@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://daniel.feldroy.com/</id>
     <title>Daniel Roy Greenfeld</title>
-    <updated>2024-01-09T11:22:12.524Z</updated>
+    <updated>2024-01-19T11:43:30.070Z</updated>
     <generator>Next.js using Feed for Node.js</generator>
     <author>
         <name>Daniel Roy Greenfeld</name>
@@ -14,6 +14,53 @@
     <logo>https://daniel.feldroy.com/images/pydanny-cartwheel.png</logo>
     <icon>https://daniel.feldroy.com/favicon.ico</icon>
     <rights>All rights reserved 2024, Daniel Roy Greenfeld</rights>
+    <entry>
+        <title type="html"><![CDATA[TIL: Writing decorators for classes]]></title>
+        <id>https://daniel.feldroy.com/posts/til-2024-01-writing-decorators-for-classes</id>
+        <link href="https://daniel.feldroy.com/posts/til-2024-01-writing-decorators-for-classes"/>
+        <updated>2024-01-18T09:18:51.294Z</updated>
+        <summary type="html"><![CDATA[To my surprise writing decorators for classes is easier than for functions.]]></summary>
+        <content type="html"><![CDATA[<p>To my surprise writing decorators for classes is easier than for functions. Here's how to do it with an arguably wholly unnecessary decorator.</p>
+<pre><code class="language-python">def tools(cls):
+    def simplistic_attribute_count(self):
+        """Returns the number of attributes."""
+        return len(self.__dict__)
+
+    def docs(self: object):
+        """Returns the docstring for the class."""
+        return self.__doc__
+
+    cls.simplistic_attribute_count = simplistic_attribute_count
+    cls.docs = docs
+    return cls
+</code></pre>
+<p>Let's test it out:</p>
+<pre><code class="language-python">@tools
+class A:
+    """A simple class for testing the tools decorator"""
+
+
+a = A()
+a.one = 1
+
+assert a.simplistic_attribute_count() == 1
+assert a.docs() == 'A simple class for testing the tools decorator'
+</code></pre>
+]]></content>
+        <author>
+            <name>Daniel Roy Greenfeld</name>
+            <email>daniel@feldroy.com</email>
+            <uri>https://daniel.feldroy.com</uri>
+        </author>
+        <category term="TIL"/>
+        <category term="python"/>
+        <category term="pydantic"/>
+        <contributor>
+            <name>Daniel Roy Greenfeld</name>
+            <email>daniel@feldroy.com</email>
+            <uri>https://daniel.feldroy.com</uri>
+        </contributor>
+    </entry>
     <entry>
         <title type="html"><![CDATA[Recap of 2023 and Resolutions for 2024]]></title>
         <id>https://daniel.feldroy.com/posts/2024-01-recap-resolutions</id>
@@ -30,12 +77,12 @@
 <li>I tried <a href="https://en.wikipedia.org/wiki/Historical_European_martial_arts">HEMA</a> and Japanese Jiu-Jitsu</li>
 <li><a href="/posts/2023-04-my-fitness-journey">I lost 9kg/20 lbs and got into much better shape</a></li>
 <li>I got injured, hurt my shoulder in a bicycle accident</li>
-<li>I went to Paris for the first time! To speak at <a href="https://www.meetup.com/django-paris/events/296277353/">Django event</a> and take in the sights. Really enjoyed the <a href="https://en.wikipedia.org/wiki/Eurostar">Eurostar train that took us from London to Paris</a> - easier than a plane!</li>
+<li>I went to Paris for the first time! To speak at a <a href="https://www.meetup.com/django-paris/events/296277353/">Django event</a> and take in the sights. Really enjoyed the <a href="https://en.wikipedia.org/wiki/Eurostar">Eurostar train that took us from London to Paris</a> - easier than a plane!</li>
 <li>Visited family in my home state of New Jersey. Also went to New York</li>
 <li>Started up a <a href="/tags/TIL">Today I Learned (TIL) segment</a> on this blog</li>
 <li>Focused on code instead of leadership. I switch between code and leadership every few years, so it is exciting to be in a new cycle</li>
 <li>Spoke at <a href="https://2024.pycon.it">Pycon Italy</a>, returning to Italy for the first time in 10 years</li>
-<li>For the first time since 2009, attended a pycon (<a href="https://2023.pyconuk.org/">PyCon UK</a>) not just as a speaker, but just to learn and socialize</li>
+<li>For the first time since 2009, attended a pycon (<a href="https://2023.pyconuk.org/">PyCon UK</a>) not as a speaker, but just to learn and socialize</li>
 <li>Relearned to take holidays/vacation time, "working smarter less not harder more" is the way to go. I clearly get more stuff done and am so much more creative if I don't overwork</li>
 <li>Spent more time with friends</li>
 <li>Gave away most of my stuff in Los Angeles, keeping only true family relics</li>
@@ -154,38 +201,6 @@ git rebase --continue
         </author>
         <category term="howto"/>
         <category term="git"/>
-        <category term="TIL"/>
-        <contributor>
-            <name>Daniel Roy Greenfeld</name>
-            <email>daniel@feldroy.com</email>
-            <uri>https://daniel.feldroy.com</uri>
-        </contributor>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[TIL: Forcing pip to use virtualenv]]></title>
-        <id>https://daniel.feldroy.com/posts/til-2023-12-forcing-pip-to-use-virtualenv</id>
-        <link href="https://daniel.feldroy.com/posts/til-2023-12-forcing-pip-to-use-virtualenv"/>
-        <updated>2023-12-04T15:30:00.000Z</updated>
-        <summary type="html"><![CDATA[Necessary because installing things into your base python causes false positives, true negatives, and other head bangers.]]></summary>
-        <content type="html"><![CDATA[<p>Necessary because installing things into your base python causes false positives, true negatives, and other head bangers.</p>
-<p>Set this environment variable, preferably in your rc file:</p>
-<pre><code class="language-bash"># ~/.zshrc 
-export PIP_REQUIRE_VIRTUALENV=true
-</code></pre>
-<p>Now if I try to use pip outside a virtualenv:</p>
-<pre><code class="language-bash">dj-notebook on  main [$] is 📦 v0.6.1 via 🐍 v3.10.6 
-❯ pip install ruff 
-ERROR: Could not find an activated virtualenv (required).
-</code></pre>
-<p>This TIL is thanks to David Winterbottom.</p>
-]]></content>
-        <author>
-            <name>Daniel Roy Greenfeld</name>
-            <email>daniel@feldroy.com</email>
-            <uri>https://daniel.feldroy.com</uri>
-        </author>
-        <category term="howto"/>
-        <category term="python"/>
         <category term="TIL"/>
         <contributor>
             <name>Daniel Roy Greenfeld</name>

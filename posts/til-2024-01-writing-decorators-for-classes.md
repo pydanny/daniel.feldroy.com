@@ -22,7 +22,7 @@ def tools(cls):
         """Returns the docstring for the class."""
         return self.__doc__
 
-    # Attach the functions as classmethods
+    # Attach the functions as methods
     cls.simplistic_attribute_count = simplistic_attribute_count
     cls.docs = docs
 

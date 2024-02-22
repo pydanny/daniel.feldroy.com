@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://daniel.feldroy.com/</id>
     <title>Daniel Roy Greenfeld</title>
-    <updated>2024-02-22T11:39:01.490Z</updated>
+    <updated>2024-02-22T11:53:52.844Z</updated>
     <generator>Next.js using Feed for Node.js</generator>
     <author>
         <name>Daniel Roy Greenfeld</name>
@@ -14,33 +14,6 @@
     <logo>https://daniel.feldroy.com/images/pydanny-cartwheel.png</logo>
     <icon>https://daniel.feldroy.com/favicon.ico</icon>
     <rights>All rights reserved 2024, Daniel Roy Greenfeld</rights>
-    <entry>
-        <title type="html"><![CDATA[TIL: Using URLs to highlight and scroll to text]]></title>
-        <id>https://daniel.feldroy.com/posts/til-2024-02-using-urls-to-highlight-and-scroll-to-text</id>
-        <link href="https://daniel.feldroy.com/posts/til-2024-02-using-urls-to-highlight-and-scroll-to-text"/>
-        <updated>2024-02-22T11:20:54.658Z</updated>
-        <summary type="html"><![CDATA[When you want to link to content on a web page but it doesn't have CSS selectors.]]></summary>
-        <content type="html"><![CDATA[<p>When you want to link to content on a pagements don't have CSS selectors, append this to the URL:</p>
-<pre><code>#:~:text=TEXT_TO_FIND
-</code></pre>
-<p>Here's some reference examples:</p>
-<ul>
-<li><a href="https://daniel.feldroy.com/posts/2023-02-programming-languages-ive-learned#:~:text=python">https://daniel.feldroy.com/posts/2023-02-programming-languages-ive-learned#:~:text=python</a></li>
-<li><a href="https://daniel.feldroy.com/posts/2023-11-three-years-at-kraken-tech#:~:text=Come%20and%20help%20me%20save%20the%20planet">https://daniel.feldroy.com/posts/2023-11-three-years-at-kraken-tech#:~:text=Come%20and%20help%20me%20save%20the%20planet</a></li>
-</ul>
-]]></content>
-        <author>
-            <name>Daniel Roy Greenfeld</name>
-            <email>daniel@feldroy.com</email>
-            <uri>https://daniel.feldroy.com</uri>
-        </author>
-        <category term="TIL"/>
-        <contributor>
-            <name>Daniel Roy Greenfeld</name>
-            <email>daniel@feldroy.com</email>
-            <uri>https://daniel.feldroy.com</uri>
-        </contributor>
-    </entry>
     <entry>
         <title type="html"><![CDATA[TIL: Writing decorators for classes]]></title>
         <id>https://daniel.feldroy.com/posts/til-2024-01-writing-decorators-for-classes</id>
@@ -176,6 +149,64 @@ assert a.docs() == 'Docstring for testing the tools decorator'
         <category term="octopus"/>
         <category term="kraken"/>
         <category term="climate-change"/>
+        <contributor>
+            <name>Daniel Roy Greenfeld</name>
+            <email>daniel@feldroy.com</email>
+            <uri>https://daniel.feldroy.com</uri>
+        </contributor>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[TIL: Change older git commit]]></title>
+        <id>https://daniel.feldroy.com/posts/til-2023-12-change-older-git-commit</id>
+        <link href="https://daniel.feldroy.com/posts/til-2023-12-change-older-git-commit"/>
+        <updated>2023-12-18T15:30:00.000Z</updated>
+        <summary type="html"><![CDATA[How to change an older git commit rather than the most recent one.]]></summary>
+        <content type="html"><![CDATA[<p>Typically I try to avoid changing older commits in a pull request.  My reasoning has a tiny bit to do with preserving history and lots to do with being resistant to trying new things. Finally I got around to looking this up today, it is easy to do.</p>
+<p>WARNING: Do this on branches of main, not on the main branch itself. More on that at the end.</p>
+<h1>Find the commit</h1>
+<p>In our example the change we want to amend is 3 commits back, do this to find it:</p>
+<pre><code class="language-bash">git rebase -i HEAD~3
+</code></pre>
+<p>That will bring up a screen that looks like this in your text editor:</p>
+<pre><code class="language-bash">pick ec0fb5e0333c Configure omnitron galactic retroverter
+pick 6e7f323681f1 Activate the anvil generator
+pick 0001757cea8f Wind up clockwork battery
+pick 849f7c453458 Solidify the electricity
+
+# Rebase dd341c1572..64c2cbbd76 onto dd34dc1572 (4 commands)
+</code></pre>
+<p>On the third line, change the word, <code>pick</code> to <code>edit</code>. It should now look like this:</p>
+<pre><code class="language-bash">pick ec0fb5e0333c Configure omnitron galactic retroverter
+pick 6e7f323681f1 Activate the anvil generator
+edit 0001757cea8f Wind up clockwork battery # &#x3C;-- changed line
+pick 849f7c453458 Solidify the electricity
+
+# Rebase dd341c1572..64c2cbbd76 onto dd34dc1572 (4 commands)
+</code></pre>
+<p>Save and close the file.</p>
+<h1>Make changes</h1>
+<p>Now make changes to code files and save them.</p>
+<h1>Commit and rebase</h1>
+<p>Run these commands to have git recognize the changes:</p>
+<pre><code class="language-bash">git commit --all --amend --no-edit
+git rebase --continue
+</code></pre>
+<p>If you have a remote repo (aka github or gitlab) you will need to run <code>git push --force</code> .</p>
+<h1>About the warning</h1>
+<p>Before you do this understand this rewrites the SHA-1s from the point of change forward. Any old SHA-1 representatives of those commits are gone. Hence this should happen on a branch away from master, preferably in a pull request.</p>
+<h1>References</h1>
+<ul>
+<li><a href="https://stackoverflow.com/a/1186549">stackoverflow.com/a/1186549</a> - If for nothing else the instructions on how the tilde (~) works is really nice to know.</li>
+</ul>
+]]></content>
+        <author>
+            <name>Daniel Roy Greenfeld</name>
+            <email>daniel@feldroy.com</email>
+            <uri>https://daniel.feldroy.com</uri>
+        </author>
+        <category term="howto"/>
+        <category term="git"/>
+        <category term="TIL"/>
         <contributor>
             <name>Daniel Roy Greenfeld</name>
             <email>daniel@feldroy.com</email>

@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://daniel.feldroy.com/</id>
     <title>Daniel Roy Greenfeld</title>
-    <updated>2024-02-22T11:53:52.764Z</updated>
+    <updated>2024-03-22T12:21:43.329Z</updated>
     <generator>Next.js using Feed for Node.js</generator>
     <author>
         <name>Daniel Roy Greenfeld</name>
@@ -14,4 +14,31 @@
     <logo>https://daniel.feldroy.com/images/pydanny-cartwheel.png</logo>
     <icon>https://daniel.feldroy.com/favicon.ico</icon>
     <rights>All rights reserved 2024, Daniel Roy Greenfeld</rights>
+    <entry>
+        <title type="html"><![CDATA[Keynote at PyCon Lithuania 2024]]></title>
+        <id>https://daniel.feldroy.com/posts/2024-pycon-lithuania</id>
+        <link href="https://daniel.feldroy.com/posts/2024-pycon-lithuania"/>
+        <updated>2024-03-22T13:00:00.000Z</updated>
+        <summary type="html"><![CDATA[My key note and the first return to the homeland of Lithuania in over 100 years.]]></summary>
+        <content type="html"><![CDATA[<p>From April 2nd to April 6th I'll be at <a href="https://pycon.lt/2024">PyCon Lithuania 2024</a> in Vilnius to present a keynote about 25 years of glorious coding mistakes (mostly in Python). Audrey and Uma will be accompanying me, making us the first members of the Lithuanian side of my family to return there in over 100 years!</p>
+<p>At the conference I'll be joined by my old friend Tom Christie, author of <a href="">HTTPX</a>, <a href="https://www.starlette.io">Starlette</a>, and <a href="https://www.django-rest-framework.org/">Django REST Framework</a>. I hope to meet many new friends, specifically everyone there. At the sprints I'll be joined by my awesome wife, Audrey, author of <a href="https://github.com/cookiecutter/cookiecutter">Cookiecutter</a>.</p>
+<p>Come and join us!</p>
+<iframe src="https://www.linkedin.com/embed/feed/update/urn:li:ugcPost:7171868639774556161" height="686" width="504" frameborder="0" allowfullscreen="" title="Embedded post"></iframe>
+]]></content>
+        <author>
+            <name>Daniel Roy Greenfeld</name>
+            <email>daniel@feldroy.com</email>
+            <uri>https://daniel.feldroy.com</uri>
+        </author>
+        <category term="family"/>
+        <category term="python"/>
+        <category term="django"/>
+        <category term="pycon"/>
+        <category term="sprint"/>
+        <contributor>
+            <name>Daniel Roy Greenfeld</name>
+            <email>daniel@feldroy.com</email>
+            <uri>https://daniel.feldroy.com</uri>
+        </contributor>
+    </entry>
 </feed>

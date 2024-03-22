@@ -10,7 +10,7 @@ tags:
   - sprint
 time_to_read: 1
 title: Keynote at PyCon Lithuania 2024
-description: My key note and the first return to the homeland of Lithuania in over 100 years.
+description: My keynote and the first return to the homeland of Lithuania in over 100 years.
 type: post
 ---
 

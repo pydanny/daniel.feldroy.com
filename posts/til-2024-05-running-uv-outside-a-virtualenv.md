@@ -30,3 +30,5 @@ As a bonus, here's the command inside GitHub actions-flavored YAML:
         python -m pip install uv
         uv pip install -p 3.12 -r requirements.txt
 ```
+
+Want to know how to handle multiple versions of Python? Here's how use a matrix on GitHub: https://github.com/pydanny/dj-notebook/blob/main/.github/workflows/python-ci.yml#L18-L19

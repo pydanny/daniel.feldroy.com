@@ -1,4 +1,4 @@
-Sitemap: https://coryd.dev/sitemap.xml
+//robots.txt
 
 User-agent: *
 Disallow:

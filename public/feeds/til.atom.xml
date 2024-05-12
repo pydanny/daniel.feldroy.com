@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://daniel.feldroy.com/</id>
     <title>Daniel Roy Greenfeld</title>
-    <updated>2024-05-08T14:32:58.251Z</updated>
+    <updated>2024-05-12T09:42:11.436Z</updated>
     <generator>Next.js using Feed for Node.js</generator>
     <author>
         <name>Daniel Roy Greenfeld</name>
@@ -19,10 +19,10 @@
         <id>https://daniel.feldroy.com/posts/til-2024-05-running-uv-outside-a-virtualenv</id>
         <link href="https://daniel.feldroy.com/posts/til-2024-05-running-uv-outside-a-virtualenv"/>
         <updated>2024-05-08T14:22:59.338Z</updated>
-        <summary type="html"><![CDATA[Breaking the rules to satisfy Continuous Integration.]]></summary>
-        <content type="html"><![CDATA[<p>Breaking the rules to satisfy Continuous Integration.</p>
+        <summary type="html"><![CDATA[Breaking the rules to satisfy continuous integration.]]></summary>
+        <content type="html"><![CDATA[<p><em>Breaking the rules to satisfy continuous integration.</em></p>
 <p>A few months ago I blogged about forcing <a href="/posts/til-2023-12-forcing-pip-to-use-virtualenv">pip to require a virtualenv</a>. However, when automating tests and deployments sometimes you work outside of virtualenvs. With <code>pip</code> this isn't a problem, you just don't set what I did in that article. However, what if you are using the rust-based <a href="https://pypi.org/project/uv/">uv</a> where the default is to keep you in a virtualenv?</p>
-<p>The answer is when you install dependancies using <code>uv</code> in this scenario, use the <code>--python</code> flag to specify the interpreter. According to the uv docs, this flag is intended for use in continuous integration (CI) environments or other automated workflows.</p>
+<p>The answer is when you install dependencies using <code>uv</code> in this scenario, use the <code>--python</code> flag to specify the interpreter. According to the <a href="https://github.com/astral-sh/uv?tab=readme-ov-file#installing-into-arbitrary-python-environments">uv docs</a>, this flag is intended for use in continuous integration (CI) environments or other automated workflows.</p>
 <p>So without further ado, this is what I did:</p>
 <pre><code class="language-bash">python -m pip install uv
 uv pip install -p 3.12 -r requirements.txt
@@ -33,6 +33,7 @@ uv pip install -p 3.12 -r requirements.txt
         python -m pip install uv
         uv pip install -p 3.12 -r requirements.txt
 </code></pre>
+<p>Want to know how to handle multiple versions of Python? Here's how use a matrix on GitHub: <a href="github.com/pydanny/dj-notebook/blob/main/.github/workflows/python-ci.yml#L18-L19">https://github.com/pydanny/dj-notebook/blob/main/.github/workflows/python-ci.yml#L18-L19</a></p>
 ]]></content>
         <author>
             <name>Daniel Roy Greenfeld</name>
@@ -41,7 +42,7 @@ uv pip install -p 3.12 -r requirements.txt
         </author>
         <category term="TIL"/>
         <category term="python"/>
-        <category/>
+        <category term="howto"/>
         <contributor>
             <name>Daniel Roy Greenfeld</name>
             <email>daniel@feldroy.com</email>

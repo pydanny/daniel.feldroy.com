@@ -1,5 +1,4 @@
 import Link from "next/link";
-import utilStyles from "../festyles/utils.module.css";
 import MyDate from "../components/date";
 
 import { getSortedPostsData } from "../lib/posts";

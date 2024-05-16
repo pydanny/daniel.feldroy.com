@@ -623,6 +623,10 @@
     {
       "source": "/30-minute-rule",
       "destination": "/posts/thirty-minute-rule"
-    }
+    },
+    {
+      "source": "/30",
+      "destination": "/posts/thirty-minute-rule"
+    }    
   ]
 }

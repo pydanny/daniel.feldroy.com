@@ -4,7 +4,7 @@ published: true
 description: By default VSCode doesn't include this keybinding. Here's how you add it.
 slug: git-cheatsheet
 tags:
-  - vscode
+  - VS Code
   - howto
 time_to_read: 1
 title: Switching between VS Code terminals using hotkeys

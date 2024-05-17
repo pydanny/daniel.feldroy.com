@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://daniel.feldroy.com/</id>
     <title>Daniel Roy Greenfeld</title>
-    <updated>2024-05-12T09:42:11.436Z</updated>
+    <updated>2024-05-17T09:14:30.003Z</updated>
     <generator>Next.js using Feed for Node.js</generator>
     <author>
         <name>Daniel Roy Greenfeld</name>
@@ -14,6 +14,39 @@
     <logo>https://daniel.feldroy.com/images/pydanny-cartwheel.png</logo>
     <icon>https://daniel.feldroy.com/favicon.ico</icon>
     <rights>All rights reserved 2024, Daniel Roy Greenfeld</rights>
+    <entry>
+        <title type="html"><![CDATA[TIL: Switching to full screen mode in VSCode]]></title>
+        <id>https://daniel.feldroy.com/posts/til-2024-05-switching-to-full-screen-mode-in-vscode</id>
+        <link href="https://daniel.feldroy.com/posts/til-2024-05-switching-to-full-screen-mode-in-vscode"/>
+        <updated>2024-05-17T09:05:20.126Z</updated>
+        <summary type="html"><![CDATA[For those times when you want to avoid using the mouse to improve your desktop layout.]]></summary>
+        <content type="html"><![CDATA[<p><em>For those times when you want to avoid using the mouse to improve your desktop layout.</em></p>
+<p>First, open VS Code:</p>
+<pre><code>code my-project-dir/
+</code></pre>
+<p>Then, depending on your operating system, use these hotkeys:</p>
+<h1>Mac OS X</h1>
+<p>Two versions of the same keys:</p>
+<pre><code>⌃⌘F
+</code></pre>
+<pre><code>control + command + F
+</code></pre>
+<p>Windows and Linux:</p>
+<pre><code>F11
+</code></pre>
+]]></content>
+        <author>
+            <name>Daniel Roy Greenfeld</name>
+            <email>daniel@feldroy.com</email>
+            <uri>https://daniel.feldroy.com</uri>
+        </author>
+        <category term="TIL"/>
+        <contributor>
+            <name>Daniel Roy Greenfeld</name>
+            <email>daniel@feldroy.com</email>
+            <uri>https://daniel.feldroy.com</uri>
+        </contributor>
+    </entry>
     <entry>
         <title type="html"><![CDATA[TIL: Running UV outside a virtualenv]]></title>
         <id>https://daniel.feldroy.com/posts/til-2024-05-running-uv-outside-a-virtualenv</id>
@@ -43,58 +76,6 @@ uv pip install -p 3.12 -r requirements.txt
         <category term="TIL"/>
         <category term="python"/>
         <category term="howto"/>
-        <contributor>
-            <name>Daniel Roy Greenfeld</name>
-            <email>daniel@feldroy.com</email>
-            <uri>https://daniel.feldroy.com</uri>
-        </contributor>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[TIL: Writing decorators for classes]]></title>
-        <id>https://daniel.feldroy.com/posts/til-2024-01-writing-decorators-for-classes</id>
-        <link href="https://daniel.feldroy.com/posts/til-2024-01-writing-decorators-for-classes"/>
-        <updated>2024-01-19T12:00:00.000Z</updated>
-        <summary type="html"><![CDATA[To my surprise writing decorators for classes is easier than for functions.]]></summary>
-        <content type="html"><![CDATA[<p>To my surprise writing decorators for classes is easier than for functions. Here's how to do it in annotated fashion with an unnecessary decorator that doesn't accept any additional arguments.</p>
-<pre><code class="language-python"># Write a callable that accepts a cls as an argument 
-def tools(cls):
-    # Write functions that accept "self: object" as an argument.
-    def simplistic_attribute_count(self: object) -> int:
-        """Returns the number of attributes."""
-        return len(self.__dict__)
-
-    def docs(self: object) -> str:
-        """Returns the docstring for the class."""
-        return self.__doc__
-
-    # Attach the functions as methods
-    cls.simplistic_attribute_count = simplistic_attribute_count
-    cls.docs = docs
-
-    # Return the modified class
-    return cls
-</code></pre>
-<p>Let's test it out:</p>
-<pre><code class="language-python">@tools
-class A:
-    """Docstring for testing the tools decorator"""
-
-
-a = A()
-a.one = 1
-
-assert a.simplistic_attribute_count() == 1
-assert a.docs() == 'Docstring for testing the tools decorator'
-</code></pre>
-<p>Next up, how to do this while passing in arguments!</p>
-]]></content>
-        <author>
-            <name>Daniel Roy Greenfeld</name>
-            <email>daniel@feldroy.com</email>
-            <uri>https://daniel.feldroy.com</uri>
-        </author>
-        <category term="TIL"/>
-        <category term="python"/>
         <contributor>
             <name>Daniel Roy Greenfeld</name>
             <email>daniel@feldroy.com</email>

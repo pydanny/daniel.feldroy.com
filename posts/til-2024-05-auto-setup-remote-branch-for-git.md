@@ -7,8 +7,8 @@ tags:
 - git
 - howto
 title: 'TIL: Auto setup remote branch for git'
-image: /logos/til-1.png
-twitter_image: /logos/til-1.png
+image: https://daniel.feldroy.com/logos/til-1.png
+twitter_image: https://daniel.feldroy.com/logos/til-1.png
 ---
 
 *For getting rid of the "fatal: The current branch new-awesome-feature has no upstream branch" error.*

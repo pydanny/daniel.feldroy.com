@@ -6,8 +6,8 @@ tags:
   - TIL
   - VS Code
 title: 'TIL: Switching to full screen mode in VSCode'
-image: /logos/til-1.png
-twitter_image: /logos/til-1.png
+image: https://daniel.feldroy.com/logos/til-1.png
+twitter_image: https://daniel.feldroy.com/logos/til-1.png
 ---
 
 *For those times when you want to avoid using the mouse to improve your desktop layout.*

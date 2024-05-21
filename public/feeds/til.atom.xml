@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://daniel.feldroy.com/</id>
     <title>Daniel Roy Greenfeld</title>
-    <updated>2024-05-17T09:14:30.003Z</updated>
+    <updated>2024-05-21T08:41:14.451Z</updated>
     <generator>Next.js using Feed for Node.js</generator>
     <author>
         <name>Daniel Roy Greenfeld</name>
@@ -15,6 +15,40 @@
     <icon>https://daniel.feldroy.com/favicon.ico</icon>
     <rights>All rights reserved 2024, Daniel Roy Greenfeld</rights>
     <entry>
+        <title type="html"><![CDATA[TIL: Auto setup remote branch for git]]></title>
+        <id>https://daniel.feldroy.com/posts/til-2024-05-auto-setup-remote-branch-for-git</id>
+        <link href="https://daniel.feldroy.com/posts/til-2024-05-auto-setup-remote-branch-for-git"/>
+        <updated>2024-05-21T08:38:05.180Z</updated>
+        <summary type="html"><![CDATA[For getting rid of the "fatal: The current branch add-dcc-book has no upstream branch" error.]]></summary>
+        <content type="html"><![CDATA[<p><em>For getting rid of the "fatal: The current branch add-dcc-book has no upstream branch" error.</em></p>
+<p>Whenever I create a new branch and try to push the new commit then I start seeing this error:</p>
+<pre><code>git push --force
+fatal: The current branch new-awesome-feature has no upstream branch.
+To push the current branch and set the remote as upstream, use
+
+    git push --set-upstream origin new-awesome-feature
+
+To have this happen automatically for branches without a tracking
+upstream, see 'push.autoSetupRemote' in 'git help config'.
+</code></pre>
+<p>To fix it so git just auto creates the branch, just enter this magic command:</p>
+<pre><code class="language-bash">git config --global --add --bool push.autoSetupRemote true
+</code></pre>
+]]></content>
+        <author>
+            <name>Daniel Roy Greenfeld</name>
+            <email>daniel@feldroy.com</email>
+            <uri>https://daniel.feldroy.com</uri>
+        </author>
+        <category term="TIL"/>
+        <category/>
+        <contributor>
+            <name>Daniel Roy Greenfeld</name>
+            <email>daniel@feldroy.com</email>
+            <uri>https://daniel.feldroy.com</uri>
+        </contributor>
+    </entry>
+    <entry>
         <title type="html"><![CDATA[TIL: Switching to full screen mode in VSCode]]></title>
         <id>https://daniel.feldroy.com/posts/til-2024-05-switching-to-full-screen-mode-in-vscode</id>
         <link href="https://daniel.feldroy.com/posts/til-2024-05-switching-to-full-screen-mode-in-vscode"/>
@@ -25,13 +59,13 @@
 <pre><code>code my-project-dir/
 </code></pre>
 <p>Then, depending on your operating system, use these hotkeys:</p>
-<h1>Mac OS X</h1>
-<p>Two versions of the same keys:</p>
+<h2>Mac OS X</h2>
+<p>Two versions of the same key combination:</p>
 <pre><code>⌃⌘F
 </code></pre>
 <pre><code>control + command + F
 </code></pre>
-<p>Windows and Linux:</p>
+<h2>Windows and Linux:</h2>
 <pre><code>F11
 </code></pre>
 ]]></content>
@@ -41,6 +75,7 @@
             <uri>https://daniel.feldroy.com</uri>
         </author>
         <category term="TIL"/>
+        <category term="VS Code"/>
         <contributor>
             <name>Daniel Roy Greenfeld</name>
             <email>daniel@feldroy.com</email>

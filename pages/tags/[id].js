@@ -37,11 +37,11 @@ export default function Home({ allTagsData, tag }) {
     <Metatags meta={meta} />
     <section className={`${utilStyles.headingMd} ${utilStyles.padding1px}`}>
       {tag == "TIL" ? (
-        <div class="row">
-          <div class="column left-25">
+        <div className="row">
+          <div className="column left-25">
             <Image src="/logos/til-1.png" width={128} height={128} alt="TIL" />
           </div>
-          <div class="column right-75">
+          <div className="column right-75">
             <h2 className={utilStyles.headingLg}>
               Articles ({allTagsData.length})
             </h2>

@@ -9,8 +9,8 @@ tags:
 time_to_read: 1
 title: "TIL: Skipping git pre-commit"
 description: For saving WIP commits to a remote repo. You really don't want to know what I was doing before.
-image: https://daniel.feldroy.com/logos/til-1.png
-twitter_image: https://daniel.feldroy.com/logos/til-1.png
+image: /logos/til-1.png
+twitter_image: /logos/til-1.png
 ---
 
 For saving WIP commits to a remote repo. You really don't want to know what I was doing before.

@@ -9,8 +9,8 @@ tags:
 time_to_read: 1
 title: "TIL: pytest with breakpoints"
 description: Injecting breakpoints into a failing pytest run
-image: https://daniel.feldroy.com/logos/til-1.png
-twitter_image: https://daniel.feldroy.com/logos/til-1.png
+image: /logos/til-1.png
+twitter_image: /logos/til-1.png
 ---
 
 To inject a breakpoint into a failing pytest run, add `--pdb` to your `pytest` command:

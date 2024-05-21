@@ -12,8 +12,8 @@ time_to_read: 2
 title: PyPI Project URLs Cheatsheet
 description: The PyPI project URLs spec is defined only in code. Here's my cheatsheet explaining how to configure them. I'll update this as I learn more (suggestions welcome!). Examples in several formats.
 type: post
-image: https://daniel.feldroy.com/logos/til-1.png
-twitter_image: https://daniel.feldroy.com/logos/til-1.png
+image: /logos/til-1.png
+twitter_image: /logos/til-1.png
 ---
 
 See these links in the image below? I want every PyPI project to have them in the left column.

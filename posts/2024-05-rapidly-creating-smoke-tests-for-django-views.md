@@ -12,7 +12,7 @@ title: Rapidly creating smoke tests for Django views
 
 *A management command for quickly generating tests based off Django's URL routing mechanism.*
 
-Recently [Peter Baumgardener](https://lincolnloop.com/about/peter-baumgartner/) of [Lincoln Loop](https://lincolnloop.com/) wrote a [fantastic article](https://www.linkedin.com/posts/pbaumgartner_ever-pick-up-a-legacy-project-that-has-activity-7186794287362183168-Bpcw) about the technique of writing smoke tests for Django views. Go read it, Peter provides really good justification for these smoke tests, especially for taking on legacy project without tests. Heck, the reason why I'm writing this post is so I have it in the bookmark service that is my blog.
+Recently [Peter Baumgartner](https://lincolnloop.com/about/peter-baumgartner/) of [Lincoln Loop](https://lincolnloop.com/) wrote a [fantastic article](https://www.linkedin.com/posts/pbaumgartner_ever-pick-up-a-legacy-project-that-has-activity-7186794287362183168-Bpcw) about the technique of writing smoke tests for Django views. Go read it, Peter provides really good justification for these smoke tests, especially for taking on legacy project without tests. Heck, the reason why I'm writing this post is so I have it in the bookmark service that is my blog.
 
 Inspired as I was by Peter's article, I wrote a little management command to help build out smoke tests quickly. It's not perfect, and chances are you'll need to modify the results for the tests to be accurate. Certainly you'll need to add filtering like what I did with the `admin` to account for third-party packages that already have tests. Nevertheless, I've found it a useful tool for writing out smoke tests quickly.
 

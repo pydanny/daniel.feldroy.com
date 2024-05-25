@@ -60,3 +60,11 @@ Writing output to a file on OSX and Linux:
 ```
 
 Try it and tell me what you think!
+
+# Update May 25, 2024
+
+[Ejay Aito](https://github.com/aitoehigie) aka [pystar](https://x.com/pystar) made improvements which you can see [here](https://gist.github.com/aitoehigie/5bff431082b67f52e993465334422e6d). He added the features listed below. Check out his work!
+
+1. added an argument for the output file path. If no output file is specified, it defaults to `smoke_tests.py`. 
+2. The script now properly handles URL parameters by extracting them with a regex and replacing them with sample values.
+3. Tests can also be generated for POST, PUT, and DELETE methods.

@@ -11,7 +11,7 @@ title: An Engineer's Guide to Cats
 
 *This was originally posted on blogger [here](https://dannygreenfeld.blogspot.com/2008/04/engineer-guide-to-cats.html)*.
 
-<div><p></p><p>A very serious study on felines by Engineers.</p></div>
+*A very serious study on felines by Engineers.*
 
 ---
 

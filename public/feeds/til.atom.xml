@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://daniel.feldroy.com/</id>
     <title>Daniel Roy Greenfeld</title>
-    <updated>2024-05-21T08:41:14.451Z</updated>
+    <updated>2024-05-25T06:58:41.369Z</updated>
     <generator>Next.js using Feed for Node.js</generator>
     <author>
         <name>Daniel Roy Greenfeld</name>
@@ -18,9 +18,9 @@
         <title type="html"><![CDATA[TIL: Auto setup remote branch for git]]></title>
         <id>https://daniel.feldroy.com/posts/til-2024-05-auto-setup-remote-branch-for-git</id>
         <link href="https://daniel.feldroy.com/posts/til-2024-05-auto-setup-remote-branch-for-git"/>
-        <updated>2024-05-21T08:38:05.180Z</updated>
-        <summary type="html"><![CDATA[For getting rid of the "fatal: The current branch add-dcc-book has no upstream branch" error.]]></summary>
-        <content type="html"><![CDATA[<p><em>For getting rid of the "fatal: The current branch add-dcc-book has no upstream branch" error.</em></p>
+        <updated>2024-05-21T07:38:05.180Z</updated>
+        <summary type="html"><![CDATA[For getting rid of the "fatal: The current branch new-awesome-feature has no upstream branch" error.]]></summary>
+        <content type="html"><![CDATA[<p><em>For getting rid of the "fatal: The current branch new-awesome-feature has no upstream branch" error.</em></p>
 <p>Whenever I create a new branch and try to push the new commit then I start seeing this error:</p>
 <pre><code>git push --force
 fatal: The current branch new-awesome-feature has no upstream branch.
@@ -41,7 +41,8 @@ upstream, see 'push.autoSetupRemote' in 'git help config'.
             <uri>https://daniel.feldroy.com</uri>
         </author>
         <category term="TIL"/>
-        <category/>
+        <category term="git"/>
+        <category term="howto"/>
         <contributor>
             <name>Daniel Roy Greenfeld</name>
             <email>daniel@feldroy.com</email>
@@ -52,7 +53,7 @@ upstream, see 'push.autoSetupRemote' in 'git help config'.
         <title type="html"><![CDATA[TIL: Switching to full screen mode in VSCode]]></title>
         <id>https://daniel.feldroy.com/posts/til-2024-05-switching-to-full-screen-mode-in-vscode</id>
         <link href="https://daniel.feldroy.com/posts/til-2024-05-switching-to-full-screen-mode-in-vscode"/>
-        <updated>2024-05-17T09:05:20.126Z</updated>
+        <updated>2024-05-17T08:05:20.126Z</updated>
         <summary type="html"><![CDATA[For those times when you want to avoid using the mouse to improve your desktop layout.]]></summary>
         <content type="html"><![CDATA[<p><em>For those times when you want to avoid using the mouse to improve your desktop layout.</em></p>
 <p>First, open VS Code:</p>
@@ -76,41 +77,6 @@ upstream, see 'push.autoSetupRemote' in 'git help config'.
         </author>
         <category term="TIL"/>
         <category term="VS Code"/>
-        <contributor>
-            <name>Daniel Roy Greenfeld</name>
-            <email>daniel@feldroy.com</email>
-            <uri>https://daniel.feldroy.com</uri>
-        </contributor>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[TIL: Running UV outside a virtualenv]]></title>
-        <id>https://daniel.feldroy.com/posts/til-2024-05-running-uv-outside-a-virtualenv</id>
-        <link href="https://daniel.feldroy.com/posts/til-2024-05-running-uv-outside-a-virtualenv"/>
-        <updated>2024-05-08T14:22:59.338Z</updated>
-        <summary type="html"><![CDATA[Breaking the rules to satisfy continuous integration.]]></summary>
-        <content type="html"><![CDATA[<p><em>Breaking the rules to satisfy continuous integration.</em></p>
-<p>A few months ago I blogged about forcing <a href="/posts/til-2023-12-forcing-pip-to-use-virtualenv">pip to require a virtualenv</a>. However, when automating tests and deployments sometimes you work outside of virtualenvs. With <code>pip</code> this isn't a problem, you just don't set what I did in that article. However, what if you are using the rust-based <a href="https://pypi.org/project/uv/">uv</a> where the default is to keep you in a virtualenv?</p>
-<p>The answer is when you install dependencies using <code>uv</code> in this scenario, use the <code>--python</code> flag to specify the interpreter. According to the <a href="https://github.com/astral-sh/uv?tab=readme-ov-file#installing-into-arbitrary-python-environments">uv docs</a>, this flag is intended for use in continuous integration (CI) environments or other automated workflows.</p>
-<p>So without further ado, this is what I did:</p>
-<pre><code class="language-bash">python -m pip install uv
-uv pip install -p 3.12 -r requirements.txt
-</code></pre>
-<p>As a bonus, here's the command inside GitHub actions-flavored YAML:</p>
-<pre><code class="language-yaml">    - name: Install Dependencies
-      run: |
-        python -m pip install uv
-        uv pip install -p 3.12 -r requirements.txt
-</code></pre>
-<p>Want to know how to handle multiple versions of Python? Here's how use a matrix on GitHub: <a href="github.com/pydanny/dj-notebook/blob/main/.github/workflows/python-ci.yml#L18-L19">https://github.com/pydanny/dj-notebook/blob/main/.github/workflows/python-ci.yml#L18-L19</a></p>
-]]></content>
-        <author>
-            <name>Daniel Roy Greenfeld</name>
-            <email>daniel@feldroy.com</email>
-            <uri>https://daniel.feldroy.com</uri>
-        </author>
-        <category term="TIL"/>
-        <category term="python"/>
-        <category term="howto"/>
         <contributor>
             <name>Daniel Roy Greenfeld</name>
             <email>daniel@feldroy.com</email>

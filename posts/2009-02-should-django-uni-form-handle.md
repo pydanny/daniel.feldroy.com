@@ -18,35 +18,50 @@ This is in regards to my [django-uni-form](https://code.google.com/p/django-uni-
 
 Basically, I think django-uni-form could be a little more helpful. So what do I mean?
 
-Standard uni-form looks like:<pre><div class="highlight"><pre>
-&lt;form class="login uniForm" method="POST" action=""&gt;
-&lt;fieldset class="inlineLabels"&gt;
-&lt;legend&gt;_ Required fields&lt;/legend&gt; 
- &lt;div class="ctrlHolder "&gt; 
- &lt;label for="id_username"&gt; _ User Name&lt;/label&gt;
- &lt;input id="id_username" type="text" name="username" maxlength="30" /&gt;
- &lt;/div&gt;
-&lt;/legend&gt;
-&lt;/fieldset&gt;
-&lt;div class=&quot;buttonHolder&quot;&gt;
- &lt;button type=&quot;reset&quot; class=&quot;resetButton&quot;&gt;Reset&lt;/button&gt;
- &lt;button type=&quot;submit&quot; class=&quot;primaryAction&quot;&gt;Submit&lt;/button&gt;
- &lt;/div&gt;
-&lt;/form&gt;
-</pre></div></pre>django-uni-form gives just:<pre><div class="highlight"><pre>
- &lt;div class="ctrlHolder "&gt; 
- &lt;label for="id_username"&gt; _ User Name&lt;/label&gt;
- &lt;input id="id_username" type="text" name="username" maxlength="30" /&gt;
- &lt;/div&gt;
-</pre></div></pre>Does it make sense for django-uni-form to provide the following?<pre><div class="highlight"><pre>
-&lt;fieldset class="inlineLabels"&gt;
-&lt;legend&gt;_ Required fields&lt;/legend&gt; 
- &lt;div class="ctrlHolder "&gt; 
- &lt;label for="id_username"&gt; \* User Name&lt;/label&gt;
- &lt;input id="id_username" type="text" name="username" maxlength="30" /&gt;
- &lt;/div&gt;
-&lt;/legend&gt;
-&lt;/fieldset&gt;
-</pre></div></pre>With this, you can still add in buttons elegantly. Thoughts?
+Standard uni-form looks like:
 
-<span style="font-weight: bold;">Update:</span> I'm working with James Tauber and perhaps some others to figure out the best way to make this work.
+```html
+<form class="login uniForm" method="POST" action="">
+  <fieldset class="inlineLabels">
+    <legend>* Required fields</legend>
+    <div class="ctrlHolder ">
+      <label for="id_username"> * User Name</label>
+      <input id="id_username"
+              type="text"
+              name="username"
+              maxlength="30" />
+    </div>
+  </fieldset>
+  <div class="buttonHolder">
+    <button type="reset" class="resetButton">Reset</button>
+    <button type="submit" class="primaryAction">Submit</button>
+  </div>
+</form>
+```
+
+django-uni-form gives just:
+
+
+```html
+<div class="ctrlHolder ">
+  <label for="id_username"> * User Name</label>
+  <input id="id_username" type="text" name="username" maxlength="30" />
+</div>
+```
+
+
+Does it make sense for django-uni-form to provide the following?
+
+```html
+<fieldset class="inlineLabels">
+  <legend>* Required fields</legend>
+  <div class="ctrlHolder ">
+    <label for="id_username"> * User Name</label>
+    <input id="id_username" type="text" name="username" maxlength="30" />
+  </div>
+</fieldset>
+```
+
+With this, you can still add in buttons elegantly. Thoughts?
+
+**Update:**</span>** I'm working with James Tauber and some others to figure out the best way to make this work.

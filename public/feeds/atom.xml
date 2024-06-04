@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://daniel.feldroy.com/</id>
     <title>Daniel Roy Greenfeld</title>
-    <updated>2024-05-25T15:01:58.235Z</updated>
+    <updated>2024-06-04T13:23:23.887Z</updated>
     <generator>Next.js using Feed for Node.js</generator>
     <author>
         <name>Daniel Roy Greenfeld</name>
@@ -15,10 +15,46 @@
     <icon>https://daniel.feldroy.com/favicon.ico</icon>
     <rights>All rights reserved 2024, Daniel Roy Greenfeld</rights>
     <entry>
+        <title type="html"><![CDATA[TIL: Renaming git branches]]></title>
+        <id>https://daniel.feldroy.com/posts/til-2024-06-renaming-git-branches</id>
+        <link href="https://daniel.feldroy.com/posts/til-2024-06-renaming-git-branches"/>
+        <updated>2024-06-04T08:55:47.055Z</updated>
+        <summary type="html"><![CDATA[Sometimes branches evolve into things that don't match their names.]]></summary>
+        <content type="html"><![CDATA[<p><em>Sometimes branches evolve into things that don't match their names.</em></p>
+<p>To rename the current branch:</p>
+<pre><code>git branch -m NEWNAME
+</code></pre>
+<p>To rename a branch while pointed to any branch:</p>
+<pre><code>git branch -m OLDNAME NEWNAME
+</code></pre>
+<p>To push the local branch and reset the upstream branch:</p>
+<pre><code>git push origin -u NEWNAME
+</code></pre>
+<p>To cleanup the old branch:</p>
+<pre><code>git push origin --delete OLDNAME
+</code></pre>
+<hr>
+<p>Note: The source of this is this <a href="https://stackoverflow.com/questions/6591213/how-can-i-rename-a-local-git-branch">Stack Overflow post</a>. I wrote this TIL because I look this up about once a week, so decided to add it to the "bookmark" system that is my blog. Also, the use of <code>&#x3C;brackets></code> there for <code>REPLACE_THIS</code> content is unfortunate as it doesn't work well with the options keys.</p>
+]]></content>
+        <author>
+            <name>Daniel Roy Greenfeld</name>
+            <email>daniel@feldroy.com</email>
+            <uri>https://daniel.feldroy.com</uri>
+        </author>
+        <category term="TIL"/>
+        <category term="howto"/>
+        <category term="git"/>
+        <contributor>
+            <name>Daniel Roy Greenfeld</name>
+            <email>daniel@feldroy.com</email>
+            <uri>https://daniel.feldroy.com</uri>
+        </contributor>
+    </entry>
+    <entry>
         <title type="html"><![CDATA[Rapidly creating smoke tests for Django views]]></title>
         <id>https://daniel.feldroy.com/posts/2024-05-rapidly-creating-smoke-tests-for-django-views</id>
         <link href="https://daniel.feldroy.com/posts/2024-05-rapidly-creating-smoke-tests-for-django-views"/>
-        <updated>2024-05-25T10:42:48.161Z</updated>
+        <updated>2024-05-25T11:42:48.161Z</updated>
         <summary type="html"><![CDATA[A management command for quickly generating tests based off Django's URL routing mechanism.]]></summary>
         <content type="html"><![CDATA[<p><em>A management command for quickly generating tests based off Django's URL routing mechanism.</em></p>
 <p>Recently <a href="https://lincolnloop.com/about/peter-baumgartner/">Peter Baumgartner</a> of <a href="https://lincolnloop.com/">Lincoln Loop</a> wrote a <a href="https://www.linkedin.com/posts/pbaumgartner_ever-pick-up-a-legacy-project-that-has-activity-7186794287362183168-Bpcw">fantastic article</a> about the technique of writing smoke tests for Django views. Go read it, Peter provides really good justification for these smoke tests, especially for taking on legacy project without tests. Heck, the reason why I'm writing this post is so I have it in the bookmark service that is my blog.</p>
@@ -59,7 +95,7 @@ class Command(BaseCommand):
 </code></pre>
 <p>Try it and tell me what you think!</p>
 <h1>Update May 25, 2024</h1>
-<p>Ejay Aito made improvements to my script which you can see in <a href="https://gist.github.com/aitoehigie/5bff431082b67f52e993465334422e6d">his version</a>. He added these features:</p>
+<p><a href="https://github.com/aitoehigie">Ejay Aito</a> aka <a href="https://x.com/pystar">pystar</a> made improvements which you can see <a href="https://gist.github.com/aitoehigie/5bff431082b67f52e993465334422e6d">here</a>. He added the features listed below. Check out his work!</p>
 <ol>
 <li>added an argument for the output file path. If no output file is specified, it defaults to <code>smoke_tests.py</code>.</li>
 <li>The script now properly handles URL parameters by extracting them with a regex and replacing them with sample values.</li>
@@ -85,7 +121,7 @@ class Command(BaseCommand):
         <title type="html"><![CDATA[TIL: Auto setup remote branch for git]]></title>
         <id>https://daniel.feldroy.com/posts/til-2024-05-auto-setup-remote-branch-for-git</id>
         <link href="https://daniel.feldroy.com/posts/til-2024-05-auto-setup-remote-branch-for-git"/>
-        <updated>2024-05-21T07:38:05.180Z</updated>
+        <updated>2024-05-21T08:38:05.180Z</updated>
         <summary type="html"><![CDATA[For getting rid of the "fatal: The current branch new-awesome-feature has no upstream branch" error.]]></summary>
         <content type="html"><![CDATA[<p><em>For getting rid of the "fatal: The current branch new-awesome-feature has no upstream branch" error.</em></p>
 <p>Whenever I create a new branch and try to push the new commit then I start seeing this error:</p>
@@ -110,40 +146,6 @@ upstream, see 'push.autoSetupRemote' in 'git help config'.
         <category term="TIL"/>
         <category term="git"/>
         <category term="howto"/>
-        <contributor>
-            <name>Daniel Roy Greenfeld</name>
-            <email>daniel@feldroy.com</email>
-            <uri>https://daniel.feldroy.com</uri>
-        </contributor>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[TIL: Switching to full screen mode in VSCode]]></title>
-        <id>https://daniel.feldroy.com/posts/til-2024-05-switching-to-full-screen-mode-in-vscode</id>
-        <link href="https://daniel.feldroy.com/posts/til-2024-05-switching-to-full-screen-mode-in-vscode"/>
-        <updated>2024-05-17T08:05:20.126Z</updated>
-        <summary type="html"><![CDATA[For those times when you want to avoid using the mouse to improve your desktop layout.]]></summary>
-        <content type="html"><![CDATA[<p><em>For those times when you want to avoid using the mouse to improve your desktop layout.</em></p>
-<p>First, open VS Code:</p>
-<pre><code>code my-project-dir/
-</code></pre>
-<p>Then, depending on your operating system, use these hotkeys:</p>
-<h2>Mac OS X</h2>
-<p>Two versions of the same key combination:</p>
-<pre><code>⌃⌘F
-</code></pre>
-<pre><code>control + command + F
-</code></pre>
-<h2>Windows and Linux:</h2>
-<pre><code>F11
-</code></pre>
-]]></content>
-        <author>
-            <name>Daniel Roy Greenfeld</name>
-            <email>daniel@feldroy.com</email>
-            <uri>https://daniel.feldroy.com</uri>
-        </author>
-        <category term="TIL"/>
-        <category term="VS Code"/>
         <contributor>
             <name>Daniel Roy Greenfeld</name>
             <email>daniel@feldroy.com</email>

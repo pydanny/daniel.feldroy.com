@@ -44,5 +44,5 @@ Anyone up for trying or doing Capoeira at [PyCon](https://us.pycon.org)? Let me 
 
 **Henrique Bastos said on 2012-02-08**
 
-Very cool! Art brings balance to our cientific minds.
+Very cool! Art brings balance to our scientific minds.
 

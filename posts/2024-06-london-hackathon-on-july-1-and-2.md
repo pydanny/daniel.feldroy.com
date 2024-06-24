@@ -1,5 +1,5 @@
 ---
-date: '2024-06-24T10:28:10.494486'
+date: '2024-06-24T14:28:10.494486'
 description: On the 1st and 2nd of July is the first-ever London Tech Zero Hackathon,
   supported by Kraken Tech.
 published: true
@@ -8,7 +8,7 @@ tags:
 - django
 - hackathon
 - kraken
-title: London Hackathon on July 1 and 2!
+title: London Tech Zero Hackathon on July 1 and 2!
 image: /images/tech-zero-hackathon-square.png
 twitter_image: /images/tech-zero-hackathon-square.png
 og_url: https://daniel.feldroy.com/posts/2024-06-london-hackathon-on-july-1-and-2

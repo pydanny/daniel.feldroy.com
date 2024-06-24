@@ -28,7 +28,7 @@ The event will provide:
 - Food and drink
 - Fast internet and power
 - Changes to network and socialize
-- Speech by Greg Jackson, CEO of Octopus Energy
+- Speech by [Greg](https://www.linkedin.com/in/gregsjackson/) [Jackson](https://en.wikipedia.org/wiki/Greg_Jackson_(businessman)), CEO of Octopus Energy
 - Lots of prizes, first place is a £20K grant to help build out your project
 
 Contests provide:

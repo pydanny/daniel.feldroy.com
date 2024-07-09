@@ -15,7 +15,7 @@ title: I love this girl!
 
 *This was originally posted on blogger [here](https://pydanny.blogspot.com/2011/05/i-love-this-girl.html)*.
 
-In every person's life there are those incredibly memorable experiences that stick with you forever. The entirety of [PyCon 2010](https://us.pycon.org/2010/about/) is for me that experience. You see, PyCon 2010 saw me introduced to the lovely, talented, and brilliant [Audrey Roy](https://twitter.com/audreyr).
+In every person's life there are those incredibly memorable experiences that stick with you forever. The entirety of [PyCon 2010](https://us.pycon.org/2010/about/) is for me that experience. You see, PyCon 2010 saw me introduced to the lovely, talented, and brilliant [Audrey Roy](https://twitter.com/audreyfeldroy).
 
 [![](/images/4389161092_68117e55fa_o.jpg)](/images/4389161092_68117e55fa_o.jpg)
 

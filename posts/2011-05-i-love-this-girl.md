@@ -1,6 +1,6 @@
 ---
 date: '2011-05-23T14:01:00.000-07:00'
-description: ''
+description: 'Announcing to the world my affection for the love of my life.'
 published: true
 slug: 2011-05-i-love-this-girl
 tags:

@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://daniel.feldroy.com/</id>
     <title>Daniel Roy Greenfeld</title>
-    <updated>2024-06-24T09:57:05.689Z</updated>
+    <updated>2024-07-09T08:04:25.828Z</updated>
     <generator>Next.js using Feed for Node.js</generator>
     <author>
         <name>Daniel Roy Greenfeld</name>
@@ -30,7 +30,7 @@
 <li>Food and drink</li>
 <li>Fast internet and power</li>
 <li>Changes to network and socialize</li>
-<li>Speech by Greg Jackson, CEO of Octopus Energy</li>
+<li>Speech by <a href="https://www.linkedin.com/in/gregsjackson/">Greg</a> <a href="https://en.wikipedia.org/wiki/Greg_Jackson_(businessman)">Jackson</a>, CEO of Octopus Energy</li>
 <li>Lots of prizes, first place is a £20K grant to help build out your project</li>
 </ul>
 <p>Contests provide:</p>

@@ -48,4 +48,4 @@ def convert_dtstr_to_dt(date_str: str) -> datetime:
 
 Original source code [here](https://github.com/pydanny/daniel-blog-fasthtml/blob/da9500d0c4af9876c267fdd447f4656796516163/components.py#L12-L31).
 
-Note: As of publishing, this article is still on my old blog, the DNS switchover to the FastHTML version of my blog happens later this week.
+_Note: As of publishing, this article is still on my old blog, the DNS switchover to the FastHTML version of my blog happens later this week._

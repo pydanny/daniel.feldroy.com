@@ -1,5 +1,5 @@
 ---
-date: '2024-08-06T08:00:00.192810'
+date: '2024-08-06T12:00:00.192810'
 description: How to convert inconsistent datetime strings into datetime objects.
 image: /logos/til-1.png
 published: true

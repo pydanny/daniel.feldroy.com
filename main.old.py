@@ -483,7 +483,7 @@ def get(slug: str):
             H1(metadata["title"]),
             P(I(metadata.get("description", ""))),
             P(Small(Time(format_datetime(convert_dtstr_to_dt(metadata["date"]))))),
-            Div(content, cls=metadata["cls"]),
+            Div(content, cls=metadata["marked"]),
             Div(style="width: 200px; margin: auto; display: block;")(*specials),
             P(Span("Tags: "), *tags),
             A("← Back to all articles", href="/"),

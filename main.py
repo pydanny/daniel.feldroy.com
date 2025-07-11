@@ -3,11 +3,16 @@ import yaml
 import collections, functools, pathlib, json, csv
 from datetime import datetime
 from fastapi.staticfiles import StaticFiles
+from fastapi.responses import RedirectResponse
 
 app = air.Air()
 
 # Mount static files for CSS
 app.mount("/public", StaticFiles(directory="public"), name="public")
+
+default_social_image = "/public/images/profile.jpg"
+
+redirects = json.loads(pathlib.Path(f"redirects.json").read_text())
 
 
 class ContentNotFound(Exception):
@@ -65,20 +70,20 @@ def TILPreview(title: str, slug: str, timestamp: str, description: str):
     )
 
 
-def Socials(title, description, image, twitter_image):
+def Socials(title, description, image, twitter_image, url):
     return [
         air.Meta(property="og:image", content=image),
         air.Meta(property="og:site_name", content="https://daniel.feldroy.com"),
         air.Meta(property="og:image:type", content="image/png"),
         air.Meta(property="og:type", content="website"),
-        air.Meta(property="og:url", content="https://daniel.feldroy.com"),
+        air.Meta(property="og:url", content=url),
         air.Meta(property="og:title", content=title),
         air.Meta(property="og:description", content=description),
         air.Meta(name="twitter:image", content=twitter_image),
         air.Meta(name="twitter:card", content="summary"),
         air.Meta(name="twitter:title", content=title),
         air.Meta(name="twitter:description", content=description),
-        air.Link(rel="canonical", href="http://daniel.feldroy.com/"),
+        air.Link(rel="canonical", href=url),
     ]
     return
 
@@ -89,13 +94,13 @@ def Layout(
     description="Daniel Roy Greenfeld's personal blog",
     image="https://daniel.feldroy.com/public/images/profile.jpg",
     twitter_image="https://daniel.feldroy.com/public/images/profile.jpg",
+    url="http://daniel.feldroy.com/"
 ):
     "Generic layout for pages"
-    head_children = air.layouts.filter_head_tags(children)
     body_children = air.layouts.filter_body_tags(children)
     return air.Html(
         air.Head(
-            *Socials(title, description, image, twitter_image),
+            *Socials(title, description, image, twitter_image, url),
             air.Link(
                 rel="stylesheet",
                 href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css",
@@ -105,8 +110,22 @@ def Layout(
                 integrity="sha384-Akqfrbj/HpNVo8k11SXBb6TlBWmXXlYQrCSqEWmyKJe+hDm3Z/B2WVG4smwBkRVm",
                 crossorigin="anonymous",
             ),
+            air.Style(':root { --pico-font-size: 100%; }'),
+            air.Script("""import { marked } from "https://cdn.jsdelivr.net/npm/marked/lib/marked.esm.js";
+                       proc_htmx('.marked', e => e.innerHTML = marked.parse(e.textContent));
+                       """, type='module'),
+            air.Link(rel='stylesheet', href='https://cdn.jsdelivr.net/gh/highlightjs/cdn-release/build/styles/atom-one-dark.css', media='(prefers-color-scheme: dark)'),
+            air.Link(rel='stylesheet', href='https://cdn.jsdelivr.net/gh/highlightjs/cdn-release/build/styles/atom-one-light.css', media='(prefers-color-scheme: light)'),
+            air.Script(src='https://cdn.jsdelivr.net/gh/highlightjs/cdn-release/build/highlight.min.js'),
+            air.Script(src='https://cdn.jsdelivr.net/gh/arronhunt/highlightjs-copy/dist/highlightjs-copy.min.js'),
+            air.Link(rel='stylesheet', href='https://cdn.jsdelivr.net/gh/arronhunt/highlightjs-copy/dist/highlightjs-copy.min.css'),
+            air.Script(src='https://cdn.jsdelivr.net/gh/highlightjs/cdn-release/build/languages/python.min.js'),
+            air.Script(src='https://cdn.jsdelivr.net/gh/highlightjs/cdn-release/build/languages/javascript.min.js'),
+            air.Script(src='https://cdn.jsdelivr.net/gh/highlightjs/cdn-release/build/languages/html.min.js'),
+            air.Script(src='https://cdn.jsdelivr.net/gh/highlightjs/cdn-release/build/languages/css.min.js'),
+            air.Script('hljs.addPlugin(new CopyButtonPlugin());\r\nhljs.configure({\'cssSelector\': \'pre code:not([data-highlighted="yes"])\'});\r\nhtmx.onLoad(hljs.highlightAll);', type='module'),            
             air.Link(rel="stylesheet", href="/public/style.css", type="text/css"),
-            *head_children,
+            *air.layouts.filter_head_tags(children),
         ),
         air.Body(
             air.Header(
@@ -136,7 +155,7 @@ def Layout(
                 ),
                 style="text-align: center;",
             ),
-            air.Main(*body_children, class_="container"),
+            air.Main(*air.layouts.filter_body_tags(children), class_="container"),
             air.Footer(
                 air.Hr(),
                 air.P(
@@ -276,4 +295,44 @@ def posts():
             air.A("← Back to home", href="/"),
         ),
         title="All blog posts by Daniel Roy Greenfeld",
+    )
+
+@app.get("/posts/{slug}")
+def article(slug: str):
+    try:
+        content, metadata = get_post(slug)
+    except ContentNotFound:
+        redirects_url = redirects.get("posts/" + slug, None)
+        if redirects_url is not None:
+            return RedirectResponse(redirects_url)
+        return Page404()
+    # tags = [TagLink(slug=x) for x in metadata.get("tags", [])]
+    tags = []
+    specials = ()
+    if "TIL" in metadata["tags"]:
+        specials = air.A(
+            air.Img(
+                src="/public/logos/til-1.png",
+                alt="Today I Learned",
+                width="200",
+                height="200",
+                class_="center",
+            ),
+            href="/tags/TIL",
+        )
+    return Layout(
+        air.Title(metadata["title"]),
+        air.Section(
+            air.H1(metadata["title"]),
+            air.P(air.I(metadata.get("description", ""))),
+            air.P(air.Small(air.Time(metadata["date"]))),
+            air.Div(content, class_=metadata["class_"]),
+            air.Div(*specials, style="width: 200px; margin: auto; display: block;"),
+            air.P(air.Span("Tags: "), *tags),
+            air.A("← Back to all articles", href="/"),
+        ),
+        title=metadata["title"],
+        description=metadata.get("description", ""),
+        image=f"https://daniel.feldroy.com{metadata.get("image", default_social_image)}",
+        url=f"https://daniel.feldroy.com/posts/{slug}",
     )

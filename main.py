@@ -51,12 +51,47 @@ def BlogPostPreview(title: str, slug: str, timestamp: str, description: str):
                 air.H2(air.A(title, href=f"/posts/{slug}")),
                 air.P(description, air.Br(), air.Small(air.Time(timestamp))))
 
-def Layout(*children):
+def TILPreview(title: str, slug: str, timestamp: str, description: str):
+    return air.Span(
+                air.H3(air.A(title[4:], href=f"/posts/{slug}")),
+                air.P(air.Small(air.Time(timestamp)))
+        )   
+
+def Socials(
+        title,
+        description,
+        image,
+        twitter_image):
+    return [
+        air.Meta(property='og:image', content=image),
+        air.Meta(property='og:site_name', content='https://daniel.feldroy.com'),
+        air.Meta(property='og:image:type', content='image/png'),
+        air.Meta(property='og:type', content='website'),
+        air.Meta(property='og:url', content='https://daniel.feldroy.com'),
+        air.Meta(property='og:title', content=title),
+        air.Meta(property='og:description', content=description),
+        air.Meta(name='twitter:image', content=twitter_image),
+        air.Meta(name='twitter:card', content='summary'),
+        air.Meta(name='twitter:title', content=title),
+        air.Meta(name='twitter:description', content=description),
+        air.Link(rel='canonical', href='http://daniel.feldroy.com/'),  
+    ]
+    return
+
+def Layout(
+        *children,
+        title='Daniel Roy Greenfeld',
+        description="Daniel Roy Greenfeld's personal blog",
+        image='https://daniel.feldroy.com/public/images/profile.jpg',
+        twitter_image='https://daniel.feldroy.com/public/images/profile.jpg',
+           ):
     "Generic layout for pages"
     head_children = air.layouts.filter_head_tags(children)
     body_children = air.layouts.filter_body_tags(children)
     return air.Html(
         air.Head(
+            *Socials(title,description,image,twitter_image),
+
             air.Link(
                 rel="stylesheet",
                 href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css",
@@ -66,7 +101,8 @@ def Layout(*children):
                 integrity="sha384-Akqfrbj/HpNVo8k11SXBb6TlBWmXXlYQrCSqEWmyKJe+hDm3Z/B2WVG4smwBkRVm",
                 crossorigin="anonymous",
             ),
-            *head_children
+            air.Link(rel='stylesheet', href='/public/style.css', type='text/css'),
+            *head_children,
         ),
         air.Body(
             air.Header(
@@ -131,8 +167,38 @@ def Layout(*children):
     ).render()
 
 
+
+
+
 @app.page
 def index():
+    all_posts = list_posts()
+    most_posts = [BlogPostPreview(title=x["title"],slug=x["slug"],timestamp=x["date"],description=x.get("description", "")) for x in all_posts if 'TIL' not in x.get('tags')]
+    popular = [BlogPostPreview(title=x["title"],slug=x["slug"],timestamp=x["date"],description=x.get("description", "")) for x in all_posts if x.get("popular", False)]    
+    tils = [TILPreview(title=x["title"],slug=x["slug"],timestamp=x["date"],description='') for x in all_posts if 'TIL' in x.get('tags')]        
+    return Layout(
+        air.Title('Daniel Roy Greenfeld'),
+        air.Div(
+            air.Section(
+                    air.H1('Recent Writings'),
+                    *most_posts[:4],
+                    air.P(air.A('Read all articles', href=posts))
+                ),          
+            air.Section(
+                    air.H1('TIL', air.Small(' (Today I learned)')),
+                    *tils[:7],
+                    air.P(air.A('Read more TIL articles', href='/tags/TIL'))
+                ),
+            air.Section(
+                    air.H1('Popular Writings'),
+                    *popular
+            ),     
+            class_="grid"            
+        )
+    )
+
+@app.page
+def posts():
     posts = list_posts()
     duration = round((datetime.now() - datetime(2005, 9, 3)).days / 365.25, 2)
     description = f'Everything written by Daniel Roy Greenfeld for the past {duration} years.'
@@ -144,5 +210,6 @@ def index():
                 air.P(description),
                 *posts,
                 air.A("← Back to home", href="/"),
-        )
+        ),
+        title='All blog posts by Daniel Roy Greenfeld'
     )

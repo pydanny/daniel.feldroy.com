@@ -13,7 +13,8 @@ def _(mo):
 @app.function
 def randomizer():
     from random import randint
-    return randint(1,20)
+
+    return randint(1, 20)
 
 
 @app.cell

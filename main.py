@@ -94,6 +94,42 @@ def TILPreview(title: str, slug: str, timestamp: str, description: str):
         air.P(air.Small(air.Time(timestamp))),
     )
 
+def Page404():
+    """404 view"""
+    return Layout(
+            air.Title("404 Not Found"),
+            air.H1("404 Not Found"),
+            air.P("The page you are looking for does not exist."),
+            title='404 not found',
+            description='404 not found',
+    )
+
+def MarkdownPage(slug: str):
+    """Renders a non-sequential markdown file"""
+    try:
+        text = pathlib.Path(f"pages/{slug}.md").read_text()
+    except FileNotFoundError:
+        return Page404()
+    content = "".join(text.split("---")[2:])
+    metadata = yaml.safe_load(text.split("---")[1])
+    date = metadata.get("date", "")
+    return Layout(
+        air.Title(metadata.get("title", slug)),
+        air.Section(
+            air.H1(metadata.get("title", "")),
+            air.P(
+                metadata.get("author", ""),
+                air.Br(),
+                air.Small(air.Time(date)),
+            ),
+            air.Div(content, cls="marked"),
+        ),
+        title=metadata.get("title", slug),
+        description=metadata.get("description", "slug"),
+        url=f"https://daniel.feldroy.com/{slug}",
+        image=metadata.get("image", default_social_image)
+    )
+
 
 def Socials(title, description, image, twitter_image, url):
     return [
@@ -400,3 +436,25 @@ def tag(slug: str):
         title=f"Tag: {slug}",
         description=f'Posts tagged with "{slug}" ({len(posts)})',
     )
+
+
+@app.get("/{slug}")
+def get(slug: str):
+    redirects_url = redirects.get(slug, None)
+    if redirects_url is not None:
+        return RedirectResponse(loc=redirects_url)
+    try:
+        return Layout(*MarkdownPage(slug))
+    except TypeError:
+        return Page404()
+
+
+@app.get("/{slug_1}/{slug_2}")
+def get(slug_1: str, slug_2: str):
+    redirects_url = redirects.get(slug_1 + "/" + slug_2, None)
+    if redirects_url is not None:
+        return RedirectResponse(loc=redirects_url)
+    try:
+        return Layout(*MarkdownPage(slug_1 + "/" + slug_2))
+    except TypeError:
+        return Page404()

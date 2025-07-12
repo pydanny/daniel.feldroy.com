@@ -438,6 +438,102 @@ def tag(slug: str):
     )
 
 
+@functools.cache
+def _search(q: str = ""):
+    def _s(obj: dict, name: str, q: str):
+        content = obj.get(name, "")
+        if isinstance(content, list):
+            content = " ".join(content)
+        return q.lower().strip() in str(content).lower().strip()
+
+    messages = []
+    articles = []
+    posts = []
+    description = f"No results found for '{q}'"
+    if q.strip():
+        posts = list_posts()
+        # Search engine is list comprehension of a list of dicts
+        # ranks = search_model.rank(q, L(posts).map(json.dumps), return_documents=True)
+        # ranks = ranks[:10]
+        # articles = L(ranks).attrgot('text').map(json.loads)
+        # old engine
+        articles = [
+            x
+            for x in posts
+            if any(
+                _s(x, name, q) for name in ["title", "description", "content", "tags"]
+            )
+        ]
+    if articles:
+        # Build the posts for display
+        posts = [
+            BlogPostPreview(
+                title=x["title"],
+                slug=x["slug"],
+                timestamp=x["date"],
+                description=x.get("description", ""),
+            )
+            for x in articles
+        ]
+    if posts:
+        messages = [air.H2(f"Search results on '{q}'"), air.P(f"Found {len(posts)} entries")]
+        description = f"Search results on '{q}'"
+    elif q.strip():
+        messages = [air.P(f"No results found for '{q}'")]
+    return air.Div(
+        air.Meta(property="description", content=description),
+        air.Meta(property="og:description", content=description),
+        air.Meta(name="twitter:description", content=description),
+        *messages,
+        *posts,
+    )
+
+
+@app.get("/search-results")
+def get(q: str):
+    return _search(q)
+
+
+@app.page
+def search(q: str | None = None):
+    result = []
+    if q is not None:
+        result.append(_search(q))
+    return Layout(
+        air.Title("Search"),
+        Socials(
+            site_name="https://daniel.feldroy.com",
+            title="Search the site",
+            description="",
+            url="https://daniel.feldroy.com/search",
+            image="https://daniel.feldroy.com/public/images/profile.jpg",
+        ),
+        air.Form(cls="center", role="group")(
+            air.Input(name="q", id="q", value=q, type="search", autofocus=True),
+            air.Button(
+                "Search",
+                hx_get="/search-results",
+                hx_target=".search-results",
+                hx_include="#q",
+                onclick="updateQinURL()",
+            ),
+        ),
+        air.Section(
+            air.Div(cls="search-results")(*result),
+            air.P(air.Small('Hint: Use the "/" shortcut to search from any page.')),
+            air.A("← Back home", href="/"),
+        ),
+        air.Script("""function updateQinURL() {
+            let url = new URL(window.location);
+            const value = document.getElementById('q').value
+            url.searchParams.set('q', value);
+            window.history.pushState({}, '', url);            
+        };
+        """),
+        title="search"
+    )
+
+
 @app.get("/{slug}")
 def get(slug: str):
     redirects_url = redirects.get(slug, None)

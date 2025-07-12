@@ -53,6 +53,31 @@ def get_post(slug: str) -> tuple | None:
     return (post["content"], post)
 
 
+@functools.cache
+def list_tags() -> dict[str, int]:
+    unsorted_tags = {}
+    for post in list_posts():
+        page_tags = post.get("tags", [])
+        for tag in page_tags:
+            if tag in unsorted_tags:
+                unsorted_tags[tag] += 1
+            else:
+                unsorted_tags[tag] = 1
+
+    tags: dict = collections.OrderedDict(
+        sorted(unsorted_tags.items(), key=lambda x: x[1], reverse=True)
+    )
+    return tags
+
+
+def TagLink(slug: str):
+    return air.Span(air.A(slug, href=f"/tags/{slug}"), " ")
+
+
+def TagLinkWithCount(slug: str, count: int):
+    return air.Span(air.A(air.Span(slug), air.Small(f" ({count})"), href=f"/tags/{slug}"), " ")
+
+
 def BlogPostPreview(title: str, slug: str, timestamp: str, description: str):
     """
     This renders a blog posts short display used for the index, article list, and tags.
@@ -111,19 +136,15 @@ def Layout(
                 crossorigin="anonymous",
             ),
             air.Style(':root { --pico-font-size: 100%; }'),
-            air.Script("""import { marked } from "https://cdn.jsdelivr.net/npm/marked/lib/marked.esm.js";
-                       proc_htmx('.marked', e => e.innerHTML = marked.parse(e.textContent));
-                       """, type='module'),
             air.Link(rel='stylesheet', href='https://cdn.jsdelivr.net/gh/highlightjs/cdn-release/build/styles/atom-one-dark.css', media='(prefers-color-scheme: dark)'),
             air.Link(rel='stylesheet', href='https://cdn.jsdelivr.net/gh/highlightjs/cdn-release/build/styles/atom-one-light.css', media='(prefers-color-scheme: light)'),
-            air.Script(src='https://cdn.jsdelivr.net/gh/highlightjs/cdn-release/build/highlight.min.js'),
-            air.Script(src='https://cdn.jsdelivr.net/gh/arronhunt/highlightjs-copy/dist/highlightjs-copy.min.js'),
-            air.Link(rel='stylesheet', href='https://cdn.jsdelivr.net/gh/arronhunt/highlightjs-copy/dist/highlightjs-copy.min.css'),
+            air.Script(src='https://cdn.jsdelivr.net/npm/marked/marked.min.js'),
+            air.Script(src='https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js'),
             air.Script(src='https://cdn.jsdelivr.net/gh/highlightjs/cdn-release/build/languages/python.min.js'),
             air.Script(src='https://cdn.jsdelivr.net/gh/highlightjs/cdn-release/build/languages/javascript.min.js'),
             air.Script(src='https://cdn.jsdelivr.net/gh/highlightjs/cdn-release/build/languages/html.min.js'),
-            air.Script(src='https://cdn.jsdelivr.net/gh/highlightjs/cdn-release/build/languages/css.min.js'),
-            air.Script('hljs.addPlugin(new CopyButtonPlugin());\r\nhljs.configure({\'cssSelector\': \'pre code:not([data-highlighted="yes"])\'});\r\nhtmx.onLoad(hljs.highlightAll);', type='module'),            
+            air.Script(src='https://cdn.jsdelivr.net/gh/highlightjs/cdn-release/build/languages/css.min.js'),            
+            air.Script(src='/public/render.js'),
             air.Link(rel="stylesheet", href="/public/style.css", type="text/css"),
             *air.layouts.filter_head_tags(children),
         ),
@@ -327,7 +348,7 @@ def article(slug: str):
             air.P(air.I(metadata.get("description", ""))),
             air.P(air.Small(air.Time(metadata["date"]))),
             air.Div(content, class_=metadata["class_"]),
-            air.Div(*specials, style="width: 200px; margin: auto; display: block;"),
+            # air.Div(*specials, style="width: 200px; margin: auto; display: block;"),
             air.P(air.Span("Tags: "), *tags),
             air.A("← Back to all articles", href="/"),
         ),
@@ -335,4 +356,47 @@ def article(slug: str):
         description=metadata.get("description", ""),
         image=f"https://daniel.feldroy.com{metadata.get("image", default_social_image)}",
         url=f"https://daniel.feldroy.com/posts/{slug}",
+    )
+
+
+@app.page
+def tags():
+    tags = [TagLinkWithCount(slug=x[0], count=x[1]) for x in list_tags().items()]
+    return Layout(
+        air.Title("Tags"),
+        air.Section(
+            air.H1("Tags"),
+            air.P("All tags used in the blog"),
+            *tags,
+            air.Br(),
+            air.Br(),
+            air.A("← Back home", href="/"),
+        ),
+        title="Tags",
+        description="All tags used in the site.",
+
+    )
+
+
+@app.get("/tags/{slug}")
+def tag(slug: str):
+    posts = [
+        BlogPostPreview(
+            title=x["title"],
+            slug=x["slug"],
+            timestamp=x["date"],
+            description=x.get("description", ""),
+        )
+        for x in list_posts()
+        if slug in x.get("tags", [])
+    ]
+    return Layout(
+        air.Title(f"Tag: {slug}"),
+        air.Section(
+            air.H1(f'Posts tagged with "{slug}" ({len(posts)})'),
+            *posts,
+            air.A("← Back home", href="/"),
+        ),
+        title=f"Tag: {slug}",
+        description=f'Posts tagged with "{slug}" ({len(posts)})',
     )

@@ -75,7 +75,9 @@ def TagLink(slug: str):
 
 
 def TagLinkWithCount(slug: str, count: int):
-    return air.Span(air.A(air.Span(slug), air.Small(f" ({count})"), href=f"/tags/{slug}"), " ")
+    return air.Span(
+        air.A(air.Span(slug), air.Small(f" ({count})"), href=f"/tags/{slug}"), " "
+    )
 
 
 def BlogPostPreview(title: str, slug: str, timestamp: str, description: str):
@@ -94,15 +96,17 @@ def TILPreview(title: str, slug: str, timestamp: str, description: str):
         air.P(air.Small(air.Time(timestamp))),
     )
 
+
 def Page404():
     """404 view"""
     return Layout(
-            air.Title("404 Not Found"),
-            air.H1("404 Not Found"),
-            air.P("The page you are looking for does not exist."),
-            title='404 not found',
-            description='404 not found',
+        air.Title("404 Not Found"),
+        air.H1("404 Not Found"),
+        air.P("The page you are looking for does not exist."),
+        title="404 not found",
+        description="404 not found",
     )
+
 
 def MarkdownPage(slug: str):
     """Renders a non-sequential markdown file"""
@@ -122,12 +126,12 @@ def MarkdownPage(slug: str):
                 air.Br(),
                 air.Small(air.Time(date)),
             ),
-            air.Div(content, cls="marked"),
+            air.Div(content, class_="marked"),
         ),
         title=metadata.get("title", slug),
         description=metadata.get("description", "slug"),
         url=f"https://daniel.feldroy.com/{slug}",
-        image=metadata.get("image", default_social_image)
+        image=metadata.get("image", default_social_image),
     )
 
 
@@ -155,7 +159,7 @@ def Layout(
     description="Daniel Roy Greenfeld's personal blog",
     image="https://daniel.feldroy.com/public/images/profile.jpg",
     twitter_image="https://daniel.feldroy.com/public/images/profile.jpg",
-    url="http://daniel.feldroy.com/"
+    url="http://daniel.feldroy.com/",
 ):
     "Generic layout for pages"
     body_children = air.layouts.filter_body_tags(children)
@@ -171,16 +175,34 @@ def Layout(
                 integrity="sha384-Akqfrbj/HpNVo8k11SXBb6TlBWmXXlYQrCSqEWmyKJe+hDm3Z/B2WVG4smwBkRVm",
                 crossorigin="anonymous",
             ),
-            air.Style(':root { --pico-font-size: 100%; }'),
-            air.Link(rel='stylesheet', href='https://cdn.jsdelivr.net/gh/highlightjs/cdn-release/build/styles/atom-one-dark.css', media='(prefers-color-scheme: dark)'),
-            air.Link(rel='stylesheet', href='https://cdn.jsdelivr.net/gh/highlightjs/cdn-release/build/styles/atom-one-light.css', media='(prefers-color-scheme: light)'),
-            air.Script(src='https://cdn.jsdelivr.net/npm/marked/marked.min.js'),
-            air.Script(src='https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js'),
-            air.Script(src='https://cdn.jsdelivr.net/gh/highlightjs/cdn-release/build/languages/python.min.js'),
-            air.Script(src='https://cdn.jsdelivr.net/gh/highlightjs/cdn-release/build/languages/javascript.min.js'),
-            air.Script(src='https://cdn.jsdelivr.net/gh/highlightjs/cdn-release/build/languages/html.min.js'),
-            air.Script(src='https://cdn.jsdelivr.net/gh/highlightjs/cdn-release/build/languages/css.min.js'),            
-            air.Script(src='/public/render.js'),
+            air.Style(":root { --pico-font-size: 100%; }"),
+            air.Link(
+                rel="stylesheet",
+                href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release/build/styles/atom-one-dark.css",
+                media="(prefers-color-scheme: dark)",
+            ),
+            air.Link(
+                rel="stylesheet",
+                href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release/build/styles/atom-one-light.css",
+                media="(prefers-color-scheme: light)",
+            ),
+            air.Script(src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"),
+            air.Script(
+                src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"
+            ),
+            air.Script(
+                src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release/build/languages/python.min.js"
+            ),
+            air.Script(
+                src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release/build/languages/javascript.min.js"
+            ),
+            air.Script(
+                src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release/build/languages/html.min.js"
+            ),
+            air.Script(
+                src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release/build/languages/css.min.js"
+            ),
+            air.Script(src="/public/render.js"),
             air.Link(rel="stylesheet", href="/public/style.css", type="text/css"),
             *air.layouts.filter_head_tags(children),
         ),
@@ -354,6 +376,7 @@ def posts():
         title="All blog posts by Daniel Roy Greenfeld",
     )
 
+
 @app.get("/posts/{slug}")
 def article(slug: str):
     try:
@@ -390,7 +413,7 @@ def article(slug: str):
         ),
         title=metadata["title"],
         description=metadata.get("description", ""),
-        image=f"https://daniel.feldroy.com{metadata.get("image", default_social_image)}",
+        image=f"https://daniel.feldroy.com{metadata.get('image', default_social_image)}",
         url=f"https://daniel.feldroy.com/posts/{slug}",
     )
 
@@ -410,7 +433,6 @@ def tags():
         ),
         title="Tags",
         description="All tags used in the site.",
-
     )
 
 
@@ -476,7 +498,10 @@ def _search(q: str = ""):
             for x in articles
         ]
     if posts:
-        messages = [air.H2(f"Search results on '{q}'"), air.P(f"Found {len(posts)} entries")]
+        messages = [
+            air.H2(f"Search results on '{q}'"),
+            air.P(f"Found {len(posts)} entries"),
+        ]
         description = f"Search results on '{q}'"
     elif q.strip():
         messages = [air.P(f"No results found for '{q}'")]
@@ -501,25 +526,22 @@ def search(q: str | None = None):
         result.append(_search(q))
     return Layout(
         air.Title("Search"),
-        Socials(
-            site_name="https://daniel.feldroy.com",
-            title="Search the site",
-            description="",
-            url="https://daniel.feldroy.com/search",
-            image="https://daniel.feldroy.com/public/images/profile.jpg",
-        ),
-        air.Form(cls="center", role="group")(
-            air.Input(name="q", id="q", value=q, type="search", autofocus=True),
-            air.Button(
-                "Search",
-                hx_get="/search-results",
-                hx_target=".search-results",
-                hx_include="#q",
-                onclick="updateQinURL()",
-            ),
+        air.Form(
+            air.Fieldset(
+                air.Input(name="q", id="q", value=q, type="search", autofocus=True),
+                air.Button(
+                    "Search",
+                    hx_get="/search-results",
+                    hx_target=".search-results",
+                    hx_include="#q",
+                    onclick="updateQinURL()",
+                ),
+                class_="center",
+                role="group",
+            )
         ),
         air.Section(
-            air.Div(cls="search-results")(*result),
+            air.Div(*result, class_="search-results"),
             air.P(air.Small('Hint: Use the "/" shortcut to search from any page.')),
             air.A("← Back home", href="/"),
         ),
@@ -530,7 +552,8 @@ def search(q: str | None = None):
             window.history.pushState({}, '', url);            
         };
         """),
-        title="search"
+        title="Search the site",
+        description="",
     )
 
 

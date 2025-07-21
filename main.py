@@ -5,10 +5,23 @@ from datetime import datetime
 from fastapi.staticfiles import StaticFiles
 from air import RedirectResponse
 from fastapi.responses import Response
+from fastapi import HTTPException
 from dateutil import parser
 import pytz
 
-app = air.Air()
+
+def Page404(request: air.Request, exc: Exception) -> air.AirResponse:
+    return Layout(
+        air.Title("404 Not Found"),
+        air.H1("404 Not Found"),
+        air.P("The page you are looking for does not exist."),
+        title="404 not found",
+        description="404 not found",
+        status_code=404,
+    )
+
+
+app = air.Air(exception_handlers={404: Page404})
 
 # Mount static files for CSS
 app.mount("/public", StaticFiles(directory="public"), name="public")
@@ -129,23 +142,12 @@ def TILPreview(title: str, slug: str, timestamp: str, description: str):
     )
 
 
-def Page404():
-    """404 view"""
-    return Layout(
-        air.Title("404 Not Found"),
-        air.H1("404 Not Found"),
-        air.P("The page you are looking for does not exist."),
-        title="404 not found",
-        description="404 not found",
-    )
-
-
 def MarkdownPage(slug: str):
     """Renders a non-sequential markdown file"""
     try:
         text = pathlib.Path(f"pages/{slug}.md").read_text()
     except FileNotFoundError:
-        return Page404()
+        raise HTTPException(status_code=404)
     content = "".join(text.split("---")[2:])
     metadata = yaml.safe_load(text.split("---")[1])
     date = metadata.get("date", "")
@@ -192,127 +194,131 @@ def Layout(
     image="https://daniel.feldroy.com/public/images/profile.jpg",
     twitter_image="https://daniel.feldroy.com/public/images/profile.jpg",
     url="http://daniel.feldroy.com/",
-):
+    status_code=200,
+) -> air.AirResponse:
     "Generic layout for pages"
     body_children = air.layouts.filter_body_tags(children)
-    return air.Html(
-        air.Head(
-            *Socials(title, description, image, twitter_image, url),
-            air.Link(
-                rel="stylesheet",
-                href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css",
-            ),
-            air.Script(
-                src="https://cdn.jsdelivr.net/npm/htmx.org@2.0.6/dist/htmx.min.js",
-                integrity="sha384-Akqfrbj/HpNVo8k11SXBb6TlBWmXXlYQrCSqEWmyKJe+hDm3Z/B2WVG4smwBkRVm",
-                crossorigin="anonymous",
-            ),
-            air.Style(":root { --pico-font-size: 100%; }"),
-            air.Link(
-                rel="stylesheet",
-                href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release/build/styles/atom-one-dark.css",
-                media="(prefers-color-scheme: dark)",
-            ),
-            air.Link(
-                rel="stylesheet",
-                href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release/build/styles/atom-one-light.css",
-                media="(prefers-color-scheme: light)",
-            ),
-            air.Script(src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"),
-            air.Script(
-                src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"
-            ),
-            air.Script(
-                src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release/build/languages/python.min.js"
-            ),
-            air.Script(
-                src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release/build/languages/javascript.min.js"
-            ),
-            air.Script(
-                src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release/build/languages/html.min.js"
-            ),
-            air.Script(
-                src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release/build/languages/css.min.js"
-            ),
-            air.Script(src="/public/render.js"),
-            air.Link(rel="stylesheet", href="/public/style.css", type="text/css"),
-            *air.layouts.filter_head_tags(children),
-        ),
-        air.Body(
-            air.Header(
-                air.A(
-                    air.Img(
-                        class_="borderCircle",
-                        alt="Daniel Roy Greenfeld",
-                        src="/public/images/profile.jpg",
-                        width="108",
-                        height="108",
-                    ),
-                    href="/",
+    return air.AirResponse(
+        air.Html(
+            air.Head(
+                *Socials(title, description, image, twitter_image, url),
+                air.Link(
+                    rel="stylesheet",
+                    href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css",
                 ),
-                air.A(air.H2("Daniel Roy Greenfeld"), href="/"),
-                air.P(
-                    air.A("About", href="/about"),
-                    " | ",
-                    air.A("Articles", href="/posts"),
-                    " | ",
-                    air.A("Books", href="/books"),
-                    " | ",
-                    air.A("Jobs", href="/jobs"),
-                    " | ",
-                    air.A("Tags", href="/tags"),
-                    " | ",
-                    air.A("Search", href="/search"),
+                air.Script(
+                    src="https://cdn.jsdelivr.net/npm/htmx.org@2.0.6/dist/htmx.min.js",
+                    integrity="sha384-Akqfrbj/HpNVo8k11SXBb6TlBWmXXlYQrCSqEWmyKJe+hDm3Z/B2WVG4smwBkRVm",
+                    crossorigin="anonymous",
                 ),
-                style="text-align: center;",
+                air.Style(":root { --pico-font-size: 100%; }"),
+                air.Link(
+                    rel="stylesheet",
+                    href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release/build/styles/atom-one-dark.css",
+                    media="(prefers-color-scheme: dark)",
+                ),
+                air.Link(
+                    rel="stylesheet",
+                    href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release/build/styles/atom-one-light.css",
+                    media="(prefers-color-scheme: light)",
+                ),
+                air.Script(src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"),
+                air.Script(
+                    src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"
+                ),
+                air.Script(
+                    src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release/build/languages/python.min.js"
+                ),
+                air.Script(
+                    src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release/build/languages/javascript.min.js"
+                ),
+                air.Script(
+                    src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release/build/languages/html.min.js"
+                ),
+                air.Script(
+                    src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release/build/languages/css.min.js"
+                ),
+                air.Script(src="/public/render.js"),
+                air.Link(rel="stylesheet", href="/public/style.css", type="text/css"),
+                *air.layouts.filter_head_tags(children),
             ),
-            air.Main(*air.layouts.filter_body_tags(children), class_="container"),
-            air.Footer(
-                air.Hr(),
-                air.P(
-                    air.A(
-                        "LinkedIn", href="https://www.linkedin.com/in/danielfeldroy/"
-                    ),
-                    " | ",
-                    air.A(
-                        "Bluesky", href="https://bsky.app/profile/daniel.feldroy.com"
-                    ),
-                    " | ",
-                    air.A("Twitter", href="https://twitter.com/pydanny"),
-                    " | ",
-                    "Feeds: ",
-                    air.A("All", href="/feeds/atom.xml"),
-                    ", ",
-                    air.A("Python", href="/feeds/python.atom.xml"),
-                    ", ",
-                    air.A("TIL", href="/feeds/til.atom.xml"),
-                ),
-                air.P(
-                    f"All rights reserved {datetime.now().year}, Daniel Roy Greenfeld"
-                ),
-                class_="container",
-            ),
-            air.Dialog(
+            air.Body(
                 air.Header(
-                    air.H2("Search"),
-                    air.Input(
-                        name="q",
-                        type="text",
-                        id="search-input",
-                        hx_trigger="keyup",
-                        placeholder="Enter your search query...",
-                        hx_get="/search-results",
-                        hx_target=".search-results-modal",
+                    air.A(
+                        air.Img(
+                            class_="borderCircle",
+                            alt="Daniel Roy Greenfeld",
+                            src="/public/images/profile.jpg",
+                            width="108",
+                            height="108",
+                        ),
+                        href="/",
                     ),
-                    air.Div(class_="search-results-modal"),
-                    class_="modal-content",
+                    air.A(air.H2("Daniel Roy Greenfeld"), href="/"),
+                    air.P(
+                        air.A("About", href="/about"),
+                        " | ",
+                        air.A("Articles", href="/posts"),
+                        " | ",
+                        air.A("Books", href="/books"),
+                        " | ",
+                        air.A("Jobs", href="/jobs"),
+                        " | ",
+                        air.A("Tags", href="/tags"),
+                        " | ",
+                        air.A("Search", href="/search"),
+                    ),
+                    style="text-align: center;",
                 ),
-                id="search-modal",
-                style="display:none;",
-                class_="modal overflow-auto",
-            ),
-            air.Div(hx_trigger="keyup[key=='/'] from:body"),
-            air.Script("""
+                air.Main(*air.layouts.filter_body_tags(children), class_="container"),
+                air.Footer(
+                    air.Hr(),
+                    air.P(
+                        air.A(
+                            "LinkedIn",
+                            href="https://www.linkedin.com/in/danielfeldroy/",
+                        ),
+                        " | ",
+                        air.A(
+                            "Bluesky",
+                            href="https://bsky.app/profile/daniel.feldroy.com",
+                        ),
+                        " | ",
+                        air.A("Twitter", href="https://twitter.com/pydanny"),
+                        " | ",
+                        "Feeds: ",
+                        air.A("All", href="/feeds/atom.xml"),
+                        ", ",
+                        air.A("Python", href="/feeds/python.atom.xml"),
+                        ", ",
+                        air.A("TIL", href="/feeds/til.atom.xml"),
+                    ),
+                    air.P(
+                        f"All rights reserved {datetime.now().year}, Daniel Roy Greenfeld"
+                    ),
+                    class_="container",
+                ),
+                air.Dialog(
+                    air.Header(
+                        air.H2("Search"),
+                        air.Input(
+                            name="q",
+                            type="text",
+                            id="search-input",
+                            hx_trigger="keyup",
+                            placeholder="Enter your search query...",
+                            hx_get="/search-results",
+                            hx_target=".search-results-modal",
+                        ),
+                        air.Div(class_="search-results-modal"),
+                        class_="modal-content",
+                    ),
+                    id="search-modal",
+                    style="display:none;",
+                    class_="modal overflow-auto",
+                ),
+                air.Div(hx_trigger="keyup[key=='/'] from:body"),
+                air.Script("""
             document.body.addEventListener('keydown', e => {
             if (e.key === '/') {
                 e.preventDefault();
@@ -328,8 +334,10 @@ def Layout(
             htmx.trigger('.search-results', 'htmx:trigger', {value: e.target.value});
             });
             """),
-        ),
-    ).render()
+            ),
+        ).render(),
+        status_code=status_code,
+    )
 
 
 @app.page
@@ -417,7 +425,7 @@ def article(slug: str):
         redirects_url = redirects.get("posts/" + slug, None)
         if redirects_url is not None:
             return RedirectResponse(redirects_url)
-        return Page404()
+        raise HTTPException(status_code=404)
     # tags = [TagLink(slug=x) for x in metadata.get("tags", [])]
     tags = []
     specials = ()
@@ -589,23 +597,23 @@ def search(q: str | None = None):
     )
 
 
-@app.get("/feeds/{slug}.atom.xml")
+@app.get("/feeds/{slug}.xml")
 def atom_feed(slug: str):
-    path = pathlib.Path(f"public/feeds/{slug}.atom.xml")
+    path = pathlib.Path(f"public/feeds/{slug}.xml")
     if path.exists():
         return Response(path.read_text(), media_type="application/xml")
-    return Page404()
+    raise HTTPException(status_code=404)
 
 
 @app.get("/{slug}")
 def page_or_redirect1(slug: str):
     redirects_url = redirects.get(slug, None)
     if redirects_url is not None:
-        return RedirectResponse(redirects_url)
+        return RedirectResponse(redirects_url)    
     try:
-        return Layout(*MarkdownPage(slug))
+        return MarkdownPage(slug)    
     except TypeError:
-        return Page404()
+        raise HTTPException(status_code=404)
 
 
 @app.get("/{slug_1}/{slug_2}")
@@ -614,6 +622,6 @@ def page_or_redirect2(slug_1: str, slug_2: str):
     if redirects_url is not None:
         return RedirectResponse(redirects_url)
     try:
-        return Layout(*MarkdownPage(slug_1 + "/" + slug_2))
+        return MarkdownPage(slug_1 + "/" + slug_2)
     except TypeError:
-        return Page404()
+        raise HTTPException(status_code=404)

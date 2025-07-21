@@ -9,7 +9,7 @@ tags:
 title: 'TIL: Pipe operator for merging dictionaries'
 twitter_image: /public/logos/til-1.png
 ---
-<!---->
+
 Pipe `|` returns a new dictionary containing the key-value pairs from both operands.
 
 ```python {.marimo}

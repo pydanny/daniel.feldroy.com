@@ -11,9 +11,9 @@ tags:
 title: 'TIL: Using FastHTML in Jupyter notebooks plus websockets'
 twitter_image: /public/logos/til-1.png
 ---
-<!---->
+
 # Websockets in Jupyter
-<!---->
+
 A simple websockets example hosted in a Jupyter notebook! Check it out!
 
 Use at least FastHTML 0.6.5. This code is heavily inspired by this [code](https://docs.fastht.ml/tutorials/by_example.html#websockets) written by Jeremy Howard.

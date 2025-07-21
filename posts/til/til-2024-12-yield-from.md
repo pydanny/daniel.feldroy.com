@@ -9,7 +9,7 @@ time_to_read: 2
 title: "TIL: yield from"
 type: post
 ---
-<!---->
+
 Lets create a function that uses yield to deliver a generator.
 
 ```python {.marimo}

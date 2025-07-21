@@ -4,7 +4,7 @@ requires-python = ">=3.13"
 
 [[package]]
 name = "air"
-version = "0.11.0"
+version = "0.14.2"
 source = { registry = "https://pypi.org/simple" }
 dependencies = [
     { name = "fastapi" },
@@ -13,9 +13,9 @@ dependencies = [
     { name = "python-multipart" },
     { name = "typer" },
 ]
-sdist = { url = "https://files.pythonhosted.org/packages/b9/4c/207e77e978a87284aaa9e59322b441b29350606922fb8a03f38936cf0e0f/air-0.11.0.tar.gz", hash = "sha256:1fa6d33b45889023aa78a97a68acf88f1566d311b95684ce41178d1abc4e07ee", size = 22259, upload-time = "2025-07-09T03:05:42.048Z" }
+sdist = { url = "https://files.pythonhosted.org/packages/dc/5e/64b0482d22c3b98aec09ad25828dda4affaa24575f5a85e0a11c0ce37427/air-0.14.2.tar.gz", hash = "sha256:7ca33dcb5637c525301acf52c9c0a3bd39a5c815eebc76a9a500eb6882b12ba4", size = 27956, upload-time = "2025-07-18T15:11:03.122Z" }
 wheels = [
-    { url = "https://files.pythonhosted.org/packages/ed/6e/7be1223c7897acf60513dd210bfc62c71a57a13be3b0ce9e14ac9a2d2db6/air-0.11.0-py3-none-any.whl", hash = "sha256:ddba757a7f3e8de61302093faa96512db67e5c1e268b22eda1b84c9dccd03f8f", size = 18201, upload-time = "2025-07-09T03:05:40.736Z" },
+    { url = "https://files.pythonhosted.org/packages/92/3c/c031beac356a3cbc78812d69a06afd5edeacfefd21b686a2a3a3f573fd21/air-0.14.2-py3-none-any.whl", hash = "sha256:c742b4a2a92318565f6d22b2da83bd5b35b0a7710a00978a83667307afc403cc", size = 22403, upload-time = "2025-07-18T15:11:01.891Z" },
 ]
 
 [[package]]
@@ -76,7 +76,7 @@ dependencies = [
 
 [package.metadata]
 requires-dist = [
-    { name = "air", specifier = ">=0.11.0" },
+    { name = "air", specifier = ">=0.14.2" },
     { name = "feedgen", specifier = ">=1.0.0" },
     { name = "hypercorn", specifier = ">=0.17.3" },
     { name = "python-dateutil", specifier = ">=2.9.0.post0" },

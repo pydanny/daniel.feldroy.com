@@ -9,7 +9,7 @@ tags:
 title: 'TIL: Undecorating a functools.wraps decorated function'
 twitter_image: /public/logos/til-1.png
 ---
-<!---->
+
 In the Python standard library there is a function in the functools library that allows decorated functions to carry forward their original docstring. Executing it is rather easy:
 
 ```python {.marimo}
@@ -45,7 +45,7 @@ adder.__doc__
 ```
 
 As you can see, `functools.wraps` is an easy addition to any decorator that makes keeping documentation valid trivial to do.
-<!---->
+
 However, what if we want to use the `adder` function without printing "KERPOW adder!" to the terminal? In other words, can we remove the decorator?
 
 Fortunately, because we used `functools.wraps` we can do just that. You see, what `functools.wraps` does is add a `__wrapped__` attribute to the wrapped function. If we want to restore the function to the original we do this:
@@ -61,7 +61,7 @@ adder_1(2, 3)
 ```
 
 ## Postscript
-<!---->
+
 In a follow-up discussion about this TIL I learned that `functools.wraps` is syntactical sugar for the [functools.update_wrapper()](https://docs.python.org/3/library/functools.html#functools.update_wrapper) function.
 
 ```python {.marimo hide_code="true"}

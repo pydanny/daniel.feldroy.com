@@ -9,7 +9,7 @@ time_to_read: 2
 title: File Location Fixup
 type: post
 ---
-<!---->
+
 For a long time I kept all my blog articles in one directory called "[posts](https://github.com/pydanny/daniel-blog-fasthtml/tree/main/posts)". However, as I have over 650 articles, this meant that the directory was unweildy. So I switched to a recursive glob to find all [markdown](https://github.com/pydanny/daniel-blog-fasthtml/blob/feef9f67fbf4ef4571953a163284fa90cd7a7066/main.py#L109) and [Jupyter](https://github.com/pydanny/daniel-blog-fasthtml/blob/feef9f67fbf4ef4571953a163284fa90cd7a7066/main.py#L95) files inside the "posts" directory. Now I can have nested folders.
 
 Some of my articles are in special directories called things like "til" and "course.fast.ai". However, the vast majority were destined to be placed in directories that matched the year in which they were written. So anything written in 2010 was moved to the 2010 directory, and anything written this year (2024) was placed in the 2024 directory. As many of my articles were prefixed with their year and month, I could easily do this manually with the `mv` shell command.

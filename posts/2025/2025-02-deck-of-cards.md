@@ -10,7 +10,7 @@ time_to_read: 5
 title: "Building a playing card deck"
 type: post
 ---
-<!---->
+
 After trying out Belatro I found [Richard Schneider's venerable CardJS library](https://github.com/richardschneider/cardsJS). This notebook builds a playing card deck using the SVGs from that project. Python dependencies for this notebook:
 
 - rich
@@ -50,7 +50,7 @@ card.show()
 ```
 
 ## Building the deck
-<!---->
+
 Let's make 52 cards. Rather than hardcode out all of the cards themselves, we're going to loop through the directory of card images and then do a little bit of mapping to create a 52-card playing deck.
 
 ```python {.marimo}
@@ -124,7 +124,7 @@ print(base_deck)
 ```
 
 ## Sorting the deck
-<!---->
+
 Now that we have a deck with 52 cards, let's sort it.
 
 ```python {.marimo}
@@ -135,7 +135,7 @@ print(deck)
 ```
 
 ## Displaying card faces
-<!---->
+
 In the cells below, you my expiraments to figure out how to display the cards so the cards are displayed. These lines of code happen after the display of the two of hearts closer to the top but were written first. After I got them working here I went back to the `Card` class and added the `show()` method.
 
 ```python {.marimo}
@@ -149,7 +149,7 @@ deck['FJH'].show()
 ```
 
 ## Attribution
-<!---->
+
 I want to give special thanks to:
 
 - Audrey Roy-Greenfeld for building a life with me and showing me how to use the filter method on the `fastcore.L` object

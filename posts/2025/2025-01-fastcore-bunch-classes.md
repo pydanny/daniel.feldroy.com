@@ -10,11 +10,11 @@ time_to_read: 2
 title: "Exploring fastcore bunch classes"
 type: post
 ---
-<!---->
+
 The fastcore library has a lot of really useful tools. As a fan of bunch classes, here's two useful utilities for working with them.
-<!---->
+
 ## AttrDict
-<!---->
+
 `AttrDict` adds attributes to python `dict` without changing equality or how it prints.
 
 ```python {.marimo}

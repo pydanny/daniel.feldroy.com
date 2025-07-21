@@ -3,7 +3,8 @@ import yaml
 import collections, functools, pathlib, json, csv
 from datetime import datetime
 from fastapi.staticfiles import StaticFiles
-from fastapi.responses import RedirectResponse
+from air import RedirectResponse
+from fastapi.responses import Response
 from dateutil import parser
 import pytz
 
@@ -543,7 +544,7 @@ def _search(q: str = ""):
 
 
 @app.get("/search-results")
-def get(q: str):
+def search_results(q: str):
     return _search(q)
 
 
@@ -585,8 +586,16 @@ def search(q: str | None = None):
     )
 
 
+@app.get("/feeds/{slug}.atom.xml")
+def atom_feed(slug: str):
+    path = pathlib.Path(f'public/feeds/{slug}.atom.xml')
+    if path.exists():
+        return Response(path.read_text(), media_type='application/xml')
+    return Page404()
+
+
 @app.get("/{slug}")
-def get(slug: str):
+def page_or_redirect1(slug: str):
     redirects_url = redirects.get(slug, None)
     if redirects_url is not None:
         return RedirectResponse(redirects_url)
@@ -597,7 +606,7 @@ def get(slug: str):
 
 
 @app.get("/{slug_1}/{slug_2}")
-def get(slug_1: str, slug_2: str):
+def page_or_redirect2(slug_1: str, slug_2: str):
     redirects_url = redirects.get(slug_1 + "/" + slug_2, None)
     if redirects_url is not None:
         return RedirectResponse(redirects_url)

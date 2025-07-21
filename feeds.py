@@ -104,9 +104,9 @@ def build_feed(content_tag: str | None = None):
         add_entry(fg, raw)
 
     if content_tag is not None:
-        fg.atom_file(f"feeds/{content_tag}.atom.xml", pretty=True)
+        fg.atom_file(f"public/feeds/{content_tag}.atom.xml", pretty=True)
     else:
-        fg.atom_file("feeds/atom.xml", pretty=True)
+        fg.atom_file("public/feeds/atom.xml", pretty=True)
 
 
 if __name__ == "__main__":

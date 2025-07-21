@@ -10,9 +10,9 @@ time_to_read: 5
 title: "Pathlib is fun!"
 type: post
 ---
-<!---->
+
 ## Directory objects
-<!---->
+
 First, we import the `Path` class from pathlib. The `Path` is 99.9% of what you'll ever need to use.
 
 ```python {.marimo}
@@ -48,7 +48,7 @@ new_file.exists()
 ```
 
 ## Coding Standard: PEP-8
-<!---->
+
 With a few exceptions, Pathlib adheres to the [PEP-8 style guide](https://peps.python.org/pep-0008/). Following any styleguide eases discovery and reduces coding errors.
 
 Below is a table that shows some of the naming differences

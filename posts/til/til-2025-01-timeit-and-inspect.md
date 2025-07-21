@@ -10,9 +10,9 @@ time_to_read: 2
 title: "TIL: Using inspect and timeit together"
 type: post
 ---
-<!---->
+
 When working with `timeit` you either have to write code in string variables or load a seperate Python module as code. The former is a really not a good idea, the latter is ideal but annoying for quick tests. So I thought this up today, probably reinventing what someone else has done.
-<!---->
+
 For an example let's define a simple function we want to test that generates a random 10 character string:
 
 ```python {.marimo}

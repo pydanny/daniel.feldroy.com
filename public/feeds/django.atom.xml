@@ -1,0 +1,59 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
+  <id>https://daniel.feldroy.com/</id>
+  <title>Django posts by Daniel Roy Greenfeld</title>
+  <updated>2025-07-21T07:02:37.730327+00:00</updated>
+  <author>
+    <name>Daniel Roy Greenfeld</name>
+    <email>daniel@feldroy.com</email>
+    <uri>https://daniel.feldroy.com</uri>
+  </author>
+  <link href="https://daniel.feldroy.com" rel="alternate"/>
+  <generator uri="https://lkiesow.github.io/python-feedgen" version="1.0.0">python-feedgen</generator>
+  <logo>https://daniel.feldroy.com/images/pydanny-cartwheel.png</logo>
+  <rights>All rights reserved 2025, Daniel Roy Greenfeld</rights>
+  <entry>
+    <id>https://daniel.feldroy.com/posts/2024-06-london-hackathon-on-july-1-and-2</id>
+    <title>London Tech Zero Hackathon on July 1 and 2!</title>
+    <updated>2025-07-21T07:02:37.730549+00:00</updated>
+    <author>
+      <name>Daniel Roy Greenfeld</name>
+      <email>daniel@feldroy.com</email>
+    </author>
+    <content type="html">&lt;p&gt;Taking place in the &lt;a href="https://thevinylfactory.com/venue/"&gt;Vinyl Factory in Soho&lt;/a&gt;, for two days developers, designers, and others will hack out MVPs of solutions to resolve real-life sustainability and climate problems. APIs and guidance will be provided, and contestants can build out software or hardware solutions. Individuals are welcome to attend and companies are invited to send teams. There will be prizes besides bragging rights - including a £20k mini grant to develop the winning idea.&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;I'll be there to help! As an employee of the hosts, I can't build your projects for you but I can provide assistance. :-)&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;The event will provide:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;APIs&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://thevinylfactory.com/venue/"&gt;Venue&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Food and drink&lt;/li&gt;
+&lt;li&gt;Fast internet and power&lt;/li&gt;
+&lt;li&gt;Changes to network and socialize&lt;/li&gt;
+&lt;li&gt;Speech by &lt;a href="https://www.linkedin.com/in/gregsjackson/"&gt;Greg&lt;/a&gt; &lt;a href="https://en.wikipedia.org/wiki/Greg_Jackson_(businessman)"&gt;Jackson&lt;/a&gt;, CEO of Octopus Energy&lt;/li&gt;
+&lt;li&gt;Lots of prizes, first place is a £20K grant to help build out your project&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Contests provide:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Skills&lt;/li&gt;
+&lt;li&gt;Enthusiasm&lt;/li&gt;
+&lt;li&gt;Laptop and other hardware&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Schedule:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;July 1: Event begins at 10am, venue closes at 10pm&lt;/li&gt;
+&lt;li&gt;July 2: Judging at 3pm&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img alt="London Tech Zero Hackathon" src="/public/images/tech-zero-hackathon-square.png" /&gt;&lt;/p&gt;</content>
+    <link href="https://daniel.feldroy.com/posts/2024-06-london-hackathon-on-july-1-and-2"/>
+    <summary>On the 1st and 2nd of July is the first-ever London Tech Zero Hackathon, supported by Kraken Tech.</summary>
+    <category term="python"/>
+    <category term="django"/>
+    <category term="hackathon"/>
+    <category term="kraken"/>
+    <contributor>
+      <name>Daniel Roy Greenfeld</name>
+      <email>daniel@feldroy.com</email>
+    </contributor>
+    <published>2024-06-24T14:28:10.494486+00:00</published>
+  </entry>
+</feed>

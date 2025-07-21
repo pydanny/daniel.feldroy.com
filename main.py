@@ -4,6 +4,8 @@ import collections, functools, pathlib, json, csv
 from datetime import datetime
 from fastapi.staticfiles import StaticFiles
 from fastapi.responses import RedirectResponse
+from dateutil import parser
+import pytz
 
 app = air.Air()
 
@@ -14,6 +16,32 @@ default_social_image = "/public/images/profile.jpg"
 
 redirects = json.loads(pathlib.Path(f"redirects.json").read_text())
 
+
+# The next block of code is several date utilities
+# We need these because I've been sloppy about defining dates
+# TODO: Fix datetimes in all markdown files so this wouldn't be necessary
+def convert_dtstr_to_dt(date_str: str) -> datetime:
+    """
+    Convert a naive or non-naive date/datetime string to a datetime object.
+    Naive datetime strings are assumed to be in GMT (UTC) timezone.
+    """
+    try:
+        dt = parser.parse(date_str)
+        if dt.tzinfo is None:
+            # If the datetime object is naive, set it to GMT (UTC)
+            dt = dt.replace(tzinfo=pytz.UTC)
+        return format_datetime(dt)
+    except (ValueError, TypeError) as e:
+        return ''
+
+
+def format_datetime(dt: datetime) -> str:
+    """Format the datetime object"""
+    if dt is None:
+        return ""
+    formatted_date = dt.strftime("%B %d, %Y")
+    formatted_time = dt.strftime("%I:%M%p").lstrip("0").lower()
+    return f"{formatted_date} at {formatted_time}"
 
 class ContentNotFound(Exception):
     pass
@@ -86,14 +114,14 @@ def BlogPostPreview(title: str, slug: str, timestamp: str, description: str):
     """
     return air.Span(
         air.H2(air.A(title, href=f"/posts/{slug}")),
-        air.P(description, air.Br(), air.Small(air.Time(timestamp))),
+        air.P(description, air.Br(), air.Small(air.Time(convert_dtstr_to_dt(timestamp)))),
     )
 
 
 def TILPreview(title: str, slug: str, timestamp: str, description: str):
     return air.Span(
         air.H3(air.A(title[4:], href=f"/posts/{slug}")),
-        air.P(air.Small(air.Time(timestamp))),
+        air.P(air.Small(air.Time(convert_dtstr_to_dt(timestamp)))),
     )
 
 

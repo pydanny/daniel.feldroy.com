@@ -604,6 +604,158 @@ def atom_feed(slug: str):
     raise HTTPException(status_code=404)
 
 
+def convert_minutes(total_minutes):
+    hours = total_minutes // 60
+    remaining_minutes = total_minutes % 60
+    return hours, remaining_minutes
+
+
+@app.page
+def fitness():
+    with open("public/fitness-2024.csv") as f:
+        rows = [o for o in csv.DictReader(f)]
+
+    dates = collections.defaultdict(list)
+    for row in rows:
+        dates[row["Date"][:7]].append(row)
+
+    config = {"responsive": True}
+    config = json.dumps(config)
+
+    charts = []
+    for month, rows in dates.items():
+        month_str = datetime.strptime(month, "%Y-%m").strftime("%B %Y")
+        fitness = [
+            {
+                "type": "bar",
+                "x": [o["Date"] for o in rows],
+                "y": [o["Weight"] for o in rows],
+                "text": [o["Weight"] for o in rows],
+                "textposition": "auto",
+                "hoverinfo": "none",
+                "marker": {
+                    "color": "blue",
+                },
+                "name": "Weight kg",
+            },
+            {
+                "type": "bar",
+                "x": [o["Date"] for o in rows],
+                "y": [o["BJJ"] for o in rows],
+                "text": [o["BJJ"] for o in rows],
+                "textposition": "auto",
+                "hoverinfo": "none",
+                "marker": {
+                    "color": "green",
+                },
+                "name": "BJJ",
+            },
+            {
+                "type": "bar",
+                "x": [o["Date"] for o in rows],
+                "y": [o["Other"] for o in rows],
+                "text": [o["Other"] for o in rows],
+                "textposition": "auto",
+                "hoverinfo": "none",
+                "marker": {
+                    "color": "red",
+                },
+                "name": "Other",
+            },
+        ]
+        layout = {
+            "title": {"text": month_str},
+            "font": {"size": 18},
+            "barcornerradius": 15,
+        }
+
+        layout = json.dumps(layout)
+        chart_name = f"weightChart-{month}"
+        charts.insert(0, air.Div(id=chart_name))
+        bjj_hours, bjj_minutes = convert_minutes(sum([int(o["BJJ"]) for o in rows]))
+        other_hours, other_minutes = convert_minutes(
+            sum([int(o["Other"]) for o in rows])
+        )
+        charts.insert(
+            1,
+            air.Div(
+                air.H3(f"{month_str} Summary"),
+                air.P(
+                    air.Strong("Weight: "),
+                    f"{rows[-1]['Weight']} kg",
+                    air.Br(),
+                    air.Strong("Total BJJ:"),
+                    f" {bjj_hours} hours, {bjj_minutes} minutes",
+                    air.Br(),
+                    air.Strong("Total Other:"),
+                    f" {other_hours} hours, {other_minutes} minutes",
+                ),
+            ),
+        )
+        charts.insert(
+            1, air.Script(f"Plotly.newPlot('{chart_name}', {fitness}, {layout}, {config});")
+        )
+        current_weight = rows[-1]["Weight"]
+
+    return Layout(
+        air.Title("Fitness Tracking"),
+        air.Script(src="https://cdn.plot.ly/plotly-2.32.0.min.js"),
+        air.Section(
+            air.P(
+                "Wt Goal: ",
+                air.Strong("77 kg / 169 lbs"),
+                air.Br(),
+                f"Current: {current_weight} kg / {round(float(current_weight) * 2.2, 2)} lb",
+            ),
+            air.H2(f"Fitness Tracking"),
+            air.Ol(
+                air.Li("Weight kg is how much I weigh in kilograms."),
+                air.Li("BJJ is how many minutes of Brazilian Jiu-Jitsu in a day."),
+                air.Li(
+                    "Other is how many minutes of other training done in a day, most often weights, ATG, walking at speed, sometimes alternative exercise like Yoga or Pilates."
+                ),
+            ),
+            *charts,
+            air.A("← Back home", href="/"),
+        ),        
+        
+    )
+
+
+@app.get("/writing-stats")
+def writing_stats():
+    years = collections.defaultdict(int)
+    for post in list_posts():
+        years[post["date"][:4]] += 1
+    data = [
+        {
+            "x": list(map(int, years.keys())),
+            "y": list(map(int, years.values())),
+            "type": "scatter",
+        }
+    ]
+    # data = json.dumps(data)
+
+    config = {"responsive": True}
+    config = json.dumps(config)
+    layout = {
+        "title": {"text": "Writing stats"},
+        "font": {"size": 18},
+        "barcornerradius": 15,
+    }
+    layout = json.dumps(layout)
+
+    return Layout(
+        air.Title("Writing Stats"),
+        air.Script(src="https://cdn.plot.ly/plotly-2.32.0.min.js"),
+        air.Div(id="post-counts"),
+        air.Children(
+        air.Script(f"Plotly.newPlot('post-counts', {data}, {layout}, {config});"),
+        ),
+        description="Numbers about my writing patterns",
+    )
+
+
 @app.get("/{slug}")
 def page_or_redirect1(slug: str):
     redirects_url = redirects.get(slug, None)

@@ -9,7 +9,7 @@ tags:
 title: 'TIL: ^ bitwise XOR'
 twitter_image: /public/logos/til-1.png
 ---
-<!---->
+
 The bitwise XOR operator `^`, also known as `exclusive or`, can be used to compare boolean objects to see if one and only one is `True`.
 
 Let's see it in action, first comparing three `False` booleans, which will return `False`.
@@ -35,22 +35,21 @@ print(False ^ True ^ True)
 ```
 
 ## What about non-boolean types?
-<!---->
+
 The `^` operator only works with boolean types. If you try to use it on non-boolean types, you'll get a `TypeError`. For example, if you try to use it on integers or strings to check for truthiness, you'll get an error.
 
-```python {.marimo}
+```python
 '' ^ '' ^ 'one'
 ```
 
-```python
--------------------------------------------------------------
+```
+>>>
 TypeError                   Traceback (most recent call last)
 Cell In[20], line 1
-----> 1 '' ^ '' ^ 'one'
+>>> 1 '' ^ '' ^ 'one'
 
 TypeError: unsupported operand type(s) for ^: 'str' and 'str'
 ```
-<!---->
 To make this comparison works, you can convert the non-boolean types to boolean first. For example, you can use the `bool()` function to convert an integer or string to a boolean before using the `^` operator.
 
 ```python {.marimo}

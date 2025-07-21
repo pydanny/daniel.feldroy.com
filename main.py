@@ -426,8 +426,7 @@ def article(slug: str):
         if redirects_url is not None:
             return RedirectResponse(redirects_url)
         raise HTTPException(status_code=404)
-    # tags = [TagLink(slug=x) for x in metadata.get("tags", [])]
-    tags = []
+    tags = [TagLink(slug=x) for x in metadata.get("tags", [])]
     specials = ()
     if "TIL" in metadata["tags"]:
         specials = air.A(

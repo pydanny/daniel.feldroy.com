@@ -20,7 +20,7 @@ I am on sabbatical from [Kraken Tech](https://kraken.tech/), part of the sustain
 
 ## About this site
 
-This site is written using the [FastHTML](https://fastht.ml/) web framework. The source code is on [github](https://github.com/pydanny/daniel-blog-fasthtml).
+This site is written using the [Air](https://github.com/feldroy/air) web framework. The source code is on [github](https://github.com/pydanny/daniel-blog-air).
 
 ## What about pydanny.com?
 

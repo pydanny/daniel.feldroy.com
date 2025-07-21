@@ -33,7 +33,7 @@ def convert_dtstr_to_dt(date_str: str) -> datetime:
             dt = dt.replace(tzinfo=pytz.UTC)
         return format_datetime(dt)
     except (ValueError, TypeError) as e:
-        return ''
+        return ""
 
 
 def format_datetime(dt: datetime) -> str:
@@ -43,6 +43,7 @@ def format_datetime(dt: datetime) -> str:
     formatted_date = dt.strftime("%B %d, %Y")
     formatted_time = dt.strftime("%I:%M%p").lstrip("0").lower()
     return f"{formatted_date} at {formatted_time}"
+
 
 class ContentNotFound(Exception):
     pass
@@ -115,7 +116,9 @@ def BlogPostPreview(title: str, slug: str, timestamp: str, description: str):
     """
     return air.Span(
         air.H2(air.A(title, href=f"/posts/{slug}")),
-        air.P(description, air.Br(), air.Small(air.Time(convert_dtstr_to_dt(timestamp)))),
+        air.P(
+            description, air.Br(), air.Small(air.Time(convert_dtstr_to_dt(timestamp)))
+        ),
     )
 
 
@@ -588,9 +591,9 @@ def search(q: str | None = None):
 
 @app.get("/feeds/{slug}.atom.xml")
 def atom_feed(slug: str):
-    path = pathlib.Path(f'public/feeds/{slug}.atom.xml')
+    path = pathlib.Path(f"public/feeds/{slug}.atom.xml")
     if path.exists():
-        return Response(path.read_text(), media_type='application/xml')
+        return Response(path.read_text(), media_type="application/xml")
     return Page404()
 
 

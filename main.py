@@ -561,7 +561,7 @@ def search(q: str | None = None):
 def get(slug: str):
     redirects_url = redirects.get(slug, None)
     if redirects_url is not None:
-        return RedirectResponse(loc=redirects_url)
+        return RedirectResponse(redirects_url)
     try:
         return Layout(*MarkdownPage(slug))
     except TypeError:
@@ -572,7 +572,7 @@ def get(slug: str):
 def get(slug_1: str, slug_2: str):
     redirects_url = redirects.get(slug_1 + "/" + slug_2, None)
     if redirects_url is not None:
-        return RedirectResponse(loc=redirects_url)
+        return RedirectResponse(redirects_url)
     try:
         return Layout(*MarkdownPage(slug_1 + "/" + slug_2))
     except TypeError:

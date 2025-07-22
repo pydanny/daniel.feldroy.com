@@ -21,11 +21,11 @@ Example:
 # pyproject.toml
 [project]
 name = "mypackage"
-# version = "0.1.0" - No longer needed
 dynamic = ["version"]
+# version = "0.1.0" # Don't set version here
 
 [tool.setuptools.dynamic]
-version = { attr = "mypackage.__version__" }
+version = { attr = "mypackage.__version__" } # Set version here
 ```
 
 Don't forget to specify the version in Python:

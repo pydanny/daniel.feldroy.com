@@ -759,7 +759,7 @@ def writing_stats():
 @app.get('/.well-known/atproto-did')
 def wellknown_atproto_did():
     # for bluesky
-    return getenv('BLUESKY_ATPROTO', 'Nothing here!')
+    return air.responses.PlainTextResponse(getenv('BLUESKY_ATPROTO', 'Nothing here!'))
 
 
 @app.get('/robots.txt')

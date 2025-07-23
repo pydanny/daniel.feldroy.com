@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
   <id>https://daniel.feldroy.com/</id>
   <title>Til posts by Daniel Roy Greenfeld</title>
-  <updated>2025-07-21T07:02:37.733998+00:00</updated>
+  <updated>2025-07-23T01:13:16.809626+00:00</updated>
   <author>
     <name>Daniel Roy Greenfeld</name>
     <email>daniel@feldroy.com</email>
@@ -13,24 +13,43 @@
   <logo>https://daniel.feldroy.com/images/pydanny-cartwheel.png</logo>
   <rights>All rights reserved 2025, Daniel Roy Greenfeld</rights>
   <entry>
-    <id>https://daniel.feldroy.com/posts/til-2025-06-removing-exif-geodata-from-media</id>
-    <title>TIL: Removing exif geodata from media</title>
-    <updated>2025-07-21T07:02:37.734173+00:00</updated>
+    <id>https://daniel.feldroy.com/posts/til-2025-07-single-source-version-package-builds-with-uv</id>
+    <title>TIL: Single source version package builds with uv</title>
+    <updated>2025-07-23T01:13:16.809794+00:00</updated>
     <author>
       <name>Daniel Roy Greenfeld</name>
       <email>daniel@feldroy.com</email>
     </author>
-    <content type="html">&lt;p&gt;To do this you'll need &lt;a href="https://exiftool.org/"&gt;exiftool&lt;/a&gt;. On Mac it can be installed with &lt;code&gt;brew install exiftool&lt;/code&gt;.&lt;/p&gt;
-&lt;p&gt;How to remove the geodata:&lt;/p&gt;
-&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;exiftool&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;-gps*=&amp;quot;&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;beach-video.mp4
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</content>
-    <link href="https://daniel.feldroy.com/posts/til-2025-06-removing-exif-geodata-from-media"/>
-    <summary>How to remove revealing data from your images and videos</summary>
+    <content type="html">&lt;ol&gt;
+&lt;li&gt;Remove &lt;code&gt;version&lt;/code&gt; in &lt;code&gt;pyproject.toml&lt;/code&gt; and replace with &lt;code&gt;dynamic = ["version"]&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Add &lt;code&gt;[tool.setuptools.dynamic]&lt;/code&gt; and specify the location of the version using this dialogue: &lt;code&gt;version = { attr = "mypackage.__version__" }&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;In your project's root &lt;code&gt;__init__.py&lt;/code&gt;, add a &lt;code&gt;__version__&lt;/code&gt; attribute.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;Example:&lt;/p&gt;
+&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="c1"&gt;# pyproject.toml&lt;/span&gt;
+&lt;span class="k"&gt;[project]&lt;/span&gt;
+&lt;span class="n"&gt;name&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;mypackage&amp;quot;&lt;/span&gt;
+&lt;span class="n"&gt;dynamic&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;version&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;
+&lt;span class="c1"&gt;# version = &amp;quot;0.1.0&amp;quot; # Don&amp;#39;t set version here&lt;/span&gt;
+
+&lt;span class="k"&gt;[tool.setuptools.dynamic]&lt;/span&gt;
+&lt;span class="n"&gt;version&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;{&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;attr&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;=&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;mypackage.__version__&amp;quot;&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;}&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="c1"&gt;# Set version here&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Don't forget to specify the version in Python:&lt;/p&gt;
+&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="c1"&gt;# mypackage/__init__.py&lt;/span&gt;
+&lt;span class="n"&gt;__version__&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;0.1.0&amp;quot;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Thanks to Audrey Roy Greenfeld for pairing with me on getting this to work.&lt;/p&gt;</content>
+    <link href="https://daniel.feldroy.com/posts/til-2025-07-single-source-version-package-builds-with-uv"/>
+    <summary>Tired of updating the version in multiple places before publishing a package update? Leery of using inspect.metadata to fetch the package? Here's how to have a single source of version using UV's build subcommand.</summary>
     <category term="TIL"/>
+    <category term="python"/>
     <contributor>
       <name>Daniel Roy Greenfeld</name>
       <email>daniel@feldroy.com</email>
     </contributor>
-    <published>2025-06-23T20:56:49.362878+00:00</published>
+    <published>2025-07-23T01:59:20.353392+00:00</published>
   </entry>
 </feed>

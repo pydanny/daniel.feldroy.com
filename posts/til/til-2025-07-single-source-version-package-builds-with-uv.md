@@ -1,5 +1,5 @@
 ---
-date: '2025-07-22T10:59:20.353392'
+date: '2025-07-23T01:59:20.353392'
 description: Tired of updating the version in multiple places before publishing a package update? Leery of using inspect.metadata to fetch the package? Here's how to have a single source of version using UV's build subcommand.
 image: /public/logos/til-1.png
 published: true

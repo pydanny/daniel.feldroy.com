@@ -762,6 +762,11 @@ def wellknown_atproto_did():
     return getenv('BLUESKY_ATPROTO', 'Nothing here!')
 
 
+@app.get('/robots.txt')
+def robots():
+    return air.responses.PlainTextResponse(pathlib.Path('public/robots.txt').read_text())
+
+
 @app.get("/{slug}")
 def page_or_redirect1(slug: str):
     redirects_url = redirects.get(slug, None)

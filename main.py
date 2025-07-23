@@ -8,6 +8,7 @@ from fastapi.responses import Response
 from fastapi import HTTPException
 from dateutil import parser
 import pytz
+from os import getenv
 
 
 def Page404(request: air.Request, exc: Exception) -> air.AirResponse:
@@ -754,6 +755,11 @@ def writing_stats():
         ),
         description="Numbers about my writing patterns",
     )
+
+@app.get('/.well-known/atproto-did')
+def wellknown_atproto_did():
+    # for bluesky
+    return getenv('BLUESKY_ATPROTO', 'Nothing here!')
 
 
 @app.get("/{slug}")

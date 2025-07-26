@@ -32,4 +32,4 @@ def func(*args: str, **kwargs: Any):
     pass
 ```
 
-Thanks to [Will McGugan](https://willmcgugan.github.io/) for explaining this to me. I'm a fan of his work, which includes the inestimable [Rich]() and [Textualize] libraries!
+Thanks to [Will McGugan](https://willmcgugan.github.io/) for explaining this to me. I'm a fan of his work, which includes the inestimable [Rich](https://github.com/Textualize/rich) and [Textualize](https://textual.textualize.io/) libraries!

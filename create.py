@@ -1,4 +1,4 @@
-from datetime import datetime
+from datetime import datetime, timezone
 from pathlib import Path
 
 from rich.prompt import Prompt, Confirm
@@ -13,7 +13,7 @@ def main() -> None:
         description: str = Prompt.ask("Description")
         if description:
             break
-    timestamp: str = Prompt.ask("Timestamp", default=datetime.now().isoformat()) 
+    timestamp: str = Prompt.ask("Timestamp", default=datetime.now(timezone.utc).isoformat()) 
     prefix: str = timestamp[:4]
     til: str = Confirm.ask("TIL")
     slug: str = Prompt.ask("Slug", default=f"{timestamp[:7]}-{title.lower().replace(' ', '-')}")

@@ -1,5 +1,5 @@
 ---
-date: '2025-07-26T16:35:07.896468'
+date: '2025-07-26T09:15:07.896468'
 description: A reduction in boilerplate confused me, the answer is that the type to
   define is the value in the containers.
 image: /public/logos/til-1.png

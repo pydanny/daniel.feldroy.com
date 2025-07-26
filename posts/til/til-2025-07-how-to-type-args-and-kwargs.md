@@ -15,7 +15,7 @@ twitter_image: /public/logos/til-1.png
 An oddity of my work for a while has been that I haven't used `*args` and `**kwargs` with type annotations. Recently, however I've been working on code that leans on those things a lot. And I've been ignoring setting types there because this fails wretchedly with type checking libraries:
 
 ```python
-# This fails type checls. :(
+# This fails type checks. :(
 from typing import Any
 
 def func(*args: tuple[str], **kwargs: dict[str, Any]):

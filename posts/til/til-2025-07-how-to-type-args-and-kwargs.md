@@ -5,6 +5,7 @@ description: A reduction in boilerplate confused me, the answer is that the type
 image: /public/logos/til-1.png
 published: true
 tags:
+- howto
 - python
 - TIL
 title: 'TIL: How to type args and kwargs'

@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
   <id>https://daniel.feldroy.com/</id>
   <title>Python posts by Daniel Roy Greenfeld</title>
-  <updated>2025-07-23T01:13:16.808411+00:00</updated>
+  <updated>2025-07-26T08:43:17.596255+00:00</updated>
   <author>
     <name>Daniel Roy Greenfeld</name>
     <email>daniel@feldroy.com</email>
@@ -13,43 +13,38 @@
   <logo>https://daniel.feldroy.com/images/pydanny-cartwheel.png</logo>
   <rights>All rights reserved 2025, Daniel Roy Greenfeld</rights>
   <entry>
-    <id>https://daniel.feldroy.com/posts/til-2025-07-single-source-version-package-builds-with-uv</id>
-    <title>TIL: Single source version package builds with uv</title>
-    <updated>2025-07-23T01:13:16.808601+00:00</updated>
+    <id>https://daniel.feldroy.com/posts/til-2025-07-how-to-type-args-and-kwargs</id>
+    <title>TIL: How to type args and kwargs</title>
+    <updated>2025-07-26T08:43:17.596440+00:00</updated>
     <author>
       <name>Daniel Roy Greenfeld</name>
       <email>daniel@feldroy.com</email>
     </author>
-    <content type="html">&lt;ol&gt;
-&lt;li&gt;Remove &lt;code&gt;version&lt;/code&gt; in &lt;code&gt;pyproject.toml&lt;/code&gt; and replace with &lt;code&gt;dynamic = ["version"]&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;Add &lt;code&gt;[tool.setuptools.dynamic]&lt;/code&gt; and specify the location of the version using this dialogue: &lt;code&gt;version = { attr = "mypackage.__version__" }&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;In your project's root &lt;code&gt;__init__.py&lt;/code&gt;, add a &lt;code&gt;__version__&lt;/code&gt; attribute.&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;Example:&lt;/p&gt;
-&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="c1"&gt;# pyproject.toml&lt;/span&gt;
-&lt;span class="k"&gt;[project]&lt;/span&gt;
-&lt;span class="n"&gt;name&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;mypackage&amp;quot;&lt;/span&gt;
-&lt;span class="n"&gt;dynamic&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;version&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;
-&lt;span class="c1"&gt;# version = &amp;quot;0.1.0&amp;quot; # Don&amp;#39;t set version here&lt;/span&gt;
+    <content type="html">&lt;p&gt;An oddity of my work for a while has been that I haven't used &lt;code&gt;*args&lt;/code&gt; and &lt;code&gt;**kwargs&lt;/code&gt; with type annotations. Recently, however I've been working on code that leans on those things a lot. And I've been ignoring setting types there because this fails wretchedly with type checking libraries:&lt;/p&gt;
+&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="c1"&gt;# This fails type checls. :(&lt;/span&gt;
+&lt;span class="kn"&gt;from&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nn"&gt;typing&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="n"&gt;Any&lt;/span&gt;
 
-&lt;span class="k"&gt;[tool.setuptools.dynamic]&lt;/span&gt;
-&lt;span class="n"&gt;version&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;{&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;attr&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;=&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;mypackage.__version__&amp;quot;&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;}&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="c1"&gt;# Set version here&lt;/span&gt;
+&lt;span class="k"&gt;def&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nf"&gt;func&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="o"&gt;*&lt;/span&gt;&lt;span class="n"&gt;args&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="nb"&gt;tuple&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="nb"&gt;str&lt;/span&gt;&lt;span class="p"&gt;],&lt;/span&gt; &lt;span class="o"&gt;**&lt;/span&gt;&lt;span class="n"&gt;kwargs&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="nb"&gt;dict&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="nb"&gt;str&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;Any&lt;/span&gt;&lt;span class="p"&gt;]):&lt;/span&gt;
+    &lt;span class="k"&gt;pass&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
-&lt;p&gt;Don't forget to specify the version in Python:&lt;/p&gt;
-&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="c1"&gt;# mypackage/__init__.py&lt;/span&gt;
-&lt;span class="n"&gt;__version__&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;0.1.0&amp;quot;&lt;/span&gt;
+&lt;p&gt;That's because the types you set apparently the value of the container. So to make my code pass the type checkers I need to do:&lt;/p&gt;
+&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="c1"&gt;# This passes type checks!&lt;/span&gt;
+&lt;span class="kn"&gt;from&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nn"&gt;typing&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="n"&gt;Any&lt;/span&gt;
+
+&lt;span class="k"&gt;def&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nf"&gt;func&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="o"&gt;*&lt;/span&gt;&lt;span class="n"&gt;args&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="nb"&gt;str&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="o"&gt;**&lt;/span&gt;&lt;span class="n"&gt;kwargs&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="n"&gt;Any&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
+    &lt;span class="k"&gt;pass&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
-&lt;p&gt;Thanks to Audrey Roy Greenfeld for pairing with me on getting this to work.&lt;/p&gt;</content>
-    <link href="https://daniel.feldroy.com/posts/til-2025-07-single-source-version-package-builds-with-uv"/>
-    <summary>Tired of updating the version in multiple places before publishing a package update? Leery of using inspect.metadata to fetch the package? Here's how to have a single source of version using UV's build subcommand.</summary>
-    <category term="TIL"/>
+&lt;p&gt;Thanks to &lt;a href="https://willmcgugan.github.io/"&gt;Will McGugan&lt;/a&gt; for explaining this to me. I'm a fan of his work, which includes the inestimable &lt;a href=""&gt;Rich&lt;/a&gt; and [Textualize] libraries!&lt;/p&gt;</content>
+    <link href="https://daniel.feldroy.com/posts/til-2025-07-how-to-type-args-and-kwargs"/>
+    <summary>A reduction in boilerplate confused me, the answer is that the type to define is the value in the containers.</summary>
     <category term="python"/>
+    <category term="TIL"/>
     <contributor>
       <name>Daniel Roy Greenfeld</name>
       <email>daniel@feldroy.com</email>
     </contributor>
-    <published>2025-07-23T01:59:20.353392+00:00</published>
+    <published>2025-07-26T16:35:07.896468+00:00</published>
   </entry>
 </feed>

@@ -670,13 +670,12 @@ def fitness():
 
         layout = json.dumps(layout)
         chart_name = f"weightChart-{month}"
-        charts.insert(0, air.Div(id=chart_name))
+        charts.append(air.Div(id=chart_name))
         bjj_hours, bjj_minutes = convert_minutes(sum([int(o["BJJ"]) for o in rows]))
         other_hours, other_minutes = convert_minutes(
             sum([int(o["Other"]) for o in rows])
         )
-        charts.insert(
-            1,
+        charts.append(
             air.Div(
                 air.H3(f"{month_str} Summary"),
                 air.P(
@@ -691,8 +690,8 @@ def fitness():
                 ),
             ),
         )
-        charts.insert(
-            1, air.Script(f"Plotly.newPlot('{chart_name}', {fitness}, {layout}, {config});")
+        charts.append(
+            air.Script(f"Plotly.newPlot('{chart_name}', {fitness}, {layout}, {config});")
         )
         current_weight = rows[-1]["Weight"]
 

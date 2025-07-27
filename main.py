@@ -618,6 +618,9 @@ def fitness():
     for row in rows:
         dates[row["Date"][:7]].append(row)
 
+    current_weight = rows[0]["Weight"]        
+
+
     config = {"responsive": True}
     config = json.dumps(config)
 
@@ -693,7 +696,6 @@ def fitness():
         charts.append(
             air.Script(f"Plotly.newPlot('{chart_name}', {fitness}, {layout}, {config});")
         )
-        current_weight = rows[-1]["Weight"]
 
     return Layout(
         air.Title("Fitness Tracking"),

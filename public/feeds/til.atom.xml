@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
   <id>https://daniel.feldroy.com/</id>
   <title>Til posts by Daniel Roy Greenfeld</title>
-  <updated>2025-07-26T09:09:41.431272+00:00</updated>
+  <updated>2025-07-27T17:27:32.335631+00:00</updated>
   <author>
     <name>Daniel Roy Greenfeld</name>
     <email>daniel@feldroy.com</email>
@@ -15,7 +15,7 @@
   <entry>
     <id>https://daniel.feldroy.com/posts/til-2025-07-how-to-type-args-and-kwargs</id>
     <title>TIL: How to type args and kwargs</title>
-    <updated>2025-07-26T09:09:41.431460+00:00</updated>
+    <updated>2025-07-27T17:27:32.335824+00:00</updated>
     <author>
       <name>Daniel Roy Greenfeld</name>
       <email>daniel@feldroy.com</email>
@@ -28,7 +28,7 @@
     &lt;span class="k"&gt;pass&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
-&lt;p&gt;That's because the types you set apparently the value of the container. So to make my code pass the type checkers I need to do:&lt;/p&gt;
+&lt;p&gt;That's because the types you set in the args are the value of the container. So to make my code pass the type checkers I need to do:&lt;/p&gt;
 &lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="c1"&gt;# This passes type checks!&lt;/span&gt;
 &lt;span class="kn"&gt;from&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nn"&gt;typing&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="n"&gt;Any&lt;/span&gt;
 
@@ -36,7 +36,11 @@
     &lt;span class="k"&gt;pass&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
-&lt;p&gt;Thanks to &lt;a href="https://willmcgugan.github.io/"&gt;Will McGugan&lt;/a&gt; for explaining this to me. I'm a fan of his work, which includes the inestimable &lt;a href="https://github.com/Textualize/rich"&gt;Rich&lt;/a&gt; and &lt;a href="https://textual.textualize.io/"&gt;Textualize&lt;/a&gt; libraries!&lt;/p&gt;</content>
+&lt;p&gt;Thanks to &lt;a href="https://willmcgugan.github.io/"&gt;Will McGugan&lt;/a&gt; for explaining this to me. I'm a fan of his work, which includes the inestimable &lt;a href="https://github.com/Textualize/rich"&gt;Rich&lt;/a&gt; and &lt;a href="https://textual.textualize.io/"&gt;Textualize&lt;/a&gt; libraries!&lt;/p&gt;
+&lt;p&gt;Update&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;2025-07-28: Luke Plant points out that Adam Johnson has a good article on this topic: https://adamj.eu/tech/2021/05/11/python-type-hints-args-and-kwargs/&lt;/li&gt;
+&lt;/ul&gt;</content>
     <link href="https://daniel.feldroy.com/posts/til-2025-07-how-to-type-args-and-kwargs"/>
     <summary>A reduction in boilerplate confused me, the answer is that the type to define is the value in the containers.</summary>
     <category term="howto"/>

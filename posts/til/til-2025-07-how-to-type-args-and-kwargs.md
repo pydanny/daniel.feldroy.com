@@ -34,3 +34,9 @@ def func(*args: str, **kwargs: Any):
 
 Thanks to [Will McGugan](https://willmcgugan.github.io/) for explaining this to me. I'm a fan of his work, which includes the inestimable [Rich](https://github.com/Textualize/rich) and [Textualize](https://textual.textualize.io/) libraries!
 
+---
+
+Update
+
+- 2025-07-28: Luke Plant points out that Adam Johnson has a good article on this topic: https://adamj.eu/tech/2021/05/11/python-type-hints-args-and-kwargs/
+

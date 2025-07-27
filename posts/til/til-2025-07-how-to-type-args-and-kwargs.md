@@ -22,7 +22,7 @@ def func(*args: tuple[str], **kwargs: dict[str, Any]):
     pass
 ```
 
-That's because the types you set apparently the value of the container. So to make my code pass the type checkers I need to do:
+That's because the types you set in the args are the value of the container. So to make my code pass the type checkers I need to do:
 
 ```python
 # This passes type checks!
@@ -33,3 +33,4 @@ def func(*args: str, **kwargs: Any):
 ```
 
 Thanks to [Will McGugan](https://willmcgugan.github.io/) for explaining this to me. I'm a fan of his work, which includes the inestimable [Rich](https://github.com/Textualize/rich) and [Textualize](https://textual.textualize.io/) libraries!
+

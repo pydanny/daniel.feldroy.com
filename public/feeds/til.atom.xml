@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
   <id>https://daniel.feldroy.com/</id>
   <title>Til posts by Daniel Roy Greenfeld</title>
-  <updated>2025-07-27T17:27:32.335631+00:00</updated>
+  <updated>2025-07-31T00:12:10.503784+00:00</updated>
   <author>
     <name>Daniel Roy Greenfeld</name>
     <email>daniel@feldroy.com</email>
@@ -15,7 +15,7 @@
   <entry>
     <id>https://daniel.feldroy.com/posts/til-2025-07-how-to-type-args-and-kwargs</id>
     <title>TIL: How to type args and kwargs</title>
-    <updated>2025-07-27T17:27:32.335824+00:00</updated>
+    <updated>2025-07-31T00:12:10.503974+00:00</updated>
     <author>
       <name>Daniel Roy Greenfeld</name>
       <email>daniel@feldroy.com</email>

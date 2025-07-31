@@ -8,7 +8,7 @@ tags:
 title: 'Unpack for keyword arguments'
 ---
 
-Previously I wrote a [TIL on how to better type annotate callables with `*args` and `**kwargs`](https://daniel.feldroy.com/posts/til-2025-07-how-to-type-args-and-kwargs) - in essence you ignore the container and worry just about the content of the container. This makes sense, as `*args` are a tuple and `**wkwargs` keys are strings.
+Previously I wrote a [TIL on how to better type annotate callables with `*args` and `**kwargs`](https://daniel.feldroy.com/posts/til-2025-07-how-to-type-args-and-kwargs) - in essence you ignore the container and worry just about the content of the container. This makes sense, as `*args` are a tuple and `**kwargs` keys are strings.
 
 Here's an example of that in action:
 

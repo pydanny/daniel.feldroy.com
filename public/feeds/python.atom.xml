@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
   <id>https://daniel.feldroy.com/</id>
   <title>Python posts by Daniel Roy Greenfeld</title>
-  <updated>2025-07-27T17:27:32.332436+00:00</updated>
+  <updated>2025-07-31T00:12:10.500612+00:00</updated>
   <author>
     <name>Daniel Roy Greenfeld</name>
     <email>daniel@feldroy.com</email>
@@ -15,12 +15,12 @@
   <entry>
     <id>https://daniel.feldroy.com/posts/2025-07-unpack-for-keyword-arguments</id>
     <title>Unpack for keyword arguments</title>
-    <updated>2025-07-27T17:27:32.332621+00:00</updated>
+    <updated>2025-07-31T00:12:10.500798+00:00</updated>
     <author>
       <name>Daniel Roy Greenfeld</name>
       <email>daniel@feldroy.com</email>
     </author>
-    <content type="html">&lt;p&gt;Previously I wrote a &lt;a href="https://daniel.feldroy.com/posts/til-2025-07-how-to-type-args-and-kwargs"&gt;TIL on how to better type annotate callables with &lt;code&gt;*args&lt;/code&gt; and &lt;code&gt;**kwargs&lt;/code&gt;&lt;/a&gt; - in essence you ignore the container and worry just about the content of the container. This makes sense, as &lt;code&gt;*args&lt;/code&gt; are a tuple and &lt;code&gt;**wkwargs&lt;/code&gt; keys are strings.&lt;/p&gt;
+    <content type="html">&lt;p&gt;Previously I wrote a &lt;a href="https://daniel.feldroy.com/posts/til-2025-07-how-to-type-args-and-kwargs"&gt;TIL on how to better type annotate callables with &lt;code&gt;*args&lt;/code&gt; and &lt;code&gt;**kwargs&lt;/code&gt;&lt;/a&gt; - in essence you ignore the container and worry just about the content of the container. This makes sense, as &lt;code&gt;*args&lt;/code&gt; are a tuple and &lt;code&gt;**kwargs&lt;/code&gt; keys are strings.&lt;/p&gt;
 &lt;p&gt;Here's an example of that in action:&lt;/p&gt;
 &lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="k"&gt;def&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nf"&gt;func&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="o"&gt;*&lt;/span&gt;&lt;span class="n"&gt;args&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="o"&gt;**&lt;/span&gt;&lt;span class="n"&gt;kwargs&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
 &lt;span class="o"&gt;...&lt;/span&gt;     &lt;span class="nb"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="sa"&gt;f&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;&lt;/span&gt;&lt;span class="si"&gt;{&lt;/span&gt;&lt;span class="n"&gt;args&lt;/span&gt;&lt;span class="si"&gt;=}&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;

@@ -286,6 +286,8 @@ def Layout(
                         " | ",
                         air.A("Twitter", href="https://twitter.com/pydanny"),
                         " | ",
+                        air.A("Github", href="https://github.com/pydanny"),
+                        " | ",                        
                         "Feeds: ",
                         air.A("All", href="/feeds/atom.xml"),
                         ", ",

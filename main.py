@@ -3,7 +3,7 @@ import yaml
 import collections, functools, pathlib, json, csv
 from datetime import datetime
 from fastapi.staticfiles import StaticFiles
-from air import RedirectResponse
+from air.responses import RedirectResponse
 from fastapi.responses import Response
 from fastapi import HTTPException
 from dateutil import parser

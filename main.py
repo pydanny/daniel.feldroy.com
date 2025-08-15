@@ -759,7 +759,7 @@ def writing_stats():
 
 @app.get('/.well-known/atproto-did')
 def wellknown_atproto_did():
-    # for bluesky
+    # for bluesky!
     return air.responses.PlainTextResponse('did:plc:qmkhbnaaxxr7pcdkgdpis6pi')
 
 

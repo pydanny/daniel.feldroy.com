@@ -8,6 +8,7 @@ from fastapi.responses import Response
 from fastapi import HTTPException
 from dateutil import parser
 import pytz
+from os import getenv
 
 
 def Page404(request: air.Request, exc: Exception) -> air.AirResponse:
@@ -19,6 +20,15 @@ def Page404(request: air.Request, exc: Exception) -> air.AirResponse:
         description="404 not found",
         status_code=404,
     )
+
+import sentry_sdk
+
+sentry_sdk.init(
+    dsn=getenv('SENTRY_DSN'),
+    # Add data like request headers and IP for users,
+    # see https://docs.sentry.io/platforms/python/data-management/data-collected/ for more info
+    send_default_pii=True,
+)
 
 
 app = air.Air(exception_handlers={404: Page404})
@@ -767,6 +777,10 @@ def wellknown_atproto_did():
 def robots():
     return air.responses.PlainTextResponse(pathlib.Path('public/robots.txt').read_text())
 
+@app.page
+def blarg():
+    return 1/0
+
 
 @app.get("/{slug}")
 def page_or_redirect1(slug: str):
@@ -788,3 +802,5 @@ def page_or_redirect2(slug_1: str, slug_2: str):
         return MarkdownPage(slug_1 + "/" + slug_2)
     except TypeError:
         raise HTTPException(status_code=404)
+
+

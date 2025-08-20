@@ -97,7 +97,7 @@ def list_posts(
     return [x for x in filter(lambda x: x["published"] is published, posts)]
 
 
-@functools.lru_cache
+# @functools.lru_cache
 def get_post(slug: str) -> tuple | None:
     posts = list_posts(content=True)
     post = next((x for x in posts if x["slug"] == slug), None)
@@ -106,7 +106,7 @@ def get_post(slug: str) -> tuple | None:
     return (post["content"], post)
 
 
-@functools.cache
+# @functools.cache
 def list_tags() -> dict[str, int]:
     unsorted_tags = {}
     for post in list_posts():
@@ -510,7 +510,7 @@ def tag(slug: str):
     )
 
 
-@functools.cache
+# @functools.cache
 def _search(q: str = ""):
     def _s(obj: dict, name: str, q: str):
         content = obj.get(name, "")

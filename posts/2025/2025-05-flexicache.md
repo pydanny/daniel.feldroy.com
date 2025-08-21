@@ -9,7 +9,7 @@ tags:
   - answerdotai
 time_to_read: 2
 type: post
-image: /public/images/exploring-flexicache.png
+image: https://f004.backblazeb2.com/file/daniel-feldroy-com/public/images/exploring-flexicache.png
 ---
 
 When coding in Python I find I really like to use decorators to cache results from functions and methods, often to memory and sometimes to ephemeral stores like memcached. In fact, I've worked on and created several cache decorators, including [one](https://pypi.org/project/cached-property/) that influenced the implementation of the `@cached_property` decorator in Python 3.8.
@@ -174,7 +174,7 @@ assert random_func_5(3) == random_func_5(3)
 assert result1_1 != random_func_5(1)
 ```
 
-![/public/images/exploring-flexicache.png](/public/images/exploring-flexicache.png)
+![/public/images/exploring-flexicache.png](https://f004.backblazeb2.com/file/daniel-feldroy-com/public/images/exploring-flexicache.png)
 
 ```python
 import marimo as mo

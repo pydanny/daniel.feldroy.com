@@ -8,7 +8,7 @@ tags:
   - cheatsheet
 time_to_read: 2
 title: Pretty Formatting JSON in the Django Admin
-[image: https://f004.backblazeb2.com/file/daniel-feldroy-com/public/images/admin-pretty-json.png]
+image: https://f004.backblazeb2.com/file/daniel-feldroy-com/public/images/admin-pretty-json.png
 ---
 
 Recently I was writing code to interact with a third-party API. The API

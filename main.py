@@ -623,7 +623,7 @@ def convert_minutes(total_minutes):
 
 @app.page
 def fitness():
-    with open("public/fitness.csv") as f:
+    with open("fitness.csv") as f:
         rows = [o for o in csv.DictReader(f)]
 
     dates = collections.defaultdict(list)

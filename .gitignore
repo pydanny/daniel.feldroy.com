@@ -72,3 +72,4 @@ site
 .ruff_cache
 .venv
 .playground
+public/

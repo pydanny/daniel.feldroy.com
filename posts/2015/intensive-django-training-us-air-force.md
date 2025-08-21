@@ -7,7 +7,7 @@ tags:
 - python
 time_to_read: 3
 title: Intensive Django Training with the US Air Force
-[image: https://f004.backblazeb2.com/file/daniel-feldroy-com/public/images/two-scoops-academy-91cos-django-training.png]
+image: https://f004.backblazeb2.com/file/daniel-feldroy-com/public/images/two-scoops-academy-91cos-django-training.png
 ---
 
 Last week [Audrey Roy Greenfeld](https://audrey.feldroy.com) and I

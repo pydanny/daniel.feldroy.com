@@ -9,8 +9,8 @@ tags:
 - hackathon
 - kraken
 title: London Tech Zero Hackathon on July 1 and 2!
-image: /public/images/tech-zero-hackathon-square.png
-twitter_image: /public/images/tech-zero-hackathon-square.png
+image: https://f004.backblazeb2.com/file/daniel-feldroy-com/public/images/tech-zero-hackathon-square.png
+twitter_image: https://f004.backblazeb2.com/file/daniel-feldroy-com/public/images/tech-zero-hackathon-square.png
 og_url: https://daniel.feldroy.com/posts/2024-06-london-hackathon-on-july-1-and-2
 ---
 
@@ -41,4 +41,4 @@ Schedule:
 - July 2: Judging at 3pm
 
 
-![London Tech Zero Hackathon](/public/images/tech-zero-hackathon-square.png)
+![London Tech Zero Hackathon](https://f004.backblazeb2.com/file/daniel-feldroy-com/public/images/tech-zero-hackathon-square.png)

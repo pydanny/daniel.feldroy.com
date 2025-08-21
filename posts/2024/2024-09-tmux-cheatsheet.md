@@ -8,8 +8,8 @@ tags:
  - terminal
  - tools
 title: tmux cheatsheet
-image: /public/images/tmux-logo-medium.png
-twitter_image: /public/images/tmux-logo-medium.png
+image: https://f004.backblazeb2.com/file/daniel-feldroy-com/public/images/tmux-logo-medium.png
+twitter_image: https://f004.backblazeb2.com/file/daniel-feldroy-com/public/images/tmux-logo-medium.png
 ---
 
 The tmux terminal utility allows for splitting terminal into multiple window panes. The splits can be vertical or horizontal. Installation instructions are [here](https://github.com/tmux/tmux/wiki/Installing).
@@ -98,4 +98,4 @@ Note: Too much config can make your tmux alien to others, making it hard for you
 
 More to come!
 
-![](/public/images/tmux-logo-medium.png)
+![](https://f004.backblazeb2.com/file/daniel-feldroy-com/public/images/tmux-logo-medium.png)

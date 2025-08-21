@@ -21,4 +21,4 @@ Everyone is right, its not hard to figure out. I would have to say that the docs
 
 And since a picture says a thousand words...
 
-[![](/public/images/zope-auth.jpg)](/public/images/zope-auth.jpg)
+[![](https://f004.backblazeb2.com/file/daniel-feldroy-com/public/images/zope-auth.jpg)](https://f004.backblazeb2.com/file/daniel-feldroy-com/public/images/zope-auth.jpg)

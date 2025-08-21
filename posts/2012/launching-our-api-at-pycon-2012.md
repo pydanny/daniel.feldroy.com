@@ -68,7 +68,7 @@ origin.
 [API Contest
 Details](https://developers.consumernotebook.com/contest.html)
 
-[![image](/public/images/6821231296_d0670e84b7_m.jpg)](https://www.flickr.com/photos/pydanny/6821231296/sizes/m/in/photostream/)
+[![image](https://f004.backblazeb2.com/file/daniel-feldroy-com/public/images/6821231296_d0670e84b7_m.jpg)](https://www.flickr.com/photos/pydanny/6821231296/sizes/m/in/photostream/)
 
 ---
 
@@ -107,7 +107,7 @@ Details:
     What to bring: Camera!
     What to bring if you are participating: Workout clothes, water bottle
 
-[![image](/public/images/6821195620_2b7870a39c_m.jpg)](https://www.flickr.com/photos/pydanny/6821195620/sizes/s/in/photostream/)
+[![image](https://f004.backblazeb2.com/file/daniel-feldroy-com/public/images/6821195620_2b7870a39c_m.jpg)](https://www.flickr.com/photos/pydanny/6821195620/sizes/s/in/photostream/)
 
 **Location: The PyCon upstairs central open space**
 

@@ -183,4 +183,4 @@ identifier, along with his name. I can change the name in the URL or
 even in the database, but so long as I don't modify the identifying
 part of the URL (`1m`), his information always shows up.
 
-![image](/public/images/petcheatsheets-url-example.png)]
+![image](https://f004.backblazeb2.com/file/daniel-feldroy-com/public/images/petcheatsheets-url-example.png)

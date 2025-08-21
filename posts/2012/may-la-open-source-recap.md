@@ -20,7 +20,7 @@ projects. It was awesome! Tons of open source projects saw
 contributions, and people across languages and frameworks worked
 together.
 
-[![Hack Awayyy!!!](image/7193954598_1b071cb5e4.jpg)](https://www.flickr.com/photos/59834630@N07/7193954598/)
+[![Hack Awayyy!!!](https://f004.backblazeb2.com/file/daniel-feldroy-com/public/images/7193954598_1b071cb5e4.jpg)](https://www.flickr.com/photos/59834630@N07/7193954598/)
 
 ## Event Background
 
@@ -65,4 +65,4 @@ If you want to sponsor or volunteer, email me at pydanny (at)
 cartwheelweb.com or audreyr (at) cartwheelweb.com. We go out of our way
 to ensure that sponsors and volunteers feel appreciated.
 
-[![Los Angeles Open Source Sprint](/public/images/7132778527_6e3b49b313_o.png)](https://www.flickr.com/photos/pydanny/7132778527/)
+[![Los Angeles Open Source Sprint](https://f004.backblazeb2.com/file/daniel-feldroy-com/public/images/7132778527_6e3b49b313_o.png)](https://www.flickr.com/photos/pydanny/7132778527/)

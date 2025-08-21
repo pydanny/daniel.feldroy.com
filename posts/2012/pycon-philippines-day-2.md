@@ -143,4 +143,4 @@ I had this chance to bring PyCon to so many wonderful people.
 
 More thoughts on PyCon Philippines in a forthcoming blog post.
 
-[![image](/public/images/7516869028_ff24aaa027_z.jpg)](https://www.flickr.com/photos/pydanny/7516869028/)
+[![image](https://f004.backblazeb2.com/file/daniel-feldroy-com/public/images/7516869028_ff24aaa027_z.jpg)](https://www.flickr.com/photos/pydanny/7516869028/)

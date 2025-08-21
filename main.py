@@ -36,7 +36,7 @@ app = air.Air(exception_handlers={404: Page404})
 # Mount static files for CSS
 app.mount("/public", StaticFiles(directory="public"), name="public")
 
-default_social_image = "/public/images/profile.jpg"
+default_social_image = "https://f004.backblazeb2.com/file/daniel-feldroy-com/public/images/profile.jpg"
 
 redirects = json.loads(pathlib.Path(f"redirects.json").read_text())
 
@@ -201,8 +201,8 @@ def Layout(
     *children,
     title="Daniel Roy Greenfeld",
     description="Daniel Roy Greenfeld's personal blog",
-    image="https://daniel.feldroy.com/public/images/profile.jpg",
-    twitter_image="https://daniel.feldroy.com/public/images/profile.jpg",
+    image="https://f004.backblazeb2.com/file/daniel-feldroy-com/public/images/profile.jpg",
+    twitter_image="https://f004.backblazeb2.com/file/daniel-feldroy-com/public/images/profile.jpg",
     url="http://daniel.feldroy.com/",
     status_code=200,
 ) -> air.AirResponse:
@@ -258,7 +258,7 @@ def Layout(
                         air.Img(
                             class_="borderCircle",
                             alt="Daniel Roy Greenfeld",
-                            src="/public/images/profile.jpg",
+                            src="https://f004.backblazeb2.com/file/daniel-feldroy-com/public/images/profile.jpg",
                             width="108",
                             height="108",
                         ),
@@ -442,7 +442,7 @@ def article(slug: str):
     if "TIL" in metadata["tags"]:
         specials = air.A(
             air.Img(
-                src="/public/logos/til-1.png",
+                src="https://f004.backblazeb2.com/file/daniel-feldroy-com/public/logos/til-1.png",
                 alt="Today I Learned",
                 width="200",
                 height="200",

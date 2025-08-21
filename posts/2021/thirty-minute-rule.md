@@ -10,8 +10,8 @@ tags:
   - advice
 time_to_read: 3
 title: The Thirty Minute Rule
-image: /public/images/6933443849_51316a7cb7.jpg
-twitter_image: /public/images/6933443849_51316a7cb7.jpg
+image: https://f004.backblazeb2.com/file/daniel-feldroy-com/public/images/6933443849_51316a7cb7.jpg
+twitter_image: https://f004.backblazeb2.com/file/daniel-feldroy-com/public/images/6933443849_51316a7cb7.jpg
 ---
 
 When it comes to coding (or anything related to it) there's a rule I believe in with all my heart. It's the **Thirty Minute Rule**.
@@ -59,7 +59,7 @@ Gently guide the person to others who can help them, or to online help methods. 
 
 Adjust the duration to best suit your team. A common variation is to increase it to 60 minutes.
 
-![Sitting at my first computer](/public/images/6933443849_51316a7cb7.jpg)
+![Sitting at my first computer](https://f004.backblazeb2.com/file/daniel-feldroy-com/public/images/6933443849_51316a7cb7.jpg)
 
 _Sitting at my first computer._
 

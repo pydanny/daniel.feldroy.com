@@ -2,7 +2,7 @@
 date: "2021-08-08"
 published: true
 slug: crust-european-bread
-image: /public/images/crusty-european-bread.png
+image: https://f004.backblazeb2.com/file/daniel-feldroy-com/public/images/crusty-european-bread.png
 tags:
   - recipe
 time_to_read: 5
@@ -10,7 +10,7 @@ title: Crusty European Bread
 description: A recipe to make tasty bread with a crust.
 ---
 
-![Crusty European Bread!](/public/images/crusty-european-bread.png)
+![Crusty European Bread!](https://f004.backblazeb2.com/file/daniel-feldroy-com/public/images/crusty-european-bread.png)
 
 I was inspired to make crusty European bread from our travels in Italy and Spain. My first attempt didn't have an enjoyable crust because I relied on butter. It turns out the secret ingredient is steam in the oven followed by letting it cool in the oven.
 

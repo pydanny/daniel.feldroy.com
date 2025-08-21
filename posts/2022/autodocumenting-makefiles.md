@@ -2,7 +2,7 @@
 date: "2022-01-14T22:20:50.52Z"
 published: true
 slug: whats-the-ultimate-reason-for-working-at-octopus-energy-part-2
-image: /public/images/autodocumenting-makefiles.png
+image: https://f004.backblazeb2.com/file/daniel-feldroy-com/public/images/autodocumenting-makefiles.png
 tags:
   - python
   - howto
@@ -110,4 +110,4 @@ run:  ## Start the dev server
 	python manage.py runserver    
 
 ``` 
-![Autodocumenting Makefiles](/public/images/autodocumenting-makefiles.png)
+![Autodocumenting Makefiles](https://f004.backblazeb2.com/file/daniel-feldroy-com/public/images/autodocumenting-makefiles.png)

@@ -133,7 +133,7 @@ $ binstar upload win-64/cookiecutter-0.9.1-BUILDNUM.tar.bz2
 work](https://binstar.org/pydanny/cookiecutter) or take a look right
 below at what's on [Anaconda.org](https://anaconda.org):
 
-[![image](/public/images/packages.png)](https://anaconda.org/search?q=cookiecutter)
+[![image](https://f004.backblazeb2.com/file/daniel-feldroy-com/public/images/packages.png)](https://anaconda.org/search?q=cookiecutter)
 
 # Try installing Cookiecutter with conda!
 

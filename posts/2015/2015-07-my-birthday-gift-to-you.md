@@ -15,7 +15,7 @@ My birthday is coming up on July 24th, and I'd like to celebrate by giving back.
 
 Starting on July 21st and ending sometime late on July 25th, you can download free copies of my dark fantasy novel, [Into the Brambles](https://mybook.to/itb) to your Kindle device or app.
 
-![](/public/images/into-the-brambles-free-on-birthday-484x252.jpg)
+![](https://f004.backblazeb2.com/file/daniel-feldroy-com/public/images/into-the-brambles-free-on-birthday-484x252.jpg)
 
 ### [Into the Brambles](https://mybook.to/itb)
 

@@ -10,7 +10,8 @@ title: Titlecasing Markdown Headers with Python
 image: /public/images/title-case.png
 ---
 
-[![Markdown](/public/images/title-case.png)](/public/images/title-case.png)
+[![Markdown](https://f004.backblazeb2.com/file/daniel-feldroy-com/public/images/title-case.png)](https://f004.backblazeb2.com/file/daniel-feldroy-com/public/images/title-case.png)
+[![Markdown](https://f004.backblazeb2.com/file/daniel-feldroy-com/public/images/title-case.png)](https://f004.backblazeb2.com/file/daniel-feldroy-com/public/images/title-case.png)
 
 Recently I've been writing a lot of Markdown. While not as
 sophisticated as ReStructuredText, it's simplicity is nice for

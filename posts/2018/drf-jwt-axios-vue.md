@@ -13,7 +13,7 @@ time_to_read: 3
 title: Authenticating via JWT using Django, Axios, and Vue
 ---
 
-![VueJS Logo](/public/images/vuelogo.png)
+![VueJS Logo](https://f004.backblazeb2.com/file/daniel-feldroy-com/public/images/vuelogo.png)
 
 Getting Django Rest Framework, JWT, Axios, and Vue.js to play nice isn't easy. Here's my quick-and-dirty cheatsheet that I wrote while glueing the pieces together.
 

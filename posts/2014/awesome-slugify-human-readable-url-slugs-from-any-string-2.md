@@ -63,7 +63,7 @@ if __name__ == "__main__":
     pytest.main()
 ```
 
-![I ♥ your unicode smile](/public/images/i-♥-your-unicode-smile.png)
+![I ♥ your unicode smile](https://f004.backblazeb2.com/file/daniel-feldroy-com/public/images/i-♥-your-unicode-smile.png)
 
 ### More Practical Applications
 

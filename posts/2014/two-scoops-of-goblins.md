@@ -32,4 +32,4 @@ requests for
 'Django'](https://www.amazon.com/s/ref=nb_sb_noss_2?url=search-alias%3Daps&field-keywords=django&tag=mlinar-20)
 even more.
 
-![image](/public/images/two-scoops-of-goblins.png)
+![image](https://f004.backblazeb2.com/file/daniel-feldroy-com/public/images/two-scoops-of-goblins.png)

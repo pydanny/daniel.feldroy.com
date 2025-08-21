@@ -8,7 +8,7 @@ time_to_read: 4
 title: setup.py tricks
 ---
 
-![Setup.py tricks](/public/images/setup.png)
+![Setup.py tricks](https://f004.backblazeb2.com/file/daniel-feldroy-com/public/images/setup.png)
 
 Seasons greetings!
 

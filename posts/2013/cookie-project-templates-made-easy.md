@@ -16,7 +16,7 @@ tags:
 time_to_read: 5
 title: "Cookiecutter: Project Templates Made Easy"
 description: Cookiecutter makes creating and maintaining project templates easy and intuitive.
-image: /public/images/cookiecutter_medium.png
+image: https://f004.backblazeb2.com/file/daniel-feldroy-com/public/images/cookiecutter_medium.png
 og_url: https://daniel.feldroy.com/posts/cookie-project-templates-made-easy
 ---
 
@@ -250,6 +250,6 @@ Jinja2's `{% raw %}` template tag:
 {% endraw %}
 ```
 
-[![Cookiecutter logo](/public/images/cookiecutter_medium.png)](https://github.com/audreyr/cookiecutter)
+[![Cookiecutter logo](https://f004.backblazeb2.com/file/daniel-feldroy-com/public/images/cookiecutter_medium.png)](https://github.com/audreyr/cookiecutter)
 
 - **Update 09/20/2013**: Test coverage increased to 98% from 91%.

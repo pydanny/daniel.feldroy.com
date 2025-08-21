@@ -31,4 +31,4 @@ over the internet.
 
 Hasta pronto!
 
-[![image](/public/images/800px-Flag_of_Argentina.png)](https://en.wikipedia.org/wiki/Argentina)
+[![image](https://f004.backblazeb2.com/file/daniel-feldroy-com/public/images/800px-Flag_of_Argentina.png)](https://en.wikipedia.org/wiki/Argentina)

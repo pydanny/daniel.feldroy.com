@@ -94,7 +94,7 @@ This should also work with
 [django-vanilla-views](https://django-vanilla-views.org), but I haven't
 tested it yet.
 
-[![image](/public/images/form-attributes.png)](audrey.feldroy.com)
+[![image](https://f004.backblazeb2.com/file/daniel-feldroy-com/public/images/form-attributes.png)](audrey.feldroy.com)
 
 # See you at BarCamp Django SF!
 

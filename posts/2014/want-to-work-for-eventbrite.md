@@ -75,4 +75,4 @@ post.
 
 Good luck!
 
-[![image](/public/images/eventbrite_logo_gradient_v2.png)](https://www.eventbrite.com)
+[![image](https://f004.backblazeb2.com/file/daniel-feldroy-com/public/images/eventbrite_logo_gradient_v2.png)](https://www.eventbrite.com)

@@ -12,13 +12,13 @@ tags:
 time_to_read: 1
 title: I Married Audrey Roy
 description: The story of one of the best days of my life.
-image: /public/images/couple.jpg
+image: https://f004.backblazeb2.com/file/daniel-feldroy-com/public/images/couple.jpg
 ---
 
 In a small, private family ceremony on December 27th, 2013 I exchanged
 wedding vows with [Audrey Roy](https://audrey.feldroy.com).
 
-![image](/public/images/vows.jpg)
+![image](https://f004.backblazeb2.com/file/daniel-feldroy-com/public/images/vows.jpg)
 
 It was an incredible day. I'll savor the moment we promised ourselves
 to each other in matrimony forever. She is the other half of my soul,
@@ -49,4 +49,4 @@ could be fun...
 This image is a link to a short collection of photos from the incredible
 photographer, Lindy DiMaio. More to come:
 
-![Married couple sitting together](/public/images/couple.jpg)
+![Married couple sitting together](https://f004.backblazeb2.com/file/daniel-feldroy-com/public/images/couple.jpg)

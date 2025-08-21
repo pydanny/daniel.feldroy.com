@@ -34,7 +34,7 @@ grid.
 - Took a fun class with Audrey. We did woodshop!
 - Learned how to do [Aú Batido](https://en.wikipedia.org/wiki/L-kick)!
 
-[![image](/public/images/aubatido.jpg)](/public/images/aubatido.jpg)
+[![image](https://f004.backblazeb2.com/file/daniel-feldroy-com/public/images/aubatido.jpg)](https://f004.backblazeb2.com/file/daniel-feldroy-com/public/images/aubatido.jpg)
 
 ## General Accomplishments
 

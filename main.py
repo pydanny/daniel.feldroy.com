@@ -34,7 +34,7 @@ sentry_sdk.init(
 app = air.Air(exception_handlers={404: Page404})
 
 # Mount static files for CSS
-# app.mount("/public", StaticFiles(directory="public"), name="public")
+app.mount("/public", StaticFiles(directory="public"), name="public")
 
 default_social_image = "https://f004.backblazeb2.com/file/daniel-feldroy-com/public/images/profile.jpg"
 

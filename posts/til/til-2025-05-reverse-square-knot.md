@@ -1,14 +1,14 @@
 ---
 date: '2025-05-06T15:50:48.417058'
 description: Useful for martial arts with belts, a "reverse square knot," also known as a right square knot or reverse reef knot, is essentially a square knot tied in the opposite order. Instead of the first working cord going over the other cords, it goes under them first.
-image: /public/logos/til-1.png
+image: https://f004.backblazeb2.com/file/daniel-feldroy-com/public/logos/til-1.png
 published: true
 tags:
 - TIL
 - martial arts
 - bjj
 title: 'TIL: Reverse Square Knot'
-twitter_image: /public/logos/til-1.png
+twitter_image: https://f004.backblazeb2.com/file/daniel-feldroy-com/public/logos/til-1.png
 ---
 
 For years I've used a basic square knot to tie my belt in various martial arts. The problem is that while I tie it neatly, it always comes undone. It doesn't matter if was the stand-up striking arts of my younger years or the   grappling-focused Brazilian Jiu-Jitsu I do now - the knot always comes undone.
@@ -19,7 +19,7 @@ The improved knot is an incredible upgrade, meaning I can focus on my training r
 
 Here's the proof of my first good attempt, a photo I took after a **2 hour class where it never came undone**. 
 
-![reverse-square-knot](/public/images/reverse-square-knot.jpg)
+![reverse-square-knot](https://f004.backblazeb2.com/file/daniel-feldroy-com/public/images/reverse-square-knot.jpg)
 
 *Note: I had just sparred a few rounds and the belt got twisted. Ignore the twists and just admire the still-tied belt.*
 

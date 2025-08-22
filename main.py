@@ -88,7 +88,7 @@ else:
     # The following functions are three content loading. They are cached in
     # memory to boost the speed of the site. In production at a minumum the
     # app is restarted every time the project is deployed.
-    @functools.cache
+    # @functools.cache
     def list_posts(
         published: bool = True, posts_dirname="posts", content=False
     ) -> list[dict]:
@@ -110,7 +110,7 @@ else:
         return [x for x in filter(lambda x: x["published"] is published, posts)]
 
 
-    @functools.lru_cache
+    # @functools.lru_cache
     def get_post(slug: str) -> tuple | None:
         posts = list_posts(content=True)
         post = next((x for x in posts if x["slug"] == slug), None)
@@ -119,7 +119,7 @@ else:
         return (post["content"], post)
 
 
-    @functools.cache
+    # @functools.cache
     def list_tags() -> dict[str, int]:
         unsorted_tags = {}
         for post in list_posts():
@@ -523,7 +523,7 @@ else:
         )
 
 
-    @functools.cache
+    # @functools.cache
     def _search(q: str = ""):
         def _s(obj: dict, name: str, q: str):
             content = obj.get(name, "")

@@ -1,0 +1,47 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
+  <id>https://daniel.feldroy.com/</id>
+  <title>Inside the head of Daniel Roy Greenfeld</title>
+  <updated>2025-08-22T03:15:52.978351+00:00</updated>
+  <author>
+    <name>Daniel Roy Greenfeld</name>
+    <email>daniel@feldroy.com</email>
+    <uri>https://daniel.feldroy.com</uri>
+  </author>
+  <link href="https://daniel.feldroy.com" rel="alternate"/>
+  <generator uri="https://lkiesow.github.io/python-feedgen" version="1.0.0">python-feedgen</generator>
+  <logo>https://daniel.feldroy.com/images/pydanny-cartwheel.png</logo>
+  <rights>All rights reserved 2025, Daniel Roy Greenfeld</rights>
+  <entry>
+    <id>https://daniel.feldroy.com/posts/til-2025-08-single-source-version-package-builds-with-uv-redux</id>
+    <title>TIL: Single source version package builds with uv (redux)</title>
+    <updated>2025-08-22T03:15:53.282022+00:00</updated>
+    <author>
+      <name>Daniel Roy Greenfeld</name>
+      <email>daniel@feldroy.com</email>
+    </author>
+    <content type="html">&lt;p&gt;Not that long ago I wrote about &lt;a href="https://daniel.feldroy.com/posts/til-2025-07-single-source-version-package-builds-with-uv"&gt;how to use UV to build packages with a single source of truth for the version number&lt;/a&gt;. Since then, my friend &lt;a href="https://adamj.eu/"&gt;Adam Johnson&lt;/a&gt; has pointed out that I could be doing it better. Here's how &lt;a href="https://adamj.eu/tech/2025/07/30/python-check-package-version-importlib-metadata-version/"&gt;he demonstrated&lt;/a&gt; I should be doing it instead.&lt;/p&gt;
+&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="c1"&gt;# pyproject.toml&lt;/span&gt;
+&lt;span class="k"&gt;[project]&lt;/span&gt;
+&lt;span class="n"&gt;name&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;air&amp;quot;&lt;/span&gt;
+&lt;span class="n"&gt;version&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;0.25.0&amp;quot;&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="c1"&gt;# This is the source of truth for the version number&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;The way to check programmatically the version number is to rely not on someone setting &lt;code&gt;__version__&lt;/code&gt; in the code, but rather to use the following technique:&lt;/p&gt;
+&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="kn"&gt;from&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nn"&gt;importlib.metadata&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="n"&gt;version&lt;/span&gt;
+&lt;span class="n"&gt;version&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;version&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;air&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="nb"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;version&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;  &lt;span class="c1"&gt;# This will print &amp;quot;0.25.0&amp;quot;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Thanks for the tip, Adam! This is a much cleaner and tool friendly way to ensure that the version number is consistent across your package without having to manually update it in multiple places.&lt;/p&gt;</content>
+    <link href="https://daniel.feldroy.com/posts/til-2025-08-single-source-version-package-builds-with-uv-redux"/>
+    <summary>Tired of updating the version in multiple places before publishing a package update? Here's how Adam Johnson told me I should be doing it.</summary>
+    <category term="TIL"/>
+    <category term="python"/>
+    <contributor>
+      <name>Daniel Roy Greenfeld</name>
+      <email>daniel@feldroy.com</email>
+    </contributor>
+    <published>2025-08-22T02:20:08.473528+00:00</published>
+  </entry>
+</feed>

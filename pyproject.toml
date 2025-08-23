@@ -5,7 +5,7 @@ description = "Add your description here"
 readme = "README.md"
 requires-python = ">=3.13"
 dependencies = [
-    "air[standard]>=0.25.0",
+    "air[standard]>=0.25.2",
     "feedgen>=1.0.0",
     # "hypercorn>=0.17.3",
     "pyinstrument>=5.1.1",

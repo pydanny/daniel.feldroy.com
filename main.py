@@ -169,11 +169,21 @@ else:
         This renders a blog posts short display used for the index, article list, and tags.
         """
         return air.Span(
-            air.H2(air.A(title, href=f"/posts/{slug}")),
-            air.P(
-                description, air.Br(), air.Small(air.Time(convert_dtstr_to_dt(timestamp)))
-            ),
-        )
+            air.H3(air.A(title, href=f"/posts/{slug}")),
+            air.P(air.Small(air.Time(convert_dtstr_to_dt(timestamp)))),
+        )        
+        # return  TILPreview(
+        #     title=title,
+        #     slug=slug,
+        #     timestamp=timestamp,
+        #     description=description)
+
+        # return air.Span(
+        #     air.H2(air.A(title, href=f"/posts/{slug}")),
+        #     air.P(
+        #         description, air.Br(), air.Small(air.Time(convert_dtstr_to_dt(timestamp)))
+        #     ),
+        # )
 
 
     def TILPreview(title: str, slug: str, timestamp: str, description: str):

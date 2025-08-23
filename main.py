@@ -9,6 +9,11 @@ from fastapi import HTTPException
 from dateutil import parser
 import pytz
 from os import getenv
+from fastapi.responses import HTMLResponse
+from pyinstrument import Profiler
+
+PROFILING = True  # Set this from a settings model
+
 
 if getenv('RAILWAY_PUBLIC_DOMAIN'):
     app = air.Air()
@@ -34,20 +39,33 @@ else:
             status_code=404,
         )
 
-    import sentry_sdk
+    # import sentry_sdk
 
-    sentry_sdk.init(
-        dsn=getenv('SENTRY_DSN'),
-        # Add data like request headers and IP for users,
-        # see https://docs.sentry.io/platforms/python/data-management/data-collected/ for more info
-        send_default_pii=True,
-    )
+    # sentry_sdk.init(
+    #     dsn=getenv('SENTRY_DSN'),
+    #     # Add data like request headers and IP for users,
+    #     # see https://docs.sentry.io/platforms/python/data-management/data-collected/ for more info
+    #     send_default_pii=True,
+    # )
 
 
     app = air.Air(exception_handlers={404: Page404})
 
     # Mount static files for CSS
     app.mount("/public", StaticFiles(directory="public"), name="public")    
+
+    if PROFILING:
+        @app.middleware("http")
+        async def profile_request(request: air.Request, call_next):
+            profiling = request.query_params.get("blarg", False)
+            if profiling:
+                profiler = Profiler()
+                profiler.start()
+                await call_next(request)
+                profiler.stop()
+                return HTMLResponse(profiler.output_html())
+            else:
+                return await call_next(request)    
 
     default_social_image = "https://f004.backblazeb2.com/file/daniel-feldroy-com/public/images/profile.jpg"
 
@@ -88,7 +106,7 @@ else:
     # The following functions are three content loading. They are cached in
     # memory to boost the speed of the site. In production at a minumum the
     # app is restarted every time the project is deployed.
-    # @functools.cache
+    @functools.cache
     def list_posts(
         published: bool = True, posts_dirname="posts", content=False
     ) -> list[dict]:
@@ -110,8 +128,8 @@ else:
         return [x for x in filter(lambda x: x["published"] is published, posts)]
 
 
-    # @functools.lru_cache
-    def get_post(slug: str) -> tuple | None:
+    @functools.lru_cache
+    async def get_post(slug: str) -> tuple | None:
         posts = list_posts(content=True)
         post = next((x for x in posts if x["slug"] == slug), None)
         if post is None:
@@ -119,8 +137,8 @@ else:
         return (post["content"], post)
 
 
-    # @functools.cache
-    def list_tags() -> dict[str, int]:
+    @functools.cache
+    async def list_tags() -> dict[str, int]:
         unsorted_tags = {}
         for post in list_posts():
             page_tags = post.get("tags", [])
@@ -366,7 +384,7 @@ else:
 
 
     @app.page
-    def index():
+    async def index():
         all_posts = list_posts()
         most_posts = [
             BlogPostPreview(
@@ -415,7 +433,7 @@ else:
 
 
     @app.page
-    def posts():
+    async def posts():
         duration = round((datetime.now() - datetime(2005, 9, 3)).days / 365.25, 2)
         description = (
             f"Everything written by Daniel Roy Greenfeld for the past {duration} years."
@@ -442,7 +460,7 @@ else:
 
 
     @app.get("/posts/{slug}")
-    def article(slug: str):
+    async def article(slug: str):
         try:
             content, metadata = get_post(slug)
         except ContentNotFound:
@@ -482,7 +500,7 @@ else:
 
 
     @app.page
-    def tags():
+    async def tags():
         tags = [TagLinkWithCount(slug=x[0], count=x[1]) for x in list_tags().items()]
         return Layout(
             air.Title("Tags"),
@@ -500,7 +518,7 @@ else:
 
 
     @app.get("/tags/{slug}")
-    def tag(slug: str):
+    async def tag(slug: str):
         posts = [
             BlogPostPreview(
                 title=x["title"],
@@ -523,7 +541,7 @@ else:
         )
 
 
-    # @functools.cache
+    @functools.cache
     def _search(q: str = ""):
         def _s(obj: dict, name: str, q: str):
             content = obj.get(name, "")
@@ -578,12 +596,12 @@ else:
 
 
     @app.get("/search-results")
-    def search_results(q: str):
+    async def search_results(q: str):
         return _search(q)
 
 
     @app.page
-    def search(q: str | None = None):
+    async def search(q: str | None = None):
         result = []
         if q is not None:
             result.append(_search(q))
@@ -621,7 +639,7 @@ else:
 
 
     @app.get("/feeds/{slug}.xml")
-    def atom_feed(slug: str):
+    async def atom_feed(slug: str):
         path = pathlib.Path(f"public/feeds/{slug}.xml")
         if path.exists():
             return Response(path.read_text(), media_type="application/xml")
@@ -635,7 +653,7 @@ else:
 
 
     @app.page
-    def fitness():
+    async def fitness():
         with open("fitness.csv") as f:
             rows = [o for o in csv.DictReader(f)]
 
@@ -748,7 +766,7 @@ else:
 
 
     @app.get("/writing-stats")
-    def writing_stats():
+    async def writing_stats():
         years = collections.defaultdict(int)
         for post in list_posts():
             years[post["date"][:4]] += 1
@@ -781,22 +799,22 @@ else:
         )
 
     @app.get('/.well-known/atproto-did')
-    def wellknown_atproto_did():
+    async def wellknown_atproto_did():
         # for bluesky!
         return air.responses.PlainTextResponse('did:plc:qmkhbnaaxxr7pcdkgdpis6pi')
 
 
     @app.get('/robots.txt')
-    def robots():
+    async def robots():
         return air.responses.PlainTextResponse(pathlib.Path('robots.txt').read_text())
 
     @app.page
-    def blarg():
+    async def blarg():
         return 1/0
 
 
     @app.get("/{slug}")
-    def page_or_redirect1(slug: str):
+    async def page_or_redirect1(slug: str):
         redirects_url = redirects.get(slug, None)
         if redirects_url is not None:
             return RedirectResponse(redirects_url)    
@@ -807,7 +825,7 @@ else:
 
 
     @app.get("/{slug_1}/{slug_2}")
-    def page_or_redirect2(slug_1: str, slug_2: str):
+    async def page_or_redirect2(slug_1: str, slug_2: str):
         redirects_url = redirects.get(slug_1 + "/" + slug_2, None)
         if redirects_url is not None:
             return RedirectResponse(redirects_url)

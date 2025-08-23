@@ -129,7 +129,7 @@ else:
 
 
     @functools.lru_cache
-    async def get_post(slug: str) -> tuple | None:
+    def get_post(slug: str) -> tuple | None:
         posts = list_posts(content=True)
         post = next((x for x in posts if x["slug"] == slug), None)
         if post is None:
@@ -138,7 +138,7 @@ else:
 
 
     @functools.cache
-    async def list_tags() -> dict[str, int]:
+    def list_tags() -> dict[str, int]:
         unsorted_tags = {}
         for post in list_posts():
             page_tags = post.get("tags", [])

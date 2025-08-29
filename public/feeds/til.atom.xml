@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
   <id>https://daniel.feldroy.com/</id>
   <title>Til posts by Daniel Roy Greenfeld</title>
-  <updated>2025-08-22T03:15:53.302576+00:00</updated>
+  <updated>2025-08-29T06:24:08.280350+00:00</updated>
   <author>
     <name>Daniel Roy Greenfeld</name>
     <email>daniel@feldroy.com</email>
@@ -15,7 +15,7 @@
   <entry>
     <id>https://daniel.feldroy.com/posts/til-2025-08-single-source-version-package-builds-with-uv-redux</id>
     <title>TIL: Single source version package builds with uv (redux)</title>
-    <updated>2025-08-22T03:15:53.302727+00:00</updated>
+    <updated>2025-08-29T06:24:08.284921+00:00</updated>
     <author>
       <name>Daniel Roy Greenfeld</name>
       <email>daniel@feldroy.com</email>
@@ -43,5 +43,210 @@
       <email>daniel@feldroy.com</email>
     </contributor>
     <published>2025-08-22T02:20:08.473528+00:00</published>
+  </entry>
+  <entry>
+    <id>https://daniel.feldroy.com/posts/til-2025-08-using-sqlmodel-asynchronously-with-fastapi-and-air-with-postgresql</id>
+    <title>TIL: Using SQLModel Asynchronously with FastAPI (and Air) with PostgreSQL</title>
+    <updated>2025-08-29T06:24:08.280517+00:00</updated>
+    <author>
+      <name>Daniel Roy Greenfeld</name>
+      <email>daniel@feldroy.com</email>
+    </author>
+    <content type="html">&lt;p&gt;First, let's set up our environment. We'll need to install the necessary packages:&lt;/p&gt;
+&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;uv&lt;span class="w"&gt; &lt;/span&gt;venv
+uv&lt;span class="w"&gt; &lt;/span&gt;add&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;FastAPI[standard]&amp;quot;&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;SQLModel&lt;span class="w"&gt; &lt;/span&gt;asyncpg&lt;span class="w"&gt; &lt;/span&gt;psycopg2-binary&lt;span class="w"&gt; &lt;/span&gt;greenlet
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;A quick quick guide to these dependencies:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;FastAPI&lt;/strong&gt;: The web framework we'll be using. We install with the [standard] extras to make running in the shell easy&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;SQLModel&lt;/strong&gt;: The ORM for interacting with our SQL database&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;psycopg2-binary&lt;/strong&gt;: A PostgreSQL adapter for Python, which will be used by SQLModel for synchronous operations&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;asyncpg&lt;/strong&gt;: An asynchronous PostgreSQL client library, which will be used by SQLModel for async operations&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;greenlet&lt;/strong&gt;: A dependency for SQLAlchemy, which powers SQLModel, to support asynchronous operations.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Yes, we need BOTH synchronous and asynchronous PostgreSQL drivers. SQLModel (and SQLAlchemy) use the synchronous driver for certain operations, even when we are mostly working in an async context.&lt;/p&gt;
+&lt;h2 id="fastapi"&gt;FastAPI&lt;/h2&gt;
+&lt;p&gt;Here we'll set up a simple FastAPI application that uses SQLModel asynchronously (and synchronously).  As far as I can tell, to create tables we need to use a synchronous engine, which explains the need for both drivers and engines. Specifically we'll create (synchronously) a &lt;code&gt;Story&lt;/code&gt; model and two asynchronous endpoints: one for retrieving stories and another for creating a new story.&lt;/p&gt;
+&lt;p&gt;When creating my example database, I used 'drg' as my username and called the database 'my-database'. Adjust the connection strings as needed for your setup.&lt;/p&gt;
+&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="sb"&gt;```&lt;/span&gt;python
+&lt;span class="c1"&gt;# main.py&lt;/span&gt;
+from&lt;span class="w"&gt; &lt;/span&gt;fastapi&lt;span class="w"&gt; &lt;/span&gt;import&lt;span class="w"&gt; &lt;/span&gt;Depends,&lt;span class="w"&gt; &lt;/span&gt;FastAPI
+from&lt;span class="w"&gt; &lt;/span&gt;sqlalchemy.ext.asyncio&lt;span class="w"&gt; &lt;/span&gt;import&lt;span class="w"&gt; &lt;/span&gt;create_async_engine,&lt;span class="w"&gt; &lt;/span&gt;async_sessionmaker
+from&lt;span class="w"&gt; &lt;/span&gt;sqlmodel.ext.asyncio.session&lt;span class="w"&gt; &lt;/span&gt;import&lt;span class="w"&gt; &lt;/span&gt;AsyncSession
+from&lt;span class="w"&gt; &lt;/span&gt;sqlmodel&lt;span class="w"&gt; &lt;/span&gt;import&lt;span class="w"&gt; &lt;/span&gt;SQLModel,&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="k"&gt;select&lt;/span&gt;,&lt;span class="w"&gt; &lt;/span&gt;Field,&lt;span class="w"&gt; &lt;/span&gt;create_engine
+from&lt;span class="w"&gt; &lt;/span&gt;typing&lt;span class="w"&gt; &lt;/span&gt;import&lt;span class="w"&gt; &lt;/span&gt;AsyncGenerator
+
+
+&lt;span class="c1"&gt;# Step 0: sync engine for non-web db actions like creating tables&lt;/span&gt;
+&lt;span class="nv"&gt;sync_engine&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;create_engine&lt;span class="o"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;postgresql://username@localhost/my-database&amp;quot;&lt;/span&gt;,&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nv"&gt;echo&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;True&lt;span class="o"&gt;)&lt;/span&gt;
+
+
+&lt;span class="c1"&gt;# Step 1: Create async engine and session&lt;/span&gt;
+&lt;span class="nv"&gt;async_engine&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;create_async_engine&lt;span class="o"&gt;(&lt;/span&gt;
+&lt;span class="w"&gt;    &lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;postgresql+asyncpg://username@localhost/my-database&amp;quot;&lt;/span&gt;,&lt;span class="w"&gt;  &lt;/span&gt;&lt;span class="c1"&gt;# Async connection string&lt;/span&gt;
+&lt;span class="w"&gt;    &lt;/span&gt;&lt;span class="nv"&gt;echo&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;True,&lt;span class="w"&gt;  &lt;/span&gt;&lt;span class="c1"&gt;# Optional: Set to False in production&lt;/span&gt;
+&lt;span class="w"&gt;    &lt;/span&gt;&lt;span class="nv"&gt;future&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;True,
+&lt;span class="o"&gt;)&lt;/span&gt;
+
+&lt;span class="c1"&gt;# Step 2: Set up async session&lt;/span&gt;
+&lt;span class="nv"&gt;async_session&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;async_sessionmaker&lt;span class="o"&gt;(&lt;/span&gt;
+&lt;span class="w"&gt;    &lt;/span&gt;&lt;span class="nv"&gt;bind&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;async_engine,
+&lt;span class="w"&gt;    &lt;/span&gt;&lt;span class="nv"&gt;class_&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;AsyncSession,
+&lt;span class="w"&gt;    &lt;/span&gt;&lt;span class="nv"&gt;expire_on_commit&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;False,
+&lt;span class="o"&gt;)&lt;/span&gt;
+
+
+&lt;span class="c1"&gt;# Step 3: Create a dependency to yield an async session&lt;/span&gt;
+async&lt;span class="w"&gt; &lt;/span&gt;def&lt;span class="w"&gt; &lt;/span&gt;_get_async_session&lt;span class="o"&gt;()&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;-&amp;gt;&lt;span class="w"&gt; &lt;/span&gt;AsyncGenerator&lt;span class="o"&gt;[&lt;/span&gt;AsyncSession,&lt;span class="w"&gt; &lt;/span&gt;None&lt;span class="o"&gt;]&lt;/span&gt;:
+&lt;span class="w"&gt;    &lt;/span&gt;async&lt;span class="w"&gt; &lt;/span&gt;with&lt;span class="w"&gt; &lt;/span&gt;async_session&lt;span class="o"&gt;()&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;as&lt;span class="w"&gt; &lt;/span&gt;session:
+&lt;span class="w"&gt;        &lt;/span&gt;yield&lt;span class="w"&gt; &lt;/span&gt;session
+
+&lt;span class="c1"&gt;# Wrap _get_async_session with Depends for FastAPI to keep type checking happy&lt;/span&gt;
+&lt;span class="nv"&gt;get_async_session&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;Depends&lt;span class="o"&gt;(&lt;/span&gt;_get_async_session&lt;span class="o"&gt;)&lt;/span&gt;
+
+&lt;span class="c1"&gt;# Define a SQL model table&lt;/span&gt;
+class&lt;span class="w"&gt; &lt;/span&gt;Story&lt;span class="o"&gt;(&lt;/span&gt;SQLModel,&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nv"&gt;table&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;True&lt;span class="o"&gt;)&lt;/span&gt;:
+&lt;span class="w"&gt;    &lt;/span&gt;id:&lt;span class="w"&gt; &lt;/span&gt;int&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;|&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nv"&gt;None&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;Field&lt;span class="o"&gt;(&lt;/span&gt;&lt;span class="nv"&gt;default&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;None,&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nv"&gt;primary_key&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;True&lt;span class="o"&gt;)&lt;/span&gt;
+&lt;span class="w"&gt;    &lt;/span&gt;slug:&lt;span class="w"&gt; &lt;/span&gt;str
+
+&lt;span class="c1"&gt;# Create tables (synchronously, outside of request handling)&lt;/span&gt;
+SQLModel.metadata.create_all&lt;span class="o"&gt;(&lt;/span&gt;sync_engine&lt;span class="o"&gt;)&lt;/span&gt;
+
+
+&lt;span class="c1"&gt;# Step 4: Create FastAPI app and endpoints&lt;/span&gt;
+&lt;span class="nv"&gt;app&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;FastAPI&lt;span class="o"&gt;()&lt;/span&gt;
+
+
+@app.get&lt;span class="o"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;/&amp;quot;&lt;/span&gt;&lt;span class="o"&gt;)&lt;/span&gt;
+async&lt;span class="w"&gt; &lt;/span&gt;def&lt;span class="w"&gt; &lt;/span&gt;index&lt;span class="o"&gt;(&lt;/span&gt;session:&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nv"&gt;AsyncSession&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;get_async_session&lt;span class="o"&gt;)&lt;/span&gt;:
+&lt;span class="w"&gt;    &lt;/span&gt;&lt;span class="nv"&gt;stmt&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="k"&gt;select&lt;/span&gt;&lt;span class="o"&gt;(&lt;/span&gt;Story&lt;span class="o"&gt;)&lt;/span&gt;
+&lt;span class="w"&gt;    &lt;/span&gt;&lt;span class="nv"&gt;stories&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;await&lt;span class="w"&gt; &lt;/span&gt;session.exec&lt;span class="o"&gt;(&lt;/span&gt;stmt&lt;span class="o"&gt;)&lt;/span&gt;
+&lt;span class="w"&gt;    &lt;/span&gt;&lt;span class="k"&gt;return&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;{&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;stories&amp;quot;&lt;/span&gt;:&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;[&lt;/span&gt;x.slug&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="k"&gt;for&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;x&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="k"&gt;in&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;stories&lt;span class="o"&gt;]}&lt;/span&gt;
+
+
+@app.post&lt;span class="o"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;/{slug}&amp;quot;&lt;/span&gt;&lt;span class="o"&gt;)&lt;/span&gt;
+async&lt;span class="w"&gt; &lt;/span&gt;def&lt;span class="w"&gt; &lt;/span&gt;create_story&lt;span class="o"&gt;(&lt;/span&gt;slug:&lt;span class="w"&gt; &lt;/span&gt;str,&lt;span class="w"&gt; &lt;/span&gt;session:&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nv"&gt;AsyncSession&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;get_async_session&lt;span class="o"&gt;)&lt;/span&gt;:
+&lt;span class="w"&gt;    &lt;/span&gt;&lt;span class="nv"&gt;story&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;Story&lt;span class="o"&gt;(&lt;/span&gt;&lt;span class="nv"&gt;slug&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;slug&lt;span class="o"&gt;)&lt;/span&gt;
+&lt;span class="w"&gt;    &lt;/span&gt;session.add&lt;span class="o"&gt;(&lt;/span&gt;story&lt;span class="o"&gt;)&lt;/span&gt;&lt;span class="w"&gt;  &lt;/span&gt;&lt;span class="c1"&gt;# Don&amp;#39;t commit standard db actions&lt;/span&gt;
+&lt;span class="w"&gt;    &lt;/span&gt;await&lt;span class="w"&gt; &lt;/span&gt;session.commit&lt;span class="o"&gt;()&lt;/span&gt;&lt;span class="w"&gt;  &lt;/span&gt;&lt;span class="c1"&gt;# Always await commits&lt;/span&gt;
+&lt;span class="w"&gt;    &lt;/span&gt;&lt;span class="k"&gt;return&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;{&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;slug&amp;quot;&lt;/span&gt;:&lt;span class="w"&gt; &lt;/span&gt;story.slug&lt;span class="o"&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Start it up with:&lt;/p&gt;
+&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;fastapi&lt;span class="w"&gt; &lt;/span&gt;dev&lt;span class="w"&gt; &lt;/span&gt;main.py
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Go to the API docs and try it out: &lt;a href="http://localhost:8000/docs"&gt;http://localhost:8000/docs&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id="air"&gt;Air&lt;/h2&gt;
+&lt;p&gt;&lt;a href="https://airdocs.fastapicloud.dev/"&gt;Air&lt;/a&gt; is a FastAPI-based framework for building HTML-focused web applications. It builds on top of FastAPI and adds features like easier templating, improved form handling, and more. You can combine it with FastAPI routes and SQLModel to create the web pages for your API application.&lt;/p&gt;
+&lt;p&gt;In any case, except for single import change, as well as defining the app and endpoints, the code is identical to the FastAPI example above. The main difference is that instead of returning JSON responses, we return HTML using Air's components and layouts. Air can return Jinja-powered responses, web but here we'll use Air's built-in components for simplicity.&lt;/p&gt;
+&lt;p&gt;First let's set up our environment. We'll need to install the necessary packages:&lt;/p&gt;
+&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;uv&lt;span class="w"&gt; &lt;/span&gt;venv
+uv&lt;span class="w"&gt; &lt;/span&gt;add&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;Air[standard]&amp;quot;&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;SQLModel&lt;span class="w"&gt; &lt;/span&gt;asyncpg&lt;span class="w"&gt; &lt;/span&gt;psycopg2-binary&lt;span class="w"&gt; &lt;/span&gt;greenlet
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Air&lt;/strong&gt;: The FastAPI-powered web framework we'll be using. We install with the [standard] extras to make running in the shell easy&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;SQLModel&lt;/strong&gt;: The ORM for interacting with our SQL database&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;psycopg2-binary&lt;/strong&gt;: A PostgreSQL adapter for Python, which will be used by SQLModel for synchronous operations&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;asyncpg&lt;/strong&gt;: An asynchronous PostgreSQL client library, which will be used by SQLModel for async operations&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;greenlet&lt;/strong&gt;: A dependency for SQLAlchemy, which powers SQLModel, to support asynchronous operations.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Now for the code. When creating my example database, I used 'drg' as my username and called the database 'my-database'. Adjust the connection strings as needed for your setup.&lt;/p&gt;
+&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="c1"&gt;# main.py&lt;/span&gt;
+&lt;span class="kn"&gt;import&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nn"&gt;air&lt;/span&gt;  &lt;span class="c1"&gt;# air is built on FastAPI&lt;/span&gt;
+&lt;span class="kn"&gt;from&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nn"&gt;fastapi&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="n"&gt;Depends&lt;/span&gt;
+&lt;span class="kn"&gt;from&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nn"&gt;sqlalchemy.ext.asyncio&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="n"&gt;create_async_engine&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;async_sessionmaker&lt;/span&gt;
+&lt;span class="kn"&gt;from&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nn"&gt;sqlmodel.ext.asyncio.session&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="n"&gt;AsyncSession&lt;/span&gt;
+&lt;span class="kn"&gt;from&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nn"&gt;sqlmodel&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="n"&gt;SQLModel&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;select&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;Field&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;create_engine&lt;/span&gt;
+&lt;span class="kn"&gt;from&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nn"&gt;typing&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="n"&gt;AsyncGenerator&lt;/span&gt;
+
+
+&lt;span class="c1"&gt;# Step 0: sync engine for non-web db action&lt;/span&gt;
+&lt;span class="n"&gt;sync_engine&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;create_engine&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;postgresql://username@localhost/my-database&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;echo&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="kc"&gt;True&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+
+
+&lt;span class="c1"&gt;# Step 1: Create async engine and session&lt;/span&gt;
+&lt;span class="n"&gt;async_engine&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;create_async_engine&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;
+    &lt;span class="s2"&gt;&amp;quot;postgresql+asyncpg://username@localhost/my-database&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;  &lt;span class="c1"&gt;# Async connection string&lt;/span&gt;
+    &lt;span class="n"&gt;echo&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="kc"&gt;True&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;  &lt;span class="c1"&gt;# Optional: Set to False in production&lt;/span&gt;
+    &lt;span class="n"&gt;future&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="kc"&gt;True&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+&lt;span class="p"&gt;)&lt;/span&gt;
+
+&lt;span class="c1"&gt;# Step 2: Set up async session&lt;/span&gt;
+&lt;span class="n"&gt;async_session&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;async_sessionmaker&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;
+    &lt;span class="n"&gt;bind&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="n"&gt;async_engine&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+    &lt;span class="n"&gt;class_&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="n"&gt;AsyncSession&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+    &lt;span class="n"&gt;expire_on_commit&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="kc"&gt;False&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+&lt;span class="p"&gt;)&lt;/span&gt;
+
+
+&lt;span class="c1"&gt;# Step 3: Create a dependency to yield an async session&lt;/span&gt;
+&lt;span class="k"&gt;async&lt;/span&gt; &lt;span class="k"&gt;def&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nf"&gt;_get_async_session&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt; &lt;span class="o"&gt;-&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;AsyncGenerator&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="n"&gt;AsyncSession&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="kc"&gt;None&lt;/span&gt;&lt;span class="p"&gt;]:&lt;/span&gt;
+    &lt;span class="k"&gt;async&lt;/span&gt; &lt;span class="k"&gt;with&lt;/span&gt; &lt;span class="n"&gt;async_session&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt; &lt;span class="k"&gt;as&lt;/span&gt; &lt;span class="n"&gt;session&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+        &lt;span class="k"&gt;yield&lt;/span&gt; &lt;span class="n"&gt;session&lt;/span&gt;
+
+
+&lt;span class="n"&gt;get_async_session&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;Depends&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;_get_async_session&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+
+
+&lt;span class="k"&gt;class&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nc"&gt;Story&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;SQLModel&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;table&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="kc"&gt;True&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
+    &lt;span class="nb"&gt;id&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="nb"&gt;int&lt;/span&gt; &lt;span class="o"&gt;|&lt;/span&gt; &lt;span class="kc"&gt;None&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;Field&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;default&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="kc"&gt;None&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;primary_key&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="kc"&gt;True&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+    &lt;span class="n"&gt;slug&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="nb"&gt;str&lt;/span&gt;
+
+
+&lt;span class="n"&gt;SQLModel&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;metadata&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;create_all&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;sync_engine&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+
+&lt;span class="c1"&gt;# After this comment, the project diverges from the FastAPI example&lt;/span&gt;
+
+&lt;span class="c1"&gt;# Step 4: Create FastAPI app and endpoints&lt;/span&gt;
+&lt;span class="n"&gt;app&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;air&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;Air&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+
+
+&lt;span class="nd"&gt;@app&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;page&lt;/span&gt;
+&lt;span class="k"&gt;async&lt;/span&gt; &lt;span class="k"&gt;def&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nf"&gt;index&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;session&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="n"&gt;AsyncSession&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;get_async_session&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
+    &lt;span class="n"&gt;stmt&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;select&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;Story&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+    &lt;span class="n"&gt;stories&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="k"&gt;await&lt;/span&gt; &lt;span class="n"&gt;session&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;exec&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;stmt&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+    &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="n"&gt;air&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;layouts&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;mvpcss&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;
+        &lt;span class="n"&gt;air&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;Article&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;
+            &lt;span class="n"&gt;air&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;Ol&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="o"&gt;*&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="n"&gt;air&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;Li&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;x&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;slug&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="k"&gt;for&lt;/span&gt; &lt;span class="n"&gt;x&lt;/span&gt; &lt;span class="ow"&gt;in&lt;/span&gt; &lt;span class="n"&gt;stories&lt;/span&gt;&lt;span class="p"&gt;])&lt;/span&gt;
+        &lt;span class="p"&gt;)&lt;/span&gt;
+    &lt;span class="p"&gt;)&lt;/span&gt;
+
+
+&lt;span class="nd"&gt;@app&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;get&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;/&lt;/span&gt;&lt;span class="si"&gt;{slug}&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="k"&gt;async&lt;/span&gt; &lt;span class="k"&gt;def&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nf"&gt;create_story&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;slug&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="nb"&gt;str&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;session&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="n"&gt;AsyncSession&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;get_async_session&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
+    &lt;span class="s2"&gt;&amp;quot;Note: This is a GET endpoint for simplicity; in a real app, use POST for creating resources.&amp;quot;&lt;/span&gt;
+    &lt;span class="n"&gt;story&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;Story&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;slug&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="n"&gt;slug&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+    &lt;span class="n"&gt;session&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;add&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;story&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;  &lt;span class="c1"&gt;# Don&amp;#39;t commit standard db actions&lt;/span&gt;
+    &lt;span class="k"&gt;await&lt;/span&gt; &lt;span class="n"&gt;session&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;commit&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;  &lt;span class="c1"&gt;# Always await commits&lt;/span&gt;
+    &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="n"&gt;air&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;layouts&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;mvpcss&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;
+        &lt;span class="n"&gt;air&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;H1&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;story&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;slug&lt;/span&gt;&lt;span class="p"&gt;),&lt;/span&gt;
+        &lt;span class="n"&gt;air&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;P&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;Story created! &amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;air&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;A&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;Go back&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;href&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;/&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;))&lt;/span&gt;
+    &lt;span class="p"&gt;)&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Start it up with:&lt;/p&gt;
+&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;fastapi&lt;span class="w"&gt; &lt;/span&gt;dev&lt;span class="w"&gt; &lt;/span&gt;main.py
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Try it out:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="http://localhost:8000/first-article"&gt;http://localhost:8000/first-article&lt;/a&gt; - Just clicking this will create a new article with the slug "first-article". In a real app, you'd want to use a POST request for creating resources, but this is just for demonstration.&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://localhost:8000/second-article"&gt;http://localhost:8000/second-article&lt;/a&gt; - Create a second article.&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://localhost:8000"&gt;http://localhost:8000&lt;/a&gt; - View the list of articles.&lt;/li&gt;
+&lt;/ul&gt;</content>
+    <link href="https://daniel.feldroy.com/posts/til-2025-08-using-sqlmodel-asynchronously-with-fastapi-and-air-with-postgresql"/>
+    <summary>SQLModel is a really useful library for working with SQL databases in Python, built on top of SQLAlchemy and Pydantic. However, AFAIK there's no documentation supporting asynchronous operations for PostgreSQL, which can be a limitation when building high-performance web applications with FastAPI and Air.</summary>
+    <category term="air"/>
+    <category term="fastapi"/>
+    <category term="python"/>
+    <category term="TIL"/>
+    <contributor>
+      <name>Daniel Roy Greenfeld</name>
+      <email>daniel@feldroy.com</email>
+    </contributor>
+    <published>2025-08-29T05:54:58.034855+00:00</published>
   </entry>
 </feed>

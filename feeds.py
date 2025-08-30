@@ -71,6 +71,7 @@ def add_entry(fg, raw):
     fe.contributor([{"name": "Daniel Roy Greenfeld", "email": "daniel@feldroy.com"}])
     fe.author([{"name": "Daniel Roy Greenfeld", "email": "daniel@feldroy.com"}])
     fe.pubDate(convert_dtstr_to_dt(metadata["date"]))
+    fe.updated(convert_dtstr_to_dt(metadata["date"]))
     # Add tags to the entry
     for tag in metadata.get("tags", []):
         fe.category(term=tag)
@@ -100,7 +101,7 @@ def build_feed(content_tag: str | None = None):
         fg.title(f"{content_tag.capitalize()} posts by Daniel Roy Greenfeld")
         posts = list(filter_posts_by_tag(posts, content_tag))
 
-    for raw in posts[:2]:
+    for raw in posts[:15]:
         add_entry(fg, raw)
 
     if content_tag is not None:

@@ -8,23 +8,7 @@ from fastapi.responses import Response
 from fastapi import HTTPException
 from dateutil import parser
 import pytz
-from os import getenv
-from fastapi.responses import HTMLResponse
-from pyinstrument import Profiler
 
-PROFILING = True  # Set this from a settings model
-
-
-# if getenv('RAILWAY_PUBLIC_DOMAIN'):
-#     app = air.Air()
-
-#     @app.get('/')
-#     def everything():
-#         return RedirectResponse('https://daniel.fastapicloud.dev')
-
-#     @app.get('/{path:path}')
-#     def everything(path: pathlib.Path):
-#         return RedirectResponse(f'https://daniel.fastapicloud.dev/{path}')
 
 
 
@@ -38,33 +22,11 @@ def Page404(request: air.Request, exc: Exception) -> air.AirResponse:
         status_code=404,
     )
 
-# import sentry_sdk
-
-# sentry_sdk.init(
-#     dsn=getenv('SENTRY_DSN'),
-#     # Add data like request headers and IP for users,
-#     # see https://docs.sentry.io/platforms/python/data-management/data-collected/ for more info
-#     send_default_pii=True,
-# )
-
 
 app = air.Air(exception_handlers={404: Page404})
 
 # Mount static files for CSS
-app.mount("/public", StaticFiles(directory="public"), name="public")    
-
-# if PROFILING:
-#     @app.middleware("http")
-#     async def profile_request(request: air.Request, call_next):
-#         profiling = request.query_params.get("blarg", False)
-#         if profiling:
-#             profiler = Profiler()
-#             profiler.start()
-#             await call_next(request)
-#             profiler.stop()
-#             return HTMLResponse(profiler.output_html())
-#         else:
-#             return await call_next(request)    
+app.mount("/public", StaticFiles(directory="public"), name="public")      
 
 default_social_image = "https://f004.backblazeb2.com/file/daniel-feldroy-com/public/images/profile.jpg"
 
@@ -278,7 +240,8 @@ def Layout(
                 air.Script(
                     src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release/build/languages/css.min.js"
                 ),
-                air.Script(src="/public/render.js"),
+                # air.Script(src="/public/render.js"),
+                air.Script(pathlib.Path('public/render.js').read_text()),
                 air.Link(rel="stylesheet", href="/public/style.css", type="text/css"),
                 *air.layouts.filter_head_tags(children),
             ),
@@ -376,6 +339,7 @@ def Layout(
             htmx.trigger('.search-results', 'htmx:trigger', {value: e.target.value});
             });
             """),
+            hx_boost='true'
             ),
         ).render(),
         status_code=status_code,

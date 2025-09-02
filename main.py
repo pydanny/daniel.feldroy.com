@@ -200,6 +200,7 @@ def Layout(
 ) -> air.AirResponse:
     "Generic layout for pages"
     body_children = air.layouts.filter_body_tags(children)
+    article_count = len(list_posts())
     return air.AirResponse(
         air.Html(
             air.Head(
@@ -261,7 +262,7 @@ def Layout(
                     air.P(
                         air.A("About", href="/about"),
                         " | ",
-                        air.A("Articles", href="/posts"),
+                        air.A(f"Articles ({article_count})", href="/posts"),
                         " | ",
                         air.A("Books", href="/books"),
                         " | ",

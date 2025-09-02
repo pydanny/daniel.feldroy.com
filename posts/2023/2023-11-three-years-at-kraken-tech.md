@@ -82,4 +82,4 @@ _Please understand that Kraken Tech only hires in countries in which we have a l
 
 If for whatever reason you can't get a job working with me, [apply to work at somewhere else into decarbonization](https://climatebase.org/). Let me know where you go and I'll celebrate your joining our shared mission.
 
-[![Kraken Tech Logo](/public/logos/kraken-logo-dark.png)](https://kraken.tech)
+[![Kraken Tech Logo](https://f004.backblazeb2.com/file/daniel-feldroy-com/public/logos/kraken-logo-dark.png)](https://kraken.tech)

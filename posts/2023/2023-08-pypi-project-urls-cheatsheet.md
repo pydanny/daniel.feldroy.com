@@ -18,7 +18,7 @@ twitter_image: /public/logos/til-1.png
 
 See these links in the image below? I want every PyPI project to have them in the left column.
 
-![PyPI project URLs](/public/images/pypi-links-sidenav.png)
+![PyPI project URLs](https://f004.backblazeb2.com/file/daniel-feldroy-com/public/images/pypi-links-sidenav.png)
 
 The challenge is the PyPI project URLs spec is [defined only in code](https://github.com/pypi/warehouse/blob/70eac9796fa1eae24741525688a112586eab9010/warehouse/templates/packaging/detail.html#L20-L62). Here's my cheatsheet explaining how to configure them. I'll update this as I learn more (suggestions welcome!). Examples in several formats.
 

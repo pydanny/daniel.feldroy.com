@@ -11,7 +11,7 @@ description: "With Audrey, I co-write dairy-themed technical books."
 
 With Audrey, I co-write dairy-themed technical books.
 
-![Two Scoops of Django 3.x](/public/images/book-TSD3-800.jpg)
+![Two Scoops of Django 3.x](https://f004.backblazeb2.com/file/daniel-feldroy-com/public/images/book-TSD3-800.jpg)
 
 ## Two Scoops of Django 3.x
 
@@ -27,7 +27,7 @@ The 5th edition of Two Scoops of Django is out. With over 500 pages of material,
 </a>
 </p>
 
-![A Wedge of Django](/public/images/AWOD-2021-06-29-8x10-Wedge-Front_1080x.png)
+![A Wedge of Django](https://f004.backblazeb2.com/file/daniel-feldroy-com/public/images/AWOD-2021-06-29-8x10-Wedge-Front_1080x.png)
 
 ## A Wedge of Django
 

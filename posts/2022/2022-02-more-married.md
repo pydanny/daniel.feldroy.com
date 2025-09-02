@@ -65,4 +65,4 @@ Results:
 
 Use this little script to impress the special person in your life!
 
-![](/public/images/2022-02-14-hearts-a.png)
+![](https://f004.backblazeb2.com/file/daniel-feldroy-com/public/images/2022-02-14-hearts-a.png)

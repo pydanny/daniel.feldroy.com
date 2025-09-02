@@ -168,4 +168,4 @@ if __name__ == "__main__":
     typer.run(main)
 ```
 
-![](/public/images/2022-02-old-blog-archive.png)
+![](https://f004.backblazeb2.com/file/daniel-feldroy-com/public/images/2022-02-old-blog-archive.png)

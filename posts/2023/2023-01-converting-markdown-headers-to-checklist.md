@@ -60,4 +60,4 @@ const checklist = MarkdownHeadersToChecklist(markdown);
 fs.writeFileSync("checklist.md", checklist);
 ```
 
-![Converting Markdown Headers to Checklist](/public/images/superhero-markdown-checklist.png)
+![Converting Markdown Headers to Checklist](https://f004.backblazeb2.com/file/daniel-feldroy-com/public/images/superhero-markdown-checklist.png)

@@ -15,7 +15,7 @@ time_to_read: 1
 title: 2018 New Years Resolutions
 ---
 
-[![Lasergun Light Painting](/public/images/lasergun.jpg)](/)
+[![Lasergun Light Painting](https://f004.backblazeb2.com/file/daniel-feldroy-com/public/images/lasergun.jpg)](/)
 
 Happy New Year!
 ===============

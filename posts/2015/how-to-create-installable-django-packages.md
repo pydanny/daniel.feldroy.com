@@ -15,43 +15,29 @@ image: https://f004.backblazeb2.com/file/daniel-feldroy-com/public/images/django
 
 [![image](https://f004.backblazeb2.com/file/daniel-feldroy-com/public/images/django-package-470x246.png)](/how-to-create-installable-django-packages.html)
 
-What I mean by an "installable Django package": a reusable component
-that can be shared across Django projects, allowing us to combine our
-own efforts with others. Some examples include:
+What I mean by an "installable Django package": a reusable component that can be shared across Django projects, allowing us to combine our own efforts with others. Some examples include:
 
 - [django-test-plus](https://www.djangopackages.com/packages/p/django-test-plus/)
 - [django-crispy-forms](https://www.djangopackages.com/packages/p/django-crispy-forms/)
 - [dj-stripe](https://www.djangopackages.com/packages/p/dj-stripe/)
 - [dj-spam](https://www.djangopackages.com/packages/p/dj-spam/)
 
-Ever want to quickly create a similarly installable Django package to
-submit to [PyPI](pypi.python.org/pypi) and [Django
-Packages](https://wwww.djangopackages.com)? One that goes beyond the
-basics described in the [Django
-tutorial](https://docs.djangoproject.com/en/1.8/intro/reusable-apps/)?
-Specifically, a package that includes:
+Ever want to quickly create a similarly installable Django package to submit to [PyPI](pypi.python.org/pypi) and [Django Packages](https://wwww.djangopackages.com)? One that goes beyond the basics described in the [Django tutorial](https://docs.djangoproject.com/en/1.8/intro/reusable-apps/)? Specifically, a package that includes:
 
-- Test runner so you don't need a example/test project (Although
-  those can be useful).
-- The important configuration in place: Travis, editorconfig,
-  gitignore, etc.
-- The important documentation in place: Readme, License, Read the
-  Docs-ready Sphinx docs, etc.
+- Test runner so you don't need a example/test project (Although those can be useful).
+- The important configuration in place: Travis, editorconfig, gitignore, etc.
+- The important documentation in place: Readme, License, Read the Docs-ready Sphinx docs, etc.
 - Static files ready to go.
 - A base DTL/Jinja2 template ready to go.
-- All those other fiddly bits not included in
-  `django-admin.py startapp` that are hard to remember.
+- All those other fiddly bits not included in `django-admin.py startapp` that are hard to remember.
 
 Well, here's how I do it.
 
 # Introducing cookiecutter-djangopackage
 
-[cookiecutter-djangopackage](https://github.com/pydanny/cookiecutter-djangopackage)
-is a [Cookiecutter](https://github.com/audreyr/cookiecutter) template
-for creating reusable Django packages. Using it is easy:
+[cookiecutter-djangopackage](https://github.com/pydanny/cookiecutter-djangopackage) is a [Cookiecutter](https://github.com/audreyr/cookiecutter) template for creating reusable Django packages. Using it is easy:
 
-First, get [Cookiecutter](https://github.com/audreyr/cookiecutter).
-Trust me, it's awesome:
+First, get [Cookiecutter](https://github.com/audreyr/cookiecutter). Trust me, it's awesome:
 
 ```bash
 $ pip install cookiecutter
@@ -63,19 +49,13 @@ Now run it against this repo:
 $ cookiecutter https://github.com/pydanny/cookiecutter-djangopackage.git
 ```
 
-You'll be prompted to enter some values. Enter them. Then an
-installable Django package will be built for you.
+You'll be prompted to enter some values. Enter them. Then an installable Django package will be built for you.
 
-**Warning**: `app_name` must be a valid Python module name or you will
-have issues on imports.
+**Warning**: `app_name` must be a valid Python module name or you will have issues on imports.
 
-Enter the new package (in my case, I called it 'newpackage') and look
-around. Open up the `AUTHORS.rst`, `setup.py`, or `README.rst` files and
-you'll see your input inserted into the appropriate locations.
+Enter the new package (in my case, I called it 'newpackage') and look around. Open up the `AUTHORS.rst`, `setup.py`, or `README.rst` files and you'll see your input inserted into the appropriate locations.
 
-Speaking of the `README.rst`, that file includes instructions for
-putting the new package on [PyPI](pypi.python.org/pypi) and [Django
-Packages](https://wwww.djangopackages.com).
+Speaking of the `README.rst`, that file includes instructions for putting the new package on [PyPI](pypi.python.org/pypi) and [Django Packages](https://wwww.djangopackages.com).
 
 ```bash
 newpackage
@@ -125,14 +105,11 @@ newpackage
 └── tox.ini
 ```
 
-Now, instead of monkeying around for awhile doing copy/paste package
-setup, I'm immediately ready to write code.
+Now, instead of monkeying around for awhile doing copy/paste package setup, I'm immediately ready to write code.
 
 # Summary
 
-[cookiecutter-djangopackage](https://github.com/pydanny/cookiecutter-djangopackage)
-does a lot, but even with its tight focus on package creation it could
-do more. Some of the things I would love to see included in the future:
+[cookiecutter-djangopackage](https://github.com/pydanny/cookiecutter-djangopackage) does a lot, but even with its tight focus on package creation it could do more. Some of the things I would love to see included in the future:
 
 - Option for Appveyor CI support
 - Option to replace `django.test` with `py.test`.
@@ -140,5 +117,4 @@ do more. Some of the things I would love to see included in the future:
 - More in the [issue
   tracker](https://github.com/pydanny/cookiecutter-djangopackage/issues).
 
-Try it out and let me know what you think. I'm open to new ideas and
-receiving pull requests.
+Try it out and let me know what you think. I'm open to new ideas and receiving pull requests.

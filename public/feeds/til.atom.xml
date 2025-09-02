@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
   <id>https://daniel.feldroy.com/</id>
   <title>Til posts by Daniel Roy Greenfeld</title>
-  <updated>2025-08-30T06:01:09.399102+00:00</updated>
+  <updated>2025-09-02T02:41:34.933194+00:00</updated>
   <author>
     <name>Daniel Roy Greenfeld</name>
     <email>daniel@feldroy.com</email>
@@ -12,55 +12,6 @@
   <generator uri="https://lkiesow.github.io/python-feedgen" version="1.0.0">python-feedgen</generator>
   <logo>https://daniel.feldroy.com/images/pydanny-cartwheel.png</logo>
   <rights>All rights reserved 2025, Daniel Roy Greenfeld</rights>
-  <entry>
-    <id>https://daniel.feldroy.com/posts/til-2025-01-timeit-and-inspect</id>
-    <title>TIL: Using inspect and timeit together</title>
-    <updated>2025-01-14T15:30:00+00:00</updated>
-    <author>
-      <name>Daniel Roy Greenfeld</name>
-      <email>daniel@feldroy.com</email>
-    </author>
-    <content type="html">&lt;p&gt;When working with &lt;code&gt;timeit&lt;/code&gt; you either have to write code in string variables or load a seperate Python module as code. The former is a really not a good idea, the latter is ideal but annoying for quick tests. So I thought this up today, probably reinventing what someone else has done.&lt;/p&gt;
-&lt;p&gt;For an example let's define a simple function we want to test that generates a random 10 character string:&lt;/p&gt;
-&lt;p&gt;```python {.marimo}
-def get_random_string(length=10):
-    from random import choice
-    from string import ascii_letters
-    return ''.join(choice(ascii_letters) for _ in range(length))
-get_random_string()&lt;/p&gt;
-&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="n"&gt;You&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;ll notice that the imports are in the calling function. That makes the next step a bit easier. That&amp;#39;&lt;/span&gt;&lt;span class="n"&gt;s&lt;/span&gt; &lt;span class="n"&gt;where&lt;/span&gt; &lt;span class="n"&gt;we&lt;/span&gt; &lt;span class="n"&gt;use&lt;/span&gt; &lt;span class="err"&gt;`&lt;/span&gt;&lt;span class="n"&gt;inspect&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;getsource&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;&lt;span class="err"&gt;`&lt;/span&gt; &lt;span class="n"&gt;to&lt;/span&gt; &lt;span class="n"&gt;save&lt;/span&gt; &lt;span class="n"&gt;the&lt;/span&gt; &lt;span class="n"&gt;code&lt;/span&gt; &lt;span class="n"&gt;of&lt;/span&gt; &lt;span class="n"&gt;get_random_string&lt;/span&gt; &lt;span class="n"&gt;to&lt;/span&gt; &lt;span class="n"&gt;a&lt;/span&gt; &lt;span class="n"&gt;variable&lt;/span&gt; &lt;span class="n"&gt;called&lt;/span&gt; &lt;span class="err"&gt;`&lt;/span&gt;&lt;span class="n"&gt;setup_stmt&lt;/span&gt;&lt;span class="err"&gt;`&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;
-
-&lt;span class="err"&gt;```&lt;/span&gt;&lt;span class="n"&gt;python&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;marimo&lt;/span&gt;&lt;span class="p"&gt;}&lt;/span&gt;
-&lt;span class="kn"&gt;from&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nn"&gt;inspect&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="n"&gt;getsource&lt;/span&gt;
-&lt;span class="n"&gt;setup_stmt&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;getsource&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;get_random_string&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-&lt;span class="nb"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;setup_stmt&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-&lt;span class="c1"&gt;# The &amp;#39;code&amp;#39; below is a printed string in a notebook cell, not actual code&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;p&gt;Next step is we create a &lt;code&gt;code_stmt&lt;/code&gt; variable that calls that function.&lt;/p&gt;
-&lt;p&gt;```python {.marimo}
-code_stmt = 'get_random_string()'&lt;/p&gt;
-&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="n"&gt;Now&lt;/span&gt; &lt;span class="n"&gt;we&lt;/span&gt; &lt;span class="n"&gt;can&lt;/span&gt; &lt;span class="n"&gt;plug&lt;/span&gt; &lt;span class="n"&gt;that&lt;/span&gt; &lt;span class="n"&gt;into&lt;/span&gt; &lt;span class="n"&gt;a&lt;/span&gt; &lt;span class="n"&gt;timeit&lt;/span&gt; &lt;span class="n"&gt;module&lt;/span&gt; &lt;span class="n"&gt;to&lt;/span&gt; &lt;span class="n"&gt;see&lt;/span&gt; &lt;span class="n"&gt;how&lt;/span&gt; &lt;span class="n"&gt;fast&lt;/span&gt; &lt;span class="n"&gt;it&lt;/span&gt; &lt;span class="n"&gt;runs&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;
-
-&lt;span class="err"&gt;```&lt;/span&gt;&lt;span class="n"&gt;python&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;marimo&lt;/span&gt;&lt;span class="p"&gt;}&lt;/span&gt;
-&lt;span class="kn"&gt;from&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nn"&gt;timeit&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="n"&gt;timeit&lt;/span&gt;
-&lt;span class="n"&gt;timeit&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;stmt&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="n"&gt;code_stmt&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;setup&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="n"&gt;setup_stmt&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;p&gt;Again, the advantage of this approach is that it's all in one module and we can easily test that the function works before sticking it in timeout.&lt;/p&gt;
-&lt;p&gt;&lt;code&gt;python {.marimo}
-import marimo as mo&lt;/code&gt;&lt;/p&gt;</content>
-    <link href="https://daniel.feldroy.com/posts/til-2025-01-timeit-and-inspect"/>
-    <summary>Two libraries in Python's standard library that are useful for keeping load testing code all in one module.</summary>
-    <category term="python"/>
-    <category term="TIL"/>
-    <category term="load testing"/>
-    <contributor>
-      <name>Daniel Roy Greenfeld</name>
-      <email>daniel@feldroy.com</email>
-    </contributor>
-    <published>2025-01-14T15:30:00+00:00</published>
-  </entry>
   <entry>
     <id>https://daniel.feldroy.com/posts/til-2025-01-every-jupyter-notebook-cell-runs-in-an-async-loop</id>
     <title>TIL: Every Jupyter notebook cell runs in an async loop</title>
@@ -824,5 +775,42 @@ uv&lt;span class="w"&gt; &lt;/span&gt;add&lt;span class="w"&gt; &lt;/span&gt;&lt
       <email>daniel@feldroy.com</email>
     </contributor>
     <published>2025-08-29T05:54:58.034855+00:00</published>
+  </entry>
+  <entry>
+    <id>https://daniel.feldroy.com/posts/til-2025-09-setting-environment-variables-for-pytest</id>
+    <title>TIL: Setting environment variables for pytest</title>
+    <updated>2025-09-02T02:29:33.084710+00:00</updated>
+    <author>
+      <name>Daniel Roy Greenfeld</name>
+      <email>daniel@feldroy.com</email>
+    </author>
+    <content type="html">&lt;p&gt;When writing tests in pytest, often there's a need to set environment variables for your tests. Instead of modifying &lt;code&gt;os.environ&lt;/code&gt; directly, which can lead to side effects and make tests harder to manage, here's how to do it with the &lt;a href="https://pypi.org/project/pytest-env/"&gt;pytest-env&lt;/a&gt; package.&lt;/p&gt;
+&lt;p&gt;First, install the package. &lt;/p&gt;
+&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;pip&lt;span class="w"&gt; &lt;/span&gt;install&lt;span class="w"&gt; &lt;/span&gt;pytest-env&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="c1"&gt;# classic but works great&lt;/span&gt;
+uv&lt;span class="w"&gt; &lt;/span&gt;add&lt;span class="w"&gt; &lt;/span&gt;pytest-env&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="c1"&gt;# if you&amp;#39;re one of us cool kids using uv&lt;/span&gt;
+uv&lt;span class="w"&gt; &lt;/span&gt;add&lt;span class="w"&gt; &lt;/span&gt;pytest-env&lt;span class="w"&gt; &lt;/span&gt;--group&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nb"&gt;test&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="c1"&gt;# if you use a specific test group of dependencies&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;A lot of people use &lt;code&gt;pytest.ini&lt;/code&gt; to configure pytest, but I prefer using &lt;code&gt;pyproject.toml&lt;/code&gt; for a more modern approach. Here's how you can set environment variables in &lt;code&gt;pyproject.toml&lt;/code&gt;:&lt;/p&gt;
+&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="k"&gt;[tool.pytest_env]&lt;/span&gt;
+&lt;span class="c1"&gt;# Test value for the SUPER_SECRET_KEY environment variable&lt;/span&gt;
+&lt;span class="n"&gt;SUPER_SECRET_KEY&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;ABC123&amp;quot;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Then run your tests just like you would normally do, and now the environment variable will be picked up by whatever test or code is looking for it. That's correct, you don't need to do any further configuration.&lt;/p&gt;
+&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;pytest&lt;span class="w"&gt; &lt;/span&gt;.
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Since a lot of API SDK libraries use environment variables for configuration, this is a great way to ensure your tests run in a controlled environment. Either with mock replies or against a test instance of the service.&lt;/p&gt;</content>
+    <link href="https://daniel.feldroy.com/posts/til-2025-09-setting-environment-variables-for-pytest"/>
+    <summary>An easier way of doing it then modifying os.environ</summary>
+    <category term="python"/>
+    <category term="TIL"/>
+    <category term="testing"/>
+    <contributor>
+      <name>Daniel Roy Greenfeld</name>
+      <email>daniel@feldroy.com</email>
+    </contributor>
+    <published>2025-09-02T02:29:33.084710+00:00</published>
   </entry>
 </feed>

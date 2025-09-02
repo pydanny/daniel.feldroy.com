@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
   <id>https://daniel.feldroy.com/</id>
   <title>Python posts by Daniel Roy Greenfeld</title>
-  <updated>2025-08-30T06:01:09.360721+00:00</updated>
+  <updated>2025-09-02T02:41:34.893842+00:00</updated>
   <author>
     <name>Daniel Roy Greenfeld</name>
     <email>daniel@feldroy.com</email>
@@ -12,37 +12,6 @@
   <generator uri="https://lkiesow.github.io/python-feedgen" version="1.0.0">python-feedgen</generator>
   <logo>https://daniel.feldroy.com/images/pydanny-cartwheel.png</logo>
   <rights>All rights reserved 2025, Daniel Roy Greenfeld</rights>
-  <entry>
-    <id>https://daniel.feldroy.com/posts/2025-03-pi-day</id>
-    <title>Pi Day</title>
-    <updated>2025-03-14T21:30:00+00:00</updated>
-    <author>
-      <name>Daniel Roy Greenfeld</name>
-      <email>daniel@feldroy.com</email>
-    </author>
-    <content type="html">&lt;p&gt;```python {.marimo}
-from math import pi&lt;/p&gt;
-&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;```python {.marimo}
-print(pi)
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;p&gt;```python {.marimo}
-print(pi**pi)&lt;/p&gt;
-&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="n"&gt;Don&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;t forget to sign the petition to [nickname Python 3​.​14 to Pithon!](https://www.change.org/p/nickname-python-3-14-to-pithon)&lt;/span&gt;
-
-&lt;span class="err"&gt;```&lt;/span&gt;&lt;span class="n"&gt;python&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;marimo&lt;/span&gt;&lt;span class="p"&gt;}&lt;/span&gt;
-&lt;span class="kn"&gt;import&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nn"&gt;marimo&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="k"&gt;as&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nn"&gt;mo&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</content>
-    <link href="https://daniel.feldroy.com/posts/2025-03-pi-day"/>
-    <summary>A really quick exploration of Pi in Python plus a call to action!</summary>
-    <category term="python"/>
-    <category term="blog"/>
-    <contributor>
-      <name>Daniel Roy Greenfeld</name>
-      <email>daniel@feldroy.com</email>
-    </contributor>
-    <published>2025-03-14T21:30:00+00:00</published>
-  </entry>
   <entry>
     <id>https://daniel.feldroy.com/posts/2025-03-using-pyinstrument-to-profile-fasthtml-apps</id>
     <title>Using pyinstrument to profile FastHTML apps</title>
@@ -922,5 +891,42 @@ uv&lt;span class="w"&gt; &lt;/span&gt;add&lt;span class="w"&gt; &lt;/span&gt;&lt
       <email>daniel@feldroy.com</email>
     </contributor>
     <published>2025-08-29T05:54:58.034855+00:00</published>
+  </entry>
+  <entry>
+    <id>https://daniel.feldroy.com/posts/til-2025-09-setting-environment-variables-for-pytest</id>
+    <title>TIL: Setting environment variables for pytest</title>
+    <updated>2025-09-02T02:29:33.084710+00:00</updated>
+    <author>
+      <name>Daniel Roy Greenfeld</name>
+      <email>daniel@feldroy.com</email>
+    </author>
+    <content type="html">&lt;p&gt;When writing tests in pytest, often there's a need to set environment variables for your tests. Instead of modifying &lt;code&gt;os.environ&lt;/code&gt; directly, which can lead to side effects and make tests harder to manage, here's how to do it with the &lt;a href="https://pypi.org/project/pytest-env/"&gt;pytest-env&lt;/a&gt; package.&lt;/p&gt;
+&lt;p&gt;First, install the package. &lt;/p&gt;
+&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;pip&lt;span class="w"&gt; &lt;/span&gt;install&lt;span class="w"&gt; &lt;/span&gt;pytest-env&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="c1"&gt;# classic but works great&lt;/span&gt;
+uv&lt;span class="w"&gt; &lt;/span&gt;add&lt;span class="w"&gt; &lt;/span&gt;pytest-env&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="c1"&gt;# if you&amp;#39;re one of us cool kids using uv&lt;/span&gt;
+uv&lt;span class="w"&gt; &lt;/span&gt;add&lt;span class="w"&gt; &lt;/span&gt;pytest-env&lt;span class="w"&gt; &lt;/span&gt;--group&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nb"&gt;test&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="c1"&gt;# if you use a specific test group of dependencies&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;A lot of people use &lt;code&gt;pytest.ini&lt;/code&gt; to configure pytest, but I prefer using &lt;code&gt;pyproject.toml&lt;/code&gt; for a more modern approach. Here's how you can set environment variables in &lt;code&gt;pyproject.toml&lt;/code&gt;:&lt;/p&gt;
+&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="k"&gt;[tool.pytest_env]&lt;/span&gt;
+&lt;span class="c1"&gt;# Test value for the SUPER_SECRET_KEY environment variable&lt;/span&gt;
+&lt;span class="n"&gt;SUPER_SECRET_KEY&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;ABC123&amp;quot;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Then run your tests just like you would normally do, and now the environment variable will be picked up by whatever test or code is looking for it. That's correct, you don't need to do any further configuration.&lt;/p&gt;
+&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;pytest&lt;span class="w"&gt; &lt;/span&gt;.
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Since a lot of API SDK libraries use environment variables for configuration, this is a great way to ensure your tests run in a controlled environment. Either with mock replies or against a test instance of the service.&lt;/p&gt;</content>
+    <link href="https://daniel.feldroy.com/posts/til-2025-09-setting-environment-variables-for-pytest"/>
+    <summary>An easier way of doing it then modifying os.environ</summary>
+    <category term="python"/>
+    <category term="TIL"/>
+    <category term="testing"/>
+    <contributor>
+      <name>Daniel Roy Greenfeld</name>
+      <email>daniel@feldroy.com</email>
+    </contributor>
+    <published>2025-09-02T02:29:33.084710+00:00</published>
   </entry>
 </feed>

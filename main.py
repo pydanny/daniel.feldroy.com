@@ -425,7 +425,7 @@ async def index():
                 *tils[:7],
                 air.P(air.A("Read more TIL articles", href="/tags/TIL")),
             ),
-            air.Section(air.H1("Popular Writings"), *popular),
+            air.Section(air.H1("Featured Writings"), *popular),
             class_="grid",
         ),
     )

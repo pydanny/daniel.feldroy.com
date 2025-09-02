@@ -12,7 +12,11 @@ title: Stories About Family
 
 # Great-Grandpa Sam
 
-I know of three possible reasons why my great grandfather left what was the the Poland/Austria-Hungarian town of [Dynów](https://en.wikipedia.org/wiki/Dyn%C3%B3w). Knowing him and my family background, none or all three might be true. I was told that being a socialist in Tsarist Russia was dangerous, so he left the motherland at aged 19 around 1910. I was also told that he worked as a piano teacher and got a student pregnant. In reading his memoirs who mentions something about education and opportunity, but also mentions his membership in the socialist party (where he first broke Kosher) and where he loved to describe the attractive women around him.
+I know of three possible reasons why my great-grandfather left what was the the Poland/Austria-Hungarian town of [Dynów](https://en.wikipedia.org/wiki/Dyn%C3%B3w). Knowing him and my family background, none or all three might be true.
+
+1. I was told that being a socialist in Tsarist Russia was dangerous, so he left the motherland at aged 19 around 1910.
+2. I know he worked as a piano teacher had a penchant for pretty girls - perhaps he fled for safety from angry parents.
+3. In his memoirs he mentions the USA being the land of education and opportunity and safety. That he could find 
 
 # Grandpa Maurice
 

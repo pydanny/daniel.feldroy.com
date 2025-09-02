@@ -103,6 +103,9 @@ requires-dist = [
     { name = "sentry-sdk", extras = ["fastapi"], specifier = ">=2.34.1" },
 ]
 
+[package.metadata.requires-dev]
+test = []
+
 [[package]]
 name = "dnspython"
 version = "2.7.0"

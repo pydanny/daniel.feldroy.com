@@ -15,3 +15,6 @@ dependencies = [
     "pyyaml>=6.0.2",
     "sentry-sdk[fastapi]>=2.34.1",
 ]
+
+[dependency-groups]
+test = []

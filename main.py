@@ -280,23 +280,26 @@ def Layout(
                         air.A(
                             "LinkedIn",
                             href="https://www.linkedin.com/in/danielfeldroy/",
+                            target="_blank"
                         ),
                         " | ",
                         air.A(
                             "Bluesky",
                             href="https://bsky.app/profile/daniel.feldroy.com",
+                            target="_blank"
+                            
                         ),
                         " | ",
-                        air.A("Twitter", href="https://twitter.com/pydanny"),
+                        air.A("Twitter", href="https://twitter.com/pydanny", target="_blank"),
                         " | ",
-                        air.A("Github", href="https://github.com/pydanny"),
+                        air.A("Github", href="https://github.com/pydanny", target="_blank"),
                         " | ",                        
                         "Feeds: ",
-                        air.A("All", href="/feeds/atom.xml"),
+                        air.A("All", href="/feeds/atom.xml", target="_blank"),
                         ", ",
-                        air.A("Python", href="/feeds/python.atom.xml"),
+                        air.A("Python", href="/feeds/python.atom.xml", target="_blank"),
                         ", ",
-                        air.A("TIL", href="/feeds/til.atom.xml"),
+                        air.A("TIL", href="/feeds/til.atom.xml", target="_blank"),
                     ),
                     air.P(
                         f"All rights reserved {datetime.now().year}, Daniel Roy Greenfeld"

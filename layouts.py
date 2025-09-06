@@ -2,6 +2,7 @@ import air
 import pathlib
 from datetime import datetime
 
+
 def Socials(title, description, image, twitter_image, url):
     return [
         air.Meta(property="og:image", content=image),
@@ -18,6 +19,7 @@ def Socials(title, description, image, twitter_image, url):
         air.Link(rel="canonical", href=url),
     ]
     return
+
 
 def Layout(
     *children,
@@ -71,7 +73,7 @@ def Layout(
                     src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release/build/languages/css.min.js"
                 ),
                 # air.Script(src="/public/render.js"),
-                air.Script(pathlib.Path('public/render.js').read_text()),
+                air.Script(pathlib.Path("public/render.js").read_text()),
                 air.Link(rel="stylesheet", href="/public/style.css", type="text/css"),
                 *air.layouts.filter_head_tags(children),
             ),
@@ -110,22 +112,27 @@ def Layout(
                         air.A(
                             "LinkedIn",
                             href="https://www.linkedin.com/in/danielfeldroy/",
-                            target="_blank"
+                            target="_blank",
                         ),
                         " | ",
                         air.A(
                             "Bluesky",
                             href="https://bsky.app/profile/daniel.feldroy.com",
-                            target="_blank"
-                            
+                            target="_blank",
                         ),
                         " | ",
-                        air.A("Twitter", href="https://twitter.com/pydanny", target="_blank"),
+                        air.A(
+                            "Twitter",
+                            href="https://twitter.com/pydanny",
+                            target="_blank",
+                        ),
                         " | ",
-                        air.A("Github", href="https://github.com/pydanny", target="_blank"),
-                        " | ",    
+                        air.A(
+                            "Github", href="https://github.com/pydanny", target="_blank"
+                        ),
+                        " | ",
                         # air.A("Mailing list", href="/mailing-list"),
-                        # " | ",                                                
+                        # " | ",
                         "Feeds: ",
                         air.A("All", href="/feeds/atom.xml", target="_blank"),
                         ", ",
@@ -174,7 +181,7 @@ def Layout(
             htmx.trigger('.search-results', 'htmx:trigger', {value: e.target.value});
             });
             """),
-            hx_boost='true'
+                hx_boost="true",
             ),
         ).render(),
         status_code=status_code,

@@ -13,14 +13,16 @@ import pydantic
 
 
 # Step 0: sync engine for non-web db action
-sync_url = "postgresql://" + getenv('DANIEL_DB_URL', 'drg@localhost/danielblog')
+sync_url = "postgresql://" + getenv("DANIEL_DB_URL", "drg@localhost/danielblog")
 sync_engine = create_engine(sync_url, echo=True)
 
 
 # Step 1: Create async engine and session
-async_url = "postgresql+asyncpg://" + getenv('DANIEL_DB_URL', 'drg@localhost/danielblog')
+async_url = "postgresql+asyncpg://" + getenv(
+    "DANIEL_DB_URL", "drg@localhost/danielblog"
+)
 async_engine = create_async_engine(
-    async_url, # Async connection string
+    async_url,  # Async connection string
     echo=True,  # Optional: Set to False in production
     future=True,
 )
@@ -41,18 +43,18 @@ async def _get_async_session() -> AsyncGenerator[AsyncSession, None]:
 
 get_async_session = Depends(_get_async_session)
 
+
 class StatusEnum(StrEnum):
-    unconfirmed = 'Unconfirmed'
-    subscribed = 'Subscribed'
-    unsubscribed = 'Unsubscribed'
-    on_hold = 'On Hold'
+    unconfirmed = "Unconfirmed"
+    subscribed = "Subscribed"
+    unsubscribed = "Unsubscribed"
+    on_hold = "On Hold"
+
 
 class Subscription(SQLModel, table=True):
     id: int | None = Field(default=None, primary_key=True)
     email: pydantic.EmailStr = Field(unique=True)
     status: StatusEnum = StatusEnum.unconfirmed
-    attempts_to_subscribe: int = 1 # How many attempts to subscribe. If we get more than 3 for an email we put them on hold
+    attempts_to_subscribe: int = 1  # How many attempts to subscribe. If we get more than 3 for an email we put them on hold
     created_at: datetime = datetime.now()
     updated_at: datetime = datetime.now()
-
-

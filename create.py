@@ -4,33 +4,46 @@ from pathlib import Path
 from rich.prompt import Prompt, Confirm
 from yaml import safe_dump
 
+
 def main() -> None:
     while True:
         title: str = Prompt.ask("Title")
         if title:
             break
-    while True:        
+    while True:
         description: str = Prompt.ask("Description")
         if description:
             break
-    timestamp: str = Prompt.ask("Timestamp", default=datetime.now(timezone.utc).isoformat()) 
+    timestamp: str = Prompt.ask(
+        "Timestamp", default=datetime.now(timezone.utc).isoformat()
+    )
     prefix: str = timestamp[:4]
     til: str = Confirm.ask("TIL")
-    slug: str = Prompt.ask("Slug", default=f"{timestamp[:7]}-{title.lower().replace(' ', '-')}")
+    slug: str = Prompt.ask(
+        "Slug", default=f"{timestamp[:7]}-{title.lower().replace(' ', '-')}"
+    )
 
-    data = {'published': True, 'description': description, 'date': timestamp, 'tags': []}
+    data = {
+        "published": True,
+        "description": description,
+        "date": timestamp,
+        "tags": [],
+    }
 
-    data['title'] = title
+    data["title"] = title
     if til:
-        data['title'] = f"TIL: {title}"
+        data["title"] = f"TIL: {title}"
         slug = f"til-{slug}"
-        data['tags'] = ['TIL', ]
+        data["tags"] = [
+            "TIL",
+        ]
         data["image"] = "/public/logos/til-1.png"
         data["twitter_image"] = "/public/logos/til-1.png"
-        prefix = 'til'
+        prefix = "til"
     path = Path(f"posts/{prefix}/{slug}.md")
     text = f"---\n{safe_dump(data)}---\n"
     path.write_text(text)
 
-if __name__ == '__main__':
+
+if __name__ == "__main__":
     main()

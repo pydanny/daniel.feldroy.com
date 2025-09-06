@@ -25,12 +25,14 @@ def Page404(request: air.Request, exc: Exception) -> air.AirResponse:
 
 
 app = air.Air(exception_handlers={404: Page404})
-app.include_router(mailing_list_router, prefix='/blarg-snorg')
+app.include_router(mailing_list_router, prefix="/blarg-snorg")
 
 # Mount static files for CSS
-app.mount("/public", StaticFiles(directory="public"), name="public")      
+app.mount("/public", StaticFiles(directory="public"), name="public")
 
-default_social_image = "https://f004.backblazeb2.com/file/daniel-feldroy-com/public/images/profile.jpg"
+default_social_image = (
+    "https://f004.backblazeb2.com/file/daniel-feldroy-com/public/images/profile.jpg"
+)
 
 redirects = json.loads(pathlib.Path(f"redirects.json").read_text())
 
@@ -171,9 +173,6 @@ def MarkdownPage(slug: str):
         url=f"https://daniel.feldroy.com/{slug}",
         image=metadata.get("image", default_social_image),
     )
-
-
-
 
 
 @app.page
@@ -454,8 +453,7 @@ async def fitness():
     for row in rows:
         dates[row["Date"][:7]].append(row)
 
-    current_weight = rows[0]["Weight"]        
-
+    current_weight = rows[0]["Weight"]
 
     config = {"responsive": True}
     config = json.dumps(config)
@@ -530,7 +528,9 @@ async def fitness():
             ),
         )
         charts.append(
-            air.Script(f"Plotly.newPlot('{chart_name}', {fitness}, {layout}, {config});")
+            air.Script(
+                f"Plotly.newPlot('{chart_name}', {fitness}, {layout}, {config});"
+            )
         )
 
     return Layout(
@@ -553,8 +553,7 @@ async def fitness():
             ),
             *charts,
             air.A("← Back home", href="/"),
-        ),        
-        
+        ),
     )
 
 
@@ -586,33 +585,35 @@ async def writing_stats():
         air.Script(src="https://cdn.plot.ly/plotly-2.32.0.min.js"),
         air.Div(id="post-counts"),
         air.Children(
-        air.Script(f"Plotly.newPlot('post-counts', {data}, {layout}, {config});"),
+            air.Script(f"Plotly.newPlot('post-counts', {data}, {layout}, {config});"),
         ),
         description="Numbers about my writing patterns",
     )
 
-@app.get('/.well-known/atproto-did')
+
+@app.get("/.well-known/atproto-did")
 async def wellknown_atproto_did():
     # for bluesky!
-    return air.responses.PlainTextResponse('did:plc:qmkhbnaaxxr7pcdkgdpis6pi')
+    return air.responses.PlainTextResponse("did:plc:qmkhbnaaxxr7pcdkgdpis6pi")
 
 
-@app.get('/robots.txt')
+@app.get("/robots.txt")
 async def robots():
-    return air.responses.PlainTextResponse(pathlib.Path('robots.txt').read_text())
+    return air.responses.PlainTextResponse(pathlib.Path("robots.txt").read_text())
+
 
 @app.page
 async def blarg():
-    return 1/0
+    return 1 / 0
 
 
 @app.get("/{slug}")
 async def page_or_redirect1(slug: str):
     redirects_url = redirects.get(slug, None)
     if redirects_url is not None:
-        return RedirectResponse(redirects_url)    
+        return RedirectResponse(redirects_url)
     try:
-        return MarkdownPage(slug)    
+        return MarkdownPage(slug)
     except TypeError:
         raise HTTPException(status_code=404)
 
@@ -626,5 +627,3 @@ async def page_or_redirect2(slug_1: str, slug_2: str):
         return MarkdownPage(slug_1 + "/" + slug_2)
     except TypeError:
         raise HTTPException(status_code=404)
-
-

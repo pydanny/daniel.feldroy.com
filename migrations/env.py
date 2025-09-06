@@ -20,14 +20,16 @@ if config.config_file_name is not None:
 # from myapp import mymodel
 # target_metadata = mymodel.Base.metadata
 from models import SQLModel
-
 target_metadata = SQLModel.metadata
+
 
 # other values from the config, defined by the needs of env.py,
 # can be acquired:
 # my_important_option = config.get_main_option("my_important_option")
 # ... etc.
-
+from os import getenv
+db_url = "postgresql://" + getenv("DANIEL_DB_URL", "drg@localhost/danielblog")
+config.set_main_option('sqlalchemy.url', db_url)
 
 def run_migrations_offline() -> None:
     """Run migrations in 'offline' mode.

@@ -25,7 +25,7 @@ def Page404(request: air.Request, exc: Exception) -> air.AirResponse:
 
 
 app = air.Air(exception_handlers={404: Page404})
-app.include_router(mailing_list_router)
+app.include_router(mailing_list_router, prefix='/blarg-snorg')
 
 # Mount static files for CSS
 app.mount("/public", StaticFiles(directory="public"), name="public")      

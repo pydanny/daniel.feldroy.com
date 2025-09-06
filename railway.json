@@ -4,6 +4,7 @@
     "builder": "NIXPACKS"
   },
   "deploy": {
-    "startCommand": "alembic upgrade head && uv run hypercorn main:app --bind \"[::]:$PORT\""
+    "preDeployCommand": ["alembic upgrade head"],
+    "startCommand": "uv run hypercorn main:app --bind \"[::]:$PORT\""
   }
 }

@@ -2,6 +2,8 @@ import air
 from layouts import Layout
 from models import Subscription, async_session
 from rich import print
+from datetime import datetime
+from sqlmodel import select
 
 router = air.AirRouter()
 
@@ -36,14 +38,29 @@ def mailing_list():
         description=''
     )
 
+
+
+
+
 async def save_subscription(email):
+
     session = async_session()
-    subscription = Subscription(email=email)    
-    session.add(subscription)
-    await session.commit()
-    print('[green bold]subscription saved![/green bold]')
-
-
+    statement = select(Subscription).where(Subscription.email==email)
+    obj = await session.exec(statement)
+    subscription = obj.first()
+    if subscription is None:
+        subscription = Subscription(email=email)    
+        session.add(subscription)
+        await session.commit()
+        print('[green bold]subscription saved![/green bold]')
+    else:
+        # Already in the system, email again, and increment the subscribe attempts by 1
+        subscription.attempts_to_subscribe += 1
+        subscription.updated_at = datetime.now()
+        session.add(subscription)
+        await session.commit()
+        print("[red bold]In the system already, let's send them the email again[/red bold]") 
+    
 
 @router.post('/subscribe')
 async def subscribe(request: air.Request, background_tasks: air.BackgroundTasks):

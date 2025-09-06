@@ -1,11 +1,15 @@
+from typing import AsyncGenerator
+from datetime import datetime
+
+from os import getenv
+
 import air  # air is built on FastAPI
 from fastapi import Depends
 from sqlalchemy.ext.asyncio import create_async_engine, async_sessionmaker
 from sqlmodel.ext.asyncio.session import AsyncSession
 from sqlmodel import SQLModel, select, Field, create_engine
-from typing import AsyncGenerator
-from datetime import datetime
-from os import getenv
+from enum import Enum, StrEnum
+import pydantic
 
 
 # Step 0: sync engine for non-web db action
@@ -37,12 +41,16 @@ async def _get_async_session() -> AsyncGenerator[AsyncSession, None]:
 
 get_async_session = Depends(_get_async_session)
 
+class StatusEnum(StrEnum):
+    unconfirmed = 'Unconfirmed'
+    subscribed = 'Subscribed'
+    unsubscribed = 'Unsubscribed'
+    on_hold = 'On Hold'
 
 class Subscription(SQLModel, table=True):
     id: int | None = Field(default=None, primary_key=True)
-    email: str
-    confirmed: bool = False # Has the user confirmed their account?
-    subscribed: bool = True # Does the user still want to get emails?
+    email: pydantic.EmailStr = Field(unique=True)
+    status: StatusEnum = StatusEnum.unconfirmed
     attempts_to_subscribe: int = 1 # How many attempts to subscribe. If we get more than 3 for an email we put them on hold
     created_at: datetime = datetime.now()
     updated_at: datetime = datetime.now()

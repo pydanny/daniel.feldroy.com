@@ -5,7 +5,6 @@ slug: 2023-04-aws-requests-auth
 tags:
   - python
   - howto
-  - aws
   - TIL
 time_to_read: 1
 title: AWS Requests Auth

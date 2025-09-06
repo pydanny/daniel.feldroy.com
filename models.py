@@ -3,7 +3,6 @@ from datetime import datetime
 
 from os import getenv
 
-import air  # air is built on FastAPI
 from fastapi import Depends
 from sqlalchemy.ext.asyncio import create_async_engine, async_sessionmaker
 from sqlmodel.ext.asyncio.session import AsyncSession
@@ -11,16 +10,16 @@ from sqlmodel import SQLModel, select, Field, create_engine
 from enum import Enum, StrEnum
 import pydantic
 
-
 # Step 0: sync engine for non-web db action
 sync_url = "postgresql://" + getenv("DANIEL_DB_URL", "drg@localhost/danielblog")
 sync_engine = create_engine(sync_url, echo=True)
 
 
 # Step 1: Create async engine and session
-async_url = "postgresql+asyncpg://" + getenv(
+base_async_url = getenv(
     "DANIEL_DB_URL", "drg@localhost/danielblog"
-)
+).split("?")[0]
+async_url = "postgresql+asyncpg://" + base_async_url
 async_engine = create_async_engine(
     async_url,  # Async connection string
     echo=True,  # Optional: Set to False in production

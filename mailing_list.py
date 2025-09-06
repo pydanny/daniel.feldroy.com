@@ -36,7 +36,8 @@ def mailing_list():
         air.Section(air.H1(title)),
         air.Article(
             air.P(
-                "Software projects, books I write or work on, open source, and more."
+                "Software projects, books I write or work on, courses I talk, events I attend, open source, and more."
+                "We send out emails infrequently, and you are welcome to unsubscribe at any time."
             ),
             air.Form(
                 air.Fieldset(

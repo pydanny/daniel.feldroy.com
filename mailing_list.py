@@ -51,7 +51,7 @@ def mailing_list():
                     air.Input(type="submit", value="Subscribe"),
                     role="group",
                 ),
-                hx_post="/subscribe",
+                hx_post="/blarg-snorg/subscribe",
             ),
             air.P(
                 air.Small(

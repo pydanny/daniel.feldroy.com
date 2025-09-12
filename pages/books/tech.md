@@ -20,7 +20,7 @@ The 5th edition of Two Scoops of Django is out. With over 500 pages of material,
 
 <p>
 <a
-    href="https://polar.sh/checkout/polar_c_qkhEdVItg5lMEOvJ287vRwtgBk0PQshhj85gn3fvaqY"
+    href="https://feldroy.com/two-scoops-of-django"
     rel="nofollow"
 >
     <img src="https://transactions.sendowl.com/assets/external/buy-now.png" />

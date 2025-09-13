@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
   <id>https://daniel.feldroy.com/</id>
   <title>Til posts by Daniel Roy Greenfeld</title>
-  <updated>2025-09-02T02:41:34.933194+00:00</updated>
+  <updated>2025-09-13T09:09:43.461976+00:00</updated>
   <author>
     <name>Daniel Roy Greenfeld</name>
     <email>daniel@feldroy.com</email>
@@ -12,26 +12,6 @@
   <generator uri="https://lkiesow.github.io/python-feedgen" version="1.0.0">python-feedgen</generator>
   <logo>https://daniel.feldroy.com/images/pydanny-cartwheel.png</logo>
   <rights>All rights reserved 2025, Daniel Roy Greenfeld</rights>
-  <entry>
-    <id>https://daniel.feldroy.com/posts/til-2025-01-every-jupyter-notebook-cell-runs-in-an-async-loop</id>
-    <title>TIL: Every Jupyter notebook cell runs in an async loop</title>
-    <updated>2025-01-31T18:18:35.368709+00:00</updated>
-    <author>
-      <name>Daniel Roy Greenfeld</name>
-      <email>daniel@feldroy.com</email>
-    </author>
-    <content type="html">&lt;p&gt;Since June of last year I've done a decent amount of async/await programming inside of Jupyter notebooks. And I never thought about the fact that I didn't have to run an async loop. Sure, I knew that the Jupyter server is async, but until I did a direct export to Python module from a notebook this distinction hadn't mattered.&lt;/p&gt;
-&lt;p&gt;A fun little nuance, and it makes me think that one of the better places to accelerate async/await programming skills is in a notebook. &lt;/p&gt;</content>
-    <link href="https://daniel.feldroy.com/posts/til-2025-01-every-jupyter-notebook-cell-runs-in-an-async-loop"/>
-    <summary>Obvious now that I think about it!</summary>
-    <category term="TIL"/>
-    <category term="python"/>
-    <contributor>
-      <name>Daniel Roy Greenfeld</name>
-      <email>daniel@feldroy.com</email>
-    </contributor>
-    <published>2025-01-31T18:18:35.368709+00:00</published>
-  </entry>
   <entry>
     <id>https://daniel.feldroy.com/posts/til-2025-02-typer-commands-defaulting-to-help</id>
     <title>TIL: Typer commands defaulting to help</title>
@@ -812,5 +792,40 @@ uv&lt;span class="w"&gt; &lt;/span&gt;add&lt;span class="w"&gt; &lt;/span&gt;pyt
       <email>daniel@feldroy.com</email>
     </contributor>
     <published>2025-09-02T02:29:33.084710+00:00</published>
+  </entry>
+  <entry>
+    <id>https://daniel.feldroy.com/posts/til-2025-09-merging-two-git-projects</id>
+    <title>TIL: Merging two git projects</title>
+    <updated>2025-09-13T08:49:50.670264+00:00</updated>
+    <author>
+      <name>Daniel Roy Greenfeld</name>
+      <email>daniel@feldroy.com</email>
+    </author>
+    <content type="html">&lt;p&gt;Of course this task can be done with copy/paste. The challenge there is the loss of git history. All the history of struggles and tribulations are gone. More important is the attribution - unless any and all contributors are made co-authors. But then the volume of attribution isn't accurate, some one who made one tiny change gets as much credit as the leading contributor.&lt;/p&gt;
+&lt;p&gt;A better way is to merge the repos together while preserving the git history. Let's imagine we want to merge repo #2 into repo #1:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;&lt;a href="https://github.com/feldroy/air"&gt;AIR&lt;/a&gt;&lt;/strong&gt; (A new Python web framework). This is in a repo on my laptop called &lt;code&gt;air&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;AirDocs&lt;/strong&gt; (Documentation for AIR, getting merged into air). This is in a repo on github located at &lt;a href="https://github.com/feldroy/airdocs"&gt;github.com/feldroy/airdocs&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;Here's how I did it:&lt;/p&gt;
+&lt;h2 id="step-1-add-an-airdocs-git-remote-to-air"&gt;Step 1: Add an airdocs git remote to air&lt;/h2&gt;
+&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="nb"&gt;cd&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;air/
+git&lt;span class="w"&gt; &lt;/span&gt;remote&lt;span class="w"&gt; &lt;/span&gt;add&lt;span class="w"&gt; &lt;/span&gt;-f&lt;span class="w"&gt; &lt;/span&gt;airdocs&lt;span class="w"&gt; &lt;/span&gt;git@github.com:feldroy/airdocs.git
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;h2 id="step-2-merge-airdocs-into-air"&gt;Step 2: Merge AirDocs into AIR&lt;/h2&gt;
+&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;git&lt;span class="w"&gt; &lt;/span&gt;merge&lt;span class="w"&gt; &lt;/span&gt;airdocs/main&lt;span class="w"&gt; &lt;/span&gt;--allow-unrelated-histories
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;At this point code conflicts may arise, which can be resolved. In our case, we made sure that the repos didn't have overlapping files. &lt;/p&gt;</content>
+    <link href="https://daniel.feldroy.com/posts/til-2025-09-merging-two-git-projects"/>
+    <summary>Attribution matters to me, I want contributors to always get full credit for their effort. This is how you preserve the git history of a project you are bringing into another project.</summary>
+    <category term="TIL"/>
+    <category term="git"/>
+    <contributor>
+      <name>Daniel Roy Greenfeld</name>
+      <email>daniel@feldroy.com</email>
+    </contributor>
+    <published>2025-09-13T08:49:50.670264+00:00</published>
   </entry>
 </feed>

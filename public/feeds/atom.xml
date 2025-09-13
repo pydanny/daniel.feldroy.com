@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
   <id>https://daniel.feldroy.com/</id>
   <title>Inside the head of Daniel Roy Greenfeld</title>
-  <updated>2025-09-02T02:41:34.325013+00:00</updated>
+  <updated>2025-09-13T09:09:42.689032+00:00</updated>
   <author>
     <name>Daniel Roy Greenfeld</name>
     <email>daniel@feldroy.com</email>
@@ -12,48 +12,6 @@
   <generator uri="https://lkiesow.github.io/python-feedgen" version="1.0.0">python-feedgen</generator>
   <logo>https://daniel.feldroy.com/images/pydanny-cartwheel.png</logo>
   <rights>All rights reserved 2025, Daniel Roy Greenfeld</rights>
-  <entry>
-    <id>https://daniel.feldroy.com/posts/til-2025-04-Pipe-operator-for-merging-dictionaries</id>
-    <title>TIL: Pipe operator for merging dictionaries</title>
-    <updated>2025-04-27T19:05:35.433062+00:00</updated>
-    <author>
-      <name>Daniel Roy Greenfeld</name>
-      <email>daniel@feldroy.com</email>
-    </author>
-    <content type="html">&lt;p&gt;Pipe &lt;code&gt;|&lt;/code&gt; returns a new dictionary containing the key-value pairs from both operands.&lt;/p&gt;
-&lt;p&gt;```python {.marimo}
-a = {'a': 1, 'b': 2}
-b = {'c': 3, 'd': 4}
-_merged = a | b
-print(a)&lt;/p&gt;
-&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;If there are duplicate keys, the value from the right-hand operand will overwrite  the value from the left-hand operand.
-
-```python {.marimo}
-left = {&amp;#39;a&amp;#39;: 1, &amp;#39;b&amp;#39;: 2}
-right = {&amp;#39;a&amp;#39;: 3, &amp;#39;b&amp;#39;: 4}
-_merged = left | right
-print(_merged)
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;p&gt;The &lt;code&gt;|=&lt;/code&gt; is related, updating the left-hand operand in place much like the &lt;code&gt;+=&lt;/code&gt; operator.&lt;/p&gt;
-&lt;p&gt;```python {.marimo}
-original = {'a': 1, 'b': 2}
-new = {'b': 3, 'c': 4}
-original |= new # Analogous to original.update(new)
-print(original)&lt;/p&gt;
-&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="err"&gt;```&lt;/span&gt;&lt;span class="n"&gt;python&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;marimo&lt;/span&gt;&lt;span class="p"&gt;}&lt;/span&gt;
-&lt;span class="kn"&gt;import&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nn"&gt;marimo&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="k"&gt;as&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nn"&gt;mo&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</content>
-    <link href="https://daniel.feldroy.com/posts/til-2025-04-Pipe-operator-for-merging-dictionaries"/>
-    <summary>In Python 3.9 and later, the pipe operator | can be used to merge dictionaries.</summary>
-    <category term="TIL"/>
-    <category term="python"/>
-    <contributor>
-      <name>Daniel Roy Greenfeld</name>
-      <email>daniel@feldroy.com</email>
-    </contributor>
-    <published>2025-04-27T19:05:35.433062+00:00</published>
-  </entry>
   <entry>
     <id>https://daniel.feldroy.com/posts/til-2025-05-reverse-square-knot</id>
     <title>TIL: Reverse Square Knot</title>
@@ -901,5 +859,40 @@ uv&lt;span class="w"&gt; &lt;/span&gt;add&lt;span class="w"&gt; &lt;/span&gt;pyt
       <email>daniel@feldroy.com</email>
     </contributor>
     <published>2025-09-02T02:29:33.084710+00:00</published>
+  </entry>
+  <entry>
+    <id>https://daniel.feldroy.com/posts/til-2025-09-merging-two-git-projects</id>
+    <title>TIL: Merging two git projects</title>
+    <updated>2025-09-13T08:49:50.670264+00:00</updated>
+    <author>
+      <name>Daniel Roy Greenfeld</name>
+      <email>daniel@feldroy.com</email>
+    </author>
+    <content type="html">&lt;p&gt;Of course this task can be done with copy/paste. The challenge there is the loss of git history. All the history of struggles and tribulations are gone. More important is the attribution - unless any and all contributors are made co-authors. But then the volume of attribution isn't accurate, some one who made one tiny change gets as much credit as the leading contributor.&lt;/p&gt;
+&lt;p&gt;A better way is to merge the repos together while preserving the git history. Let's imagine we want to merge repo #2 into repo #1:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;&lt;a href="https://github.com/feldroy/air"&gt;AIR&lt;/a&gt;&lt;/strong&gt; (A new Python web framework). This is in a repo on my laptop called &lt;code&gt;air&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;AirDocs&lt;/strong&gt; (Documentation for AIR, getting merged into air). This is in a repo on github located at &lt;a href="https://github.com/feldroy/airdocs"&gt;github.com/feldroy/airdocs&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;Here's how I did it:&lt;/p&gt;
+&lt;h2 id="step-1-add-an-airdocs-git-remote-to-air"&gt;Step 1: Add an airdocs git remote to air&lt;/h2&gt;
+&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="nb"&gt;cd&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;air/
+git&lt;span class="w"&gt; &lt;/span&gt;remote&lt;span class="w"&gt; &lt;/span&gt;add&lt;span class="w"&gt; &lt;/span&gt;-f&lt;span class="w"&gt; &lt;/span&gt;airdocs&lt;span class="w"&gt; &lt;/span&gt;git@github.com:feldroy/airdocs.git
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;h2 id="step-2-merge-airdocs-into-air"&gt;Step 2: Merge AirDocs into AIR&lt;/h2&gt;
+&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;git&lt;span class="w"&gt; &lt;/span&gt;merge&lt;span class="w"&gt; &lt;/span&gt;airdocs/main&lt;span class="w"&gt; &lt;/span&gt;--allow-unrelated-histories
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;At this point code conflicts may arise, which can be resolved. In our case, we made sure that the repos didn't have overlapping files. &lt;/p&gt;</content>
+    <link href="https://daniel.feldroy.com/posts/til-2025-09-merging-two-git-projects"/>
+    <summary>Attribution matters to me, I want contributors to always get full credit for their effort. This is how you preserve the git history of a project you are bringing into another project.</summary>
+    <category term="TIL"/>
+    <category term="git"/>
+    <contributor>
+      <name>Daniel Roy Greenfeld</name>
+      <email>daniel@feldroy.com</email>
+    </contributor>
+    <published>2025-09-13T08:49:50.670264+00:00</published>
   </entry>
 </feed>

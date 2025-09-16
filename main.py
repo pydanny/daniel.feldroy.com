@@ -387,7 +387,7 @@ def _search(q: str = ""):
     )
 
 
-@app.get("/search-results")
+@app.page
 async def search_results(q: str):
     return _search(q)
 
@@ -557,7 +557,7 @@ async def fitness():
     )
 
 
-@app.get("/writing-stats")
+@app.page
 async def writing_stats():
     years = collections.defaultdict(int)
     for post in list_posts():

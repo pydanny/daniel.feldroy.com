@@ -29,10 +29,10 @@ Which brings me to the current state of things. NoSQL is a big thing, with advan
 So for now, like most of the developers I know, what I like to do is as follows:
 
 
-1. Create a well-normalized database preferably using PostGreSQL.
+- Create a well-normalized database preferably using PostGreSQL.
 - Cache predicted slowdown areas in [Redis](https://en.wikipedia.org/wiki/Redis_(data_store)).&nbsp;
 - Use data analysis to spot database bottlenecks and [break normalization](https://en.wikipedia.org/wiki/Denormalization) via specific non-normalized tables.
 - Use a queue system like [Celery](https://celeryproject.org/) or even chronjobs to populate the&nbsp;non-normalized&nbsp;table so the user never sees anything slow.
 - Cache the results of queries against the specific&nbsp;non-normalized&nbsp;tables in Redis.
 
-<div>The end result is something with the rigidity of a relational database but with the delivery speed of a key/value database.&nbsp; Since I work a lot in [Django](https://djangoproject.com/) this means I get the advantage of most of the [Django Packages ecosystem](https://djangopackages.com/) (at this time you lose much of the ecosphere if you go pure NoSQL). You can do the same in [Pyramid](https://pylonsproject.org/projects/pyramid/about), [Rails](https://en.wikipedia.org/wiki/Ruby_on_Rails), or whatever. Maybe its a bit conservative, but it works just fine.</div>
+The end result is something with the rigidity of a relational database but with the delivery speed of a key/value database.&nbsp; Since I work a lot in [Django](https://djangoproject.com/) this means I get the advantage of most of the [Django Packages ecosystem](https://djangopackages.com/) (at this time you lose much of the ecosphere if you go pure NoSQL). You can do the same in [Pyramid](https://pylonsproject.org/projects/pyramid/about), [Rails](https://en.wikipedia.org/wiki/Ruby_on_Rails), or whatever. Maybe its a bit conservative, but it works just fine.

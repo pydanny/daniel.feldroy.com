@@ -13,23 +13,11 @@ time_to_read: 2
 title: Generating NCX files with Python
 ---
 
-With the help of fellow Python developer Matt Harrison's excellent
-[Ebook Formatting: KF8, Mobi &
-EPUB](https://www.amazon.com/Ebook-Formatting-Mobi-EPUB-ebook/dp/B00BWQXHU6/ref=la_B0077BQLH6_1_2?ie=UTF8&qid=1366041987&sr=1-2&tag=ihpydanny-20),
-we managed to create pretty decent looking Kindle and ePub versions of
-[Two Scoops of Django](https://www.feldroy.com/books/two-scoops-of-django-3-x).
+With the help of fellow Python developer Matt Harrison's excellent [Ebook Formatting: KF8, Mobi & EPUB](https://www.amazon.com/Ebook-Formatting-Mobi-EPUB-ebook/dp/B00BWQXHU6/ref=la_B0077BQLH6_1_2?ie=UTF8&qid=1366041987&sr=1-2&tag=ihpydanny-20), we managed to create pretty decent looking Kindle and ePub versions of [Two Scoops of Django](https://www.feldroy.com/books/two-scoops-of-django-3-x).
 
-One of many things we did was focus on providing an excellent table of
-contents. Of course we provided one inside the content of the book, but
-much like the PDF version we also provided one that various ebook
-readers can display in sidebars or drop down menus. Unfortunately,
-building this navigation isn't well documented (except for Matt's
-book), and I've yet to see any good ways to generate it via code.
+One of many things we did was focus on providing an excellent table of contents. Of course we provided one inside the content of the book, but much like the PDF version we also provided one that various ebook readers can display in sidebars or drop down menus. Unfortunately, building this navigation isn't well documented (except for Matt's book), and I've yet to see any good ways to generate it via code.
 
-Which is why I present the following code. It looks at the HTML that
-KindleGen and ePub generators demand and pulls from it a chapter-based
-table of contents. Then constructs a .ncx file, which is what ebook
-readers use to generate the sidebar/dropdown table of contents.
+Which is why I present the following code. It looks at the HTML that KindleGen and ePub generators demand and pulls from it a chapter-based table of contents. Then constructs a .ncx file, which is what ebook readers use to generate the sidebar/dropdown table of contents.
 
 Our requirements:
 
@@ -115,6 +103,4 @@ if __name__ == '__main__':
     main('book.html')
 ```
 
-There is more to adding a table of contents then just this simple
-module. You also have to construct the .opf file, which is another
-undocumented mess that I'll blog about.
+There is more to adding a table of contents then just this simple module. You also have to construct the .opf file, which is another undocumented mess that I'll blog about.

@@ -211,7 +211,7 @@ async def index():
             air.Section(
                 air.H1("Recent Writings"),
                 *most_posts[:4],
-                air.P(air.A("Read all articles", href=posts)),
+                air.P(air.A("Read all articles", href='/posts')),
             ),
             air.Section(
                 air.H1("TIL", air.Small(" (Today I learned)")),

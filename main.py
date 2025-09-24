@@ -228,7 +228,7 @@ async def index():
 async def posts():
     duration = round((datetime.now() - datetime(2005, 9, 3)).days / 365.25, 2)
     description = (
-        f"Everything written by Daniel Roy Greenfeld for the past {duration} years."
+        f"Writings by Daniel Roy Greenfeld for the past {duration} years."
     )
     posts = [
         BlogPostPreview(

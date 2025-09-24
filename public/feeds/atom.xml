@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
   <id>https://daniel.feldroy.com/</id>
   <title>Inside the head of Daniel Roy Greenfeld</title>
-  <updated>2025-09-13T09:09:42.689032+00:00</updated>
+  <updated>2025-09-24T00:43:54.365522+00:00</updated>
   <author>
     <name>Daniel Roy Greenfeld</name>
     <email>daniel@feldroy.com</email>
@@ -12,32 +12,6 @@
   <generator uri="https://lkiesow.github.io/python-feedgen" version="1.0.0">python-feedgen</generator>
   <logo>https://daniel.feldroy.com/images/pydanny-cartwheel.png</logo>
   <rights>All rights reserved 2025, Daniel Roy Greenfeld</rights>
-  <entry>
-    <id>https://daniel.feldroy.com/posts/til-2025-05-reverse-square-knot</id>
-    <title>TIL: Reverse Square Knot</title>
-    <updated>2025-05-06T15:50:48.417058+00:00</updated>
-    <author>
-      <name>Daniel Roy Greenfeld</name>
-      <email>daniel@feldroy.com</email>
-    </author>
-    <content type="html">&lt;p&gt;For years I've used a basic square knot to tie my belt in various martial arts. The problem is that while I tie it neatly, it always comes undone. It doesn't matter if was the stand-up striking arts of my younger years or the   grappling-focused Brazilian Jiu-Jitsu I do now - the knot always comes undone.&lt;/p&gt;
-&lt;p&gt;I knew of a better knot, but I never knew what it was called or how to do it. I heard references to superlock, Gracie knots, and a few other names. I finally today learned that the better knot is officially called a "reverse square knot," also known as a right square knot or reverse reef knot. &lt;/p&gt;
-&lt;p&gt;The improved knot is an incredible upgrade, meaning I can focus on my training rather than worrying about my belt coming undone.&lt;/p&gt;
-&lt;p&gt;Here's the proof of my first good attempt, a photo I took after a &lt;strong&gt;2 hour class where it never came undone&lt;/strong&gt;. &lt;/p&gt;
-&lt;p&gt;&lt;img alt="reverse-square-knot" src="https://f004.backblazeb2.com/file/daniel-feldroy-com/public/images/reverse-square-knot.jpg" /&gt;&lt;/p&gt;
-&lt;p&gt;&lt;em&gt;Note: I had just sparred a few rounds and the belt got twisted. Ignore the twists and just admire the still-tied belt.&lt;/em&gt;&lt;/p&gt;
-&lt;p&gt;If you do a martial art with Judo-style belts (these include Karate, Tae Kwon Do, and Brazilian Jiu-Jitsu), I highly recommend you learn this knot. It's a simple change that can make a big difference in your training experience. This video is a good place to start: &lt;a href="https://www.youtube.com/watch?v=bex5a95gG8U"&gt;How to Tie a Reverse Square Knot&lt;/a&gt;.&lt;/p&gt;</content>
-    <link href="https://daniel.feldroy.com/posts/til-2025-05-reverse-square-knot"/>
-    <summary>Useful for martial arts with belts, a "reverse square knot," also known as a right square knot or reverse reef knot, is essentially a square knot tied in the opposite order. Instead of the first working cord going over the other cords, it goes under them first.</summary>
-    <category term="TIL"/>
-    <category term="martial arts"/>
-    <category term="bjj"/>
-    <contributor>
-      <name>Daniel Roy Greenfeld</name>
-      <email>daniel@feldroy.com</email>
-    </contributor>
-    <published>2025-05-06T15:50:48.417058+00:00</published>
-  </entry>
   <entry>
     <id>https://daniel.feldroy.com/posts/til-2025-05-bitwise-xor</id>
     <title>TIL: ^ bitwise XOR</title>
@@ -894,5 +868,55 @@ git&lt;span class="w"&gt; &lt;/span&gt;remote&lt;span class="w"&gt; &lt;/span&gt
       <email>daniel@feldroy.com</email>
     </contributor>
     <published>2025-09-13T08:49:50.670264+00:00</published>
+  </entry>
+  <entry>
+    <id>https://daniel.feldroy.com/posts/2025-09-over-twenty-years-of-writing-tools</id>
+    <title>Over Twenty Years of Writing Tools</title>
+    <updated>2025-09-24T00:45:00.884329+00:00</updated>
+    <author>
+      <name>Daniel Roy Greenfeld</name>
+      <email>daniel@feldroy.com</email>
+    </author>
+    <content type="html">&lt;p&gt;On my &lt;a href="/articles"&gt;articles page&lt;/a&gt;, you can read near the top that I've been writing for the past 20 years (plus a little more). It's not all my online public writing, but it's a majority of it. The primary reason parts are missing is that over time, I've used a variety of tools to publish my thoughts. Some of those tools were hosted services, and material that was lost was because of services being shut down. Hence, why I prefer markdown files in a git repository over a database solution. &lt;/p&gt;
+&lt;p&gt;Here's the story of my writing tools over the years.&lt;/p&gt;
+&lt;h2 id="geocities-1997-2010"&gt;Geocities 1997-2010&lt;/h2&gt;
+&lt;p&gt;In 1997, I first remember writing something for general publication on the web. Until then, my writings had been transmitted by printing paper, hand-copying onto disks, sending by email, or posting to usenet. I think it was in 1997 that I made my first essay-style writing on &lt;a href="https://en.wikipedia.org/wiki/GeoCities"&gt;GeoCities&lt;/a&gt; site I put together. Geocities is gone, but periodically I've thought of digging through GeoCities archives to find my writing from that time between 1997 and 2004. Otherwise, those articles are gone.&lt;/p&gt;
+&lt;p&gt;Even though there's nothing from that time on this site, as Geocities overlaps with the first entry on this site, I've included it for the sake of posterity.&lt;/p&gt;
+&lt;h2 id="livejournal-2004-2009"&gt;Livejournal 2004-2009&lt;/h2&gt;
+&lt;p&gt;From 2004 to 2009, I used LiveJournal to put down my thoughts, and there I wrote on a regular basis about life, activities, fitness, coding, and general work stuff. When I revisit those posts, I see some fun things, some hard challenges, and between the lines a lot carefully hidden despair. The few articles that made it onto this site capture extended family memories.&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://daniel.feldroy.com/tags/legacy-livejournal"&gt;Some of the articles from LiveJournal exist here&lt;/a&gt;.&lt;/p&gt;
+&lt;h2 id="blogger-2007-2012"&gt;Blogger 2007-2012&lt;/h2&gt;
+&lt;p&gt;In 2007, blogs had taken off, and it was clear that professionally having my own blog was important. I decided to keep things simple and use Blogger to host my &lt;a href="https://pydanny.blogspot.com/"&gt;first professional blog&lt;/a&gt;. I opened a few other blogger sites for other purposes, but the main one was [PyDanny](https://pydanny.blogspot.com/. &lt;/p&gt;
+&lt;p&gt;This was my formative years of Python (and Django). Everything was bright and shiny and new. I met &lt;a href="https://audrey.feldroy.com"&gt;Audrey&lt;/a&gt; and fell in love with her.&lt;/p&gt;
+&lt;p&gt;A few years ago, I migrated that content &lt;a href="https://daniel.feldroy.com/tags/legacy-blogger"&gt;here on this page&lt;/a&gt;.&lt;/p&gt;
+&lt;h2 id="pelican-2012-2018"&gt;Pelican 2012-2018&lt;/h2&gt;
+&lt;p&gt;In 2012, I started writing content on a &lt;a href="https://docs.getpelican.com/en/latest/"&gt;Pelican&lt;/a&gt; static site. I liked not having to set up a database for content. What I didn't like was having to work through the abstraction of Pelican to do anything.&lt;/p&gt;
+&lt;h2 id="mountain-2018-2019"&gt;Mountain 2018-2019&lt;/h2&gt;
+&lt;p&gt;Frustrated with the lack of control of Pelican in 2018, I wrote &lt;a href="https://daniel.feldroy.com/posts/writing-new-blog-engine"&gt;my own Flask-powered blog engine&lt;/a&gt;, which I called Mountain. The challenge there was that I had some crazy ideas for a feature that caused too much complexity. The result was a very slow rendering of the static site. It was too much trouble to fix, so I stuck with it.&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://daniel.feldroy.com/tags/uma"&gt;Uma&lt;/a&gt; was born in early 2019. I was too busy being a new father to do much writing, only getting in 5 articles for the whole of 2019.&lt;/p&gt;
+&lt;h2 id="vuepress-2019-2021"&gt;Vuepress 2019-2021&lt;/h2&gt;
+&lt;p&gt;By 2019, I was in the Jamstack world. I've since left it, but for a while my site was on &lt;a href="https://vuepress.vuejs.org/"&gt;Vuepress&lt;/a&gt;. The speed of compilation was nice compared to Mountain, and I could stick in special pages as needed. However, there were a few too many layers of abstraction, and that made extending it to work outside the default behaviors of Vuepress too difficult.&lt;/p&gt;
+&lt;h2 id="nextjs-2021-2024"&gt;Next.js 2021-2024&lt;/h2&gt;
+&lt;p&gt;In early 2021, for work, I needed to learn &lt;a href="https://nextjs.org/"&gt;Next.js&lt;/a&gt; quickly. I used the official Next.js tutorial that existed at the time to learn the framework and React over a weekend. This was still the early days of Next.js, and I found it to be tons of fun. It reminded me of the best features of Flask combined with tons of frontend power. &lt;/p&gt;
+&lt;p&gt;Next.js has changed rapidly. I believe Next.js went in an uncomfortable direction in terms of complexity and decreasing quality of documentation for new or changed features. Bitrot happened frequently, and I felt like I was fighting version upgrades rather than working with the Framework.&lt;/p&gt;
+&lt;h2 id="fasthtml-2024-2025"&gt;FastHTML 2024-2025&lt;/h2&gt;
+&lt;p&gt;I tried out &lt;a href="https://pypi.org/project/python-fasthtml/"&gt;FastHTML&lt;/a&gt; in the summer of 2024. Keeping the features spec in my head, tiny, I coded up the kernel of a cached markdown content site in 45 minutes. This was a vast improvement in terms of speed and complexity over the unnecessarily complex Mountain project of 2018. It was nice to return to Python, but it chafed to use a framework that wasn't PEP8 nor fully type-annotated. &lt;/p&gt;
+&lt;h2 id="air-2025"&gt;Air 2025+&lt;/h2&gt;
+&lt;p&gt;For a few years now, I've wanted to create my own web framework. This year I did so, launching &lt;a href="https://github.com/feldroy/air"&gt;AIR&lt;/a&gt; with my wife and coding partner Audrey. Air is a shallow layer over FastAPI, adding features to expedite authoring of dynamic HTML pages. One of the early projects I did with it was to convert this site to use Air. It was nice to return to a PEP8-formatted codebase that is fully type-annotated. I also like the smaller dependency tree.&lt;/p&gt;
+&lt;h2 id="the-future"&gt;The Future&lt;/h2&gt;
+&lt;p&gt;Perhaps I'll grow restless again in a few years and try something new. Or perhaps I'll stick with Air for a long time. What I do know is that I enjoy writing and sharing my thoughts. So there will be posts going into the future. &lt;/p&gt;</content>
+    <link href="https://daniel.feldroy.com/posts/2025-09-over-twenty-years-of-writing-tools"/>
+    <summary>A retrospective of over twenty years worth of writing tools that I've used to write online.</summary>
+    <category term="blog"/>
+    <category term="python"/>
+    <category term="flask"/>
+    <category term="Vue.js"/>
+    <category term="react"/>
+    <category term="air"/>
+    <contributor>
+      <name>Daniel Roy Greenfeld</name>
+      <email>daniel@feldroy.com</email>
+    </contributor>
+    <published>2025-09-24T00:45:00.884329+00:00</published>
   </entry>
 </feed>

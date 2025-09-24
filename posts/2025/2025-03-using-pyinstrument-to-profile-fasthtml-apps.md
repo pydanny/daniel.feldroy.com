@@ -4,7 +4,7 @@ description: Quick instructions for a drop-in FastHTML middleware for identifyin
 published: true
 tags:
 - python
-- fasthtml
+- FastHTML
 title: Using pyinstrument to profile FastHTML apps
 ---
 

@@ -346,7 +346,7 @@ def _search(q: str = ""):
     posts = []
     description = f"No results found for '{q}'"
     if q.strip():
-        posts = list_posts()
+        raw_posts = list_posts()
         # Search engine is list comprehension of a list of dicts
         # ranks = search_model.rank(q, L(posts).map(json.dumps), return_documents=True)
         # ranks = ranks[:10]
@@ -354,7 +354,7 @@ def _search(q: str = ""):
         # old engine
         articles = [
             x
-            for x in posts
+            for x in raw_posts
             if any(
                 _s(x, name, q) for name in ["title", "description", "content", "tags"]
             )

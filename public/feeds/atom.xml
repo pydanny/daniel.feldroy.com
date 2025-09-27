@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
   <id>https://daniel.feldroy.com/</id>
   <title>Inside the head of Daniel Roy Greenfeld</title>
-  <updated>2025-09-24T00:43:54.365522+00:00</updated>
+  <updated>2025-09-27T05:36:13.901712+00:00</updated>
   <author>
     <name>Daniel Roy Greenfeld</name>
     <email>daniel@feldroy.com</email>
@@ -12,74 +12,6 @@
   <generator uri="https://lkiesow.github.io/python-feedgen" version="1.0.0">python-feedgen</generator>
   <logo>https://daniel.feldroy.com/images/pydanny-cartwheel.png</logo>
   <rights>All rights reserved 2025, Daniel Roy Greenfeld</rights>
-  <entry>
-    <id>https://daniel.feldroy.com/posts/til-2025-05-bitwise-xor</id>
-    <title>TIL: ^ bitwise XOR</title>
-    <updated>2025-05-07T03:30:43.170061+00:00</updated>
-    <author>
-      <name>Daniel Roy Greenfeld</name>
-      <email>daniel@feldroy.com</email>
-    </author>
-    <content type="html">&lt;p&gt;The bitwise XOR operator &lt;code&gt;^&lt;/code&gt;, also known as &lt;code&gt;exclusive or&lt;/code&gt;, can be used to compare boolean objects to see if one and only one is &lt;code&gt;True&lt;/code&gt;.&lt;/p&gt;
-&lt;p&gt;Let's see it in action, first comparing three &lt;code&gt;False&lt;/code&gt; booleans, which will return &lt;code&gt;False&lt;/code&gt;.&lt;/p&gt;
-&lt;p&gt;```python {.marimo}
-False ^ False ^ False&lt;/p&gt;
-&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="n"&gt;Now&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;let&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;s demonstrate three different combinations of a single `True` and any number of `False` booleans, which will return `True` in each case.&lt;/span&gt;
-
-&lt;span class="s1"&gt;```python {.marimo}&lt;/span&gt;
-&lt;span class="s1"&gt;print(True ^ False ^ False)&lt;/span&gt;
-&lt;span class="s1"&gt;print(False ^ True ^ False)&lt;/span&gt;
-&lt;span class="s1"&gt;print(False ^ False ^ True)&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;p&gt;However, if we have two or more values that are &lt;code&gt;True&lt;/code&gt;, the result will be &lt;code&gt;False&lt;/code&gt; because more than one value are &lt;code&gt;True&lt;/code&gt;.&lt;/p&gt;
-&lt;p&gt;```python {.marimo}
-print(True ^ True ^ False)
-print(True ^ False ^ True)
-print(False ^ True ^ True)&lt;/p&gt;
-&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="c1"&gt;## What about non-boolean types?&lt;/span&gt;
-
-&lt;span class="n"&gt;The&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n n-Quoted"&gt;`^`&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;operator&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="k"&gt;only&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;works&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="k"&gt;with&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="kt"&gt;boolean&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="k"&gt;types&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="k"&gt;If&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;you&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;try&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="k"&gt;to&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="k"&gt;use&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;it&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="k"&gt;on&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;non&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="kt"&gt;boolean&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="k"&gt;types&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;you&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;ll get a `TypeError`. For example, if you try to use it on integers or strings to check for truthiness, you&amp;#39;&lt;/span&gt;&lt;span class="n"&gt;ll&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="k"&gt;get&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;an&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="k"&gt;error&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;
-
-&lt;span class="n n-Quoted"&gt;`&lt;/span&gt;&lt;span class="n n-Quoted n-Quoted-Escape"&gt;``&lt;/span&gt;&lt;span class="n n-Quoted"&gt;python&lt;/span&gt;
-&lt;span class="n n-Quoted"&gt;&amp;#39;&amp;#39; ^ &amp;#39;&amp;#39; ^ &amp;#39;one&amp;#39;&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="o"&gt;&amp;gt;&amp;gt;&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;
-&lt;span class="nx"&gt;TypeError&lt;/span&gt;&lt;span class="w"&gt;                   &lt;/span&gt;&lt;span class="nx"&gt;Traceback&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;most&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nx"&gt;recent&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nx"&gt;call&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nx"&gt;last&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-&lt;span class="nx"&gt;Cell&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nx"&gt;In&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;20&lt;/span&gt;&lt;span class="p"&gt;],&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nx"&gt;line&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;
-&lt;span class="o"&gt;&amp;gt;&amp;gt;&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="err"&gt;&amp;#39;&amp;#39;&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;^&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="err"&gt;&amp;#39;&amp;#39;&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;^&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="err"&gt;&amp;#39;&lt;/span&gt;&lt;span class="nx"&gt;one&lt;/span&gt;&lt;span class="err"&gt;&amp;#39;&lt;/span&gt;
-
-&lt;span class="nx"&gt;TypeError&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nx"&gt;unsupported&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nx"&gt;operand&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="k"&gt;type&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;s&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="k"&gt;for&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;^&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="err"&gt;&amp;#39;&lt;/span&gt;&lt;span class="nx"&gt;str&lt;/span&gt;&lt;span class="err"&gt;&amp;#39;&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="k"&gt;and&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="err"&gt;&amp;#39;&lt;/span&gt;&lt;span class="nx"&gt;str&lt;/span&gt;&lt;span class="err"&gt;&amp;#39;&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;p&gt;To make this comparison works, you can convert the non-boolean types to boolean first. For example, you can use the &lt;code&gt;bool()&lt;/code&gt; function to convert an integer or string to a boolean before using the &lt;code&gt;^&lt;/code&gt; operator.&lt;/p&gt;
-&lt;p&gt;```python {.marimo}
-bool('') ^ bool('') ^ bool('one')&lt;/p&gt;
-&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="cp"&gt;## Updates&lt;/span&gt;
-
-&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="mi"&gt;2025&lt;/span&gt;&lt;span class="mo"&gt;-05-07&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;Updated&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;the&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;post&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;to&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;describe&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;XOR&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;only&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;returns&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="err"&gt;`&lt;/span&gt;&lt;span class="n"&gt;True&lt;/span&gt;&lt;span class="err"&gt;`&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="k"&gt;if&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;one&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;and&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;only&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;one&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;of&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;the&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;values&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;is&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="err"&gt;`&lt;/span&gt;&lt;span class="n"&gt;True&lt;/span&gt;&lt;span class="err"&gt;`&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;Removed&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;the&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;segment&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;on&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="err"&gt;`&lt;/span&gt;&lt;span class="n"&gt;any&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;&lt;span class="err"&gt;`&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;as&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;it&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;is&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;too&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;far&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;away&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="k"&gt;in&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;design&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;from&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="err"&gt;`&lt;/span&gt;&lt;span class="n"&gt;XOR&lt;/span&gt;&lt;span class="err"&gt;`&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="w"&gt;  &lt;/span&gt;&lt;span class="n"&gt;Credit&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="k"&gt;for&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;this&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;fix&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;goes&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;to&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="n"&gt;Curt&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;Merrill&lt;/span&gt;&lt;span class="p"&gt;](&lt;/span&gt;&lt;span class="n"&gt;https&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;&lt;span class="c1"&gt;//bsky.app/profile/cmerrill.com) and [Rens Dimmendaal](https://rensdimmendaal.com/).&lt;/span&gt;
-
-&lt;span class="err"&gt;```&lt;/span&gt;&lt;span class="n"&gt;python&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;{.&lt;/span&gt;&lt;span class="n"&gt;marimo&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;hide_code&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;true&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;}&lt;/span&gt;
-&lt;span class="n"&gt;mo&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;md&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;
-&lt;span class="w"&gt;    &lt;/span&gt;&lt;span class="n"&gt;r&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;&amp;quot;&amp;quot;&lt;/span&gt;
-
-&lt;span class="w"&gt;    &lt;/span&gt;&lt;span class="s"&gt;&amp;quot;&amp;quot;&amp;quot;&lt;/span&gt;
-&lt;span class="p"&gt;)&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;p&gt;&lt;code&gt;python {.marimo}
-import marimo as mo&lt;/code&gt;&lt;/p&gt;</content>
-    <link href="https://daniel.feldroy.com/posts/til-2025-05-bitwise-xor"/>
-    <summary>How to mark a comparison of booleans as True or False using bitwise XOR.</summary>
-    <category term="TIL"/>
-    <category term="python"/>
-    <contributor>
-      <name>Daniel Roy Greenfeld</name>
-      <email>daniel@feldroy.com</email>
-    </contributor>
-    <published>2025-05-07T03:30:43.170061+00:00</published>
-  </entry>
   <entry>
     <id>https://daniel.feldroy.com/posts/2025-05-flexicache</id>
     <title>Exploring flexicache</title>
@@ -918,5 +850,41 @@ git&lt;span class="w"&gt; &lt;/span&gt;remote&lt;span class="w"&gt; &lt;/span&gt
       <email>daniel@feldroy.com</email>
     </contributor>
     <published>2025-09-24T00:45:00.884329+00:00</published>
+  </entry>
+  <entry>
+    <id>https://daniel.feldroy.com/posts/i-dont-know-you-so-dont-ask-for-references</id>
+    <title>I Don't Know You, Don't Ask For References</title>
+    <updated>2025-09-27T05:40:20.838497+00:00</updated>
+    <author>
+      <name>Daniel Roy Greenfeld</name>
+      <email>daniel@feldroy.com</email>
+    </author>
+    <content type="html">&lt;p&gt;During my 28+ year career in tech I've also tried to be helpful to people who are looking for advice or guidance in their careers. I've done my best to be a good citizen of the tech community, honest and ethical. When employment and contracts have ended, I've done my best not to burn bridges. I'm not perfect, I've had my failings, but I try.&lt;/p&gt;
+&lt;h2 id="providing-references-and-job-assistance"&gt;Providing references and job assistance&lt;/h2&gt;
+&lt;p&gt;When friends and long acquaintances have asked me for references, I've been happy to provide them. When colleagues have asked me to vouch for their skills or experience, I've been happy to do so. When people I've worked with have asked me to endorse them on LinkedIn, I've been happy to oblige. At times, I've actively contacted hiring managers at organizations to help people find work. These are all people I've had some kind of relationship with, and I feel comfortable vouching for them. If I stake my reputation on their behalf, I know that people will be satisfied. That I'll be thanked for the recommendation, not blamed for it.&lt;/p&gt;
+&lt;p&gt;I’m not a recruiter, I’m just a coder who wants to help people I know have employment.&lt;/p&gt;
+&lt;p&gt;Sometimes it helps. Sometimes it doesn't. &lt;/p&gt;
+&lt;h2 id="the-problem"&gt;The problem&lt;/h2&gt;
+&lt;p&gt;About once a week, mostly on LinkedIn, someone I've never talked to before asks me to provide professional references. Sometimes they want me to be a reference for a job they're applying for. Sometimes they want me to vouch for their skills or experience. Sometimes they want me to connect them with hiring managers. Sometimes they want me to endorse them on LinkedIn.&lt;/p&gt;
+&lt;p&gt;The problem is that I don't know these people. I've never worked with them. I've never met them. I've never even talked to them. I have no idea what their skills or experience are. I have no idea if they're a good fit for the job for which they're applying. I have no idea if they're a good person to work with. I have no idea if they're honest or ethical.&lt;/p&gt;
+&lt;p&gt;And there's the problem, I can't act on these people's behalf. I don't know them. I can't vouch for them. I can't endorse them. I can't connect them with hiring managers. I can't provide references for them. If I do so, it would be unethical. Dishonest. It would be a betrayal of the hard-earned trust that people have placed in me and my recommendations. In short, it would be the wrong thing to do.&lt;/p&gt;
+&lt;h2 id="what-makes-me-sad"&gt;What makes me sad&lt;/h2&gt;
+&lt;p&gt;For various reasons, right now it’s hard to find work. These reasons include overhiring during the pandemic as well as executives at firms scoring record profits are overconfident that AI can replace humans. For these reasons and more it’s safe to say there are more people looking for work than there are jobs.&lt;/p&gt;
+&lt;p&gt;I get that. I really do. I want to help. And that's part of why I blog a lot and do open source, and speak periodically at conferences and meetups. I want to help people find work by improving their tools, skills, and experience.&lt;/p&gt;
+&lt;p&gt;But asking strangers (like me, if I haven't met you) to vouch for you is not the way to go about it. &lt;/p&gt;
+&lt;h2 id="what-to-do-instead"&gt;What to do instead&lt;/h2&gt;
+&lt;p&gt;Before you ask me for a professional reference, contribute to one of my recent open source efforts like &lt;a href="https://github.com/feldroy/air"&gt;Air&lt;/a&gt;. Look at &lt;a href="https://github.com/pydanny"&gt;my GitHub account&lt;/a&gt; and see if there's something I've touched recently you can help with. Show me that you have the skills and experience that you're claiming to have. Show me that you're a good person to work with. Show me that you're honest and ethical. Show me that you care about the work that you're doing.&lt;/p&gt;
+&lt;p&gt;Then, reach out to me again. Maybe then I'll be able to provide a reference for you. Maybe then I'll be able to vouch for you. Maybe then I'll be able to endorse you. Maybe then I'll be able to connect you with hiring managers.&lt;/p&gt;
+&lt;p&gt;We're all in this together. Let's help each other out. But let's do it the right way.&lt;/p&gt;</content>
+    <link href="https://daniel.feldroy.com/posts/i-dont-know-you-so-dont-ask-for-references"/>
+    <summary>About once a week someone I've never talked to before asks me to provide professional references.</summary>
+    <category term="advice"/>
+    <category term="rant"/>
+    <category term="air"/>
+    <contributor>
+      <name>Daniel Roy Greenfeld</name>
+      <email>daniel@feldroy.com</email>
+    </contributor>
+    <published>2025-09-27T05:40:20.838497+00:00</published>
   </entry>
 </feed>

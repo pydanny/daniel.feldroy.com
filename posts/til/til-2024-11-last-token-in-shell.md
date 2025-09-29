@@ -1,12 +1,12 @@
 ---
 date: '2024-11-21T15:12:54.669148'
 description: How to get the last element in a shell command. Guest starring Atuin!
-image: /public/logos/til-1.png
+image: https://f004.backblazeb2.com/file/daniel-feldroy-com/public/logos/til-1.png
 published: true
 tags:
 - TIL
 title: 'TIL: Last Token in Shell'
-twitter_image: /public/logos/til-1.png
+twitter_image: https://f004.backblazeb2.com/file/daniel-feldroy-com/public/logos/til-1.png
 ---
 
 To get the last element in a shell command, do this:

@@ -1,14 +1,14 @@
 ---
 date: '2024-11-09T00:00:00.429101'
 description: How to get Locust to not bash your server like a robot.
-image: /public/logos/til-1.png
+image: https://f004.backblazeb2.com/file/daniel-feldroy-com/public/logos/til-1.png
 published: true
 tags:
 - TIL
 - python
 - load testing
 title: 'TIL: SequentialTaskSet for Locust'
-twitter_image: /public/logos/til-1.png
+twitter_image: https://f004.backblazeb2.com/file/daniel-feldroy-com/public/logos/til-1.png
 ---
 
 `SequentialTaskSet` makes it so Locust tasks happen in a particular order, which ensures your simulated users are clicking around in a more human manner at a more human pace. Attribution goes to Audrey Roy Greenfeld.

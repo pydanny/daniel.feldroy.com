@@ -1,13 +1,13 @@
 ---
 date: '2025-07-23T01:59:20.353392'
 description: Tired of updating the version in multiple places before publishing a package update? Leery of using inspect.metadata to fetch the package? Here's how to have a single source of version using UV's build subcommand.
-image: /public/logos/til-1.png
+image: https://f004.backblazeb2.com/file/daniel-feldroy-com/public/logos/til-1.png
 published: true
 tags:
 - TIL
 - python
 title: 'TIL: Single source version package builds with uv'
-twitter_image: /public/logos/til-1.png
+twitter_image: https://f004.backblazeb2.com/file/daniel-feldroy-com/public/logos/til-1.png
 ---
 
 1. Remove `version` in `pyproject.toml` and replace with `dynamic = ["version"]`

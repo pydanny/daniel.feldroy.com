@@ -7,8 +7,8 @@ tags:
 time_to_read: 1
 title: "TIL: Finding and ignoring files with Glob"
 description: How to find and ignore files and directories when using glob
-image: /public/logos/til-1.png
-twitter_image: /public/logos/til-1.png
+image: https://f004.backblazeb2.com/file/daniel-feldroy-com/public/logos/til-1.png
+twitter_image: https://f004.backblazeb2.com/file/daniel-feldroy-com/public/logos/til-1.png
 ---
 
 [Glob](https://en.wikipedia.org/wiki/Glob_(programming)) is a really handy tool for finding filepaths. It resembles regular expressions but the syntax is different. Finding matches is easy:

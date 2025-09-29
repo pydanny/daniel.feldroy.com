@@ -1,14 +1,14 @@
 ---
 date: '2025-09-02T02:29:33.084710+00:00'
 description: An easier way of doing it then modifying os.environ
-image: /public/logos/til-1.png
+image: https://f004.backblazeb2.com/file/daniel-feldroy-com/public/logos/til-1.png
 published: true
 tags:
 - python
 - TIL
 - testing
 title: 'TIL: Setting environment variables for pytest'
-twitter_image: /public/logos/til-1.png
+twitter_image: https://f004.backblazeb2.com/file/daniel-feldroy-com/public/logos/til-1.png
 ---
 
 When writing tests in pytest, often there's a need to set environment variables for your tests. Instead of modifying `os.environ` directly, which can lead to side effects and make tests harder to manage, here's how to do it with the [pytest-env](https://pypi.org/project/pytest-env/) package.

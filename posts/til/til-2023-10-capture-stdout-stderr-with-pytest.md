@@ -8,8 +8,8 @@ tags:
 time_to_read: 2
 title: "TIL: Capture stdout & stderr with pytest"
 description: How to capture printed text using pytest, something I wish I knew sooner.
-image: /public/logos/til-1.png
-twitter_image: /public/logos/til-1.png
+image: https://f004.backblazeb2.com/file/daniel-feldroy-com/public/logos/til-1.png
+twitter_image: https://f004.backblazeb2.com/file/daniel-feldroy-com/public/logos/til-1.png
 ---
 
 I wish I knew this earlier, but I know it now thanks to [Cody Antunez](https://www.codyantunez.com/). Here it is:

@@ -1,7 +1,7 @@
 ---
 date: '2024-11-18T18:27:21.938091'
 description: How to keep order of records without having to update all the records
-image: /public/logos/til-1.png
+image: https://f004.backblazeb2.com/file/daniel-feldroy-com/public/logos/til-1.png
 published: true
 tags:
 - TIL
@@ -9,7 +9,7 @@ tags:
 - javascript
 - nodejs
 title: 'TIL: Fractional Indexing'
-twitter_image: /public/logos/til-1.png
+twitter_image: https://f004.backblazeb2.com/file/daniel-feldroy-com/public/logos/til-1.png
 ---
 
 In the past when I've done this for web pages and various other interfaces it has been a mess. I've built ungainly sort order in numeric or alphanumeric batches. Inevitably there is a conflict, often sooner rather than later. So sorting a list of things often means updating all the elements to preserve the order in the datastore. I've learned to mark each element with a big value, but it's ugly and ungainly

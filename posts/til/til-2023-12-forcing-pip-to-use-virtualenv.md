@@ -9,8 +9,8 @@ tags:
 time_to_read: 1
 title: "TIL: Forcing pip to use virtualenv"
 description: Necessary because installing things into your base python causes false positives, true negatives, and other head bangers.
-image: /public/logos/til-1.png
-twitter_image: /public/logos/til-1.png
+image: https://f004.backblazeb2.com/file/daniel-feldroy-com/public/logos/til-1.png
+twitter_image: https://f004.backblazeb2.com/file/daniel-feldroy-com/public/logos/til-1.png
 ---
 
 Necessary because installing things into your base python causes false positives, true negatives, and other head bangers.

@@ -37,8 +37,8 @@ def main() -> None:
         data["tags"] = [
             "TIL",
         ]
-        data["image"] = "/public/logos/til-1.png"
-        data["twitter_image"] = "/public/logos/til-1.png"
+        data["image"] = "https://f004.backblazeb2.com/file/daniel-feldroy-com/public/logos/til-1.png"
+        data["twitter_image"] = "https://f004.backblazeb2.com/file/daniel-feldroy-com/public/logos/til-1.png"
         prefix = "til"
     path = Path(f"posts/{prefix}/{slug}.md")
     text = f"---\n{safe_dump(data)}---\n"

@@ -2,14 +2,14 @@
 date: '2024-12-18T17:04:06.575404'
 description: How to have the injected content know where to go instead of assigning
   it from the form.
-image: /public/logos/til-1.png
+image: https://f004.backblazeb2.com/file/daniel-feldroy-com/public/logos/til-1.png
 published: true
 tags:
 - TIL
 - python
 - FastHTML
 title: 'TIL: Using hx-swap-oob with FastHTML'
-twitter_image: /public/logos/til-1.png
+twitter_image: https://f004.backblazeb2.com/file/daniel-feldroy-com/public/logos/til-1.png
 ---
 
 Until now I didn't use this HTMX technique, but today Audrey Roy Greenfeld and I dove in together to figure it out. Note that we use language that may not match HTMX's description, sometimes it's better to put things into our own words so we understand it better.

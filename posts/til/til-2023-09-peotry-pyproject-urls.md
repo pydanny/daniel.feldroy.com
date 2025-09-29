@@ -9,8 +9,8 @@ tags:
 time_to_read: 1
 title: "TIL: Poetry PyPI Project URLS"
 description: Adding sidebar links to PyPI projects powered by Poetry
-image: /public/logos/til-1.png
-twitter_image: /public/logos/til-1.png
+image: https://f004.backblazeb2.com/file/daniel-feldroy-com/public/logos/til-1.png
+twitter_image: https://f004.backblazeb2.com/file/daniel-feldroy-com/public/logos/til-1.png
 ---
 
 Poetry has its own location for `urls` in the [tool.poetry.urls] table. Per the [Poetry documentation on urls](https://python-poetry.org/docs/pyproject/#urls):

@@ -1,13 +1,13 @@
 ---
 date: '2025-05-13T14:10:31.105025'
 description: Adding extra info to exceptions the easy way.
-image: /public/logos/til-1.png
+image: https://f004.backblazeb2.com/file/daniel-feldroy-com/public/logos/til-1.png
 published: true
 tags:
 - TIL
 - python 
 title: 'TIL: Exception.add_note'
-twitter_image: /public/logos/til-1.png
+twitter_image: https://f004.backblazeb2.com/file/daniel-feldroy-com/public/logos/til-1.png
 ---
 
 Python 3.11 introduced a new method called `add_note` for exceptions, which allows you to add extra information to exceptions in an easy, intuitive way.

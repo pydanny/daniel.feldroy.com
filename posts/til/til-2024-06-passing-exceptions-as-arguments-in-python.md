@@ -2,12 +2,12 @@
 date: '2024-06-07T11:13:05.553336'
 description: Mypy needs an extra identifier to not choke on an exception passed as
   an argument.
-image: /public/logos/til-1.png
+image: https://f004.backblazeb2.com/file/daniel-feldroy-com/public/logos/til-1.png
 published: true
 tags:
 - TIL
 title: 'TIL: Passing exceptions as arguments in Python'
-twitter_image: /public/logos/til-1.png
+twitter_image: https://f004.backblazeb2.com/file/daniel-feldroy-com/public/logos/til-1.png
 ---
 
 *Mypy needs an extra identifier to not choke on an exception passed as an argument.*

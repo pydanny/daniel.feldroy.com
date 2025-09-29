@@ -1,14 +1,14 @@
 ---
 date: '2024-11-13T15:00:14.753658'
 description: "Once I've isolated a test failure to a very small set of failures I use this instead of running pytest directly. What it does on exception is start the IPython pdb interface."
-image: /public/logos/til-1.png
+image: https://f004.backblazeb2.com/file/daniel-feldroy-com/public/logos/til-1.png
 published: true
 tags:
 - TIL
 - python
 - testing
 title: "TIL: Making pytest use Ipython's PDB"
-twitter_image: /public/logos/til-1.png
+twitter_image: https://f004.backblazeb2.com/file/daniel-feldroy-com/public/logos/til-1.png
 ---
 
 ```sh

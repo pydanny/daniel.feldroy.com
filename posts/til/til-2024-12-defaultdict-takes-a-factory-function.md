@@ -2,13 +2,13 @@
 date: '2024-12-02T22:32:41.336588'
 description: Create a dictionary-like object that takes a factory function so you
   have lots of control over what the default value can be.
-image: /public/logos/til-1.png
+image: https://f004.backblazeb2.com/file/daniel-feldroy-com/public/logos/til-1.png
 published: true
 tags:
 - TIL
 - python
 title: "TIL: Python's defaultdict takes a factory function"
-twitter_image: /public/logos/til-1.png
+twitter_image: https://f004.backblazeb2.com/file/daniel-feldroy-com/public/logos/til-1.png
 ---
 
 I've never really paid attention to this object but maybe I should have. It takes a single argument of a callable function. If you put in Python types it sets the default value to those types. For example, if I use an `int` at the instantiating argument then it gives us a zero.

@@ -1,13 +1,13 @@
 ---
 date: '2025-02-07T01:00:20.254354'
 description: A more elegant way to display default help.
-image: /public/logos/til-1.png
+image: https://f004.backblazeb2.com/file/daniel-feldroy-com/public/logos/til-1.png
 published: true
 tags:
 - TIL
 - python
 title: 'TIL: Typer commands defaulting to help'
-twitter_image: /public/logos/til-1.png
+twitter_image: https://f004.backblazeb2.com/file/daniel-feldroy-com/public/logos/til-1.png
 ---
 
 If you save this code to `cli.py`: 

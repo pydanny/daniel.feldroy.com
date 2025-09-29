@@ -2,14 +2,14 @@
 date: '2025-07-26T09:15:07.896468'
 description: A reduction in boilerplate confused me, the answer is that the type to
   define is the value in the containers.
-image: /public/logos/til-1.png
+image: https://f004.backblazeb2.com/file/daniel-feldroy-com/public/logos/til-1.png
 published: true
 tags:
 - howto
 - python
 - TIL
 title: 'TIL: How to type args and kwargs'
-twitter_image: /public/logos/til-1.png
+twitter_image: https://f004.backblazeb2.com/file/daniel-feldroy-com/public/logos/til-1.png
 ---
 
 An oddity of my work for a while has been that I haven't used `*args` and `**kwargs` with type annotations. Recently, however I've been working on code that leans on those things a lot. And I've been ignoring setting types there because this fails wretchedly with type checking libraries:

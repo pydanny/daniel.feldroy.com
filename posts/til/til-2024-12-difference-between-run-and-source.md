@@ -2,13 +2,13 @@
 date: '2024-12-23T17:05:43.817074'
 description: Different ways to run bash commands that explains part of my frustration
   with bash over the years.
-image: /public/logos/til-1.png
+image: https://f004.backblazeb2.com/file/daniel-feldroy-com/public/logos/til-1.png
 published: true
 tags:
 - TIL
 - python
 title: 'TIL: run vs source'
-twitter_image: /public/logos/til-1.png
+twitter_image: https://f004.backblazeb2.com/file/daniel-feldroy-com/public/logos/til-1.png
 ---
 
 ## Run

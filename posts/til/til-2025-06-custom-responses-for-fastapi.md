@@ -1,7 +1,7 @@
 ---
 date: '2025-06-12T11:07:07.890416'
 description: How to create new and exciting responses for FastAPI.
-image: /public/logos/til-1.png
+image: https://f004.backblazeb2.com/file/daniel-feldroy-com/public/logos/til-1.png
 published: false
 tags:
 - FastAPI
@@ -9,7 +9,7 @@ tags:
 - Starlette
 - TIL
 title: 'TIL: Custom Responses for FastAPI'
-twitter_image: /public/logos/til-1.png
+twitter_image: https://f004.backblazeb2.com/file/daniel-feldroy-com/public/logos/til-1.png
 ---
 
 FastAPI provides a lot of built-in functionality for handling responses. However, sometimes you might want to create custom responses that go beyond the standard JSON or HTML responses. In this TIL, I'll show what I've learned about creating custom responses in FastAPI.

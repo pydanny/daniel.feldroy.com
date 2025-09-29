@@ -8,8 +8,8 @@ tags:
 time_to_read: 1
 title: "TIL: Rich.console.status for slow processes"
 description: From the command-line a trick to inform users know the system hasn't died and they should wait until it is done.
-image: /public/logos/til-1.png
-twitter_image: /public/logos/til-1.png
+image: https://f004.backblazeb2.com/file/daniel-feldroy-com/public/logos/til-1.png
+twitter_image: https://f004.backblazeb2.com/file/daniel-feldroy-com/public/logos/til-1.png
 ---
 
 For building CLI, there's so much that [rich](https://pypi.org/project/rich/) provides that I can't imagine not using it. Here's adding a moving bar that updates:

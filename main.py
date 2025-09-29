@@ -261,9 +261,9 @@ async def article(slug: str):
             return RedirectResponse(redirects_url)
         raise HTTPException(status_code=404)
     tags = [TagLink(slug=x) for x in metadata.get("tags", [])]
-    specials = ()
+    specials = []
     if "TIL" in metadata["tags"]:
-        specials = air.A(
+        specials = [air.A(
             air.Img(
                 src="https://f004.backblazeb2.com/file/daniel-feldroy-com/public/logos/til-1.png",
                 alt="Today I Learned",
@@ -272,7 +272,7 @@ async def article(slug: str):
                 class_="center",
             ),
             href="/tags/TIL",
-        )
+        )]
     return Layout(
         air.Title(metadata["title"]),
         air.Section(
@@ -280,7 +280,7 @@ async def article(slug: str):
             air.P(air.I(metadata.get("description", ""))),
             air.P(air.Small(air.Time(metadata["date"]))),
             air.Div(content, class_=metadata["class_"]),
-            # air.Div(*specials, style="width: 200px; margin: auto; display: block;"),
+            air.Div(*specials, style="width: 200px; margin: auto; display: block;"),
             air.P(air.Span("Tags: "), *tags),
             air.A("← Back to all articles", href="/"),
         ),

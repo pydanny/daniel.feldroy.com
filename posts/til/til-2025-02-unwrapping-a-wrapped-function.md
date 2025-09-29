@@ -1,13 +1,13 @@
 ---
 date: '2025-02-21T18:00:00.000000'
 description: Another reason to use functools.wraps!
-image: /public/logos/til-1.png
+image: https://f004.backblazeb2.com/file/daniel-feldroy-com/public/logos/til-1.png
 published: true
 tags:
 - TIL
 - python
 title: 'TIL: Undecorating a functools.wraps decorated function'
-twitter_image: /public/logos/til-1.png
+twitter_image: https://f004.backblazeb2.com/file/daniel-feldroy-com/public/logos/til-1.png
 ---
 
 In the Python standard library there is a function in the functools library that allows decorated functions to carry forward their original docstring. Executing it is rather easy:

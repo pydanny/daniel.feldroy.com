@@ -1,13 +1,13 @@
 ---
 date: '2025-05-07T03:30:43.170061'
 description: How to mark a comparison of booleans as True or False using bitwise XOR.
-image: /public/logos/til-1.png
+image: https://f004.backblazeb2.com/file/daniel-feldroy-com/public/logos/til-1.png
 published: true
 tags:
 - TIL
 - python
 title: 'TIL: ^ bitwise XOR'
-twitter_image: /public/logos/til-1.png
+twitter_image: https://f004.backblazeb2.com/file/daniel-feldroy-com/public/logos/til-1.png
 ---
 
 The bitwise XOR operator `^`, also known as `exclusive or`, can be used to compare boolean objects to see if one and only one is `True`.

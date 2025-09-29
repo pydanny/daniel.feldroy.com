@@ -1,13 +1,13 @@
 ---
 date: '2024-11-29T14:18:22.222177'
 description: "Did you know there's a merge operator for Python dictionaries? I didn't until today!"
-image: /public/logos/til-1.png
+image: https://f004.backblazeb2.com/file/daniel-feldroy-com/public/logos/til-1.png
 published: true
 tags:
 - TIL
 - python
 title: 'TIL: Python Dictonary Merge Operator'
-twitter_image: /public/logos/til-1.png
+twitter_image: https://f004.backblazeb2.com/file/daniel-feldroy-com/public/logos/til-1.png
 ---
 
 ## The function way

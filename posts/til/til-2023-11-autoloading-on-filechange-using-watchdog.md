@@ -9,8 +9,8 @@ tags:
 time_to_read: 1
 title: "TIL: Autoloading on Filechange using Watchdog"
 description: Using Watchdog to monitor changes to a directory so we can alter what we serve out as HTTP.
-image: /public/logos/til-1.png
-twitter_image: /public/logos/til-1.png
+image: https://f004.backblazeb2.com/file/daniel-feldroy-com/public/logos/til-1.png
+twitter_image: https://f004.backblazeb2.com/file/daniel-feldroy-com/public/logos/til-1.png
 ---
 
 Using Watchdog to monitor changes to a directory so we can alter what we serve out as HTTP. Each segment is the evolution towards getting it to work.

@@ -1,13 +1,13 @@
 ---
 date: '2024-12-12T17:10:12.333293'
 description: In logic, mathematics, and computer science, arity is the number of arguments or operands taken by a function, operation or relation.
-image: /public/logos/til-1.png
+image: https://f004.backblazeb2.com/file/daniel-feldroy-com/public/logos/til-1.png
 published: true
 tags:
 - TIL
 - python
 title: 'TIL: Arity'
-twitter_image: /public/logos/til-1.png
+twitter_image: https://f004.backblazeb2.com/file/daniel-feldroy-com/public/logos/til-1.png
 ---
 
 I'm excited to have learned there's a word for the count of arguments to a function/method/class: [arity](https://en.wikipedia.org/wiki/Arity). Throughout my career I would have called this any of the following:

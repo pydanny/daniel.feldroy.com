@@ -1,14 +1,14 @@
 ---
 date: '2024-06-04T09:55:47.055467'
 description: Sometimes branches evolve into things that don't match their names.
-image: /public/logos/til-1.png
+image: https://f004.backblazeb2.com/file/daniel-feldroy-com/public/logos/til-1.png
 published: true
 tags:
 - TIL
 - howto
 - git
 title: 'TIL: Renaming git branches'
-twitter_image: /public/logos/til-1.png
+twitter_image: https://f004.backblazeb2.com/file/daniel-feldroy-com/public/logos/til-1.png
 ---
 
 

@@ -2,14 +2,14 @@
 date: '2025-06-13T04:23:23.230032'
 description: For those times when FastAPI is serving web pages and users go to the
   wrong place.
-image: /public/logos/til-1.png
+image: https://f004.backblazeb2.com/file/daniel-feldroy-com/public/logos/til-1.png
 published: true
 tags:
 - python
 - fastapi
 - TIL
 title: 'TIL: HTML 404 errors for FastAPI'
-twitter_image: /public/logos/til-1.png
+twitter_image: https://f004.backblazeb2.com/file/daniel-feldroy-com/public/logos/til-1.png
 ---
 
 I had a TIL about custom responses in FastAPI but there's enough nuance that it deserves a full blog post. In the meantime, here's a TIL about custom HTTP responses. 

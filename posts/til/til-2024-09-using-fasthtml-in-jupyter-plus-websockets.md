@@ -1,7 +1,7 @@
 ---
 date: '2024-09-23T15:13:34.609190'
 description: A simple websockets example hosted in a Jupyter notebook!
-image: /public/logos/til-1.png
+image: https://f004.backblazeb2.com/file/daniel-feldroy-com/public/logos/til-1.png
 published: true
 tags:
 - TIL
@@ -9,7 +9,7 @@ tags:
 - python
 - jupyter
 title: 'TIL: Using FastHTML in Jupyter notebooks plus websockets'
-twitter_image: /public/logos/til-1.png
+twitter_image: https://f004.backblazeb2.com/file/daniel-feldroy-com/public/logos/til-1.png
 ---
 
 # Websockets in Jupyter

@@ -1,7 +1,7 @@
 ---
 date: '2025-08-29T05:54:58.034855+00:00'
 description: SQLModel is a really useful library for working with SQL databases in Python, built on top of SQLAlchemy and Pydantic. However, AFAIK there's no documentation supporting asynchronous operations for PostgreSQL, which can be a limitation when building high-performance web applications with FastAPI and Air.
-image: /public/logos/til-1.png
+image: https://f004.backblazeb2.com/file/daniel-feldroy-com/public/logos/til-1.png
 published: true
 tags:
 - air
@@ -9,7 +9,7 @@ tags:
 - python
 - TIL
 title: 'TIL: Using SQLModel Asynchronously with FastAPI (and Air) with PostgreSQL'
-twitter_image: /public/logos/til-1.png
+twitter_image: https://f004.backblazeb2.com/file/daniel-feldroy-com/public/logos/til-1.png
 ---
 
 First, let's set up our environment. We'll need to install the necessary packages:

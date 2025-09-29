@@ -7,8 +7,8 @@ tags:
 - python
 - howto
 title: 'TIL: Running UV outside a virtualenv'
-image: /public/logos/til-1.png
-twitter_image: /public/logos/til-1.png
+image: https://f004.backblazeb2.com/file/daniel-feldroy-com/public/logos/til-1.png
+twitter_image: https://f004.backblazeb2.com/file/daniel-feldroy-com/public/logos/til-1.png
 ---
 
 *Breaking the rules to satisfy continuous integration.*

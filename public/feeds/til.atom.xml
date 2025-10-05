@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
   <id>https://daniel.feldroy.com/</id>
   <title>Til posts by Daniel Roy Greenfeld</title>
-  <updated>2025-09-29T00:06:42.005073+00:00</updated>
+  <updated>2025-10-05T08:32:59.062804+00:00</updated>
   <author>
     <name>Daniel Roy Greenfeld</name>
     <email>daniel@feldroy.com</email>
@@ -10,7 +10,7 @@
   </author>
   <link href="https://daniel.feldroy.com" rel="alternate"/>
   <generator uri="https://lkiesow.github.io/python-feedgen" version="1.0.0">python-feedgen</generator>
-  <logo>https://daniel.feldroy.com/images/pydanny-cartwheel.png</logo>
+  <logo>https://f004.backblazeb2.com/file/daniel-feldroy-com/public/images/profile.jpg</logo>
   <rights>All rights reserved 2025, Daniel Roy Greenfeld</rights>
   <entry>
     <id>https://daniel.feldroy.com/posts/til-2025-02-unwrapping-a-wrapped-function</id>
@@ -754,7 +754,7 @@ git&lt;span class="w"&gt; &lt;/span&gt;remote&lt;span class="w"&gt; &lt;/span&gt
 &lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;uv&lt;span class="w"&gt; &lt;/span&gt;run&lt;span class="w"&gt; &lt;/span&gt;--env-file&lt;span class="w"&gt; &lt;/span&gt;.env.dev&lt;span class="w"&gt; &lt;/span&gt;fastapi&lt;span class="w"&gt; &lt;/span&gt;dev
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
-&lt;p&gt;All credit goes to &lt;a href="https://audrey.feldroy.com"&gt;Audrey Roy Greenfeld&lt;/a&gt; for pointing &lt;a href="https://x.com/audreyfeldroy/status/1964565105599009078"&gt;this out to me&lt;/a&gt;.&lt;/p&gt;</content>
+&lt;p&gt;All credit goes to &lt;a href="https://audrey.feldroy.com"&gt;Audrey Roy Greenfeld&lt;/a&gt; for &lt;a href="https://x.com/audreyfeldroy/status/1964565105599009078"&gt;pointing this out&lt;/a&gt;.&lt;/p&gt;</content>
     <link href="https://daniel.feldroy.com/posts/til-2025-09-env-files-with-uv-run"/>
     <summary>Replacing python-dotenv with uv</summary>
     <category term="TIL"/>

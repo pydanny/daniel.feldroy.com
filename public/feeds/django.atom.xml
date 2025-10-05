@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
   <id>https://daniel.feldroy.com/</id>
   <title>Django posts by Daniel Roy Greenfeld</title>
-  <updated>2025-09-29T00:06:41.904349+00:00</updated>
+  <updated>2025-10-05T08:32:58.903132+00:00</updated>
   <author>
     <name>Daniel Roy Greenfeld</name>
     <email>daniel@feldroy.com</email>
@@ -10,7 +10,7 @@
   </author>
   <link href="https://daniel.feldroy.com" rel="alternate"/>
   <generator uri="https://lkiesow.github.io/python-feedgen" version="1.0.0">python-feedgen</generator>
-  <logo>https://daniel.feldroy.com/images/pydanny-cartwheel.png</logo>
+  <logo>https://f004.backblazeb2.com/file/daniel-feldroy-com/public/images/profile.jpg</logo>
   <rights>All rights reserved 2025, Daniel Roy Greenfeld</rights>
   <entry>
     <id>https://daniel.feldroy.com/posts/two-scoops-of-django-3.x</id>

@@ -56,7 +56,7 @@ Good manners are appreciated in BJJ, especially by upper belts and coaches. Brin
 - Listen more than you talk
 - Thank people for any tip or advice they give you
 
-Note: A lot of people think Brazilian Jiu-Jitsu is a modern combat sport thaat rejects traditional martial arts culture. That's not exactly true, there's quite a bit of inherited culture from Japan and Brazil. Also, BJJ arguably predates some traditional martial arts.
+Note: A lot of people think Brazilian Jiu-Jitsu is a modern combat sport that rejects traditional martial arts culture. That's not exactly true, there's quite a bit of inherited culture from Japan and Brazil. Also, BJJ (founded 1925) arguably predates some traditional martial arts like all forms of Japanese Karate (1928) and Tae Kwon Do.
 
 ### Safety
 

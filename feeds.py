@@ -88,7 +88,7 @@ def build_feed(content_tag: str | None = None):
         }
     )
     fg.link(href="https://daniel.feldroy.com", rel="alternate")
-    fg.logo("https://daniel.feldroy.com/images/pydanny-cartwheel.png")
+    fg.logo("https://f004.backblazeb2.com/file/daniel-feldroy-com/public/images/profile.jpg")
     fg.rights(f"All rights reserved {datetime.now().year}, Daniel Roy Greenfeld")
     fg.language("en")
 

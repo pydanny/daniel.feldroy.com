@@ -96,8 +96,8 @@ Once you have it running, check it out here: <http://localhost:8000>
 
 ## Screenshots
 
-![](/public/images/pyinstrument-call-stack.png)
+![](https://daniel.feldroy.com/public/images/pyinstrument-call-stack.png)
 
 ---
 
-![](/public/images/pyinstrument-timeline.png)
+![](https://daniel.feldroy.com/public/images/pyinstrument-timeline.png)

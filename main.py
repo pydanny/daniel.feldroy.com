@@ -607,7 +607,7 @@ async def blarg():
     return 1 / 0
 
 
-@app.get("/{slug}")
+@app.get("/{slug:path}")
 async def page_or_redirect1(slug: str):
     redirects_url = redirects.get(slug, None)
     if redirects_url is not None:
@@ -615,15 +615,4 @@ async def page_or_redirect1(slug: str):
     try:
         return MarkdownPage(slug)
     except TypeError:
-        raise HTTPException(status_code=404)
-
-
-@app.get("/{slug_1}/{slug_2}")
-async def page_or_redirect2(slug_1: str, slug_2: str):
-    redirects_url = redirects.get(slug_1 + "/" + slug_2, None)
-    if redirects_url is not None:
-        return RedirectResponse(redirects_url)
-    try:
-        return MarkdownPage(slug_1 + "/" + slug_2)
-    except TypeError:
-        raise HTTPException(status_code=404)
+        raise HTTPException(status_code=404)    

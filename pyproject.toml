@@ -5,7 +5,7 @@ description = "Add your description here"
 readme = "README.md"
 requires-python = ">=3.13"
 dependencies = [
-    "air[standard]>=0.25.2",
+    "air[standard]>=0.37.0",
     "alembic>=1.16.5",
     "alembic-postgresql-enum>=1.8.0",
     "asyncpg>=0.30.0",

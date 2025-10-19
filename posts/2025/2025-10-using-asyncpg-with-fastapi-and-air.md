@@ -10,13 +10,13 @@ tags:
 title: Using Asyncpg with FastAPI and Air
 ---
 
-Recently I've was on a few projects using PostgreSQL where SQLAlchemy and SQLModel felt like overkill. Instead of using those libraries I leaned on writing SQL queries and running those directly in [asyncpg](https://pypi.org/project/asyncpg/) instead of using an ORM powered by asyncpg. 
+Recently I've been on a few projects using PostgreSQL where SQLAlchemy and SQLModel felt like overkill. Instead of using those libraries I leaned on writing SQL queries and running those directly in [asyncpg](https://pypi.org/project/asyncpg/) instead of using an ORM powered by asyncpg. 
 
 Here's how I got it to work
 
 ## Defined a lifespan function for ASGIApp
 
-Starlette ASGIApp frameworks like FastAPI (and by extension [Air](https://github.com/feldroy/air)) can leverage lifespan functions, which are generators. I've commented the `lifespan` object so the 
+Starlette ASGIApp frameworks like FastAPI (and by extension [Air](https://github.com/feldroy/air)) can leverage lifespan functions, which are generators. I've commented the `lifespan` object for clarity. 
 
 ```python
 from contextlib import asynccontextmanager
@@ -61,7 +61,7 @@ All you have to do is pass the `lifespan` callable to the FastAPI app instantiat
 ```py
 from fastapi import FastAPI
 
-# Adding of the lifespan app
+# Adding the lifespan app
 app = FastAPI(lifespan=lifespan) 
 
 @app.get('/users')
@@ -82,7 +82,7 @@ Air is powered by FastAPI (and Starlette), so uses this `lifespan` function the 
 ```py
 import air
 
-# Adding of the lifespan app
+# Adding the lifespan app
 app = air.Air(lifespan=lifespan)
 
 
@@ -114,7 +114,7 @@ As part of the request process for REST API, FastAPI uses pydantic to validate i
 from fastapi import FastAPI
 from pydantic import BaseModel, EmailStr
 
-# Adding of the lifespan app
+# Adding the lifespan app
 app = FastAPI(lifespan=lifespan) 
 
 
@@ -123,12 +123,12 @@ class User(BaseModel):
 
 
 @app.post('/users')
-async def users_add(user: User)
+async def users_add(user: User):
     # Get the conn object from the database connection pool
     async with app.state.pool.acquire() as conn:
         # Insert the record with an execute method
         await conn.execute(
-            'INSERT INTO users (email, created_at) SET ($1, NOW())',
+            'INSERT INTO users (email, created_at) VALUES ($1, NOW())',
             user.email
         )
 
@@ -145,7 +145,7 @@ There's no consistent standard within HTML for how to construct a form, much les
 import air
 from pydantic import BaseModel, EmailStr
 
-# Adding of the lifespan app
+# Adding the lifespan app
 app = air.Air(lifespan=lifespan) 
 
 
@@ -158,7 +158,7 @@ class UserForm(air.AirForm):
 
 
 @app.post('/users')
-async def users_add(request: air.Request)
+async def users_add(request: air.Request):
     # AirForms make handling incoming forms easier
     form = await UserForm.from_request(request)
     
@@ -170,7 +170,7 @@ async def users_add(request: air.Request)
         async with app.state.pool.acquire() as conn:
             # Insert the record with an execute method
             await conn.execute(
-                'INSERT INTO users (email, created_at) SET ($1, NOW())',
+                'INSERT INTO users (email, created_at) VALUES ($1, NOW())',
                 form.data.email
             )
         return air.layouts.mvpcss(

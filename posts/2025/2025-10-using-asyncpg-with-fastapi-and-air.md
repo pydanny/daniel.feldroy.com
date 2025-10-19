@@ -71,7 +71,7 @@ async def users(): # every function must be async
         results = await conn.fetch('SELECT * from users;')
 
     # FastAPI responses automatically convert dicts to JSON
-    return {'count': len(results), 'users': [results]}
+    return {'count': len(results), 'users': results}
 ```
 
 ### Using the lifespan function for Air projects

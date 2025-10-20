@@ -5,7 +5,6 @@ published: true
 tags:
 - advice
 - rant
-- air
 title: I Don't Know You, Don't Ask For References
 ---
 

@@ -11,6 +11,8 @@ title: 'uv+just for testing multiple Python versions'
 
 For years I used tox and nox to test my Python projects against multiple Python versions on multiple operating systems. While both tools are powerful, they require configuration complex enough that I usually just copy/paste it from project to project. In comparison, `uv+just` isn't just a completely workable replacement, it's simple enough that I can either memorize the commands or if I forget can look up in moments.
 
+An improvement on [this post](https://daniel.feldroy.com/posts/2025-07-uv-run-for-testing-python-versions), which just covers the `uv` side.
+
 ## What is Just?
 
 [Just](https://github.com/casey/just) is a rust-powered command runner inspired by [Make](https://en.wikipedia.org/wiki/Make_(software)) but with a slightly simpler syntax. Where Make was originally designed to build executable code, just focuses more on being a command-runner. Also, `Just` benefits from the lessons learned by Make. The result is an easier-to-use tool that is also much easier to get running on Windows than `Make`. The way `Just` works is you define commands in a `Justfile` that can be easily executed from the command line. It can be installed from pypi as the [rust-just](https://pypi.org/project/rust-just/) package.

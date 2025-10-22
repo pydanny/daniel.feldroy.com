@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
   <id>https://daniel.feldroy.com/</id>
   <title>Python posts by Daniel Roy Greenfeld</title>
-  <updated>2025-10-22T12:28:42.767414+00:00</updated>
+  <updated>2025-10-22T12:33:57.260238+00:00</updated>
   <author>
     <name>Daniel Roy Greenfeld</name>
     <email>daniel@feldroy.com</email>
@@ -956,6 +956,7 @@ pip&lt;span class="w"&gt; &lt;/span&gt;install&lt;span class="w"&gt; &lt;/span&g
       <email>daniel@feldroy.com</email>
     </author>
     <content type="html">&lt;p&gt;For years I used tox and nox to test my Python projects against multiple Python versions on multiple operating systems. While both tools are powerful, they require configuration complex enough that I usually just copy/paste it from project to project. In comparison, &lt;code&gt;uv+just&lt;/code&gt; isn't just a completely workable replacement, it's simple enough that I can either memorize the commands or if I forget can look up in moments.&lt;/p&gt;
+&lt;p&gt;An improvement on &lt;a href="https://daniel.feldroy.com/posts/2025-07-uv-run-for-testing-python-versions"&gt;this post&lt;/a&gt;, which just covers the &lt;code&gt;uv&lt;/code&gt; side.&lt;/p&gt;
 &lt;h2 id="what-is-just"&gt;What is Just?&lt;/h2&gt;
 &lt;p&gt;&lt;a href="https://github.com/casey/just"&gt;Just&lt;/a&gt; is a rust-powered command runner inspired by &lt;a href="https://en.wikipedia.org/wiki/Make_(software)"&gt;Make&lt;/a&gt; but with a slightly simpler syntax. Where Make was originally designed to build executable code, just focuses more on being a command-runner. Also, &lt;code&gt;Just&lt;/code&gt; benefits from the lessons learned by Make. The result is an easier-to-use tool that is also much easier to get running on Windows than &lt;code&gt;Make&lt;/code&gt;. The way &lt;code&gt;Just&lt;/code&gt; works is you define commands in a &lt;code&gt;Justfile&lt;/code&gt; that can be easily executed from the command line. It can be installed from pypi as the &lt;a href="https://pypi.org/project/rust-just/"&gt;rust-just&lt;/a&gt; package.&lt;/p&gt;
 &lt;h2 id="assumptions-about-our-project"&gt;Assumptions about our project&lt;/h2&gt;

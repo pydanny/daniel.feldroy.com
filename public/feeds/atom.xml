@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
   <id>https://daniel.feldroy.com/</id>
   <title>Inside the head of Daniel Roy Greenfeld</title>
-  <updated>2025-10-19T09:27:54.335054+00:00</updated>
+  <updated>2025-10-22T12:28:42.319438+00:00</updated>
   <author>
     <name>Daniel Roy Greenfeld</name>
     <email>daniel@feldroy.com</email>
@@ -12,47 +12,6 @@
   <generator uri="https://lkiesow.github.io/python-feedgen" version="1.0.0">python-feedgen</generator>
   <logo>https://f004.backblazeb2.com/file/daniel-feldroy-com/public/images/profile.jpg</logo>
   <rights>All rights reserved 2025, Daniel Roy Greenfeld</rights>
-  <entry>
-    <id>https://daniel.feldroy.com/posts/til-2025-06-html-404-errors-for-fastapi</id>
-    <title>TIL: HTML 404 errors for FastAPI</title>
-    <updated>2025-06-13T04:23:23.230032+00:00</updated>
-    <author>
-      <name>Daniel Roy Greenfeld</name>
-      <email>daniel@feldroy.com</email>
-    </author>
-    <content type="html">&lt;p&gt;I had a TIL about custom responses in FastAPI but there's enough nuance that it deserves a full blog post. In the meantime, here's a TIL about custom HTTP responses. &lt;/p&gt;
-&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="kn"&gt;from&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nn"&gt;fastapi&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="n"&gt;FastAPI&lt;/span&gt;
-&lt;span class="kn"&gt;from&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nn"&gt;fastapi.responses&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="n"&gt;HTMLResponse&lt;/span&gt;
-
-
-&lt;span class="k"&gt;async&lt;/span&gt; &lt;span class="k"&gt;def&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nf"&gt;custom_404_exception_handler&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;request&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;exc&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
-    &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="n"&gt;HTMLResponse&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;
-        &lt;span class="sa"&gt;f&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;&amp;lt;p&amp;gt;404 Not Found at &amp;quot;&lt;/span&gt;&lt;span class="si"&gt;{&lt;/span&gt;&lt;span class="n"&gt;request&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;url&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;path&lt;/span&gt;&lt;span class="si"&gt;}&lt;/span&gt;&lt;span class="s1"&gt;&amp;quot;&amp;lt;/p&amp;gt;&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;status_code&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="mi"&gt;404&lt;/span&gt;
-    &lt;span class="p"&gt;)&lt;/span&gt;
-
-&lt;span class="c1"&gt;# Add more HTTP exceptions as needed&lt;/span&gt;
-&lt;span class="n"&gt;HTTP_EXCEPTIONS&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;&lt;span class="mi"&gt;404&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="n"&gt;custom_404_exception_handler&lt;/span&gt;&lt;span class="p"&gt;}&lt;/span&gt;
-
-&lt;span class="n"&gt;app&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;FastAPI&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;exception_handlers&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="n"&gt;HTTP_EXCEPTIONS&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-
-
-&lt;span class="nd"&gt;@app&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;get&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;/&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-&lt;span class="k"&gt;async&lt;/span&gt; &lt;span class="k"&gt;def&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nf"&gt;read_root&lt;/span&gt;&lt;span class="p"&gt;():&lt;/span&gt;
-    &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;Hello&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;World&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;}&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;p&gt;Try it out by running the app and going to a non-existent path, like &lt;code&gt;/not-found&lt;/code&gt;. You should see a simple HTML page with a 404 message.&lt;/p&gt;</content>
-    <link href="https://daniel.feldroy.com/posts/til-2025-06-html-404-errors-for-fastapi"/>
-    <summary>For those times when FastAPI is serving web pages and users go to the wrong place.</summary>
-    <category term="python"/>
-    <category term="fastapi"/>
-    <category term="TIL"/>
-    <contributor>
-      <name>Daniel Roy Greenfeld</name>
-      <email>daniel@feldroy.com</email>
-    </contributor>
-    <published>2025-06-13T04:23:23.230032+00:00</published>
-  </entry>
   <entry>
     <id>https://daniel.feldroy.com/posts/til-2025-06-removing-exif-geodata-from-media</id>
     <title>TIL: Removing exif geodata from media</title>
@@ -666,7 +625,6 @@ git&lt;span class="w"&gt; &lt;/span&gt;remote&lt;span class="w"&gt; &lt;/span&gt
     <summary>About once a week someone I've never talked to before asks me to provide professional references.</summary>
     <category term="advice"/>
     <category term="rant"/>
-    <category term="air"/>
     <contributor>
       <name>Daniel Roy Greenfeld</name>
       <email>daniel@feldroy.com</email>
@@ -965,5 +923,80 @@ pip&lt;span class="w"&gt; &lt;/span&gt;install&lt;span class="w"&gt; &lt;/span&g
       <email>daniel@feldroy.com</email>
     </contributor>
     <published>2025-10-19T05:07:02.438338+00:00</published>
+  </entry>
+  <entry>
+    <id>https://daniel.feldroy.com/posts/2025-10-uv-just-for-testing-multiple-python-versions</id>
+    <title>uv+just for testing multiple Python versions</title>
+    <updated>2025-10-22T13:00:56.868382+00:00</updated>
+    <author>
+      <name>Daniel Roy Greenfeld</name>
+      <email>daniel@feldroy.com</email>
+    </author>
+    <content type="html">&lt;p&gt;For years I used tox and nox to test my Python projects against multiple Python versions on multiple operating systems. While both tools are powerful, they require configuration complex enough that I usually just copy/paste it from project to project. In comparison, &lt;code&gt;uv+just&lt;/code&gt; isn't just a completely workable replacement, it's simple enough that I can either memorize the commands or if I forget can look up in moments.&lt;/p&gt;
+&lt;h2 id="what-is-just"&gt;What is Just?&lt;/h2&gt;
+&lt;p&gt;&lt;a href="https://github.com/casey/just"&gt;Just&lt;/a&gt; is a rust-powered command runner inspired by &lt;a href="https://en.wikipedia.org/wiki/Make_(software)"&gt;Make&lt;/a&gt; but with a slightly simpler syntax. Where Make was originally designed to build executable code, just focuses more on being a command-runner. Also, &lt;code&gt;Just&lt;/code&gt; benefits from the lessons learned by Make. The result is an easier-to-use tool that is also much easier to get running on Windows than &lt;code&gt;Make&lt;/code&gt;. The way &lt;code&gt;Just&lt;/code&gt; works is you define commands in a &lt;code&gt;Justfile&lt;/code&gt; that can be easily executed from the command line. It can be installed from pypi as the &lt;a href="https://pypi.org/project/rust-just/"&gt;rust-just&lt;/a&gt; package.&lt;/p&gt;
+&lt;h2 id="assumptions-about-our-project"&gt;Assumptions about our project&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;Uses &lt;code&gt;pytest&lt;/code&gt; for testing&lt;/li&gt;
+&lt;li&gt;Has a &lt;code&gt;tests/&lt;/code&gt; directory containing the test cases&lt;/li&gt;
+&lt;li&gt;Supposed to work with both Python 3.13 and 3.14&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id="installing-dependencies-using-pyprojecttoml"&gt;Installing dependencies using pyproject.toml&lt;/h2&gt;
+&lt;p&gt;Make sure to include the necessary dependencies in your &lt;code&gt;pyproject.toml&lt;/code&gt; file:&lt;/p&gt;
+&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="k"&gt;[dependency-groups]&lt;/span&gt;
+&lt;span class="n"&gt;dev&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;
+&lt;span class="w"&gt;    &lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;rust-just&amp;quot;&lt;/span&gt;
+&lt;span class="p"&gt;]&lt;/span&gt;
+
+&lt;span class="n"&gt;test&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;
+&lt;span class="w"&gt;    &lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;pytest&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+&lt;span class="p"&gt;]&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Once in your &lt;code&gt;pyproject.toml&lt;/code&gt; get your development dependencies ready with this command:&lt;/p&gt;
+&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;uv&lt;span class="w"&gt; &lt;/span&gt;sync&lt;span class="w"&gt; &lt;/span&gt;--group&lt;span class="w"&gt; &lt;/span&gt;dev
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;h2 id="building-the-justfile"&gt;Building the Justfile&lt;/h2&gt;
+&lt;p&gt;Justfiles are simple to write. Create a file named &lt;code&gt;Justfile&lt;/code&gt; in the root of your project with the following content:&lt;/p&gt;
+&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="c"&gt;# Run all the tests against multiple Python versions&lt;/span&gt;
+&lt;span class="nf"&gt;test&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;
+&lt;span class="w"&gt;    &lt;/span&gt;uv&lt;span class="w"&gt; &lt;/span&gt;run&lt;span class="w"&gt; &lt;/span&gt;--python&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="m"&gt;3&lt;/span&gt;.13&lt;span class="w"&gt; &lt;/span&gt;--group&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nb"&gt;test&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;pytest&lt;span class="w"&gt; &lt;/span&gt;tests/
+&lt;span class="w"&gt;    &lt;/span&gt;uv&lt;span class="w"&gt; &lt;/span&gt;run&lt;span class="w"&gt; &lt;/span&gt;--python&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="m"&gt;3&lt;/span&gt;.14&lt;span class="w"&gt; &lt;/span&gt;--group&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nb"&gt;test&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;pytest&lt;span class="w"&gt; &lt;/span&gt;tests/
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;If you have more Python versions to test against, simply add more &lt;code&gt;uv run&lt;/code&gt; lines with the desired version. &lt;/p&gt;
+&lt;h2 id="running-the-tests"&gt;Running the tests&lt;/h2&gt;
+&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;just&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nb"&gt;test&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;And that's it! You now have a simple and effective way to test your Python projects against multiple Python versions using &lt;code&gt;uv&lt;/code&gt; and &lt;code&gt;just&lt;/code&gt;, without the overhead of more complex tools like &lt;code&gt;tox&lt;/code&gt; or &lt;code&gt;nox&lt;/code&gt;. This setup is easy to maintain and adapt as your project evolves.&lt;/p&gt;
+&lt;h2 id="just-bonus-feature-command-lookup"&gt;Just bonus feature: command lookup&lt;/h2&gt;
+&lt;p&gt;A nice feature about &lt;code&gt;just&lt;/code&gt; is you can trivially look up the commands you've authored with &lt;code&gt;just -l&lt;/code&gt;, and leading docstrings are included in the display:&lt;/p&gt;
+&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;$&lt;span class="w"&gt; &lt;/span&gt;just&lt;span class="w"&gt; &lt;/span&gt;-l
+Available&lt;span class="w"&gt; &lt;/span&gt;recipes:
+&lt;span class="w"&gt;    &lt;/span&gt;&lt;span class="nb"&gt;test&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="c1"&gt;# Run all the tests against multiple Python versions&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;If you don't specify a command, &lt;code&gt;just&lt;/code&gt; will run the first one it finds in the file. This means you can set up a default command to run when you just type &lt;code&gt;just&lt;/code&gt; with no arguments. What I like to do is put a &lt;code&gt;list&lt;/code&gt; action as the first command. By that I mean something like this:&lt;/p&gt;
+&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="c"&gt;# List all the commands in this file&lt;/span&gt;
+&lt;span class="nf"&gt;list&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;
+&lt;span class="w"&gt;    &lt;/span&gt;just&lt;span class="w"&gt; &lt;/span&gt;-l
+
+&lt;span class="c"&gt;# Run all the tests against multiple Python versions&lt;/span&gt;
+&lt;span class="nf"&gt;test&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;
+&lt;span class="w"&gt;    &lt;/span&gt;uv&lt;span class="w"&gt; &lt;/span&gt;run&lt;span class="w"&gt; &lt;/span&gt;--python&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="m"&gt;3&lt;/span&gt;.13&lt;span class="w"&gt; &lt;/span&gt;--group&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nb"&gt;test&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;pytest&lt;span class="w"&gt; &lt;/span&gt;tests/
+&lt;span class="w"&gt;    &lt;/span&gt;uv&lt;span class="w"&gt; &lt;/span&gt;run&lt;span class="w"&gt; &lt;/span&gt;--python&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="m"&gt;3&lt;/span&gt;.14&lt;span class="w"&gt; &lt;/span&gt;--group&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nb"&gt;test&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;pytest&lt;span class="w"&gt; &lt;/span&gt;tests/
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</content>
+    <link href="https://daniel.feldroy.com/posts/2025-10-uv-just-for-testing-multiple-python-versions"/>
+    <summary>In the old days we relied on tox and nox to test a Python project against multiple Python versions, now we can lean on uv+just. For most projects this keeps our configuration straightforward and reduces dependencies.</summary>
+    <category term="python"/>
+    <category term="uv"/>
+    <category term="howto"/>
+    <contributor>
+      <name>Daniel Roy Greenfeld</name>
+      <email>daniel@feldroy.com</email>
+    </contributor>
+    <published>2025-10-22T13:00:56.868382+00:00</published>
   </entry>
 </feed>

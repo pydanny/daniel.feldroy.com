@@ -120,12 +120,13 @@ def list_tags() -> dict[str, int]:
 
 
 def TagLink(slug: str):
-    return air.Span(air.A(slug, href=f"/tags/{slug}"), " ")
+    # return air.Span(air.A(slug, href=f"/tags/{slug}"), " ")
+    return air.Span(air.A(slug, href=tag.url(slug=slug)), " ")
 
 
 def TagLinkWithCount(slug: str, count: int):
     return air.Span(
-        air.A(air.Span(slug), air.Small(f" ({count})"), href=f"/tags/{slug}"), " "
+        air.A(air.Span(slug), air.Small(f" ({count})"), href=tag.url(slug=slug)), " "
     )
 
 
@@ -211,12 +212,12 @@ async def index():
             air.Section(
                 air.H1("Recent Writings"),
                 *most_posts[:4],
-                air.P(air.A("Read all articles", href='/posts')),
+                air.P(air.A("Read all articles", href=posts.url())),
             ),
             air.Section(
                 air.H1("TIL", air.Small(" (Today I learned)")),
                 *tils[:7],
-                air.P(air.A("Read more TIL articles", href="/tags/TIL")),
+                air.P(air.A("Read more TIL articles", href=tag.url(slug='TIL'))),
             ),
             air.Section(air.H1("Featured Writings"), *popular),
             class_="grid",
@@ -245,7 +246,7 @@ async def posts():
             air.H1(f"All Articles ({len(posts)})"),
             air.P(description),
             *posts,
-            air.A("← Back to home", href="/"),
+            air.A("← Back to home", href=index.url()),
         ),
         title="All blog posts by Daniel Roy Greenfeld",
     )
@@ -260,7 +261,7 @@ async def article(slug: str):
         if redirects_url is not None:
             return RedirectResponse(redirects_url)
         raise HTTPException(status_code=404)
-    tags = [TagLink(slug=x) for x in metadata.get("tags", [])]
+    article_tags = [TagLink(slug=x) for x in metadata.get("tags", [])]
     specials = []
     if "TIL" in metadata["tags"]:
         specials = [air.A(
@@ -271,7 +272,7 @@ async def article(slug: str):
                 height="200",
                 class_="center",
             ),
-            href="/tags/TIL",
+            href=tag.url(slug="TIL"),
         )]
     return Layout(
         air.Title(metadata["title"]),
@@ -281,8 +282,8 @@ async def article(slug: str):
             air.P(air.Small(air.Time(metadata["date"]))),
             air.Div(content, class_=metadata["class_"]),
             air.Div(*specials, style="width: 200px; margin: auto; display: block;"),
-            air.P(air.Span("Tags: "), *tags),
-            air.A("← Back to all articles", href="/"),
+            air.P(air.Span("Tags: "), *article_tags),
+            air.A("← Back to all articles", href=index.url()),
         ),
         title=metadata["title"],
         description=metadata.get("description", ""),
@@ -302,7 +303,7 @@ async def tags():
             *tags,
             air.Br(),
             air.Br(),
-            air.A("← Back home", href="/"),
+            air.A("← Back home", href=index.url()),
         ),
         title="Tags",
         description="All tags used in the site.",
@@ -326,7 +327,7 @@ async def tag(slug: str):
         air.Section(
             air.H1(f'Posts tagged with "{slug}" ({len(posts)})'),
             *posts,
-            air.A("← Back home", href="/"),
+            air.A("← Back home", href=index.url()),
         ),
         title=f"Tag: {slug}",
         description=f'Posts tagged with "{slug}" ({len(posts)})',
@@ -416,7 +417,7 @@ async def search(q: str | None = None):
         air.Section(
             air.Div(*result, class_="search-results"),
             air.P(air.Small('Hint: Use the "/" shortcut to search from any page.')),
-            air.A("← Back home", href="/"),
+            air.A("← Back home", href=index.url()),
         ),
         air.Script("""function updateQinURL() {
             let url = new URL(window.location);
@@ -552,7 +553,7 @@ async def fitness():
                 ),
             ),
             *charts,
-            air.A("← Back home", href="/"),
+            air.A("← Back home", href=index.url()),
         ),
     )
 

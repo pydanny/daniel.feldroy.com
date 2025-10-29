@@ -49,8 +49,8 @@ prepend_sys_path = [
     "."
 ]
 
-[tool.uv.sources]
-air = { path = "../air", editable = true }
+# [tool.uv.sources]
+# air = { path = "../air", editable = true }
 
 # timezone to use when rendering the date within the migration file
 # as well as the filename.

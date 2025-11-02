@@ -17,47 +17,23 @@ image: https://f004.backblazeb2.com/file/daniel-feldroy-com/public/images/python
 
 [![Python tips and tricks](https://f004.backblazeb2.com/file/daniel-feldroy-com/public/images/python-tip-from-pydanny.png)](/using-google-docs-and-python-to-assemble-fiction-books.html)
 
-When I started my latest fiction book, [The Darkest
-Autumn](https://www.roygreenfeld.com/products/darkest-autumn-ambria-book-1), I
-wrote out the chapters as individual files. I did it in a text editor
-(Sublime) and saved the files to a git repo. The names of the files
-determined their order, chapters being named in this pattern:
+When I started my latest fiction book, [The Darkest Autumn](https://www.roygreenfeld.com/products/darkest-autumn-ambria-book-1), I wrote out the chapters as individual files. I did it in a text editor (Sublime) and saved the files to a git repo. The names of the files determined their order, chapters being named in this pattern:
 
-    the-darkest-autumn $ tree
-    .
-    ├── 01_Beginnings.md
-    ├── 02_Town_of_Ravenna.md
-    ├── 03_Walls_of_Ravenna.md
+```sh
+the-darkest-autumn $ tree
+.
+├── 01_Beginnings.md
+├── 02_Town_of_Ravenna.md
+├── 03_Walls_of_Ravenna.md
+```
 
-As the book developed I thought about moving it to
-[Scrivener](https://www.literatureandlatte.com/scrivener.php). If you
-don't know, Scrivener is an excellent tool for writing. It encourages
-you to break up your work into chapters and scenes. The downside is that
-Scrivener is complex (I want to write, not figure out software) and
-[Scrivener isn't designed for simultaneous
-collaboration](https://www.literatureandlatte.com/forum/viewtopic.php?f=2&t=11725).
-The latter issue is a very serious problem, as I like to have others
-review and comment on my writing as I go.
+As the book developed I thought about moving it to [Scrivener](https://www.literatureandlatte.com/scrivener.php). If you don't know, Scrivener is an excellent tool for writing. It encourages you to break up your work into chapters and scenes. The downside is that Scrivener is complex (I want to write, not figure out software) and [Scrivener isn't designed for simultaneous collaboration](https://www.literatureandlatte.com/forum/viewtopic.php?f=2&t=11725). The latter issue is a very serious problem, as I like to have others review and comment on my writing as I go.
 
-What I really wanted to do is combine the chapter breaking of Scrivener
-with the simplicity and collaboration of Google Docs. Preferably, I
-would put the book chapters into Google Docs as individual files and
-then send invites to my editor, wife, and my beta readers. By using
-Google Docs I could ensure anyone could access the work without having
-to create a new account and learn an unfamiliar system.
+What I really wanted to do is combine the chapter breaking of Scrivener with the simplicity and collaboration of Google Docs. Preferably, I would put the book chapters into Google Docs as individual files and then send invites to my editor, wife, and my beta readers. By using Google Docs I could ensure anyone could access the work without having to create a new account and learn an unfamiliar system.
 
-Unfortunately, at this time Google Docs has no way to combine multiple
-Google Docs contained in one directory into one large document for
-publication. To use Google Docs thhe way I want involves manually
-copy/pasting content from dozens of files into one master document any
-time you want to update a work. With even 5 to 10 documents this is time
-consuming and error prone (for me) to the point of being unusable. This
-is a problem because my fiction books have anywhere from 30 to 50
-chapters.
+Unfortunately, at this time Google Docs has no way to combine multiple Google Docs contained in one directory into one large document for publication. To use Google Docs thhe way I want involves manually copy/pasting content from dozens of files into one master document any time you want to update a work. With even 5 to 10 documents this is time consuming and error prone (for me) to the point of being unusable. This is a problem because my fiction books have anywhere from 30 to 50 chapters.
 
-Fortunately for me, I know how to code. By using the Python programming
-language, I can automate the process of combining the Google Docs into
-one master file which can be converted to epub, mobi (kindle), or PDF.
+Fortunately for me, I know how to code. By using the Python programming language, I can automate the process of combining the Google Docs into one master file which can be converted to epub, mobi (kindle), or PDF.
 
 # How I Combine Google Doc Files
 
@@ -65,36 +41,33 @@ First, I download all the files in the book's Google Docs directory.
 
 ![Selecting Files With Google Docs](https://f004.backblazeb2.com/file/daniel-feldroy-com/public/images/selecting-files.png?12346)
 
-This generates and downloads a zip file called something like
-drive-download-20170505T230011Z-001.zip. I use `unzip to open it`:
+This generates and downloads a zip file called something like drive-download-20170505T230011Z-001.zip. I use `unzip to open it`:
 
-    unzip drive-download-20170505T230011Z-001.zip -d the-darkest-autumn
+```sh
+unzip drive-download-20170505T230011Z-001.zip -d the-darkest-autumn
+```
 
-Inside the new the-darkest-autumn folder are a bunch of MS
-Word-formatted files named identically to what's stored on Google Docs:
+Inside the new the-darkest-autumn folder are a bunch of MS Word-formatted files named identically to what's stored on Google Docs:
 
-    $ tree the-darkest-autumn/
-    the-darkest-autumn
-    ├── 01. Beginnings.docx
-    ├── 02. Town of Ravenna.docx
-    ├── 03. Walls of Ravenna.docx
-    ├── 04. Gatehouse of Ravenna.docx
-    ├── 05. Courage.docx
-    ├── 06. To the Upper Valley.docx
-    ├── _afterward.docx
-    ├── _copyright.docx
-    ├── _dedication.docx
-    └── _title.docx
+```sh
+$ tree the-darkest-autumn/
+the-darkest-autumn
+├── 01. Beginnings.docx
+├── 02. Town of Ravenna.docx
+├── 03. Walls of Ravenna.docx
+├── 04. Gatehouse of Ravenna.docx
+├── 05. Courage.docx
+├── 06. To the Upper Valley.docx
+├── _afterward.docx
+├── _copyright.docx
+├── _dedication.docx
+└── _title.docx
+```
 
-Now it's time to bring in the code. By leveraging the
-[python-docx](https://python-docx.readthedocs.io/en/latest/index.html) library,
-I combine all the Word files into one large Word files using this Python
-(3.6 or higher) script:
+Now it's time to bring in the code. By leveraging the [python-docx](https://python-docx.readthedocs.io/en/latest/index.html) library, I combine all the Word files into one large Word files using this Python (3.6 or higher) script:
 
 ```python
-"""bookify.py: Combines multiple Word docs in a folder.
-
-"""
+"""bookify.py: Combines multiple Word docs in a folder. """
 
 import os
 import sys
@@ -245,96 +218,68 @@ if __name__ == '__main__':
 
 This is what it looks like when I run the code:
 
-    $ python bookify.py the-darkest-autumn/
-    Adding Title Page
-    Adding Copyright Page
-    Adding Dedication
-    Adding 1. Beginnings
-    Adding 2. Town of Ravenna
-    Adding 3. Walls of Ravenna
-    Adding 4. Gatehouse of Ravenna
-    Adding 5. Courage
-    Adding 6. To the Upper Valley
-    skipping the-darkest-autumn/_afterward.docx
-    skipping the-darkest-autumn/_copyright.docx
-    skipping the-darkest-autumn/_dedication.docx
-    skipping the-darkest-autumn/_title.docx
-    Adding Afterward
-    DONE!!!
+```sh
+$ python bookify.py the-darkest-autumn/
+Adding Title Page
+Adding Copyright Page
+Adding Dedication
+Adding 1. Beginnings
+Adding 2. Town of Ravenna
+Adding 3. Walls of Ravenna
+Adding 4. Gatehouse of Ravenna
+Adding 5. Courage
+Adding 6. To the Upper Valley
+skipping the-darkest-autumn/_afterward.docx
+skipping the-darkest-autumn/_copyright.docx
+skipping the-darkest-autumn/_dedication.docx
+skipping the-darkest-autumn/_title.docx
+Adding Afterward
+DONE!!!
+```
 
-And now I've got a Word document in the same directory called
-the-darkest-autumn.docx.
+And now I've got a Word document in the same directory called the-darkest-autumn.docx.
 
 # Converting Word to EPUB
 
-While Kindle Direct Publishing (KDP) will accept .docx files, I like to
-convert it to .epub using [Calibre](https://calibre-ebook.com/):
+While Kindle Direct Publishing (KDP) will accept .docx files, I like to convert it to .epub using [Calibre](https://calibre-ebook.com/):
 
-    $ ebook-convert the-darkest-autumn.docx the-darkest-autumn.epub \
-    --authors "Daniel Roy Greenfeld" \
-    --publisher "Two Scoops Press" \
-    --series Ambria \
-    --series-index 1 \
-    --output-profile kindle
+```sh
+$ ebook-convert the-darkest-autumn.docx the-darkest-autumn.epub \
+--authors "Daniel Roy Greenfeld" \
+--publisher "Two Scoops Press" \
+--series Ambria \
+--series-index 1 \
+--output-profile kindle
+```
 
 And now I can check out my results by using Calibre's book viewer:
 
-    $ ebook-viewer the-darkest-autumn.epub
+```sh
+$ ebook-viewer the-darkest-autumn.epub
+```
 
 # Add the Links!
 
-As `python-docx` doesn't handle HTTP links at this time, I manually add
-them to the book using Calibre's epub editor. I add links to:
+As `python-docx` doesn't handle HTTP links at this time, I manually add them to the book using Calibre's epub editor. I add links to:
 
-- My personal author site at
-  [danielroygreenfeld.com](https://www.danielroygreenfeld.com/)
-- The book's [review page on
-  Amazon](https://www.amazon.com/the-darkest-autumn-ebook/product-reviews/B071L2G8SL?tag=mlinar-20)
-- The book's upcoming sequel, [The River Runs
-  Uphill](https://www.danielroygreenfeld.com/books/the-river-runs-uphill/).
+- My personal author site at [daniel.feldroy.com](https://www.daniel.feldroy.com)
+- The book's [review page on Amazon](https://www.amazon.com/the-darkest-autumn-ebook/product-reviews/B071L2G8SL?tag=mlinar-20)
+- The book's upcoming sequel, [The River Runs Uphill](https://www.danielroygreenfeld.com/books/the-river-runs-uphill/).
 
 # How Well Does It Work?
 
-For me it works wonders for my productivity. By following a "chapters
-as files" pattern within Google Docs I get solid collaboration power
-plus some (but not all) of the features of Scrivener. I can quickly
-regenerate the book at any time without having to struggle with
-Scrivener or have to add tools like Vellum to the process.
+For me it works wonders for my productivity. By following a "chapters as files" pattern within Google Docs I get solid collaboration power plus some (but not all) of the features of Scrivener. I can quickly regenerate the book at any time without having to struggle with Scrivener or have to add tools like Vellum to the process.
 
-I have a secondary script that fixes quoting and tab issues, written
-before I realized Calibre could have done that for me.
+I have a secondary script that fixes quoting and tab issues, written before I realized Calibre could have done that for me.
 
-The book I started this project for, [The Darkest
-Autumn](https://www.danielroygreenfeld.com/books/the-darkest-autumn/),
-is available now on
-[Amazon](https://www.amazon.com/Darkest-Autumn-Ambria-I-ebook/dp/B071L2G8SL/?tag=mlinar-20).
-Check it out and let me know what you think of what the script
-generates. Or if you want to support my writing (both fiction and
-non-fiction), [buy The Darkest Autumn on
-Amazon](https://www.amazon.com/Darkest-Autumn-Ambria-I-ebook/dp/B071L2G8SL/?tag=mlinar-20)
-and leave an honest review.
+The book I started this project for, [The Darkest Autumn](https://www.danielroygreenfeld.com/books/the-darkest-autumn/), is available now on [Amazon](https://www.amazon.com/Darkest-Autumn-Ambria-I-ebook/dp/B071L2G8SL/?tag=mlinar-20). Check it out and let me know what you think of what the script generates. Or if you want to support my writing (both fiction and non-fiction), [buy The Darkest Autumn on Amazon](https://www.amazon.com/Darkest-Autumn-Ambria-I-ebook/dp/B071L2G8SL/?tag=mlinar-20) and leave an honest review.
 
 # Thinking About the Future
 
-Right now this snippet of code generates something that looks okay, but
-could be improved. I plan to enhance it with better fonts and chapter
-headers, the goal to generate something as nice as what
-[Draft2Digital](https://draft2digital.com/) generates.
+Right now this snippet of code generates something that looks okay, but could be improved. I plan to enhance it with better fonts and chapter headers, the goal to generate something as nice as what [Draft2Digital](https://draft2digital.com/) generates.
 
-I've considered adding the OAuth components necessary in order to allow
-for automated downloading. The problem is I loathe working with OAuth.
-Therefore I'm sticking with the manial download process.
+I've considered adding the OAuth components necessary in order to allow for automated downloading. The problem is I loathe working with OAuth. Therefore I'm sticking with the manial download process.
 
-For about a week I thought about leveraging it and my
-[Django](https://www.djangoproject.com/) skills to build it as a paid
-subscription service and rake in the passive income. Basically turn it
-into a startup. After some reflection I backed off because if Google
-added file combination as a feature, it would destroy the business
-overnight.
+For about a week I thought about leveraging it and my [Django](https://www.djangoproject.com/) skills to build it as a paid subscription service and rake in the passive income. Basically turn it into a startup. After some reflection I backed off because if Google added file combination as a feature, it would destroy the business overnight.
 
-I've also decided not to package this up on Github/PyPI. While
-[Cookiecutter](https://github.com/audreyr/cookiecutter) makes it trivial
-for me to do this kind of thing, I'm not interested in maintaining yet
-another open source project. However, if someone does package it up and
-credits me for my work, I'm happy to link to it from this blog post.
-
+I've also decided not to package this up on Github/PyPI. While [Cookiecutter](https://github.com/audreyr/cookiecutter) makes it trivial for me to do this kind of thing, I'm not interested in maintaining yet another open source project. However, if someone does package it up and credits me for my work, I'm happy to link to it from this blog post.

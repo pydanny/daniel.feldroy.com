@@ -35,7 +35,7 @@ Fortunately while working on a project for [Revolution Systems](https://www.revs
 """
 myapi/resource.py
 
-    author: Daniel Greenfeld
+    author: Daniel Greenfeld and Jacob Kaplan-Moss
     license: BSD
 
 This assumes your API accepts JSON only.

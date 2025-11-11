@@ -6,6 +6,7 @@ tags:
 - python
 - Japan
 - travel
+- bjj
 title: Visiting Tokyo, Japan from November 12 to 24
 ---
 

@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
   <id>https://daniel.feldroy.com/</id>
   <title>Inside the head of Daniel Roy Greenfeld</title>
-  <updated>2025-10-22T12:33:56.809175+00:00</updated>
+  <updated>2025-11-11T14:54:02.065646+00:00</updated>
   <author>
     <name>Daniel Roy Greenfeld</name>
     <email>daniel@feldroy.com</email>
@@ -12,27 +12,6 @@
   <generator uri="https://lkiesow.github.io/python-feedgen" version="1.0.0">python-feedgen</generator>
   <logo>https://f004.backblazeb2.com/file/daniel-feldroy-com/public/images/profile.jpg</logo>
   <rights>All rights reserved 2025, Daniel Roy Greenfeld</rights>
-  <entry>
-    <id>https://daniel.feldroy.com/posts/til-2025-06-removing-exif-geodata-from-media</id>
-    <title>TIL: Removing exif geodata from media</title>
-    <updated>2025-06-23T20:56:49.362878+00:00</updated>
-    <author>
-      <name>Daniel Roy Greenfeld</name>
-      <email>daniel@feldroy.com</email>
-    </author>
-    <content type="html">&lt;p&gt;To do this you'll need &lt;a href="https://exiftool.org/"&gt;exiftool&lt;/a&gt;. On Mac it can be installed with &lt;code&gt;brew install exiftool&lt;/code&gt;.&lt;/p&gt;
-&lt;p&gt;How to remove the geodata:&lt;/p&gt;
-&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;exiftool&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;-gps*=&amp;quot;&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;beach-video.mp4
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</content>
-    <link href="https://daniel.feldroy.com/posts/til-2025-06-removing-exif-geodata-from-media"/>
-    <summary>How to remove revealing data from your images and videos</summary>
-    <category term="TIL"/>
-    <contributor>
-      <name>Daniel Roy Greenfeld</name>
-      <email>daniel@feldroy.com</email>
-    </contributor>
-    <published>2025-06-23T20:56:49.362878+00:00</published>
-  </entry>
   <entry>
     <id>https://daniel.feldroy.com/posts/2025-07-uv-run-for-testing-python-versions</id>
     <title>uv run for running tests on versions of Python</title>
@@ -999,5 +978,27 @@ Available&lt;span class="w"&gt; &lt;/span&gt;recipes:
       <email>daniel@feldroy.com</email>
     </contributor>
     <published>2025-10-22T13:00:56.868382+00:00</published>
+  </entry>
+  <entry>
+    <id>https://daniel.feldroy.com/posts/2025-11-visiting-tokyo-japan-from-november-12-to-24</id>
+    <title>Visiting Tokyo, Japan from November 12 to 24</title>
+    <updated>2025-11-11T14:45:22.984908+00:00</updated>
+    <author>
+      <name>Daniel Roy Greenfeld</name>
+      <email>daniel@feldroy.com</email>
+    </author>
+    <content type="html">&lt;p&gt;I'm excited to announce that me and Audrey will be visiting Japan from November 12 to November 24, 2025! This will be our first time in Japan, and we can't wait to explore Tokyo. Yes, we'll be in Tokyo for most of it, near the Shinjuku area, working from coffee shops, meeting some colleagues, and exploring the city during our free time. Our six year old daughter is with us, so our explorations will be family-friendly.&lt;/p&gt;
+&lt;p&gt;Unfortunately, we'll be between Python meetups in the Tokyo area. However, if you are in Toyo and write software in any shape or form, and would like to get together for coffee or a meal, please let me know!&lt;/p&gt;
+&lt;p&gt;If you do Brazilian Jiu-Jitsu in Tokyo, please let me know as well! I'd love to drop by a gym while I'm there.&lt;/p&gt;</content>
+    <link href="https://daniel.feldroy.com/posts/2025-11-visiting-tokyo-japan-from-november-12-to-24"/>
+    <summary>Our first time in a new country!</summary>
+    <category term="python"/>
+    <category term="Japan"/>
+    <category term="travel"/>
+    <contributor>
+      <name>Daniel Roy Greenfeld</name>
+      <email>daniel@feldroy.com</email>
+    </contributor>
+    <published>2025-11-11T14:45:22.984908+00:00</published>
   </entry>
 </feed>

@@ -11,7 +11,7 @@ title: 'TIL: Default code block languages for mkdocs'
 twitter_image: https://f004.backblazeb2.com/file/daniel-feldroy-com/public/logos/til-1.png
 ---
 
-When using [Mkdocs with Material](https://squidfunk.github.io/mkdocs-material/) theme, you can set default languages for code blocks in your `mkdocs.yml` configuration file. This is particularly useful for inline code examples that may not have explicit language tags.
+When using [Mkdocs with Material](https://squidfunk.github.io/mkdocs-material/), you can set default languages for code blocks in your `mkdocs.yml` configuration file. This is particularly useful for inline code examples that may not have explicit language tags.
 
 ```yaml
 markdown_extensions:

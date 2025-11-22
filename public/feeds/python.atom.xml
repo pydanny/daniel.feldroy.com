@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
   <id>https://daniel.feldroy.com/</id>
   <title>Python posts by Daniel Roy Greenfeld</title>
-  <updated>2025-11-22T11:14:21.663961+00:00</updated>
+  <updated>2025-11-22T11:19:02.633225+00:00</updated>
   <author>
     <name>Daniel Roy Greenfeld</name>
     <email>daniel@feldroy.com</email>
@@ -981,7 +981,7 @@ Available&lt;span class="w"&gt; &lt;/span&gt;recipes:
       <name>Daniel Roy Greenfeld</name>
       <email>daniel@feldroy.com</email>
     </author>
-    <content type="html">&lt;p&gt;When using &lt;a href="https://squidfunk.github.io/mkdocs-material/"&gt;Mkdocs with Material&lt;/a&gt; theme, you can set default languages for code blocks in your &lt;code&gt;mkdocs.yml&lt;/code&gt; configuration file. This is particularly useful for inline code examples that may not have explicit language tags.&lt;/p&gt;
+    <content type="html">&lt;p&gt;When using &lt;a href="https://squidfunk.github.io/mkdocs-material/"&gt;Mkdocs with Material&lt;/a&gt;, you can set default languages for code blocks in your &lt;code&gt;mkdocs.yml&lt;/code&gt; configuration file. This is particularly useful for inline code examples that may not have explicit language tags.&lt;/p&gt;
 &lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="nt"&gt;markdown_extensions&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
 &lt;span class="w"&gt;  &lt;/span&gt;&lt;span class="p p-Indicator"&gt;-&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nt"&gt;pymdownx.highlight&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
 &lt;span class="w"&gt;      &lt;/span&gt;&lt;span class="nt"&gt;default_lang&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="l l-Scalar l-Scalar-Plain"&gt;python&lt;/span&gt;

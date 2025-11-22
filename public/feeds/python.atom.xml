@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
   <id>https://daniel.feldroy.com/</id>
   <title>Python posts by Daniel Roy Greenfeld</title>
-  <updated>2025-11-11T14:59:19.648307+00:00</updated>
+  <updated>2025-11-22T11:14:21.663961+00:00</updated>
   <author>
     <name>Daniel Roy Greenfeld</name>
     <email>daniel@feldroy.com</email>
@@ -12,33 +12,6 @@
   <generator uri="https://lkiesow.github.io/python-feedgen" version="1.0.0">python-feedgen</generator>
   <logo>https://f004.backblazeb2.com/file/daniel-feldroy-com/public/images/profile.jpg</logo>
   <rights>All rights reserved 2025, Daniel Roy Greenfeld</rights>
-  <entry>
-    <id>https://daniel.feldroy.com/posts/2025-05-farewell-to-michael-ryabushkin</id>
-    <title>Farewell to Michael Ryabushkin</title>
-    <updated>2025-05-16T11:22:26.553736+00:00</updated>
-    <author>
-      <name>Daniel Roy Greenfeld</name>
-      <email>daniel@feldroy.com</email>
-    </author>
-    <content type="html">&lt;p&gt;Michael Ryabushkin and I met around 2011-2012 through Python community work. I don't remember how we met, instead I remember his presence suddenly there, helping and aiding others.&lt;/p&gt;
-&lt;p&gt;Michael could be pushy. He was trying to help people reach their full potential. His energy and humor was relentless, I admired his tenacity and giving nature.&lt;/p&gt;
-&lt;p&gt;While our coding preferences usually clashed, sometimes they matched. Then we would rant together about some tiny detail, those talks plus the silly Tai Chi dance we did are lovely memories I have of Michael. &lt;/p&gt;
-&lt;p&gt;In 2016 my wife Audrey had emergency surgery. For me that meant sleepless days taking care of her. Suddenly Michael's presence was there. He took shifts, ran errands (including buying a wheelchair), and forced me to sleep. I am forever grateful to Michael for what he did for us. &lt;/p&gt;
-&lt;p&gt;In early 2020 Audrey and I got last minute approval to use a large conference space to organize an event called PyBeach. Michael heard about it and as always, suddenly his presence was there. He was not just a volunteer at large, but leading the conference with us. Michael and I had our shared code rants, did our silly Tai Chi dance, and he met our baby daughter.&lt;/p&gt;
-&lt;p&gt;Between the pandemic and us moving from the Los Angeles area I didn't get the chance to see Michael again. I'll miss our rants, our silly Tai Chi dance, and his sudden appearances. &lt;/p&gt;
-&lt;p&gt;&lt;a href="https://f004.backblazeb2.com/file/daniel-feldroy-com/public/images/goodwill.jpg"&gt;&lt;img alt="Michael Ryabushkin" src="https://f004.backblazeb2.com/file/daniel-feldroy-com/public/images/goodwill-social.jpg" /&gt;&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;SoCal Python has created a &lt;a href="https://socalpython.org/in-memoriam-michael"&gt;memorial page in Michael's honor&lt;/a&gt;.&lt;/p&gt;</content>
-    <link href="https://daniel.feldroy.com/posts/2025-05-farewell-to-michael-ryabushkin"/>
-    <summary>In early May of 2025 Michael Ryabushkin (aka Goodwill) passed away. He was a great friend and an even better person. I will miss him dearly.</summary>
-    <category term="python"/>
-    <category term="obituary"/>
-    <category term="friends"/>
-    <contributor>
-      <name>Daniel Roy Greenfeld</name>
-      <email>daniel@feldroy.com</email>
-    </contributor>
-    <published>2025-05-16T11:22:26.553736+00:00</published>
-  </entry>
   <entry>
     <id>https://daniel.feldroy.com/posts/til-2025-06-html-404-errors-for-fastapi</id>
     <title>TIL: HTML 404 errors for FastAPI</title>
@@ -999,5 +972,31 @@ Available&lt;span class="w"&gt; &lt;/span&gt;recipes:
       <email>daniel@feldroy.com</email>
     </contributor>
     <published>2025-11-11T14:45:22.984908+00:00</published>
+  </entry>
+  <entry>
+    <id>https://daniel.feldroy.com/posts/til-2025-11-default-code-block-languages-for-mkdocs</id>
+    <title>TIL: Default code block languages for mkdocs</title>
+    <updated>2025-11-22T12:08:34.618632+00:00</updated>
+    <author>
+      <name>Daniel Roy Greenfeld</name>
+      <email>daniel@feldroy.com</email>
+    </author>
+    <content type="html">&lt;p&gt;When using &lt;a href="https://squidfunk.github.io/mkdocs-material/"&gt;Mkdocs with Material&lt;/a&gt; theme, you can set default languages for code blocks in your &lt;code&gt;mkdocs.yml&lt;/code&gt; configuration file. This is particularly useful for inline code examples that may not have explicit language tags.&lt;/p&gt;
+&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="nt"&gt;markdown_extensions&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+&lt;span class="w"&gt;  &lt;/span&gt;&lt;span class="p p-Indicator"&gt;-&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nt"&gt;pymdownx.highlight&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+&lt;span class="w"&gt;      &lt;/span&gt;&lt;span class="nt"&gt;default_lang&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="l l-Scalar l-Scalar-Plain"&gt;python&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;You can see what this looks like in practice with Air's API reference for forms here: &lt;a href="https://feldroy.github.io/air/api/forms/"&gt;feldroy.github.io/air/api/forms/&lt;/a&gt;. With this configuration, any code block without a specified language defaults to Python syntax highlighting, making documentation clearer and more consistent.&lt;/p&gt;</content>
+    <link href="https://daniel.feldroy.com/posts/til-2025-11-default-code-block-languages-for-mkdocs"/>
+    <summary>Really useful for making inline code examples have code highlighting.</summary>
+    <category term="TIL"/>
+    <category term="python"/>
+    <category term="markdown"/>
+    <contributor>
+      <name>Daniel Roy Greenfeld</name>
+      <email>daniel@feldroy.com</email>
+    </contributor>
+    <published>2025-11-22T12:08:34.618632+00:00</published>
   </entry>
 </feed>

@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
   <id>https://daniel.feldroy.com/</id>
   <title>Til posts by Daniel Roy Greenfeld</title>
-  <updated>2025-11-11T14:59:19.677755+00:00</updated>
+  <updated>2025-11-22T11:14:21.690400+00:00</updated>
   <author>
     <name>Daniel Roy Greenfeld</name>
     <email>daniel@feldroy.com</email>
@@ -12,75 +12,6 @@
   <generator uri="https://lkiesow.github.io/python-feedgen" version="1.0.0">python-feedgen</generator>
   <logo>https://f004.backblazeb2.com/file/daniel-feldroy-com/public/images/profile.jpg</logo>
   <rights>All rights reserved 2025, Daniel Roy Greenfeld</rights>
-  <entry>
-    <id>https://daniel.feldroy.com/posts/til-2025-02-unwrapping-a-wrapped-function</id>
-    <title>TIL: Undecorating a functools.wraps decorated function</title>
-    <updated>2025-02-21T18:00:00+00:00</updated>
-    <author>
-      <name>Daniel Roy Greenfeld</name>
-      <email>daniel@feldroy.com</email>
-    </author>
-    <content type="html">&lt;p&gt;In the Python standard library there is a function in the functools library that allows decorated functions to carry forward their original docstring. Executing it is rather easy:&lt;/p&gt;
-&lt;p&gt;```python {.marimo}
-from functools import wraps
-def kerpow(f):
-    """Prints the string KERPOW!"""
-    @wraps(f)
-    def wrapper(&lt;em&gt;args, &lt;/em&gt;&lt;em&gt;kwds):
-        print(f'KERPOW {f.&lt;strong&gt;name&lt;/strong&gt;}!')
-        return f(&lt;/em&gt;args, **kwds)
-    return wrapper&lt;/p&gt;
-&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="n"&gt;Let&lt;/span&gt;&lt;span class="err"&gt;&amp;#39;&lt;/span&gt;&lt;span class="n"&gt;s&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="k"&gt;try&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;it&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="k"&gt;out&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;
-
-&lt;span class="err"&gt;```&lt;/span&gt;&lt;span class="n"&gt;python&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="err"&gt;{&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;marimo&lt;/span&gt;&lt;span class="err"&gt;}&lt;/span&gt;
-&lt;span class="nv"&gt;@kerpow&lt;/span&gt;
-&lt;span class="n"&gt;def&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;adder&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;a&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="n"&gt;b&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="err"&gt;:&lt;/span&gt;
-&lt;span class="w"&gt;    &lt;/span&gt;&lt;span class="ss"&gt;&amp;quot;&amp;quot;&amp;quot;Adds the arguments together&amp;quot;&amp;quot;&amp;quot;&lt;/span&gt;
-&lt;span class="w"&gt;    &lt;/span&gt;&lt;span class="k"&gt;return&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;a&lt;/span&gt;&lt;span class="o"&gt;+&lt;/span&gt;&lt;span class="n"&gt;b&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;p&gt;Let's call the function. What we should get in addition to the sum of the values passed is the printed value of "KERPOW" plus the name of the function.&lt;/p&gt;
-&lt;p&gt;```python {.marimo}
-adder(1,2)&lt;/p&gt;
-&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="n"&gt;As&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;mentioned&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;the&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="err"&gt;`&lt;/span&gt;&lt;span class="n"&gt;functools&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;wraps&lt;/span&gt;&lt;span class="err"&gt;`&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;decorator&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;preserves&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;the&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;docstring&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
-
-&lt;span class="err"&gt;```&lt;/span&gt;&lt;span class="n"&gt;python&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;{&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;marimo&lt;/span&gt;&lt;span class="p"&gt;}&lt;/span&gt;
-&lt;span class="n"&gt;adder&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;__doc__&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;p&gt;As you can see, &lt;code&gt;functools.wraps&lt;/code&gt; is an easy addition to any decorator that makes keeping documentation valid trivial to do.&lt;/p&gt;
-&lt;p&gt;However, what if we want to use the &lt;code&gt;adder&lt;/code&gt; function without printing "KERPOW adder!" to the terminal? In other words, can we remove the decorator?&lt;/p&gt;
-&lt;p&gt;Fortunately, because we used &lt;code&gt;functools.wraps&lt;/code&gt; we can do just that. You see, what &lt;code&gt;functools.wraps&lt;/code&gt; does is add a &lt;code&gt;__wrapped__&lt;/code&gt; attribute to the wrapped function. If we want to restore the function to the original we do this:&lt;/p&gt;
-&lt;p&gt;```python {.marimo}
-adder_1 = adder.&lt;strong&gt;wrapped&lt;/strong&gt;&lt;/p&gt;
-&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="n"&gt;Now&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="k"&gt;if&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;we&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="k"&gt;call&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n n-Quoted"&gt;`adder`&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;we&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;won&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;t see &amp;quot;KERPOW adder!&amp;quot; any longer going to the terminal.&lt;/span&gt;
-
-&lt;span class="s1"&gt;```python {.marimo}&lt;/span&gt;
-&lt;span class="s1"&gt;adder_1(2, 3)&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;h2 id="postscript"&gt;Postscript&lt;/h2&gt;
-&lt;p&gt;In a follow-up discussion about this TIL I learned that &lt;code&gt;functools.wraps&lt;/code&gt; is syntactical sugar for the &lt;a href="https://docs.python.org/3/library/functools.html#functools.update_wrapper"&gt;functools.update_wrapper()&lt;/a&gt; function.&lt;/p&gt;
-&lt;p&gt;```python {.marimo hide_code="true"}
-mo.md(
-    r"""&lt;/p&gt;
-&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&amp;quot;&amp;quot;&amp;quot;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;p&gt;)&lt;/p&gt;
-&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="err"&gt;```&lt;/span&gt;&lt;span class="n"&gt;python&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;marimo&lt;/span&gt;&lt;span class="p"&gt;}&lt;/span&gt;
-&lt;span class="kn"&gt;import&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nn"&gt;marimo&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="k"&gt;as&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nn"&gt;mo&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</content>
-    <link href="https://daniel.feldroy.com/posts/til-2025-02-unwrapping-a-wrapped-function"/>
-    <summary>Another reason to use functools.wraps!</summary>
-    <category term="TIL"/>
-    <category term="python"/>
-    <contributor>
-      <name>Daniel Roy Greenfeld</name>
-      <email>daniel@feldroy.com</email>
-    </contributor>
-    <published>2025-02-21T18:00:00+00:00</published>
-  </entry>
   <entry>
     <id>https://daniel.feldroy.com/posts/til-2025-04-webbrowser-library</id>
     <title>TIL: webbrowser library</title>
@@ -764,5 +695,31 @@ git&lt;span class="w"&gt; &lt;/span&gt;remote&lt;span class="w"&gt; &lt;/span&gt
       <email>daniel@feldroy.com</email>
     </contributor>
     <published>2025-09-28T22:44:18.296914+00:00</published>
+  </entry>
+  <entry>
+    <id>https://daniel.feldroy.com/posts/til-2025-11-default-code-block-languages-for-mkdocs</id>
+    <title>TIL: Default code block languages for mkdocs</title>
+    <updated>2025-11-22T12:08:34.618632+00:00</updated>
+    <author>
+      <name>Daniel Roy Greenfeld</name>
+      <email>daniel@feldroy.com</email>
+    </author>
+    <content type="html">&lt;p&gt;When using &lt;a href="https://squidfunk.github.io/mkdocs-material/"&gt;Mkdocs with Material&lt;/a&gt; theme, you can set default languages for code blocks in your &lt;code&gt;mkdocs.yml&lt;/code&gt; configuration file. This is particularly useful for inline code examples that may not have explicit language tags.&lt;/p&gt;
+&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="nt"&gt;markdown_extensions&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+&lt;span class="w"&gt;  &lt;/span&gt;&lt;span class="p p-Indicator"&gt;-&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nt"&gt;pymdownx.highlight&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+&lt;span class="w"&gt;      &lt;/span&gt;&lt;span class="nt"&gt;default_lang&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="l l-Scalar l-Scalar-Plain"&gt;python&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;You can see what this looks like in practice with Air's API reference for forms here: &lt;a href="https://feldroy.github.io/air/api/forms/"&gt;feldroy.github.io/air/api/forms/&lt;/a&gt;. With this configuration, any code block without a specified language defaults to Python syntax highlighting, making documentation clearer and more consistent.&lt;/p&gt;</content>
+    <link href="https://daniel.feldroy.com/posts/til-2025-11-default-code-block-languages-for-mkdocs"/>
+    <summary>Really useful for making inline code examples have code highlighting.</summary>
+    <category term="TIL"/>
+    <category term="python"/>
+    <category term="markdown"/>
+    <contributor>
+      <name>Daniel Roy Greenfeld</name>
+      <email>daniel@feldroy.com</email>
+    </contributor>
+    <published>2025-11-22T12:08:34.618632+00:00</published>
   </entry>
 </feed>

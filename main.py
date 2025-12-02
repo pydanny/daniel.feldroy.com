@@ -254,6 +254,8 @@ async def posts():
 
 @app.get("/posts/{slug}")
 async def article(slug: str):
+    if slug.endswith('.html'):
+        slug = slug[:-5]
     try:
         content, metadata = get_post(slug)
     except ContentNotFound:

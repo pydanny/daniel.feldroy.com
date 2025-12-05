@@ -10,7 +10,6 @@ from dateutil import parser
 import pytz
 
 from layouts import Layout
-from mailing_list import router as mailing_list_router
 
 
 def Page404(request: air.Request, exc: Exception) -> air.AirResponse:
@@ -25,7 +24,6 @@ def Page404(request: air.Request, exc: Exception) -> air.AirResponse:
 
 
 app = air.Air(exception_handlers={404: Page404})
-app.include_router(mailing_list_router, prefix="/blarg-snorg")
 
 # Mount static files for CSS
 app.mount("/public", StaticFiles(directory="public"), name="public")

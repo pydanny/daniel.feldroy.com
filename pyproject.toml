@@ -24,6 +24,9 @@ dependencies = [
 ]
 
 [dependency-groups]
+dev = [
+    "pyrefly>=0.45.2",
+]
 test = []
 
 

@@ -92,7 +92,7 @@ def list_posts(
 
 
 @functools.lru_cache
-def get_post(slug: str) -> tuple | None:
+def get_post(slug: str) -> tuple:
     posts = list_posts(content=True)
     post = next((x for x in posts if x["slug"] == slug), None)
     if post is None:

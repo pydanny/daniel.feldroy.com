@@ -11,11 +11,7 @@ time_to_read: 2
 title: Filepicker.io and South
 ---
 
-I've heard good things about filepicker.io, which is a service that
-makes file uploading a much better experience. Unfortunately, the Django
-package for filepicker.io doesn't work with South. When I try to create
-a migration using the filepicker.io field using code like the
-following...
+I've heard good things about filepicker.io, which is a service that makes file uploading a much better experience. Unfortunately, the Django package for filepicker.io doesn't work with South. When I try to create a migration using the filepicker.io field using code like the following...
 
 ``` python
 # products/models.py
@@ -46,13 +42,11 @@ It results in this unpleasant looking response:
      ! models parser (it often broke things).
      ! To fix this, read https://south.aeracode.org/wiki/MyFieldsDontWork
 
-The last line in the error report is important. I'll repeat it to
-illustrate it more clearly:
+The last line in the error report is important. I'll repeat it to illustrate it more clearly:
 
     ! To fix this, read https://south.aeracode.org/wiki/MyFieldsDontWork
 
-Experience working on other projects has taught me I can simply add two
-lines of code to `products/models.py` and everything should just work:
+Experience working on other projects has taught me I can simply add two lines of code to `products/models.py` and everything should just work:
 
 ``` python
 # South migration rules for the FPFileField field
@@ -78,15 +72,8 @@ class Product(models.Model):
 
 Now I can create South migrations and they'll just work.
 
-Unfortunately, the problem is that for any model where I need to use
-filepicker's FPFileField I need to add those two lines of code. I
-don't like this approach, since it violates **Don't Repeat Yourself**
-(DRY).
+Unfortunately, the problem is that for any model where I need to use filepicker's FPFileField I need to add those two lines of code. I don't like this approach, since it violates **Don't Repeat Yourself** (DRY).
 
-At some point I'll demonstrate how to fix this violation of DRY with an
-easy fix. In fact, I plan submit that fix as a pull request to
-django-filepicker.
+At some point I'll demonstrate how to fix this violation of DRY with an easy fix. In fact, I plan submit that fix as a pull request to django-filepicker.
 
-**Update 2013/12/24:** django-filepicker has been patched to address
-this issue. This blog post therefore describes a historical version of
-the package.
+**Update 2013/12/24:** django-filepicker has been patched to address this issue. This blog post therefore describes a historical version of the package.

@@ -10,8 +10,7 @@ time_to_read: 1
 title: Annotated History of My Most Used Shell Commands
 ---
 
-An oldie, but a goodie. This time I annotate it with reasons as to why
-things are used so much. If you blog, post your own!
+An oldie, but a goodie. This time I annotate it with reasons as to why things are used so much. If you blog, post your own!
 
 For reference, anything after a "#" is an annotation. :
 
@@ -36,11 +35,6 @@ For reference, anything after a "#" is an annotation. :
     1 ls        # How is this not higher?
     1 ssh       # Some projects are not on PaaS.
 
-Interesting how much of my very recent shell experience is focused on
-the [book](https://feldroy.com/products/two-scoops-of-django-1-5/).
+Interesting how much of my very recent shell experience is focused on our [books](https://feldroy.com).
 
-Speaking of books, today's reading is Jeff Knupp's [Writing Idiomatic
-Python
-3.3](https://www.amazon.com/Writing-Idiomatic-Python-3-3-ebook/dp/B00B5VXMRG/ref=tmm_kin_title_0?ie=UTF8&qid=1365610132&sr=8-1&tag=ihpydanny-20)
-(Python 2.7 edition also
-[available](https://www.amazon.com/Writing-Idiomatic-Python-2-7-3-ebook/dp/B00B5KG0F8/ref=la_B00BBE1MDI_1_2_title_1_kin?ie=UTF8&qid=1365610777&sr=1-2&tag=ihpydanny-20))
+Speaking of books, today's reading is Jeff Knupp's [Writing Idiomatic Python 3.3](https://www.amazon.com/Writing-Idiomatic-Python-3-3-ebook/dp/B00B5VXMRG/ref=tmm_kin_title_0?ie=UTF8&qid=1365610132&sr=8-1&tag=ihpydanny-20) (Python 2.7 edition also [available](https://www.amazon.com/Writing-Idiomatic-Python-2-7-3-ebook/dp/B00B5KG0F8/ref=la_B00BBE1MDI_1_2_title_1_kin?ie=UTF8&qid=1365610777&sr=1-2&tag=ihpydanny-20))

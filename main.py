@@ -37,7 +37,6 @@ redirects = json.loads(pathlib.Path(f"redirects.json").read_text())
 
 # The next block of code is several date utilities
 # We need these because I've been sloppy about defining dates
-# TODO: Fix datetimes in all markdown files so this wouldn't be necessary
 def convert_dtstr_to_dt(date_str: str) -> datetime:
     """
     Convert a naive or non-naive date/datetime string to a datetime object.

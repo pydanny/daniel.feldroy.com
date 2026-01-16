@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
   <id>https://daniel.feldroy.com/</id>
   <title>Python posts by Daniel Roy Greenfeld</title>
-  <updated>2025-12-11T08:20:30.497354+00:00</updated>
+  <updated>2026-01-16T02:45:17.651757+00:00</updated>
   <author>
     <name>Daniel Roy Greenfeld</name>
     <email>daniel@feldroy.com</email>
@@ -11,62 +11,7 @@
   <link href="https://daniel.feldroy.com" rel="alternate"/>
   <generator uri="https://lkiesow.github.io/python-feedgen" version="1.0.0">python-feedgen</generator>
   <logo>https://f004.backblazeb2.com/file/daniel-feldroy-com/public/images/profile.jpg</logo>
-  <rights>All rights reserved 2025, Daniel Roy Greenfeld</rights>
-  <entry>
-    <id>https://daniel.feldroy.com/posts/2025-07-uv-run-for-testing-python-versions</id>
-    <title>uv run for running tests on versions of Python</title>
-    <updated>2025-07-20T10:08:49.687342+00:00</updated>
-    <author>
-      <name>Daniel Roy Greenfeld</name>
-      <email>daniel@feldroy.com</email>
-    </author>
-    <content type="html">&lt;p&gt;The &lt;a href="https://pypi.org/project/uv/"&gt;uv&lt;/a&gt; library is not just useful for dependency management, it also comes with a &lt;code&gt;run&lt;/code&gt; subcommand that doesn't just run Python scripts, it allows for specific Python versions and setting of dependencies within that run. Between runs it caches everything so it runs fast.&lt;/p&gt;
-&lt;p&gt;For example, if I have a FastAPI project I could run tests on it using this command:&lt;/p&gt;
-&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;uv&lt;span class="w"&gt; &lt;/span&gt;run&lt;span class="w"&gt; &lt;/span&gt;--with&lt;span class="w"&gt; &lt;/span&gt;pytest&lt;span class="w"&gt; &lt;/span&gt;--with&lt;span class="w"&gt; &lt;/span&gt;httpx&lt;span class="w"&gt; &lt;/span&gt;pytest
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;p&gt;But what if I want to test a particular version of Python? Then I simple specify the version of Python to run the test:&lt;/p&gt;
-&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;uv&lt;span class="w"&gt; &lt;/span&gt;run&lt;span class="w"&gt; &lt;/span&gt;--python&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="m"&gt;3&lt;/span&gt;.13&lt;span class="w"&gt; &lt;/span&gt;--with&lt;span class="w"&gt; &lt;/span&gt;pytest&lt;span class="w"&gt; &lt;/span&gt;--with&lt;span class="w"&gt; &lt;/span&gt;httpx&lt;span class="w"&gt; &lt;/span&gt;pytest
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;p&gt;Here's where it gets fun. I can use a &lt;code&gt;Makefile&lt;/code&gt; (or a &lt;a href="https://github.com/casey/just"&gt;justfile&lt;/a&gt;) to test on multiple Python versions.&lt;/p&gt;
-&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="nf"&gt;testall&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;&lt;span class="w"&gt;  &lt;/span&gt;&lt;span class="c"&gt;## Run all the tests for all the supported Python versions&lt;/span&gt;
-&lt;span class="w"&gt;    &lt;/span&gt;uv&lt;span class="w"&gt; &lt;/span&gt;run&lt;span class="w"&gt; &lt;/span&gt;--python&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="m"&gt;3&lt;/span&gt;.10&lt;span class="w"&gt; &lt;/span&gt;--with&lt;span class="w"&gt; &lt;/span&gt;pytest&lt;span class="w"&gt; &lt;/span&gt;--with&lt;span class="w"&gt; &lt;/span&gt;httpx&lt;span class="w"&gt; &lt;/span&gt;pytest
-&lt;span class="w"&gt;    &lt;/span&gt;uv&lt;span class="w"&gt; &lt;/span&gt;run&lt;span class="w"&gt; &lt;/span&gt;--python&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="m"&gt;3&lt;/span&gt;.11&lt;span class="w"&gt; &lt;/span&gt;--with&lt;span class="w"&gt; &lt;/span&gt;pytest&lt;span class="w"&gt; &lt;/span&gt;--with&lt;span class="w"&gt; &lt;/span&gt;httpx&lt;span class="w"&gt; &lt;/span&gt;pytest
-&lt;span class="w"&gt;    &lt;/span&gt;uv&lt;span class="w"&gt; &lt;/span&gt;run&lt;span class="w"&gt; &lt;/span&gt;--python&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="m"&gt;3&lt;/span&gt;.12&lt;span class="w"&gt; &lt;/span&gt;--with&lt;span class="w"&gt; &lt;/span&gt;pytest&lt;span class="w"&gt; &lt;/span&gt;--with&lt;span class="w"&gt; &lt;/span&gt;httpx&lt;span class="w"&gt; &lt;/span&gt;pytest
-&lt;span class="w"&gt;    &lt;/span&gt;uv&lt;span class="w"&gt; &lt;/span&gt;run&lt;span class="w"&gt; &lt;/span&gt;--python&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="m"&gt;3&lt;/span&gt;.13&lt;span class="w"&gt; &lt;/span&gt;--with&lt;span class="w"&gt; &lt;/span&gt;pytest&lt;span class="w"&gt; &lt;/span&gt;--with&lt;span class="w"&gt; &lt;/span&gt;httpx&lt;span class="w"&gt; &lt;/span&gt;pytest
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;p&gt;If you want to use &lt;code&gt;pyproject.toml&lt;/code&gt; dependency groups, switch from the &lt;code&gt;--with&lt;/code&gt; flag to the &lt;code&gt;-extra&lt;/code&gt; flag. For example, if your testing dependencies are in a &lt;code&gt;test&lt;/code&gt; group:&lt;/p&gt;
-&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="k"&gt;[project.optional-dependencies]&lt;/span&gt;
-&lt;span class="n"&gt;test&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;
-&lt;span class="w"&gt;    &lt;/span&gt;&lt;span class="c1"&gt;# For the test client&lt;/span&gt;
-&lt;span class="w"&gt;    &lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;httpx&amp;gt;=0.28.1&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="w"&gt;   &lt;/span&gt;
-&lt;span class="w"&gt;    &lt;/span&gt;&lt;span class="c1"&gt;# Test runner&lt;/span&gt;
-&lt;span class="w"&gt;    &lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;pytest&amp;gt;=8.4.0&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
-&lt;span class="p"&gt;]&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;p&gt;You could then run tests across multiple versions of Python thus:&lt;/p&gt;
-&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="n"&gt;testall&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;  &lt;span class="c1"&gt;## Run all the tests for all the supported Python versions&lt;/span&gt;
-    &lt;span class="n"&gt;uv&lt;/span&gt; &lt;span class="n"&gt;run&lt;/span&gt; &lt;span class="o"&gt;--&lt;/span&gt;&lt;span class="n"&gt;python&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="mf"&gt;3.10&lt;/span&gt; &lt;span class="o"&gt;--&lt;/span&gt;&lt;span class="n"&gt;extra&lt;/span&gt; &lt;span class="n"&gt;test&lt;/span&gt; &lt;span class="n"&gt;pytest&lt;/span&gt;
-    &lt;span class="n"&gt;uv&lt;/span&gt; &lt;span class="n"&gt;run&lt;/span&gt; &lt;span class="o"&gt;--&lt;/span&gt;&lt;span class="n"&gt;python&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="mf"&gt;3.11&lt;/span&gt; &lt;span class="o"&gt;--&lt;/span&gt;&lt;span class="n"&gt;extra&lt;/span&gt; &lt;span class="n"&gt;test&lt;/span&gt; &lt;span class="n"&gt;pytest&lt;/span&gt;
-    &lt;span class="n"&gt;uv&lt;/span&gt; &lt;span class="n"&gt;run&lt;/span&gt; &lt;span class="o"&gt;--&lt;/span&gt;&lt;span class="n"&gt;python&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="mf"&gt;3.12&lt;/span&gt; &lt;span class="o"&gt;--&lt;/span&gt;&lt;span class="n"&gt;extra&lt;/span&gt; &lt;span class="n"&gt;test&lt;/span&gt; &lt;span class="n"&gt;pytest&lt;/span&gt;
-    &lt;span class="n"&gt;uv&lt;/span&gt; &lt;span class="n"&gt;run&lt;/span&gt; &lt;span class="o"&gt;--&lt;/span&gt;&lt;span class="n"&gt;python&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="mf"&gt;3.13&lt;/span&gt; &lt;span class="o"&gt;--&lt;/span&gt;&lt;span class="n"&gt;extra&lt;/span&gt; &lt;span class="n"&gt;test&lt;/span&gt; &lt;span class="n"&gt;pytest&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;p&gt;And there you have it, a simple replacement for Nox or Tox. Of course those tools have lots more features that some users may care about. However, for my needs this works great and eliminates a dependency+configuration from a number of my projects.&lt;/p&gt;
-&lt;p&gt;Thanks to Audrey Roy Greenfeld for pairing with me on getting this to work.&lt;/p&gt;</content>
-    <link href="https://daniel.feldroy.com/posts/2025-07-uv-run-for-testing-python-versions"/>
-    <summary>Using uv run with make to replace tox or nox for testing multiple versions of Python locally.</summary>
-    <category term="python"/>
-    <category term="testing"/>
-    <contributor>
-      <name>Daniel Roy Greenfeld</name>
-      <email>daniel@feldroy.com</email>
-    </contributor>
-    <published>2025-07-20T10:08:49.687342+00:00</published>
-  </entry>
+  <rights>All rights reserved 2026, Daniel Roy Greenfeld</rights>
   <entry>
     <id>https://daniel.feldroy.com/posts/til-2025-07-single-source-version-package-builds-with-uv</id>
     <title>TIL: Single source version package builds with uv</title>
@@ -1033,5 +978,53 @@ Available&lt;span class="w"&gt; &lt;/span&gt;recipes:
       <email>daniel@feldroy.com</email>
     </contributor>
     <published>2025-12-11T08:25:02.790731+00:00</published>
+  </entry>
+  <entry>
+    <id>https://daniel.feldroy.com/posts/2026-01-downloading-everything</id>
+    <title>Writing tools to download everything</title>
+    <updated>2026-01-16T11:22:35.582258+00:00</updated>
+    <author>
+      <name>Daniel Roy Greenfeld</name>
+      <email>daniel@feldroy.com</email>
+    </author>
+    <content type="html">&lt;p&gt;Over the years, &lt;a href="https://audrey.feldroy.com"&gt;Audrey&lt;/a&gt; and I have accumulated photos across a variety of services. Flickr, SmugMug, and others all have chunks of our memories sitting on their servers. Some of these services we haven't touched in years, others we pay for but rarely use. It was time to bring everything home.&lt;/p&gt;
+&lt;h2 id="why-bother"&gt;Why Bother?&lt;/h2&gt;
+&lt;p&gt;Two reasons pushed me to finally tackle this.&lt;/p&gt;
+&lt;p&gt;First, money. Subscriptions add up. Paying for storage on services we barely use felt wasteful. As a backup even more so because there are services that are cheaper and easier to use for that purpose, like Backblaze.&lt;/p&gt;
+&lt;p&gt;Second, simplicity. Having photos scattered across multiple services means hunting through different interfaces when looking for a specific memory. Consolidating everything into one place makes our photo library actually usable.&lt;/p&gt;
+&lt;h2 id="using-claude-to-write-a-downloader"&gt;Using Claude to Write a Downloader&lt;/h2&gt;
+&lt;p&gt;I decided to start with SmugMug since that had the largest collection. I could have written this script myself. I've done plenty of API work over the years. But I'm busy, and this felt like a perfect use case for AI assistance.&lt;/p&gt;
+&lt;p&gt;My approach was straightforward:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Wrote a specification&lt;/strong&gt; for a Smugmug downloader. I linked to the docs for the service then told it to make a CLI for downloading things off that service. For the CLI I insist on &lt;code&gt;typer&lt;/code&gt; but otherwise I didn't specify dependencies.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Told Claude to generate code&lt;/strong&gt; based on the spec. I provided the specification and let Claude produce a working Python script.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Tested&lt;/strong&gt; by running the scripts against real data. I started with small batches to verify the downloads worked correctly. Claude got everything right when iy came to downloads on the first go, which was impressive.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Adjust for volume&lt;/strong&gt;. We had over 5,000 files on Smugmug. Downloading everything at once took longer than I expected. I asked Claude to track files so if the script was interrupted it could resume where it left off. Claude kept messing this up, and after the 5th or 6th attempt I gave up trying to use Claude to write this part.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id="i-wrote-some-code"&gt;I Wrote Some Code&lt;/h2&gt;
+&lt;p&gt;I wrote a super simple image ID cache using a plaintext file for storage. It was simple, effective, and worked on the first go. Sometimes it's easier to just write the code yourself than try to get an AI to do it for you.&lt;/p&gt;
+&lt;h2 id="the-smugmug-downloader"&gt;The SmugMug Downloader&lt;/h2&gt;
+&lt;p&gt;The project is here at &lt;a href="https://github.com/pydanny/smugmug-downloader"&gt;SmugMug downloader&lt;/a&gt;. It authenticates, enumerates all albums, and downloads every photo while preserving the album structure. Nothing fancy, just practical.&lt;/p&gt;
+&lt;p&gt;I'll be working on the Flickr downloader soon, following the same pattern. There's a few other services on the list too; I'm scanning our bank statements to see what else we have accounts on that we've let linger for too long.&lt;/p&gt;
+&lt;h2 id="was-it-worth-it"&gt;Was It Worth It?&lt;/h2&gt;
+&lt;p&gt;Absolutely. What would have taken me a day of focused coding took an hour of iterating with Claude. Our photos are off Smugmug and we're canceling a subscription we no longer need. I think this is what they mean by "vibe engineering".&lt;/p&gt;
+&lt;h2 id="summary"&gt;Summary&lt;/h2&gt;
+&lt;p&gt;These are files which in some cases we thought we lost. Or had forgotten. So the emotional and financial investment in a vibe engineered effort was low. If this were something that was touching our finances or wedding/baby photos I would have been much more cautious. But for now, this is a fun experiment in using AI to handle the mundane parts of coding so I can focus on more critical tasks.&lt;/p&gt;</content>
+    <link href="https://daniel.feldroy.com/posts/2026-01-downloading-everything"/>
+    <summary>Using AI to help download photos so we can consolidate all our images into one place.</summary>
+    <category term="python"/>
+    <contributor>
+      <name>Daniel Roy Greenfeld</name>
+      <email>daniel@feldroy.com</email>
+    </contributor>
+    <published>2026-01-16T11:22:35.582258+00:00</published>
   </entry>
 </feed>

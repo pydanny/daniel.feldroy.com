@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
   <id>https://daniel.feldroy.com/</id>
   <title>Til posts by Daniel Roy Greenfeld</title>
-  <updated>2025-12-11T08:20:30.524875+00:00</updated>
+  <updated>2026-01-16T02:45:17.680663+00:00</updated>
   <author>
     <name>Daniel Roy Greenfeld</name>
     <email>daniel@feldroy.com</email>
@@ -11,7 +11,7 @@
   <link href="https://daniel.feldroy.com" rel="alternate"/>
   <generator uri="https://lkiesow.github.io/python-feedgen" version="1.0.0">python-feedgen</generator>
   <logo>https://f004.backblazeb2.com/file/daniel-feldroy-com/public/images/profile.jpg</logo>
-  <rights>All rights reserved 2025, Daniel Roy Greenfeld</rights>
+  <rights>All rights reserved 2026, Daniel Roy Greenfeld</rights>
   <entry>
     <id>https://daniel.feldroy.com/posts/til-2025-04-webbrowser-library</id>
     <title>TIL: webbrowser library</title>

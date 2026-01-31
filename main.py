@@ -184,7 +184,7 @@ async def index():
             description=x.get("description", ""),
         )
         for x in all_posts
-        if "TIL" not in x.get("tags")
+        if "TIL" not in x.get("tags", "")
     ]
     popular = [
         BlogPostPreview(

@@ -37,7 +37,7 @@ redirects = json.loads(pathlib.Path(f"redirects.json").read_text())
 
 # The next block of code is several date utilities
 # We need these because I've been sloppy about defining dates
-def convert_dtstr_to_dt(date_str: str) -> datetime:
+def convert_dtstr_to_dt(date_str: str) -> str:
     """
     Convert a naive or non-naive date/datetime string to a datetime object.
     Naive datetime strings are assumed to be in GMT (UTC) timezone.
@@ -47,7 +47,7 @@ def convert_dtstr_to_dt(date_str: str) -> datetime:
         if dt.tzinfo is None:
             # If the datetime object is naive, set it to GMT (UTC)
             dt = dt.replace(tzinfo=pytz.UTC)
-        return format_datetime(dt)
+        return str(format_datetime(dt))
     except (ValueError, TypeError) as e:
         return ""
 
@@ -201,7 +201,7 @@ async def index():
             title=x["title"], slug=x["slug"], timestamp=x["date"], description=""
         )
         for x in all_posts
-        if "TIL" in x.get("tags")
+        if "TIL" in x.get("tags", "")
     ]
     return Layout(
         air.Title("Daniel Roy Greenfeld"),

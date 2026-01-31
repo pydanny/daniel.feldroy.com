@@ -22,14 +22,14 @@ dependencies = [
     "pyyaml>=6.0.2",
     "sentry-sdk[fastapi]>=2.34.1",
     "sqlalchemy>=2.0.43",
-    "ty>=0.0.5",
 ]
 
 [dependency-groups]
 dev = [
-    "pyrefly>=0.45.2",
+    "ty>=0.0.14",
 ]
 test = []
+ty = []
 
 
 

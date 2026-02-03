@@ -10,6 +10,7 @@ tags:
 - Philippines
 - python
 title: We moved to Manila!
+image: /public/images/shadowfall_abyssia_square.png
 ---
 
 Last year we relocated to [Metro Manila](https://en.wikipedia.org/wiki/Manila), [Philippines](https://en.wikipedia.org/wiki/Philippines) for the foreseeable future. [Audrey](https://audrey.feldroy.com/)'s mother is from here, and we wanted our daughter Uma to have the opportunity to spend time with her extended family and experience another line of her heritage.
@@ -28,7 +29,7 @@ We loved living in London, and have many good friends there. I really enjoyed wo
 
 ## What about your daughter?
 
-Uma loves Manila and is in second grade at an international school (CIE Makati) here in walking distance of our residence. We had looked into getting her into a local public school with a notable science program, but the paperwork required too much lead time. We do like the small class sizes at her current school, and how they accomodate the different learning speeds of students. She will probably stay there for a while.
+Uma loves Manila and is in second grade at an international school here in walking distance of our residence. We had looked into getting her into a local public school with a notable science program, but the paperwork required too much lead time. We do like the small class sizes at her current school, and how they accomodate the different learning speeds of students. She will probably stay there for a while.
 
 For extra curricular activities she's enjoying Brazilian Jiu-Jitsu, climbing, yoga, and swimming.
 

@@ -54,7 +54,7 @@ Better late than never! Here's my annual recap!
 ## 2026 Resolutions
 
 - ❤️ Continue to adore my soul mate, Audrey Roy Greenfeld
-- 👩‍👧 Be there for my daughter Uma Roy Greenfeld in her 7th year on Planet Earth. Continue to contribute to her activities.
+- 👩‍👧 Be there for my daughter Uma Roy Greenfeld in her 7th year on Planet Earth. Continue to contribute to her activities
 - 📝 Write at least as many blog posts as I did last year (37)
 - 🥋 Continue my fitness journey with BJJ, weights, yoga, climbing, and other healthy activities
 - 📚 Write fiction again, maybe publish it

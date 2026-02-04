@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
   <id>https://daniel.feldroy.com/</id>
   <title>Inside the head of Daniel Roy Greenfeld</title>
-  <updated>2026-02-03T00:55:20.041689+00:00</updated>
+  <updated>2026-02-04T03:39:40.178291+00:00</updated>
   <author>
     <name>Daniel Roy Greenfeld</name>
     <email>daniel@feldroy.com</email>
@@ -12,38 +12,6 @@
   <generator uri="https://lkiesow.github.io/python-feedgen" version="1.0.0">python-feedgen</generator>
   <logo>https://f004.backblazeb2.com/file/daniel-feldroy-com/public/images/profile.jpg</logo>
   <rights>All rights reserved 2026, Daniel Roy Greenfeld</rights>
-  <entry>
-    <id>https://daniel.feldroy.com/posts/til-2025-08-single-source-version-package-builds-with-uv-redux</id>
-    <title>TIL: Single source version package builds with uv (redux)</title>
-    <updated>2025-08-22T02:20:08.473528+00:00</updated>
-    <author>
-      <name>Daniel Roy Greenfeld</name>
-      <email>daniel@feldroy.com</email>
-    </author>
-    <content type="html">&lt;p&gt;Not that long ago I wrote about &lt;a href="https://daniel.feldroy.com/posts/til-2025-07-single-source-version-package-builds-with-uv"&gt;how to use UV to build packages with a single source of truth for the version number&lt;/a&gt;. Since then, my friend &lt;a href="https://adamj.eu/"&gt;Adam Johnson&lt;/a&gt; has pointed out that I could be doing it better. Here's how &lt;a href="https://adamj.eu/tech/2025/07/30/python-check-package-version-importlib-metadata-version/"&gt;he demonstrated&lt;/a&gt; I should be doing it instead.&lt;/p&gt;
-&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="c1"&gt;# pyproject.toml&lt;/span&gt;
-&lt;span class="k"&gt;[project]&lt;/span&gt;
-&lt;span class="n"&gt;name&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;air&amp;quot;&lt;/span&gt;
-&lt;span class="n"&gt;version&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;0.25.0&amp;quot;&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="c1"&gt;# This is the source of truth for the version number&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;p&gt;The way to check programmatically the version number is to rely not on someone setting &lt;code&gt;__version__&lt;/code&gt; in the code, but rather to use the following technique:&lt;/p&gt;
-&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="kn"&gt;from&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nn"&gt;importlib.metadata&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="n"&gt;version&lt;/span&gt;
-&lt;span class="n"&gt;version&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;version&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;air&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-&lt;span class="nb"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;version&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;  &lt;span class="c1"&gt;# This will print &amp;quot;0.25.0&amp;quot;&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;p&gt;Thanks for the tip, Adam! This is a much cleaner and tool friendly way to ensure that the version number is consistent across your package without having to manually update it in multiple places.&lt;/p&gt;</content>
-    <link href="https://daniel.feldroy.com/posts/til-2025-08-single-source-version-package-builds-with-uv-redux"/>
-    <summary>Tired of updating the version in multiple places before publishing a package update? Here's how Adam Johnson told me I should be doing it.</summary>
-    <category term="TIL"/>
-    <category term="python"/>
-    <contributor>
-      <name>Daniel Roy Greenfeld</name>
-      <email>daniel@feldroy.com</email>
-    </contributor>
-    <published>2025-08-22T02:20:08.473528+00:00</published>
-  </entry>
   <entry>
     <id>https://daniel.feldroy.com/posts/til-2025-08-using-sqlmodel-asynchronously-with-fastapi-and-air-with-postgresql</id>
     <title>TIL: Using SQLModel Asynchronously with FastAPI (and Air) with PostgreSQL</title>
@@ -985,5 +953,80 @@ Available&lt;span class="w"&gt; &lt;/span&gt;recipes:
       <email>daniel@feldroy.com</email>
     </contributor>
     <published>2026-02-03T06:41:22.863302+00:00</published>
+  </entry>
+  <entry>
+    <id>https://daniel.feldroy.com/posts/2026-01-recap-resolutions</id>
+    <title>Recap of 2025 and Resolutions for 2026</title>
+    <updated>2026-02-04T04:00:29.326317+00:00</updated>
+    <author>
+      <name>Daniel Roy Greenfeld</name>
+      <email>daniel@feldroy.com</email>
+    </author>
+    <content type="html">&lt;p&gt;Better late than never! Here's my annual recap!&lt;/p&gt;
+&lt;h2 id="recap-of-2025"&gt;Recap of 2025&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;We moved from London, UK to &lt;a href="https://daniel.feldroy.com/posts/2026-02-we-moved-to-manila"&gt;Manila, Philippines&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Spent another year with my soul mate, Audrey. Spent time together doing fun things like coding, cooking, traveling, yoga, and raising our daughter together&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://daniel.feldroy.com/tags/uma"&gt;Uma&lt;/a&gt; spent her 6th year on Planet Earth. She's really growing, spent the year focusing on school, goofy kid play, Brazilian Jiu-Jitsu, swimming, engineering, and science. Working on science kits and activities with her is one of my greatest joys. I also became a coach at her BJJ school; my blue belt helps validate my role there. She's quite the character and we adore her&lt;/li&gt;
+&lt;li&gt;Suffered a serious back injury from some bad weight lifting that had me bedridden for the first two months of the year. What was effective for my recovery included acupuncture, healthy diet, stretching, mobility exercises, living in a warm country, and Brazilian Jiu-Jitsu (BJJ). These days I'm much more careful about partners and restrict my sparring to just 2-3 rolls per session&lt;/li&gt;
+&lt;li&gt;Started doing a lot more gi BJJ. London is very much a city of no-gi practitioners, but in Manila most schools focus on gi. It's funny when you think about the uniform preferences of each since, since the gi makes more sense in the cooler weather of London compared to the tropical heat of Manila&lt;/li&gt;
+&lt;li&gt;Spent much of the year in the Philippines. I appreciate the people and culture - individuals in general are friendly, hard-working, pragmatic, and trustworthy. Watching the nation improve (reduced poverty, improved infrastructure) since I first visited in 2012 is inspiring&lt;/li&gt;
+&lt;li&gt;Left an AI lab and have been focusing on startups and FOSS&lt;/li&gt;
+&lt;li&gt;Started the &lt;a href="https://airwebframework.org/"&gt;Air web framework&lt;/a&gt; with &lt;a href="https://audrey.feldroy.com/"&gt;Audrey&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://github.com/pydanny/daniel.feldroy.com"&gt;Rewrote this blog in Air&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://pycon-davao.durianpy.org/"&gt;Spoke at PyCon Davao 2025&lt;/a&gt; and various meetups&lt;/li&gt;
+&lt;li&gt;Snorkeled for the first time in nearly 20 years. I did it in Mexico back in 2006, and this time in the Philippines in Batangas. It was amazing to see the coral and fish life up close again&lt;/li&gt;
+&lt;li&gt;Travelled to new places:&lt;ul&gt;
+&lt;li&gt;🚙 Batangas, PH&lt;/li&gt;
+&lt;li&gt;✈️ Davao, PH&lt;/li&gt;
+&lt;li&gt;✈️ Denver, CO&lt;/li&gt;
+&lt;li&gt;✈️ Melbourne, AU&lt;/li&gt;
+&lt;li&gt;🚙 Tagaytay, PH&lt;/li&gt;
+&lt;li&gt;✈️ Taipei, TW    &lt;/li&gt;
+&lt;li&gt;✈️ Tokyo, JP&lt;/li&gt;
+&lt;li&gt;🚄 Yokohama, JP&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id="2025-resolutions-completed"&gt;2025 Resolutions Completed&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;✔️ Adore my soul mate, Audrey Roy Greenfeld&lt;/li&gt;
+&lt;li&gt;✔️ Be there for my daughter Uma Roy Greenfeld in her 6th year on Planet Earth&lt;/li&gt;
+&lt;li&gt;✖️ Beat last year's number of blog posts&lt;/li&gt;
+&lt;li&gt;✔️ Continue my fitness journey with BJJ, weights, cycling, walking, and other healthy activities&lt;/li&gt;
+&lt;li&gt;✖️ Write fiction again, maybe publish it&lt;/li&gt;
+&lt;li&gt;✔️ Continue to have a healthy work/life balance&lt;/li&gt;
+&lt;li&gt;✔️ Travel to yet more new places, preferably by train or other carbon-efficient methods. Unfortunately the geography of Asia and limited mass transit options made staying out of airplanes difficult. I wish ocean liners were still a thing&lt;/li&gt;
+&lt;li&gt;✔️ Be a speaker in at least one conference&lt;/li&gt;
+&lt;li&gt;✔️ Change my career from being a backend developer to that of an ML/AI specialist. I did this but it wasn't as exciting as I thought it would be&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id="2026-resolutions"&gt;2026 Resolutions&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;❤️ Continue to adore my soul mate, Audrey Roy Greenfeld&lt;/li&gt;
+&lt;li&gt;👩‍👧 Be there for my daughter Uma Roy Greenfeld in her 7th year on Planet Earth. Continue to contribute to her activities.&lt;/li&gt;
+&lt;li&gt;📝 Write at least as many blog posts as I did last year (37)&lt;/li&gt;
+&lt;li&gt;🥋 Continue my fitness journey with BJJ, weights, yoga, climbing, and other healthy activities&lt;/li&gt;
+&lt;li&gt;📚 Write fiction again, maybe publish it&lt;/li&gt;
+&lt;li&gt;⚖️ Continue to have a healthy work/life balance&lt;/li&gt;
+&lt;li&gt;🌍 Travel to yet more new places, preferably by train or other carbon-efficient methods&lt;/li&gt;
+&lt;li&gt;🎤 Be a speaker in at least one conference&lt;/li&gt;
+&lt;li&gt;🤖 Stay focused on research rather than building product. I'm much more interested in exploration&lt;/li&gt;
+&lt;li&gt;💪 Avoid injury and maintain my health so I can be there for Audrey and Uma for many years to come&lt;/li&gt;
+&lt;li&gt;🤿 Snorkle again. Nature is amazing&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;a href="/posts/2026-01-recap-resolutions"&gt;&lt;img src="/public/images/2025-2026-recap.png" height="25%" width="25%" alt="Me and Uma running together into the future." style="text-align: center;" /&gt;&lt;/a&gt;&lt;/p&gt;</content>
+    <link href="https://daniel.feldroy.com/posts/2026-01-recap-resolutions"/>
+    <summary>Another year in orbit around a star.</summary>
+    <category term="family"/>
+    <category term="audrey"/>
+    <category term="uma"/>
+    <category term="resolutions"/>
+    <category term="pycon"/>
+    <category term="travel"/>
+    <contributor>
+      <name>Daniel Roy Greenfeld</name>
+      <email>daniel@feldroy.com</email>
+    </contributor>
+    <published>2026-02-04T04:00:29.326317+00:00</published>
   </entry>
 </feed>

@@ -1,6 +1,6 @@
 ---
 date: '2026-02-12T16:29:43.465871+00:00'
-description: On January 16th, 2026 I suffered a a significant concussion.
+description: On January 16th, 2026 I suffered a a significant concussion and I'm still recovering.
 published: true
 tags:
   - health

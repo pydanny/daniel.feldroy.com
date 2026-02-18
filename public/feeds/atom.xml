@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
   <id>https://daniel.feldroy.com/</id>
   <title>Inside the head of Daniel Roy Greenfeld</title>
-  <updated>2026-02-12T01:45:29.717297+00:00</updated>
+  <updated>2026-02-18T06:06:13.051216+00:00</updated>
   <author>
     <name>Daniel Roy Greenfeld</name>
     <email>daniel@feldroy.com</email>
@@ -12,43 +12,6 @@
   <generator uri="https://lkiesow.github.io/python-feedgen" version="1.0.0">python-feedgen</generator>
   <logo>https://f004.backblazeb2.com/file/daniel-feldroy-com/public/images/profile.jpg</logo>
   <rights>All rights reserved 2026, Daniel Roy Greenfeld</rights>
-  <entry>
-    <id>https://daniel.feldroy.com/posts/til-2025-09-setting-environment-variables-for-pytest</id>
-    <title>TIL: Setting environment variables for pytest</title>
-    <updated>2025-09-02T02:29:33.084710+00:00</updated>
-    <author>
-      <name>Daniel Roy Greenfeld</name>
-      <email>daniel@feldroy.com</email>
-    </author>
-    <content type="html">&lt;p&gt;When writing tests in pytest, often there's a need to set environment variables for your tests. Instead of modifying &lt;code&gt;os.environ&lt;/code&gt; directly, which can lead to side effects and make tests harder to manage, here's how to do it with the &lt;a href="https://pypi.org/project/pytest-env/"&gt;pytest-env&lt;/a&gt; package.&lt;/p&gt;
-&lt;p&gt;First, install the package. &lt;/p&gt;
-&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;pip&lt;span class="w"&gt; &lt;/span&gt;install&lt;span class="w"&gt; &lt;/span&gt;pytest-env&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="c1"&gt;# classic but works great&lt;/span&gt;
-uv&lt;span class="w"&gt; &lt;/span&gt;add&lt;span class="w"&gt; &lt;/span&gt;pytest-env&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="c1"&gt;# if you&amp;#39;re one of us cool kids using uv&lt;/span&gt;
-uv&lt;span class="w"&gt; &lt;/span&gt;add&lt;span class="w"&gt; &lt;/span&gt;pytest-env&lt;span class="w"&gt; &lt;/span&gt;--group&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nb"&gt;test&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="c1"&gt;# if you use a specific test group of dependencies&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;p&gt;A lot of people use &lt;code&gt;pytest.ini&lt;/code&gt; to configure pytest, but I prefer using &lt;code&gt;pyproject.toml&lt;/code&gt; for a more modern approach. Here's how you can set environment variables in &lt;code&gt;pyproject.toml&lt;/code&gt;:&lt;/p&gt;
-&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="k"&gt;[tool.pytest_env]&lt;/span&gt;
-&lt;span class="c1"&gt;# Test value for the SUPER_SECRET_KEY environment variable&lt;/span&gt;
-&lt;span class="n"&gt;SUPER_SECRET_KEY&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;ABC123&amp;quot;&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;p&gt;Then run your tests just like you would normally do, and now the environment variable will be picked up by whatever test or code is looking for it. That's correct, you don't need to do any further configuration.&lt;/p&gt;
-&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;pytest&lt;span class="w"&gt; &lt;/span&gt;.
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;p&gt;Since a lot of API SDK libraries use environment variables for configuration, this is a great way to ensure your tests run in a controlled environment. Either with mock replies or against a test instance of the service.&lt;/p&gt;</content>
-    <link href="https://daniel.feldroy.com/posts/til-2025-09-setting-environment-variables-for-pytest"/>
-    <summary>An easier way of doing it then modifying os.environ</summary>
-    <category term="python"/>
-    <category term="TIL"/>
-    <category term="testing"/>
-    <contributor>
-      <name>Daniel Roy Greenfeld</name>
-      <email>daniel@feldroy.com</email>
-    </contributor>
-    <published>2025-09-02T02:29:33.084710+00:00</published>
-  </entry>
   <entry>
     <id>https://daniel.feldroy.com/posts/til-2025-09-merging-two-git-projects</id>
     <title>TIL: Merging two git projects</title>
@@ -845,10 +808,58 @@ Available&lt;span class="w"&gt; &lt;/span&gt;recipes:
     <category term="family"/>
     <category term="uma"/>
     <category term="audrey"/>
+    <category term="concussion"/>
     <contributor>
       <name>Daniel Roy Greenfeld</name>
       <email>daniel@feldroy.com</email>
     </contributor>
     <published>2026-02-12T16:29:43.465871+00:00</published>
+  </entry>
+  <entry>
+    <id>https://daniel.feldroy.com/posts/2026-02-concussion-symptoms</id>
+    <title>Concussion Symptoms</title>
+    <updated>2026-02-18T06:29:43.465871+00:00</updated>
+    <author>
+      <name>Daniel Roy Greenfeld</name>
+      <email>daniel@feldroy.com</email>
+    </author>
+    <content type="html">&lt;p&gt;It's been just over a month since I got injured. These days I usually wake up clear headed and with no symptoms. I can go about my day and do activities, but I must avoid triggers. Unfortunately the triggers ruin me until I get several hours of rest.&lt;/p&gt;
+&lt;h2 id="triggers"&gt;Triggers&lt;/h2&gt;
+&lt;p&gt;Slow triggers taking hours to cause symptoms:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Crowds&lt;/li&gt;
+&lt;li&gt;Looking at moving traffic&lt;/li&gt;
+&lt;li&gt;Being in a car&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Medium triggers that take effect in 10-30 minutes:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Deep thought like when writing code or working with LLMs (I think hard about prompts and validation)&lt;/li&gt;
+&lt;li&gt;Stress or excitement&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Fast triggers that take effect in seconds:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Context switching when in deep thought&lt;/li&gt;
+&lt;li&gt;Large blocks of geometric shapes like those found in tall modern buildings&lt;/li&gt;
+&lt;li&gt;Very fine print on paper&lt;/li&gt;
+&lt;li&gt;Keeping my eyes on a point and moving my head around quickly (vestibulo-ocular reflex mismatch)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id="symptoms"&gt;Symptoms&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Brain fog&lt;/li&gt;
+&lt;li&gt;Fatigue&lt;/li&gt;
+&lt;li&gt;Headache (usually in the front right of my head)&lt;/li&gt;
+&lt;li&gt;Dizziness (but no loss of balance)&lt;/li&gt;
+&lt;li&gt;Straight lines become very prominent and distracting&lt;/li&gt;
+&lt;li&gt;Memory loss (I'm aware that I am having trouble tracking dates, and my wife and daughter both say I'm more forgetful than usual)&lt;/li&gt;
+&lt;/ul&gt;</content>
+    <link href="https://daniel.feldroy.com/posts/2026-02-concussion-symptoms"/>
+    <summary>Documenting how the head injury incurred on January 16, 2026 continues to affected me one month later.</summary>
+    <category term="concussion"/>
+    <category term="health"/>
+    <contributor>
+      <name>Daniel Roy Greenfeld</name>
+      <email>daniel@feldroy.com</email>
+    </contributor>
+    <published>2026-02-18T06:29:43.465871+00:00</published>
   </entry>
 </feed>

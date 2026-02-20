@@ -561,7 +561,7 @@ async def fitness():
 async def writing_stats():
     years = collections.defaultdict(int)
     for post in list_posts():
-        years[post["date"][:4]] += 1
+        years[post['attributes']["date"][:4]] += 1
     data = [
         {
             "x": list(map(int, years.keys())),

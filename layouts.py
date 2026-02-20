@@ -56,7 +56,6 @@ def Layout(
                     href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release/build/styles/atom-one-light.css",
                     media="(prefers-color-scheme: light)",
                 ),
-                air.Script(src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"),
                 air.Script(
                     src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"
                 ),
@@ -72,8 +71,6 @@ def Layout(
                 air.Script(
                     src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release/build/languages/css.min.js"
                 ),
-                # air.Script(src="/public/render.js"),
-                air.Script(pathlib.Path("public/render.js").read_text()),
                 air.Link(rel="stylesheet", href="/public/style.css", type="text/css"),
                 *air.layouts.filter_head_tags(children),
             ),

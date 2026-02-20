@@ -8,6 +8,7 @@ from fastapi.responses import Response
 from fastapi import HTTPException
 from dateutil import parser
 import pytz
+from rich import print
 
 from layouts import Layout
 
@@ -68,7 +69,9 @@ class ContentNotFound(Exception):
 # The following functions are three content loading. They are cached in
 # memory to boost the speed of the site. In production at a minumum the
 # app is restarted every time the project is deployed.
-@functools.lru_cache
+from frontmatter import Frontmatter
+
+@functools.cache
 def list_posts(
     published: bool = True, posts_dirname="posts", content=False
 ) -> list[dict]:
@@ -76,18 +79,15 @@ def list_posts(
     Loads all the posts and their frontmatter.
     Note: Could use pathlib better
     """
-    posts: list[dict] = []
-    for post in pathlib.Path(".").glob(f"{posts_dirname}/**/*.md"):
-        raw: str = post.read_text().split("---")[1]
-        data: dict = yaml.safe_load(raw)
-        data["slug"] = post.stem
-        data["class_"] = "marked"
-        if content:
-            data["content"] = "\n".join(post.read_text().split("---")[2:])
-        posts.append(data)
+    articles: list[dict] = []
+    for path in pathlib.Path(".").glob(f"{posts_dirname}/**/*.md"):
+        article = Frontmatter.read_file(path)
+        article["slug"] = path.stem
+        articles.append(article)
 
-    posts.sort(key=lambda x: x["date"], reverse=True)
-    return [x for x in filter(lambda x: x["published"] is published, posts)]
+    # articles = [Frontmatter.read_file(path) for path in pathlib.Path(".").glob(f"{posts_dirname}/**/*.md")]
+    articles = sorted(articles, key=lambda x: x["attributes"]["date"], reverse=True)
+    return [x for x in filter(lambda x: x["attributes"]["published"] is published, articles)]
 
 
 @functools.lru_cache
@@ -96,20 +96,21 @@ def get_post(slug: str) -> tuple:
     post = next((x for x in posts if x["slug"] == slug), None)
     if post is None:
         raise ContentNotFound
-    return (post["content"], post)
+    return post
 
 
 @functools.lru_cache
 def list_tags() -> dict[str, int]:
     unsorted_tags = {}
     for post in list_posts():
-        page_tags = post.get("tags", [])
+        page_tags = post['attributes'].get("tags", [])
         for tag in page_tags:
             if tag in unsorted_tags:
                 unsorted_tags[tag] += 1
             else:
                 unsorted_tags[tag] = 1
 
+    print(post)
     tags: dict = collections.OrderedDict(
         sorted(unsorted_tags.items(), key=lambda x: x[1], reverse=True)
     )
@@ -117,7 +118,6 @@ def list_tags() -> dict[str, int]:
 
 
 def TagLink(slug: str):
-    # return air.Span(air.A(slug, href=f"/tags/{slug}"), " ")
     return air.Span(air.A(slug, href=tag.url(slug=slug)), " ")
 
 
@@ -149,27 +149,25 @@ def TILPreview(title: str, slug: str, timestamp: str, description: str):
 def MarkdownPage(slug: str):
     """Renders a non-sequential markdown file"""
     try:
-        text = pathlib.Path(f"pages/{slug}.md").read_text()
+        content = Frontmatter.read_file(f"pages/{slug}.md")
     except FileNotFoundError:
         raise HTTPException(status_code=404)
-    content = "".join(text.split("---")[2:])
-    metadata = yaml.safe_load(text.split("---")[1])
-    date = metadata.get("date", "")
+    date = content['attributes'].get("date", "")
     return Layout(
-        air.Title(metadata.get("title", slug)),
+        air.Title(content['attributes'].get("title", slug)),
         air.Section(
-            air.H1(metadata.get("title", "")),
+            air.H1(content['attributes'].get("title", "")),
             air.P(
-                metadata.get("author", ""),
+                content['attributes'].get("author", ""),
                 air.Br(),
                 air.Small(air.Time(date)),
             ),
-            air.Div(content, class_="marked"),
+            air.Div(content['body'], class_="marked"),
         ),
-        title=metadata.get("title", slug),
-        description=metadata.get("description", "slug"),
+        title=content['attributes'].get("title", slug),
+        description=content['attributes'].get("description", "slug"),
         url=f"https://daniel.feldroy.com/{slug}",
-        image=metadata.get("image", default_social_image),
+        image=content['attributes'].get("image", default_social_image),
     )
 
 
@@ -178,30 +176,30 @@ async def index():
     all_posts = list_posts()
     most_posts = [
         BlogPostPreview(
-            title=x["title"],
+            title=x["attributes"]["title"],
             slug=x["slug"],
-            timestamp=x["date"],
-            description=x.get("description", ""),
+            timestamp=x["attributes"]["date"],
+            description=x["attributes"].get("description", ""),
         )
         for x in all_posts
-        if "TIL" not in x.get("tags", "")
+        if "TIL" not in x["attributes"].get("tags", "")
     ]
     popular = [
         BlogPostPreview(
-            title=x["title"],
+            title=x["attributes"]["title"],
             slug=x["slug"],
-            timestamp=x["date"],
-            description=x.get("description", ""),
+            timestamp=x["attributes"]["date"],
+            description=x["attributes"].get("description", ""),
         )
         for x in all_posts
-        if x.get("popular", False)
+        if x["attributes"].get("popular", False)
     ]
     tils = [
         TILPreview(
-            title=x["title"], slug=x["slug"], timestamp=x["date"], description=""
+            title=x["attributes"]["title"], slug=x["slug"], timestamp=x["attributes"]["date"], description=""
         )
         for x in all_posts
-        if "TIL" in x.get("tags", "")
+        if "TIL" in x["attributes"].get("tags", "")
     ]
     return Layout(
         air.Title("Daniel Roy Greenfeld"),
@@ -230,10 +228,10 @@ async def posts():
     )
     posts = [
         BlogPostPreview(
-            title=x["title"],
+            title=x['attributes']["title"],
             slug=x["slug"],
-            timestamp=x["date"],
-            description=x.get("description", ""),
+            timestamp=x['attributes']["date"],
+            description=x['attributes'].get("description", ""),
         )
         for x in list_posts()
     ]
@@ -254,15 +252,15 @@ async def article(slug: str):
     if slug.endswith('.html'):
         slug = slug[:-5]
     try:
-        content, metadata = get_post(slug)
+        content = get_post(slug)
     except ContentNotFound:
         redirects_url = redirects.get("posts/" + slug, None)
         if redirects_url is not None:
             return RedirectResponse(redirects_url)
         raise HTTPException(status_code=404)
-    article_tags = [TagLink(slug=x) for x in metadata.get("tags", [])]
+    article_tags = [TagLink(slug=x) for x in content['attributes'].get("tags", [])]
     specials = []
-    if "TIL" in metadata["tags"]:
+    if "TIL" in content['attributes']["tags"]:
         specials = [air.A(
             air.Img(
                 src="https://f004.backblazeb2.com/file/daniel-feldroy-com/public/logos/til-1.png",
@@ -274,19 +272,19 @@ async def article(slug: str):
             href=tag.url(slug="TIL"),
         )]
     return Layout(
-        air.Title(metadata["title"]),
+        air.Title(content['attributes']["title"]),
         air.Section(
-            air.H1(metadata["title"]),
-            air.P(air.I(metadata.get("description", ""))),
-            air.P(air.Small(air.Time(metadata["date"]))),
-            air.Div(content, class_=metadata["class_"]),
+            air.H1(content['attributes']["title"]),
+            air.P(air.I(content['attributes'].get("description", ""))),
+            air.P(air.Small(air.Time(content['attributes']["date"]))),
+            air.Div(content['body'], class_='marked'),
             air.Div(*specials, style="width: 200px; margin: auto; display: block;"),
             air.P(air.Span("Tags: "), *article_tags),
             air.A("← Back to all articles", href=index.url()),
         ),
-        title=metadata["title"],
-        description=metadata.get("description", ""),
-        image=f"https://daniel.feldroy.com{metadata.get('image', default_social_image)}",
+        title=content['attributes']["title"],
+        description=content['attributes'].get("description", ""),
+        image=f"https://daniel.feldroy.com{content['attributes'].get('image', default_social_image)}",
         url=f"https://daniel.feldroy.com/posts/{slug}",
     )
 
@@ -315,13 +313,13 @@ async def tag(slug: str):
         slug = slug[:-5]    
     posts = [
         BlogPostPreview(
-            title=x["title"],
+            title=x['attributes']["title"],
             slug=x["slug"],
-            timestamp=x["date"],
-            description=x.get("description", ""),
+            timestamp=x['attributes']["date"],
+            description=x['attributes'].get("description", ""),
         )
         for x in list_posts()
-        if slug in x.get("tags", [])
+        if slug in x['attributes'].get("tags", [])
     ]
     return Layout(
         air.Title(f"Tag: {slug}"),
@@ -338,7 +336,8 @@ async def tag(slug: str):
 @functools.lru_cache
 def _search(q: str = ""):
     def _s(obj: dict, name: str, q: str):
-        content = obj.get(name, "")
+        # TODO support body
+        content = obj['attributes'].get(name, "")
         if isinstance(content, list):
             content = " ".join(content)
         return q.lower().strip() in str(content).lower().strip()
@@ -358,17 +357,17 @@ def _search(q: str = ""):
             x
             for x in raw_posts
             if any(
-                _s(x, name, q) for name in ["title", "description", "content", "tags"]
+                _s(x, name, q) for name in ["title", "description", "tags"]
             )
         ]
     if articles:
         # Build the posts for display
         posts = [
             BlogPostPreview(
-                title=x["title"],
+                title=x['attributes']["title"],
                 slug=x["slug"],
-                timestamp=x["date"],
-                description=x.get("description", ""),
+                timestamp=x['attributes']["date"],
+                description=x['attributes'].get("description", ""),
             )
             for x in articles
         ]

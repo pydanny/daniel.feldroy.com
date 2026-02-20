@@ -12,7 +12,7 @@ Last month I had a [head injury](https://daniel.feldroy.com/tags/concussion) tha
 - No laptop
 - No calls
 - No pull request reviews
-- Workouts when from highly intense daily BJJ & heavy weight sessions to walks, tai chi, and light weights
+- Workouts went from highly intense daily BJJ & heavy weight sessions to walks, tai chi, and light weights
 - No direct messages except a few with close family and friends
 
 Just silence and recovery and boredom. 

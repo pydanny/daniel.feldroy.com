@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
   <id>https://daniel.feldroy.com/</id>
   <title>Inside the head of Daniel Roy Greenfeld</title>
-  <updated>2026-02-20T00:57:33.356763+00:00</updated>
+  <updated>2026-02-20T09:06:30.582983+00:00</updated>
   <author>
     <name>Daniel Roy Greenfeld</name>
     <email>daniel@feldroy.com</email>
@@ -210,6 +210,7 @@ pip&lt;span class="w"&gt; &lt;/span&gt;install&lt;span class="w"&gt; &lt;/span&g
 &lt;p&gt;Once you have it running, check it out here: &lt;a href="http://localhost:8000"&gt;http://localhost:8000&lt;/a&gt;&lt;/p&gt;
 &lt;h2 id="screenshots"&gt;Screenshots&lt;/h2&gt;
 &lt;p&gt;&lt;img alt="" src="https://daniel.feldroy.com/public/images/pyinstrument-call-stack.png" /&gt;&lt;/p&gt;
+&lt;hr /&gt;
 &lt;p&gt;&lt;img alt="" src="https://daniel.feldroy.com/public/images/pyinstrument-timeline.png" /&gt;&lt;/p&gt;</content>
     <link href="https://daniel.feldroy.com/posts/2025-10-using-pyinstrument-to-profile-air-apps"/>
     <summary>Quick instructions for a drop-in Air middleware for identifying performance bottlenecks in Air apps</summary>
@@ -840,7 +841,7 @@ Available&lt;span class="w"&gt; &lt;/span&gt;recipes:
 &lt;li&gt;No laptop&lt;/li&gt;
 &lt;li&gt;No calls&lt;/li&gt;
 &lt;li&gt;No pull request reviews&lt;/li&gt;
-&lt;li&gt;Workouts when from highly intense daily BJJ &amp;amp; heavy weight sessions to walks, tai chi, and light weights&lt;/li&gt;
+&lt;li&gt;Workouts went from highly intense daily BJJ &amp;amp; heavy weight sessions to walks, tai chi, and light weights&lt;/li&gt;
 &lt;li&gt;No direct messages except a few with close family and friends&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;Just silence and recovery and boredom. &lt;/p&gt;

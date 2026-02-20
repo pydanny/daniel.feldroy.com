@@ -12,11 +12,16 @@ I'm probably best known as "[pydanny](https://www.google.com/search?q=pydanny)",
 
 I love to hang out with my [wife](https://audrey.feldroy.com/), play with my [daughter](/tags/uma), do [Brazilian Jiu-Jitsu](https://en.wikipedia.org/wiki/Brazilian_jiu-jitsu), write [books](/books), and read books. I track my fitness [here](/fitness) and my writing [here](/writing-stats).
 
-I am on sabbatical from [Kraken Tech](https://kraken.tech/), part of the sustainable global energy  [Octopus Energy Group](https://octopusenergy.group/). There I worked toward the mission of addressing [global climate change](/tags/climate-change).
-
 - [LinkedIn](https://www.linkedin.com/in/danielfeldroy/)
 - [Bluesky](https://bsky.app/profile/pydanny.bsky.social)
 - [Twitter](https://twitter.com/pydanny)
+
+## Notable employers
+
+- **2005-2010 [NASA](https://www.nasa.gov/)**: I worked on a number of internal tools, public-facing projects, and began my open source journey. None of the public facing projects are online anymore, but what eventually became [django-crispy-forms](https://github.com/django-crispy-forms/django-crispy-forms) started there
+- **2020-2024 [Kraken Tech](https://kraken.tech/)**: Part of the sustainable global energy [Octopus Energy Group](https://octopusenergy.group/). There I worked toward the mission of addressing [global climate change](/tags/climate-change).
+
+
 
 ## About this site
 

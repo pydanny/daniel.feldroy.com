@@ -15,6 +15,7 @@ dependencies = [
     "hypercorn>=0.17.3",
     "mailgun>=1.1.0",
     "markdown>=3.8.2",
+    "mistletoe>=1.5.1",
     "mypy>=1.19.1",
     "psycopg2-binary>=2.9.10",
     "pyinstrument>=5.1.1",

@@ -8,6 +8,7 @@ from fastapi.responses import Response
 from fastapi import HTTPException
 from dateutil import parser
 import pytz
+import mistletoe
 
 from layouts import Layout
 
@@ -160,7 +161,7 @@ def MarkdownPage(slug: str):
                 air.Br(),
                 air.Small(air.Time(date)),
             ),
-            air.Div(content['body'], class_="marked"),
+            air.Div(air.Raw(mistletoe.markdown(content['body']))),
         ),
         title=content['attributes'].get("title", slug),
         description=content['attributes'].get("description", "slug"),
@@ -275,7 +276,7 @@ async def article(slug: str):
             air.H1(content['attributes']["title"]),
             air.P(air.I(content['attributes'].get("description", ""))),
             air.P(air.Small(air.Time(content['attributes']["date"]))),
-            air.Div(content['body'], class_='marked'),
+            air.Div(air.Raw(mistletoe.markdown(content['body']))),
             air.Div(*specials, style="width: 200px; margin: auto; display: block;"),
             air.P(air.Span("Tags: "), *article_tags),
             air.A("← Back to all articles", href=index.url()),

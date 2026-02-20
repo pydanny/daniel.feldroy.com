@@ -206,6 +206,7 @@ dependencies = [
     { name = "hypercorn" },
     { name = "mailgun" },
     { name = "markdown" },
+    { name = "mistletoe" },
     { name = "mypy" },
     { name = "psycopg2-binary" },
     { name = "pyinstrument" },
@@ -233,6 +234,7 @@ requires-dist = [
     { name = "hypercorn", specifier = ">=0.17.3" },
     { name = "mailgun", specifier = ">=1.1.0" },
     { name = "markdown", specifier = ">=3.8.2" },
+    { name = "mistletoe", specifier = ">=1.5.1" },
     { name = "mypy", specifier = ">=1.19.1" },
     { name = "psycopg2-binary", specifier = ">=2.9.10" },
     { name = "pyinstrument", specifier = ">=5.1.1" },
@@ -812,6 +814,15 @@ wheels = [
     { url = "https://files.pythonhosted.org/packages/a7/42/c5015b02b5ee8b8194870f3beace2b14ac0e197d754e43f0973a36a3c6df/minify_html-0.18.1-cp314-cp314-musllinux_1_1_aarch64.whl", hash = "sha256:045dd5640e988cc385d350e224e13f609a606a6cf9fa5f5011a1d860d4ebe607", size = 3082224, upload-time = "2025-10-25T22:30:42.538Z" },
     { url = "https://files.pythonhosted.org/packages/6a/04/cf74fd1f980c42068d229e9657415b008b3a65504fb2fa22b09cdf579e88/minify_html-0.18.1-cp314-cp314-musllinux_1_1_x86_64.whl", hash = "sha256:3a11a926b2c236f527d8295b7f6e20c41728bdf870732273e2471e8c693f6109", size = 3327448, upload-time = "2025-10-25T22:30:55.968Z" },
     { url = "https://files.pythonhosted.org/packages/67/22/35ed1e1f733573de2988924bebc7a6e7b37027e37e43e8a3ac35e00fd960/minify_html-0.18.1-cp314-cp314-win_amd64.whl", hash = "sha256:41f46915ce2634dd70138488a96d6b36e8b8cc2c2ee2953d89c525658394500a", size = 3116545, upload-time = "2025-10-25T22:36:25.166Z" },
+]
+
+[[package]]
+name = "mistletoe"
+version = "1.5.1"
+source = { registry = "https://pypi.org/simple" }
+sdist = { url = "https://files.pythonhosted.org/packages/31/ae/d33647e2a26a8899224f36afc5e7b7a670af30f1fd87231e9f07ca19d673/mistletoe-1.5.1.tar.gz", hash = "sha256:c5571ce6ca9cfdc7ce9151c3ae79acb418e067812000907616427197648030a3", size = 111769, upload-time = "2025-12-07T16:19:01.066Z" }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/20/60/0980fefdc4d12c18c1bbab9d62852f27aded8839233c7b0a9827aaf395f5/mistletoe-1.5.1-py3-none-any.whl", hash = "sha256:d3e97664798261503f685f6a6281b092628367cf3128fc68a015a993b0c4feb3", size = 55331, upload-time = "2025-12-07T16:18:59.65Z" },
 ]
 
 [[package]]

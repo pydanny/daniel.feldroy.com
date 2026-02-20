@@ -19,7 +19,7 @@ I love to hang out with my [wife](https://audrey.feldroy.com/), play with my [da
 ## Notable employers
 
 - **2005-2010 [NASA](https://www.nasa.gov/)**: I worked on a number of internal tools, public-facing projects, and began my open source journey. None of the public facing projects are online anymore, but what eventually became [django-crispy-forms](https://github.com/django-crispy-forms/django-crispy-forms) started there
-- **2020-2024 [Kraken Tech](https://kraken.tech/)**: Part of the sustainable global energy [Octopus Energy Group](https://octopusenergy.group/). There I worked toward the mission of addressing [global climate change](/tags/climate-change).
+- **2020-2024 [Kraken Tech](https://kraken.tech/)**: Part of the sustainable global energy [Octopus Energy Group](https://octopusenergy.group/). There I worked toward the mission of addressing [global climate change](/tags/climate-change)
 
 
 

@@ -8,7 +8,6 @@ from fastapi.responses import Response
 from fastapi import HTTPException
 from dateutil import parser
 import pytz
-from rich import print
 
 from layouts import Layout
 
@@ -110,7 +109,6 @@ def list_tags() -> dict[str, int]:
             else:
                 unsorted_tags[tag] = 1
 
-    print(post)
     tags: dict = collections.OrderedDict(
         sorted(unsorted_tags.items(), key=lambda x: x[1], reverse=True)
     )

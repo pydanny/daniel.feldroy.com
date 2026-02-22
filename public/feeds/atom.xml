@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
   <id>https://daniel.feldroy.com/</id>
   <title>Inside the head of Daniel Roy Greenfeld</title>
-  <updated>2026-02-20T09:06:30.582983+00:00</updated>
+  <updated>2026-02-22T10:23:53.060763+00:00</updated>
   <author>
     <name>Daniel Roy Greenfeld</name>
     <email>daniel@feldroy.com</email>
@@ -12,56 +12,6 @@
   <generator uri="https://lkiesow.github.io/python-feedgen" version="1.0.0">python-feedgen</generator>
   <logo>https://f004.backblazeb2.com/file/daniel-feldroy-com/public/images/profile.jpg</logo>
   <rights>All rights reserved 2026, Daniel Roy Greenfeld</rights>
-  <entry>
-    <id>https://daniel.feldroy.com/posts/2025-09-over-twenty-years-of-writing-tools</id>
-    <title>Over Twenty Years of Writing Tools</title>
-    <updated>2025-09-24T00:45:00.884329+00:00</updated>
-    <author>
-      <name>Daniel Roy Greenfeld</name>
-      <email>daniel@feldroy.com</email>
-    </author>
-    <content type="html">&lt;p&gt;On my &lt;a href="/articles"&gt;articles page&lt;/a&gt;, you can read near the top that I've been writing for the past 20 years (plus a little more). It's not all my online public writing, but it's a majority of it. The primary reason parts are missing is that over time, I've used a variety of tools to publish my thoughts. Some of those tools were hosted services, and material that was lost was because of services being shut down. Hence, why I prefer markdown files in a git repository over a database solution. &lt;/p&gt;
-&lt;p&gt;Here's the story of my writing tools over the years.&lt;/p&gt;
-&lt;h2 id="geocities-1997-2010"&gt;Geocities 1997-2010&lt;/h2&gt;
-&lt;p&gt;In 1997, I first remember writing something for general publication on the web. Until then, my writings had been transmitted by printing paper, hand-copying onto disks, sending by email, or posting to usenet. I think it was in 1997 that I made my first essay-style writing on &lt;a href="https://en.wikipedia.org/wiki/GeoCities"&gt;GeoCities&lt;/a&gt; site I put together. Geocities is gone, but periodically I've thought of digging through GeoCities archives to find my writing from that time between 1997 and 2004. Otherwise, those articles are gone.&lt;/p&gt;
-&lt;p&gt;Even though there's nothing from that time on this site, as Geocities overlaps with the first entry on this site, I've included it for the sake of posterity.&lt;/p&gt;
-&lt;h2 id="livejournal-2004-2009"&gt;Livejournal 2004-2009&lt;/h2&gt;
-&lt;p&gt;From 2004 to 2009, I used LiveJournal to put down my thoughts, and there I wrote on a regular basis about life, activities, fitness, coding, and general work stuff. When I revisit those posts, I see some fun things, some hard challenges, and between the lines a lot carefully hidden despair. The few articles that made it onto this site capture extended family memories.&lt;/p&gt;
-&lt;p&gt;&lt;a href="https://daniel.feldroy.com/tags/legacy-livejournal"&gt;Some of the articles from LiveJournal exist here&lt;/a&gt;.&lt;/p&gt;
-&lt;h2 id="blogger-2007-2012"&gt;Blogger 2007-2012&lt;/h2&gt;
-&lt;p&gt;In 2007, blogs had taken off, and it was clear that professionally having my own blog was important. I decided to keep things simple and use Blogger to host my &lt;a href="https://pydanny.blogspot.com/"&gt;first professional blog&lt;/a&gt;. I opened a few other blogger sites for other purposes, but the main one was [PyDanny](https://pydanny.blogspot.com/. &lt;/p&gt;
-&lt;p&gt;This was my formative years of Python (and Django). Everything was bright and shiny and new. I met &lt;a href="https://audrey.feldroy.com"&gt;Audrey&lt;/a&gt; and fell in love with her.&lt;/p&gt;
-&lt;p&gt;A few years ago, I migrated that content &lt;a href="https://daniel.feldroy.com/tags/legacy-blogger"&gt;here on this page&lt;/a&gt;.&lt;/p&gt;
-&lt;h2 id="pelican-2012-2018"&gt;Pelican 2012-2018&lt;/h2&gt;
-&lt;p&gt;In 2012, I started writing content on a &lt;a href="https://docs.getpelican.com/en/latest/"&gt;Pelican&lt;/a&gt; static site. I liked not having to set up a database for content. What I didn't like was having to work through the abstraction of Pelican to do anything.&lt;/p&gt;
-&lt;h2 id="mountain-2018-2019"&gt;Mountain 2018-2019&lt;/h2&gt;
-&lt;p&gt;Frustrated with the lack of control of Pelican in 2018, I wrote &lt;a href="https://daniel.feldroy.com/posts/writing-new-blog-engine"&gt;my own Flask-powered blog engine&lt;/a&gt;, which I called Mountain. The challenge there was that I had some crazy ideas for a feature that caused too much complexity. The result was a very slow rendering of the static site. It was too much trouble to fix, so I stuck with it.&lt;/p&gt;
-&lt;p&gt;&lt;a href="https://daniel.feldroy.com/tags/uma"&gt;Uma&lt;/a&gt; was born in early 2019. I was too busy being a new father to do much writing, only getting in 5 articles for the whole of 2019.&lt;/p&gt;
-&lt;h2 id="vuepress-2019-2021"&gt;Vuepress 2019-2021&lt;/h2&gt;
-&lt;p&gt;By 2019, I was in the Jamstack world. I've since left it, but for a while my site was on &lt;a href="https://vuepress.vuejs.org/"&gt;Vuepress&lt;/a&gt;. The speed of compilation was nice compared to Mountain, and I could stick in special pages as needed. However, there were a few too many layers of abstraction, and that made extending it to work outside the default behaviors of Vuepress too difficult.&lt;/p&gt;
-&lt;h2 id="nextjs-2021-2024"&gt;Next.js 2021-2024&lt;/h2&gt;
-&lt;p&gt;In early 2021, for work, I needed to learn &lt;a href="https://nextjs.org/"&gt;Next.js&lt;/a&gt; quickly. I used the official Next.js tutorial that existed at the time to learn the framework and React over a weekend. This was still the early days of Next.js, and I found it to be tons of fun. It reminded me of the best features of Flask combined with tons of frontend power. &lt;/p&gt;
-&lt;p&gt;Next.js has changed rapidly. I believe Next.js went in an uncomfortable direction in terms of complexity and decreasing quality of documentation for new or changed features. Bitrot happened frequently, and I felt like I was fighting version upgrades rather than working with the Framework.&lt;/p&gt;
-&lt;h2 id="fasthtml-2024-2025"&gt;FastHTML 2024-2025&lt;/h2&gt;
-&lt;p&gt;I tried out &lt;a href="https://pypi.org/project/python-fasthtml/"&gt;FastHTML&lt;/a&gt; in the summer of 2024. Keeping the features spec in my head, tiny, I coded up the kernel of a cached markdown content site in 45 minutes. This was a vast improvement in terms of speed and complexity over the unnecessarily complex Mountain project of 2018. It was nice to return to Python, but it chafed to use a framework that wasn't PEP8 nor fully type-annotated. &lt;/p&gt;
-&lt;h2 id="air-2025"&gt;Air 2025+&lt;/h2&gt;
-&lt;p&gt;For a few years now, I've wanted to create my own web framework. This year I did so, launching &lt;a href="https://github.com/feldroy/air"&gt;AIR&lt;/a&gt; with my wife and coding partner Audrey. Air is a shallow layer over FastAPI, adding features to expedite authoring of dynamic HTML pages. One of the early projects I did with it was to convert this site to use Air. It was nice to return to a PEP8-formatted codebase that is fully type-annotated. I also like the smaller dependency tree.&lt;/p&gt;
-&lt;h2 id="the-future"&gt;The Future&lt;/h2&gt;
-&lt;p&gt;Perhaps I'll grow restless again in a few years and try something new. Or perhaps I'll stick with Air for a long time. What I do know is that I enjoy writing and sharing my thoughts. So there will be posts going into the future. &lt;/p&gt;</content>
-    <link href="https://daniel.feldroy.com/posts/2025-09-over-twenty-years-of-writing-tools"/>
-    <summary>A retrospective of over twenty years worth of writing tools that I've used to write online.</summary>
-    <category term="blog"/>
-    <category term="python"/>
-    <category term="flask"/>
-    <category term="Vue.js"/>
-    <category term="react"/>
-    <category term="air"/>
-    <contributor>
-      <name>Daniel Roy Greenfeld</name>
-      <email>daniel@feldroy.com</email>
-    </contributor>
-    <published>2025-09-24T00:45:00.884329+00:00</published>
-  </entry>
   <entry>
     <id>https://daniel.feldroy.com/posts/i-dont-know-you-so-dont-ask-for-references</id>
     <title>I Don't Know You, Don't Ask For References</title>
@@ -862,5 +812,44 @@ Available&lt;span class="w"&gt; &lt;/span&gt;recipes:
       <email>daniel@feldroy.com</email>
     </contributor>
     <published>2026-02-20T00:45:35.781957+00:00</published>
+  </entry>
+  <entry>
+    <id>https://daniel.feldroy.com/posts/til-2026-02-using-pygmentsrenderer-with-mistletoe-as-a-partial</id>
+    <title>TIL: Using PygmentsRenderer with mistletoe as a partial</title>
+    <updated>2026-02-22T10:09:16.103693+00:00</updated>
+    <author>
+      <name>Daniel Roy Greenfeld</name>
+      <email>daniel@feldroy.com</email>
+    </author>
+    <content type="html">&lt;p&gt;For the past 18 months or so on this site, I've been using &lt;a href="https://marked.js.org/"&gt;marked.js&lt;/a&gt; for the web and &lt;a href="https://pypi.org/project/Markdown/"&gt;python-markdown&lt;/a&gt; for the atom feed. I decided not long ago to switch to using &lt;a href="https://github.com/miyuchina/mistletoe"&gt;mistletoe&lt;/a&gt; so there's one consistent source of truth for markdown rendering.&lt;/p&gt;
+&lt;p&gt;I also thought that instead of defining a reusable function that both the web and atom feed could use, I would just use Python's &lt;code&gt;functools.partial&lt;/code&gt; to create a new function that has the &lt;code&gt;renderer&lt;/code&gt; argument set to &lt;code&gt;PygmentsRenderer&lt;/code&gt;. Normally I prefer fully defined functions over using &lt;code&gt;partial&lt;/code&gt;, but in this case, since it is for my personal site it felt like a good use of &lt;a href="https://daniel.feldroy.com/posts/python-partials-are-fun"&gt;partial&lt;/a&gt;.&lt;/p&gt;
+&lt;h2 id="add-the-dependencies"&gt;Add the dependencies&lt;/h2&gt;
+&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;uv&lt;span class="w"&gt; &lt;/span&gt;add&lt;span class="w"&gt; &lt;/span&gt;mistletoe&lt;span class="w"&gt; &lt;/span&gt;pygments
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;h2 id="create-the-partial-function"&gt;Create the partial function&lt;/h2&gt;
+&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="kn"&gt;from&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nn"&gt;functools&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="n"&gt;partial&lt;/span&gt;
+
+&lt;span class="kn"&gt;import&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nn"&gt;mistletoe&lt;/span&gt;
+&lt;span class="kn"&gt;from&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nn"&gt;mistletoe.contrib.pygments_renderer&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="n"&gt;PygmentsRenderer&lt;/span&gt;
+
+&lt;span class="n"&gt;markdown&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;partial&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;mistletoe&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;markdown&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;renderer&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="n"&gt;PygmentsRenderer&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;h2 id="use-the-new-function"&gt;Use the new function&lt;/h2&gt;
+&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="n"&gt;html&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;markdown&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;markdown_string&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;h2 id="see-it-in-action"&gt;See it in action&lt;/h2&gt;
+&lt;p&gt;Here's the commits where I implemented this change, at least on the web side: &lt;a href="https://github.com/pydanny/daniel.feldroy.com/commit/7cbeec1ff7a5835e0eed882b3dba483554012677"&gt;Using pygments for highlighting of code&lt;/a&gt;. Before I change the atom feed generation to use this, I'll make sure that it renders nicely on planetpython and other feed aggregators. I'll post that in a seperate TIL when I do figure out how to do that.&lt;/p&gt;</content>
+    <link href="https://daniel.feldroy.com/posts/til-2026-02-using-pygmentsrenderer-with-mistletoe-as-a-partial"/>
+    <summary>Another part of the process of switching from marked.js and python-markdown to just using mistletoe.</summary>
+    <category term="TIL"/>
+    <category term="python"/>
+    <contributor>
+      <name>Daniel Roy Greenfeld</name>
+      <email>daniel@feldroy.com</email>
+    </contributor>
+    <published>2026-02-22T10:09:16.103693+00:00</published>
   </entry>
 </feed>

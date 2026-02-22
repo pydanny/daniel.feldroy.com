@@ -26,7 +26,10 @@ Medium triggers that take effect in 10-30 minutes:
 Fast triggers that take effect in seconds:
 
 - Context switching when in deep thought
-- Large blocks of geometric shapes like those found in tall modern buildings
+- Large blocks of geometric shapes like:
+  - Those found in tall modern buildings
+  - Graph paper
+  - Hexagonal patterns
 - Very fine print on paper
 - Keeping my eyes on a point and moving my head around quickly (vestibulo-ocular reflex mismatch)
 
@@ -39,3 +42,6 @@ Fast triggers that take effect in seconds:
 - Straight lines become very prominent and distracting
 - Memory loss (I'm aware that I am having trouble tracking dates, and my wife and daughter both say I'm more forgetful than usual)
 
+## Updates
+
+- Feb 23, 2026: Added graph paper and hexagonal patterns to the list of fast triggers

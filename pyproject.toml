@@ -35,6 +35,9 @@ test = []
 ty = []
 
 
+[tool.fastapi]
+entrypoint = "main:app"
+
 
 [tool.alembic]
 

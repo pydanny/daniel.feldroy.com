@@ -22,6 +22,7 @@ Medium triggers that take effect in 10-30 minutes:
 
 - Deep thought like when writing code or working with LLMs (I think hard about prompts and validation)
 - Stress or excitement
+- Outlining of stories
 
 Fast triggers that take effect in seconds:
 
@@ -32,6 +33,7 @@ Fast triggers that take effect in seconds:
   - Hexagonal patterns
 - Very fine print on paper
 - Keeping my eyes on a point and moving my head around quickly (vestibulo-ocular reflex mismatch)
+- Learning new board games (I can play games I already know, but learning new ones is a problem)
 
 ## Symptoms
 
@@ -45,3 +47,5 @@ Fast triggers that take effect in seconds:
 ## Updates
 
 - Feb 23, 2026: Added graph paper and hexagonal patterns to the list of fast triggers
+- Feb 27, 2026: Added outlining of fiction to medium triggers
+- Feb 27, 2026: Added learning new board games to fast triggers

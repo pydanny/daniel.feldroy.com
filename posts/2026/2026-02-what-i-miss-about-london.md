@@ -14,7 +14,7 @@ It's been nearly a year since we left London. We lived there from March of 2023 
 
 - Architecture, especially the older buildings
 - Mixed use neighborhoods, with shops and restaurants on the ground floor and apartments above
-- Museams, so many good ones
+- Museums, so many good ones
 - Public transit, the buses, tube, and rail were all very good and made it easy to get around without a car
 - Walkability, thanks to how compact neighborhoods were due to narrow streets, some just a few feet wide
 - Bike routes and bike sharing services

@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
   <id>https://daniel.feldroy.com/</id>
   <title>Inside the head of Daniel Roy Greenfeld</title>
-  <updated>2026-02-22T10:23:53.060763+00:00</updated>
+  <updated>2026-02-28T03:59:45.290058+00:00</updated>
   <author>
     <name>Daniel Roy Greenfeld</name>
     <email>daniel@feldroy.com</email>
@@ -12,41 +12,6 @@
   <generator uri="https://lkiesow.github.io/python-feedgen" version="1.0.0">python-feedgen</generator>
   <logo>https://f004.backblazeb2.com/file/daniel-feldroy-com/public/images/profile.jpg</logo>
   <rights>All rights reserved 2026, Daniel Roy Greenfeld</rights>
-  <entry>
-    <id>https://daniel.feldroy.com/posts/i-dont-know-you-so-dont-ask-for-references</id>
-    <title>I Don't Know You, Don't Ask For References</title>
-    <updated>2025-09-27T05:40:20.838497+00:00</updated>
-    <author>
-      <name>Daniel Roy Greenfeld</name>
-      <email>daniel@feldroy.com</email>
-    </author>
-    <content type="html">&lt;p&gt;During my 28+ year career in tech I've also tried to be helpful to people who are looking for advice or guidance in their careers. I've done my best to be a good citizen of the tech community, honest and ethical. When employment and contracts have ended, I've done my best not to burn bridges. I'm not perfect, I've had my failings, but I try.&lt;/p&gt;
-&lt;h2 id="providing-references-and-job-assistance"&gt;Providing references and job assistance&lt;/h2&gt;
-&lt;p&gt;When friends and long acquaintances have asked me for references, I've been happy to provide them. When colleagues have asked me to vouch for their skills or experience, I've been happy to do so. When people I've worked with have asked me to endorse them on LinkedIn, I've been happy to oblige. At times, I've actively contacted hiring managers at organizations to help people find work. These are all people I've had some kind of relationship with, and I feel comfortable vouching for them. If I stake my reputation on their behalf, I know that people will be satisfied. That I'll be thanked for the recommendation, not blamed for it.&lt;/p&gt;
-&lt;p&gt;I’m not a recruiter, I’m just a coder who wants to help people I know have employment.&lt;/p&gt;
-&lt;p&gt;Sometimes it helps. Sometimes it doesn't. &lt;/p&gt;
-&lt;h2 id="the-problem"&gt;The problem&lt;/h2&gt;
-&lt;p&gt;About once a week, mostly on LinkedIn, someone I've never talked to before asks me to provide professional references. Sometimes they want me to be a reference for a job they're applying for. Sometimes they want me to vouch for their skills or experience. Sometimes they want me to connect them with hiring managers. Sometimes they want me to endorse them on LinkedIn.&lt;/p&gt;
-&lt;p&gt;The problem is that I don't know these people. I've never worked with them. I've never met them. I've never even talked to them. I have no idea what their skills or experience are. I have no idea if they're a good fit for the job for which they're applying. I have no idea if they're a good person to work with. I have no idea if they're honest or ethical.&lt;/p&gt;
-&lt;p&gt;And there's the problem, I can't act on these people's behalf. I don't know them. I can't vouch for them. I can't endorse them. I can't connect them with hiring managers. I can't provide references for them. If I do so, it would be unethical. Dishonest. It would be a betrayal of the hard-earned trust that people have placed in me and my recommendations. In short, it would be the wrong thing to do.&lt;/p&gt;
-&lt;h2 id="what-makes-me-sad"&gt;What makes me sad&lt;/h2&gt;
-&lt;p&gt;For various reasons, right now it’s hard to find work. These reasons include overhiring during the pandemic as well as executives at firms scoring record profits are overconfident that AI can replace humans. For these reasons and more it’s safe to say there are more people looking for work than there are jobs.&lt;/p&gt;
-&lt;p&gt;I get that. I really do. I want to help. And that's part of why I blog a lot and do open source, and speak periodically at conferences and meetups. I want to help people find work by improving their tools, skills, and experience.&lt;/p&gt;
-&lt;p&gt;But asking strangers (like me, if I haven't met you) to vouch for you is not the way to go about it. &lt;/p&gt;
-&lt;h2 id="what-to-do-instead"&gt;What to do instead&lt;/h2&gt;
-&lt;p&gt;Before you ask me for a professional reference, contribute to one of my recent open source efforts like &lt;a href="https://github.com/feldroy/air"&gt;Air&lt;/a&gt;. Look at &lt;a href="https://github.com/pydanny"&gt;my GitHub account&lt;/a&gt; and see if there's something I've touched recently you can help with. Show me that you have the skills and experience that you're claiming to have. Show me that you're a good person to work with. Show me that you're honest and ethical. Show me that you care about the work that you're doing.&lt;/p&gt;
-&lt;p&gt;Then, reach out to me again. Maybe then I'll be able to provide a reference for you. Maybe then I'll be able to vouch for you. Maybe then I'll be able to endorse you. Maybe then I'll be able to connect you with hiring managers.&lt;/p&gt;
-&lt;p&gt;We're all in this together. Let's help each other out. But let's do it the right way.&lt;/p&gt;</content>
-    <link href="https://daniel.feldroy.com/posts/i-dont-know-you-so-dont-ask-for-references"/>
-    <summary>About once a week someone I've never talked to before asks me to provide professional references.</summary>
-    <category term="advice"/>
-    <category term="rant"/>
-    <contributor>
-      <name>Daniel Roy Greenfeld</name>
-      <email>daniel@feldroy.com</email>
-    </contributor>
-    <published>2025-09-27T05:40:20.838497+00:00</published>
-  </entry>
   <entry>
     <id>https://daniel.feldroy.com/posts/til-2025-09-env-files-with-uv-run</id>
     <title>TIL: Loading .env files with uv run</title>
@@ -751,13 +716,18 @@ Available&lt;span class="w"&gt; &lt;/span&gt;recipes:
 &lt;ul&gt;
 &lt;li&gt;Deep thought like when writing code or working with LLMs (I think hard about prompts and validation)&lt;/li&gt;
 &lt;li&gt;Stress or excitement&lt;/li&gt;
+&lt;li&gt;Outlining of stories&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;Fast triggers that take effect in seconds:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;Context switching when in deep thought&lt;/li&gt;
-&lt;li&gt;Large blocks of geometric shapes like those found in tall modern buildings&lt;/li&gt;
+&lt;li&gt;Large blocks of geometric shapes like:&lt;/li&gt;
+&lt;li&gt;Those found in tall modern buildings&lt;/li&gt;
+&lt;li&gt;Graph paper&lt;/li&gt;
+&lt;li&gt;Hexagonal patterns&lt;/li&gt;
 &lt;li&gt;Very fine print on paper&lt;/li&gt;
 &lt;li&gt;Keeping my eyes on a point and moving my head around quickly (vestibulo-ocular reflex mismatch)&lt;/li&gt;
+&lt;li&gt;Learning new board games (I can play games I already know, but learning new ones is a problem)&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h2 id="symptoms"&gt;Symptoms&lt;/h2&gt;
 &lt;ul&gt;
@@ -767,6 +737,12 @@ Available&lt;span class="w"&gt; &lt;/span&gt;recipes:
 &lt;li&gt;Dizziness (but no loss of balance)&lt;/li&gt;
 &lt;li&gt;Straight lines become very prominent and distracting&lt;/li&gt;
 &lt;li&gt;Memory loss (I'm aware that I am having trouble tracking dates, and my wife and daughter both say I'm more forgetful than usual)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id="updates"&gt;Updates&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Feb 23, 2026: Added graph paper and hexagonal patterns to the list of fast triggers&lt;/li&gt;
+&lt;li&gt;Feb 27, 2026: Added outlining of fiction to medium triggers&lt;/li&gt;
+&lt;li&gt;Feb 27, 2026: Added learning new board games to fast triggers&lt;/li&gt;
 &lt;/ul&gt;</content>
     <link href="https://daniel.feldroy.com/posts/2026-02-concussion-symptoms"/>
     <summary>Documenting how the head injury incurred on January 16, 2026 continues to affected me one month later.</summary>
@@ -851,5 +827,65 @@ Available&lt;span class="w"&gt; &lt;/span&gt;recipes:
       <email>daniel@feldroy.com</email>
     </contributor>
     <published>2026-02-22T10:09:16.103693+00:00</published>
+  </entry>
+  <entry>
+    <id>https://daniel.feldroy.com/posts/2026-02-what-i-miss-about-london</id>
+    <title>What I miss about London</title>
+    <updated>2026-04-01T00:58:24.171653+00:00</updated>
+    <author>
+      <name>Daniel Roy Greenfeld</name>
+      <email>daniel@feldroy.com</email>
+    </author>
+    <content type="html">&lt;p&gt;It's been nearly a year since we left London. We lived there from March of 2023 to March of 2025. I find myself reflecting on the things I really enjoyed during our time there. &lt;/p&gt;
+&lt;h2 id="things-that-i-miss-about-london"&gt;Things that I miss about London&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Architecture, especially the older buildings&lt;/li&gt;
+&lt;li&gt;Mixed use neighborhoods, with shops and restaurants on the ground floor and apartments above&lt;/li&gt;
+&lt;li&gt;Museams, so many good ones&lt;/li&gt;
+&lt;li&gt;Public transit, the buses, tube, and rail were all very good and made it easy to get around without a car&lt;/li&gt;
+&lt;li&gt;Walkability, thanks to how compact neighborhoods were due to narrow streets, some just a few feet wide&lt;/li&gt;
+&lt;li&gt;Bike routes and bike sharing services&lt;/li&gt;
+&lt;li&gt;Cozy homes and food businesses&lt;/li&gt;
+&lt;li&gt;Culture of hand-me-downs and second hand shopping, especially for kids clothes and toys. We not only saved money but reduced waste. It allowed us to teach our daughter about giving up things she no longer needed to other kids who could use them&lt;/li&gt;
+&lt;li&gt;Easy access to the countryside&lt;/li&gt;
+&lt;li&gt;Easy access to Europe&lt;/li&gt;
+&lt;li&gt;Not significantly further to visit East Coast family in the US than from California&lt;/li&gt;
+&lt;li&gt;Parks and green spaces&lt;/li&gt;
+&lt;li&gt;Calculating GMT was easy&lt;/li&gt;
+&lt;li&gt;The places where streets shut down during lunchtime so food stalls could serve meals&lt;/li&gt;
+&lt;li&gt;Good public primary schools being the standard for young children&lt;/li&gt;
+&lt;li&gt;So many different gyms and workout methods competing with each other offering amazing trial deals&lt;/li&gt;
+&lt;li&gt;Premium dairy products:&lt;ul&gt;
+&lt;li&gt;Clotted cream&lt;/li&gt;
+&lt;li&gt;Milk from Devonshire and Cornwall&lt;/li&gt;
+&lt;li&gt;Blue stilton cheese&lt;/li&gt;
+&lt;li&gt;Easy access to French cheeses&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;British food, specifically:&lt;ul&gt;
+&lt;li&gt;Fish and chips&lt;/li&gt;
+&lt;li&gt;Bangers and mash&lt;/li&gt;
+&lt;li&gt;Sunday roast at the pub&lt;/li&gt;
+&lt;li&gt;Yorkshire puddings&lt;/li&gt;
+&lt;li&gt;Water crackers available everywhere&lt;/li&gt;
+&lt;li&gt;Seasonal vegetables that were fresh and delicious    &lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id="things-i-dont-miss-about-london"&gt;Things I don't miss about London&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;The constant smoking and vaping&lt;/li&gt;
+&lt;li&gt;The cost of living, especially housing and food&lt;/li&gt;
+&lt;li&gt;The commonality of theft, especially of phones and bikes&lt;/li&gt;
+&lt;/ul&gt;</content>
+    <link href="https://daniel.feldroy.com/posts/2026-02-what-i-miss-about-london"/>
+    <summary>Thoughts about things I really enjoyed during the approximately two years we lived in London.</summary>
+    <category term="travel"/>
+    <category term="family"/>
+    <contributor>
+      <name>Daniel Roy Greenfeld</name>
+      <email>daniel@feldroy.com</email>
+    </contributor>
+    <published>2026-04-01T00:58:24.171653+00:00</published>
   </entry>
 </feed>

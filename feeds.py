@@ -56,8 +56,8 @@ def github_markdown_to_html(markdown_str):
 
 def add_entry(fg, raw):
     article = contents.get_post(raw["slug"])
-    content = article['body']
-    metadata = article['attributes']
+    content = article["body"]
+    metadata = article["attributes"]
     fe = fg.add_entry()
     linker = f"https://daniel.feldroy.com/posts/{raw['slug']}"
     fe.id(linker)
@@ -90,7 +90,9 @@ def build_feed(content_tag: str | None = None):
         }
     )
     fg.link(href="https://daniel.feldroy.com", rel="alternate")
-    fg.logo("https://f004.backblazeb2.com/file/daniel-feldroy-com/public/images/profile.jpg")
+    fg.logo(
+        "https://f004.backblazeb2.com/file/daniel-feldroy-com/public/images/profile.jpg"
+    )
     fg.rights(f"All rights reserved {datetime.now().year}, Daniel Roy Greenfeld")
     fg.language("en")
 

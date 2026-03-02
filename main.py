@@ -1,6 +1,9 @@
 import air
-import yaml
-import collections, functools, pathlib, json, csv
+import collections
+import functools
+import pathlib
+import json
+import csv
 from datetime import datetime
 from fastapi.staticfiles import StaticFiles
 from air.responses import RedirectResponse
@@ -38,7 +41,7 @@ default_social_image = (
     "https://f004.backblazeb2.com/file/daniel-feldroy-com/public/images/profile.jpg"
 )
 
-redirects = json.loads(pathlib.Path(f"redirects.json").read_text())
+redirects = json.loads(pathlib.Path("redirects.json").read_text())
 
 
 # The next block of code is several date utilities
@@ -54,7 +57,7 @@ def convert_dtstr_to_dt(date_str: str) -> str:
             # If the datetime object is naive, set it to GMT (UTC)
             dt = dt.replace(tzinfo=pytz.UTC)
         return str(format_datetime(dt))
-    except (ValueError, TypeError) as e:
+    except (ValueError, TypeError):
         return ""
 
 
@@ -76,6 +79,7 @@ class ContentNotFound(Exception):
 # app is restarted every time the project is deployed.
 from frontmatter import Frontmatter
 
+
 @functools.cache
 def list_posts(
     published: bool = True, posts_dirname="posts", content=False
@@ -92,7 +96,9 @@ def list_posts(
 
     # articles = [Frontmatter.read_file(path) for path in pathlib.Path(".").glob(f"{posts_dirname}/**/*.md")]
     articles = sorted(articles, key=lambda x: x["attributes"]["date"], reverse=True)
-    return [x for x in filter(lambda x: x["attributes"]["published"] is published, articles)]
+    return [
+        x for x in filter(lambda x: x["attributes"]["published"] is published, articles)
+    ]
 
 
 @functools.lru_cache
@@ -108,7 +114,7 @@ def get_post(slug: str) -> tuple:
 def list_tags() -> dict[str, int]:
     unsorted_tags = {}
     for post in list_posts():
-        page_tags = post['attributes'].get("tags", [])
+        page_tags = post["attributes"].get("tags", [])
         for tag in page_tags:
             if tag in unsorted_tags:
                 unsorted_tags[tag] += 1
@@ -156,22 +162,22 @@ def MarkdownPage(slug: str):
         content = Frontmatter.read_file(f"pages/{slug}.md")
     except FileNotFoundError:
         raise HTTPException(status_code=404)
-    date = content['attributes'].get("date", "")
+    date = content["attributes"].get("date", "")
     return Layout(
-        air.Title(content['attributes'].get("title", slug)),
+        air.Title(content["attributes"].get("title", slug)),
         air.Section(
-            air.H1(content['attributes'].get("title", "")),
+            air.H1(content["attributes"].get("title", "")),
             air.P(
-                content['attributes'].get("author", ""),
+                content["attributes"].get("author", ""),
                 air.Br(),
                 air.Small(air.Time(date)),
             ),
-            air.Div(air.Raw(markdown(content['body']))),
+            air.Div(air.Raw(markdown(content["body"]))),
         ),
-        title=content['attributes'].get("title", slug),
-        description=content['attributes'].get("description", "slug"),
+        title=content["attributes"].get("title", slug),
+        description=content["attributes"].get("description", "slug"),
         url=f"https://daniel.feldroy.com/{slug}",
-        image=content['attributes'].get("image", default_social_image),
+        image=content["attributes"].get("image", default_social_image),
     )
 
 
@@ -200,7 +206,10 @@ async def index():
     ]
     tils = [
         TILPreview(
-            title=x["attributes"]["title"], slug=x["slug"], timestamp=x["attributes"]["date"], description=""
+            title=x["attributes"]["title"],
+            slug=x["slug"],
+            timestamp=x["attributes"]["date"],
+            description="",
         )
         for x in all_posts
         if "TIL" in x["attributes"].get("tags", "")
@@ -216,7 +225,7 @@ async def index():
             air.Section(
                 air.H1("TIL", air.Small(" (Today I learned)")),
                 *tils[:7],
-                air.P(air.A("Read more TIL articles", href=tag.url(slug='TIL'))),
+                air.P(air.A("Read more TIL articles", href=tag.url(slug="TIL"))),
             ),
             air.Section(air.H1("Featured Writings"), *popular),
             class_="grid",
@@ -227,15 +236,13 @@ async def index():
 @app.page
 async def posts():
     duration = round((datetime.now() - datetime(2005, 9, 3)).days / 365.25, 2)
-    description = (
-        f"Writings by Daniel Roy Greenfeld for the past {duration} years."
-    )
+    description = f"Writings by Daniel Roy Greenfeld for the past {duration} years."
     posts = [
         BlogPostPreview(
-            title=x['attributes']["title"],
+            title=x["attributes"]["title"],
             slug=x["slug"],
-            timestamp=x['attributes']["date"],
-            description=x['attributes'].get("description", ""),
+            timestamp=x["attributes"]["date"],
+            description=x["attributes"].get("description", ""),
         )
         for x in list_posts()
     ]
@@ -253,7 +260,7 @@ async def posts():
 
 @app.get("/posts/{slug}")
 async def article(slug: str):
-    if slug.endswith('.html'):
+    if slug.endswith(".html"):
         slug = slug[:-5]
     try:
         content = get_post(slug)
@@ -262,32 +269,34 @@ async def article(slug: str):
         if redirects_url is not None:
             return RedirectResponse(redirects_url)
         raise HTTPException(status_code=404)
-    article_tags = [TagLink(slug=x) for x in content['attributes'].get("tags", [])]
+    article_tags = [TagLink(slug=x) for x in content["attributes"].get("tags", [])]
     specials = []
-    if "TIL" in content['attributes']["tags"]:
-        specials = [air.A(
-            air.Img(
-                src="https://f004.backblazeb2.com/file/daniel-feldroy-com/public/logos/til-1.png",
-                alt="Today I Learned",
-                width="200",
-                height="200",
-                class_="center",
-            ),
-            href=tag.url(slug="TIL"),
-        )]
+    if "TIL" in content["attributes"]["tags"]:
+        specials = [
+            air.A(
+                air.Img(
+                    src="https://f004.backblazeb2.com/file/daniel-feldroy-com/public/logos/til-1.png",
+                    alt="Today I Learned",
+                    width="200",
+                    height="200",
+                    class_="center",
+                ),
+                href=tag.url(slug="TIL"),
+            )
+        ]
     return Layout(
-        air.Title(content['attributes']["title"]),
+        air.Title(content["attributes"]["title"]),
         air.Section(
-            air.H1(content['attributes']["title"]),
-            air.P(air.I(content['attributes'].get("description", ""))),
-            air.P(air.Small(air.Time(content['attributes']["date"]))),
-            air.Div(air.Raw(markdown(content['body']))),
+            air.H1(content["attributes"]["title"]),
+            air.P(air.I(content["attributes"].get("description", ""))),
+            air.P(air.Small(air.Time(content["attributes"]["date"]))),
+            air.Div(air.Raw(markdown(content["body"]))),
             air.Div(*specials, style="width: 200px; margin: auto; display: block;"),
             air.P(air.Span("Tags: "), *article_tags),
             air.A("← Back to all articles", href=index.url()),
         ),
-        title=content['attributes']["title"],
-        description=content['attributes'].get("description", ""),
+        title=content["attributes"]["title"],
+        description=content["attributes"].get("description", ""),
         image=f"https://daniel.feldroy.com{content['attributes'].get('image', default_social_image)}",
         url=f"https://daniel.feldroy.com/posts/{slug}",
     )
@@ -313,17 +322,17 @@ async def tags():
 
 @app.get("/tags/{slug}")
 async def tag(slug: str):
-    if slug.endswith('.html'):
-        slug = slug[:-5]    
+    if slug.endswith(".html"):
+        slug = slug[:-5]
     posts = [
         BlogPostPreview(
-            title=x['attributes']["title"],
+            title=x["attributes"]["title"],
             slug=x["slug"],
-            timestamp=x['attributes']["date"],
-            description=x['attributes'].get("description", ""),
+            timestamp=x["attributes"]["date"],
+            description=x["attributes"].get("description", ""),
         )
         for x in list_posts()
-        if slug in x['attributes'].get("tags", [])
+        if slug in x["attributes"].get("tags", [])
     ]
     return Layout(
         air.Title(f"Tag: {slug}"),
@@ -341,7 +350,7 @@ async def tag(slug: str):
 def _search(q: str = ""):
     def _s(obj: dict, name: str, q: str):
         # TODO support body
-        content = obj['attributes'].get(name, "")
+        content = obj["attributes"].get(name, "")
         if isinstance(content, list):
             content = " ".join(content)
         return q.lower().strip() in str(content).lower().strip()
@@ -360,18 +369,16 @@ def _search(q: str = ""):
         articles = [
             x
             for x in raw_posts
-            if any(
-                _s(x, name, q) for name in ["title", "description", "tags"]
-            )
+            if any(_s(x, name, q) for name in ["title", "description", "tags"])
         ]
     if articles:
         # Build the posts for display
         posts = [
             BlogPostPreview(
-                title=x['attributes']["title"],
+                title=x["attributes"]["title"],
                 slug=x["slug"],
-                timestamp=x['attributes']["date"],
-                description=x['attributes'].get("description", ""),
+                timestamp=x["attributes"]["date"],
+                description=x["attributes"].get("description", ""),
             )
             for x in articles
         ]
@@ -548,7 +555,7 @@ async def fitness():
                 air.Br(),
                 f"Current: {current_weight} kg / {round(float(current_weight) * 2.2, 2)} lb",
             ),
-            air.H2(f"Fitness Tracking"),
+            air.H2("Fitness Tracking"),
             air.Ol(
                 air.Li("Weight kg is how much I weigh in kilograms."),
                 air.Li("BJJ is how many minutes of Brazilian Jiu-Jitsu in a day."),
@@ -566,7 +573,7 @@ async def fitness():
 async def writing_stats():
     years = collections.defaultdict(int)
     for post in list_posts():
-        years[post['attributes']["date"][:4]] += 1
+        years[post["attributes"]["date"][:4]] += 1
     data = [
         {
             "x": list(map(int, years.keys())),
@@ -620,4 +627,4 @@ async def page_or_redirect1(slug: str):
     try:
         return MarkdownPage(slug)
     except TypeError:
-        raise HTTPException(status_code=404)    
+        raise HTTPException(status_code=404)

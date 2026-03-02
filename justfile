@@ -17,9 +17,9 @@ ty:
 
 # Run all the formatting, linting, and type checking commands
 qa:
-    uv run --python=3.13 --isolated --group lint -- ruff format .
-    uv run --python=3.13 --isolated --group lint -- ruff check --fix .
-    uv run --python=3.13 --isolated --group lint --group test -- ty check .
+    uv run --python=3.13 ruff format .
+    uv run --python=3.13 ruff check --fix .
+    uv run --python=3.13 ty check .
 
 # Run all the tests for all the supported Python versions
 test-all:

@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
   <id>https://daniel.feldroy.com/</id>
   <title>Inside the head of Daniel Roy Greenfeld</title>
-  <updated>2026-03-04T05:31:14.403151+00:00</updated>
+  <updated>2026-03-04T23:33:58.294861+00:00</updated>
   <author>
     <name>Daniel Roy Greenfeld</name>
     <email>daniel@feldroy.com</email>
@@ -12,34 +12,6 @@
   <generator uri="https://lkiesow.github.io/python-feedgen" version="1.0.0">python-feedgen</generator>
   <logo>https://f004.backblazeb2.com/file/daniel-feldroy-com/public/images/profile.jpg</logo>
   <rights>All rights reserved 2026, Daniel Roy Greenfeld</rights>
-  <entry>
-    <id>https://daniel.feldroy.com/posts/til-2025-09-env-files-with-uv-run</id>
-    <title>TIL: Loading .env files with uv run</title>
-    <updated>2025-09-28T22:44:18.296914+00:00</updated>
-    <author>
-      <name>Daniel Roy Greenfeld</name>
-      <email>daniel@feldroy.com</email>
-    </author>
-    <content type="html">&lt;p&gt;We don't need python-dotenv, use &lt;code&gt;uv run&lt;/code&gt; with &lt;code&gt;--env-file&lt;/code&gt;, and your env vars from &lt;code&gt;.env&lt;/code&gt; get loaded. &lt;/p&gt;
-&lt;p&gt;For example, if we've got a FastAPI or Air project we can run it locally with env vars like:&lt;/p&gt;
-&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;uv&lt;span class="w"&gt; &lt;/span&gt;run&lt;span class="w"&gt; &lt;/span&gt;--env-file&lt;span class="w"&gt; &lt;/span&gt;.env&lt;span class="w"&gt; &lt;/span&gt;fastapi&lt;span class="w"&gt; &lt;/span&gt;dev
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;p&gt;You can specific different env files for different environments, like &lt;code&gt;.env.dev&lt;/code&gt;, &lt;code&gt;.env.prod&lt;/code&gt;, etc.&lt;/p&gt;
-&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;uv&lt;span class="w"&gt; &lt;/span&gt;run&lt;span class="w"&gt; &lt;/span&gt;--env-file&lt;span class="w"&gt; &lt;/span&gt;.env.dev&lt;span class="w"&gt; &lt;/span&gt;fastapi&lt;span class="w"&gt; &lt;/span&gt;dev
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;p&gt;All credit goes to &lt;a href="https://audrey.feldroy.com"&gt;Audrey Roy Greenfeld&lt;/a&gt; for &lt;a href="https://x.com/audreyfeldroy/status/1964565105599009078"&gt;pointing this out&lt;/a&gt;.&lt;/p&gt;</content>
-    <link href="https://daniel.feldroy.com/posts/til-2025-09-env-files-with-uv-run"/>
-    <summary>Replacing python-dotenv with uv</summary>
-    <category term="TIL"/>
-    <category term="python"/>
-    <contributor>
-      <name>Daniel Roy Greenfeld</name>
-      <email>daniel@feldroy.com</email>
-    </contributor>
-    <published>2025-09-28T22:44:18.296914+00:00</published>
-  </entry>
   <entry>
     <id>https://daniel.feldroy.com/posts/2025-10-using-pyinstrument-to-profile-air-apps</id>
     <title>Using pyinstrument to profile Air apps</title>
@@ -887,5 +859,51 @@ Available&lt;span class="w"&gt; &lt;/span&gt;recipes:
       <email>daniel@feldroy.com</email>
     </contributor>
     <published>2026-03-01T00:58:24.171653+00:00</published>
+  </entry>
+  <entry>
+    <id>https://daniel.feldroy.com/posts/2026-03-command-line-tools-im-using</id>
+    <title>Top Terminal Tools</title>
+    <updated>2026-03-05T07:30:50.970143+00:00</updated>
+    <author>
+      <name>Daniel Roy Greenfeld</name>
+      <email>daniel@feldroy.com</email>
+    </author>
+    <content type="html">&lt;p&gt;When I sit down to code, these are the tools I use at this time whenever I touch code. In alphabetical order:&lt;/p&gt;
+&lt;h2 id="atuin"&gt;&lt;a href="https://atuin.sh/"&gt;Atuin&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;Atuin is a replacement for the default shell history. It saves your history to a local, encrypted SQLite database. Then it allows for blazing fast searches. You can sync your history across devices, and is has a lot of other features. I can't imagine using a terminal without Atuin.&lt;/p&gt;
+&lt;p&gt;For OSX users, I recommend installing following &lt;a href="https://docs.atuin.sh/cli/#quickstart"&gt;these instructions&lt;/a&gt;.&lt;/p&gt;
+&lt;h2 id="bat"&gt;&lt;a href="https://github.com/sharkdp/bat"&gt;bat&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;A Rust-based cat replacement. It has syntax highlighting, line numbers, and a lot of other features that make it a great tool for quickly looking at files in the terminal.&lt;/p&gt;
+&lt;h2 id="ghostty"&gt;&lt;a href="https://ghostty.org/"&gt;Ghostty&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;Ghostty is a fast, feature-rich, and cross-platform terminal emulator that I believe works everywhere. Yes, TMUX (and competitors) are more configurable and have more features, but &lt;strong&gt;Ghostty just works out of the box&lt;/strong&gt;. Ghostty eschews the arcane key combinations of its predecessors in favor of intuitive keybindings. A ghostty terminal can be split horizontally and vertically and copy/paste works as expected. It also doesn't appear to interfere with any other shell tool, something that annoyed me about TMUX.&lt;/p&gt;
+&lt;p&gt;Usually I have three vertical panels:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;On the far left a panel for running general shell commands like git, uv, and whatever. &lt;a href="https://atuin.sh"&gt;Atuin&lt;/a&gt; is a must for me, giving me shell history on steriods so I don't have to remember commands anymore&lt;/li&gt;
+&lt;li&gt;In the middle I run a CLI-based text editor, these days usually &lt;a href="https://github.com/feldroy/pad"&gt;pad&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;On the righthand side a panel for running LLM CLI tools, usually AMP, Codex, and sometimes Claude&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id="github-cli"&gt;&lt;a href="https://cli.github.com/"&gt;GitHub CLI&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;Even though I use a fraction of the available commands, this is just a really useful tool for working on GitHub-hosted projects. &lt;/p&gt;
+&lt;h2 id="pad"&gt;&lt;a href="https://github.com/feldroy/pad"&gt;Pad&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;Pad is an easy-to-use terminal editor I created for those of us who aren't into vim. It's powered by &lt;a href="https://textual.textualize.io/"&gt;Will McGugan's Textual&lt;/a&gt;. I did what I can to make pad work with typical VS Code keybindings. &lt;/p&gt;
+&lt;p&gt;Right now I'm not accepting general contributions to Pad. I am still recovering from a &lt;a href="https://daniel.feldroy.com/tags/concussion"&gt;head injury&lt;/a&gt; and that unfortunately makes reviewing PRs challenging. As I get better I plan to put more features into the project and perhaps even accept contributions. For now it does what I need it to do and is a handy addition to my tool chain.&lt;/p&gt;
+&lt;h2 id="various-llm-cli-tools"&gt;Various LLM CLI tools&lt;/h2&gt;
+&lt;p&gt;I have no loyalty to any particular LLM provider. I use whatever tool gets the job done and for which I have free or affordable credits. For now I use:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Amp&lt;/li&gt;
+&lt;li&gt;ChatGPT Codex&lt;/li&gt;
+&lt;li&gt;Claude Code&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;For a while I was using gemini-cli, but it stopped working for me weeks ago. Rather than try to debug it I just used the competition.&lt;/p&gt;</content>
+    <link href="https://daniel.feldroy.com/posts/2026-03-command-line-tools-im-using"/>
+    <summary>The tools I use in my day-to-day coding efforts in early 2026.</summary>
+    <category term="python"/>
+    <category term="tools"/>
+    <category term="terminal"/>
+    <contributor>
+      <name>Daniel Roy Greenfeld</name>
+      <email>daniel@feldroy.com</email>
+    </contributor>
+    <published>2026-03-05T07:30:50.970143+00:00</published>
   </entry>
 </feed>

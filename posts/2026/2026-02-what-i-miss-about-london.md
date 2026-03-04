@@ -1,5 +1,5 @@
 ---
-date: '2026-04-01T00:58:24.171653+00:00'
+date: '2026-03-01T00:58:24.171653+00:00'
 description: Thoughts about things I really enjoyed during the approximately two years we lived in London.
 published: true
 tags:

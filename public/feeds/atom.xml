@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
   <id>https://daniel.feldroy.com/</id>
   <title>Inside the head of Daniel Roy Greenfeld</title>
-  <updated>2026-02-28T06:58:12.089557+00:00</updated>
+  <updated>2026-03-04T05:29:52.136890+00:00</updated>
   <author>
     <name>Daniel Roy Greenfeld</name>
     <email>daniel@feldroy.com</email>
@@ -12,34 +12,6 @@
   <generator uri="https://lkiesow.github.io/python-feedgen" version="1.0.0">python-feedgen</generator>
   <logo>https://f004.backblazeb2.com/file/daniel-feldroy-com/public/images/profile.jpg</logo>
   <rights>All rights reserved 2026, Daniel Roy Greenfeld</rights>
-  <entry>
-    <id>https://daniel.feldroy.com/posts/til-2025-09-env-files-with-uv-run</id>
-    <title>TIL: Loading .env files with uv run</title>
-    <updated>2025-09-28T22:44:18.296914+00:00</updated>
-    <author>
-      <name>Daniel Roy Greenfeld</name>
-      <email>daniel@feldroy.com</email>
-    </author>
-    <content type="html">&lt;p&gt;We don't need python-dotenv, use &lt;code&gt;uv run&lt;/code&gt; with &lt;code&gt;--env-file&lt;/code&gt;, and your env vars from &lt;code&gt;.env&lt;/code&gt; get loaded. &lt;/p&gt;
-&lt;p&gt;For example, if we've got a FastAPI or Air project we can run it locally with env vars like:&lt;/p&gt;
-&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;uv&lt;span class="w"&gt; &lt;/span&gt;run&lt;span class="w"&gt; &lt;/span&gt;--env-file&lt;span class="w"&gt; &lt;/span&gt;.env&lt;span class="w"&gt; &lt;/span&gt;fastapi&lt;span class="w"&gt; &lt;/span&gt;dev
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;p&gt;You can specific different env files for different environments, like &lt;code&gt;.env.dev&lt;/code&gt;, &lt;code&gt;.env.prod&lt;/code&gt;, etc.&lt;/p&gt;
-&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;uv&lt;span class="w"&gt; &lt;/span&gt;run&lt;span class="w"&gt; &lt;/span&gt;--env-file&lt;span class="w"&gt; &lt;/span&gt;.env.dev&lt;span class="w"&gt; &lt;/span&gt;fastapi&lt;span class="w"&gt; &lt;/span&gt;dev
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;p&gt;All credit goes to &lt;a href="https://audrey.feldroy.com"&gt;Audrey Roy Greenfeld&lt;/a&gt; for &lt;a href="https://x.com/audreyfeldroy/status/1964565105599009078"&gt;pointing this out&lt;/a&gt;.&lt;/p&gt;</content>
-    <link href="https://daniel.feldroy.com/posts/til-2025-09-env-files-with-uv-run"/>
-    <summary>Replacing python-dotenv with uv</summary>
-    <category term="TIL"/>
-    <category term="python"/>
-    <contributor>
-      <name>Daniel Roy Greenfeld</name>
-      <email>daniel@feldroy.com</email>
-    </contributor>
-    <published>2025-09-28T22:44:18.296914+00:00</published>
-  </entry>
   <entry>
     <id>https://daniel.feldroy.com/posts/2025-10-using-pyinstrument-to-profile-air-apps</id>
     <title>Using pyinstrument to profile Air apps</title>
@@ -831,7 +803,7 @@ Available&lt;span class="w"&gt; &lt;/span&gt;recipes:
   <entry>
     <id>https://daniel.feldroy.com/posts/2026-02-what-i-miss-about-london</id>
     <title>What I miss about London</title>
-    <updated>2026-04-01T00:58:24.171653+00:00</updated>
+    <updated>2026-03-01T00:58:24.171653+00:00</updated>
     <author>
       <name>Daniel Roy Greenfeld</name>
       <email>daniel@feldroy.com</email>
@@ -886,6 +858,31 @@ Available&lt;span class="w"&gt; &lt;/span&gt;recipes:
       <name>Daniel Roy Greenfeld</name>
       <email>daniel@feldroy.com</email>
     </contributor>
-    <published>2026-04-01T00:58:24.171653+00:00</published>
+    <published>2026-03-01T00:58:24.171653+00:00</published>
+  </entry>
+  <entry>
+    <id>https://daniel.feldroy.com/posts/2026-03-command-line-tools-im-using</id>
+    <title>Command line tools I'm using</title>
+    <updated>2026-03-02T07:19:50.970143+00:00</updated>
+    <author>
+      <name>Daniel Roy Greenfeld</name>
+      <email>daniel@feldroy.com</email>
+    </author>
+    <content type="html">&lt;ul&gt;
+&lt;li&gt;Ghostty&lt;/li&gt;
+&lt;li&gt;Atuin&lt;/li&gt;
+&lt;li&gt;Pad&lt;/li&gt;
+&lt;li&gt;bat&lt;/li&gt;
+&lt;li&gt;codex&lt;/li&gt;
+&lt;li&gt;claude&lt;/li&gt;
+&lt;/ul&gt;</content>
+    <link href="https://daniel.feldroy.com/posts/2026-03-command-line-tools-im-using"/>
+    <summary>The tools I use in my day-to-day coding efforts.</summary>
+    <category term="python"/>
+    <contributor>
+      <name>Daniel Roy Greenfeld</name>
+      <email>daniel@feldroy.com</email>
+    </contributor>
+    <published>2026-03-02T07:19:50.970143+00:00</published>
   </entry>
 </feed>

@@ -4,7 +4,6 @@ published: true
 slug: jinja2-quick-load-function
 tags:
 - python
-- jinja2
 - howto
 time_to_read: 1
 title: Jinja2 Quick Load Function

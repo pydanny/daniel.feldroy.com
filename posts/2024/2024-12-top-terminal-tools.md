@@ -8,6 +8,10 @@ tags:
 title: Top Terminal Tools
 ---
 
+NOTE: This post has been superseded by this more up-to-date post: [Top Terminal Tools in 2026](https://daniel.feldroy.com/posts/2026/2026-03-command-line-tools-im-using).
+
+When I sit down to code, these are the tools I use at this time on a daily basis. In alphabetical order:
+
 Links in the headers!
 
 # [Atuin](https://atuin.sh/)

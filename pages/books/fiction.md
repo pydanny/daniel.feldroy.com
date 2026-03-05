@@ -1,10 +1,11 @@
 ---
 title: Fiction Books
-author: "Daniel & often Audrey Roy Greenfeld"
 image: /public/images/shadowfall_abyssia_square.png
 twitter_image: /public/images/shadowfall_abyssia_square.png
 og_url: https://daniel.feldroy.com/books/fiction
 ---
+
+Works that are available to the public, which includes works in progress. I self-published five other books but they aren't currently available. I'm working on revising them for re-release, but in the meantime, here are the ones that are available.
 
 ## [Everyone Dies](https://www.wattpad.com/story/407480439-everyone-dies)
 

@@ -23,7 +23,9 @@ NOTE: "Everyone Dies" is a seven chapter novella that is from the point-of-view 
 
 <a href="https://www.amazon.com/Necronaut-Daniel-Roy-Greenfeld-ebook/dp/B08LZVXSPP?tag=mlinar-20"><img src="/public/images/necronaut-cover.png" alt="Necronaut" height="25%" width="25%"></a>
 
-*Dreading what she would see, Shirley looked over her shoulder. Something with too many legs and mouths scrabbled into the airlock.* -- Excerpt From: “Necronaut.” 
+*Dreading what she would see, Shirley looked over her shoulder. Something with too many legs and mouths scrabbled into the airlock.*
+
+-- Excerpt From: “Necronaut.” 
 
 Travel between the stars is a profitable enterprise, but takes humanity through the dark seas of fate. The journey is risky, and death is right outside the ships that ply the tortured waters between the stars. A realm where when in trouble, the fortunate die and everyone else is consumed body and soul. This horror novella is 33 pages long.
 

@@ -1,28 +1,31 @@
 ---
-title: Fiction Books by Daniel & Audrey Roy Greenfeld
-author: "Daniel & Audrey Roy Greenfeld"
+title: Fiction Books
+author: "Daniel & often Audrey Roy Greenfeld"
 image: /public/images/shadowfall_abyssia_square.png
 twitter_image: /public/images/shadowfall_abyssia_square.png
 og_url: https://daniel.feldroy.com/books/fiction
 ---
 
-# Shadowfall
+## [Everyone Dies](https://www.wattpad.com/story/407480439-everyone-dies)
 
-[![](https://f004.backblazeb2.com/file/daniel-feldroy-com/public/images/shadowfall_abyssia_square.png)](https://www.amazon.com/Shadowfall-A-Dark-Fantasy-Epic/dp/B0BRBR78N2?tag=mlinar-20)
+<a href="https://www.wattpad.com/story/407480439-everyone-dies"><img src="/public/images/everyone-dies-web.webp" alt="Everyone Dies" height="25%" width="25%"></a>
 
-Shadowfall: A dark fantasy epic by Daniel and Audrey Roy Greenfeld
+Aaron is a mercenary archer with a dark past, Bram makes his living winning contests of skill, Timo is a woodcutter, Melody is a swordswoman looking to prove herself, Trent is a veteran soldier with a great-grandchild on the way, Konstantina is a fire mage in service to the king, and Shai is a seer who knows how it all ends.
 
-In a world shrouded in darkness and danger, Vorath must rise to the challenge as a massive army led by a powerful sorcerer invades his homeland. As a young warrior in training, he is faced with impossible odds. With only his strength and courage to rely on, Vorath embarks on a perilous journey through a world filled with magic and monsters, where he must use all his cunning and wit to survive. Will he emerge victorious, or will he succumb to the shadows that threaten to engulf him?
+This story is how they live and die.
 
-[Available on Kindle Vella](https://www.amazon.com/Shadowfall-A-Dark-Fantasy-Epic/dp/B0BRBR78N2?tag=mlinar-20)
+**Everyone Dies** is a story for adults and contains adult themes of violence, despair, and betrayal. 
 
-<!-- # Necropolis
+NOTE: "Everyone Dies" is a seven chapter novella that is from the point-of-view of seven people. It's my dark fantasy take on Rashomon, the Akira Kurosawa story where a murder is told from different viewpoints. Once this novella is completed I will expand each POV scene into its own chapter, turning this novella into a full length novel which I'll distribute on Amazon and other places.
 
-[![](https://f004.backblazeb2.com/file/daniel-feldroy-com/public/images/2022-12-29-necropolis.jpg)](https://www.amazon.com/kindle-vella/story/B09P5C9V2F?tag=mlinar-20) 
+## [Necronaut](https://www.amazon.com/Necronaut-Daniel-Roy-Greenfeld-ebook/dp/B08LZVXSPP?tag=mlinar-20)
+
+<a href="https://www.amazon.com/Necronaut-Daniel-Roy-Greenfeld-ebook/dp/B08LZVXSPP?tag=mlinar-20"><img src="/public/images/necronaut-cover.png" alt="Necronaut" height="25%" width="25%"></a>
+
+*Dreading what she would see, Shirley looked over her shoulder. Something with too many legs and mouths scrabbled into the airlock.* -- Excerpt From: “Necronaut.” 
+
+Travel between the stars is a profitable enterprise, but takes humanity through the dark seas of fate. The journey is risky, and death is right outside the ships that ply the tortured waters between the stars. A realm where when in trouble, the fortunate die and everyone else is consumed body and soul. This horror novella is 33 pages long.
 
 
-Necropolis is a dystopian horror story where an undead ruler dominates the land. Against her, a rebellion has risen, people fighting against the current order willing to commit the greatest evils in their attempts to win. Thrown into this fight is a young woman named Toma, winning impossible battles thanks to a combination of courage and a destiny she does not want to serve.
 
-This is a serialization of a 40 chapter story written in 2020. New episodes are released every Monday.
-
-[Available on Kindle Vella](https://www.amazon.com/kindle-vella/story/B09P5C9V2F?tag=mlinar-20) -->
+![]()

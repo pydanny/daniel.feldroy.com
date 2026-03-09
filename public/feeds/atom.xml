@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
   <id>https://daniel.feldroy.com/</id>
   <title>Inside the head of Daniel Roy Greenfeld</title>
-  <updated>2026-03-09T03:23:57.426602+00:00</updated>
+  <updated>2026-03-09T03:24:57.754145+00:00</updated>
   <author>
     <name>Daniel Roy Greenfeld</name>
     <email>daniel@feldroy.com</email>
@@ -821,7 +821,7 @@ Available&lt;span class="w"&gt; &lt;/span&gt;recipes:
 &lt;p&gt;If you show something important early in a story, it should matter later.&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;p&gt;I've used this technique for years but didn't know it had a name until today. It's similar to foreshadowing, and objectively just a synonym of that word. My personal interpretation is that it has to do with specific concrete objects or behaviors rather.&lt;/p&gt;
-&lt;p&gt;One of my favorite uses of Checkov's Gun is in early cinema as well as some Hong Kong action films where the camera will show a background object early in a fight scene. That background object will then be used in some way later in the match. Buster Keaton, Jackie Chan, and Sammo Hung are the grandmasters of this technique.&lt;/p&gt;</content>
+&lt;p&gt;One of my favorite uses of Checkov's Gun is in early cinema as well as some Hong Kong action films where the camera will show a background object early in a dramatic scene. That background object will then be used in some way later in the action. Buster Keaton, Jackie Chan, and Sammo Hung are the grandmasters of this technique.&lt;/p&gt;</content>
     <link href="https://daniel.feldroy.com/posts/til-2026-03-checkovs-gun"/>
     <summary>A powerful technique used in storytelling.</summary>
     <category term="TIL"/>

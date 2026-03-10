@@ -12,7 +12,7 @@ def Socials(title, description, image, twitter_image, url):
         air.Meta(property="og:title", content=title),
         air.Meta(property="og:description", content=description),
         air.Meta(name="twitter:image", content=twitter_image),
-        air.Meta(name="twitter:card", content="summary"),
+        air.Meta(name="twitter:card", content="summary_large_image"),
         air.Meta(name="twitter:title", content=title),
         air.Meta(name="twitter:description", content=description),
         air.Link(rel="canonical", href=url),

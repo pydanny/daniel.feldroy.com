@@ -30,7 +30,7 @@ A grimdark fantasy for adult readers containing violence, betrayal, and despair.
 
 ## About the book
 
-"Everyone Dies" is told from the point-of-view of seven people. It's a dark fantasy story based on an idea I've wanted to write for years: a story where all the protagonists die. While a POV story, it is in some ways inspired by [Akira Kurosawa's Rashomon](https://en.wikipedia.org/wiki/Rashomon). Some of the overlap between chapters is to lean into the idea of multiple points of view of the same event. At 20.5k words this is a novella told in thirty chapters. 
+"Everyone Dies" is told from the point-of-view of seven people. It's a dark fantasy story based on an idea I've wanted to write for years: a story where all the protagonists die. While a POV story, it is in some ways inspired by [Akira Kurosawa's Rashomon](https://en.wikipedia.org/wiki/Rashomon). Some of the overlap between chapters was written to lean into the idea of multiple points of view of the same event. At 20.5k words this is a novella told in thirty chapters. 
 
 ---
 

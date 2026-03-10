@@ -9,7 +9,7 @@ Works that are available to the public, which includes works in progress. I self
 
 ## [Everyone Dies](/books/everyone-dies)
 
-<a href="/books/everyone-dies"><img src="/public/images/everyone-dies-web.webp" alt="Everyone Dies" height="25%" width="25%"></a>
+<a href="/books/everyone-dies"><img src="https://daniel.feldroy.com/public/images/everyone-dies-web.webp"" alt="Everyone Dies" height="25%" width="25%"></a>
 
 - Aaron, a mercenary archer with a murderous past.
 - Bram, a man who lives by winning contests of skill.

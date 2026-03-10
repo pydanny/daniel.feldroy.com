@@ -1,6 +1,8 @@
 ---
 title: "Everyone Dies"
 author: by Daniel Roy Greenfeld writing as Anduril Harkness
+image: "/public/images/everyone-dies-web.webp"
+twitter_image: "/public/images/everyone-dies-web.webp"
 ---
 
 # Chapter 1 \- Aaron

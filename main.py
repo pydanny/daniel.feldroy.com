@@ -178,6 +178,7 @@ def MarkdownPage(slug: str):
         description=content["attributes"].get("description", "slug"),
         url=f"https://daniel.feldroy.com/{slug}",
         image=content["attributes"].get("image", default_social_image),
+        twitter_image=content["attributes"].get("twitter_image", default_social_image),
     )
 
 

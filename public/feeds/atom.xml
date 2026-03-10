@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
   <id>https://daniel.feldroy.com/</id>
   <title>Inside the head of Daniel Roy Greenfeld</title>
-  <updated>2026-03-09T03:24:57.754145+00:00</updated>
+  <updated>2026-03-10T03:45:21.228312+00:00</updated>
   <author>
     <name>Daniel Roy Greenfeld</name>
     <email>daniel@feldroy.com</email>
@@ -826,6 +826,7 @@ Available&lt;span class="w"&gt; &lt;/span&gt;recipes:
     <summary>A powerful technique used in storytelling.</summary>
     <category term="TIL"/>
     <category term="book"/>
+    <category term="writing"/>
     <contributor>
       <name>Daniel Roy Greenfeld</name>
       <email>daniel@feldroy.com</email>

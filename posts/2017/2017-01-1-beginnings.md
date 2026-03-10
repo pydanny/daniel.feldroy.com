@@ -5,7 +5,7 @@ published: true
 slug: 2017-01-1-beginnings
 tags:
 - rough draft
-- writings
+- writing
 - siege
 - legacy-danielroygreenfeld
 time_to_read: 5

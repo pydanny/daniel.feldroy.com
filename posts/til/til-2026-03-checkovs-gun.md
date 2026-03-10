@@ -6,6 +6,7 @@ published: true
 tags:
 - TIL
 - book
+- writing
 title: "TIL: Checkov's Gun"
 twitter_image: https://f004.backblazeb2.com/file/daniel-feldroy-com/public/logos/til-1.png
 ---

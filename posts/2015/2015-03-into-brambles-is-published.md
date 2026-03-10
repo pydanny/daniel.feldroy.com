@@ -5,7 +5,7 @@ published: true
 slug: 2015-03-into-brambles-is-published
 tags:
   - The Brambles
-  - writings
+  - writing
   - legacy-danielroygreenfeld
 time_to_read: 5
 title: Into the Brambles is Published!
@@ -14,8 +14,6 @@ title: Into the Brambles is Published!
 After a year of writing and four months of thorough revision, I'm excited to announce that my first fiction book is now out!
 
 As of today, it's available [in Kindle format on Amazon](https://mybook.to/itb). The name of the book is <i>Into the Brambles</i>. It's the first book of what will be a longer <i>The Brambles</i> fantasy epic.
-
-<table align="center" cellpadding="0" cellspacing="0" class="tr-caption-container" style="margin-left: auto; margin-right: auto; text-align: center;"><tbody><tr><td style="text-align: center;"><a href="https://mybook.to/itb" style="margin-left: auto; margin-right: auto;"><img border="0" height="640" src="https://2.bp.blogspot.com/-NjCON1KCzzQ/VRbF3SZiCBI/AAAAAAAAEyk/yjNWHae1FmM/s1600/itb-521x833.png" width="400" /></a></td></tr><tr><td class="tr-caption" style="text-align: center;">The cover of <i>Into the Brambles!</i></td></tr></tbody></table>
 
 <i>The world was ancient, scarred from a thousand wars between gods, immortals, and heroes. Old grudges have faded but are not forgotten.
 
@@ -29,9 +27,6 @@ In the book, I explore three primary characters. Like us, they are victims of ci
 Even though I began putting pen to parchment (or keyboard to file) a year and a half ago, elements of the story have been brewing in my head for much longer. Writing the book involved a New Year's Resolution, the encouragement and editing of my wife, family, and friends, plus a lot of coffee.
 
 If you would like to buy my book, you can do so on [Amazon](https://mybook.to/itb) for the introductory price of $2.99, the same price as a cup of coffee. The book is also in the Kindle Unlimited program, at least for now.
-
-<table align="center" cellpadding="0" cellspacing="0" class="tr-caption-container" style="margin-left: auto; margin-right: auto; text-align: center;"><tbody><tr><td style="text-align: center;"><a href="https://mybook.to/itb" style="margin-left: auto; margin-right: auto;"><img border="0" height="488" src="https://3.bp.blogspot.com/-K5Kf1Zm86SA/VRcJ5mc9naI/AAAAAAAAEy4/uEyAecykKzY/s1600/itb-on-amazon-detail.png" width="640" /></a></td></tr><tr><td class="tr-caption" style="text-align: center;">
-</td></tr></tbody></table>
 
 ---
 

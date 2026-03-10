@@ -120,6 +120,8 @@ def Layout(
                         air.A("Python", href="/feeds/python.atom.xml", target="_blank"),
                         ", ",
                         air.A("TIL", href="/feeds/til.atom.xml", target="_blank"),
+                        ", ",
+                        air.A("Writing", href="/feeds/writing.atom.xml", target="_blank"),
                     ),
                     air.P(
                         f"All rights reserved {datetime.now().year}, Daniel Roy Greenfeld"

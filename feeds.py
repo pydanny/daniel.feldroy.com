@@ -33,7 +33,7 @@ def filter_posts_by_tag(posts: list[dict], tag: str):
     Generator function that filters posts by a single tag.
     """
     for post in posts:
-        post_tags = [x.lower() for x in post.get("tags", [])]
+        post_tags = [x.lower() for x in post['attributes'].get("tags", [])]
         if tag in post_tags:
             yield post
 
@@ -80,6 +80,7 @@ def add_entry(fg, raw):
 
 
 def build_feed(content_tag: str | None = None):
+    print(content_tag)
     fg = FeedGenerator()
     fg.id("https://daniel.feldroy.com/")
     fg.author(
@@ -122,6 +123,7 @@ if __name__ == "__main__":
         build_feed("django")
         build_feed("python")
         build_feed("til")
+        build_feed("writing")
     else:
         content_tag = sys.argv[1]
         build_feed(sys.argv[1])

@@ -9,6 +9,7 @@ tags:
 - Vue.js
 - react
 - air
+- writing
 title: Over Twenty Years of Writing Tools
 ---
 
@@ -30,7 +31,7 @@ From 2004 to 2009, I used LiveJournal to put down my thoughts, and there I wrote
 
 ## Blogger 2007-2012
 
-In 2007, blogs had taken off, and it was clear that professionally having my own blog was important. I decided to keep things simple and use Blogger to host my [first professional blog](https://pydanny.blogspot.com/). I opened a few other blogger sites for other purposes, but the main one was [PyDanny](https://pydanny.blogspot.com/. 
+In 2007, blogs had taken off, and it was clear that professionally having my own blog was important. I decided to keep things simple and use Blogger to host my [first professional blog](https://pydanny.blogspot.com/). I opened a few other blogger sites for other purposes, but the main one was [PyDanny](https://pydanny.blogspot.com/). 
 
 This was my formative years of Python (and Django). Everything was bright and shiny and new. I met [Audrey](https://audrey.feldroy.com) and fell in love with her.
 

@@ -6,7 +6,7 @@ twitter_image: "https://daniel.feldroy.com/public/images/everyone-dies-web.webp"
 description: "A dark fantasy story where all the characters die by the end."
 ---
 
-<a href="/books/everyone-dies"><img src="https://daniel.feldroy.com/public/images/everyone-dies-web.webp"" alt="Everyone Dies" height="25%" width="25%"></a>
+<a href="/books/everyone-dies"><img src="https://daniel.feldroy.com/public/images/everyone-dies-web.webp" alt="Everyone Dies" height="25%" width="25%"></a>
 
 - Aaron, a mercenary archer with a murderous past.
 - Bram, a man who lives by winning contests of skill.

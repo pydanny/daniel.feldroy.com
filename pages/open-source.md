@@ -8,9 +8,14 @@ _My open-source efforts: tools, libraries, and infrastructure I have created and
 
 ## Current Projects
 
+### [Pad](https://github.com/feldroy/pad) 📝
+
+Pad is an easy to use terminal code editor for those of us who aren't into vim. I created it to scratch an itch, that is to have a terminal text editor with my preferred keybindings. 
+
+
 ### [Air](https://github.com/feldroy/air) 💨
 
-I'm the lead on a new Python web framework that breathes fresh air into Python web development. Built with FastAPI, Starlette, and Pydantic. Inline docstrings and long form documentation given all the attention we give to our tech books, so great for both humans and LLMs.
+For a while I was the lead on a new Python web framework that breathes fresh air into Python web development. Now I submit the odd feature. Built with FastAPI, Starlette, and Pydantic. Inline docstrings and long form documentation given all the attention we give to our tech books, so great for both humans and LLMs.
 
 - **Powered by FastAPI** - Designed to work with FastAPI so you can serve your API and web pages from one app
 - **Fast to code** - Tons of intuitive shortcuts and optimizations designed to expedite coding HTML with FastAPI

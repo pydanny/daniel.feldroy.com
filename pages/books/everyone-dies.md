@@ -1,6 +1,8 @@
 ---
 title: Everyone Dies
 author: by Daniel Roy Greenfeld writing as Anduril Harkness
+image: "/public/images/everyone-dies-web.webp"
+twitter_image: "/public/images/everyone-dies-web.webp"
 ---
 
 <a href="/books/everyone-dies"><img src="/public/images/everyone-dies-web.webp" alt="Everyone Dies" height="25%" width="25%"></a>
@@ -27,7 +29,7 @@ A grimdark fantasy for adult readers containing violence, betrayal, and despair.
 
 ## About the book
 
-"Everyone Dies" is told from the point-of-view of seven people. It's my dark fantasy take on [Rashomon](https://en.wikipedia.org/wiki/Rashomon), the Akira Kurosawa story where a murder is told from different viewpoints. At 20.5k words this is a novella told in thirty chapters. 
+"Everyone Dies" is told from the point-of-view of seven people. It's a dark fantasy story based on an idea I've wanted to write for years: a story where all the protagonists die. While a POV story, it is in some ways inspired by [Akira Kurosawa's Rashomon](https://en.wikipedia.org/wiki/Rashomon). Some of the overlap between chapters is to lean into the idea of multiple points of view of the same event. At 20.5k words this is a novella told in thirty chapters. 
 
 ---
 

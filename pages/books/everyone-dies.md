@@ -3,6 +3,7 @@ title: Everyone Dies
 author: by Daniel Roy Greenfeld writing as Anduril Harkness
 image: "/public/images/everyone-dies-web.webp"
 twitter_image: "/public/images/everyone-dies-web.webp"
+description: "A dark fantasy story where all the characters die by the end."
 ---
 
 <a href="/books/everyone-dies"><img src="/public/images/everyone-dies-web.webp" alt="Everyone Dies" height="25%" width="25%"></a>

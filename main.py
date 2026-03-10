@@ -175,7 +175,7 @@ def MarkdownPage(slug: str):
             air.Div(air.Raw(markdown(content["body"]))),
         ),
         title=content["attributes"].get("title", slug),
-        description=content["attributes"].get("description", "slug"),
+        description=content["attributes"].get("description", ""),
         url=f"https://daniel.feldroy.com/{slug}",
         image=content["attributes"].get("image", default_social_image),
         twitter_image=content["attributes"].get("twitter_image", default_social_image),

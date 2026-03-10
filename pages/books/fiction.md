@@ -7,17 +7,27 @@ og_url: https://daniel.feldroy.com/books/fiction
 
 Works that are available to the public, which includes works in progress. I self-published five other books but they aren't currently available. I'm working on revising them for re-release, but in the meantime, here are the ones that are available.
 
-## [Everyone Dies](https://www.wattpad.com/story/407480439-everyone-dies)
+## [Everyone Dies](/books/everyone-dies)
 
-<a href="https://www.wattpad.com/story/407480439-everyone-dies"><img src="/public/images/everyone-dies-web.webp" alt="Everyone Dies" height="25%" width="25%"></a>
+<a href="/books/everyone-dies"><img src="/public/images/everyone-dies-web.webp" alt="Everyone Dies" height="25%" width="25%"></a>
 
-Aaron is a mercenary archer with a dark past, Bram makes his living winning contests of skill, Timo is a woodcutter, Melody is a swordswoman looking to prove herself, Trent is a veteran soldier with a great-grandchild on the way, Konstantina is a fire mage in service to the king, and Shai is a seer who knows how it all ends.
+- Aaron, a mercenary archer with a murderous past.
+- Bram, a man who lives by winning contests of skill.
+- Timo, a quiet woodcutter with no taste for war.
+- Melody, a young swordswoman desperate to prove she belongs.
+- Trent, a weary soldier awaiting the birth of his great-grandchild.
+- Konstantina, a fire mage sworn to the king’s service.
+- Shai, a seer cursed with the knowledge of what is to come.
 
-This story is how they live and die.
+They travel together, bound by circumstance, loyalty, and fragile hope.
 
-**Everyone Dies** is a story for adults and contains adult themes of violence, despair, and betrayal. 
+But their fates are already sealed.
 
-NOTE: "Everyone Dies" is a seven chapter novella that is from the point-of-view of seven people. It's my dark fantasy take on Rashomon, the Akira Kurosawa story where a murder is told from different viewpoints. Once this novella is completed I will expand each POV scene into its own chapter, turning this novella into a full length novel which I'll distribute on Amazon and other places.
+Because in the end...
+
+Everyone dies.
+
+A grimdark fantasy for adult readers containing violence, betrayal, and despair.
 
 ## [Necronaut](https://www.amazon.com/Necronaut-Daniel-Roy-Greenfeld-ebook/dp/B08LZVXSPP?tag=mlinar-20)
 

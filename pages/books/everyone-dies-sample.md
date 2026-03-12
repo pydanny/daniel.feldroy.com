@@ -8,15 +8,17 @@ description: "Seven chapter preview of a dark fantasy story where all the charac
 
 # Chapter 1 \- Aaron
 
-Aaron grinned. He had gotten this far, beating out larger men. His wiry strength was the result of a youth spent training to use the most powerful bows. He squatted down, wrapped his arms around the small boulder, and pulled it into his bare chest. He grunted and pushed his legs straight while carefully arching his back just a tad. He took a step forward, lifting the rock over the bar, and let go. He took a step back, lifted his arms, and drank in the roar of the crowd.
+Aaron grinned.
 
-“Move out of the way,” growled the next contestant. He was a giant, bald, blocky figure of a man whose bare chest revealed a powerful body. His craggy face had a bent nose from too many hits, and his massive hands had fingers that hadn't healed correctly. Aaron knew him as Bram, a professional competitor in wrestling, staff fighting, and throwing. His technique for lifting the rock mirrored that of Aaron’s, as did his success.
+He had gotten this far, beating out larger men. His wiry strength was the result of a youth spent training to use the most powerful bows. He squatted down, wrapped his arms around the small boulder, and pulled it into his bare chest. He grunted and pushed his legs straight while carefully arching his back just a tad. He took a step forward, lifting the rock over the bar, and let go. He took a step back, lifted his arms, and drank in the roar of the crowd.
+
+“Move out of the way,” growled the next contestant. He was a giant, bald, blocky figure of a man with  a powerful body. His craggy face had a bent nose from too many hits, and his massive hands had fingers that hadn't healed correctly. Aaron knew him as Bram, a professional competitor in wrestling, staff fighting, and throwing. His technique for lifting the rock mirrored that of Aaron’s, as did his success.
 
 While the crowd cheered another man stepped forward. Aaron didn’t know him but recognized the strength in his workman’s frame. His face was ruddy and simple. He was also without a shirt, and his patched trousers were held up with a piece of old rope. He too made short work of the lifting rock, hefting it with explosive power.
 
 “We have a three-way tie!” shouted the judge when the crowd quieted down. “But we only have one prize. These three strong men will go more rounds until two of them can’t lift the boulder over the bar.”
 
-Aaron grinned once more at the crowd. Inside he felt some doubt about winning this event. Archery and murder were his trade, not lifting bodies or things the way the other two men clearly did. Besides, he had already won the archery contest, and had won a prize of coin already. The day wouldn’t be a total waste. 
+Aaron grinned once more at the crowd. Inside he felt some doubt about winning this event. Archery and murder were his trade, not lifting bodies or things the way the other two men clearly did. Besides, he had already won the archery contest, and had scored of a prize of coin for himself. The day wouldn’t be a total waste. 
 
 “You’re up,” said the judge, pointing a finger at Aaron. The archer thought of giving up, but then saw a pretty woman looking at him with eager eyes. He knew he was handsome and her attention might lead to something later. So he nodded and stepped forward. 
 
@@ -28,7 +30,7 @@ As Melody walked around the fair, through a crowd of onlookers she saw big men t
 
 Her own contest, longsword play, was coming up soon, so she kept walking. A brisk walk followed by lunges was her preferred method for warming up.
 
-Melody walked past vendors who called for her to buy their wares and she marked a couple food stalls for later. If she did well enough to gain employment with the King she would sample their wares. If she didn’t do well then she had a half loaf of coarse bread and a piece of cheese left over from breakfast. Confident she would do well, Melody also knew that prudence would keep her belly filled longer.
+Melody walked past vendors who called for her to buy their wares and she marked a couple food stalls for later. If she did well enough to gain employment with the King she would sample their goods. If she didn’t do well then she had a half loaf of coarse bread and a piece of cheese left over from breakfast. Confident she would do well, Melody also knew that prudence would keep her belly filled longer.
 
 As she walked through the fairground people moved out of her way. Most of them were peasants and Melody was tall for a woman and wore metal armor. Over her shoulder were slung both of her longswords, the sharp one for fighting and the dull one for practice and competitions like this. The sharp one was peace bonded, tied into its scabbard.
 
@@ -78,7 +80,7 @@ At that moment Trent wished judges could bet on participants. He would have bet 
 
 # Chapter 4 \- Timo
 
-Timo the woodcutter marveled at the quality of the wood used to construct the table on which their food was served. Black walnut cut into wide planks and finished to bring out the rich, dark, chocolate hues. Even stains and knife cuts from years of being used to serve food couldn’t diminish the lovely quality of the table.
+Timo the woodcutter marveled at the quality of the wood used to construct the table on which their food was served. Black walnut cut into wide planks and finished to bring out the rich, dark, chocolate hues. Even stains and knife cuts from years of being used to serve food couldn’t diminish the lovely craftsmanship of the table.
 
 He took another bite of the meat pie on his plate. The crust was perfectly flaky, the meat fresh, and the sauce rich with the luxurious taste of wine. He washed it down with excellent beer served in a tin mug. He had never eaten so well.
 
@@ -114,7 +116,7 @@ They passed through a door and entered a large circular room. Dark purple banner
 
 Bram leaned his heavy ash staff against his shoulder and checked his knife bandolier. He looked up and for a moment gazed hungrily at the shapely form of the young-seeming female mage as she chanted. Even her robe couldn’t hide her figure. Not wanting to antagonize a wizard with the eyes of the ages, he turned away to focus on the others.
 
-Timo the woodcutter gawked openly at Konstantina. The man was an addled fool, but strong beyond measure. In his massive hands he carried a wood cutting axe. Like Bram he was wearing borrowed armor, one of the king’s gambesons. This was padded cloth armor that would give him some protection. Bram doubted the man understood the gravity of what was happening, that they were being sent on what was probably a fool’s errand to stop the Liche Queen. 
+Timo the woodcutter gawked openly at Konstantina. The man was an addled fool, but strong beyond measure. In his massive hands he carried a wood cutting axe. Like Bram he was wearing borrowed armor, one of the king’s gambesons. This was padded cloth jacket that would give him some protection. Bram doubted the man understood the gravity of what was happening, that they were being sent on what was probably a fool’s errand to stop the Liche Queen. 
 
 The king’s soothsayer, Shai, held high his staff carved with intricate designs. In a measured voice, he spoke incomprehensible words that Konstantina listened to carefully. The seer’s face was serenely calm, and seeing that instilled confidence in Bram. If anyone knew how this was going to turn out, it was this man.
 
@@ -124,7 +126,7 @@ The old warrior, Trent, looked grim and armed with enough gear to fight a war by
 
 Finally he looked at the swordswoman, Melody. He had heard of her, an up-and-coming tournament fighter in swords who had made a name in the same war as Aaron. Her head came up to his shoulder — considering his own height, that made her tall even for a man. She wore her armor as if it was weightless. It was plate over mail over gambeson with a helmet that had a grid to protect her face. She hadn’t put it on yet, so he had a chance to once more look at her face. The swordswoman wasn’t as fair as the mage Konstantina. Her face was sharper, with angular cheekbones. 
 
-The flames in the six braziers rushed forward into the center of the room, centering on Konstantina. She wove her hands in an intricate pattern and the flames formed a ten-foot-high vertical circle in front of her. In the center the flames parted and on the other side was another place. A dozen or so haggard, man-like creatures waving chopping swords and axes in the distance were turning toward them. The part in the flames widened to the point that the circle could be passed through by a full grown person.
+The flames in the six braziers rushed forward into the center of the room, centering on Konstantina. She wove her hands in an intricate pattern and the fire formed a ten-foot-high vertical circle in front of her. In the center the flames parted and on the other side was another place. A dozen or so haggard, man-like creatures waving chopping swords and axes in the distance were turning toward them. The part in the flames widened to the point that the circle could be passed through by a full grown person.
 
 “The portal is open, go!” Konstantina shouted.
 
@@ -242,4 +244,4 @@ Doomed. They were all doomed.
 
 # Thank you for reading!
 
-If you wish to read the entire book before it is released on Amazon, please contact me directly for a review copy.
+If you wish to read the entire book before it is released on Amazon, please [request an advanced review copy](https://storyoriginapp.com/reviewcopies/48e4c3d5-67a9-44c2-b199-a165c8a851ad).

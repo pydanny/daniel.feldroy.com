@@ -40,4 +40,4 @@ Eventually the book will be published on Amazon. In the meantime you can:
 
 - Read the [first seven chapters on Wattpad](https://www.wattpad.com/story/407480439-everyone-dies)
 - Read the [first seven chapters here on my personal site](/books/everyone-dies-sample)
-- Request a private review copy of the entire book by contacting me directly
+- [Request an advancd review copy of the entire book](https://storyoriginapp.com/reviewcopies/48e4c3d5-67a9-44c2-b199-a165c8a851ad)

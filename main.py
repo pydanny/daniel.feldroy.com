@@ -559,7 +559,7 @@ async def fitness():
 
     return Layout(
         air.Title("Fitness Tracking"),
-        air.Script(src="https://cdn.plot.ly/plotly-2.32.0.min.js"),
+        air.Script(src="https://cdn.plot.ly/plotly-3.4.0.min.js", charset="utf-8"),
         air.Section(
             air.P(
                 "Wt Goal: ",

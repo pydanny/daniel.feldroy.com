@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
   <id>https://daniel.feldroy.com/</id>
   <title>Inside the head of Daniel Roy Greenfeld</title>
-  <updated>2026-03-10T05:59:28.460864+00:00</updated>
+  <updated>2026-03-13T01:09:28.250414+00:00</updated>
   <author>
     <name>Daniel Roy Greenfeld</name>
     <email>daniel@feldroy.com</email>
@@ -12,82 +12,6 @@
   <generator uri="https://lkiesow.github.io/python-feedgen" version="1.0.0">python-feedgen</generator>
   <logo>https://f004.backblazeb2.com/file/daniel-feldroy-com/public/images/profile.jpg</logo>
   <rights>All rights reserved 2026, Daniel Roy Greenfeld</rights>
-  <entry>
-    <id>https://daniel.feldroy.com/posts/2025-10-uv-just-for-testing-multiple-python-versions</id>
-    <title>uv+just for testing multiple Python versions</title>
-    <updated>2025-10-22T13:00:56.868382+00:00</updated>
-    <author>
-      <name>Daniel Roy Greenfeld</name>
-      <email>daniel@feldroy.com</email>
-    </author>
-    <content type="html">&lt;p&gt;For years I used tox and nox to test my Python projects against multiple Python versions on multiple operating systems. While both tools are powerful, they require configuration complex enough that I usually just copy/paste it from project to project. In comparison, &lt;code&gt;uv+just&lt;/code&gt; isn't just a completely workable replacement, it's simple enough that I can either memorize the commands or if I forget can look up in moments.&lt;/p&gt;
-&lt;p&gt;An improvement on &lt;a href="https://daniel.feldroy.com/posts/2025-07-uv-run-for-testing-python-versions"&gt;this post&lt;/a&gt;, which just covers the &lt;code&gt;uv&lt;/code&gt; side.&lt;/p&gt;
-&lt;h2 id="what-is-just"&gt;What is Just?&lt;/h2&gt;
-&lt;p&gt;&lt;a href="https://github.com/casey/just"&gt;Just&lt;/a&gt; is a rust-powered command runner inspired by &lt;a href="https://en.wikipedia.org/wiki/Make_(software)"&gt;Make&lt;/a&gt; but with a slightly simpler syntax. Where Make was originally designed to build executable code, just focuses more on being a command-runner. Also, &lt;code&gt;Just&lt;/code&gt; benefits from the lessons learned by Make. The result is an easier-to-use tool that is also much easier to get running on Windows than &lt;code&gt;Make&lt;/code&gt;. The way &lt;code&gt;Just&lt;/code&gt; works is you define commands in a &lt;code&gt;Justfile&lt;/code&gt; that can be easily executed from the command line. It can be installed from pypi as the &lt;a href="https://pypi.org/project/rust-just/"&gt;rust-just&lt;/a&gt; package.&lt;/p&gt;
-&lt;h2 id="assumptions-about-our-project"&gt;Assumptions about our project&lt;/h2&gt;
-&lt;ol&gt;
-&lt;li&gt;Uses &lt;code&gt;pytest&lt;/code&gt; for testing&lt;/li&gt;
-&lt;li&gt;Has a &lt;code&gt;tests/&lt;/code&gt; directory containing the test cases&lt;/li&gt;
-&lt;li&gt;Supposed to work with both Python 3.13 and 3.14&lt;/li&gt;
-&lt;/ol&gt;
-&lt;h2 id="installing-dependencies-using-pyprojecttoml"&gt;Installing dependencies using pyproject.toml&lt;/h2&gt;
-&lt;p&gt;Make sure to include the necessary dependencies in your &lt;code&gt;pyproject.toml&lt;/code&gt; file:&lt;/p&gt;
-&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="k"&gt;[dependency-groups]&lt;/span&gt;
-&lt;span class="n"&gt;dev&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;
-&lt;span class="w"&gt;    &lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;rust-just&amp;quot;&lt;/span&gt;
-&lt;span class="p"&gt;]&lt;/span&gt;
-
-&lt;span class="n"&gt;test&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;
-&lt;span class="w"&gt;    &lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;pytest&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
-&lt;span class="p"&gt;]&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;p&gt;Once in your &lt;code&gt;pyproject.toml&lt;/code&gt; get your development dependencies ready with this command:&lt;/p&gt;
-&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;uv&lt;span class="w"&gt; &lt;/span&gt;sync&lt;span class="w"&gt; &lt;/span&gt;--group&lt;span class="w"&gt; &lt;/span&gt;dev
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;h2 id="building-the-justfile"&gt;Building the Justfile&lt;/h2&gt;
-&lt;p&gt;Justfiles are simple to write. Create a file named &lt;code&gt;Justfile&lt;/code&gt; in the root of your project with the following content:&lt;/p&gt;
-&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="c"&gt;# Run all the tests against multiple Python versions&lt;/span&gt;
-&lt;span class="nf"&gt;test&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;
-&lt;span class="w"&gt;    &lt;/span&gt;uv&lt;span class="w"&gt; &lt;/span&gt;run&lt;span class="w"&gt; &lt;/span&gt;--python&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="m"&gt;3&lt;/span&gt;.13&lt;span class="w"&gt; &lt;/span&gt;--group&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nb"&gt;test&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;pytest&lt;span class="w"&gt; &lt;/span&gt;tests/
-&lt;span class="w"&gt;    &lt;/span&gt;uv&lt;span class="w"&gt; &lt;/span&gt;run&lt;span class="w"&gt; &lt;/span&gt;--python&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="m"&gt;3&lt;/span&gt;.14&lt;span class="w"&gt; &lt;/span&gt;--group&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nb"&gt;test&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;pytest&lt;span class="w"&gt; &lt;/span&gt;tests/
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;p&gt;If you have more Python versions to test against, simply add more &lt;code&gt;uv run&lt;/code&gt; lines with the desired version. &lt;/p&gt;
-&lt;h2 id="running-the-tests"&gt;Running the tests&lt;/h2&gt;
-&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;just&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nb"&gt;test&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;p&gt;And that's it! You now have a simple and effective way to test your Python projects against multiple Python versions using &lt;code&gt;uv&lt;/code&gt; and &lt;code&gt;just&lt;/code&gt;, without the overhead of more complex tools like &lt;code&gt;tox&lt;/code&gt; or &lt;code&gt;nox&lt;/code&gt;. This setup is easy to maintain and adapt as your project evolves.&lt;/p&gt;
-&lt;h2 id="just-bonus-feature-command-lookup"&gt;Just bonus feature: command lookup&lt;/h2&gt;
-&lt;p&gt;A nice feature about &lt;code&gt;just&lt;/code&gt; is you can trivially look up the commands you've authored with &lt;code&gt;just -l&lt;/code&gt;, and leading docstrings are included in the display:&lt;/p&gt;
-&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;$&lt;span class="w"&gt; &lt;/span&gt;just&lt;span class="w"&gt; &lt;/span&gt;-l
-Available&lt;span class="w"&gt; &lt;/span&gt;recipes:
-&lt;span class="w"&gt;    &lt;/span&gt;&lt;span class="nb"&gt;test&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="c1"&gt;# Run all the tests against multiple Python versions&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;p&gt;If you don't specify a command, &lt;code&gt;just&lt;/code&gt; will run the first one it finds in the file. This means you can set up a default command to run when you just type &lt;code&gt;just&lt;/code&gt; with no arguments. What I like to do is put a &lt;code&gt;list&lt;/code&gt; action as the first command. By that I mean something like this:&lt;/p&gt;
-&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="c"&gt;# List all the commands in this file&lt;/span&gt;
-&lt;span class="nf"&gt;list&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;
-&lt;span class="w"&gt;    &lt;/span&gt;just&lt;span class="w"&gt; &lt;/span&gt;-l
-
-&lt;span class="c"&gt;# Run all the tests against multiple Python versions&lt;/span&gt;
-&lt;span class="nf"&gt;test&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;
-&lt;span class="w"&gt;    &lt;/span&gt;uv&lt;span class="w"&gt; &lt;/span&gt;run&lt;span class="w"&gt; &lt;/span&gt;--python&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="m"&gt;3&lt;/span&gt;.13&lt;span class="w"&gt; &lt;/span&gt;--group&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nb"&gt;test&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;pytest&lt;span class="w"&gt; &lt;/span&gt;tests/
-&lt;span class="w"&gt;    &lt;/span&gt;uv&lt;span class="w"&gt; &lt;/span&gt;run&lt;span class="w"&gt; &lt;/span&gt;--python&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="m"&gt;3&lt;/span&gt;.14&lt;span class="w"&gt; &lt;/span&gt;--group&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nb"&gt;test&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;pytest&lt;span class="w"&gt; &lt;/span&gt;tests/
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</content>
-    <link href="https://daniel.feldroy.com/posts/2025-10-uv-just-for-testing-multiple-python-versions"/>
-    <summary>In the old days we relied on tox and nox to test a Python project against multiple Python versions, now we can lean on uv+just. For most projects this keeps our configuration straightforward and reduces dependencies.</summary>
-    <category term="python"/>
-    <category term="uv"/>
-    <category term="howto"/>
-    <contributor>
-      <name>Daniel Roy Greenfeld</name>
-      <email>daniel@feldroy.com</email>
-    </contributor>
-    <published>2025-10-22T13:00:56.868382+00:00</published>
-  </entry>
   <entry>
     <id>https://daniel.feldroy.com/posts/2025-11-visiting-tokyo-japan-from-november-12-to-24</id>
     <title>Visiting Tokyo, Japan from November 12 to 24</title>
@@ -687,5 +611,52 @@ Available&lt;span class="w"&gt; &lt;/span&gt;recipes:
       <email>daniel@feldroy.com</email>
     </contributor>
     <published>2026-03-10T05:54:45.072695+00:00</published>
+  </entry>
+  <entry>
+    <id>https://daniel.feldroy.com/posts/2026-03-to-return-a-value-or-not-return-a-value</id>
+    <title>To return a value or not return a value</title>
+    <updated>2026-03-13T02:41:19.009972+00:00</updated>
+    <author>
+      <name>Daniel Roy Greenfeld</name>
+      <email>daniel@feldroy.com</email>
+    </author>
+    <content type="html">&lt;p&gt;I believe any function that changes a variable should return a variable. For example, I argue that Python's &lt;code&gt;random.shuffle()&lt;/code&gt; is  flawed. This is how &lt;code&gt;random.shuffle()&lt;/code&gt; unfortunately works:&lt;/p&gt;
+&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="kn"&gt;import&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nn"&gt;random&lt;/span&gt;
+
+&lt;span class="n"&gt;my_list&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;2&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;3&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;4&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;5&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;
+&lt;span class="nb"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="sa"&gt;f&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;Original list: &lt;/span&gt;&lt;span class="si"&gt;{&lt;/span&gt;&lt;span class="n"&gt;my_list&lt;/span&gt;&lt;span class="si"&gt;}&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+
+&lt;span class="c1"&gt;# Change happens in place&lt;/span&gt;
+&lt;span class="c1"&gt;# my_list is forever changed&lt;/span&gt;
+&lt;span class="n"&gt;random&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;shuffle&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;my_list&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; 
+&lt;span class="nb"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="sa"&gt;f&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;Shuffled list: &lt;/span&gt;&lt;span class="si"&gt;{&lt;/span&gt;&lt;span class="n"&gt;my_list&lt;/span&gt;&lt;span class="si"&gt;}&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;In my opinion, &lt;code&gt;random.shuffle()&lt;/code&gt; should work like this:&lt;/p&gt;
+&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="kn"&gt;import&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nn"&gt;random&lt;/span&gt;
+
+&lt;span class="n"&gt;my_list&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;2&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;3&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;4&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;5&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;
+
+&lt;span class="c1"&gt;# Function returns a new, shuffled list&lt;/span&gt;
+&lt;span class="n"&gt;new_list&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;random&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;shuffle&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;my_list&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="nb"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="sa"&gt;f&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;Original list: &lt;/span&gt;&lt;span class="si"&gt;{&lt;/span&gt;&lt;span class="n"&gt;my_list&lt;/span&gt;&lt;span class="si"&gt;}&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="nb"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="sa"&gt;f&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;Shuffled list: &lt;/span&gt;&lt;span class="si"&gt;{&lt;/span&gt;&lt;span class="n"&gt;new_list&lt;/span&gt;&lt;span class="si"&gt;}&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Of course, Python won't fix this mistake to fit my preference. There's too many places in the universe expecting &lt;code&gt;random.shuffle&lt;/code&gt; to change a list in place. Yet it still bugs me every time I see the function. Stuff like this is why I created my &lt;a href="https://github.com/pydanny/listo"&gt;listo&lt;/a&gt; package, it allowed me to get past my own sense of annoyance. It's a library that is barely used, even by myself, serving as mostly a fun exercise that allowed me to scratch an itch about objects changing in place.&lt;/p&gt;
+&lt;h2 id="counterargument"&gt;Counterargument&lt;/h2&gt;
+&lt;p&gt;Some of you might say, "It's not practical to return giant &lt;code&gt;dict&lt;/code&gt; or &lt;code&gt;list&lt;/code&gt; objects when you are changing a single value". You are correct. However, does it make sense for &lt;code&gt;random.shuffle&lt;/code&gt; and other offenders to muck around with the entirety of a variable's contents? Why shouldn't a function that disrupts the entirety of a variable just return a new variable?&lt;/p&gt;
+&lt;h2 id="closing-statement"&gt;Closing statement&lt;/h2&gt;
+&lt;p&gt;My preference is that when it is reasonable, that the scope is not outrageous, to create functions that return values.&lt;/p&gt;
+&lt;p&gt;Also, to the people who implemented the original &lt;code&gt;random.shuffle&lt;/code&gt; function, you are awesome. I'm just taking advantage of having 20/20 hindsight.&lt;/p&gt;</content>
+    <link href="https://daniel.feldroy.com/posts/2026-03-to-return-a-value-or-not-return-a-value"/>
+    <summary>I believe operations that change things should always return values.</summary>
+    <category term="python"/>
+    <category term="rant"/>
+    <contributor>
+      <name>Daniel Roy Greenfeld</name>
+      <email>daniel@feldroy.com</email>
+    </contributor>
+    <published>2026-03-13T02:41:19.009972+00:00</published>
   </entry>
 </feed>

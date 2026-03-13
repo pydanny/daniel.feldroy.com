@@ -246,7 +246,7 @@ requires-dist = [
     { name = "pyyaml", specifier = "==5.1" },
     { name = "sentry-sdk", extras = ["fastapi"], specifier = ">=2.34.1" },
     { name = "sqlalchemy", specifier = ">=2.0.43" },
-    { name = "staticware", specifier = ">=0.1.0" },
+    { name = "staticware", specifier = ">=0.2.0" },
 ]
 
 [package.metadata.requires-dev]
@@ -1333,11 +1333,11 @@ wheels = [
 
 [[package]]
 name = "staticware"
-version = "0.1.0"
+version = "0.2.0"
 source = { registry = "https://pypi.org/simple" }
-sdist = { url = "https://files.pythonhosted.org/packages/bf/ae/0487c50d1b4a284ef4f6abba86471a8cff533a60794214f47f358ccfac9d/staticware-0.1.0.tar.gz", hash = "sha256:3b96a63f31d09221c605130bbb4c6686f43e4f71eff8335236ffff40b0714ec8", size = 52455, upload-time = "2026-03-12T13:13:23.266Z" }
+sdist = { url = "https://files.pythonhosted.org/packages/9a/47/f3effaeff071e7d87b64ded37073e1728fbdc432bc166b689ba442050fb2/staticware-0.2.0.tar.gz", hash = "sha256:991c4d0c74a5173b5f058b8e7e81314a569f95d8497a3120811d62fc30629838", size = 53899, upload-time = "2026-03-13T13:22:31.022Z" }
 wheels = [
-    { url = "https://files.pythonhosted.org/packages/06/03/5ce29c49852aebfbb88b9e33b399ab8d13951934a7938fc70b655f949c03/staticware-0.1.0-py3-none-any.whl", hash = "sha256:4228f7b62d10e5ab1e1a3bf749a2e722a7f5facd1ae6462cfdae99ab7e30c94a", size = 6950, upload-time = "2026-03-12T13:13:24.892Z" },
+    { url = "https://files.pythonhosted.org/packages/37/89/69c791f2bb2b5fa6d7bf8e2fd236e6a10490b06dacfd8e4e9f48d8a8ae0a/staticware-0.2.0-py3-none-any.whl", hash = "sha256:679c612a30eb50a7c77b07978acebf34496f4a41921a1b49ab8d98473f1f1069", size = 6946, upload-time = "2026-03-13T13:22:29.611Z" },
 ]
 
 [[package]]

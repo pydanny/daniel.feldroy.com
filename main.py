@@ -41,7 +41,7 @@ app.mount("/public", StaticFiles(directory="public"), name="public")
 app.mount("/static", static)
 
 # Add static write middleware
-StaticRewriteMiddleware(app, static=static)
+app.add_middleware(StaticRewriteMiddleware, static=static)
 
 default_social_image = (
     "https://f004.backblazeb2.com/file/daniel-feldroy-com/public/images/profile.jpg"

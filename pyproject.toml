@@ -25,6 +25,7 @@ dependencies = [
     "pyyaml==5.1",
     "sentry-sdk[fastapi]>=2.34.1",
     "sqlalchemy>=2.0.43",
+    "staticware>=0.1.0",
 ]
 
 [dependency-groups]

@@ -1,5 +1,8 @@
 import air
 from datetime import datetime
+from staticware import HashedStatic
+
+static = HashedStatic("static")
 
 
 def Socials(title, description, image, twitter_image, url):
@@ -30,7 +33,6 @@ def Layout(
     status_code=200,
 ) -> air.AirResponse:
     "Generic layout for pages"
-    body_children = air.layouts.filter_body_tags(children)
     return air.AirResponse(
         air.Html(
             air.Head(
@@ -55,7 +57,7 @@ def Layout(
                     href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release/build/styles/atom-one-light.css",
                     media="(prefers-color-scheme: light)",
                 ),
-                air.Link(rel="stylesheet", href="/public/style.css", type="text/css"),
+                air.Link(rel="stylesheet", href=static.url("/style.css"), type="text/css"),
                 *air.layouts.filter_head_tags(children),
             ),
             air.Body(

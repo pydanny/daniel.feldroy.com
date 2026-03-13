@@ -14,8 +14,10 @@ import pytz
 import mistletoe
 from mistletoe.contrib.pygments_renderer import PygmentsRenderer
 from functools import partial
+from staticware import StaticRewriteMiddleware
 
-from layouts import Layout
+from layouts import Layout, static
+
 
 
 markdown = partial(mistletoe.markdown, renderer=PygmentsRenderer)
@@ -36,6 +38,10 @@ app = air.Air(exception_handlers={404: Page404})
 
 # Mount static files for CSS
 app.mount("/public", StaticFiles(directory="public"), name="public")
+app.mount("/static", static)
+
+# Add static write middleware
+StaticRewriteMiddleware(app, static=static)
 
 default_social_image = (
     "https://f004.backblazeb2.com/file/daniel-feldroy-com/public/images/profile.jpg"

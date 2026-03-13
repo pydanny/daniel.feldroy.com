@@ -35,7 +35,7 @@ print(f"Original list: {my_list}")
 print(f"Shuffled list: {new_list}")
 ```
 
-Of course, Python won't fix this mistake to fit my preference. There's too many places in the universe expecting `random.shuffle` to change a list in place. Yet it still bugs me every time I see the function. Stuff like this is why I created my [listo](https://github.com/pydanny/listo) package, it allowed me to get past my own sense of annoyance. It's a library that is barely used, even by myself, serving as mostly a fun exercise that allowed me to scratch an itch about objects changing in place.
+Of course, Python won't fix this mistake to fit my preference. There's too many places in the universe expecting `random.shuffle` to change a list in place. Yet it still bugs me every time I see the function. Stuff like this is why I created my [listo](https://github.com/pydanny/listo) package, it allowed me to get past my own sense of annoyance.  The [listo](https://github.com/pydanny/listo) library is barely used, even by myself, serving mostly as a fun exercise that allowed me to scratch an itch about objects changing in place.
 
 
 ## Counterargument

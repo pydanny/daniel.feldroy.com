@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
   <id>https://daniel.feldroy.com/</id>
   <title>Python posts by Daniel Roy Greenfeld</title>
-  <updated>2026-03-13T01:09:29.011227+00:00</updated>
+  <updated>2026-03-13T01:10:52.352863+00:00</updated>
   <author>
     <name>Daniel Roy Greenfeld</name>
     <email>daniel@feldroy.com</email>
@@ -1002,7 +1002,7 @@ Available&lt;span class="w"&gt; &lt;/span&gt;recipes:
 &lt;span class="nb"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="sa"&gt;f&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;Shuffled list: &lt;/span&gt;&lt;span class="si"&gt;{&lt;/span&gt;&lt;span class="n"&gt;new_list&lt;/span&gt;&lt;span class="si"&gt;}&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
-&lt;p&gt;Of course, Python won't fix this mistake to fit my preference. There's too many places in the universe expecting &lt;code&gt;random.shuffle&lt;/code&gt; to change a list in place. Yet it still bugs me every time I see the function. Stuff like this is why I created my &lt;a href="https://github.com/pydanny/listo"&gt;listo&lt;/a&gt; package, it allowed me to get past my own sense of annoyance. It's a library that is barely used, even by myself, serving as mostly a fun exercise that allowed me to scratch an itch about objects changing in place.&lt;/p&gt;
+&lt;p&gt;Of course, Python won't fix this mistake to fit my preference. There's too many places in the universe expecting &lt;code&gt;random.shuffle&lt;/code&gt; to change a list in place. Yet it still bugs me every time I see the function. Stuff like this is why I created my &lt;a href="https://github.com/pydanny/listo"&gt;listo&lt;/a&gt; package, it allowed me to get past my own sense of annoyance.  The &lt;a href="https://github.com/pydanny/listo"&gt;listo&lt;/a&gt; library is barely used, even by myself, serving mostly as a fun exercise that allowed me to scratch an itch about objects changing in place.&lt;/p&gt;
 &lt;h2 id="counterargument"&gt;Counterargument&lt;/h2&gt;
 &lt;p&gt;Some of you might say, "It's not practical to return giant &lt;code&gt;dict&lt;/code&gt; or &lt;code&gt;list&lt;/code&gt; objects when you are changing a single value". You are correct. However, does it make sense for &lt;code&gt;random.shuffle&lt;/code&gt; and other offenders to muck around with the entirety of a variable's contents? Why shouldn't a function that disrupts the entirety of a variable just return a new variable?&lt;/p&gt;
 &lt;h2 id="closing-statement"&gt;Closing statement&lt;/h2&gt;

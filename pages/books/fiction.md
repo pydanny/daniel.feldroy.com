@@ -9,6 +9,8 @@ Works that are available to the public, which includes works in progress. I self
 
 ## [Everyone Dies](/books/everyone-dies)
 
+by Daniel Roy Greenfeld writing as Anduril Harkness
+
 <a href="/books/everyone-dies"><img src="https://daniel.feldroy.com/public/images/everyone-dies-web.webp" alt="Everyone Dies" height="25%" width="25%"></a>
 
 A grimdark fantasy for adult readers containing violence, betrayal, and despair.

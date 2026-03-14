@@ -1,7 +1,7 @@
 ---
 title: Fiction Books
-image: /public/images/everyone-dies-web.webp
-twitter_image: /public/images/everyone-dies-web.webp
+image: https://daniel.feldroy.com/public/images/everyone-dies-web.webp
+twitter_image: https://daniel.feldroy.com/public/images/everyone-dies-web.webp
 og_url: https://daniel.feldroy.com/books/fiction
 ---
 

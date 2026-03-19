@@ -42,7 +42,7 @@ Fast triggers that take effect in minutes:
 
 Very fast triggers that take effect in seconds:
 
-- Context switching beween major categories tasks when in deep thought
+- Context switching beween major task categories requiring deep thought
 
 
 ## Symptoms

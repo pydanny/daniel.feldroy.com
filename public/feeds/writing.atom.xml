@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
   <id>https://daniel.feldroy.com/</id>
   <title>Writing posts by Daniel Roy Greenfeld</title>
-  <updated>2026-03-13T01:10:52.498309+00:00</updated>
+  <updated>2026-03-19T00:05:30.206485+00:00</updated>
   <author>
     <name>Daniel Roy Greenfeld</name>
     <email>daniel@feldroy.com</email>
@@ -196,5 +196,65 @@
       <email>daniel@feldroy.com</email>
     </contributor>
     <published>2026-03-09T03:12:43.043418+00:00</published>
+  </entry>
+  <entry>
+    <id>https://daniel.feldroy.com/posts/2026-03-concussion-symptoms-update</id>
+    <title>Concussion Symptoms Update</title>
+    <updated>2026-03-18T23:42:59.079454+00:00</updated>
+    <author>
+      <name>Daniel Roy Greenfeld</name>
+      <email>daniel@feldroy.com</email>
+    </author>
+    <content type="html">&lt;p&gt;It's been just over two months since I got injured. These days I usually wake up clear headed and with no symptoms. I can go about my day and do activities, but I must avoid triggers. Unfortunately the triggers ruin me until I get several hours of rest.&lt;/p&gt;
+&lt;p&gt;What doesn't affect me is focused, creative pursuits like fiction writing. I can pump out fiction nonstop without any adverse consequences. Thanks to that quirk of my injury, I'm putting out &lt;a href="https://andurilharkness.com"&gt;my first novel in ~8 years&lt;/a&gt;, which I'm writing under a psuedonym. While that is awesome, it remains to be seen if I will find the same success with fiction that I have had writing non-fiction like &lt;a href="https://daniel.feldroy.com/books/tech"&gt;Two Scoops of Django&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Okay, here's the nitty gritty of what's causing me problems today.&lt;/p&gt;
+&lt;h2 id="triggers"&gt;Triggers&lt;/h2&gt;
+&lt;p&gt;Slow triggers taking 60-90 minutes to cause symptoms:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Crowds&lt;/li&gt;
+&lt;li&gt;Coding &lt;/li&gt;
+&lt;li&gt;Working with LLMs&lt;/li&gt;
+&lt;li&gt;Exercise&lt;/li&gt;
+&lt;li&gt;Outlining or structuring creative efforts&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Medium triggers that take effect in 10 minutes:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Learning new board games&lt;/li&gt;
+&lt;li&gt;Stress&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Fast triggers that take effect in minutes:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Visual distortions like blurry text, blurry photos, spatial puzzles, video recursion&lt;/li&gt;
+&lt;li&gt;Very fine print on paper&lt;/li&gt;
+&lt;li&gt;Keeping my eyes on a point and moving my head around quickly (vestibulo-ocular reflex mismatch)&lt;/li&gt;
+&lt;li&gt;Context switching within a task. For example, when working on code if I switch from debugging to correcting a DNS failure&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Very fast triggers that take effect in seconds:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Context switching beween major categories tasks when in deep thought&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id="symptoms"&gt;Symptoms&lt;/h2&gt;
+&lt;p&gt;Constant symptoms:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Light brain fog&lt;/li&gt;
+&lt;li&gt;Fatigue, my endurance wasn't what it was&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Triggered symptoms:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Headache (usually in the front right of my head)&lt;/li&gt;
+&lt;li&gt;Dizziness (but no loss of balance)&lt;/li&gt;
+&lt;li&gt;Straight lines become very prominent and distracting&lt;/li&gt;
+&lt;/ul&gt;</content>
+    <link href="https://daniel.feldroy.com/posts/2026-03-concussion-symptoms-update"/>
+    <summary>Documenting how the head injury incurred on January 16, 2026 continues to affected me one month later.</summary>
+    <category term="concussion"/>
+    <category term="twoscoops"/>
+    <category term="book"/>
+    <category term="writing"/>
+    <contributor>
+      <name>Daniel Roy Greenfeld</name>
+      <email>daniel@feldroy.com</email>
+    </contributor>
+    <published>2026-03-18T23:42:59.079454+00:00</published>
   </entry>
 </feed>

@@ -33,6 +33,11 @@ def Layout(
     status_code=200,
 ) -> air.AirResponse:
     "Generic layout for pages"
+    if not image.startswith('https://'):
+        image = f'f"https://daniel.feldroy.com/{image}'
+    if not twitter_image.startswith('https://'):
+        twitter_image = f'f"https://daniel.feldroy.com/{twitter_image}'        
+
     return air.AirResponse(
         air.Html(
             air.Head(

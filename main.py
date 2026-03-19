@@ -278,8 +278,8 @@ async def article(slug: str):
         raise HTTPException(status_code=404)
     article_tags = [TagLink(slug=x) for x in content["attributes"].get("tags", [])]
     specials = []
-    image = f"https://daniel.feldroy.com{content['attributes'].get('image', default_social_image)}"
-    twitter_image = f"https://daniel.feldroy.com{content['attributes'].get('twitter_image', default_social_image)}"
+    image = content['attributes'].get('image', default_social_image)
+    twitter_image = content['attributes'].get('twitter_image', default_social_image)
     if "TIL" in content["attributes"]["tags"]:
         image = "https://f004.backblazeb2.com/file/daniel-feldroy-com/public/logos/til-1.png"
         twitter_image = "https://f004.backblazeb2.com/file/daniel-feldroy-com/public/logos/til-1.png"

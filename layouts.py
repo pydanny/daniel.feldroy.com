@@ -47,9 +47,7 @@ def Layout(
                     href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css",
                 ),
                 air.Script(
-                    src="https://cdn.jsdelivr.net/npm/htmx.org@2.0.6/dist/htmx.min.js",
-                    integrity="sha384-Akqfrbj/HpNVo8k11SXBb6TlBWmXXlYQrCSqEWmyKJe+hDm3Z/B2WVG4smwBkRVm",
-                    crossorigin="anonymous",
+                    src=static.url("/htmx/htmx.min.js"),
                 ),
                 air.Style(":root { --pico-font-size: 100%; }"),
                 air.Link(

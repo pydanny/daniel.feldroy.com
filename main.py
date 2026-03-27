@@ -609,7 +609,7 @@ async def writing_stats():
         air.Script(src="https://cdn.plot.ly/plotly-2.32.0.min.js"),
         air.Div(id="post-counts"),
         air.Children(
-            air.Script(f"Plotly.newPlot('post-counts', {data}, {layout}, {config});"),
+                air.Script(f"Plotly.newPlot('post-counts', {data}, {layout}, {config});"),
         ),
         description="Numbers about my writing patterns",
     )

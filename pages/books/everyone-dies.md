@@ -36,7 +36,4 @@ A grimdark fantasy for adult readers containing violence, betrayal, and despair.
 
 ## Where to read the book
 
-Eventually the book will be published on Amazon. In the meantime you can:
-
-- Read the [first seven chapters on Wattpad](https://www.wattpad.com/story/407480439-everyone-dies)
-- [Request an advanced review copy of the entire book](https://storyoriginapp.com/reviewcopies/48e4c3d5-67a9-44c2-b199-a165c8a851ad)
+Eventually the book will be published on Amazon. In the meantime, you can [request an advanced review copy of a sample or even the entire book](https://storyoriginapp.com/reviewcopies/48e4c3d5-67a9-44c2-b199-a165c8a851ad).

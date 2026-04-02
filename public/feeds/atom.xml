@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
   <id>https://daniel.feldroy.com/</id>
   <title>Inside the head of Daniel Roy Greenfeld</title>
-  <updated>2026-03-19T04:05:21.503630+00:00</updated>
+  <updated>2026-04-02T16:55:12.260855+00:00</updated>
   <author>
     <name>Daniel Roy Greenfeld</name>
     <email>daniel@feldroy.com</email>
@@ -12,32 +12,6 @@
   <generator uri="https://lkiesow.github.io/python-feedgen" version="1.0.0">python-feedgen</generator>
   <logo>https://f004.backblazeb2.com/file/daniel-feldroy-com/public/images/profile.jpg</logo>
   <rights>All rights reserved 2026, Daniel Roy Greenfeld</rights>
-  <entry>
-    <id>https://daniel.feldroy.com/posts/til-2025-11-default-code-block-languages-for-mkdocs</id>
-    <title>TIL: Default code block languages for mkdocs</title>
-    <updated>2025-11-22T12:08:34.618632+00:00</updated>
-    <author>
-      <name>Daniel Roy Greenfeld</name>
-      <email>daniel@feldroy.com</email>
-    </author>
-    <content type="html">&lt;p&gt;When using &lt;a href="https://squidfunk.github.io/mkdocs-material/"&gt;Mkdocs with Material&lt;/a&gt;, you can set default languages for code blocks in your &lt;code&gt;mkdocs.yml&lt;/code&gt; configuration file. This is particularly useful for inline code examples that may not have explicit language tags.&lt;/p&gt;
-&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="nt"&gt;markdown_extensions&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
-&lt;span class="w"&gt;  &lt;/span&gt;&lt;span class="p p-Indicator"&gt;-&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nt"&gt;pymdownx.highlight&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
-&lt;span class="w"&gt;      &lt;/span&gt;&lt;span class="nt"&gt;default_lang&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="l l-Scalar l-Scalar-Plain"&gt;python&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;p&gt;You can see what this looks like in practice with Air's API reference for forms here: &lt;a href="https://feldroy.github.io/air/api/forms/"&gt;feldroy.github.io/air/api/forms/&lt;/a&gt;. With this configuration, any code block without a specified language defaults to Python syntax highlighting, making documentation clearer and more consistent.&lt;/p&gt;</content>
-    <link href="https://daniel.feldroy.com/posts/til-2025-11-default-code-block-languages-for-mkdocs"/>
-    <summary>Really useful for making inline code examples have code highlighting.</summary>
-    <category term="TIL"/>
-    <category term="python"/>
-    <category term="markdown"/>
-    <contributor>
-      <name>Daniel Roy Greenfeld</name>
-      <email>daniel@feldroy.com</email>
-    </contributor>
-    <published>2025-11-22T12:08:34.618632+00:00</published>
-  </entry>
   <entry>
     <id>https://daniel.feldroy.com/posts/2025-12-adding-type-hints-to-my-blog</id>
     <title>Adding Type Hints to my Blog</title>
@@ -695,5 +669,30 @@
       <email>daniel@feldroy.com</email>
     </contributor>
     <published>2026-03-18T23:42:59.079454+00:00</published>
+  </entry>
+  <entry>
+    <id>https://daniel.feldroy.com/posts/2026-04-facebook-terms-of-service</id>
+    <title>Facebook's Terms of Service</title>
+    <updated>2026-04-02T17:00:52.469879+00:00</updated>
+    <author>
+      <name>Daniel Roy Greenfeld</name>
+      <email>daniel@feldroy.com</email>
+    </author>
+    <content type="html">&lt;p&gt;&lt;em&gt;Note: On March 18, 2025 &lt;a href="https://web.facebook.com/share/p/18NC8HhkZh/"&gt;I wrote this on Facebook&lt;/a&gt; to help instruct family and friends about how. I am reposting it here to make it easier for me to find when I need it.&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;You know how people sometimes post on their Facebook feed that they deny Facebook the right to use their data? For the record, that post is useless. In fact, as soon as you post that statement on Facebook, Facebook can do with it whatever they want.&lt;/p&gt;
+&lt;p&gt;Rather than go off what faux attorney statements found on the internet might say, I strongly suggest instead everyone read the Facebook terms of service: &lt;a href="www.facebook.com/terms/"&gt;www.facebook.com/terms/&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Specifically, I recommend people go over &lt;strong&gt;Section 3.3 "The permissions you give us"&lt;/strong&gt;, where it is made clear that by using Facebook we grant Facebook a "non-exclusive, transferable, sub-licensable, royalty-free, and worldwide license to host, use, distribute, modify, run, copy, publicly perform or display, translate, and create derivative works of your content".&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Section 3.3&lt;/strong&gt; also covers deleting of content, which is the only way according to Facebook's terms that we can stop facebook from using our data.&lt;/p&gt;
+&lt;p&gt;Most other social media platforms have similar policies. Use their platform and you are granting them access. Don't take my word for it, find and read their terms of service.&lt;/p&gt;
+&lt;p&gt;So if you are wondering why I post intermittently on social media, and without anything very personal, now you know. We aren't the customers of social media services, we're the product. That's something we need to recognize and understand everytime we use one of these platforms.&lt;/p&gt;</content>
+    <link href="https://daniel.feldroy.com/posts/2026-04-facebook-terms-of-service"/>
+    <summary>Why posting on Facebook that you do not give them rights over what you posted on their platform is useless. In fact, as soon as you post that statement on Facebook, Facebook can do with it whatever they want.</summary>
+    <category term="advice"/>
+    <category term="rant"/>
+    <contributor>
+      <name>Daniel Roy Greenfeld</name>
+      <email>daniel@feldroy.com</email>
+    </contributor>
+    <published>2026-04-02T17:00:52.469879+00:00</published>
   </entry>
 </feed>

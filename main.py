@@ -627,6 +627,10 @@ async def robots():
 
 
 @app.page
+async def version():
+    return air.H1(air.version('air'))
+
+@app.page
 async def blarg():
     return 1 / 0
 

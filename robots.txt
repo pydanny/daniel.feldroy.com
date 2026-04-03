@@ -3,6 +3,9 @@
 User-agent: *
 Disallow:
 
+User-agent: facebookexternalhit
+Allow: /
+
 User-agent: AdsBot-Google
 User-agent: Amazonbot
 User-agent: anthropic-ai

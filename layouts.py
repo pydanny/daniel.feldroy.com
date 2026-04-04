@@ -44,7 +44,7 @@ def Layout(
                 *Socials(title, description, image, twitter_image, url),
                 air.Link(
                     rel="stylesheet",
-                    href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css",
+                    href="https://unpkg.com/@digicreon/mucss/dist/mu.azure.css",
                 ),
                 air.Script(
                     src=static.url("/htmx/htmx.min.js"),
@@ -134,30 +134,40 @@ def Layout(
                     class_="container",
                 ),
                 air.Dialog(
-                    air.Header(
-                        air.H2("Search"),
-                        air.Input(
-                            name="q",
-                            type="text",
-                            id="search-input",
-                            hx_trigger="keyup",
-                            placeholder="Enter your search query...",
-                            hx_get="/search-results",
-                            hx_target=".search-results-modal",
+                    air.Article(
+                        air.Button(
+                            '×',
+                            aria_label='Close',
+                            onclick="document.getElementById('search-modal').close()",
+                            class_='modal-close',
                         ),
-                        air.Div(class_="search-results-modal"),
-                        class_="modal-content",
+                        air.Header(
+                            air.H3("Search"),
+                            air.P(air.Input(
+                                name="q",
+                                type="text",
+                                id="search-input",
+                                hx_trigger="keyup",
+                                placeholder="Enter your search query...",
+                                hx_get="/search-results",
+                                hx_target=".search-results-modal",
+                            )),
+                            air.Div(class_="search-results-modal"),
+                            air.Footer(air.Button("Close",
+                                class_="btn btn-primary",
+				            onclick="document.getElementById('search-model').close()")                               
+                            )
+                        ),
                     ),
                     id="search-modal",
-                    style="display:none;",
-                    class_="modal overflow-auto",
+                    class_="modal-lg"
                 ),
                 air.Div(hx_trigger="keyup[key=='/'] from:body"),
                 air.Script("""
             document.body.addEventListener('keydown', e => {
             if (e.key === '/') {
                 e.preventDefault();
-                document.getElementById('search-modal').style.display = 'block';
+                document.getElementById('search-modal').showModal();
                 document.getElementById('search-input').focus();
             }
             if (e.key === 'Escape') {

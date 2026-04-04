@@ -29,7 +29,7 @@ def Layout(
     description="Daniel Roy Greenfeld's personal blog",
     image="https://f004.backblazeb2.com/file/daniel-feldroy-com/public/images/profile.jpg",
     twitter_image="https://f004.backblazeb2.com/file/daniel-feldroy-com/public/images/profile.jpg",
-    url="http://daniel.feldroy.com/",
+    url="https://daniel.feldroy.com/",
     status_code=200,
 ) -> air.AirResponse:
     "Generic layout for pages"

@@ -44,7 +44,7 @@ def Layout(
                 *Socials(title, description, image, twitter_image, url),
                 air.Link(
                     rel="stylesheet",
-                    href="https://unpkg.com/@digicreon/mucss/dist/mu.azure.css",
+                    href="https://unpkg.com/@digicreon/mucss/dist/mu.red.css",
                 ),
                 air.Script(
                     src=static.url("/htmx/htmx.min.js"),
@@ -181,6 +181,7 @@ def Layout(
             """),
                 hx_boost="true",
             ),
+            data_theme='dark'
         ).render(),
         status_code=status_code,
     )

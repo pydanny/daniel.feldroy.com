@@ -10,7 +10,7 @@ _My open-source efforts: tools, libraries, and infrastructure I have created and
 
 ### [Pad](https://github.com/feldroy/pad) 📝
 
-    Pad is an easy to use terminal code editor for those of us who aren't into vim. I created it to scratch an itch, that is to have a terminal text editor with my preferred keybindings. 
+Pad is an easy to use terminal code editor for those of us who aren't into vim. I created it to scratch an itch, that is to have a terminal text editor with my preferred keybindings. 
 
 
 ### [Air](https://github.com/feldroy/air) 💨

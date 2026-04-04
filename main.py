@@ -15,6 +15,7 @@ import mistletoe
 from mistletoe.contrib.pygments_renderer import PygmentsRenderer
 from functools import partial
 from staticware import StaticRewriteMiddleware
+from frontmatter import Frontmatter
 
 from layouts import Layout, static
 
@@ -83,9 +84,6 @@ class ContentNotFound(Exception):
 # The following functions are three content loading. They are cached in
 # memory to boost the speed of the site. In production at a minumum the
 # app is restarted every time the project is deployed.
-from frontmatter import Frontmatter
-
-
 @functools.cache
 def list_posts(
     published: bool = True, posts_dirname="posts", content=False

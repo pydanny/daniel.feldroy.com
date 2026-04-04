@@ -181,7 +181,6 @@ def Layout(
             """),
                 hx_boost="true",
             ),
-            data_theme='dark'
         ).render(),
         status_code=status_code,
     )

@@ -9,7 +9,7 @@ title: "TIL: Improving \xB5CSS readability on mobile"
 twitter_image: https://f004.backblazeb2.com/file/daniel-feldroy-com/public/logos/til-1.png
 ---
 
-With [µCSS](https://mucss.org), the typography can be hard to read, and media queries appear to be the right approach to fixing it. Adding this bit of CSS below makes text more easy to read on mobile devices.
+With [µCSS](https://mucss.org), the typography can be hard to read, and media queries appear to be the right approach to fixing it. Adding this bit of CSS below makes text more easy to read on mobile devices. I'm now using this on both this site and my [author site](https://grimdaniel.com/).
 
 ```css
 @media (max-width: 768px) {

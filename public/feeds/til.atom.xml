@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
   <id>https://daniel.feldroy.com/</id>
   <title>Til posts by Daniel Roy Greenfeld</title>
-  <updated>2026-04-02T16:55:12.721773+00:00</updated>
+  <updated>2026-04-06T02:34:43.253218+00:00</updated>
   <author>
     <name>Daniel Roy Greenfeld</name>
     <email>daniel@feldroy.com</email>
@@ -12,32 +12,6 @@
   <generator uri="https://lkiesow.github.io/python-feedgen" version="1.0.0">python-feedgen</generator>
   <logo>https://f004.backblazeb2.com/file/daniel-feldroy-com/public/images/profile.jpg</logo>
   <rights>All rights reserved 2026, Daniel Roy Greenfeld</rights>
-  <entry>
-    <id>https://daniel.feldroy.com/posts/til-2025-05-reverse-square-knot</id>
-    <title>TIL: Reverse Square Knot</title>
-    <updated>2025-05-06T15:50:48.417058+00:00</updated>
-    <author>
-      <name>Daniel Roy Greenfeld</name>
-      <email>daniel@feldroy.com</email>
-    </author>
-    <content type="html">&lt;p&gt;For years I've used a basic square knot to tie my belt in various martial arts. The problem is that while I tie it neatly, it always comes undone. It doesn't matter if was the stand-up striking arts of my younger years or the   grappling-focused Brazilian Jiu-Jitsu I do now - the knot always comes undone.&lt;/p&gt;
-&lt;p&gt;I knew of a better knot, but I never knew what it was called or how to do it. I heard references to superlock, Gracie knots, and a few other names. I finally today learned that the better knot is officially called a "reverse square knot," also known as a right square knot or reverse reef knot. &lt;/p&gt;
-&lt;p&gt;The improved knot is an incredible upgrade, meaning I can focus on my training rather than worrying about my belt coming undone.&lt;/p&gt;
-&lt;p&gt;Here's the proof of my first good attempt, a photo I took after a &lt;strong&gt;2 hour class where it never came undone&lt;/strong&gt;. &lt;/p&gt;
-&lt;p&gt;&lt;img alt="reverse-square-knot" src="https://f004.backblazeb2.com/file/daniel-feldroy-com/public/images/reverse-square-knot.jpg" /&gt;&lt;/p&gt;
-&lt;p&gt;&lt;em&gt;Note: I had just sparred a few rounds and the belt got twisted. Ignore the twists and just admire the still-tied belt.&lt;/em&gt;&lt;/p&gt;
-&lt;p&gt;If you do a martial art with Judo-style belts (these include Karate, Tae Kwon Do, and Brazilian Jiu-Jitsu), I highly recommend you learn this knot. It's a simple change that can make a big difference in your training experience. This video is a good place to start: &lt;a href="https://www.youtube.com/watch?v=bex5a95gG8U"&gt;How to Tie a Reverse Square Knot&lt;/a&gt;.&lt;/p&gt;</content>
-    <link href="https://daniel.feldroy.com/posts/til-2025-05-reverse-square-knot"/>
-    <summary>Useful for martial arts with belts, a "reverse square knot," also known as a right square knot or reverse reef knot, is essentially a square knot tied in the opposite order. Instead of the first working cord going over the other cords, it goes under them first.</summary>
-    <category term="TIL"/>
-    <category term="martial arts"/>
-    <category term="bjj"/>
-    <contributor>
-      <name>Daniel Roy Greenfeld</name>
-      <email>daniel@feldroy.com</email>
-    </contributor>
-    <published>2025-05-06T15:50:48.417058+00:00</published>
-  </entry>
   <entry>
     <id>https://daniel.feldroy.com/posts/til-2025-05-bitwise-xor</id>
     <title>TIL: ^ bitwise XOR</title>
@@ -721,5 +695,40 @@ git&lt;span class="w"&gt; &lt;/span&gt;remote&lt;span class="w"&gt; &lt;/span&gt
       <email>daniel@feldroy.com</email>
     </contributor>
     <published>2026-03-09T03:12:43.043418+00:00</published>
+  </entry>
+  <entry>
+    <id>https://daniel.feldroy.com/posts/til-2026-04-improving-mucss-readability-on-mobile</id>
+    <title>TIL: Improving µCSS readability on mobile</title>
+    <updated>2026-04-06T02:45:46.176600+00:00</updated>
+    <author>
+      <name>Daniel Roy Greenfeld</name>
+      <email>daniel@feldroy.com</email>
+    </author>
+    <content type="html">&lt;p&gt;With &lt;a href="https://mucss.org"&gt;µCSS&lt;/a&gt;, the typography can be hard to read, and media queries appear to be the right approach to fixing it. Adding this bit of CSS below makes text more easy to read on mobile devices.&lt;/p&gt;
+&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="p"&gt;@&lt;/span&gt;&lt;span class="k"&gt;media&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;(&lt;/span&gt;&lt;span class="nt"&gt;max-width&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nt"&gt;768px&lt;/span&gt;&lt;span class="o"&gt;)&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;{&lt;/span&gt;
+&lt;span class="w"&gt;  &lt;/span&gt;&lt;span class="nt"&gt;body&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;{&lt;/span&gt;
+&lt;span class="w"&gt;    &lt;/span&gt;&lt;span class="k"&gt;font-size&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="mi"&gt;18&lt;/span&gt;&lt;span class="kt"&gt;px&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+&lt;span class="w"&gt;    &lt;/span&gt;&lt;span class="k"&gt;line-height&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="mf"&gt;1.7&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+&lt;span class="w"&gt;    &lt;/span&gt;&lt;span class="k"&gt;padding&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="mi"&gt;14&lt;/span&gt;&lt;span class="kt"&gt;px&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+&lt;span class="w"&gt;  &lt;/span&gt;&lt;span class="p"&gt;}&lt;/span&gt;
+
+&lt;span class="w"&gt;  &lt;/span&gt;&lt;span class="nt"&gt;h1&lt;/span&gt;&lt;span class="o"&gt;,&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nt"&gt;h2&lt;/span&gt;&lt;span class="o"&gt;,&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nt"&gt;h3&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;{&lt;/span&gt;
+&lt;span class="w"&gt;    &lt;/span&gt;&lt;span class="k"&gt;line-height&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="mf"&gt;1.25&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+&lt;span class="w"&gt;  &lt;/span&gt;&lt;span class="p"&gt;}&lt;/span&gt;
+
+&lt;span class="w"&gt;  &lt;/span&gt;&lt;span class="nt"&gt;pre&lt;/span&gt;&lt;span class="o"&gt;,&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nt"&gt;code&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;{&lt;/span&gt;
+&lt;span class="w"&gt;    &lt;/span&gt;&lt;span class="k"&gt;font-size&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="mf"&gt;0.9&lt;/span&gt;&lt;span class="kt"&gt;em&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+&lt;span class="w"&gt;    &lt;/span&gt;&lt;span class="k"&gt;overflow-x&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="kc"&gt;auto&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+&lt;span class="w"&gt;  &lt;/span&gt;&lt;span class="p"&gt;}&lt;/span&gt;
+&lt;span class="p"&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</content>
+    <link href="https://daniel.feldroy.com/posts/til-2026-04-improving-mucss-readability-on-mobile"/>
+    <summary>How to get an otherwise responsive framework to look good on mobile devices.</summary>
+    <category term="TIL"/>
+    <contributor>
+      <name>Daniel Roy Greenfeld</name>
+      <email>daniel@feldroy.com</email>
+    </contributor>
+    <published>2026-04-06T02:45:46.176600+00:00</published>
   </entry>
 </feed>

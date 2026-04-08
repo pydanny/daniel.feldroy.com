@@ -5,7 +5,7 @@ twitter_image: https://daniel.feldroy.com/static/images/everyone-dies.webp
 og_url: https://daniel.feldroy.com/books/fiction
 ---
 
-After a ten year hiatus I have started writing fantasy again. This time the writing is in a darker style, specifically grimdark fantasy (and a little science fiction). Long have I wanted to write stories where characters die like fruitflies. I have a dedicated fiction writing site at [grimdaniel.com](https://grimdaniel.com).
+After a ten year hiatus I have started writing fantasy again. This time the writing is in a darker style, specifically grimdark fantasy (and a little science fiction). Long have I wanted to write stories where characters die like fruitflies. I have a dedicated fiction writing site at <a href="https://grimdaniel.com" target="_blank">grimdaniel.com</a>.
 
 ## [The Curse](https://grimdaniel.com/the-curse)
 

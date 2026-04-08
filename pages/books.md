@@ -13,5 +13,4 @@ With Audrey, I co-wrote dairy-themed technical books, the most popular being the
 
 ## [Fiction](/books/fiction)
 
-I also write fiction, having been involved in number of fantasy and science fiction novels. Currently most are out of print, I'm working on revising some of them for re-release. There are few works in print and in progress.
-
+I also write fiction, specifically in the grimdark genre, typically fantasy but sometimes science fiction. You can read about my works at <a href="https://grimdaniel.com" target="_blank">grimdaniel.com</a>.

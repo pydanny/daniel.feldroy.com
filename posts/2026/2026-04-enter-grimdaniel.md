@@ -8,6 +8,8 @@ tags:
 - concussion
 - writing
 title: Enter Grimdaniel
+image: https://daniel.feldroy.com/static/images/everyone-dies.webp
+twitter_image: https://daniel.feldroy.com/static/images/everyone-dies.webp
 ---
 
 ## TLDR
@@ -37,3 +39,4 @@ I built out [grimdaniel.com](https://grimdaniel.com) used these tools:
 - [Story Origin App](http://storyoriginapp.com/?via=anduril) for growing of my fiction-focused community. While it looks simple on the surface, it is actually a sophisticated app designed to help authors grow their audience.
 
 Soon I'll write about the tools I use to write books.
+

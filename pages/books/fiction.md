@@ -11,6 +11,8 @@ After a ten year hiatus I have started writing fantasy again. This time the writ
 
 <div class="row">
 
+<span id="the-curse"></span>
+
 <div class="col-3">
 <figure>
 <img src="/static/images/the-curse.webp" >
@@ -40,9 +42,13 @@ A tale of petty cruelties and catastrophic consequences, where a lover's wounded
 </div>
 
 
+
+
 ## [Everyone Dies](https://grimdaniel.com/everyone-dies)
 
 <div class="row">
+
+<span id="everyone-dies"></span>
 
 <div class="col-3">
 <figure>
@@ -51,6 +57,7 @@ A tale of petty cruelties and catastrophic consequences, where a lover's wounded
 
 </div>
 <div class="col-9">
+
 
 - Aaron, a mercenary archer with a murderous past.
 - Bram, a man who lives by winning contests of skill.

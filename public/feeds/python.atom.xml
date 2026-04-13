@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
   <id>https://daniel.feldroy.com/</id>
   <title>Python posts by Daniel Roy Greenfeld</title>
-  <updated>2026-04-06T03:03:44.662343+00:00</updated>
+  <updated>2026-04-13T21:49:10.323822+00:00</updated>
   <author>
     <name>Daniel Roy Greenfeld</name>
     <email>daniel@feldroy.com</email>
@@ -255,8 +255,8 @@ uv&lt;span class="w"&gt; &lt;/span&gt;add&lt;span class="w"&gt; &lt;/span&gt;pyt
     <published>2025-09-02T02:29:33.084710+00:00</published>
   </entry>
   <entry>
-    <id>https://daniel.feldroy.com/posts/2025-09-over-twenty-years-of-writing-tools</id>
-    <title>Over Twenty Years of Writing Tools</title>
+    <id>https://daniel.feldroy.com/posts/2025-09-over-twenty-years-of-blogging-tools</id>
+    <title>Over Twenty Years of Blogging Tools</title>
     <updated>2025-09-24T00:45:00.884329+00:00</updated>
     <author>
       <name>Daniel Roy Greenfeld</name>
@@ -290,8 +290,8 @@ uv&lt;span class="w"&gt; &lt;/span&gt;add&lt;span class="w"&gt; &lt;/span&gt;pyt
 &lt;p&gt;For a few years now, I've wanted to create my own web framework. This year I did so, launching &lt;a href="https://github.com/feldroy/air"&gt;AIR&lt;/a&gt; with my wife and coding partner Audrey. Air is a shallow layer over FastAPI, adding features to expedite authoring of dynamic HTML pages. One of the early projects I did with it was to convert this site to use Air. It was nice to return to a PEP8-formatted codebase that is fully type-annotated. I also like the smaller dependency tree.&lt;/p&gt;
 &lt;h2 id="the-future"&gt;The Future&lt;/h2&gt;
 &lt;p&gt;Perhaps I'll grow restless again in a few years and try something new. Or perhaps I'll stick with Air for a long time. What I do know is that I enjoy writing and sharing my thoughts. So there will be posts going into the future. &lt;/p&gt;</content>
-    <link href="https://daniel.feldroy.com/posts/2025-09-over-twenty-years-of-writing-tools"/>
-    <summary>A retrospective of over twenty years worth of writing tools that I've used to write online.</summary>
+    <link href="https://daniel.feldroy.com/posts/2025-09-over-twenty-years-of-blogging-tools"/>
+    <summary>A retrospective of over twenty years worth of blogging tools that I've used to write online.</summary>
     <category term="blog"/>
     <category term="python"/>
     <category term="flask"/>

@@ -4,9 +4,7 @@ description: ''
 published: true
 slug: 2017-01-1-beginnings
 tags:
-- rough draft
 - writing
-- siege
 - legacy-danielroygreenfeld
 time_to_read: 5
 title: 'Siege: The First Chapter'

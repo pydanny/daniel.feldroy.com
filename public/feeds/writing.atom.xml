@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
   <id>https://daniel.feldroy.com/</id>
   <title>Writing posts by Daniel Roy Greenfeld</title>
-  <updated>2026-04-06T03:03:44.808376+00:00</updated>
+  <updated>2026-04-13T21:49:10.465497+00:00</updated>
   <author>
     <name>Daniel Roy Greenfeld</name>
     <email>daniel@feldroy.com</email>
@@ -111,9 +111,7 @@
 &lt;p&gt;&lt;i&gt;Read the full story at&amp;nbsp;&lt;a href="https://www.wattpad.com/353748025-siege-1-beginnings"&gt;https://www.wattpad.com/353748025-siege-1-beginnings&lt;/a&gt;.&lt;/i&gt;&lt;/p&gt;</content>
     <link href="https://daniel.feldroy.com/posts/2017-01-1-beginnings"/>
     <summary/>
-    <category term="rough draft"/>
     <category term="writing"/>
-    <category term="siege"/>
     <category term="legacy-danielroygreenfeld"/>
     <contributor>
       <name>Daniel Roy Greenfeld</name>
@@ -122,8 +120,8 @@
     <published>2017-01-01T14:26:00.004000-08:00</published>
   </entry>
   <entry>
-    <id>https://daniel.feldroy.com/posts/2025-09-over-twenty-years-of-writing-tools</id>
-    <title>Over Twenty Years of Writing Tools</title>
+    <id>https://daniel.feldroy.com/posts/2025-09-over-twenty-years-of-blogging-tools</id>
+    <title>Over Twenty Years of Blogging Tools</title>
     <updated>2025-09-24T00:45:00.884329+00:00</updated>
     <author>
       <name>Daniel Roy Greenfeld</name>
@@ -157,8 +155,8 @@
 &lt;p&gt;For a few years now, I've wanted to create my own web framework. This year I did so, launching &lt;a href="https://github.com/feldroy/air"&gt;AIR&lt;/a&gt; with my wife and coding partner Audrey. Air is a shallow layer over FastAPI, adding features to expedite authoring of dynamic HTML pages. One of the early projects I did with it was to convert this site to use Air. It was nice to return to a PEP8-formatted codebase that is fully type-annotated. I also like the smaller dependency tree.&lt;/p&gt;
 &lt;h2 id="the-future"&gt;The Future&lt;/h2&gt;
 &lt;p&gt;Perhaps I'll grow restless again in a few years and try something new. Or perhaps I'll stick with Air for a long time. What I do know is that I enjoy writing and sharing my thoughts. So there will be posts going into the future. &lt;/p&gt;</content>
-    <link href="https://daniel.feldroy.com/posts/2025-09-over-twenty-years-of-writing-tools"/>
-    <summary>A retrospective of over twenty years worth of writing tools that I've used to write online.</summary>
+    <link href="https://daniel.feldroy.com/posts/2025-09-over-twenty-years-of-blogging-tools"/>
+    <summary>A retrospective of over twenty years worth of blogging tools that I've used to write online.</summary>
     <category term="blog"/>
     <category term="python"/>
     <category term="flask"/>
@@ -256,5 +254,42 @@
       <email>daniel@feldroy.com</email>
     </contributor>
     <published>2026-03-18T23:42:59.079454+00:00</published>
+  </entry>
+  <entry>
+    <id>https://daniel.feldroy.com/posts/2026-04-enter-grimdaniel</id>
+    <title>Enter Grimdaniel</title>
+    <updated>2026-04-14T03:31:22.288365+00:00</updated>
+    <author>
+      <name>Daniel Roy Greenfeld</name>
+      <email>daniel@feldroy.com</email>
+    </author>
+    <content type="html">&lt;h2 id="tldr"&gt;TLDR&lt;/h2&gt;
+&lt;p&gt;My new fiction-dedicated fiction writing site is here:&lt;/p&gt;
+&lt;h3 id="grimdanielcom"&gt;&lt;a href="https://grimdaniel.com" target="_blank"&gt;grimdaniel.com&lt;/a&gt;&lt;/h3&gt;
+&lt;h2 id="why"&gt;Why?&lt;/h2&gt;
+&lt;p&gt;About three months ago I received a head injury. Recovery wasn't quick, and I couldn't do a lot of things like look at traffic, do intense workouts, or spend more than a few minutes on code. Mostly I could only do passive things like reading or watching video. One active thing that I could do with impunity was write &lt;a href="/books/fiction"&gt;fiction&lt;/a&gt;. I hadn't done it in years, but now I found it was a rare active pursuit I could enjoy.&lt;/p&gt;
+&lt;p&gt;The result was my first book in about 8 years, a grimdark novella titled, "&lt;a href="/books/fiction#everyone-dies"&gt;Everyone Dies&lt;/a&gt;". I listed it here on this site, but most of my readers are here for my technical writing, not fiction. Rather than combine the two categoris (non-fiction and fiction) I decided to build out a dedicated app for my fiction efforts. &lt;/p&gt;
+&lt;p&gt;As for a name, "Daniel" is the formal version of "Danny," which works better for an author of dark fantasy. In tech I try to be more positive than negative so "Danny" works better there. And so &lt;strong&gt;Grimdaniel&lt;/strong&gt; was born.&lt;/p&gt;
+&lt;h2 id="where"&gt;Where?&lt;/h2&gt;
+&lt;p&gt;The location of my new material is centered around the &lt;strong&gt;&lt;a href="https://grimdaniel.com"&gt;grimdaniel.com&lt;/a&gt;&lt;/strong&gt; app. It's more than just a site, it is an engine for creating a new audience. Amongst other things there's a mailing list and mechanisms for granting access to in-progress works and advanced review copies. The newsletter signup starts at &lt;a href="https://grimdaniel.com/list-signup"&gt;grimdaniel.com/list-signup&lt;/a&gt;.&lt;/p&gt;
+&lt;h2 id="how"&gt;How?&lt;/h2&gt;
+&lt;p&gt;I built out &lt;a href="https://grimdaniel.com"&gt;grimdaniel.com&lt;/a&gt; used these tools:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://airwebframework.org/"&gt;Air&lt;/a&gt; to build out the website portion of the app. The GitHub repo for the project is at &lt;a href="https://github.com/pydanny/grimdaniel.com"&gt;github.com/pydanny/grimdaniel.com&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://sendfox.com/"&gt;sendfox&lt;/a&gt; for managing of the email list &lt;/li&gt;
+&lt;li&gt;&lt;a href="http://storyoriginapp.com/?via=anduril"&gt;Story Origin App&lt;/a&gt; for growing of my fiction-focused community. While it looks simple on the surface, it is actually a sophisticated app designed to help authors grow their audience.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Soon I'll write about the tools I use to write books.&lt;/p&gt;</content>
+    <link href="https://daniel.feldroy.com/posts/2026-04-enter-grimdaniel"/>
+    <summary>Why, where, and how I created a new app to be my new home of fiction writing.</summary>
+    <category term="air"/>
+    <category term="book"/>
+    <category term="concussion"/>
+    <category term="writing"/>
+    <contributor>
+      <name>Daniel Roy Greenfeld</name>
+      <email>daniel@feldroy.com</email>
+    </contributor>
+    <published>2026-04-14T03:31:22.288365+00:00</published>
   </entry>
 </feed>

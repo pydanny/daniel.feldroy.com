@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
   <id>https://daniel.feldroy.com/</id>
   <title>Inside the head of Daniel Roy Greenfeld</title>
-  <updated>2026-04-06T03:03:43.828242+00:00</updated>
+  <updated>2026-04-13T21:49:09.563323+00:00</updated>
   <author>
     <name>Daniel Roy Greenfeld</name>
     <email>daniel@feldroy.com</email>
@@ -12,54 +12,6 @@
   <generator uri="https://lkiesow.github.io/python-feedgen" version="1.0.0">python-feedgen</generator>
   <logo>https://f004.backblazeb2.com/file/daniel-feldroy-com/public/images/profile.jpg</logo>
   <rights>All rights reserved 2026, Daniel Roy Greenfeld</rights>
-  <entry>
-    <id>https://daniel.feldroy.com/posts/2026-01-downloading-everything</id>
-    <title>Writing tools to download everything</title>
-    <updated>2026-01-16T11:22:35.582258+00:00</updated>
-    <author>
-      <name>Daniel Roy Greenfeld</name>
-      <email>daniel@feldroy.com</email>
-    </author>
-    <content type="html">&lt;p&gt;Over the years, &lt;a href="https://audrey.feldroy.com"&gt;Audrey&lt;/a&gt; and I have accumulated photos across a variety of services. Flickr, SmugMug, and others all have chunks of our memories sitting on their servers. Some of these services we haven't touched in years, others we pay for but rarely use. It was time to bring everything home.&lt;/p&gt;
-&lt;h2 id="why-bother"&gt;Why Bother?&lt;/h2&gt;
-&lt;p&gt;Two reasons pushed me to finally tackle this.&lt;/p&gt;
-&lt;p&gt;First, money. Subscriptions add up. Paying for storage on services we barely use felt wasteful. As a backup even more so because there are services that are cheaper and easier to use for that purpose, like Backblaze.&lt;/p&gt;
-&lt;p&gt;Second, simplicity. Having photos scattered across multiple services means hunting through different interfaces when looking for a specific memory. Consolidating everything into one place makes our photo library actually usable.&lt;/p&gt;
-&lt;h2 id="using-claude-to-write-a-downloader"&gt;Using Claude to Write a Downloader&lt;/h2&gt;
-&lt;p&gt;I decided to start with SmugMug since that had the largest collection. I could have written this script myself. I've done plenty of API work over the years. But I'm busy, and this felt like a perfect use case for AI assistance.&lt;/p&gt;
-&lt;p&gt;My approach was straightforward:&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;strong&gt;Wrote a specification&lt;/strong&gt; for a Smugmug downloader. I linked to the docs for the service then told it to make a CLI for downloading things off that service. For the CLI I insist on &lt;code&gt;typer&lt;/code&gt; but otherwise I didn't specify dependencies.&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;strong&gt;Told Claude to generate code&lt;/strong&gt; based on the spec. I provided the specification and let Claude produce a working Python script.&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;strong&gt;Tested&lt;/strong&gt; by running the scripts against real data. I started with small batches to verify the downloads worked correctly. Claude got everything right when iy came to downloads on the first go, which was impressive.&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;strong&gt;Adjust for volume&lt;/strong&gt;. We had over 5,000 files on Smugmug. Downloading everything at once took longer than I expected. I asked Claude to track files so if the script was interrupted it could resume where it left off. Claude kept messing this up, and after the 5th or 6th attempt I gave up trying to use Claude to write this part.&lt;/p&gt;
-&lt;/li&gt;
-&lt;/ol&gt;
-&lt;h2 id="i-wrote-some-code"&gt;I Wrote Some Code&lt;/h2&gt;
-&lt;p&gt;I wrote a super simple image ID cache using a plaintext file for storage. It was simple, effective, and worked on the first go. Sometimes it's easier to just write the code yourself than try to get an AI to do it for you.&lt;/p&gt;
-&lt;h2 id="the-smugmug-downloader"&gt;The SmugMug Downloader&lt;/h2&gt;
-&lt;p&gt;The project is here at &lt;a href="https://github.com/pydanny/smugmug-downloader"&gt;SmugMug downloader&lt;/a&gt;. It authenticates, enumerates all albums, and downloads every photo while preserving the album structure. Nothing fancy, just practical.&lt;/p&gt;
-&lt;p&gt;I'll be working on the Flickr downloader soon, following the same pattern. There's a few other services on the list too; I'm scanning our bank statements to see what else we have accounts on that we've let linger for too long.&lt;/p&gt;
-&lt;h2 id="was-it-worth-it"&gt;Was It Worth It?&lt;/h2&gt;
-&lt;p&gt;Absolutely. What would have taken me a day of focused coding took an hour of iterating with Claude. Our photos are off Smugmug and we're canceling a subscription we no longer need. I think this is what they mean by "vibe engineering".&lt;/p&gt;
-&lt;h2 id="summary"&gt;Summary&lt;/h2&gt;
-&lt;p&gt;These are files which in some cases we thought we lost. Or had forgotten. So the emotional and financial investment in a vibe engineered effort was low. If this were something that was touching our finances or wedding/baby photos I would have been much more cautious. But for now, this is a fun experiment in using AI to handle the mundane parts of coding so I can focus on more critical tasks.&lt;/p&gt;</content>
-    <link href="https://daniel.feldroy.com/posts/2026-01-downloading-everything"/>
-    <summary>Using AI to help download photos so we can consolidate all our images into one place.</summary>
-    <category term="python"/>
-    <contributor>
-      <name>Daniel Roy Greenfeld</name>
-      <email>daniel@feldroy.com</email>
-    </contributor>
-    <published>2026-01-16T11:22:35.582258+00:00</published>
-  </entry>
   <entry>
     <id>https://daniel.feldroy.com/posts/2026-02-we-moved-to-manila</id>
     <title>We moved to Manila!</title>
@@ -653,5 +605,42 @@
       <email>daniel@feldroy.com</email>
     </contributor>
     <published>2026-04-06T02:45:46.176600+00:00</published>
+  </entry>
+  <entry>
+    <id>https://daniel.feldroy.com/posts/2026-04-enter-grimdaniel</id>
+    <title>Enter Grimdaniel</title>
+    <updated>2026-04-14T03:31:22.288365+00:00</updated>
+    <author>
+      <name>Daniel Roy Greenfeld</name>
+      <email>daniel@feldroy.com</email>
+    </author>
+    <content type="html">&lt;h2 id="tldr"&gt;TLDR&lt;/h2&gt;
+&lt;p&gt;My new fiction-dedicated fiction writing site is here:&lt;/p&gt;
+&lt;h3 id="grimdanielcom"&gt;&lt;a href="https://grimdaniel.com" target="_blank"&gt;grimdaniel.com&lt;/a&gt;&lt;/h3&gt;
+&lt;h2 id="why"&gt;Why?&lt;/h2&gt;
+&lt;p&gt;About three months ago I received a head injury. Recovery wasn't quick, and I couldn't do a lot of things like look at traffic, do intense workouts, or spend more than a few minutes on code. Mostly I could only do passive things like reading or watching video. One active thing that I could do with impunity was write &lt;a href="/books/fiction"&gt;fiction&lt;/a&gt;. I hadn't done it in years, but now I found it was a rare active pursuit I could enjoy.&lt;/p&gt;
+&lt;p&gt;The result was my first book in about 8 years, a grimdark novella titled, "&lt;a href="/books/fiction#everyone-dies"&gt;Everyone Dies&lt;/a&gt;". I listed it here on this site, but most of my readers are here for my technical writing, not fiction. Rather than combine the two categoris (non-fiction and fiction) I decided to build out a dedicated app for my fiction efforts. &lt;/p&gt;
+&lt;p&gt;As for a name, "Daniel" is the formal version of "Danny," which works better for an author of dark fantasy. In tech I try to be more positive than negative so "Danny" works better there. And so &lt;strong&gt;Grimdaniel&lt;/strong&gt; was born.&lt;/p&gt;
+&lt;h2 id="where"&gt;Where?&lt;/h2&gt;
+&lt;p&gt;The location of my new material is centered around the &lt;strong&gt;&lt;a href="https://grimdaniel.com"&gt;grimdaniel.com&lt;/a&gt;&lt;/strong&gt; app. It's more than just a site, it is an engine for creating a new audience. Amongst other things there's a mailing list and mechanisms for granting access to in-progress works and advanced review copies. The newsletter signup starts at &lt;a href="https://grimdaniel.com/list-signup"&gt;grimdaniel.com/list-signup&lt;/a&gt;.&lt;/p&gt;
+&lt;h2 id="how"&gt;How?&lt;/h2&gt;
+&lt;p&gt;I built out &lt;a href="https://grimdaniel.com"&gt;grimdaniel.com&lt;/a&gt; used these tools:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://airwebframework.org/"&gt;Air&lt;/a&gt; to build out the website portion of the app. The GitHub repo for the project is at &lt;a href="https://github.com/pydanny/grimdaniel.com"&gt;github.com/pydanny/grimdaniel.com&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://sendfox.com/"&gt;sendfox&lt;/a&gt; for managing of the email list &lt;/li&gt;
+&lt;li&gt;&lt;a href="http://storyoriginapp.com/?via=anduril"&gt;Story Origin App&lt;/a&gt; for growing of my fiction-focused community. While it looks simple on the surface, it is actually a sophisticated app designed to help authors grow their audience.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Soon I'll write about the tools I use to write books.&lt;/p&gt;</content>
+    <link href="https://daniel.feldroy.com/posts/2026-04-enter-grimdaniel"/>
+    <summary>Why, where, and how I created a new app to be my new home of fiction writing.</summary>
+    <category term="air"/>
+    <category term="book"/>
+    <category term="concussion"/>
+    <category term="writing"/>
+    <contributor>
+      <name>Daniel Roy Greenfeld</name>
+      <email>daniel@feldroy.com</email>
+    </contributor>
+    <published>2026-04-14T03:31:22.288365+00:00</published>
   </entry>
 </feed>

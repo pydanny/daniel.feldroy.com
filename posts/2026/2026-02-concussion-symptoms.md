@@ -5,7 +5,7 @@ published: true
 tags:
   - concussion
   - health
-title: Concussion Symptoms
+title: Concussion Symptoms (February)
 ---
 
 It's been just over a month since I got injured. These days I usually wake up clear headed and with no symptoms. I can go about my day and do activities, but I must avoid triggers. Unfortunately the triggers ruin me until I get several hours of rest.

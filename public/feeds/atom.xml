@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
   <id>https://daniel.feldroy.com/</id>
   <title>Inside the head of Daniel Roy Greenfeld</title>
-  <updated>2026-04-14T16:53:03.309049+00:00</updated>
+  <updated>2026-04-14T16:56:18.380084+00:00</updated>
   <author>
     <name>Daniel Roy Greenfeld</name>
     <email>daniel@feldroy.com</email>
@@ -117,7 +117,7 @@
   </entry>
   <entry>
     <id>https://daniel.feldroy.com/posts/2026-02-concussion-symptoms</id>
-    <title>Concussion Symptoms</title>
+    <title>Concussion Symptoms (February)</title>
     <updated>2026-02-18T06:29:43.465871+00:00</updated>
     <author>
       <name>Daniel Roy Greenfeld</name>
@@ -450,7 +450,7 @@
   </entry>
   <entry>
     <id>https://daniel.feldroy.com/posts/2026-03-concussion-symptoms-update</id>
-    <title>Concussion Symptoms Update</title>
+    <title>Concussion Symptoms Update (March)</title>
     <updated>2026-03-18T23:42:59.079454+00:00</updated>
     <author>
       <name>Daniel Roy Greenfeld</name>
@@ -503,6 +503,7 @@
     <category term="twoscoops"/>
     <category term="book"/>
     <category term="writing"/>
+    <category term="health"/>
     <contributor>
       <name>Daniel Roy Greenfeld</name>
       <email>daniel@feldroy.com</email>
@@ -607,7 +608,7 @@
   </entry>
   <entry>
     <id>https://daniel.feldroy.com/posts/2026-04-concussion-symptoms-update</id>
-    <title>Concussion Symptoms Update</title>
+    <title>Concussion Symptoms Update (April)</title>
     <updated>2026-04-14T17:00:00.079454+00:00</updated>
     <author>
       <name>Daniel Roy Greenfeld</name>
@@ -670,7 +671,7 @@
     <link href="https://daniel.feldroy.com/posts/2026-04-concussion-symptoms-update"/>
     <summary>Documenting how the head injury incurred on January 16, 2026 continues to affect me three months later.</summary>
     <category term="concussion"/>
-    <category term="book"/>
+    <category term="health"/>
     <category term="writing"/>
     <contributor>
       <name>Daniel Roy Greenfeld</name>

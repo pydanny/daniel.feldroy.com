@@ -12,7 +12,7 @@ title: Concussion Symptoms Update (April)
 
 In a day it will have been three months since I was injured.
 
-Except for the speed at which I recover from symptoms, it's as if my recovery has stalled for the past month. The MRI and EKG revealed nothing bad, yet I can only function professionally for at most two hours a day. On a stressful day I can only work 10 minutes before I become useless.
+Except for the speed at which I recover from symptoms, it's as if my recovery has stalled for the past month. The MRI and EKG revealed nothing, which is typical for concussions. Yet I can only function professionally for at most two hours a day. On a stressful day I can only work 10 minutes before I become useless.
 
 I noticed I suffer more frequent insomnia, resulting in mornings where I wake up with symptoms. It's not fun. I actually have insomnia this evening, hence why I'm writing this entry.
 

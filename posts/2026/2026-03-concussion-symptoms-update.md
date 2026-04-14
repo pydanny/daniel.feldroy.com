@@ -8,13 +8,14 @@ tags:
 - twoscoops
 - book
 - writing
+- health
 title: Concussion Symptoms Update
 ---
 
 
-It's been just over two months since I got injured. These days I usually wake up clear headed and with no symptoms. I can go about my day and do activities, but I must avoid triggers. Unfortunately the triggers ruin me until I get several hours of rest.
+It's been just over two months since I got injured. These days I usually wake up mostly clear headed and with no symptoms. I can go about my day and do activities, but I must avoid triggers. Unfortunately the triggers ruin me until I get several hours of rest.
 
-What doesn't affect me is focused, creative pursuits like fiction writing. I can pump out fiction nonstop without any adverse consequences. Thanks to that quirk of my injury, I'm putting out [my first novel in ~8 years](https://andurilharkness.com), which I'm writing under a psuedonym. While that is awesome, it remains to be seen if I will find the same success with fiction that I have had writing non-fiction like [Two Scoops of Django](https://daniel.feldroy.com/books/tech).
+What doesn't affect me is focused, creative pursuits like fiction writing. I can pump out fiction nonstop without any adverse consequences. Thanks to that quirk of my injury, I'm putting out my first novel in ~8 years. While that is awesome, it remains to be seen if I will find the same success with fiction that I have had writing non-fiction like [Two Scoops of Django](https://daniel.feldroy.com/books/tech).
 
 Okay, here's the nitty gritty of what's causing me problems today.
 
@@ -57,4 +58,5 @@ Triggered symptoms:
 - Headache (usually in the front right of my head)
 - Dizziness (but no loss of balance)
 - Straight lines become very prominent and distracting
+- Memory problems, both short term and long term
 

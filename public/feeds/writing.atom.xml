@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
   <id>https://daniel.feldroy.com/</id>
   <title>Writing posts by Daniel Roy Greenfeld</title>
-  <updated>2026-04-14T16:22:27.220383+00:00</updated>
+  <updated>2026-04-14T16:53:03.827982+00:00</updated>
   <author>
     <name>Daniel Roy Greenfeld</name>
     <email>daniel@feldroy.com</email>
@@ -203,8 +203,8 @@
       <name>Daniel Roy Greenfeld</name>
       <email>daniel@feldroy.com</email>
     </author>
-    <content type="html">&lt;p&gt;It's been just over two months since I got injured. These days I usually wake up clear headed and with no symptoms. I can go about my day and do activities, but I must avoid triggers. Unfortunately the triggers ruin me until I get several hours of rest.&lt;/p&gt;
-&lt;p&gt;What doesn't affect me is focused, creative pursuits like fiction writing. I can pump out fiction nonstop without any adverse consequences. Thanks to that quirk of my injury, I'm putting out &lt;a href="https://andurilharkness.com"&gt;my first novel in ~8 years&lt;/a&gt;, which I'm writing under a psuedonym. While that is awesome, it remains to be seen if I will find the same success with fiction that I have had writing non-fiction like &lt;a href="https://daniel.feldroy.com/books/tech"&gt;Two Scoops of Django&lt;/a&gt;.&lt;/p&gt;
+    <content type="html">&lt;p&gt;It's been just over two months since I got injured. These days I usually wake up mostly clear headed and with no symptoms. I can go about my day and do activities, but I must avoid triggers. Unfortunately the triggers ruin me until I get several hours of rest.&lt;/p&gt;
+&lt;p&gt;What doesn't affect me is focused, creative pursuits like fiction writing. I can pump out fiction nonstop without any adverse consequences. Thanks to that quirk of my injury, I'm putting out my first novel in ~8 years. While that is awesome, it remains to be seen if I will find the same success with fiction that I have had writing non-fiction like &lt;a href="https://daniel.feldroy.com/books/tech"&gt;Two Scoops of Django&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;Okay, here's the nitty gritty of what's causing me problems today.&lt;/p&gt;
 &lt;h2 id="triggers"&gt;Triggers&lt;/h2&gt;
 &lt;p&gt;Slow triggers taking 60-90 minutes to cause symptoms:&lt;/p&gt;
@@ -242,6 +242,7 @@
 &lt;li&gt;Headache (usually in the front right of my head)&lt;/li&gt;
 &lt;li&gt;Dizziness (but no loss of balance)&lt;/li&gt;
 &lt;li&gt;Straight lines become very prominent and distracting&lt;/li&gt;
+&lt;li&gt;Memory problems, both short term and long term&lt;/li&gt;
 &lt;/ul&gt;</content>
     <link href="https://daniel.feldroy.com/posts/2026-03-concussion-symptoms-update"/>
     <summary>Documenting how the head injury incurred on January 16, 2026 continues to affect me two months later.</summary>
@@ -290,5 +291,78 @@
       <email>daniel@feldroy.com</email>
     </contributor>
     <published>2026-04-14T03:31:22.288365+00:00</published>
+  </entry>
+  <entry>
+    <id>https://daniel.feldroy.com/posts/2026-04-concussion-symptoms-update</id>
+    <title>Concussion Symptoms Update</title>
+    <updated>2026-04-14T17:00:00.079454+00:00</updated>
+    <author>
+      <name>Daniel Roy Greenfeld</name>
+      <email>daniel@feldroy.com</email>
+    </author>
+    <content type="html">&lt;p&gt;In two days it will have been three months since I was injured.&lt;/p&gt;
+&lt;p&gt;Except for the speed at which I recover from symptoms, it's as if my recovery has stalled for the past month. The MRI and EKG revealed nothing bad, yet I can only function professionally for at most two hours a day. On a stressful day I can only work 10 minutes before I become useless.&lt;/p&gt;
+&lt;p&gt;I noticed I suffer more frequent insomnia, resulting in mornings where I wake up with symptoms. It's not fun. I actually have insomnia this evening, hence why I'm writing this entry.&lt;/p&gt;
+&lt;p&gt;Of concern is that I've noticed gaps in my short and long term memory. I've taken to often writing things down. It's not an age thing, it becomes more acute as my symptoms are triggered.&lt;/p&gt;
+&lt;p&gt;Fiction writing remains my safe pursuit. I can pump out fiction nonstop without any adverse consequences. The challenge is that compared to tech or writing about tech, fiction writing is hard industry to make a living wage in.&lt;/p&gt;
+&lt;p&gt;Okay, details about what I'm going through:&lt;/p&gt;
+&lt;h2 id="triggers"&gt;Triggers&lt;/h2&gt;
+&lt;p&gt;Slow triggers taking 60-90 minutes to cause symptoms:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Crowds&lt;/li&gt;
+&lt;li&gt;Coding &lt;/li&gt;
+&lt;li&gt;Working with LLMs&lt;/li&gt;
+&lt;li&gt;Exercise&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Medium triggers that take effect in 10 minutes:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Learning new things like board games, programming languages, and human languages&lt;/li&gt;
+&lt;li&gt;Reviewing easy pull requests&lt;/li&gt;
+&lt;li&gt;Stress&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Fast triggers that take effect in 1-3 minutes:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Reviewing complex pull requests&lt;/li&gt;
+&lt;li&gt;Very fine print on paper&lt;/li&gt;
+&lt;li&gt;Visual distortions like blurry text, blurry photos, spatial puzzles, video recursion&lt;/li&gt;
+&lt;li&gt;Keeping my eyes on a point and moving my head around quickly (vestibulo-ocular reflex mismatch)&lt;/li&gt;
+&lt;li&gt;Context switching within a task. For example, when working on code if I switch from debugging to correcting a DNS failure&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Very fast triggers that take effect in seconds:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Context switching beween major task categories requiring deep thought&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id="symptoms"&gt;Symptoms&lt;/h2&gt;
+&lt;p&gt;Constant symptoms:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Light brain fog&lt;/li&gt;
+&lt;li&gt;Memory problems, both short and long term&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Periodic Symptoms&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Increased incidents of insomnia&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Triggered symptoms:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Headache (usually in the front right of my head)&lt;/li&gt;
+&lt;li&gt;Dizziness (but no loss of balance)&lt;/li&gt;
+&lt;li&gt;Straight lines and geometric patterns become very prominent and distracting&lt;/li&gt;
+&lt;li&gt;Acute memory gaps, both short and long term&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id="symptom-recovery-time-and-progress"&gt;Symptom recovery time and progress&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;At least an hour&lt;/li&gt;
+&lt;li&gt;Last month it was 2-3 hours&lt;/li&gt;
+&lt;/ul&gt;</content>
+    <link href="https://daniel.feldroy.com/posts/2026-04-concussion-symptoms-update"/>
+    <summary>Documenting how the head injury incurred on January 16, 2026 continues to affect me three months later.</summary>
+    <category term="concussion"/>
+    <category term="book"/>
+    <category term="writing"/>
+    <contributor>
+      <name>Daniel Roy Greenfeld</name>
+      <email>daniel@feldroy.com</email>
+    </contributor>
+    <published>2026-04-14T17:00:00.079454+00:00</published>
   </entry>
 </feed>

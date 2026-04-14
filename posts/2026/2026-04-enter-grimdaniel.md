@@ -5,7 +5,6 @@ published: true
 tags:
 - air
 - book
-- concussion
 - writing
 title: Enter Grimdaniel
 image: https://daniel.feldroy.com/static/images/everyone-dies.webp

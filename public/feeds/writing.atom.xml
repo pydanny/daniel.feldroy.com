@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
   <id>https://daniel.feldroy.com/</id>
   <title>Writing posts by Daniel Roy Greenfeld</title>
-  <updated>2026-04-13T21:49:10.465497+00:00</updated>
+  <updated>2026-04-14T16:22:27.220383+00:00</updated>
   <author>
     <name>Daniel Roy Greenfeld</name>
     <email>daniel@feldroy.com</email>
@@ -284,7 +284,6 @@
     <summary>Why, where, and how I created a new app to be my new home of fiction writing.</summary>
     <category term="air"/>
     <category term="book"/>
-    <category term="concussion"/>
     <category term="writing"/>
     <contributor>
       <name>Daniel Roy Greenfeld</name>

@@ -108,7 +108,7 @@ def count_stats(text: str) -> dict:
         "chars_no_space": chars_no_space,
         "sentences": max(sentences, 1),
         "avg_word_len": (
-            round(sum(len(w) for w in words) / len(words), 1) if words else 0.0
+            round(sum(len(x) for x in words) / len(words), 1) if words else 0.0
         ),
         "reading_time_min": max(1, round(len(words) / 200)),  # ~200 wpm
     }

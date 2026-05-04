@@ -151,7 +151,7 @@ def _count_single_file(
         ("Characters (with spaces)", f"{stats['chars']:,}"),
         ("Characters (no spaces)", f"{stats['chars_no_space']:,}"),
         ("Sentences (approx.)", f"{stats['sentences']:,}"),
-        ("Avg word length", f"{stats['avg_word_len']} chars"),
+        ("Average word length", f"{stats['avg_word_len']} chars"),
         ("Estimated reading time", f"{stats['reading_time_min']} min"),
         ("Markdown stripped", "yes" if strip else "no"),
     ]

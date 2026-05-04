@@ -20,7 +20,6 @@ I love working in regular expressions. It was the one thing I got out of my brie
 So here you go, a Python-powered word counter powered by my desire to noodle with regular expressions:
 
 ```python
-#!/usr/bin/env python3
 """
 word_count.py — Count words in a Markdown file or a directory of markdown files.
 

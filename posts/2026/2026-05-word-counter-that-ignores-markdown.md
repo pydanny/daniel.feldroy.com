@@ -13,7 +13,9 @@ I've been doing a lot of writing recently, and tracking my word count. I write i
 > "Some people, when confronted with a problem, think ‘I know, I’ll use regular expressions.’ Now they have two problems."
 > -- Jamie Zawinski
 
-I don't care. I love working in regular expressions. It was the one thing I got out of my brief foray in Perl at the very start of my software development career. I carried it into my Java and ColdFusion days and periodically used it in Python. Noodling with getting a regular expression just right is a very fun puzzle for me.
+I don't care.
+
+I love working in regular expressions. It was the one thing I got out of my brief foray in Perl at the very start of my software development career. I carried it into my Java and ColdFusion days and periodically used it in Python. Noodling with getting a regular expression just right is a very fun puzzle for me.
 
 So here you go, a Python-powered word counter powered by my desire to noodle with regular expressions:
 

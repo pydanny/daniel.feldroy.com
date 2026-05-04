@@ -198,7 +198,7 @@ def count(
         return
 
     # Directory mode: find .md files starting with a digit
-    files = sorted(f for f in path.glob("[0-9]*.md") if f.is_file())
+    files = sorted(x for x in path.glob("[0-9]*.md") if f.is_file())
     if not files:
         console.print(f"[red]No digit-prefixed .md files found in {path}[/red]")
         raise typer.Exit(code=1)

@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
   <id>https://daniel.feldroy.com/</id>
   <title>Writing posts by Daniel Roy Greenfeld</title>
-  <updated>2026-05-04T11:42:17.721693+00:00</updated>
+  <updated>2026-05-04T11:43:41.060861+00:00</updated>
   <author>
     <name>Daniel Roy Greenfeld</name>
     <email>daniel@feldroy.com</email>
@@ -380,7 +380,7 @@
 -- Jamie Zawinski&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;p&gt;I don't care.&lt;/p&gt;
-&lt;p&gt;I love working in regular expressions. It was the one thing I got out of my brief foray in Perl at the very start of my software development career. I carried it into my Java and ColdFusion days and periodically used it in Python. Noodling with getting a regular expression just right is a very fun puzzle for me.&lt;/p&gt;
+&lt;p&gt;I love working in regular expressions. It was the one thing I got out of my brief foray in Perl at the very start of my software development career. I carried it into my Java and ColdFusion days and periodically use it in Python. Yes, Python has lots of useful string tools, but playing with regular expressions until they are just right remains a fun puzzle for me.&lt;/p&gt;
 &lt;p&gt;So here you go, a Python-powered word counter powered by my desire to noodle with regular expressions:&lt;/p&gt;
 &lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="ch"&gt;#!/usr/bin/env python3&lt;/span&gt;
 &lt;span class="sd"&gt;&amp;quot;&amp;quot;&amp;quot;&lt;/span&gt;

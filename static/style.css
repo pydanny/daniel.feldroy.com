@@ -25,3 +25,7 @@
     overflow-x: auto;
   }
 }
+
+.redline {
+  border: 2px solid red;
+}

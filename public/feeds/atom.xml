@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
   <id>https://daniel.feldroy.com/</id>
   <title>Inside the head of Daniel Roy Greenfeld</title>
-  <updated>2026-05-07T00:44:21.648732+00:00</updated>
+  <updated>2026-05-21T09:34:49.981738+00:00</updated>
   <author>
     <name>Daniel Roy Greenfeld</name>
     <email>daniel@feldroy.com</email>
@@ -12,64 +12,6 @@
   <generator uri="https://lkiesow.github.io/python-feedgen" version="1.0.0">python-feedgen</generator>
   <logo>https://f004.backblazeb2.com/file/daniel-feldroy-com/public/images/profile.jpg</logo>
   <rights>All rights reserved 2026, Daniel Roy Greenfeld</rights>
-  <entry>
-    <id>https://daniel.feldroy.com/posts/2026-02-concussion-symptoms</id>
-    <title>Concussion Symptoms (February)</title>
-    <updated>2026-02-18T06:29:43.465871+00:00</updated>
-    <author>
-      <name>Daniel Roy Greenfeld</name>
-      <email>daniel@feldroy.com</email>
-    </author>
-    <content type="html">&lt;p&gt;It's been just over a month since I got injured. These days I usually wake up clear headed and with no symptoms. I can go about my day and do activities, but I must avoid triggers. Unfortunately the triggers ruin me until I get several hours of rest.&lt;/p&gt;
-&lt;h2 id="triggers"&gt;Triggers&lt;/h2&gt;
-&lt;p&gt;Slow triggers taking hours to cause symptoms:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Crowds&lt;/li&gt;
-&lt;li&gt;Looking at moving traffic&lt;/li&gt;
-&lt;li&gt;Being in a car&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;Medium triggers that take effect in 10-30 minutes:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Deep thought like when writing code or working with LLMs (I think hard about prompts and validation)&lt;/li&gt;
-&lt;li&gt;Stress or excitement&lt;/li&gt;
-&lt;li&gt;Outlining of stories&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;Fast triggers that take effect in seconds:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Context switching when in deep thought&lt;/li&gt;
-&lt;li&gt;Large blocks of geometric shapes like:&lt;/li&gt;
-&lt;li&gt;Those found in tall modern buildings&lt;/li&gt;
-&lt;li&gt;Graph paper&lt;/li&gt;
-&lt;li&gt;Hexagonal patterns&lt;/li&gt;
-&lt;li&gt;Very fine print on paper&lt;/li&gt;
-&lt;li&gt;Keeping my eyes on a point and moving my head around quickly (vestibulo-ocular reflex mismatch)&lt;/li&gt;
-&lt;li&gt;Learning new board games (I can play games I already know, but learning new ones is a problem)&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id="symptoms"&gt;Symptoms&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;Brain fog&lt;/li&gt;
-&lt;li&gt;Fatigue&lt;/li&gt;
-&lt;li&gt;Headache (usually in the front right of my head)&lt;/li&gt;
-&lt;li&gt;Dizziness (but no loss of balance)&lt;/li&gt;
-&lt;li&gt;Straight lines become very prominent and distracting&lt;/li&gt;
-&lt;li&gt;Memory loss (I'm aware that I am having trouble tracking dates, and my wife and daughter both say I'm more forgetful than usual)&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id="updates"&gt;Updates&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;Feb 23, 2026: Added graph paper and hexagonal patterns to the list of fast triggers&lt;/li&gt;
-&lt;li&gt;Feb 27, 2026: Added outlining of fiction to medium triggers&lt;/li&gt;
-&lt;li&gt;Feb 27, 2026: Added learning new board games to fast triggers&lt;/li&gt;
-&lt;/ul&gt;</content>
-    <link href="https://daniel.feldroy.com/posts/2026-02-concussion-symptoms"/>
-    <summary>Documenting how the head injury incurred on January 16, 2026 continues to affected me one month later.</summary>
-    <category term="concussion"/>
-    <category term="health"/>
-    <contributor>
-      <name>Daniel Roy Greenfeld</name>
-      <email>daniel@feldroy.com</email>
-    </contributor>
-    <published>2026-02-18T06:29:43.465871+00:00</published>
-  </entry>
   <entry>
     <id>https://daniel.feldroy.com/posts/2026-02-what-my-head-injury-taught-me-about-b2b-sales</id>
     <title>What my head injury taught me about B2B sales</title>
@@ -838,5 +780,40 @@
       <email>daniel@feldroy.com</email>
     </contributor>
     <published>2026-05-04T11:55:23.590783+00:00</published>
+  </entry>
+  <entry>
+    <id>https://daniel.feldroy.com/posts/2026-05-everyone-dies-kindle-unlimited</id>
+    <title>Everyone Dies... is on Kindle Unlimited</title>
+    <updated>2026-05-21T07:19:38.125587+00:00</updated>
+    <author>
+      <name>Daniel Roy Greenfeld</name>
+      <email>daniel@feldroy.com</email>
+    </author>
+    <content type="html">&lt;p&gt;Years ago, I co-wrote a book in which the protagonist died at the end. I liked the protagonist, as did my co-author and the readers. So, at the beginning of the sequel, we brought the character back to life.&lt;/p&gt;
+&lt;p&gt;While it was fun to write that resurrection, it meant his sacrifice was diminished. He had paid the ultimate price, but then got a refund.&lt;/p&gt;
+&lt;p&gt;Since then, I kept thinking about writing a new book (or series) where protagonists die with regularity. Sacrifice would have meaning. Characters would struggle with the death of those around them. I would promise that death is permanent.&lt;/p&gt;
+&lt;p&gt;The result is this story.&lt;/p&gt;
+&lt;p&gt;The release of this book is bittersweet. I admit that I don't want to let some of the characters go. And that's what makes this story so interesting for me, that I'll miss them in kind of the same way I miss friends and family who have passed away.&lt;/p&gt;
+&lt;p class="center"&gt;&lt;a href="https://storyoriginapp.com/universalbooklinks/8c487a18-2b3e-11f1-aa1d-dfa5b3422a69" class="btn btn-primary center"  target="_blank"&gt;Read "Everyone Dies" on Amazon&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href="https://storyoriginapp.com/universalbooklinks/8c487a18-2b3e-11f1-aa1d-dfa5b3422a69" rel="noopener noreferrer" target="_blank"&gt;
+    &lt;img alt="image" src="https://daniel.feldroy.com/static/images/everyone-dies-read-on-amazon.d7dacd80.webp" width="null" style="height: auto; max-width: 100%;" class="redline"&gt;
+&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id="please-write-a-review"&gt;Please write a review&lt;/h2&gt;
+&lt;p&gt;Here's where I ask for reviews. Even the negative ones.&lt;/p&gt;
+&lt;p&gt;Positive reviews inspire me to write more. I run to the keyboard, and the words and story rush out. They energize me, and I love each and every one I get.&lt;/p&gt;
+&lt;p&gt;Negative reviews fuel the negative emotions that are useful for portraying the darkness in the stories I write. Also, they help me identify what I can improve.&lt;/p&gt;
+&lt;p&gt;Even neutral reviews are good. I feel neutral about them, but having them is better than no review!&lt;/p&gt;
+&lt;p&gt;Finally, if you feel like just putting in a star rating on Amazon (or Goodreads), with an absolute minimal review, that works too. No matter how many stars you choose, you help me by rating it.&lt;/p&gt;
+&lt;p class="center"&gt;&lt;a href="https://www.amazon.com/review/create-review/?ie=UTF8&amp;channel=glance-detail&amp;asin=B0GTRGFNB5" class="btn btn-primary" target="_blank"&gt;Write a review!&lt;/a&gt;&lt;/p&gt;</content>
+    <link href="https://daniel.feldroy.com/posts/2026-05-everyone-dies-kindle-unlimited"/>
+    <summary>I wrote a new fiction book and it is now published. The first in a new series!</summary>
+    <category term="book"/>
+    <category term="writing"/>
+    <contributor>
+      <name>Daniel Roy Greenfeld</name>
+      <email>daniel@feldroy.com</email>
+    </contributor>
+    <published>2026-05-21T07:19:38.125587+00:00</published>
   </entry>
 </feed>

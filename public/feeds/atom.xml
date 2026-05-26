@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
   <id>https://daniel.feldroy.com/</id>
   <title>Inside the head of Daniel Roy Greenfeld</title>
-  <updated>2026-05-21T09:34:49.981738+00:00</updated>
+  <updated>2026-05-26T09:40:58.456776+00:00</updated>
   <author>
     <name>Daniel Roy Greenfeld</name>
     <email>daniel@feldroy.com</email>
@@ -519,39 +519,6 @@
     <published>2026-04-14T17:00:00.079454+00:00</published>
   </entry>
   <entry>
-    <id>https://daniel.feldroy.com/posts/2026-04-a-week-in-the-life-of-a-seven-year-old</id>
-    <title>A week in the life of a seven year old</title>
-    <updated>2026-04-24T15:14:07.710573+00:00</updated>
-    <author>
-      <name>Daniel Roy Greenfeld</name>
-      <email>daniel@feldroy.com</email>
-    </author>
-    <content type="html">&lt;ul&gt;
-&lt;li&gt;School&lt;/li&gt;
-&lt;li&gt;Afterschool activities&lt;/li&gt;
-&lt;li&gt;BJJ&lt;/li&gt;
-&lt;li&gt;Abacus&lt;/li&gt;
-&lt;li&gt;Swimming class and free swim&lt;/li&gt;
-&lt;li&gt;Climbing&lt;/li&gt;
-&lt;li&gt;Playground&lt;/li&gt;
-&lt;li&gt;Free time&lt;/li&gt;
-&lt;li&gt;Reading&lt;/li&gt;
-&lt;li&gt;Arts and crafts&lt;/li&gt;
-&lt;li&gt;Cooking&lt;/li&gt;
-&lt;li&gt;Chess practice&lt;/li&gt;
-&lt;li&gt;Just goofing off&lt;/li&gt;
-&lt;/ul&gt;</content>
-    <link href="https://daniel.feldroy.com/posts/2026-04-a-week-in-the-life-of-a-seven-year-old"/>
-    <summary>Documenting the typical schedule of my daughter in 2026.</summary>
-    <category term="Uma"/>
-    <category term="family"/>
-    <contributor>
-      <name>Daniel Roy Greenfeld</name>
-      <email>daniel@feldroy.com</email>
-    </contributor>
-    <published>2026-04-24T15:14:07.710573+00:00</published>
-  </entry>
-  <entry>
     <id>https://daniel.feldroy.com/posts/2026-05-word-counter-that-ignores-markdown</id>
     <title>Word counter that ignores Markdown</title>
     <updated>2026-05-04T11:55:23.590783+00:00</updated>
@@ -815,5 +782,46 @@
       <email>daniel@feldroy.com</email>
     </contributor>
     <published>2026-05-21T07:19:38.125587+00:00</published>
+  </entry>
+  <entry>
+    <id>https://daniel.feldroy.com/posts/2026-05-a-week-in-the-life-of-a-seven-year-old</id>
+    <title>A week in the life of a seven year old</title>
+    <updated>2026-05-26T15:14:07.710573+00:00</updated>
+    <author>
+      <name>Daniel Roy Greenfeld</name>
+      <email>daniel@feldroy.com</email>
+    </author>
+    <content type="html">&lt;h2 id="school"&gt;School&lt;/h2&gt;
+&lt;p&gt;Uma attends school every weekday. She really likes school. We have tried homeschooling, but she vastly prefers the structure and social life of being in a dedicated facility. Of course she sometimes has her grumbles about where she learns, but she loves the learning process and being around other children.&lt;/p&gt;
+&lt;h2 id="afterschool-activities"&gt;Afterschool activities&lt;/h2&gt;
+&lt;p&gt;We keep Uma busy through a mix of activities, mostly physical. We want her to have at least an hour of physical activity a day. Besides the advantages of strength and health it gives her, it find she sleeps better if she's been active. In no particular order:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Brazilian Jiu-Jitsu: 2-3x &lt;/li&gt;
+&lt;li&gt;Swimming class: 2x&lt;/li&gt;
+&lt;li&gt;Free swimming at the local pool: 3x, often on weekends too&lt;/li&gt;
+&lt;li&gt;Climbing gym: 0-1x&lt;/li&gt;
+&lt;li&gt;Playground fun at one of the local parks: 0-1x&lt;/li&gt;
+&lt;li&gt;Abacus class: 1-2x&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id="free-time"&gt;Free time&lt;/h2&gt;
+&lt;p&gt;Every day we try to give Uma at least an hour of her own time at home. We've found she starts to lose her happy demeanor if she doesn't time to herself. In general order of her preference:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Assembling engineering kits (crunchlabs and other similar things)&lt;/li&gt;
+&lt;li&gt;Arts and crafts&lt;/li&gt;
+&lt;li&gt;Reading&lt;/li&gt;
+&lt;li&gt;Cooking&lt;/li&gt;
+&lt;li&gt;Self-driven chess practice&lt;/li&gt;
+&lt;li&gt;TV time&lt;/li&gt;
+&lt;li&gt;Toy time&lt;/li&gt;
+&lt;/ul&gt;</content>
+    <link href="https://daniel.feldroy.com/posts/2026-05-a-week-in-the-life-of-a-seven-year-old"/>
+    <summary>Documenting the typical schedule of my daughter in 2026.</summary>
+    <category term="Uma"/>
+    <category term="family"/>
+    <contributor>
+      <name>Daniel Roy Greenfeld</name>
+      <email>daniel@feldroy.com</email>
+    </contributor>
+    <published>2026-05-26T15:14:07.710573+00:00</published>
   </entry>
 </feed>

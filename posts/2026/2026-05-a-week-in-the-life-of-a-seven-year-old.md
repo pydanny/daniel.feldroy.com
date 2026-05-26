@@ -3,7 +3,7 @@ date: '2026-05-26T15:14:07.710573+00:00'
 description: Documenting the typical schedule of my daughter in 2026.
 published: true
 tags:
-- Uma
+- uma
 - family
 title: A week in the life of a seven year old
 ---

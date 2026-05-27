@@ -8,6 +8,7 @@ tags:
   - uma
   - octopus
   - kraken
+  - england
 time_to_read: 5
 title: We moved to London, UK!
 description: We're going to be in London, UK for a while, here's some of the details.

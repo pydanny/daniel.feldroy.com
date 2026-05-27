@@ -4,8 +4,7 @@ description: The resources I used to dramatically improve my audio.
 published: true
 slug: improving-audio-recording-with-streamlabs
 tags:
-  - audio
-  - video
+  - blog
 time_to_read: 1
 title: Improving Audio Recording with Streamlabs
 type: post

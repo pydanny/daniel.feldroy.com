@@ -9,6 +9,7 @@ tags:
 - resolutions
 - pycon
 - travel
+- england
 title: Recap of 2025 and Resolutions for 2026
 image: /public/images/2025-2026-recap.png
 twitter_image: /public/images/2025-2026-recap.png

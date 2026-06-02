@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
   <id>https://daniel.feldroy.com/</id>
   <title>Inside the head of Daniel Roy Greenfeld</title>
-  <updated>2026-05-26T09:40:58.456776+00:00</updated>
+  <updated>2026-06-02T03:42:02.092825+00:00</updated>
   <author>
     <name>Daniel Roy Greenfeld</name>
     <email>daniel@feldroy.com</email>
@@ -12,41 +12,6 @@
   <generator uri="https://lkiesow.github.io/python-feedgen" version="1.0.0">python-feedgen</generator>
   <logo>https://f004.backblazeb2.com/file/daniel-feldroy-com/public/images/profile.jpg</logo>
   <rights>All rights reserved 2026, Daniel Roy Greenfeld</rights>
-  <entry>
-    <id>https://daniel.feldroy.com/posts/2026-02-what-my-head-injury-taught-me-about-b2b-sales</id>
-    <title>What my head injury taught me about B2B sales</title>
-    <updated>2026-02-20T00:45:35.781957+00:00</updated>
-    <author>
-      <name>Daniel Roy Greenfeld</name>
-      <email>daniel@feldroy.com</email>
-    </author>
-    <content type="html">&lt;p&gt;Last month I had a &lt;a href="https://daniel.feldroy.com/tags/concussion"&gt;head injury&lt;/a&gt; that has almost completely sidelined me from work.&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;No laptop&lt;/li&gt;
-&lt;li&gt;No calls&lt;/li&gt;
-&lt;li&gt;No pull request reviews&lt;/li&gt;
-&lt;li&gt;Workouts went from highly intense daily BJJ &amp;amp; heavy weight sessions to walks, tai chi, and light weights&lt;/li&gt;
-&lt;li&gt;No direct messages except a few with close family and friends&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;Just silence and recovery and boredom. &lt;/p&gt;
-&lt;p&gt;Fortunately for me we try to live an affordable lifestyle and have built a reserve for emergencies. I'm able to take the time I need to heal. This is a far cry from the periods of desperation in my youth when I lived paycheck to paycheck. I remember having to work through being extremely sick or injured because the bills were due.&lt;/p&gt;
-&lt;p&gt;The insights I gained from this experience are:&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;Health is your greatest asset and it can be stripped from you in an instant&lt;/li&gt;
-&lt;li&gt;The world doesn't stop when you can't work, bills are still due&lt;/li&gt;
-&lt;li&gt;Most people you know will send you their best wishes and support&lt;/li&gt;
-&lt;li&gt;A few people may try to advantage of your vulnerability and try to get something from you&lt;/li&gt;
-&lt;li&gt;Be married to someone awesome like &lt;a href="https://audrey.feldroy.com/"&gt;my wife&lt;/a&gt;, who has been an absolute rock through this whole ordeal&lt;/li&gt;
-&lt;/ol&gt;</content>
-    <link href="https://daniel.feldroy.com/posts/2026-02-what-my-head-injury-taught-me-about-b2b-sales"/>
-    <summary>There's this way of writing on LinkedIn where you start with a personal story, and then you draw a business lesson from it. It's a silly pattern that often reeks of faked success and other forms of falsehood. So what better use of my available writing time before symptoms kick in today than to write one of those posts?</summary>
-    <category term="concussion"/>
-    <contributor>
-      <name>Daniel Roy Greenfeld</name>
-      <email>daniel@feldroy.com</email>
-    </contributor>
-    <published>2026-02-20T00:45:35.781957+00:00</published>
-  </entry>
   <entry>
     <id>https://daniel.feldroy.com/posts/til-2026-02-using-pygmentsrenderer-with-mistletoe-as-a-partial</id>
     <title>TIL: Using PygmentsRenderer with mistletoe as a partial</title>
@@ -138,6 +103,7 @@
 &lt;/ul&gt;</content>
     <link href="https://daniel.feldroy.com/posts/2026-02-what-i-miss-about-london"/>
     <summary>Thoughts about things I really enjoyed during the approximately two years we lived in London.</summary>
+    <category term="england"/>
     <category term="travel"/>
     <category term="family"/>
     <contributor>
@@ -816,12 +782,72 @@
 &lt;/ul&gt;</content>
     <link href="https://daniel.feldroy.com/posts/2026-05-a-week-in-the-life-of-a-seven-year-old"/>
     <summary>Documenting the typical schedule of my daughter in 2026.</summary>
-    <category term="Uma"/>
+    <category term="uma"/>
     <category term="family"/>
     <contributor>
       <name>Daniel Roy Greenfeld</name>
       <email>daniel@feldroy.com</email>
     </contributor>
     <published>2026-05-26T15:14:07.710573+00:00</published>
+  </entry>
+  <entry>
+    <id>https://daniel.feldroy.com/posts/2026-06-concussion-symptoms-update</id>
+    <title>Concussion Symptoms Update (June)</title>
+    <updated>2026-06-02T06:17:40.293912+00:00</updated>
+    <author>
+      <name>Daniel Roy Greenfeld</name>
+      <email>daniel@feldroy.com</email>
+    </author>
+    <content type="html">&lt;p&gt;It's been approximately four and a half months since I hit my head. I've gotten better, to the point some days I forget I was hurt earlier this year. Other days I run into challenges.&lt;/p&gt;
+&lt;p&gt;Regular insomnia continues to be an issue. I sometimes take melatonin. I would take it more often but I have a very high tolerance to the drug. I don't like taking any medication and don't want to build up my tolerance further, as you can overdose on melatonin. For reference, other sleep medications are very problematic for me.&lt;/p&gt;
+&lt;p&gt;When I run into symptoms (usually in crowds or coding) it starts with a feeling on the right side of my head. Focusing on anything becomes really hard, and I struggle n ot to become moody or belligerant. The personality change has damaged some relationships, I'm hoping that I can mend them in the future.&lt;/p&gt;
+&lt;p&gt;Fiction writing remains my safe pursuit, and I've built a seperate site at &lt;a href="https://grimdaniel.com/"&gt;grimdaniel.com&lt;/a&gt; for that effort. On the plus side, exercise isn't an issue anymore. I spend a lot of time in the gym and swimming.&lt;/p&gt;
+&lt;p&gt;Here's the detail list:&lt;/p&gt;
+&lt;h2 id="triggers"&gt;Triggers&lt;/h2&gt;
+&lt;p&gt;Very fast triggers that take effect in seconds:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Context switching beween major task categories requiring deep thought&lt;/li&gt;
+&lt;li&gt;Keeping my eyes on a point and moving my head around quickly (vestibulo-ocular reflex mismatch)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Fast triggers that take effect in 5-10 minutes:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Reviewing pull requests&lt;/li&gt;
+&lt;li&gt;Stress&lt;/li&gt;
+&lt;li&gt;Context switching within a task. For example, when working on code if I switch from debugging to correcting a DNS failure&lt;/li&gt;
+&lt;li&gt;Very fine print on paper&lt;/li&gt;
+&lt;li&gt;Visual distortions like blurry text, blurry photos, spatial puzzles, video recursion&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Medium triggers taking 60 minutes to cause symptoms:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Learning new things like board games, programming languages, and human languages&lt;/li&gt;
+&lt;li&gt;Coding &lt;/li&gt;
+&lt;li&gt;Working with LLMs&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id="symptoms"&gt;Symptoms&lt;/h2&gt;
+&lt;p&gt;Periodic Symptoms&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Increased incidents of insomnia&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Triggered symptoms:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Headache (usually in the front right of my head)&lt;/li&gt;
+&lt;li&gt;Loss of focus&lt;/li&gt;
+&lt;li&gt;Acute memory gaps, both short and long term&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id="symptom-recovery-time-and-progress"&gt;Symptom recovery time and progress&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;A few minutes to an hour depending on the severity&lt;/li&gt;
+&lt;li&gt;Often the following day I am in a light brain fog&lt;/li&gt;
+&lt;/ul&gt;</content>
+    <link href="https://daniel.feldroy.com/posts/2026-06-concussion-symptoms-update"/>
+    <summary>Documenting how the head injury incurred on January 16, 2026 continues to affect me four and a half months later.</summary>
+    <category term="concussion"/>
+    <category term="health"/>
+    <category term="writing"/>
+    <contributor>
+      <name>Daniel Roy Greenfeld</name>
+      <email>daniel@feldroy.com</email>
+    </contributor>
+    <published>2026-06-02T06:17:40.293912+00:00</published>
   </entry>
 </feed>

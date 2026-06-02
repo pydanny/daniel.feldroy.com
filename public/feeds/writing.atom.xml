@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
   <id>https://daniel.feldroy.com/</id>
   <title>Writing posts by Daniel Roy Greenfeld</title>
-  <updated>2026-05-26T09:40:59.450400+00:00</updated>
+  <updated>2026-06-02T03:42:03.078466+00:00</updated>
   <author>
     <name>Daniel Roy Greenfeld</name>
     <email>daniel@feldroy.com</email>
@@ -630,5 +630,65 @@
       <email>daniel@feldroy.com</email>
     </contributor>
     <published>2026-05-21T07:19:38.125587+00:00</published>
+  </entry>
+  <entry>
+    <id>https://daniel.feldroy.com/posts/2026-06-concussion-symptoms-update</id>
+    <title>Concussion Symptoms Update (June)</title>
+    <updated>2026-06-02T06:17:40.293912+00:00</updated>
+    <author>
+      <name>Daniel Roy Greenfeld</name>
+      <email>daniel@feldroy.com</email>
+    </author>
+    <content type="html">&lt;p&gt;It's been approximately four and a half months since I hit my head. I've gotten better, to the point some days I forget I was hurt earlier this year. Other days I run into challenges.&lt;/p&gt;
+&lt;p&gt;Regular insomnia continues to be an issue. I sometimes take melatonin. I would take it more often but I have a very high tolerance to the drug. I don't like taking any medication and don't want to build up my tolerance further, as you can overdose on melatonin. For reference, other sleep medications are very problematic for me.&lt;/p&gt;
+&lt;p&gt;When I run into symptoms (usually in crowds or coding) it starts with a feeling on the right side of my head. Focusing on anything becomes really hard, and I struggle n ot to become moody or belligerant. The personality change has damaged some relationships, I'm hoping that I can mend them in the future.&lt;/p&gt;
+&lt;p&gt;Fiction writing remains my safe pursuit, and I've built a seperate site at &lt;a href="https://grimdaniel.com/"&gt;grimdaniel.com&lt;/a&gt; for that effort. On the plus side, exercise isn't an issue anymore. I spend a lot of time in the gym and swimming.&lt;/p&gt;
+&lt;p&gt;Here's the detail list:&lt;/p&gt;
+&lt;h2 id="triggers"&gt;Triggers&lt;/h2&gt;
+&lt;p&gt;Very fast triggers that take effect in seconds:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Context switching beween major task categories requiring deep thought&lt;/li&gt;
+&lt;li&gt;Keeping my eyes on a point and moving my head around quickly (vestibulo-ocular reflex mismatch)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Fast triggers that take effect in 5-10 minutes:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Reviewing pull requests&lt;/li&gt;
+&lt;li&gt;Stress&lt;/li&gt;
+&lt;li&gt;Context switching within a task. For example, when working on code if I switch from debugging to correcting a DNS failure&lt;/li&gt;
+&lt;li&gt;Very fine print on paper&lt;/li&gt;
+&lt;li&gt;Visual distortions like blurry text, blurry photos, spatial puzzles, video recursion&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Medium triggers taking 60 minutes to cause symptoms:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Learning new things like board games, programming languages, and human languages&lt;/li&gt;
+&lt;li&gt;Coding &lt;/li&gt;
+&lt;li&gt;Working with LLMs&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id="symptoms"&gt;Symptoms&lt;/h2&gt;
+&lt;p&gt;Periodic Symptoms&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Increased incidents of insomnia&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Triggered symptoms:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Headache (usually in the front right of my head)&lt;/li&gt;
+&lt;li&gt;Loss of focus&lt;/li&gt;
+&lt;li&gt;Acute memory gaps, both short and long term&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id="symptom-recovery-time-and-progress"&gt;Symptom recovery time and progress&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;A few minutes to an hour depending on the severity&lt;/li&gt;
+&lt;li&gt;Often the following day I am in a light brain fog&lt;/li&gt;
+&lt;/ul&gt;</content>
+    <link href="https://daniel.feldroy.com/posts/2026-06-concussion-symptoms-update"/>
+    <summary>Documenting how the head injury incurred on January 16, 2026 continues to affect me four and a half months later.</summary>
+    <category term="concussion"/>
+    <category term="health"/>
+    <category term="writing"/>
+    <contributor>
+      <name>Daniel Roy Greenfeld</name>
+      <email>daniel@feldroy.com</email>
+    </contributor>
+    <published>2026-06-02T06:17:40.293912+00:00</published>
   </entry>
 </feed>

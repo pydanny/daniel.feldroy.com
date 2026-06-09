@@ -1,8 +1,16 @@
 ---
-title: "Selected publications by Daniel Roy Greenfeld"
-description: "A list of technical references by Daniel Roy Greenfeld"
-og_url: https://daniel.feldroy.com/publications
+title: "Portfolio of Daniel Roy Greenfeld"
+description: "A list of things created by Daniel Roy Greenfeld"
+og_url: https://daniel.feldroy.com/portfolio
 ---
+
+- Cookiecutter
+- Air
+- django-crispy-forms
+- cookiecutter-django
+- cached-property
+
+## Selected publications
 
 
 - "Two Scoops of Django 1.5", Feldroy LLC, 2013, 

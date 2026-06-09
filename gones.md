@@ -4,3 +4,8 @@
 - posts/2026-03-concussion-symptoms-update
 - posts/2026-04-concussion-symptoms-update
 - posts/2026-06-concussion-symptoms-update
+
+
+## Book recommendations
+
+1. https://www.youtube.com/watch?v=VWjVVY6MAX4

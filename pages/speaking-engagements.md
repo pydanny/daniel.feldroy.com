@@ -41,6 +41,3 @@ These are places I've presented.
 |PyCon US|Atlanta, Georgia|February 2011||
 |PyCon US|Atlanta, Georgia|February 2010||
 
-## Book recommendations
-
-1. https://www.youtube.com/watch?v=VWjVVY6MAX4

@@ -1,7 +1,7 @@
 ---
 date: '2026-02-20T00:45:35.781957+00:00'
 description: There's this way of writing on LinkedIn where you start with a personal story, and then you draw a business lesson from it. It's a silly pattern that often reeks of faked success and other forms of falsehood. So what better use of my available writing time before symptoms kick in today than to write one of those posts?
-published: true
+published: false
 tags:
 - concussion
 title: What my head injury taught me about B2B sales

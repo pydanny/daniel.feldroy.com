@@ -1,7 +1,7 @@
 ---
 date: '2026-02-18T06:29:43.465871+00:00'
 description: Documenting how the head injury incurred on January 16, 2026 continues to affected me one month later.
-published: true
+published: false
 tags:
   - concussion
   - health

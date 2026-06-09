@@ -49,6 +49,7 @@ default_social_image = (
 )
 
 redirects = json.loads(pathlib.Path("redirects.json").read_text())
+gones = pathlib.Path("gones.md").read_text()
 
 
 # The next block of code is several date utilities
@@ -270,6 +271,8 @@ async def article(slug: str):
     try:
         content = get_post(slug)
     except ContentNotFound:
+        if slug in gones:
+            return Response(status_code=410)        
         redirects_url = redirects.get("posts/" + slug, None)
         if redirects_url is not None:
             return RedirectResponse(redirects_url)
@@ -631,7 +634,6 @@ async def version():
 @app.page
 async def blarg():
     return 1 / 0
-
 
 @app.get("/{slug:path}")
 async def page_or_redirect1(slug: str):

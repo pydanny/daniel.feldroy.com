@@ -4,11 +4,22 @@ description: "A list of things created by Daniel Roy Greenfeld"
 og_url: https://daniel.feldroy.com/portfolio
 ---
 
-- Cookiecutter
-- Air
-- django-crispy-forms
+## Notable GitHub Projects
+
+These are projects where I either created or maintain them
+
+|Project|Role|Stars|Purpose|
+|---|---|---|---|
+|[Cookiecutter](https://github.com/cookiecutter/cookiecutter)|Maintainer|24.9k|Software project templating|
+|[cookiecutter-django](https://github.com/cookiecutter/cookiecutter-django)|Creator/Maintainer|13.5k|Django project template|
+|[django-crispy-forms](https://github.com/django-crispy-forms/django-crispy-forms)|Creator|5.2k|Powerful Django forms|
+
+- Air 
+- Cookiecutter (maintainer)
+- django-crispy-forms (5.2k Github Stars)
 - cookiecutter-django
 - cached-property
+- dj-stripe
 
 ## Selected publications
 

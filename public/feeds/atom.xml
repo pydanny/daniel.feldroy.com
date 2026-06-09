@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
   <id>https://daniel.feldroy.com/</id>
   <title>Inside the head of Daniel Roy Greenfeld</title>
-  <updated>2026-06-02T03:42:02.092825+00:00</updated>
+  <updated>2026-06-09T10:43:00.990737+00:00</updated>
   <author>
     <name>Daniel Roy Greenfeld</name>
     <email>daniel@feldroy.com</email>
@@ -12,6 +12,168 @@
   <generator uri="https://lkiesow.github.io/python-feedgen" version="1.0.0">python-feedgen</generator>
   <logo>https://f004.backblazeb2.com/file/daniel-feldroy-com/public/images/profile.jpg</logo>
   <rights>All rights reserved 2026, Daniel Roy Greenfeld</rights>
+  <entry>
+    <id>https://daniel.feldroy.com/posts/2026-01-downloading-everything</id>
+    <title>Writing tools to download everything</title>
+    <updated>2026-01-16T11:22:35.582258+00:00</updated>
+    <author>
+      <name>Daniel Roy Greenfeld</name>
+      <email>daniel@feldroy.com</email>
+    </author>
+    <content type="html">&lt;p&gt;Over the years, &lt;a href="https://audrey.feldroy.com"&gt;Audrey&lt;/a&gt; and I have accumulated photos across a variety of services. Flickr, SmugMug, and others all have chunks of our memories sitting on their servers. Some of these services we haven't touched in years, others we pay for but rarely use. It was time to bring everything home.&lt;/p&gt;
+&lt;h2 id="why-bother"&gt;Why Bother?&lt;/h2&gt;
+&lt;p&gt;Two reasons pushed me to finally tackle this.&lt;/p&gt;
+&lt;p&gt;First, money. Subscriptions add up. Paying for storage on services we barely use felt wasteful. As a backup even more so because there are services that are cheaper and easier to use for that purpose, like Backblaze.&lt;/p&gt;
+&lt;p&gt;Second, simplicity. Having photos scattered across multiple services means hunting through different interfaces when looking for a specific memory. Consolidating everything into one place makes our photo library actually usable.&lt;/p&gt;
+&lt;h2 id="using-claude-to-write-a-downloader"&gt;Using Claude to Write a Downloader&lt;/h2&gt;
+&lt;p&gt;I decided to start with SmugMug since that had the largest collection. I could have written this script myself. I've done plenty of API work over the years. But I'm busy, and this felt like a perfect use case for AI assistance.&lt;/p&gt;
+&lt;p&gt;My approach was straightforward:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Wrote a specification&lt;/strong&gt; for a Smugmug downloader. I linked to the docs for the service then told it to make a CLI for downloading things off that service. For the CLI I insist on &lt;code&gt;typer&lt;/code&gt; but otherwise I didn't specify dependencies.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Told Claude to generate code&lt;/strong&gt; based on the spec. I provided the specification and let Claude produce a working Python script.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Tested&lt;/strong&gt; by running the scripts against real data. I started with small batches to verify the downloads worked correctly. Claude got everything right when iy came to downloads on the first go, which was impressive.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Adjust for volume&lt;/strong&gt;. We had over 5,000 files on Smugmug. Downloading everything at once took longer than I expected. I asked Claude to track files so if the script was interrupted it could resume where it left off. Claude kept messing this up, and after the 5th or 6th attempt I gave up trying to use Claude to write this part.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id="i-wrote-some-code"&gt;I Wrote Some Code&lt;/h2&gt;
+&lt;p&gt;I wrote a super simple image ID cache using a plaintext file for storage. It was simple, effective, and worked on the first go. Sometimes it's easier to just write the code yourself than try to get an AI to do it for you.&lt;/p&gt;
+&lt;h2 id="the-smugmug-downloader"&gt;The SmugMug Downloader&lt;/h2&gt;
+&lt;p&gt;The project is here at &lt;a href="https://github.com/pydanny/smugmug-downloader"&gt;SmugMug downloader&lt;/a&gt;. It authenticates, enumerates all albums, and downloads every photo while preserving the album structure. Nothing fancy, just practical.&lt;/p&gt;
+&lt;p&gt;I'll be working on the Flickr downloader soon, following the same pattern. There's a few other services on the list too; I'm scanning our bank statements to see what else we have accounts on that we've let linger for too long.&lt;/p&gt;
+&lt;h2 id="was-it-worth-it"&gt;Was It Worth It?&lt;/h2&gt;
+&lt;p&gt;Absolutely. What would have taken me a day of focused coding took an hour of iterating with Claude. Our photos are off Smugmug and we're canceling a subscription we no longer need. I think this is what they mean by "vibe engineering".&lt;/p&gt;
+&lt;h2 id="summary"&gt;Summary&lt;/h2&gt;
+&lt;p&gt;These are files which in some cases we thought we lost. Or had forgotten. So the emotional and financial investment in a vibe engineered effort was low. If this were something that was touching our finances or wedding/baby photos I would have been much more cautious. But for now, this is a fun experiment in using AI to handle the mundane parts of coding so I can focus on more critical tasks.&lt;/p&gt;</content>
+    <link href="https://daniel.feldroy.com/posts/2026-01-downloading-everything"/>
+    <summary>Using AI to help download photos so we can consolidate all our images into one place.</summary>
+    <category term="python"/>
+    <contributor>
+      <name>Daniel Roy Greenfeld</name>
+      <email>daniel@feldroy.com</email>
+    </contributor>
+    <published>2026-01-16T11:22:35.582258+00:00</published>
+  </entry>
+  <entry>
+    <id>https://daniel.feldroy.com/posts/2026-02-we-moved-to-manila</id>
+    <title>We moved to Manila!</title>
+    <updated>2026-02-03T06:41:22.863302+00:00</updated>
+    <author>
+      <name>Daniel Roy Greenfeld</name>
+      <email>daniel@feldroy.com</email>
+    </author>
+    <content type="html">&lt;p&gt;Last year we relocated to &lt;a href="https://en.wikipedia.org/wiki/Manila"&gt;Metro Manila&lt;/a&gt;, &lt;a href="https://en.wikipedia.org/wiki/Philippines"&gt;Philippines&lt;/a&gt; for the foreseeable future. &lt;a href="https://audrey.feldroy.com/"&gt;Audrey&lt;/a&gt;'s mother is from here, and we wanted our daughter Uma to have the opportunity to spend time with her extended family and experience another line of her heritage.&lt;/p&gt;
+&lt;h2 id="where-are-you-living"&gt;Where are you living?&lt;/h2&gt;
+&lt;p&gt;In &lt;a href="https://en.wikipedia.org/wiki/Makati"&gt;Makati&lt;/a&gt;, a city that contains one of the major business districts in Metro Manila. Specifically we're in Salcedo village, a neighboorhood in the &lt;a href="https://en.wikipedia.org/wiki/Makati_Central_Business_District"&gt;CBD&lt;/a&gt;, made of towering residential and business buildings with numerous shops, markets, and a few parks. This area allows for a walkable life, which is important to us coming from London.&lt;/p&gt;
+&lt;h2 id="what-about-the-usa"&gt;What about the USA?&lt;/h2&gt;
+&lt;p&gt;The USA is our homeland and we're US citizens. We still have family and friends there. We're hoping to visit the US at least once a year.&lt;/p&gt;
+&lt;h2 id="what-about-the-uk"&gt;What about the UK?&lt;/h2&gt;
+&lt;p&gt;We loved living in London, and have many good friends there. I really enjoyed working for &lt;a href="https://kraken.tech/"&gt;Kraken Tech&lt;/a&gt;, but my time came to an end there so our visas were no longer valid. We hope to visit the UK (and the rest of Europe) as tourists, but without the family connection it's harder to justify than trips to the homeland.&lt;/p&gt;
+&lt;h2 id="what-about-your-daughter"&gt;What about your daughter?&lt;/h2&gt;
+&lt;p&gt;Uma loves Manila and is in second grade at an international school here in walking distance of our residence. We had looked into getting her into a local public school with a notable science program, but the paperwork required too much lead time. We do like the small class sizes at her current school, and how they accomodate the different learning speeds of students. She will probably stay there for a while.&lt;/p&gt;
+&lt;p&gt;For extra curricular activities she's enjoying Brazilian Jiu-Jitsu, climbing, yoga, and swimming.&lt;/p&gt;
+&lt;h2 id="if-im-in-manila-can-i-meet-up-with-you"&gt;If I'm in Manila can I meet up with you?&lt;/h2&gt;
+&lt;p&gt;Sure! Some options:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;We're long-time members of the &lt;a href="https://python.ph/"&gt;Python Philippines&lt;/a&gt; community, so you can often find us at their events&lt;/li&gt;
+&lt;li&gt;If you train in BJJ, I'm usually at &lt;a href="https://www.openmatmakati.com/"&gt;Open Mat Makati&lt;/a&gt; quite a bit. Just let me know ahead of time so I can plan around it&lt;/li&gt;
+&lt;li&gt;If you want to meet up for coffee, hit me up on social media. Manila is awesome for coffee shops! &lt;/li&gt;
+&lt;/ul&gt;</content>
+    <link href="https://daniel.feldroy.com/posts/2026-02-we-moved-to-manila"/>
+    <summary>We're going to be in Metro Manila, Philippines for a while, here's some of the details.</summary>
+    <category term="travel"/>
+    <category term="family"/>
+    <category term="uma"/>
+    <category term="Philippines"/>
+    <category term="python"/>
+    <contributor>
+      <name>Daniel Roy Greenfeld</name>
+      <email>daniel@feldroy.com</email>
+    </contributor>
+    <published>2026-02-03T06:41:22.863302+00:00</published>
+  </entry>
+  <entry>
+    <id>https://daniel.feldroy.com/posts/2026-01-recap-resolutions</id>
+    <title>Recap of 2025 and Resolutions for 2026</title>
+    <updated>2026-02-04T04:00:29.326317+00:00</updated>
+    <author>
+      <name>Daniel Roy Greenfeld</name>
+      <email>daniel@feldroy.com</email>
+    </author>
+    <content type="html">&lt;p&gt;Better late than never! Here's my annual recap!&lt;/p&gt;
+&lt;h2 id="recap-of-2025"&gt;Recap of 2025&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;We moved from London, UK to &lt;a href="https://daniel.feldroy.com/posts/2026-02-we-moved-to-manila"&gt;Manila, Philippines&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Spent another year with my soul mate, Audrey. Spent time together doing fun things like coding, cooking, traveling, yoga, and raising our daughter together&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://daniel.feldroy.com/tags/uma"&gt;Uma&lt;/a&gt; spent her 6th year on Planet Earth. She's really growing, spent the year focusing on school, goofy kid play, Brazilian Jiu-Jitsu, swimming, engineering, and science. Working on science kits and activities with her is one of my greatest joys. I also became a coach at her BJJ school; my blue belt helps validate my role there. She's quite the character and we adore her&lt;/li&gt;
+&lt;li&gt;Suffered a serious back injury from some bad weight lifting that had me bedridden for the first two months of the year. What was effective for my recovery included acupuncture, healthy diet, stretching, mobility exercises, living in a warm country, and Brazilian Jiu-Jitsu (BJJ). These days I'm much more careful about partners and restrict my sparring to just 2-3 rolls per session&lt;/li&gt;
+&lt;li&gt;Started doing a lot more gi BJJ. London is very much a city of no-gi practitioners, but in Manila most schools focus on gi. It's funny when you think about the uniform preferences of each as the gi makes more sense in the cooler weather of London compared to the tropical heat of Manila&lt;/li&gt;
+&lt;li&gt;Spent much of the year in the Philippines. I appreciate the people and culture - the people I've met have been friendly, hard-working, pragmatic, and trustworthy. Watching the nation improve (reduced poverty, improved infrastructure) since I first visited in 2012 is inspiring&lt;/li&gt;
+&lt;li&gt;Left an AI lab and have been focusing on startups and FOSS&lt;/li&gt;
+&lt;li&gt;Started the &lt;a href="https://airwebframework.org/"&gt;Air web framework&lt;/a&gt; with &lt;a href="https://audrey.feldroy.com/"&gt;Audrey&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://github.com/pydanny/daniel.feldroy.com"&gt;Rewrote this blog in Air&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://pycon-davao.durianpy.org/"&gt;Spoke at PyCon Davao 2025&lt;/a&gt; and various meetups&lt;/li&gt;
+&lt;li&gt;Snorkeled for the first time in nearly 20 years. I did it in Mexico back in 2006, and this time in the Philippines in Batangas. It was amazing to see the coral and fish life up close again&lt;/li&gt;
+&lt;li&gt;Travelled to new places:&lt;ul&gt;
+&lt;li&gt;🚙 Batangas, PH&lt;/li&gt;
+&lt;li&gt;✈️ Davao, PH&lt;/li&gt;
+&lt;li&gt;✈️ Denver, CO&lt;/li&gt;
+&lt;li&gt;✈️ Melbourne, AU&lt;/li&gt;
+&lt;li&gt;🚙 Tagaytay, PH&lt;/li&gt;
+&lt;li&gt;✈️ Taipei, TW    &lt;/li&gt;
+&lt;li&gt;✈️ Tokyo, JP&lt;/li&gt;
+&lt;li&gt;🚄 Yokohama, JP&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id="2025-resolutions-completed"&gt;2025 Resolutions Completed&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;✔️ Adore my soul mate, Audrey Roy Greenfeld&lt;/li&gt;
+&lt;li&gt;✔️ Be there for my daughter Uma Roy Greenfeld in her 6th year on Planet Earth&lt;/li&gt;
+&lt;li&gt;✖️ Beat last year's number of blog posts&lt;/li&gt;
+&lt;li&gt;✔️ Continue my fitness journey with BJJ, weights, cycling, walking, and other healthy activities&lt;/li&gt;
+&lt;li&gt;✖️ Write fiction again, maybe publish it&lt;/li&gt;
+&lt;li&gt;✔️ Continue to have a healthy work/life balance&lt;/li&gt;
+&lt;li&gt;✔️ Travel to yet more new places, preferably by train or other carbon-efficient methods. Unfortunately the geography of Asia and limited mass transit options made staying out of airplanes difficult. I wish ocean liners were still a thing&lt;/li&gt;
+&lt;li&gt;✔️ Be a speaker in at least one conference&lt;/li&gt;
+&lt;li&gt;✔️ Change my career from being a backend developer to that of an ML/AI specialist. I did this but it wasn't as exciting as I thought it would be&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id="2026-resolutions"&gt;2026 Resolutions&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;❤️ Continue to adore my soul mate, Audrey Roy Greenfeld&lt;/li&gt;
+&lt;li&gt;👩‍👧 Be there for my daughter Uma Roy Greenfeld in her 7th year on Planet Earth. Continue to contribute to her activities&lt;/li&gt;
+&lt;li&gt;📝 Write at least as many blog posts as I did last year (37)&lt;/li&gt;
+&lt;li&gt;🥋 Continue my fitness journey with BJJ, weights, yoga, climbing, and other healthy activities&lt;/li&gt;
+&lt;li&gt;📚 Write fiction again, maybe publish it&lt;/li&gt;
+&lt;li&gt;⚖️ Continue to have a healthy work/life balance&lt;/li&gt;
+&lt;li&gt;🌍 Travel to yet more new places, preferably by train or other carbon-efficient methods&lt;/li&gt;
+&lt;li&gt;🎤 Be a speaker in at least one conference&lt;/li&gt;
+&lt;li&gt;🤖 Stay focused on research rather than building product. I'm much more interested in exploration&lt;/li&gt;
+&lt;li&gt;💪 Avoid injury and maintain my health so I can be there for Audrey and Uma for many years to come&lt;/li&gt;
+&lt;li&gt;🤿 Snorkle again. Nature is amazing&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;a href="/posts/2026-01-recap-resolutions"&gt;&lt;img src="/public/images/2025-2026-recap.png" height="25%" width="25%" alt="Me and Uma running together into the future." style="text-align: center;" /&gt;&lt;/a&gt;&lt;/p&gt;</content>
+    <link href="https://daniel.feldroy.com/posts/2026-01-recap-resolutions"/>
+    <summary>Another year in orbit around a star.</summary>
+    <category term="family"/>
+    <category term="audrey"/>
+    <category term="uma"/>
+    <category term="resolutions"/>
+    <category term="pycon"/>
+    <category term="travel"/>
+    <category term="england"/>
+    <contributor>
+      <name>Daniel Roy Greenfeld</name>
+      <email>daniel@feldroy.com</email>
+    </contributor>
+    <published>2026-02-04T04:00:29.326317+00:00</published>
+  </entry>
   <entry>
     <id>https://daniel.feldroy.com/posts/til-2026-02-using-pygmentsrenderer-with-mistletoe-as-a-partial</id>
     <title>TIL: Using PygmentsRenderer with mistletoe as a partial</title>
@@ -254,68 +416,6 @@
     <published>2026-03-13T02:41:19.009972+00:00</published>
   </entry>
   <entry>
-    <id>https://daniel.feldroy.com/posts/2026-03-concussion-symptoms-update</id>
-    <title>Concussion Symptoms Update (March)</title>
-    <updated>2026-03-18T23:42:59.079454+00:00</updated>
-    <author>
-      <name>Daniel Roy Greenfeld</name>
-      <email>daniel@feldroy.com</email>
-    </author>
-    <content type="html">&lt;p&gt;It's been just over two months since I got injured. These days I usually wake up mostly clear headed and with no symptoms. I can go about my day and do activities, but I must avoid triggers. Unfortunately the triggers ruin me until I get several hours of rest.&lt;/p&gt;
-&lt;p&gt;What doesn't affect me is focused, creative pursuits like fiction writing. I can pump out fiction nonstop without any adverse consequences. Thanks to that quirk of my injury, I'm putting out my first novel in ~8 years. While that is awesome, it remains to be seen if I will find the same success with fiction that I have had writing non-fiction like &lt;a href="https://daniel.feldroy.com/books/tech"&gt;Two Scoops of Django&lt;/a&gt;.&lt;/p&gt;
-&lt;p&gt;Okay, here's the nitty gritty of what's causing me problems today.&lt;/p&gt;
-&lt;h2 id="triggers"&gt;Triggers&lt;/h2&gt;
-&lt;p&gt;Slow triggers taking 60-90 minutes to cause symptoms:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Crowds&lt;/li&gt;
-&lt;li&gt;Coding &lt;/li&gt;
-&lt;li&gt;Working with LLMs&lt;/li&gt;
-&lt;li&gt;Exercise&lt;/li&gt;
-&lt;li&gt;Outlining or structuring creative efforts&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;Medium triggers that take effect in 10 minutes:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Learning new board games&lt;/li&gt;
-&lt;li&gt;Stress&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;Fast triggers that take effect in minutes:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Visual distortions like blurry text, blurry photos, spatial puzzles, video recursion&lt;/li&gt;
-&lt;li&gt;Very fine print on paper&lt;/li&gt;
-&lt;li&gt;Keeping my eyes on a point and moving my head around quickly (vestibulo-ocular reflex mismatch)&lt;/li&gt;
-&lt;li&gt;Context switching within a task. For example, when working on code if I switch from debugging to correcting a DNS failure&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;Very fast triggers that take effect in seconds:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Context switching beween major task categories requiring deep thought&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id="symptoms"&gt;Symptoms&lt;/h2&gt;
-&lt;p&gt;Constant symptoms:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Light brain fog&lt;/li&gt;
-&lt;li&gt;Fatigue, my endurance wasn't what it was&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;Triggered symptoms:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Headache (usually in the front right of my head)&lt;/li&gt;
-&lt;li&gt;Dizziness (but no loss of balance)&lt;/li&gt;
-&lt;li&gt;Straight lines become very prominent and distracting&lt;/li&gt;
-&lt;li&gt;Memory problems, both short term and long term&lt;/li&gt;
-&lt;/ul&gt;</content>
-    <link href="https://daniel.feldroy.com/posts/2026-03-concussion-symptoms-update"/>
-    <summary>Documenting how the head injury incurred on January 16, 2026 continues to affect me two months later.</summary>
-    <category term="concussion"/>
-    <category term="twoscoops"/>
-    <category term="book"/>
-    <category term="writing"/>
-    <category term="health"/>
-    <contributor>
-      <name>Daniel Roy Greenfeld</name>
-      <email>daniel@feldroy.com</email>
-    </contributor>
-    <published>2026-03-18T23:42:59.079454+00:00</published>
-  </entry>
-  <entry>
     <id>https://daniel.feldroy.com/posts/2026-04-facebook-terms-of-service</id>
     <title>Facebook's Terms of Service</title>
     <updated>2026-04-02T17:00:52.469879+00:00</updated>
@@ -410,79 +510,6 @@
       <email>daniel@feldroy.com</email>
     </contributor>
     <published>2026-04-14T03:31:22.288365+00:00</published>
-  </entry>
-  <entry>
-    <id>https://daniel.feldroy.com/posts/2026-04-concussion-symptoms-update</id>
-    <title>Concussion Symptoms Update (April)</title>
-    <updated>2026-04-14T17:00:00.079454+00:00</updated>
-    <author>
-      <name>Daniel Roy Greenfeld</name>
-      <email>daniel@feldroy.com</email>
-    </author>
-    <content type="html">&lt;p&gt;In a day it will have been three months since I was injured.&lt;/p&gt;
-&lt;p&gt;Except for the speed at which I recover from symptoms, it's as if my recovery has stalled for the past month. The MRI and EKG revealed nothing, which is typical for concussions. Yet I can only function professionally for at most two hours a day. On a stressful day I can only work 10 minutes before I become useless.&lt;/p&gt;
-&lt;p&gt;I noticed I suffer more frequent insomnia, resulting in mornings where I wake up with symptoms. It's not fun. I actually have insomnia this evening, hence why I'm writing this entry.&lt;/p&gt;
-&lt;p&gt;Of concern is that I've noticed gaps in my short and long term memory. I've taken to often writing things down. It's not an age thing, it becomes more acute as my symptoms are triggered.&lt;/p&gt;
-&lt;p&gt;Fiction writing remains my safe pursuit. I can pump out fiction nonstop without any adverse consequences. The challenge is that compared to tech or writing about tech, fiction writing is hard industry to make a living wage in.&lt;/p&gt;
-&lt;p&gt;Okay, details about what I'm going through:&lt;/p&gt;
-&lt;h2 id="triggers"&gt;Triggers&lt;/h2&gt;
-&lt;p&gt;Slow triggers taking 60-90 minutes to cause symptoms:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Crowds&lt;/li&gt;
-&lt;li&gt;Coding &lt;/li&gt;
-&lt;li&gt;Working with LLMs&lt;/li&gt;
-&lt;li&gt;Exercise&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;Medium triggers that take effect in 10 minutes:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Learning new things like board games, programming languages, and human languages&lt;/li&gt;
-&lt;li&gt;Reviewing easy pull requests&lt;/li&gt;
-&lt;li&gt;Stress&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;Fast triggers that take effect in 1-3 minutes:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Reviewing complex pull requests&lt;/li&gt;
-&lt;li&gt;Very fine print on paper&lt;/li&gt;
-&lt;li&gt;Visual distortions like blurry text, blurry photos, spatial puzzles, video recursion&lt;/li&gt;
-&lt;li&gt;Keeping my eyes on a point and moving my head around quickly (vestibulo-ocular reflex mismatch)&lt;/li&gt;
-&lt;li&gt;Context switching within a task. For example, when working on code if I switch from debugging to correcting a DNS failure&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;Very fast triggers that take effect in seconds:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Context switching beween major task categories requiring deep thought&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id="symptoms"&gt;Symptoms&lt;/h2&gt;
-&lt;p&gt;Constant symptoms:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Light brain fog&lt;/li&gt;
-&lt;li&gt;Memory problems, both short and long term&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;Periodic Symptoms&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Increased incidents of insomnia&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;Triggered symptoms:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Headache (usually in the front right of my head)&lt;/li&gt;
-&lt;li&gt;Dizziness (but no loss of balance)&lt;/li&gt;
-&lt;li&gt;Straight lines and geometric patterns become very prominent and distracting&lt;/li&gt;
-&lt;li&gt;Acute memory gaps, both short and long term&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id="symptom-recovery-time-and-progress"&gt;Symptom recovery time and progress&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;At least an hour&lt;/li&gt;
-&lt;li&gt;Last month it was 2-3 hours&lt;/li&gt;
-&lt;/ul&gt;</content>
-    <link href="https://daniel.feldroy.com/posts/2026-04-concussion-symptoms-update"/>
-    <summary>Documenting how the head injury incurred on January 16, 2026 continues to affect me three months later.</summary>
-    <category term="concussion"/>
-    <category term="health"/>
-    <category term="writing"/>
-    <contributor>
-      <name>Daniel Roy Greenfeld</name>
-      <email>daniel@feldroy.com</email>
-    </contributor>
-    <published>2026-04-14T17:00:00.079454+00:00</published>
   </entry>
   <entry>
     <id>https://daniel.feldroy.com/posts/2026-05-word-counter-that-ignores-markdown</id>
@@ -789,65 +816,5 @@
       <email>daniel@feldroy.com</email>
     </contributor>
     <published>2026-05-26T15:14:07.710573+00:00</published>
-  </entry>
-  <entry>
-    <id>https://daniel.feldroy.com/posts/2026-06-concussion-symptoms-update</id>
-    <title>Concussion Symptoms Update (June)</title>
-    <updated>2026-06-02T06:17:40.293912+00:00</updated>
-    <author>
-      <name>Daniel Roy Greenfeld</name>
-      <email>daniel@feldroy.com</email>
-    </author>
-    <content type="html">&lt;p&gt;It's been approximately four and a half months since I hit my head. I've gotten better, to the point some days I forget I was hurt earlier this year. Other days I run into challenges.&lt;/p&gt;
-&lt;p&gt;Regular insomnia continues to be an issue. I sometimes take melatonin. I would take it more often but I have a very high tolerance to the drug. I don't like taking any medication and don't want to build up my tolerance further, as you can overdose on melatonin. For reference, other sleep medications are very problematic for me.&lt;/p&gt;
-&lt;p&gt;When I run into symptoms (usually in crowds or coding) it starts with a feeling on the right side of my head. Focusing on anything becomes really hard, and I struggle n ot to become moody or belligerant. The personality change has damaged some relationships, I'm hoping that I can mend them in the future.&lt;/p&gt;
-&lt;p&gt;Fiction writing remains my safe pursuit, and I've built a seperate site at &lt;a href="https://grimdaniel.com/"&gt;grimdaniel.com&lt;/a&gt; for that effort. On the plus side, exercise isn't an issue anymore. I spend a lot of time in the gym and swimming.&lt;/p&gt;
-&lt;p&gt;Here's the detail list:&lt;/p&gt;
-&lt;h2 id="triggers"&gt;Triggers&lt;/h2&gt;
-&lt;p&gt;Very fast triggers that take effect in seconds:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Context switching beween major task categories requiring deep thought&lt;/li&gt;
-&lt;li&gt;Keeping my eyes on a point and moving my head around quickly (vestibulo-ocular reflex mismatch)&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;Fast triggers that take effect in 5-10 minutes:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Reviewing pull requests&lt;/li&gt;
-&lt;li&gt;Stress&lt;/li&gt;
-&lt;li&gt;Context switching within a task. For example, when working on code if I switch from debugging to correcting a DNS failure&lt;/li&gt;
-&lt;li&gt;Very fine print on paper&lt;/li&gt;
-&lt;li&gt;Visual distortions like blurry text, blurry photos, spatial puzzles, video recursion&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;Medium triggers taking 60 minutes to cause symptoms:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Learning new things like board games, programming languages, and human languages&lt;/li&gt;
-&lt;li&gt;Coding &lt;/li&gt;
-&lt;li&gt;Working with LLMs&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id="symptoms"&gt;Symptoms&lt;/h2&gt;
-&lt;p&gt;Periodic Symptoms&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Increased incidents of insomnia&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;Triggered symptoms:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Headache (usually in the front right of my head)&lt;/li&gt;
-&lt;li&gt;Loss of focus&lt;/li&gt;
-&lt;li&gt;Acute memory gaps, both short and long term&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id="symptom-recovery-time-and-progress"&gt;Symptom recovery time and progress&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;A few minutes to an hour depending on the severity&lt;/li&gt;
-&lt;li&gt;Often the following day I am in a light brain fog&lt;/li&gt;
-&lt;/ul&gt;</content>
-    <link href="https://daniel.feldroy.com/posts/2026-06-concussion-symptoms-update"/>
-    <summary>Documenting how the head injury incurred on January 16, 2026 continues to affect me four and a half months later.</summary>
-    <category term="concussion"/>
-    <category term="health"/>
-    <category term="writing"/>
-    <contributor>
-      <name>Daniel Roy Greenfeld</name>
-      <email>daniel@feldroy.com</email>
-    </contributor>
-    <published>2026-06-02T06:17:40.293912+00:00</published>
   </entry>
 </feed>

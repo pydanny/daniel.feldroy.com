@@ -18,11 +18,11 @@ These are events where I was honored to be a headlining speaker.
 |EuroPython|Florence, Italy|May 2024||
 |DjangoCon Europe|Porto, Portugal|May 2022|[youtube](https://www.youtube.com/watch?v=EHedUWYkSwA)|
 |PyCon New Zealand|Wellington, New Zealand|September 2019|[youtube](https://www.youtube.com/watch?v=wbOEeFlcJMA)|
-|PyCon Colombia|Medillin, Colombia|October 2018|[youtube ad](https://www.youtube.com/watch?v=AS3nCSkdxFM)|
+|PyCon Colombia|Medellin, Colombia|October 2018|[youtube ad](https://www.youtube.com/watch?v=AS3nCSkdxFM)|
 |Python Singapore|Singapore|June 2016|[youtube](https://www.youtube.com/watch?v=UsBYDPjcmAs)|
 |PyCon Argentina|Mendoza, Argentina|October 2014|[youtube](https://www.youtube.com/watch?v=5zRYba3P2N0)|
 |PyCon Brasil|Puerto Gallenas|October 2014|[youtube ad](https://www.youtube.com/watch?v=a_WZalJ5POM)|
-|Wharton School of Business|Philadelpha, PA, USA|June 2014|[Slides](https://www.slideshare.net/slideshow/building-maintainableprojectswharton/37009740)|
+|Wharton School of Business|Philadelphia, PA, USA|June 2014|[Slides](https://www.slideshare.net/slideshow/building-maintainableprojectswharton/37009740)|
 |EuroPython|Florence, Italy|July 2013|[youtube](https://www.youtube.com/watch?v=7TImWbnUDeI)|
 |DjangoCon Europe|Warsaw, Poland|May 2013|[youtube](https://www.youtube.com/watch?v=X8zIgKXvf-U)|
 |PyCon Philippines|Manila, Philippines|May 2012||

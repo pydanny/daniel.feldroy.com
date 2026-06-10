@@ -24,10 +24,10 @@ These are projects where I either created or maintain them
 ## Selected publications
 
 
-- "Two Scoops of Django 1.5", Feldroy LLC, 2013, 
+- "Two Scoops of Django 1.5", Feldroy LLC, 2013, ISBN 1953808034
 - "Two Scoops of Django 1.6", Feldroy LLC, 2014, ISBN 098146730X
 - "Two Scoops of Django 1.8", Feldroy LLC, 2015, ISBN 0981467342
-- "Two Scoops of Django 1.11", Feldroy LLC, 2018, 
-- "Two Scoops of Django 3.x", Feldroy LLC, 2020, 
-- "Django Crash Course", Feldroy LLC, 2020, 
+- "Two Scoops of Django 1.11", Feldroy LLC, 2018, ISBN 0692915729 
+- "Two Scoops of Django 3.x", Feldroy LLC, 2020, ISBN 1953808026
+- "Django Crash Course", Feldroy LLC, 2020, ISBN 195380800X
 

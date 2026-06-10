@@ -12,7 +12,7 @@ These are events where I was honored to be a headlining speaker.
 
 |Conference|Location|Date|Video|
 |---|---|---|---|
-|PyCon Philippines|Manila, Philippines|April 2026||
+|Python Asia (PyCon Asia Pacific)|Manila, Philippines|April 2026||
 |Pycon Davao|Davao, Philippines|October 2025|[youtube](https://www.youtube.com/watch?v=7b_iyWpsg6k)|
 |PyCon Lithuania|Vilnius, Lithuania|April 2024|[youtube](https://www.youtube.com/watch?v=FHAP47Um1Qo)|
 |EuroPython|Florence, Italy|May 2024||

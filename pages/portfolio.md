@@ -13,13 +13,10 @@ These are projects where I either created or maintain them
 |[Cookiecutter](https://github.com/cookiecutter/cookiecutter)|Maintainer|24.9k|Software project templating|
 |[cookiecutter-django](https://github.com/cookiecutter/cookiecutter-django)|Creator/Maintainer|13.5k|Django project template|
 |[django-crispy-forms](https://github.com/django-crispy-forms/django-crispy-forms)|Creator|5.2k|Powerful Django forms|
+|[Air](https://github.com/feldroy/air)|Creator|890|Web framework|
+|[cached-property](https://github.com/pydanny/cached-property)|Creator/Maintainer|705|Pivotal library in exploring decorators for caching properties in Python classes|
+|[dj-stripe](https://github.com/dj-stripe/dj-stripe)|Creator|1.8k|Python SDK for stripe integration with Django|
 
-- Air 
-- Cookiecutter (maintainer)
-- django-crispy-forms (5.2k Github Stars)
-- cookiecutter-django
-- cached-property
-- dj-stripe
 
 ## Selected publications
 

@@ -15,7 +15,7 @@ twitter_image: https://daniel.feldroy.com/static/images/everyone-dies.webp
 
 My new fiction-dedicated fiction writing site is here:
 
-### <a href="https://grimdaniel.com" target="_blank">grimdaniel.com</a>
+### <a href="https://grimdaniel.com" >grimdaniel.com</a>
 
 ## Why?
 

@@ -20,9 +20,9 @@ The result is this story.
 
 The release of this book is bittersweet. I admit that I don't want to let some of the characters go. And that's what makes this story so interesting for me, that I'll miss them in kind of the same way I miss friends and family who have passed away.
 
-<p class="center"><a href="https://storyoriginapp.com/universalbooklinks/8c487a18-2b3e-11f1-aa1d-dfa5b3422a69" class="btn btn-primary center"  target="_blank">Read "Everyone Dies" on Amazon</a></p>
+<p class="center"><a href="https://storyoriginapp.com/universalbooklinks/8c487a18-2b3e-11f1-aa1d-dfa5b3422a69" class="btn btn-primary center"  >Read "Everyone Dies" on Amazon</a></p>
 
-<a href="https://storyoriginapp.com/universalbooklinks/8c487a18-2b3e-11f1-aa1d-dfa5b3422a69" rel="noopener noreferrer" target="_blank">
+<a href="https://storyoriginapp.com/universalbooklinks/8c487a18-2b3e-11f1-aa1d-dfa5b3422a69" rel="noopener noreferrer" >
     <img alt="image" src="https://daniel.feldroy.com/static/images/everyone-dies-read-on-amazon.d7dacd80.webp" width="null" style="height: auto; max-width: 100%;" class="redline">
 </a>
 
@@ -38,5 +38,5 @@ Even neutral reviews are good. I feel neutral about them, but having them is bet
 
 Finally, if you feel like just putting in a star rating on Amazon (or Goodreads), with an absolute minimal review, that works too. No matter how many stars you choose, you help me by rating it.
 
-<p class="center"><a href="https://www.amazon.com/review/create-review/?ie=UTF8&channel=glance-detail&asin=B0GTRGFNB5" class="btn btn-primary" target="_blank">Write a review!</a></p>
+<p class="center"><a href="https://www.amazon.com/review/create-review/?ie=UTF8&channel=glance-detail&asin=B0GTRGFNB5" class="btn btn-primary" >Write a review!</a></p>
 

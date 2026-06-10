@@ -63,21 +63,21 @@ async def index(pause: float = 0):
                 air.A(
                     f"Pause for 0.1 seconds",
                     href="/?profile=1&pause=0.1",
-                    target="_blank",
+                    ,
                 )
             ),
             air.Li(
                 air.A(
                     f"Pause for 0.3 seconds",
                     href="/?profile=1&pause=0.3",
-                    target="_blank",
+                    ,
                 )
             ),
             air.Li(
                 air.A(
                     f"Pause for 1.0 seconds",
                     href="/?profile=1&pause=1.0",
-                    target="_blank",
+                    ,
                 )
             ),
         ),

@@ -5,7 +5,7 @@ twitter_image: https://daniel.feldroy.com/static/images/everyone-dies.webp
 og_url: https://daniel.feldroy.com/books/fiction
 ---
 
-After a ten year hiatus I have started writing fantasy again. This time the writing is in a darker style, specifically grimdark fantasy (and a little science fiction). Long have I wanted to write stories where characters die like fruitflies. I have a dedicated fiction writing site at <a href="https://grimdaniel.com" target="_blank">grimdaniel.com</a>.
+After a ten year hiatus I have started writing fantasy again. This time the writing is in a darker style, specifically grimdark fantasy (and a little science fiction). Long have I wanted to write stories where characters die like fruitflies. I have a dedicated fiction writing site at <a href="https://grimdaniel.com" >grimdaniel.com</a>.
 
 ## [The Curse](https://grimdaniel.com/the-curse)
 
@@ -37,7 +37,7 @@ A tale of petty cruelties and catastrophic consequences, where a lover's wounded
 
 *Get the curse for free by signing up to my mailing list. Unsubscribe anytime.*
 
-<a class="btn btn-primary" href="https://grimdaniel.com/list-signup" target="_blank">Get "The Curse" for FREE</a>
+<a class="btn btn-primary" href="https://grimdaniel.com/list-signup" >Get "The Curse" for FREE</a>
 
 </div>
 
@@ -77,7 +77,7 @@ A grimdark fantasy for adult readers containing violence, betrayal, and despair.
 
 *If you want to read "Everyone Dies" for free, you can request a free advance copy now. In return you agree to write a review on Amazon or any other site you use to put reviews.*
 
-<a class="btn btn-primary" href="https://grimdaniel.com/arc"  target="_blank">Request a FREE advanced review copy</a>
+<a class="btn btn-primary" href="https://grimdaniel.com/arc"  >Request a FREE advanced review copy</a>
 
 </div>
 </div>
@@ -90,7 +90,7 @@ A grimdark fantasy for adult readers containing violence, betrayal, and despair.
 
 <div class="col-3">
 <figure>
-<a href="https://www.amazon.com/Necronaut-Daniel-Roy-Greenfeld-ebook/dp/B08LZVXSPP?tag=mlinar-20" target="_blank">
+<a href="https://www.amazon.com/Necronaut-Daniel-Roy-Greenfeld-ebook/dp/B08LZVXSPP?tag=mlinar-20" >
 <img src="/public/images/necronaut-cover.png" >
 </a>
 </figure>
@@ -105,7 +105,7 @@ A grimdark fantasy for adult readers containing violence, betrayal, and despair.
 
 Travel between the stars is a profitable enterprise, but takes humanity through the dark seas of fate. The journey is risky, and death is right outside the ships that ply the tortured waters between the stars. A realm where when in trouble, the fortunate die and everyone else is consumed body and soul. This is a science fiction grimdark horror shortstory anthology.
 
-<a class="btn btn-primary" href="https://www.amazon.com/Necronaut-Daniel-Roy-Greenfeld-ebook/dp/B08LZVXSPP?tag=mlinar-20"  target="_blank">Get on Amazon.com</a>
+<a class="btn btn-primary" href="https://www.amazon.com/Necronaut-Daniel-Roy-Greenfeld-ebook/dp/B08LZVXSPP?tag=mlinar-20"  >Get on Amazon.com</a>
 
 </div>
 </div>

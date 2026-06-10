@@ -168,6 +168,8 @@ def MarkdownPage(slug: str):
     except FileNotFoundError:
         raise HTTPException(status_code=404)
     date = content["attributes"].get("date", "")
+    body = markdown(content["body"])
+    body = body.replace('href="https://', 'target="_blank" href="https://')
     return Layout(
         air.Title(content["attributes"].get("title", slug)),
         air.Section(
@@ -177,7 +179,7 @@ def MarkdownPage(slug: str):
                 air.Br(),
                 air.Small(air.Time(date)),
             ),
-            air.Div(air.Raw(markdown(content["body"]))),
+            air.Div(air.Raw(body)),
         ),
         title=content["attributes"].get("title", slug),
         description=content["attributes"].get("description", ""),
@@ -281,6 +283,8 @@ async def article(slug: str):
     specials = []
     image = content['attributes'].get('image', default_social_image)
     twitter_image = content['attributes'].get('twitter_image', default_social_image)
+    body = markdown(content["body"])
+    body = body.replace('href="https://', 'target="_blank" href="https://')
     if "TIL" in content["attributes"]["tags"]:
         image = "https://f004.backblazeb2.com/file/daniel-feldroy-com/public/logos/til-1.png"
         twitter_image = "https://f004.backblazeb2.com/file/daniel-feldroy-com/public/logos/til-1.png"
@@ -302,7 +306,7 @@ async def article(slug: str):
             air.H1(content["attributes"]["title"]),
             air.P(air.I(content["attributes"].get("description", ""))),
             air.P(air.Small(air.Time(content["attributes"]["date"]))),
-            air.Div(air.Raw(markdown(content["body"]))),
+            air.Div(air.Raw(body)),
             air.Div(*specials, style="width: 200px; margin: auto; display: block;"),
             air.P(air.Span("Tags: "), *article_tags),
             air.A("← Back to all articles", href=index.url()),

@@ -30,7 +30,7 @@ No one wanted the day to end.
 We did our small part. We coached and did our best to give an invited
 inspirational talk.
 
-<iframe src="https://www.slideshare.net/slideshow/embed_code/key/5bBUFTEvDYqcIn" width="595" height="485" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" style="border:1px solid #CCC; border-width:1px; margin-bottom:5px; max-width: 100%;" allowfullscreen> </iframe> <div style="margin-bottom:5px"> <strong> <a href="//www.slideshare.net/twoscoopspress/programming-gives-you-superpowers" title="Programming Gives You Superpowers" target="_blank">Programming Gives You Superpowers</a> </strong> from <strong>[Audrey & Daniel Roy Greenfeld](//www.slideshare.net/twoscoopspress)</strong> </div>
+<iframe src="https://www.slideshare.net/slideshow/embed_code/key/5bBUFTEvDYqcIn" width="595" height="485" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" style="border:1px solid #CCC; border-width:1px; margin-bottom:5px; max-width: 100%;" allowfullscreen> </iframe> <div style="margin-bottom:5px"> <strong> <a href="//www.slideshare.net/twoscoopspress/programming-gives-you-superpowers" title="Programming Gives You Superpowers" >Programming Gives You Superpowers</a> </strong> from <strong>[Audrey & Daniel Roy Greenfeld](//www.slideshare.net/twoscoopspress)</strong> </div>
 <br>
 The Django Girls Ensenada organizers did a magnificent job of assembling a wonderful day that touched lives. We were very impressed!
 

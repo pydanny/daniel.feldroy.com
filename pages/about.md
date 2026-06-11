@@ -6,7 +6,7 @@ author: "Daniel Roy Greenfeld"
 
 # About Me
 
-I am a [coder](https://github.com/pydanny), [author](/books), and [speaker](/speaking-engagements).
+I am a [coder](https://github.com/pydanny), [author](/books), and [speaker](/speaking-engagements). Here is my in-progress [portfolio](/portfolio).
 
 I'm probably best known as "[pydanny](https://www.google.com/search?q=pydanny)", one of the authors of [Two Scoops of Django](/books/tech). 
 

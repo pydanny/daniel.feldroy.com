@@ -37,7 +37,8 @@ These are places I've presented.
 |Python Web Conference|Indiana, US|2023|[youtube](https://www.youtube.com/watch?v=DW0BxmlfM54)|
 |PyCon Europe|Florence, Italy|May 2023|[youtube](https://www.youtube.com/watch?v=uKI5cPdnSnU)|
 |PyCon US|San Jose, CA|March 2012||
-|DjangoCon US|Portland, OR|September 2011||
-|PyCon US|Atlanta, Georgia|February 2011||
+|DjangoCon US|Portland, OR|September 2011|[pyvideo 1](https://pyvideo.org/djangocon-us-2011/djangocon-2011--confessions-of-joe-developer.html) [pyvideo 2](https://pyvideo.org/djangocon-us-2011/djangocon-2011--advanced-django-form-usage.html)|
+|PyCon US|Atlanta, Georgia|February 2011|[youtube](https://pyvideo.org/pycon-us-2011/pycon-2011--django-packages--a-case-study.html)|
 |PyCon US|Atlanta, Georgia|February 2010||
+|DjangoCon US|Portland, Oregon|September 2009|[pyvideo](https://pyvideo.org/djangocon-us-2009/introduction-to-pinax.html)|
 

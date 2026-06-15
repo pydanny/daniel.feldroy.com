@@ -6,6 +6,7 @@ tags:
   - kraken
   - climate-change
   - python
+  - tech
   - django
 time_to_read: 5
 title: Three Years at Kraken Tech

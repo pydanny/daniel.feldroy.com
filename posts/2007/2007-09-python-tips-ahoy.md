@@ -6,6 +6,7 @@ slug: 2007-09-python-tips-ahoy
 tags:
   - pylons
   - python
+  - tech
   - legacy-blogger
 time_to_read: 5
 title: Python Tips ahoy!

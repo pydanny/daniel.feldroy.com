@@ -6,6 +6,7 @@ tags:
   - holidays
   - resolutions
   - python
+  - tech
   - family
   - friends
   - capoeira
@@ -49,7 +50,8 @@ grid.
 - Gave talks at:
   - Wharton School of Business Web Conference
   - PyDay Mendoza
-  - Python Brazil
+  - python
+  - tech Brazil
   - PyCon Argentina
 - Experienced the unbelievably tasty asado (steak) of Argentina.
 - Participated in organizing the first Django Bar Camp.

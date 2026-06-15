@@ -6,6 +6,7 @@ slug: 2008-01-reason-4293-why-im-happy-to-be-out-of
 tags:
   - rant
   - python
+  - tech
   - coldfusion
   - legacy-blogger
 time_to_read: 5

@@ -5,6 +5,7 @@ published: true
 slug: 2008-05-i-love-graphing
 tags:
   - python
+  - tech
   - graphviz
   - legacy-blogger
 time_to_read: 5

@@ -4,6 +4,7 @@ description: "For the past six months or so I've been using fastcore. It provide
 published: false
 tags:
   - python
+  - tech
   - fastcore
   - bunch
 time_to_read: 2

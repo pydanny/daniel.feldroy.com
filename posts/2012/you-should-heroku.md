@@ -4,6 +4,7 @@ published: true
 slug: you-should-heroku
 tags:
   - python
+  - tech
   - django
   - heroku
   - consumernotebook

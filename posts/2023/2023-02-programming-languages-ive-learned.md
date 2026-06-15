@@ -5,6 +5,7 @@ slug: programming-language-ive-learned
 tags:
   - blog
   - python
+  - tech
   - javascript
   - coldfusion
   - nodejs

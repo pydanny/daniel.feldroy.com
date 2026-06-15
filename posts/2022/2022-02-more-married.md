@@ -5,6 +5,7 @@ tags:
   - audrey
   - holidays
   - python
+  - tech
   - typer  
 time_to_read: 2
 title: More Married

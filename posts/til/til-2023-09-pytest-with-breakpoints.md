@@ -4,6 +4,7 @@ published: true
 slug: til-2023-09-pytest-with-breakpoints
 tags:
   - python
+  - tech
   - testing
   - TIL
 time_to_read: 1

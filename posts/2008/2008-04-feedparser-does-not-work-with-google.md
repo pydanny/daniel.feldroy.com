@@ -6,6 +6,7 @@ slug: 2008-04-feedparser-does-not-work-with-google
 tags:
   - feedparser
   - python
+  - tech
   - GAPE
   - legacy-blogger
 time_to_read: 5

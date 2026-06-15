@@ -4,6 +4,7 @@ description: Quickstart guide for doing web application load testing with the Py
 published: true
 tags:
   - python
+  - tech
   - howto
   - load testing
 title: Using locust for load testing

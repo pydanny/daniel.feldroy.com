@@ -5,6 +5,7 @@ published: true
 slug: 2007-11-need-to-get-into-habit-of-using-python
 tags:
   - python
+  - tech
   - legacy-blogger
 time_to_read: 5
 title: Need to get into the habit of using Python sets

@@ -5,6 +5,7 @@ description: "An exploration of using flexicache for caching in Python."
 published: true
 tags:
   - python
+  - tech
   - fastcore
   - answerdotai
 time_to_read: 2

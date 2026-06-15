@@ -4,6 +4,7 @@ published: true
 slug: hola-argentina
 tags:
   - python
+  - tech
   - django
   - argentina
   - eventbrite

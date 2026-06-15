@@ -5,6 +5,7 @@ published: true
 tags:
   - django
   - python
+  - tech
   - howto
   - testing
 title: Rapidly creating smoke tests for Django views

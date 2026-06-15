@@ -5,6 +5,7 @@ published: true
 slug: drf-jwt-axios-vue
 tags:
   - python
+  - tech
   - django
   - django-rest-framework
   - Vue.js

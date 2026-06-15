@@ -7,6 +7,7 @@ tags:
   - feedfeeder
   - plone
   - python
+  - tech
   - interfaces
   - zope
   - five

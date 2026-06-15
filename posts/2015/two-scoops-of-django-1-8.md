@@ -5,6 +5,7 @@ slug: two-scoops-of-django-1-8
 tags:
   - twoscoops
   - python
+  - tech
   - django
   - audrey
   - book

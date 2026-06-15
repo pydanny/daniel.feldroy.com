@@ -8,6 +8,7 @@ tags:
   - Linux
   - plone
   - python
+  - tech
   - zope
   - GAPE
   - wxpython

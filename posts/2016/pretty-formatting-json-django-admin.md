@@ -4,6 +4,7 @@ published: true
 slug: pretty-formatting-json-django-admin
 tags:
   - python
+  - tech
   - django
   - cheatsheet
 time_to_read: 2

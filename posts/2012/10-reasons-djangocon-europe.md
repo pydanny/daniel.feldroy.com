@@ -4,6 +4,7 @@ published: true
 slug: 10-reasons-djangocon-europe
 tags:
   - python
+  - tech
   - django
   - europe
   - djangocon

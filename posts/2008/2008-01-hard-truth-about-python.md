@@ -5,6 +5,7 @@ published: true
 slug: 2008-01-hard-truth-about-python
 tags:
   - python
+  - tech
   - legacy-blogger
   - foxpro
 time_to_read: 5

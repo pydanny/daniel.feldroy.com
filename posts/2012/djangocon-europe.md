@@ -4,6 +4,7 @@ published: true
 slug: djangocon-europe
 tags:
   - python
+  - tech
   - django
   - djangocon
   - mongodb

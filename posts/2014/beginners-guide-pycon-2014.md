@@ -78,8 +78,10 @@ For beginners setting up a Python development environment can be tricky. If the 
 On the other hand, if you want a pre-PyCon challenge, I recommend getting the the following installed:
 
 - Modern versions of Python:
-    - Python 2.7 (mandatory)
-    - Python 3.4 (Rather mandatory for Python 3 work)
+    - python
+  - tech 2.7 (mandatory)
+    - python
+  - tech 3.4 (Rather mandatory for Python 3 work)
 
 - Be ready with source control. You should have installed and possess working knowledge with:
     - Git. Really make sure you have a GitHub account

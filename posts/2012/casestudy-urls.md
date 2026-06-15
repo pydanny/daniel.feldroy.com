@@ -4,6 +4,7 @@ published: true
 slug: casestudy-urls
 tags:
   - python
+  - tech
   - django
   - forms
   - howto

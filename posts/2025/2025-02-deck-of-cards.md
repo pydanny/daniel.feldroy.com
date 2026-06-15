@@ -4,6 +4,7 @@ description: "Today is Valentine's Day. That makes it the perfect day to write a
 published: true
 tags:
   - python
+  - tech
   - fastcore
   - howto
 time_to_read: 5

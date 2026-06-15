@@ -8,6 +8,7 @@ tags:
   - Windows
   - Linux
   - python
+  - tech
   - graphviz
   - MacOS
   - legacy-blogger

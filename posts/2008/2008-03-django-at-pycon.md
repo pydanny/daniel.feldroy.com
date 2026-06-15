@@ -6,6 +6,7 @@ slug: 2008-03-django-at-pycon
 tags:
   - django
   - python
+  - tech
   - wsgi
   - legacy-blogger
 time_to_read: 5

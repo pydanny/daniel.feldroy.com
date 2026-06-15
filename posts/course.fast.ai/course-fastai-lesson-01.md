@@ -3,6 +3,7 @@ date: '2024-09-21T11:30:00.926680'
 published: true
 tags:
   - python
+  - tech
   - fast.ai
   - courses
 time_to_read: 5

@@ -4,6 +4,7 @@ published: true
 slug: why-doesnt-python-have-switch-case
 tags:
   - python
+  - tech
   - django
   - howto
 time_to_read: 3

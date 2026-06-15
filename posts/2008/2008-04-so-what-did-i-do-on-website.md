@@ -8,6 +8,7 @@ tags:
   - NASA science
   - plone
   - python
+  - tech
   - NASA
   - legacy-dannygreenfeld
 time_to_read: 5

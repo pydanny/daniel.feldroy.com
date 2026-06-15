@@ -4,6 +4,7 @@ description: Where I describe why and how I wrote a new blog engine
 slug: writing-new-blog-engine
 tags:
   - python
+  - tech
   - django
   - flask
   - blog

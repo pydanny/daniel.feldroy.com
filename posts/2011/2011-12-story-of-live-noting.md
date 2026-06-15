@@ -8,6 +8,7 @@ tags:
   - djangocon
   - django
   - python
+  - tech
   - git
   - australia
   - github

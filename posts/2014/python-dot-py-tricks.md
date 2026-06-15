@@ -4,6 +4,7 @@ published: true
 slug: python-dot-py-tricks
 tags:
   - python
+  - tech
 time_to_read: 4
 title: setup.py tricks
 ---

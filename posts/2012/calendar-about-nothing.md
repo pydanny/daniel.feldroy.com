@@ -4,6 +4,7 @@ published: true
 slug: calendar-about-nothing
 tags:
   - python
+  - tech
   - django
 time_to_read: 2
 title: Calendar About Nothing

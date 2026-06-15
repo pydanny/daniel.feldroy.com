@@ -4,6 +4,7 @@ published: true
 slug: django-update-view-no-slug
 tags:
   - python
+  - tech
   - django
   - howto
   - class-based-views

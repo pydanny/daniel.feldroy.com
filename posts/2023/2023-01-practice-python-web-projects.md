@@ -3,6 +3,7 @@ date: "2023-01-14T22:20:50.52Z"
 published: true
 tags:
   - python
+  - tech
   - django
   - fastapi
   - flask

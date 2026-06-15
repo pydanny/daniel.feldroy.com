@@ -10,6 +10,7 @@ tags:
   - Linux
   - plone
   - python
+  - tech
   - NASA
   - personal
   - legacy-blogger

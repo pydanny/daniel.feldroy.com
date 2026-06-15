@@ -4,6 +4,7 @@ description: "A variant of the yield statement that can result in more concise c
 published: true
 tags:
   - python
+  - tech
   - TIL
 time_to_read: 2
 title: "TIL: yield from"

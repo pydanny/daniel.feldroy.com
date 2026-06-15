@@ -5,6 +5,7 @@ slug: til-2023-11-autoloading-on-filechange-using-watchdog
 tags:
   - howto
   - python
+  - tech
   - TIL
 time_to_read: 1
 title: "TIL: Autoloading on Filechange using Watchdog"

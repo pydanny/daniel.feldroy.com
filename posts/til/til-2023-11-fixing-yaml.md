@@ -5,6 +5,7 @@ slug: til-2023-11-fixing-yaml
 tags:
   - howto
   - python
+  - tech
   - TIL
 time_to_read: 1
 title: "TIL: Fixing YAML"

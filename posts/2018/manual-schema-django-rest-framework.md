@@ -5,6 +5,7 @@ published: true
 slug: manual-schema-django-rest-framework
 tags:
   - python
+  - tech
   - django
   - django-rest-framework
   - cheatsheet

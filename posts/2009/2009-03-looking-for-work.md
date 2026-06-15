@@ -8,6 +8,7 @@ tags:
   - django
   - plone
   - python
+  - tech
   - spacebook
   - legacy-blogger
 time_to_read: 5

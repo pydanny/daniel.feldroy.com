@@ -4,6 +4,7 @@ published: true
 slug: choosing-a-new-blog-engine
 tags:
   - python
+  - tech
   - blog
   - ruby
 time_to_read: 4

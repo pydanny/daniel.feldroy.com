@@ -5,6 +5,7 @@ slug: 2023-08-pypi-project-urls-cheatsheet
 tags:
   - howto
   - python
+  - tech
   - cheatsheet  
   - packaging
   - TIL

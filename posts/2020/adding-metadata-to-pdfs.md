@@ -5,6 +5,7 @@ published: true
 slug: adding-metadata-to-pdfs
 tags:
   - python
+  - tech
   - pdf
   - book
   - django

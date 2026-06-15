@@ -4,6 +4,7 @@ published: true
 slug: may-la-open-source-recap
 tags:
   - python
+  - tech
   - django
   - Los Angeles
   - hackathons

@@ -5,6 +5,7 @@ published: true
 tags: 
     - jupyter
     - python
+    - tech
     - howto
 title: Using Mermaid JS in Jupyter notebook
 ---

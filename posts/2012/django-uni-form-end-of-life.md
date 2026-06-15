@@ -5,6 +5,7 @@ slug: django-uni-form-end-of-life
 tags:
   - django
   - python
+  - tech
   - forms
 time_to_read: 7
 title: django-uni-form end of life

@@ -5,6 +5,7 @@ slug: two-scoops-beta-released
 tags:
   - twoscoops
   - python
+  - tech
   - django
   - audrey
   - pycon

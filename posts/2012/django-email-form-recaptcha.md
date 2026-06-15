@@ -4,6 +4,7 @@ published: true
 slug: django-email-form-recaptcha
 tags:
   - python
+  - tech
   - django
   - forms
   - howto

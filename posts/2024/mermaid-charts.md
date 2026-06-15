@@ -4,6 +4,7 @@ published: true
 slug: mermaid-charts
 tags:
   - python
+  - tech
   - FastHTML
   - javascript 
   - nodejs 

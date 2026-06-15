@@ -5,6 +5,7 @@ slug: whats-the-ultimate-reason-for-working-at-octopus-energy-part-2
 image: https://f004.backblazeb2.com/file/daniel-feldroy-com/public/images/autodocumenting-makefiles.png
 tags:
   - python
+  - tech
   - howto
   - references
 time_to_read: 5

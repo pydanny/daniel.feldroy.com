@@ -6,6 +6,7 @@ slug: 2007-06-plone-introspection
 tags:
   - plone
   - python
+  - tech
   - interfaces
   - zope
   - five

@@ -5,6 +5,7 @@ published: true
 slug: 2008-01-svn-versionator
 tags:
   - python
+  - tech
   - legacy-blogger
 time_to_read: 5
 title: SVN versionator!

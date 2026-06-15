@@ -4,6 +4,7 @@ published: true
 slug: til-2023-10-rich-console-status-for-slow-processes
 tags:
   - python
+  - tech
   - TIL
 time_to_read: 1
 title: "TIL: Rich.console.status for slow processes"

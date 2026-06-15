@@ -5,6 +5,7 @@ published: true
 slug: 2008-01-python-is-programming-language-of-2007
 tags:
   - python
+  - tech
   - legacy-blogger
 time_to_read: 5
 title: Python is the programming language of 2007!

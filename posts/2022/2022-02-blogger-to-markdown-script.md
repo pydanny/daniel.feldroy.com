@@ -4,6 +4,7 @@ published: true
 tags:
   - blog
   - python
+  - tech
   - typer
 time_to_read: 2
 title: Blogger to Markdown Script

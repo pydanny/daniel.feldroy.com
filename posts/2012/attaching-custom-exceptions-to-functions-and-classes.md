@@ -4,6 +4,7 @@ published: true
 slug: attaching-custom-exceptions-to-functions-and-classes
 tags:
   - python
+  - tech
   - howto
   - django
 time_to_read: 3

@@ -3,6 +3,7 @@ date: "2022-02-10T22:20:50.52Z"
 published: true
 tags:
   - python
+  - tech
   - django
   - talk
 time_to_read: 2

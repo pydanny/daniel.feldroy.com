@@ -4,8 +4,10 @@ published: true
 slug: building-conda-packages-for-multiple-operating-systems
 tags:
   - python
+  - tech
   - pypi
-  - python3
+  - python
+  - tech3
   - conda
   - cookiecutter
   - packaging

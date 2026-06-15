@@ -4,6 +4,7 @@ published: true
 slug: my-pycon-2012-schedule
 tags:
   - python
+  - tech
   - pycon
   - consumernotebook
   - django

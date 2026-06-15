@@ -5,6 +5,7 @@ published: true
 slug: 2008-10-compiling-python-on-mac-os-x-105-can-be
 tags:
   - python
+  - tech
   - MacOS
   - legacy-blogger
 time_to_read: 5

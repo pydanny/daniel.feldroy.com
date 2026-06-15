@@ -6,6 +6,7 @@ slug: 2007-05-json-and-python
 tags:
   - json
   - python
+  - tech
   - xml
   - legacy-blogger
 time_to_read: 5

@@ -4,6 +4,7 @@ published: true
 slug: recap-2020-resolutions-2021
 tags:
   - python
+  - tech
   - django
   - family
   - uma

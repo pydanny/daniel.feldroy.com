@@ -4,6 +4,7 @@ published: true
 slug: pycon-philippines-day-1
 tags:
   - python
+  - tech
   - django
   - Philippines
   - pycon

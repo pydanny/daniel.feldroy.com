@@ -4,6 +4,7 @@ description: "Did you know that Python's types library has a bunch class impleme
 published: true
 tags:
   - python
+  - tech
   - TIL
   - bunch
 time_to_read: 2

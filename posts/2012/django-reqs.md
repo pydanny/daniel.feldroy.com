@@ -4,6 +4,7 @@ published: true
 slug: django-reqs
 tags:
   - python
+  - tech
   - django
   - setup
 time_to_read: 2

@@ -4,6 +4,7 @@ published: true
 slug: titlecasing-markdown-headers-with-python
 tags:
   - python
+  - tech
   - markdown
 time_to_read: 2
 title: Titlecasing Markdown Headers with Python

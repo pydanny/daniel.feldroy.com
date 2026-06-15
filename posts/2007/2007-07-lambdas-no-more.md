@@ -5,6 +5,7 @@ published: true
 slug: 2007-07-lambdas-no-more
 tags:
   - python
+  - tech
   - legacy-blogger
   - foxpro
 time_to_read: 5

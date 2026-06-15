@@ -4,6 +4,7 @@ published: true
 slug: announcing-two-scoops-of-django-1.6
 tags:
   - python
+  - tech
   - django
   - book
   - twoscoops

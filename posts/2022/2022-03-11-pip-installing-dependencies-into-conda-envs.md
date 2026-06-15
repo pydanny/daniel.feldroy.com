@@ -3,6 +3,7 @@ date: "2022-03-11T22:20:50.52Z"
 published: true
 tags:
   - python
+  - tech
   - conda
   - MacOS
   - Windows

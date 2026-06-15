@@ -5,6 +5,7 @@ published: true
 slug: feed-generator
 tags:
   - python
+  - tech
   - blog
 time_to_read: 5
 title: Feed Generator

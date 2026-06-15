@@ -4,6 +4,7 @@ published: true
 slug: la-open-source-5
 tags:
   - python
+  - tech
   - django
   - Los Angeles
   - sprint

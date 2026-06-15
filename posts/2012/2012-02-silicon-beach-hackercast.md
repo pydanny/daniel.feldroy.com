@@ -7,6 +7,7 @@ tags:
   - django
   - audrey
   - python
+  - tech
   - legacy-blogger
 time_to_read: 5
 title: Silicon Beach Hackercast

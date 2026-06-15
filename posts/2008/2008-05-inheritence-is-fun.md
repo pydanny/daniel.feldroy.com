@@ -6,6 +6,7 @@ slug: 2008-05-inheritence-is-fun
 tags:
   - ruby
   - python
+  - tech
   - java
   - legacy-blogger
 time_to_read: 5

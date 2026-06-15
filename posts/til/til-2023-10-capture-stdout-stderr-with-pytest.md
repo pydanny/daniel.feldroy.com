@@ -4,6 +4,7 @@ published: true
 slug: til-2023-10-capture-stdout-stderr-with-pytest
 tags:
   - python
+  - tech
   - TIL
 time_to_read: 2
 title: "TIL: Capture stdout & stderr with pytest"

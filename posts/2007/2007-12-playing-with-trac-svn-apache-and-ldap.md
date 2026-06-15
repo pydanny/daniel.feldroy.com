@@ -5,6 +5,7 @@ published: true
 slug: 2007-12-playing-with-trac-svn-apache-and-ldap
 tags:
   - python
+  - tech
   - legacy-blogger
 time_to_read: 5
 title: Playing with Trac, SVN, Apache, and LDAP

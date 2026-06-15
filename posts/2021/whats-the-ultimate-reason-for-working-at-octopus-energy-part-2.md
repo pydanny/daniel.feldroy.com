@@ -5,6 +5,7 @@ slug: whats-the-ultimate-reason-for-working-at-octopus-energy-part-2
 image: /public/images/uma-daniel-sun.jpg
 tags:
   - python
+  - tech
   - django
   - octopus
   - javascript

@@ -3,6 +3,7 @@ date: "2022-02-22T22:20:50.52Z"
 published: true
 tags:
   - python
+  - tech
   - book
   - self-publishing
   - typer  

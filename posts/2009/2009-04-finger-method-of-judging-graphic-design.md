@@ -9,6 +9,7 @@ tags:
   - django
   - plone
   - python
+  - tech
   - pinax
   - MacOS
   - microsoft

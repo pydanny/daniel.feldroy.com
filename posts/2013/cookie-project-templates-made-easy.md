@@ -4,12 +4,14 @@ published: true
 slug: cookie-project-templates-made-easy
 tags:
   - python
+  - tech
   - django
   - rant
   - flask
   - pypi
   - pypy
-  - python3
+  - python
+  - tech3
   - javascript
   - audrey
   - cookiecutter

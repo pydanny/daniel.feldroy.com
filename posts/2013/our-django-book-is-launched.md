@@ -6,6 +6,7 @@ tags:
   - twoscoops
   - resolutions
   - python
+  - tech
   - django
   - audrey
   - heroku

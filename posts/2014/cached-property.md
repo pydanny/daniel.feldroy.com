@@ -4,6 +4,7 @@ published: true
 slug: cached-property
 tags:
   - python
+  - tech
   - django
   - flask
   - pypi

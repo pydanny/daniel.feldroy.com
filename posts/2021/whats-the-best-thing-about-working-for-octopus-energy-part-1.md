@@ -6,6 +6,7 @@ slug: whats-the-best-thing-about-working-for-octopus-energy-part-1
 image: /public/images/constantine-curious.png
 tags:
   - python
+  - tech
   - django
   - javascript
   - javascript

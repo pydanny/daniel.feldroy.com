@@ -5,6 +5,7 @@ slug: phasing-out-django-packages-apiv1-apiv2
 tags:
   - django
   - python
+  - tech
   - django-rest-framework
   - api
 time_to_read: 2

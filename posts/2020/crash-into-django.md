@@ -5,6 +5,7 @@ published: true
 slug: crash-into-django
 tags:
   - python
+  - tech
   - django
   - book
   - conda

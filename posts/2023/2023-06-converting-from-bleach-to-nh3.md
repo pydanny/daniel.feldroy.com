@@ -5,6 +5,7 @@ slug: 2023-06-converting-from-bleach-to-nh3
 tags:
   - howto
   - python
+  - tech
   - rust-lang
 time_to_read: 1
 title: Converting from bleach to nh3

@@ -5,6 +5,7 @@ published: true
 slug: 2009-01-how-to-globally-ignore-pyc-files
 tags:
   - python
+  - tech
   - legacy-blogger
 time_to_read: 5
 title: How to globally ignore .pyc files

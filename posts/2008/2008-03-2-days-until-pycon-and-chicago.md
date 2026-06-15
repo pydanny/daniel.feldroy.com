@@ -6,6 +6,7 @@ slug: 2008-03-2-days-until-pycon-and-chicago
 tags:
   - pycon
   - python
+  - tech
   - legacy-blogger
 time_to_read: 5
 title: 2 days until Pycon and Chicago

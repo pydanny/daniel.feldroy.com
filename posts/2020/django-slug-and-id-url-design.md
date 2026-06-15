@@ -5,6 +5,7 @@ published: true
 slug: django-slug-and-id-url-design
 tags:
   - python
+  - tech
   - django
   - forms
 time_to_read: 8

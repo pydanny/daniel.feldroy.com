@@ -4,6 +4,7 @@ published: true
 slug: simple-django-email-form
 tags:
   - python
+  - tech
   - django
   - forms
   - howto

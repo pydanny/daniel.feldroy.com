@@ -6,6 +6,7 @@ slug: 2008-02-work-things
 tags:
   - work
   - python
+  - tech
   - legacy-dannygreenfeld
 time_to_read: 5
 title: Work things

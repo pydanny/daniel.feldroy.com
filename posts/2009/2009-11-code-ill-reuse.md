@@ -9,6 +9,7 @@ tags:
   - Linux
   - plone
   - python
+  - tech
   - blog
   - legacy-blogger
 time_to_read: 5

@@ -4,6 +4,7 @@ published: true
 slug: launching-our-api-at-pycon-2012
 tags:
   - python
+  - tech
   - django
   - OAuth
   - api

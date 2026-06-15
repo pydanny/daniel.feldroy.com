@@ -5,6 +5,7 @@ slug: 2024-pycon-lithuania
 tags:
   - family
   - python
+  - tech
   - django
   - pycon
   - sprint

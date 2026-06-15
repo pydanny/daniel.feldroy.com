@@ -5,6 +5,7 @@ published: true
 slug: core-concepts-django-modelforms
 tags:
   - python
+  - tech
   - django
   - forms
 time_to_read: 8

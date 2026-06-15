@@ -7,6 +7,7 @@ tags:
   - load testing
   - Linux
   - python
+  - tech
   - MacOS
   - legacy-blogger
 time_to_read: 5

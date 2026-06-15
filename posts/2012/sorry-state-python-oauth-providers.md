@@ -4,6 +4,7 @@ published: true
 slug: sorry-state-python-oauth-providers
 tags:
   - python
+  - tech
   - django
   - OAuth
   - api

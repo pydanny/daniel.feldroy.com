@@ -4,6 +4,7 @@ published: true
 slug: made-up-statistics
 tags:
   - python
+  - tech
   - django
   - rant
   - flask

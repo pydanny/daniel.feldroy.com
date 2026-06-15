@@ -4,6 +4,7 @@ published: true
 slug: july-la-open-source-recap
 tags:
   - python
+  - tech
   - django
   - php
   - Los Angeles

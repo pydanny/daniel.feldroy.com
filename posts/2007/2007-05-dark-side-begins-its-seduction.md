@@ -5,6 +5,7 @@ published: true
 slug: 2007-05-dark-side-begins-its-seduction
 tags:
   - python
+  - tech
   - microsoft
   - legacy-blogger
 time_to_read: 5

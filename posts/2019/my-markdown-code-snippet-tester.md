@@ -5,6 +5,7 @@ published: true
 slug: my-markdown-code-snippet-tester
 tags:
   - python
+  - tech
   - blog
 time_to_read: 5
 title: My Markdown Code Snippet Tester

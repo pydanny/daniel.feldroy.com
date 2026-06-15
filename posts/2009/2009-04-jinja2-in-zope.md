@@ -10,6 +10,7 @@ tags:
   - grok
   - plone
   - python
+  - tech
   - zope
   - legacy-blogger
 time_to_read: 5

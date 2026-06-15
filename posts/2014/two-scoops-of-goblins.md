@@ -4,6 +4,7 @@ published: true
 slug: two-scoops-of-goblins
 tags:
   - python
+  - tech
   - django
   - book
   - twoscoops

@@ -10,6 +10,7 @@ tags:
   - Windows
   - django-district
   - python
+  - tech
   - pinax
   - MacOS
   - legacy-blogger

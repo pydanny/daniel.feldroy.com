@@ -5,6 +5,7 @@ slug: curiosity-has-landed
 tags:
   - NASA
   - python
+  - tech
   - django
 time_to_read: 1
 title: Curiosity has landed!

@@ -4,6 +4,7 @@ published: true
 slug: los-angeles-sprint
 tags:
   - python
+  - tech
   - django
   - Los Angeles
   - sprint

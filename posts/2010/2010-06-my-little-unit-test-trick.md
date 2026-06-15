@@ -5,6 +5,7 @@ published: true
 slug: 2010-06-my-little-unit-test-trick
 tags:
   - python
+  - tech
   - legacy-blogger
 time_to_read: 5
 title: My little unit test trick

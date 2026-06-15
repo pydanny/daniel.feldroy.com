@@ -4,6 +4,7 @@ published: true
 slug: want-to-work-for-eventbrite
 tags:
   - python
+  - tech
   - django
   - eventbrite
   - django-rest-framework

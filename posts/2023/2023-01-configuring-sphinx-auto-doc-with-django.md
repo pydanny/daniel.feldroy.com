@@ -5,6 +5,7 @@ tags:
   - octopus
   - kraken
   - python
+  - tech
   - django
   - howto
 time_to_read: 10

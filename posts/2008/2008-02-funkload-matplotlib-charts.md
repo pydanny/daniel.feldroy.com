@@ -5,6 +5,7 @@ published: true
 slug: 2008-02-funkload-matplotlib-charts
 tags:
   - python
+  - tech
   - legacy-blogger
 time_to_read: 5
 title: Funkload + Matplotlib = charts!

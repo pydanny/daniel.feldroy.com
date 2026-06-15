@@ -4,6 +4,7 @@ published: true
 slug: converting-markdown-headers-to-checklist
 tags:
   - python
+  - tech
   - nodejs
   - javascript
   - markdown

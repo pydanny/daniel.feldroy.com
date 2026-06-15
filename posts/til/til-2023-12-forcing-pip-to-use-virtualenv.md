@@ -5,6 +5,7 @@ slug: til-2023-12-forcing-pip-to-use-virtualenv
 tags:
   - howto
   - python
+  - tech
   - TIL
 time_to_read: 1
 title: "TIL: Forcing pip to use virtualenv"

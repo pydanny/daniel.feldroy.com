@@ -4,6 +4,7 @@ description: "An exploration of Fastcore's enhanced list-like structure"
 published: true
 tags:
   - python
+  - tech
   - fastcore
   - howto
 time_to_read: 2

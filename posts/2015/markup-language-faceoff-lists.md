@@ -4,6 +4,7 @@ published: true
 slug: markup-language-faceoff-lists
 tags:
   - python
+  - tech
   - LaTeX
   - RestructuredText
   - markdown

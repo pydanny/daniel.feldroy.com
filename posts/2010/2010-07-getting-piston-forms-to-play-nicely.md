@@ -8,6 +8,7 @@ tags:
   - forms
   - json
   - python
+  - tech
   - xml
   - legacy-blogger
 time_to_read: 5

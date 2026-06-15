@@ -4,7 +4,9 @@ published: true
 slug: how-to-create-installable-django-packages
 tags:
   - python
-  - python3
+  - tech
+  - python
+  - tech3
   - django
   - cheatsheet
   - django packages

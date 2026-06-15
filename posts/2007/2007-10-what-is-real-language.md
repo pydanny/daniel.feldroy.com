@@ -5,6 +5,7 @@ published: true
 slug: 2007-10-what-is-real-language
 tags:
   - python
+  - tech
   - java
   - legacy-blogger
 time_to_read: 5

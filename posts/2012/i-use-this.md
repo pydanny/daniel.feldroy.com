@@ -4,6 +4,7 @@ published: true
 slug: i-use-this
 tags:
   - python
+  - tech
   - tools
 time_to_read: 4
 title: I use this

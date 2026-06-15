@@ -5,6 +5,7 @@ published: true
 slug: 2008-02-svn-versionator-is-dead
 tags:
   - python
+  - tech
   - legacy-blogger
 time_to_read: 5
 title: SVN Versionator is dead

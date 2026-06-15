@@ -4,6 +4,7 @@ published: true
 slug: choosing-api-framework-for-django
 tags:
   - python
+  - tech
   - django
   - api
   - review

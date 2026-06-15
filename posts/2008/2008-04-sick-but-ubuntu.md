@@ -8,6 +8,7 @@ tags:
   - Windows
   - Linux
   - python
+  - tech
   - MacOS
   - legacy-blogger
 time_to_read: 5

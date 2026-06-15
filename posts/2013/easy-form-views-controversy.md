@@ -5,6 +5,7 @@ published: true
 slug: easy-form-views-controversy
 tags:
   - python
+  - tech
   - django
   - forms
   - howto

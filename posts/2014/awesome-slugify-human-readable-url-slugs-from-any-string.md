@@ -4,6 +4,7 @@ published: true
 slug: awesome-slugify-human-readable-url-slugs-from-any-string
 tags:
   - python
+  - tech
   - django
   - unicode
   - i18n

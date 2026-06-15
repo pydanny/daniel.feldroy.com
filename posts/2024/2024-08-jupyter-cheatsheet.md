@@ -6,6 +6,7 @@ tags:
   - cheatsheet
   - howto
   - python
+  - tech
   - jupyter
 title: Jupyter Cheatsheet
 ---

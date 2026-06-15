@@ -6,6 +6,7 @@ slug: code-code-code
 tags:
   - django
   - python
+  - tech
   - foxpro
 time_to_read: 3
 title: Code, Code, Code

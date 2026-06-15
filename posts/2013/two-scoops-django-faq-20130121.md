@@ -5,6 +5,7 @@ slug: two-scoops-django-faq-20130121
 tags:
   - twoscoops
   - python
+  - tech
   - django
   - audrey
   - pycon

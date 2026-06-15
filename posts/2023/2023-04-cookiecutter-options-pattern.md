@@ -6,6 +6,7 @@ tags:
   - cookiecutter
   - howto
   - python
+  - tech
   - tech.octopus.energy
 time_to_read: 1
 title: Cookiecutter Options Pattern

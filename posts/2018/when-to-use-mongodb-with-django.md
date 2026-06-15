@@ -5,6 +5,7 @@ published: true
 slug: when-to-use-mongodb-with-django
 tags:
   - python
+  - tech
   - django
   - mongodb
   - fastapi

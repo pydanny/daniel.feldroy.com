@@ -3,6 +3,7 @@ date: "2022-04-26T22:20:50.52Z"
 published: true
 tags:
   - python
+  - tech
   - django
   - fastapi
   - typer

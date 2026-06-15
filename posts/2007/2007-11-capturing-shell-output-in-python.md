@@ -5,6 +5,7 @@ published: true
 slug: 2007-11-capturing-shell-output-in-python
 tags:
   - python
+  - tech
   - howto
   - legacy-blogger
 time_to_read: 5

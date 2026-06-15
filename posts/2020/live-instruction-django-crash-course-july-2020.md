@@ -4,6 +4,7 @@ published: true
 slug: live-instruction-django-crash-course-july-2020
 tags:
   - python
+  - tech
   - django
   - cookiecutter
   - course
@@ -39,7 +40,8 @@ Each course day will have two sessions each 3 hours long, as well as an hour-lon
 ## Topics Covered
 
 - Setting up a development environment
-  - Python 3.8
+  - python
+  - tech 3.8
   - Django 3.0
   - Database
   - VS Code

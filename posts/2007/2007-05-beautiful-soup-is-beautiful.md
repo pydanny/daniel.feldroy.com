@@ -6,6 +6,7 @@ slug: 2007-05-beautiful-soup-is-beautiful
 tags:
   - beautiful soup
   - python
+  - tech
   - legacy-blogger
 time_to_read: 5
 title: Beautiful Soup is Beautiful

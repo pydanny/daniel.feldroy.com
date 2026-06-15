@@ -4,6 +4,7 @@ published: true
 slug: adding-django-form-instance-attributes
 tags:
   - python
+  - tech
   - django
   - howto
   - class-based-views

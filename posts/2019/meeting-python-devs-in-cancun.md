@@ -5,6 +5,7 @@ published: true
 slug: meeting-python-devs-in-cancun
 tags:
   - python
+  - tech
   - travel
 time_to_read: 1
 title: Meeting Python Devs in Cancun

@@ -4,6 +4,7 @@ description: "Writing a Jupyter notebook to clean up my blog's article locations
 published: true
 tags:
   - python
+  - tech
   - blog
 time_to_read: 2
 title: File Location Fixup

@@ -4,6 +4,7 @@ description: "When using Python to interact with file systems, Pathlib is where 
 published: false
 tags:
   - python
+  - tech
   - howto
   - fastcore
 time_to_read: 5

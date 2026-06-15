@@ -4,6 +4,7 @@ published: true
 slug: docstrings-and-various-python-objects
 tags:
   - python
+  - tech
 time_to_read: 4
 title: Docstrings and Various Python Objects
 ---

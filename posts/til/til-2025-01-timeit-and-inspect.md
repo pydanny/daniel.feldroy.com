@@ -4,6 +4,7 @@ description: "Two libraries in Python's standard library that are useful for kee
 published: true
 tags:
   - python
+  - tech
   - TIL
   - load testing
 time_to_read: 2

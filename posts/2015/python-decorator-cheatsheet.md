@@ -4,7 +4,9 @@ published: true
 slug: python-decorator-cheatsheet
 tags:
   - python
-  - python3
+  - tech
+  - python
+  - tech3
   - cheatsheet
 time_to_read: 2
 title: Python Decorator Cheatsheet

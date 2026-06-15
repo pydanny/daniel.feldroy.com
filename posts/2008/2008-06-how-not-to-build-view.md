@@ -6,6 +6,7 @@ slug: 2008-06-how-not-to-build-view
 tags:
   - plone
   - python
+  - tech
   - zope
   - five
   - legacy-blogger

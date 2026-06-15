@@ -7,6 +7,7 @@ tags:
   - turbogears
   - pycon
   - python
+  - tech
   - wsgi
   - legacy-blogger
 time_to_read: 5

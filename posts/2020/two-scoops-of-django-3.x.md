@@ -5,6 +5,7 @@ published: true
 slug: two-scoops-of-django-3.x-released
 tags:
   - python
+  - tech
   - pdf
   - book  
   - django

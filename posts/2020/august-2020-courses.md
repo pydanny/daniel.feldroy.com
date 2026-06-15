@@ -5,6 +5,7 @@ published: true
 slug: august-2020-courses
 tags:
   - python
+  - tech
   - django
   - course  
   - django-crash-course

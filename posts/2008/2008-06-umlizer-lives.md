@@ -10,6 +10,7 @@ tags:
   - plone conference
   - plone
   - python
+  - tech
   - graphviz
   - zope
   - legacy-blogger

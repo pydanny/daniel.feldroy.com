@@ -5,6 +5,7 @@ published: true
 slug: 2009-01-useful-python-code-for-blogspot-users
 tags:
   - python
+  - tech
   - blog
   - legacy-blogger
 time_to_read: 5

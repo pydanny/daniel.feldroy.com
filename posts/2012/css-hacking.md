@@ -4,6 +4,7 @@ published: true
 slug: css-hacking
 tags:
   - python
+  - tech
   - django
   - blog 
 time_to_read: 1

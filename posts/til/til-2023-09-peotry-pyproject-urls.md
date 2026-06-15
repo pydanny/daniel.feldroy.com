@@ -4,6 +4,7 @@ published: true
 slug: til-2023-09-poetry-pypi-project-urls
 tags:
   - python
+  - tech
   - packaging
   - TIL
 time_to_read: 1

@@ -48,7 +48,7 @@ Yes, they added magic to the show. Bloody overt use of magic fantasy, with barel
 
 Also, because the stories were badly done, whatever social commentary they might have tried to execute on, fell flat. I know that included the latest Doctor's sexuality. There were also some other things those weak stories prevented me from caring about. **The cardinal rule for using fiction as a medium for raising social awareness is your cause needs to come wrapped in a good story. And in the case of modern Doctor Who, good storytelling just isn't there anymore.** The result of the bad story telling was that the social commentary felt hamfisted and clumsy.
 
-Again, I feel sorry for the non-writer people who worked on the show. The actors appeared to have skill, and certainly the looks, to have done a good job. Unfortunately, there's only so much the best actors can do with boring, lazy writing. 
+Again, I feel sorry for the non-writer people who worked on the show. The actors appeared to have the skill, and certainly the looks, to have done a good job. Unfortunately, there's only so much the best actors can do with boring, lazy writing. 
 
 So I quit watching Doctor Who again. I'm sad. I wish the show would engage me, but it hasn't been able to reliably do so in years.
 

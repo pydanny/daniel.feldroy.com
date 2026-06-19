@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
   <id>https://daniel.feldroy.com/</id>
   <title>Inside the head of Daniel Roy Greenfeld</title>
-  <updated>2026-06-09T10:43:00.990737+00:00</updated>
+  <updated>2026-06-19T02:21:45.909185+00:00</updated>
   <author>
     <name>Daniel Roy Greenfeld</name>
     <email>daniel@feldroy.com</email>
@@ -12,54 +12,6 @@
   <generator uri="https://lkiesow.github.io/python-feedgen" version="1.0.0">python-feedgen</generator>
   <logo>https://f004.backblazeb2.com/file/daniel-feldroy-com/public/images/profile.jpg</logo>
   <rights>All rights reserved 2026, Daniel Roy Greenfeld</rights>
-  <entry>
-    <id>https://daniel.feldroy.com/posts/2026-01-downloading-everything</id>
-    <title>Writing tools to download everything</title>
-    <updated>2026-01-16T11:22:35.582258+00:00</updated>
-    <author>
-      <name>Daniel Roy Greenfeld</name>
-      <email>daniel@feldroy.com</email>
-    </author>
-    <content type="html">&lt;p&gt;Over the years, &lt;a href="https://audrey.feldroy.com"&gt;Audrey&lt;/a&gt; and I have accumulated photos across a variety of services. Flickr, SmugMug, and others all have chunks of our memories sitting on their servers. Some of these services we haven't touched in years, others we pay for but rarely use. It was time to bring everything home.&lt;/p&gt;
-&lt;h2 id="why-bother"&gt;Why Bother?&lt;/h2&gt;
-&lt;p&gt;Two reasons pushed me to finally tackle this.&lt;/p&gt;
-&lt;p&gt;First, money. Subscriptions add up. Paying for storage on services we barely use felt wasteful. As a backup even more so because there are services that are cheaper and easier to use for that purpose, like Backblaze.&lt;/p&gt;
-&lt;p&gt;Second, simplicity. Having photos scattered across multiple services means hunting through different interfaces when looking for a specific memory. Consolidating everything into one place makes our photo library actually usable.&lt;/p&gt;
-&lt;h2 id="using-claude-to-write-a-downloader"&gt;Using Claude to Write a Downloader&lt;/h2&gt;
-&lt;p&gt;I decided to start with SmugMug since that had the largest collection. I could have written this script myself. I've done plenty of API work over the years. But I'm busy, and this felt like a perfect use case for AI assistance.&lt;/p&gt;
-&lt;p&gt;My approach was straightforward:&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;strong&gt;Wrote a specification&lt;/strong&gt; for a Smugmug downloader. I linked to the docs for the service then told it to make a CLI for downloading things off that service. For the CLI I insist on &lt;code&gt;typer&lt;/code&gt; but otherwise I didn't specify dependencies.&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;strong&gt;Told Claude to generate code&lt;/strong&gt; based on the spec. I provided the specification and let Claude produce a working Python script.&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;strong&gt;Tested&lt;/strong&gt; by running the scripts against real data. I started with small batches to verify the downloads worked correctly. Claude got everything right when iy came to downloads on the first go, which was impressive.&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;strong&gt;Adjust for volume&lt;/strong&gt;. We had over 5,000 files on Smugmug. Downloading everything at once took longer than I expected. I asked Claude to track files so if the script was interrupted it could resume where it left off. Claude kept messing this up, and after the 5th or 6th attempt I gave up trying to use Claude to write this part.&lt;/p&gt;
-&lt;/li&gt;
-&lt;/ol&gt;
-&lt;h2 id="i-wrote-some-code"&gt;I Wrote Some Code&lt;/h2&gt;
-&lt;p&gt;I wrote a super simple image ID cache using a plaintext file for storage. It was simple, effective, and worked on the first go. Sometimes it's easier to just write the code yourself than try to get an AI to do it for you.&lt;/p&gt;
-&lt;h2 id="the-smugmug-downloader"&gt;The SmugMug Downloader&lt;/h2&gt;
-&lt;p&gt;The project is here at &lt;a href="https://github.com/pydanny/smugmug-downloader"&gt;SmugMug downloader&lt;/a&gt;. It authenticates, enumerates all albums, and downloads every photo while preserving the album structure. Nothing fancy, just practical.&lt;/p&gt;
-&lt;p&gt;I'll be working on the Flickr downloader soon, following the same pattern. There's a few other services on the list too; I'm scanning our bank statements to see what else we have accounts on that we've let linger for too long.&lt;/p&gt;
-&lt;h2 id="was-it-worth-it"&gt;Was It Worth It?&lt;/h2&gt;
-&lt;p&gt;Absolutely. What would have taken me a day of focused coding took an hour of iterating with Claude. Our photos are off Smugmug and we're canceling a subscription we no longer need. I think this is what they mean by "vibe engineering".&lt;/p&gt;
-&lt;h2 id="summary"&gt;Summary&lt;/h2&gt;
-&lt;p&gt;These are files which in some cases we thought we lost. Or had forgotten. So the emotional and financial investment in a vibe engineered effort was low. If this were something that was touching our finances or wedding/baby photos I would have been much more cautious. But for now, this is a fun experiment in using AI to handle the mundane parts of coding so I can focus on more critical tasks.&lt;/p&gt;</content>
-    <link href="https://daniel.feldroy.com/posts/2026-01-downloading-everything"/>
-    <summary>Using AI to help download photos so we can consolidate all our images into one place.</summary>
-    <category term="python"/>
-    <contributor>
-      <name>Daniel Roy Greenfeld</name>
-      <email>daniel@feldroy.com</email>
-    </contributor>
-    <published>2026-01-16T11:22:35.582258+00:00</published>
-  </entry>
   <entry>
     <id>https://daniel.feldroy.com/posts/2026-02-we-moved-to-manila</id>
     <title>We moved to Manila!</title>
@@ -485,7 +437,7 @@
     </author>
     <content type="html">&lt;h2 id="tldr"&gt;TLDR&lt;/h2&gt;
 &lt;p&gt;My new fiction-dedicated fiction writing site is here:&lt;/p&gt;
-&lt;h3 id="grimdanielcom"&gt;&lt;a href="https://grimdaniel.com" target="_blank"&gt;grimdaniel.com&lt;/a&gt;&lt;/h3&gt;
+&lt;h3 id="grimdanielcom"&gt;&lt;a href="https://grimdaniel.com" &gt;grimdaniel.com&lt;/a&gt;&lt;/h3&gt;
 &lt;h2 id="why"&gt;Why?&lt;/h2&gt;
 &lt;p&gt;About three months ago I received a head injury. Recovery wasn't quick, and I couldn't do a lot of things like look at traffic, do intense workouts, or spend more than a few minutes on code. Mostly I could only do passive things like reading or watching video. One active thing that I could do with impunity was write &lt;a href="/books/fiction"&gt;fiction&lt;/a&gt;. I hadn't done it in years, but now I found it was a rare active pursuit I could enjoy.&lt;/p&gt;
 &lt;p&gt;The result was my first book in about 8 years, a grimdark novella titled, "&lt;a href="/books/fiction#everyone-dies"&gt;Everyone Dies&lt;/a&gt;". I listed it here on this site, but most of my readers are here for my technical writing, not fiction. Rather than combine the two categoris (non-fiction and fiction) I decided to build out a dedicated app for my fiction efforts. &lt;/p&gt;
@@ -754,9 +706,9 @@
 &lt;p&gt;Since then, I kept thinking about writing a new book (or series) where protagonists die with regularity. Sacrifice would have meaning. Characters would struggle with the death of those around them. I would promise that death is permanent.&lt;/p&gt;
 &lt;p&gt;The result is this story.&lt;/p&gt;
 &lt;p&gt;The release of this book is bittersweet. I admit that I don't want to let some of the characters go. And that's what makes this story so interesting for me, that I'll miss them in kind of the same way I miss friends and family who have passed away.&lt;/p&gt;
-&lt;p class="center"&gt;&lt;a href="https://storyoriginapp.com/universalbooklinks/8c487a18-2b3e-11f1-aa1d-dfa5b3422a69" class="btn btn-primary center"  target="_blank"&gt;Read "Everyone Dies" on Amazon&lt;/a&gt;&lt;/p&gt;
+&lt;p class="center"&gt;&lt;a href="https://storyoriginapp.com/universalbooklinks/8c487a18-2b3e-11f1-aa1d-dfa5b3422a69" class="btn btn-primary center"  &gt;Read "Everyone Dies" on Amazon&lt;/a&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;a href="https://storyoriginapp.com/universalbooklinks/8c487a18-2b3e-11f1-aa1d-dfa5b3422a69" rel="noopener noreferrer" target="_blank"&gt;
+&lt;p&gt;&lt;a href="https://storyoriginapp.com/universalbooklinks/8c487a18-2b3e-11f1-aa1d-dfa5b3422a69" rel="noopener noreferrer" &gt;
     &lt;img alt="image" src="https://daniel.feldroy.com/static/images/everyone-dies-read-on-amazon.d7dacd80.webp" width="null" style="height: auto; max-width: 100%;" class="redline"&gt;
 &lt;/a&gt;&lt;/p&gt;
 &lt;h2 id="please-write-a-review"&gt;Please write a review&lt;/h2&gt;
@@ -765,7 +717,7 @@
 &lt;p&gt;Negative reviews fuel the negative emotions that are useful for portraying the darkness in the stories I write. Also, they help me identify what I can improve.&lt;/p&gt;
 &lt;p&gt;Even neutral reviews are good. I feel neutral about them, but having them is better than no review!&lt;/p&gt;
 &lt;p&gt;Finally, if you feel like just putting in a star rating on Amazon (or Goodreads), with an absolute minimal review, that works too. No matter how many stars you choose, you help me by rating it.&lt;/p&gt;
-&lt;p class="center"&gt;&lt;a href="https://www.amazon.com/review/create-review/?ie=UTF8&amp;channel=glance-detail&amp;asin=B0GTRGFNB5" class="btn btn-primary" target="_blank"&gt;Write a review!&lt;/a&gt;&lt;/p&gt;</content>
+&lt;p class="center"&gt;&lt;a href="https://www.amazon.com/review/create-review/?ie=UTF8&amp;channel=glance-detail&amp;asin=B0GTRGFNB5" class="btn btn-primary" &gt;Write a review!&lt;/a&gt;&lt;/p&gt;</content>
     <link href="https://daniel.feldroy.com/posts/2026-05-everyone-dies-kindle-unlimited"/>
     <summary>I wrote a new fiction book and it is now published. The first in a new series!</summary>
     <category term="book"/>
@@ -816,5 +768,51 @@
       <email>daniel@feldroy.com</email>
     </contributor>
     <published>2026-05-26T15:14:07.710573+00:00</published>
+  </entry>
+  <entry>
+    <id>https://daniel.feldroy.com/posts/2026-06-farewell-doctor-who</id>
+    <title>Farewell, Doctor Who</title>
+    <updated>2026-06-19T00:42:59.843903+00:00</updated>
+    <author>
+      <name>Daniel Roy Greenfeld</name>
+      <email>daniel@feldroy.com</email>
+    </author>
+    <content type="html">&lt;p&gt;In my early twenties, I watched a bunch of the original Doctor Who series. PBS broadcast it late on weekend nights, and I stayed up to watch it whenever I was free. The Doctor was an intentionally obscure character, arguably a madman, who travelled with attractive people (usually of the gender I prefer to look at) through space and time. It was a bit goofy, with actors who were often a bit hammy, and sets and special effects that were laughingly cheap. The UK-centric focus of the universe and all of time was amusing, too. Yet the admittedly contrived stories were usually quite good in a fantastical way. As a science-fiction fan, what wasn't there to like?&lt;/p&gt;
+&lt;p&gt;Often, Doctor Who raised questions about the status quo, but did so tastefully, in the same way that Star Trek raised the violent spectre of racism in "&lt;a href="https://en.wikipedia.org/wiki/Let_That_Be_Your_Last_Battlefield"&gt;Let That Be Your Last Battlefield&lt;/a&gt;."&lt;/p&gt;
+&lt;p&gt;I was sad when the series faded away in 1988. It was clearly struggling financially, with even worse sets and special effects. Yet the writing was still good, and the actors were into it.&lt;/p&gt;
+&lt;p&gt;So when the series was resurrected in 2005, I was excited. My hopes for the show were realized, and every episode was beautiful. The show leaned nicely into the enigmatic nature of the Doctor. His companion(s) were attractive. The ethical issues raised were more topical and addressed as tastefully as the original series.&lt;/p&gt;
+&lt;p&gt;Then came Captain Jack Harkness. Much in the same way the Doctor is  enigmatic and tragic, so was this character. He was masculine, intelligent, resourceful, and more overtly violent than the doctor. He was also bisexual, one of the many elements that defined him. Most importantly, stories around Jack Harkness were interesting and compelling, enough so that he got his own Torchwood Series. I liked that series and am sad it ended.&lt;/p&gt;
+&lt;p&gt;Anyway, Doctor Who kept delivering on good stories. Sure, every season had some weak episodes, but that's okay. You can't always write perfect shows, right?&lt;/p&gt;
+&lt;p&gt;Then came the 13th Doctor, the first female incarnation of the Doctor. The Master had already shown us that timelords could switch genders, especially when portrayed by actresses with talent backed by top-notch writing. Personally, I would happily watch a series about the Master as portrayed by the incredible Michelle Gomez. I was excited to see that they had cast actress Jodie Whitaker to be the next Doctor Who. I had seen her in a few things and was interested to see what she would bring to the character.&lt;/p&gt;
+&lt;p&gt;Sadly, I was disappointed.&lt;/p&gt;
+&lt;p&gt;Not by the actress, Jodie Whitaker. I could sense she was giving the role everything she had. She delivered.&lt;/p&gt;
+&lt;p&gt;Rather, the writing was off so much more than on. On the average, the stories just didn't deliver. I found myself getting bored. That meant that when the faux science of the show went off the rails, as it does, it ruined my suspension of disbelief. That meant that instead of coming across as goofy in an enthusiastic way, the show felt poorly put together by lazy people. I felt compassion for the actors and crews, because the weak stories were hurting them professionally. It had nothing to do with the Doctor's gender, but rather that I was bored.&lt;/p&gt;
+&lt;p&gt;Eventually, I stopped watching Doctor Who. I just couldn't make it through a Doctor Who season. In fact, I stopped watching Doctor Who altogether. It wasn't worth my time, especially as a new father.&lt;/p&gt;
+&lt;p&gt;Then I heard Russel T. Davies, the guy who brought the show back in 2005, was back on. I didn't know who he was, but I was excited. Surely he would write good episodes, or force the studio to accept good writing.&lt;/p&gt;
+&lt;p&gt;I made it through a few episodes before I quit. And I quit because the writing couldn't help but be boring.&lt;/p&gt;
+&lt;p&gt;At first it was okay. They brought back the 10th Doctor and Donna Noble. It was a nice trip down memory lane, but not memorable. I was sad to see Jodie Whitaker gone. There were a few oddly hamfisted digs at the Doctor's sexuality, which felt weird in a show I loved in part for the generally strong dialogue of the Doctor and his companions.&lt;/p&gt;
+&lt;p&gt;Then they brought in the 15th Doctor, the first gay Doctor.&lt;/p&gt;
+&lt;p&gt;Personally, I don't care about the Doctor's sexuality. In my opinion, the Doctor's sexuality and love life should be at most a subplot. The Doctor isn't human. He's enigmatic, a mythical figure, famous or infamous depending on what he's done to you. While his companions are usually attractive, he almost never pursues them physically.&lt;/p&gt;
+&lt;p&gt;What I do care about is that the show has compelling stories.&lt;/p&gt;
+&lt;p&gt;Unfortunately, the stories weren't compelling. I found myself bored. &lt;/p&gt;
+&lt;p&gt;Also, they added magic to the show. Bloody overt use of magic fantasy, with barely a mention (if any) of scientific explanation. I love fantasy but Doctor Who is the show that was able to rationalize Weeping Angels from a science-fiction perspective. This felt so lazy. My disappointment grew&lt;/p&gt;
+&lt;p&gt;Also, because the stories were badly done, whatever social commentary they might have tried to execute on, fell flat. I know that included the latest Doctor's sexuality. There were also some other things those weak stories prevented me from caring about. The cardinal rule for using fiction as a medium for raising social awareness is your cause needs to come wrapped in a good story. And in the case of modern Doctor Who, good storytelling just isn't there anymore. The result was that the social commentary felt hamfisted and clumsy.&lt;/p&gt;
+&lt;p&gt;Again, I felt sorry for the non-writer people who worked on the show. The actors appeared to have skill, and certainly the looks, to have done a good job. Unfortunately, there's only so much the best actors can do with boring, lazy writing. &lt;/p&gt;
+&lt;p&gt;So I quit watching Doctor Who again. I'm sad. I wish the show would engage me, but it hasn't been able to reliably do so in years.&lt;/p&gt;
+&lt;p&gt;If the show ever comes back, I hope they remember to include these things:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Good writing. Story comes first, then everything else&lt;/li&gt;
+&lt;li&gt;Witty repartee. Social commentary falls flat if done in a hamfisted way&lt;/li&gt;
+&lt;li&gt;Science fiction. If you aren't capable of rationalizing contrived scenarios with faux science, you shouldn't be writing for Doctor Who&lt;/li&gt;
+&lt;/ul&gt;</content>
+    <link href="https://daniel.feldroy.com/posts/2026-06-farewell-doctor-who"/>
+    <summary>I write on my increasingly distant feelings as well as the recent cancellation of the Doctor Who television series.</summary>
+    <category term="england"/>
+    <category term="fiction"/>
+    <contributor>
+      <name>Daniel Roy Greenfeld</name>
+      <email>daniel@feldroy.com</email>
+    </contributor>
+    <published>2026-06-19T00:42:59.843903+00:00</published>
   </entry>
 </feed>

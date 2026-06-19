@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
   <id>https://daniel.feldroy.com/</id>
   <title>Writing posts by Daniel Roy Greenfeld</title>
-  <updated>2026-06-09T10:43:01.601719+00:00</updated>
+  <updated>2026-06-19T02:21:46.878676+00:00</updated>
   <author>
     <name>Daniel Roy Greenfeld</name>
     <email>daniel@feldroy.com</email>
@@ -205,7 +205,7 @@
     </author>
     <content type="html">&lt;h2 id="tldr"&gt;TLDR&lt;/h2&gt;
 &lt;p&gt;My new fiction-dedicated fiction writing site is here:&lt;/p&gt;
-&lt;h3 id="grimdanielcom"&gt;&lt;a href="https://grimdaniel.com" target="_blank"&gt;grimdaniel.com&lt;/a&gt;&lt;/h3&gt;
+&lt;h3 id="grimdanielcom"&gt;&lt;a href="https://grimdaniel.com" &gt;grimdaniel.com&lt;/a&gt;&lt;/h3&gt;
 &lt;h2 id="why"&gt;Why?&lt;/h2&gt;
 &lt;p&gt;About three months ago I received a head injury. Recovery wasn't quick, and I couldn't do a lot of things like look at traffic, do intense workouts, or spend more than a few minutes on code. Mostly I could only do passive things like reading or watching video. One active thing that I could do with impunity was write &lt;a href="/books/fiction"&gt;fiction&lt;/a&gt;. I hadn't done it in years, but now I found it was a rare active pursuit I could enjoy.&lt;/p&gt;
 &lt;p&gt;The result was my first book in about 8 years, a grimdark novella titled, "&lt;a href="/books/fiction#everyone-dies"&gt;Everyone Dies&lt;/a&gt;". I listed it here on this site, but most of my readers are here for my technical writing, not fiction. Rather than combine the two categoris (non-fiction and fiction) I decided to build out a dedicated app for my fiction efforts. &lt;/p&gt;
@@ -474,9 +474,9 @@
 &lt;p&gt;Since then, I kept thinking about writing a new book (or series) where protagonists die with regularity. Sacrifice would have meaning. Characters would struggle with the death of those around them. I would promise that death is permanent.&lt;/p&gt;
 &lt;p&gt;The result is this story.&lt;/p&gt;
 &lt;p&gt;The release of this book is bittersweet. I admit that I don't want to let some of the characters go. And that's what makes this story so interesting for me, that I'll miss them in kind of the same way I miss friends and family who have passed away.&lt;/p&gt;
-&lt;p class="center"&gt;&lt;a href="https://storyoriginapp.com/universalbooklinks/8c487a18-2b3e-11f1-aa1d-dfa5b3422a69" class="btn btn-primary center"  target="_blank"&gt;Read "Everyone Dies" on Amazon&lt;/a&gt;&lt;/p&gt;
+&lt;p class="center"&gt;&lt;a href="https://storyoriginapp.com/universalbooklinks/8c487a18-2b3e-11f1-aa1d-dfa5b3422a69" class="btn btn-primary center"  &gt;Read "Everyone Dies" on Amazon&lt;/a&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;a href="https://storyoriginapp.com/universalbooklinks/8c487a18-2b3e-11f1-aa1d-dfa5b3422a69" rel="noopener noreferrer" target="_blank"&gt;
+&lt;p&gt;&lt;a href="https://storyoriginapp.com/universalbooklinks/8c487a18-2b3e-11f1-aa1d-dfa5b3422a69" rel="noopener noreferrer" &gt;
     &lt;img alt="image" src="https://daniel.feldroy.com/static/images/everyone-dies-read-on-amazon.d7dacd80.webp" width="null" style="height: auto; max-width: 100%;" class="redline"&gt;
 &lt;/a&gt;&lt;/p&gt;
 &lt;h2 id="please-write-a-review"&gt;Please write a review&lt;/h2&gt;
@@ -485,7 +485,7 @@
 &lt;p&gt;Negative reviews fuel the negative emotions that are useful for portraying the darkness in the stories I write. Also, they help me identify what I can improve.&lt;/p&gt;
 &lt;p&gt;Even neutral reviews are good. I feel neutral about them, but having them is better than no review!&lt;/p&gt;
 &lt;p&gt;Finally, if you feel like just putting in a star rating on Amazon (or Goodreads), with an absolute minimal review, that works too. No matter how many stars you choose, you help me by rating it.&lt;/p&gt;
-&lt;p class="center"&gt;&lt;a href="https://www.amazon.com/review/create-review/?ie=UTF8&amp;channel=glance-detail&amp;asin=B0GTRGFNB5" class="btn btn-primary" target="_blank"&gt;Write a review!&lt;/a&gt;&lt;/p&gt;</content>
+&lt;p class="center"&gt;&lt;a href="https://www.amazon.com/review/create-review/?ie=UTF8&amp;channel=glance-detail&amp;asin=B0GTRGFNB5" class="btn btn-primary" &gt;Write a review!&lt;/a&gt;&lt;/p&gt;</content>
     <link href="https://daniel.feldroy.com/posts/2026-05-everyone-dies-kindle-unlimited"/>
     <summary>I wrote a new fiction book and it is now published. The first in a new series!</summary>
     <category term="book"/>

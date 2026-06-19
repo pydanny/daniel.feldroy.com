@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
   <id>https://daniel.feldroy.com/</id>
   <title>Django posts by Daniel Roy Greenfeld</title>
-  <updated>2026-06-09T10:43:01.415229+00:00</updated>
+  <updated>2026-06-19T02:21:46.561337+00:00</updated>
   <author>
     <name>Daniel Roy Greenfeld</name>
     <email>daniel@feldroy.com</email>
@@ -33,6 +33,7 @@
     <link href="https://daniel.feldroy.com/posts/two-scoops-of-django-3.x"/>
     <summary>The book about best practices for the Django Web Framework, Two Scoops of Django, has been revised, updated, and expanded for versions 3.0, 3.1, and 3.2.</summary>
     <category term="python"/>
+    <category term="tech"/>
     <category term="pdf"/>
     <category term="book"/>
     <category term="django"/>
@@ -215,6 +216,7 @@
     <link href="https://daniel.feldroy.com/posts/django-slug-and-id-url-design"/>
     <summary>How to combine slugs and IDs to make a a human readable unique URL design.</summary>
     <category term="python"/>
+    <category term="tech"/>
     <category term="django"/>
     <category term="forms"/>
     <contributor>
@@ -251,7 +253,8 @@
 &lt;h2 id="topics-covered"&gt;Topics Covered&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;Setting up a development environment&lt;/li&gt;
-&lt;li&gt;Python 3.8&lt;/li&gt;
+&lt;li&gt;python&lt;/li&gt;
+&lt;li&gt;tech 3.8&lt;/li&gt;
 &lt;li&gt;Django 3.0&lt;/li&gt;
 &lt;li&gt;Database&lt;/li&gt;
 &lt;li&gt;VS Code&lt;/li&gt;
@@ -273,6 +276,7 @@
 &lt;p&gt;We're selling the course for the introductory price of just $99 and space is limited, &lt;a href="https://www.feldroy.com/products/django-crash-course?variant=32232086175831"&gt;so register today!&lt;/a&gt;&lt;/p&gt;</content>
     <link href="https://daniel.feldroy.com/posts/live-instruction-django-crash-course-july-2020"/>
     <category term="python"/>
+    <category term="tech"/>
     <category term="django"/>
     <category term="cookiecutter"/>
     <category term="course"/>
@@ -302,6 +306,7 @@
     <link href="https://daniel.feldroy.com/posts/august-2020-courses"/>
     <summary>All the live, online, interactive courses I'm teaching in the month of August 2020.</summary>
     <category term="python"/>
+    <category term="tech"/>
     <category term="django"/>
     <category term="course"/>
     <category term="django-crash-course"/>
@@ -365,6 +370,7 @@
 &lt;p&gt;Yeah, I'm staying in quarantine and not doing anything stupid with me or my family's safety until things die down.&lt;/p&gt;</content>
     <link href="https://daniel.feldroy.com/posts/recap-2020-resolutions-2021"/>
     <category term="python"/>
+    <category term="tech"/>
     <category term="django"/>
     <category term="family"/>
     <category term="uma"/>
@@ -411,6 +417,7 @@
     <link href="https://daniel.feldroy.com/posts/whats-the-best-thing-about-working-for-octopus-energy-part-1"/>
     <summary>An in-depth discussion about my employment at Octopus Energy.</summary>
     <category term="python"/>
+    <category term="tech"/>
     <category term="django"/>
     <category term="javascript"/>
     <category term="javascript"/>
@@ -453,6 +460,7 @@
     <link href="https://daniel.feldroy.com/posts/whats-the-ultimate-reason-for-working-at-octopus-energy-part-2"/>
     <summary>Wherin I conclude my discussion about why I work at Octopus Energy.</summary>
     <category term="python"/>
+    <category term="tech"/>
     <category term="django"/>
     <category term="octopus"/>
     <category term="javascript"/>
@@ -490,6 +498,7 @@
     <link href="https://daniel.feldroy.com/posts/2022-02-speaking-at-python-web-conf"/>
     <summary>My first public conference talk in three years</summary>
     <category term="python"/>
+    <category term="tech"/>
     <category term="django"/>
     <category term="talk"/>
     <contributor>
@@ -522,6 +531,7 @@
     <link href="https://daniel.feldroy.com/posts/2022-04-26-live-discussion-with-tiangolo"/>
     <summary>I have a friendly live discussion with Sebastián Ramírez, creator of FastAPI, Typer, SQL Model, and more.</summary>
     <category term="python"/>
+    <category term="tech"/>
     <category term="django"/>
     <category term="fastapi"/>
     <category term="typer"/>
@@ -603,6 +613,7 @@
     <link href="https://daniel.feldroy.com/posts/2023-01-practice-python-web-projects"/>
     <summary>Python web projects taken from my personal history to practice on to improve your skills.</summary>
     <category term="python"/>
+    <category term="tech"/>
     <category term="django"/>
     <category term="fastapi"/>
     <category term="flask"/>
@@ -686,6 +697,7 @@
     <category term="octopus"/>
     <category term="kraken"/>
     <category term="python"/>
+    <category term="tech"/>
     <category term="django"/>
     <category term="howto"/>
     <contributor>
@@ -751,6 +763,7 @@
     <category term="kraken"/>
     <category term="climate-change"/>
     <category term="python"/>
+    <category term="tech"/>
     <category term="django"/>
     <contributor>
       <name>Daniel Roy Greenfeld</name>
@@ -774,6 +787,7 @@
     <summary>My keynote and the first return to the homeland of Lithuania in over 100 years.</summary>
     <category term="family"/>
     <category term="python"/>
+    <category term="tech"/>
     <category term="django"/>
     <category term="pycon"/>
     <category term="sprint"/>
@@ -843,6 +857,7 @@
     <summary>A management command for quickly generating tests based off Django's URL routing mechanism.</summary>
     <category term="django"/>
     <category term="python"/>
+    <category term="tech"/>
     <category term="howto"/>
     <category term="testing"/>
     <contributor>

@@ -1,6 +1,6 @@
 ---
 date: '2026-06-19T00:42:59.843903+00:00'
-description: I write on my increasingly distant feelings towards the Doctor Who series' poor storytelling.
+description: I write my thoughts about the increasingly poor storytelling of Doctor Who, which has led to its cancellation.
 published: true
 tags:
 - england

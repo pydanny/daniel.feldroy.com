@@ -40,7 +40,7 @@ Then they brought in the 15th Doctor, the first gay Doctor.
 
 Personally, I don't care about the Doctor's sexuality. In my opinion, the Doctor's sexuality and love life should be at most a subplot. The Doctor isn't human. He's enigmatic, a mythical figure, famous or infamous depending on what he's done to you. While his companions are usually attractive, he almost never pursues them physically.
 
-What I do care about is that the show has compelling stories.
+What I do care about is that the show tells compelling stories.
 
 Unfortunately, the stories weren't compelling. I found myself bored. And in the case of the addition of magic fantasy, annoyed.
 

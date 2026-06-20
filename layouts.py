@@ -42,6 +42,7 @@ def Layout(
         air.Html(
             air.Head(
                 *Socials(title, description, image, twitter_image, url),
+                air.Meta(name="viewport", content="width=device-width, initial-scale=1"),
                 air.Link(
                     rel="stylesheet",
                     href="https://unpkg.com/@digicreon/mucss/dist/mu.red.css",

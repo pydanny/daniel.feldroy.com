@@ -32,7 +32,7 @@ Eventually, I stopped watching Doctor Who. I just couldn't make it through a Doc
 
 Then I heard Russel T. Davies, the guy who brought the show back in 2005, was back on. I didn't know who he was, but I was excited. Surely he would write good episodes, or force the studio to accept good writing.
 
-I made it through a few episodes before I quit. And I quit because the writing remained, for the most part, bad or boring.
+I made it through a few episodes before I quit again. And I quit because the writing remained, for the most part, bad or boring.
 
 At first it was okay. They brought back the 10th Doctor and Donna Noble. It was a nice trip down memory lane, but not memorable. However, I was sad to see Jodie Whitaker gone. There were also a few oddly hamfisted digs at the Doctor's sexuality, which felt weird in a show I loved in part for the generally strong dialogue of the Doctor and his companions. They could have done the same thing, but with the grace I was used to on the show.
 

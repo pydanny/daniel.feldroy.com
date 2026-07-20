@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
   <id>https://daniel.feldroy.com/</id>
   <title>Inside the head of Daniel Roy Greenfeld</title>
-  <updated>2026-06-19T04:47:00.457776+00:00</updated>
+  <updated>2026-07-20T09:59:47.454565+00:00</updated>
   <author>
     <name>Daniel Roy Greenfeld</name>
     <email>daniel@feldroy.com</email>
@@ -12,44 +12,6 @@
   <generator uri="https://lkiesow.github.io/python-feedgen" version="1.0.0">python-feedgen</generator>
   <logo>https://f004.backblazeb2.com/file/daniel-feldroy-com/public/images/profile.jpg</logo>
   <rights>All rights reserved 2026, Daniel Roy Greenfeld</rights>
-  <entry>
-    <id>https://daniel.feldroy.com/posts/2026-02-we-moved-to-manila</id>
-    <title>We moved to Manila!</title>
-    <updated>2026-02-03T06:41:22.863302+00:00</updated>
-    <author>
-      <name>Daniel Roy Greenfeld</name>
-      <email>daniel@feldroy.com</email>
-    </author>
-    <content type="html">&lt;p&gt;Last year we relocated to &lt;a href="https://en.wikipedia.org/wiki/Manila"&gt;Metro Manila&lt;/a&gt;, &lt;a href="https://en.wikipedia.org/wiki/Philippines"&gt;Philippines&lt;/a&gt; for the foreseeable future. &lt;a href="https://audrey.feldroy.com/"&gt;Audrey&lt;/a&gt;'s mother is from here, and we wanted our daughter Uma to have the opportunity to spend time with her extended family and experience another line of her heritage.&lt;/p&gt;
-&lt;h2 id="where-are-you-living"&gt;Where are you living?&lt;/h2&gt;
-&lt;p&gt;In &lt;a href="https://en.wikipedia.org/wiki/Makati"&gt;Makati&lt;/a&gt;, a city that contains one of the major business districts in Metro Manila. Specifically we're in Salcedo village, a neighboorhood in the &lt;a href="https://en.wikipedia.org/wiki/Makati_Central_Business_District"&gt;CBD&lt;/a&gt;, made of towering residential and business buildings with numerous shops, markets, and a few parks. This area allows for a walkable life, which is important to us coming from London.&lt;/p&gt;
-&lt;h2 id="what-about-the-usa"&gt;What about the USA?&lt;/h2&gt;
-&lt;p&gt;The USA is our homeland and we're US citizens. We still have family and friends there. We're hoping to visit the US at least once a year.&lt;/p&gt;
-&lt;h2 id="what-about-the-uk"&gt;What about the UK?&lt;/h2&gt;
-&lt;p&gt;We loved living in London, and have many good friends there. I really enjoyed working for &lt;a href="https://kraken.tech/"&gt;Kraken Tech&lt;/a&gt;, but my time came to an end there so our visas were no longer valid. We hope to visit the UK (and the rest of Europe) as tourists, but without the family connection it's harder to justify than trips to the homeland.&lt;/p&gt;
-&lt;h2 id="what-about-your-daughter"&gt;What about your daughter?&lt;/h2&gt;
-&lt;p&gt;Uma loves Manila and is in second grade at an international school here in walking distance of our residence. We had looked into getting her into a local public school with a notable science program, but the paperwork required too much lead time. We do like the small class sizes at her current school, and how they accomodate the different learning speeds of students. She will probably stay there for a while.&lt;/p&gt;
-&lt;p&gt;For extra curricular activities she's enjoying Brazilian Jiu-Jitsu, climbing, yoga, and swimming.&lt;/p&gt;
-&lt;h2 id="if-im-in-manila-can-i-meet-up-with-you"&gt;If I'm in Manila can I meet up with you?&lt;/h2&gt;
-&lt;p&gt;Sure! Some options:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;We're long-time members of the &lt;a href="https://python.ph/"&gt;Python Philippines&lt;/a&gt; community, so you can often find us at their events&lt;/li&gt;
-&lt;li&gt;If you train in BJJ, I'm usually at &lt;a href="https://www.openmatmakati.com/"&gt;Open Mat Makati&lt;/a&gt; quite a bit. Just let me know ahead of time so I can plan around it&lt;/li&gt;
-&lt;li&gt;If you want to meet up for coffee, hit me up on social media. Manila is awesome for coffee shops! &lt;/li&gt;
-&lt;/ul&gt;</content>
-    <link href="https://daniel.feldroy.com/posts/2026-02-we-moved-to-manila"/>
-    <summary>We're going to be in Metro Manila, Philippines for a while, here's some of the details.</summary>
-    <category term="travel"/>
-    <category term="family"/>
-    <category term="uma"/>
-    <category term="Philippines"/>
-    <category term="python"/>
-    <contributor>
-      <name>Daniel Roy Greenfeld</name>
-      <email>daniel@feldroy.com</email>
-    </contributor>
-    <published>2026-02-03T06:41:22.863302+00:00</published>
-  </entry>
   <entry>
     <id>https://daniel.feldroy.com/posts/2026-01-recap-resolutions</id>
     <title>Recap of 2025 and Resolutions for 2026</title>
@@ -789,7 +751,7 @@
 &lt;p&gt;Rather, the writing was frequently off. On the average, the stories just didn't deliver. I found myself getting bored. That meant that when the faux science of the show went off the rails, as it does, it ruined my suspension of disbelief. Instead of coming across as goofy in an enthusiastic way, the show felt poorly put together by lazy people. I felt compassion for the actors and crews, because the weak stories were hurting them professionally. It had nothing to do with the Doctor's gender, but rather that I was bored.&lt;/p&gt;
 &lt;p&gt;Eventually, I stopped watching Doctor Who. I just couldn't make it through a Doctor Who season. In fact, I stopped watching Doctor Who altogether. Especially as a new father I didn't have time to waste on a boring show.&lt;/p&gt;
 &lt;p&gt;Then I heard Russel T. Davies, the guy who brought the show back in 2005, was back on. I didn't know who he was, but I was excited. Surely he would write good episodes, or force the studio to accept good writing.&lt;/p&gt;
-&lt;p&gt;I made it through a few episodes before I quit. And I quit because the writing remained, for the most part, bad or boring.&lt;/p&gt;
+&lt;p&gt;I made it through a few episodes before I quit again. And I quit because the writing remained, for the most part, bad or boring.&lt;/p&gt;
 &lt;p&gt;At first it was okay. They brought back the 10th Doctor and Donna Noble. It was a nice trip down memory lane, but not memorable. However, I was sad to see Jodie Whitaker gone. There were also a few oddly hamfisted digs at the Doctor's sexuality, which felt weird in a show I loved in part for the generally strong dialogue of the Doctor and his companions. They could have done the same thing, but with the grace I was used to on the show.&lt;/p&gt;
 &lt;p&gt;Then they brought in the 15th Doctor, the first gay Doctor.&lt;/p&gt;
 &lt;p&gt;Personally, I don't care about the Doctor's sexuality. In my opinion, the Doctor's sexuality and love life should be at most a subplot. The Doctor isn't human. He's enigmatic, a mythical figure, famous or infamous depending on what he's done to you. While his companions are usually attractive, he almost never pursues them physically.&lt;/p&gt;
@@ -814,5 +776,33 @@
       <email>daniel@feldroy.com</email>
     </contributor>
     <published>2026-06-19T00:42:59.843903+00:00</published>
+  </entry>
+  <entry>
+    <id>https://daniel.feldroy.com/posts/2026-07-writing-about-electrification</id>
+    <title>Writing about electrification</title>
+    <updated>2026-07-20T12:50:40.446902+00:00</updated>
+    <author>
+      <name>Daniel Roy Greenfeld</name>
+      <email>daniel@feldroy.com</email>
+    </author>
+    <content type="html">&lt;p&gt;The future belongs to countries that make electricity abundant.&lt;/p&gt;
+&lt;p&gt;I've believed this for years. If you talk to me long enough, at some point I'll start talking about the use of increasing electricity generation to reshape economies, strengthen national security, and address climate change. Working at Octopus Energy and Kraken Technologies didn't just teach me about energy. It convinced me that electricity is one of civilization's foundational technologies. &lt;/p&gt;
+&lt;p&gt;I mentioned it in tech talks and intermittently in my writings, but I felt too close to the renewable energy industry to speak objectively on the topic to the non-tech world. Yes, people who cared for renewables would listen to me, but they are already mostly sold. I wanted to be able to speak effectively to those with the opposing point of view. &lt;/p&gt;
+&lt;p&gt;To do that, I needed distance.&lt;/p&gt;
+&lt;p&gt;Now, nearly two years since I left the energy world, I'm ready.&lt;/p&gt;
+&lt;p&gt;The conversation around electrification is tribal. Supporters often ignore legitimate concerns. Opponents often underestimate what's possible. Too much of the conversation is about winning arguments instead of solving problems.&lt;/p&gt;
+&lt;p&gt;Many people I hope to reach disagree with me. Some worry about energy reliability. Others worry about the cost of transition, the future of heavy industry, or government mandates. Those are real concerns worth discussing. &lt;/p&gt;
+&lt;p&gt;I'm ready to talk about it all.&lt;/p&gt;</content>
+    <link href="https://daniel.feldroy.com/posts/2026-07-writing-about-electrification"/>
+    <summary>For years I've been thinking about electrification, now I'm going to write about it.</summary>
+    <category term="octopus"/>
+    <category term="climate-change"/>
+    <category term="electrification"/>
+    <category term="powering civilization"/>
+    <contributor>
+      <name>Daniel Roy Greenfeld</name>
+      <email>daniel@feldroy.com</email>
+    </contributor>
+    <published>2026-07-20T12:50:40.446902+00:00</published>
   </entry>
 </feed>

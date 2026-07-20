@@ -14,7 +14,7 @@ The future belongs to countries that make electricity abundant.
 
 I've believed this for years. If you talk to me long enough, at some point I'll start talking about the use of increasing electricity generation to reshape economies, strengthen national security, and address climate change. Working at Octopus Energy and Kraken Technologies didn't just teach me about energy. It convinced me that electricity is one of civilization's foundational technologies. 
 
-I mentioned it in tech talks and intermittently in my writings, but I felt too close to the renewable energy industry to speak objectively on the topic to the non-tech world. Yes, people who cared for renewables would listen to me, but they are already sold. I wanted to be able to speak effectively to those with the opposing point of view. 
+I mentioned it in tech talks and intermittently in my writings, but I felt too close to the renewable energy industry to speak objectively on the topic to the non-tech world. Yes, people who cared for renewables would listen to me, but they are already mostly sold. I wanted to be able to speak effectively to those with the opposing point of view. 
 
 To do that, I needed distance.
 

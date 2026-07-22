@@ -12,7 +12,7 @@ image: https://f004.backblazeb2.com/file/daniel-feldroy-com/public/images/buenos
 twitter_image: https://f004.backblazeb2.com/file/daniel-feldroy-com/public/images/buenos-aires-rainy-day1.jpg
 ---
 
-<div class="separator" style="clear: both; text-align: center;"><a href="https://4.bp.blogspot.com/-V0Dc6CBebYs/VRX1SNQ444I/AAAAAAAAExw/7REWjdCRRxw/s1600/buenos-aires-rainy-day1.jpg" style="margin-left: 1em; margin-right: 1em;"><img border="0" height="350" src="https://f004.backblazeb2.com/file/daniel-feldroy-com/public/images/buenos-aires-rainy-day1.jpg" width="640" /></a></div>
+<div class="separator" style="clear: both; text-align: center;"><a href="https://f004.backblazeb2.com/file/daniel-feldroy-com/public/images/buenos-aires-rainy-day1.jpg" style="margin-left: 1em; margin-right: 1em;"><img border="0" height="350" src="https://f004.backblazeb2.com/file/daniel-feldroy-com/public/images/buenos-aires-rainy-day1.jpg" width="640" /></a></div>
 Last night’s heavy rain had evolved into a constant, slow fall. The wind remained, pushing itself into faces, tossing trash recklessly across the boulevards.
 
 The rain deepened the colors of the forest. Trees had greener leaves, browner trunks. The leaves hung heavier on their branches, as if about to give birth to new life on the next sunny day. The wind stirred the branches, wiping the moisture off the leaves. Thus removing the ability of the trees to provide cover from the rain. At the furthest tips of the highest branches, purple flower buds were just blossoming. Proof that this cold, rainy day was the beginning of spring.
@@ -25,4 +25,4 @@ If the sky was canvas, then God was spreading clouds across it like the first la
 
 Inside the cafe was warm, dry. Smelled of heated air and coffee. The glass window next to the table a welcome barrier, turning an unpleasant day into a warm, rich experience.
 
-<i>On the corner of Santa Fe and Carlos Pellegrini, Buenos Aires, Argentina, November 2, 2014</i>
+_On the corner of Santa Fe and Carlos Pellegrini, Buenos Aires, Argentina, November 2, 2014_

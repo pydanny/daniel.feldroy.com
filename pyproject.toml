@@ -14,11 +14,9 @@ dependencies = [
     "mistletoe>=1.5.1",
     "mypy>=1.19.1",
     "pygments>=2.19.2",
-    "pyinstrument>=5.1.1",
     "python-dateutil>=2.9.0.post0",
     "pytz>=2025.2",
     "pyyaml==5.1",
-    "sentry-sdk[fastapi]>=2.34.1",
     "staticware>=0.2.0",
 ]
 

@@ -68,4 +68,6 @@ The face of the littlest dwarf crumpled. Tears began to flow down his cheeks and
 
 "What's wrong with that little dwarf?" Grakby asked in a puzzled voice.
 
-The three other dwarfs sighed in disgust. Then they looked at Grakby and shouted in unison, "He's Snorri!"
+The three other dwarfs sighed in disgust.
+
+Then they looked at Grakby and shouted in unison, "He's Snorri!"

@@ -25,3 +25,11 @@ The conversation around electrification is tribal. Supporters often ignore legit
 Many people I hope to reach disagree with me. Some worry about energy reliability. Others worry about the cost of transition, the future of heavy industry, or government mandates. Those are real concerns worth discussing. 
 
 I'm ready to talk about it all.
+
+---
+
+Join my substack, "Rethinking Energy".
+
+<div class="center">
+<iframe src="https://rethinkingpower.substack.com/embed" width="480" height="320" style="border: 1px solid #EEE; background: white" frameborder="0" scrolling="no"></iframe>
+</div>

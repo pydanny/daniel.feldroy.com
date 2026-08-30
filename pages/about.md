@@ -10,7 +10,14 @@ I am a [coder](https://github.com/pydanny), [author](/books), and [speaker](/spe
 
 I'm probably best known as "[pydanny](https://www.google.com/search?q=pydanny)", one of the authors of [Two Scoops of Django](/books/tech). 
 
-I love to hang out with my [wife](https://audrey.feldroy.com/), play with my [daughter](/tags/uma), do [Brazilian Jiu-Jitsu](https://en.wikipedia.org/wiki/Brazilian_jiu-jitsu), write [books](/books), and read books. I track my fitness [here](/fitness) and my writing [here](/writing-stats).
+I love to:
+
+- Hang out with my [wife](https://audrey.feldroy.com/) and spend time with our [daughter](/tags/uma)
+- Do [Brazilian Jiu-Jitsu](https://en.wikipedia.org/wiki/Brazilian_jiu-jitsu)
+- [Write books](/books) and read books. Check out my newer fiction at [grimdaniel.com](https://daniel.feldroy.com)
+- [Run tabletop roleplaying games](https://startplaying.games/gm/drg)
+
+ I track my fitness [here](/fitness) and my writing [here](/writing-stats).
 
 - [LinkedIn](https://www.linkedin.com/in/danielfeldroy/)
 - [Bluesky](https://bsky.app/profile/pydanny.bsky.social)

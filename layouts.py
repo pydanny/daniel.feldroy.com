@@ -118,6 +118,10 @@ def Layout(
                             "Github", href="https://github.com/pydanny", target="_blank"
                         ),
                         " | ",
+                        air.A(
+                            "StartPlaying", href="https://startplaying.games/gm/drg", target="_blank"
+                        ),
+                        " | ",                        
                         # air.A("Mailing list", href="/mailing-list"),
                         # " | ",
                         "Feeds: ",

@@ -564,7 +564,7 @@ async def fitness():
 
     return Layout(
         air.Title("Fitness Tracking"),
-        air.Script(src="https://cdn.plot.ly/plotly-2.32.0.min.js", charset="utf-8"),
+        air.Script(src="https://cdn.plot.ly/plotly-4.0.0.min.js", charset="utf-8"),
         air.Section(
             air.P(
                 "Wt Goal: ",
@@ -577,7 +577,7 @@ async def fitness():
                 air.Li("Weight kg is how much I weigh in kilograms."),
                 air.Li("BJJ is how many minutes of Brazilian Jiu-Jitsu in a day."),
                 air.Li(
-                    "Other is how many minutes of other training done in a day, most often weights, ATG, walking at speed, sometimes alternative exercise like Yoga or Pilates."
+                    "Other is how many minutes of other training done in a day, usually weights."
                 ),
             ),
             *charts,
@@ -611,7 +611,7 @@ async def writing_stats():
 
     return Layout(
         air.Title("Writing Stats"),
-        air.Script(src="https://cdn.plot.ly/plotly-2.32.0.min.js"),
+        air.Script(src="hhttps://cdn.plot.ly/plotly-4.0.0.min.js"),
         air.Div(id="post-counts"),
         air.Children(
                 air.Script(f"Plotly.newPlot('post-counts', {data}, {layout}, {config});"),

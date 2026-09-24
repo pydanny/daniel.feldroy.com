@@ -117,13 +117,20 @@ def Layout(
                         air.A(
                             "Github", href="https://github.com/pydanny", target="_blank"
                         ),
+                        " | ",                          
+                        air.A(
+                            "Stead", href="https://drg.stead.page/", target="_blank"
+                        ),                                                
                         " | ",
+                        air.A(
+                            "GrimDaniel", href="https://grimdaniel.com", target="_blank"
+                        ),
+                        " | ",                          
                         air.A(
                             "StartPlaying", href="https://startplaying.games/gm/drg", target="_blank"
                         ),
-                        " | ",                        
-                        # air.A("Mailing list", href="/mailing-list"),
-                        # " | ",
+                        " | ",                                                                     
+
                         "Feeds: ",
                         air.A("All", href="/feeds/atom.xml", target="_blank"),
                         ", ",

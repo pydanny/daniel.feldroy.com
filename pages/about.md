@@ -17,11 +17,16 @@ I love to:
 - [Write books](/books) and read books. Check out my newer fiction at [grimdaniel.com](https://daniel.feldroy.com)
 - [Run tabletop roleplaying games](https://startplaying.games/gm/drg)
 
- I track my fitness [here](/fitness) and my writing [here](/writing-stats).
+ I track my fitness [here](/fitness).
 
 - [LinkedIn](https://www.linkedin.com/in/danielfeldroy/)
 - [Bluesky](https://bsky.app/profile/pydanny.bsky.social)
 - [Twitter](https://twitter.com/pydanny)
+- [GitHub](https://github.com/pydanny)
+- [grimdaniel](https://grimdaniel.com)
+- [StartPlayingGames](https://startplaying.games/gm/drg)
+- [Stead](https://drg.stead.page)
+
 
 ## Notable employers
 

@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
   <id>https://daniel.feldroy.com/</id>
   <title>Inside the head of Daniel Roy Greenfeld</title>
-  <updated>2026-07-20T09:59:47.454565+00:00</updated>
+  <updated>2026-10-22T15:41:06.539285+00:00</updated>
   <author>
     <name>Daniel Roy Greenfeld</name>
     <email>daniel@feldroy.com</email>
@@ -12,82 +12,6 @@
   <generator uri="https://lkiesow.github.io/python-feedgen" version="1.0.0">python-feedgen</generator>
   <logo>https://f004.backblazeb2.com/file/daniel-feldroy-com/public/images/profile.jpg</logo>
   <rights>All rights reserved 2026, Daniel Roy Greenfeld</rights>
-  <entry>
-    <id>https://daniel.feldroy.com/posts/2026-01-recap-resolutions</id>
-    <title>Recap of 2025 and Resolutions for 2026</title>
-    <updated>2026-02-04T04:00:29.326317+00:00</updated>
-    <author>
-      <name>Daniel Roy Greenfeld</name>
-      <email>daniel@feldroy.com</email>
-    </author>
-    <content type="html">&lt;p&gt;Better late than never! Here's my annual recap!&lt;/p&gt;
-&lt;h2 id="recap-of-2025"&gt;Recap of 2025&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;We moved from London, UK to &lt;a href="https://daniel.feldroy.com/posts/2026-02-we-moved-to-manila"&gt;Manila, Philippines&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;Spent another year with my soul mate, Audrey. Spent time together doing fun things like coding, cooking, traveling, yoga, and raising our daughter together&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://daniel.feldroy.com/tags/uma"&gt;Uma&lt;/a&gt; spent her 6th year on Planet Earth. She's really growing, spent the year focusing on school, goofy kid play, Brazilian Jiu-Jitsu, swimming, engineering, and science. Working on science kits and activities with her is one of my greatest joys. I also became a coach at her BJJ school; my blue belt helps validate my role there. She's quite the character and we adore her&lt;/li&gt;
-&lt;li&gt;Suffered a serious back injury from some bad weight lifting that had me bedridden for the first two months of the year. What was effective for my recovery included acupuncture, healthy diet, stretching, mobility exercises, living in a warm country, and Brazilian Jiu-Jitsu (BJJ). These days I'm much more careful about partners and restrict my sparring to just 2-3 rolls per session&lt;/li&gt;
-&lt;li&gt;Started doing a lot more gi BJJ. London is very much a city of no-gi practitioners, but in Manila most schools focus on gi. It's funny when you think about the uniform preferences of each as the gi makes more sense in the cooler weather of London compared to the tropical heat of Manila&lt;/li&gt;
-&lt;li&gt;Spent much of the year in the Philippines. I appreciate the people and culture - the people I've met have been friendly, hard-working, pragmatic, and trustworthy. Watching the nation improve (reduced poverty, improved infrastructure) since I first visited in 2012 is inspiring&lt;/li&gt;
-&lt;li&gt;Left an AI lab and have been focusing on startups and FOSS&lt;/li&gt;
-&lt;li&gt;Started the &lt;a href="https://airwebframework.org/"&gt;Air web framework&lt;/a&gt; with &lt;a href="https://audrey.feldroy.com/"&gt;Audrey&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://github.com/pydanny/daniel.feldroy.com"&gt;Rewrote this blog in Air&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://pycon-davao.durianpy.org/"&gt;Spoke at PyCon Davao 2025&lt;/a&gt; and various meetups&lt;/li&gt;
-&lt;li&gt;Snorkeled for the first time in nearly 20 years. I did it in Mexico back in 2006, and this time in the Philippines in Batangas. It was amazing to see the coral and fish life up close again&lt;/li&gt;
-&lt;li&gt;Travelled to new places:&lt;ul&gt;
-&lt;li&gt;🚙 Batangas, PH&lt;/li&gt;
-&lt;li&gt;✈️ Davao, PH&lt;/li&gt;
-&lt;li&gt;✈️ Denver, CO&lt;/li&gt;
-&lt;li&gt;✈️ Melbourne, AU&lt;/li&gt;
-&lt;li&gt;🚙 Tagaytay, PH&lt;/li&gt;
-&lt;li&gt;✈️ Taipei, TW    &lt;/li&gt;
-&lt;li&gt;✈️ Tokyo, JP&lt;/li&gt;
-&lt;li&gt;🚄 Yokohama, JP&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id="2025-resolutions-completed"&gt;2025 Resolutions Completed&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;✔️ Adore my soul mate, Audrey Roy Greenfeld&lt;/li&gt;
-&lt;li&gt;✔️ Be there for my daughter Uma Roy Greenfeld in her 6th year on Planet Earth&lt;/li&gt;
-&lt;li&gt;✖️ Beat last year's number of blog posts&lt;/li&gt;
-&lt;li&gt;✔️ Continue my fitness journey with BJJ, weights, cycling, walking, and other healthy activities&lt;/li&gt;
-&lt;li&gt;✖️ Write fiction again, maybe publish it&lt;/li&gt;
-&lt;li&gt;✔️ Continue to have a healthy work/life balance&lt;/li&gt;
-&lt;li&gt;✔️ Travel to yet more new places, preferably by train or other carbon-efficient methods. Unfortunately the geography of Asia and limited mass transit options made staying out of airplanes difficult. I wish ocean liners were still a thing&lt;/li&gt;
-&lt;li&gt;✔️ Be a speaker in at least one conference&lt;/li&gt;
-&lt;li&gt;✔️ Change my career from being a backend developer to that of an ML/AI specialist. I did this but it wasn't as exciting as I thought it would be&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id="2026-resolutions"&gt;2026 Resolutions&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;❤️ Continue to adore my soul mate, Audrey Roy Greenfeld&lt;/li&gt;
-&lt;li&gt;👩‍👧 Be there for my daughter Uma Roy Greenfeld in her 7th year on Planet Earth. Continue to contribute to her activities&lt;/li&gt;
-&lt;li&gt;📝 Write at least as many blog posts as I did last year (37)&lt;/li&gt;
-&lt;li&gt;🥋 Continue my fitness journey with BJJ, weights, yoga, climbing, and other healthy activities&lt;/li&gt;
-&lt;li&gt;📚 Write fiction again, maybe publish it&lt;/li&gt;
-&lt;li&gt;⚖️ Continue to have a healthy work/life balance&lt;/li&gt;
-&lt;li&gt;🌍 Travel to yet more new places, preferably by train or other carbon-efficient methods&lt;/li&gt;
-&lt;li&gt;🎤 Be a speaker in at least one conference&lt;/li&gt;
-&lt;li&gt;🤖 Stay focused on research rather than building product. I'm much more interested in exploration&lt;/li&gt;
-&lt;li&gt;💪 Avoid injury and maintain my health so I can be there for Audrey and Uma for many years to come&lt;/li&gt;
-&lt;li&gt;🤿 Snorkle again. Nature is amazing&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;a href="/posts/2026-01-recap-resolutions"&gt;&lt;img src="/public/images/2025-2026-recap.png" height="25%" width="25%" alt="Me and Uma running together into the future." style="text-align: center;" /&gt;&lt;/a&gt;&lt;/p&gt;</content>
-    <link href="https://daniel.feldroy.com/posts/2026-01-recap-resolutions"/>
-    <summary>Another year in orbit around a star.</summary>
-    <category term="family"/>
-    <category term="audrey"/>
-    <category term="uma"/>
-    <category term="resolutions"/>
-    <category term="pycon"/>
-    <category term="travel"/>
-    <category term="england"/>
-    <contributor>
-      <name>Daniel Roy Greenfeld</name>
-      <email>daniel@feldroy.com</email>
-    </contributor>
-    <published>2026-02-04T04:00:29.326317+00:00</published>
-  </entry>
   <entry>
     <id>https://daniel.feldroy.com/posts/til-2026-02-using-pygmentsrenderer-with-mistletoe-as-a-partial</id>
     <title>TIL: Using PygmentsRenderer with mistletoe as a partial</title>
@@ -792,7 +716,11 @@
 &lt;p&gt;Now, nearly two years since I left the energy world, I'm ready.&lt;/p&gt;
 &lt;p&gt;The conversation around electrification is tribal. Supporters often ignore legitimate concerns. Opponents often underestimate what's possible. Too much of the conversation is about winning arguments instead of solving problems.&lt;/p&gt;
 &lt;p&gt;Many people I hope to reach disagree with me. Some worry about energy reliability. Others worry about the cost of transition, the future of heavy industry, or government mandates. Those are real concerns worth discussing. &lt;/p&gt;
-&lt;p&gt;I'm ready to talk about it all.&lt;/p&gt;</content>
+&lt;p&gt;I'm ready to talk about it all.&lt;/p&gt;
+&lt;hr /&gt;
+&lt;div class="center"&gt;
+&lt;iframe src="https://rethinkingpower.substack.com/embed" width="480" height="320" style="border: 1px solid #EEE; background: white" frameborder="0" scrolling="no"&gt;&lt;/iframe&gt;
+&lt;/div&gt;</content>
     <link href="https://daniel.feldroy.com/posts/2026-07-writing-about-electrification"/>
     <summary>For years I've been thinking about electrification, now I'm going to write about it.</summary>
     <category term="octopus"/>
@@ -804,5 +732,35 @@
       <email>daniel@feldroy.com</email>
     </contributor>
     <published>2026-07-20T12:50:40.446902+00:00</published>
+  </entry>
+  <entry>
+    <id>https://daniel.feldroy.com/posts/til-2026-10-how-to-extract-subtitles-from-video</id>
+    <title>TIL: How to extract subtitles from video</title>
+    <updated>2026-10-22T15:40:27.008512+00:00</updated>
+    <author>
+      <name>Daniel Roy Greenfeld</name>
+      <email>daniel@feldroy.com</email>
+    </author>
+    <content type="html">&lt;p&gt;Recently I've been making more and more videos for my &lt;a href="https://www.youtube.com/@DanielFeldroy"&gt;youtube channel&lt;/a&gt;. I like videos with subtitles, and decided to add them to my own efforts. This is what I do:&lt;/p&gt;
+&lt;p&gt;This command assumes you have uv and ffmpeg installed.&lt;/p&gt;
+&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;uvx&lt;span class="w"&gt; &lt;/span&gt;--python&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="m"&gt;3&lt;/span&gt;.14&lt;span class="w"&gt; &lt;/span&gt;--from&lt;span class="w"&gt; &lt;/span&gt;openai-whisper&lt;span class="w"&gt; &lt;/span&gt;whisper&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;name-of-video.mp4&amp;quot;&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="se"&gt;\&lt;/span&gt;
+&lt;span class="w"&gt;  &lt;/span&gt;--model&lt;span class="w"&gt; &lt;/span&gt;small&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="se"&gt;\&lt;/span&gt;
+&lt;span class="w"&gt;  &lt;/span&gt;--language&lt;span class="w"&gt; &lt;/span&gt;English&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="se"&gt;\&lt;/span&gt;
+&lt;span class="w"&gt;  &lt;/span&gt;--task&lt;span class="w"&gt; &lt;/span&gt;transcribe&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="se"&gt;\&lt;/span&gt;
+&lt;span class="w"&gt;  &lt;/span&gt;--output_format&lt;span class="w"&gt; &lt;/span&gt;srt&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="se"&gt;\&lt;/span&gt;
+&lt;span class="w"&gt;  &lt;/span&gt;--output_dir&lt;span class="w"&gt; &lt;/span&gt;captions&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="se"&gt;\&lt;/span&gt;
+&lt;span class="w"&gt;  &lt;/span&gt;--fp16&lt;span class="w"&gt; &lt;/span&gt;False
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;The output is put in a &lt;code&gt;captions&lt;/code&gt; directory, named after the &lt;code&gt;.mp4&lt;/code&gt; file that is its source.&lt;/p&gt;</content>
+    <link href="https://daniel.feldroy.com/posts/til-2026-10-how-to-extract-subtitles-from-video"/>
+    <summary>How I use Python and ffmpeg to create a subtitle file.</summary>
+    <category term="TIL"/>
+    <category term="python"/>
+    <contributor>
+      <name>Daniel Roy Greenfeld</name>
+      <email>daniel@feldroy.com</email>
+    </contributor>
+    <published>2026-10-22T15:40:27.008512+00:00</published>
   </entry>
 </feed>

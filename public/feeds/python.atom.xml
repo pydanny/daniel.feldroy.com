@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
   <id>https://daniel.feldroy.com/</id>
   <title>Python posts by Daniel Roy Greenfeld</title>
-  <updated>2026-07-20T09:59:48.320869+00:00</updated>
+  <updated>2026-10-22T15:41:07.053619+00:00</updated>
   <author>
     <name>Daniel Roy Greenfeld</name>
     <email>daniel@feldroy.com</email>
@@ -12,43 +12,6 @@
   <generator uri="https://lkiesow.github.io/python-feedgen" version="1.0.0">python-feedgen</generator>
   <logo>https://f004.backblazeb2.com/file/daniel-feldroy-com/public/images/profile.jpg</logo>
   <rights>All rights reserved 2026, Daniel Roy Greenfeld</rights>
-  <entry>
-    <id>https://daniel.feldroy.com/posts/til-2025-09-setting-environment-variables-for-pytest</id>
-    <title>TIL: Setting environment variables for pytest</title>
-    <updated>2025-09-02T02:29:33.084710+00:00</updated>
-    <author>
-      <name>Daniel Roy Greenfeld</name>
-      <email>daniel@feldroy.com</email>
-    </author>
-    <content type="html">&lt;p&gt;When writing tests in pytest, often there's a need to set environment variables for your tests. Instead of modifying &lt;code&gt;os.environ&lt;/code&gt; directly, which can lead to side effects and make tests harder to manage, here's how to do it with the &lt;a href="https://pypi.org/project/pytest-env/"&gt;pytest-env&lt;/a&gt; package.&lt;/p&gt;
-&lt;p&gt;First, install the package. &lt;/p&gt;
-&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;pip&lt;span class="w"&gt; &lt;/span&gt;install&lt;span class="w"&gt; &lt;/span&gt;pytest-env&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="c1"&gt;# classic but works great&lt;/span&gt;
-uv&lt;span class="w"&gt; &lt;/span&gt;add&lt;span class="w"&gt; &lt;/span&gt;pytest-env&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="c1"&gt;# if you&amp;#39;re one of us cool kids using uv&lt;/span&gt;
-uv&lt;span class="w"&gt; &lt;/span&gt;add&lt;span class="w"&gt; &lt;/span&gt;pytest-env&lt;span class="w"&gt; &lt;/span&gt;--group&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nb"&gt;test&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="c1"&gt;# if you use a specific test group of dependencies&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;p&gt;A lot of people use &lt;code&gt;pytest.ini&lt;/code&gt; to configure pytest, but I prefer using &lt;code&gt;pyproject.toml&lt;/code&gt; for a more modern approach. Here's how you can set environment variables in &lt;code&gt;pyproject.toml&lt;/code&gt;:&lt;/p&gt;
-&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="k"&gt;[tool.pytest_env]&lt;/span&gt;
-&lt;span class="c1"&gt;# Test value for the SUPER_SECRET_KEY environment variable&lt;/span&gt;
-&lt;span class="n"&gt;SUPER_SECRET_KEY&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;ABC123&amp;quot;&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;p&gt;Then run your tests just like you would normally do, and now the environment variable will be picked up by whatever test or code is looking for it. That's correct, you don't need to do any further configuration.&lt;/p&gt;
-&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;pytest&lt;span class="w"&gt; &lt;/span&gt;.
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;p&gt;Since a lot of API SDK libraries use environment variables for configuration, this is a great way to ensure your tests run in a controlled environment. Either with mock replies or against a test instance of the service.&lt;/p&gt;</content>
-    <link href="https://daniel.feldroy.com/posts/til-2025-09-setting-environment-variables-for-pytest"/>
-    <summary>An easier way of doing it then modifying os.environ</summary>
-    <category term="python"/>
-    <category term="TIL"/>
-    <category term="testing"/>
-    <contributor>
-      <name>Daniel Roy Greenfeld</name>
-      <email>daniel@feldroy.com</email>
-    </contributor>
-    <published>2025-09-02T02:29:33.084710+00:00</published>
-  </entry>
   <entry>
     <id>https://daniel.feldroy.com/posts/2025-09-over-twenty-years-of-blogging-tools</id>
     <title>Over Twenty Years of Blogging Tools</title>
@@ -1042,5 +1005,35 @@ Available&lt;span class="w"&gt; &lt;/span&gt;recipes:
       <email>daniel@feldroy.com</email>
     </contributor>
     <published>2026-05-04T11:55:23.590783+00:00</published>
+  </entry>
+  <entry>
+    <id>https://daniel.feldroy.com/posts/til-2026-10-how-to-extract-subtitles-from-video</id>
+    <title>TIL: How to extract subtitles from video</title>
+    <updated>2026-10-22T15:40:27.008512+00:00</updated>
+    <author>
+      <name>Daniel Roy Greenfeld</name>
+      <email>daniel@feldroy.com</email>
+    </author>
+    <content type="html">&lt;p&gt;Recently I've been making more and more videos for my &lt;a href="https://www.youtube.com/@DanielFeldroy"&gt;youtube channel&lt;/a&gt;. I like videos with subtitles, and decided to add them to my own efforts. This is what I do:&lt;/p&gt;
+&lt;p&gt;This command assumes you have uv and ffmpeg installed.&lt;/p&gt;
+&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;uvx&lt;span class="w"&gt; &lt;/span&gt;--python&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="m"&gt;3&lt;/span&gt;.14&lt;span class="w"&gt; &lt;/span&gt;--from&lt;span class="w"&gt; &lt;/span&gt;openai-whisper&lt;span class="w"&gt; &lt;/span&gt;whisper&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;name-of-video.mp4&amp;quot;&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="se"&gt;\&lt;/span&gt;
+&lt;span class="w"&gt;  &lt;/span&gt;--model&lt;span class="w"&gt; &lt;/span&gt;small&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="se"&gt;\&lt;/span&gt;
+&lt;span class="w"&gt;  &lt;/span&gt;--language&lt;span class="w"&gt; &lt;/span&gt;English&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="se"&gt;\&lt;/span&gt;
+&lt;span class="w"&gt;  &lt;/span&gt;--task&lt;span class="w"&gt; &lt;/span&gt;transcribe&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="se"&gt;\&lt;/span&gt;
+&lt;span class="w"&gt;  &lt;/span&gt;--output_format&lt;span class="w"&gt; &lt;/span&gt;srt&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="se"&gt;\&lt;/span&gt;
+&lt;span class="w"&gt;  &lt;/span&gt;--output_dir&lt;span class="w"&gt; &lt;/span&gt;captions&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="se"&gt;\&lt;/span&gt;
+&lt;span class="w"&gt;  &lt;/span&gt;--fp16&lt;span class="w"&gt; &lt;/span&gt;False
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;The output is put in a &lt;code&gt;captions&lt;/code&gt; directory, named after the &lt;code&gt;.mp4&lt;/code&gt; file that is its source.&lt;/p&gt;</content>
+    <link href="https://daniel.feldroy.com/posts/til-2026-10-how-to-extract-subtitles-from-video"/>
+    <summary>How I use Python and ffmpeg to create a subtitle file.</summary>
+    <category term="TIL"/>
+    <category term="python"/>
+    <contributor>
+      <name>Daniel Roy Greenfeld</name>
+      <email>daniel@feldroy.com</email>
+    </contributor>
+    <published>2026-10-22T15:40:27.008512+00:00</published>
   </entry>
 </feed>

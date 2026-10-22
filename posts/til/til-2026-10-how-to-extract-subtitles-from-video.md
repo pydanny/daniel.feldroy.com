@@ -1,5 +1,5 @@
 ---
-date: '2026-10-22T03:35:27.008512+00:00'
+date: '2026-10-22T15:40:27.008512+00:00'
 description: How I use Python and ffmpeg to create a subtitle file.
 image: https://f004.backblazeb2.com/file/daniel-feldroy-com/public/logos/til-1.png
 published: true

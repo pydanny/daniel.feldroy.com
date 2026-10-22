@@ -24,3 +24,5 @@ uvx --python 3.14 --from openai-whisper whisper "name-of-video.mp4" \
   --output_dir captions \
   --fp16 False
 ```
+
+The output is put in a `captions` directory, named after the `.mp4` file that is its source.

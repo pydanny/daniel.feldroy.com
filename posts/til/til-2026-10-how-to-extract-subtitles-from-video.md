@@ -26,3 +26,18 @@ uvx --python 3.14 --from openai-whisper whisper "name-of-video.mp4" \
 ```
 
 The output is put in a `captions` directory, named after the `.mp4` file that is its source.
+
+As a `zsh` function:
+
+
+```sh
+subtitle() {
+  uvx --python 3.14 --from openai-whisper whisper "$1" \
+    --model small \
+    --language English \
+    --task transcribe \
+    --output_format srt \
+    --output_dir captions \
+    --fp16 False
+}
+```

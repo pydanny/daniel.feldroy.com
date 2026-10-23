@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
   <id>https://daniel.feldroy.com/</id>
   <title>Inside the head of Daniel Roy Greenfeld</title>
-  <updated>2026-10-22T15:41:06.539285+00:00</updated>
+  <updated>2026-10-23T01:34:38.478923+00:00</updated>
   <author>
     <name>Daniel Roy Greenfeld</name>
     <email>daniel@feldroy.com</email>
@@ -752,7 +752,18 @@
 &lt;span class="w"&gt;  &lt;/span&gt;--fp16&lt;span class="w"&gt; &lt;/span&gt;False
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
-&lt;p&gt;The output is put in a &lt;code&gt;captions&lt;/code&gt; directory, named after the &lt;code&gt;.mp4&lt;/code&gt; file that is its source.&lt;/p&gt;</content>
+&lt;p&gt;The output is put in a &lt;code&gt;captions&lt;/code&gt; directory, named after the &lt;code&gt;.mp4&lt;/code&gt; file that is its source.&lt;/p&gt;
+&lt;p&gt;As a &lt;code&gt;zsh&lt;/code&gt; function:&lt;/p&gt;
+&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;subtitle&lt;span class="o"&gt;()&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;{&lt;/span&gt;
+&lt;span class="w"&gt;  &lt;/span&gt;uvx&lt;span class="w"&gt; &lt;/span&gt;--python&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="m"&gt;3&lt;/span&gt;.14&lt;span class="w"&gt; &lt;/span&gt;--from&lt;span class="w"&gt; &lt;/span&gt;openai-whisper&lt;span class="w"&gt; &lt;/span&gt;whisper&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;&lt;/span&gt;&lt;span class="nv"&gt;$1&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="se"&gt;\&lt;/span&gt;
+&lt;span class="w"&gt;    &lt;/span&gt;--model&lt;span class="w"&gt; &lt;/span&gt;small&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="se"&gt;\&lt;/span&gt;
+&lt;span class="w"&gt;    &lt;/span&gt;--language&lt;span class="w"&gt; &lt;/span&gt;English&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="se"&gt;\&lt;/span&gt;
+&lt;span class="w"&gt;    &lt;/span&gt;--task&lt;span class="w"&gt; &lt;/span&gt;transcribe&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="se"&gt;\&lt;/span&gt;
+&lt;span class="w"&gt;    &lt;/span&gt;--output_format&lt;span class="w"&gt; &lt;/span&gt;srt&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="se"&gt;\&lt;/span&gt;
+&lt;span class="w"&gt;    &lt;/span&gt;--output_dir&lt;span class="w"&gt; &lt;/span&gt;captions&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="se"&gt;\&lt;/span&gt;
+&lt;span class="w"&gt;    &lt;/span&gt;--fp16&lt;span class="w"&gt; &lt;/span&gt;False
+&lt;span class="o"&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</content>
     <link href="https://daniel.feldroy.com/posts/til-2026-10-how-to-extract-subtitles-from-video"/>
     <summary>How I use Python and ffmpeg to create a subtitle file.</summary>
     <category term="TIL"/>
